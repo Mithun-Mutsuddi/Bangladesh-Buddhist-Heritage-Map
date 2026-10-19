@@ -4128,6 +4128,10 @@ function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 }
 function mapLinkFor(place) {
+  // Approximate/area-level pins must not be used as exact driving destinations.
+  if (place.pinApproximate || !Array.isArray(place.coords)) {
+    return googleSearch(`${place.name}, ${place.district}, Bangladesh`);
+  }
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.coords.join(','))}`;
 }
 function googleSearch(query) {
@@ -4204,7 +4208,7 @@ function renderPlaceDetail(place) {
     <p><strong>🧭 যাওয়ার পরিকল্পনা:</strong> ${escapeHtml(place.trip)}</p>
     <p class="detail-quote">☸ <strong>শ্রদ্ধাশীল ভ্রমণ:</strong> ${escapeHtml(place.dhamma)} ${place.id === 'somapura' ? '<a href="https://whc.unesco.org/en/list/322/" target="_blank" rel="noopener noreferrer">[UNESCO]</a>' : ''}</p>
     <div class="detail-actions">
-      <a class="action-primary" href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">↗ Google Maps দিকনির্দেশ</a>
+      <a class="action-primary" href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">↗ ${place.pinApproximate ? "Google Maps-এ স্থান খুঁজুন" : "Google Maps দিকনির্দেশ"}</a>
       <a href="${nearbyLink(place, 'ATM')}" target="_blank" rel="noopener noreferrer">▣ কাছাকাছি ATM</a>
       <a href="${nearbyLink(place, 'hotel and resort')}" target="_blank" rel="noopener noreferrer">⌂ হোটেল / রিসোর্ট</a>
       <a href="${videoSearch}" target="_blank" rel="noopener noreferrer">▷ YouTube ভিডিও</a>
@@ -4237,7 +4241,7 @@ function updateMarkers(list) {
   list.forEach(place => {
     const icon = L.divIcon({ className: '', html: '<div class="custom-map-pin"><span>☸</span></div>', iconSize: [34, 38], iconAnchor: [17, 36], popupAnchor: [0, -32] });
     const marker = L.marker(place.coords, { icon }).addTo(markerLayer);
-    marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${place.pinApproximate ? '<br><em>পিন আনুমানিক</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ রুট ↗</a>`);
+    marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${place.pinApproximate ? '<br><em>পিন আনুমানিক</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>`);
     marker.on('click', () => selectPlace(place.id, false));
   });
   if (userPosition) addUserMarker(userPosition.lat, userPosition.lng);
