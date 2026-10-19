@@ -358,3 +358,37 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .review-count-pill { min-width:62px; padding:7px 10px; }
   .review-actions .button { flex:1 1 100%; }
 }
+
+
+/* Final sacred saffron palette pass: remove legacy teal from major UI surfaces. */
+.site-header { background: rgba(91, 35, 4, .97); border-bottom-color: rgba(255,210,139,.3); }
+.hero { background: radial-gradient(ellipse at 78% 13%, rgba(255,186,72,.3), transparent 39%), linear-gradient(116deg, #4b1f05 0%, #873708 54%, #ad4a0a 100%); }
+.hero-image { background-image: linear-gradient(90deg, rgba(73,27,2,.88) 0%, rgba(93,36,3,.68) 28%, rgba(109,44,4,.12) 70%, rgba(109,44,4,.04) 100%), linear-gradient(0deg, rgba(57,20,0,.34), transparent 65%), url("assets/images/buddha-hero.png"); background-position:center,center,63% center; }
+.button-gold { color:#512305; background:#ffbd57; }
+.place-media { background:linear-gradient(135deg,#833605,#e8b462); }
+.place-art { background:radial-gradient(circle at 72% 24%,rgba(255,222,153,.24),transparent 24%),linear-gradient(135deg,#803404,#d78020 58%,#9b5720); }
+.card-action { color:#76441d; }
+.card-action:hover { color:#873b06; background:#fff0d8; }
+.custom-map-pin { background:#a84608; color:#ffe0a0; }
+.quote-card-featured { background:linear-gradient(145deg,#843605,#a84608); border-color:#a84608; }
+.resource-card:hover { border-color:#d28b35; box-shadow:0 10px 24px rgba(112,48,9,.09); }
+.publish-steps > div > span { background:#9b4309; }
+.publish-steps strong { color:#793806; }
+.studio-privacy { color:#76512f; background:#fff0d9; }
+.studio-privacy strong { color:#833a08; }
+.community-media-link { color:#8f430a; background:#fff0d9; }
+.community-media iframe { background:#512305; }
+.community-empty { color:#88684b; background:#fff9f0; }
+.community-empty strong { color:#813908; }
+.community-card { box-shadow:0 8px 22px rgba(112,48,9,.05); }
+.research-note { border-left-color:#d17c22; color:#765b40; background:#fff0dc; }
+.research-note strong { color:#813a07; }
+.site-footer { background:linear-gradient(120deg,#481c03,#6d2a04 65%,#963d06); }
+@media (max-width:900px) {
+ .hero-image { background-image:linear-gradient(90deg,rgba(73,27,2,.65),rgba(88,33,3,.2)),linear-gradient(0deg,rgba(57,20,0,.35),transparent 65%),url("assets/images/buddha-hero.png"); background-position:center,center,63% center; }
+}
+@media (max-width:560px) {
+ .hero-image { background-image:linear-gradient(90deg,rgba(70,27,2,.72),rgba(84,32,3,.4)),linear-gradient(0deg,rgba(55,18,0,.38),transparent 65%),url("assets/images/buddha-hero.png"); background-position:center,center,65% center; }
+ .hero { background:linear-gradient(130deg,#4b1f05,#873708); }
+}
+
