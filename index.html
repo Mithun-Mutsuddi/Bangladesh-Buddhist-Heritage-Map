@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>বাংলাদেশের বৌদ্ধ ঐতিহ্য, প্রত্নস্থল ও ভ্রমণ নির্দেশিকা</title>
+    <title>বাংলাদেশের বৌদ্ধ ঐতিহ্যবাহী স্থান ভ্রমণ নির্দেশিকা</title>
 
     <!-- Leaflet CSS for Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
@@ -12,65 +12,78 @@
 
     <style>
         :root {
-            --primary-color: #8B0000; /* Buddhist Maroon */
-            --secondary-color: #FFD700; /* Buddhist Gold */
-            --bg-color: #FFF8DC;
-            --text-color: #2C3E50;
+            --primary-maroon: #6b0f1a;
+            --secondary-gold: #d4af37;
+            --buddhist-blue: #0047ab;
+            --buddhist-orange: #ff8c00;
+            --bg-cream: #fbf9f1;
+            --text-dark: #2c2c2c;
         }
 
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
         }
 
-        /* Header Style with Iconography & Animation */
+        /* Buddhist Flag Color Strip with Animation */
+        .buddhist-flag-bar {
+            height: 8px;
+            background: linear-gradient(to right, #0047ab, #ffd700, #ff0000, #ffffff, #ff8c00);
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Header Style with Religious Vibe & Animations */
         header {
-            background: linear-gradient(135deg, #8B0000, #5c0000);
-            color: var(--secondary-color);
+            background: linear-gradient(135deg, var(--primary-maroon), #3a050b);
+            color: var(--secondary-gold);
             padding: 20px;
             text-align: center;
-            border-bottom: 4px solid var(--secondary-color);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-bottom: 4px solid var(--secondary-gold);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             position: relative;
+            overflow: hidden;
         }
 
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 26px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        /* Rotating Dharmachakra Animation */
+        /* Rotating Dharmachakra & Floating Lantern Animation */
         .rotating-wheel {
             display: inline-block;
-            animation: spin 10s linear infinite;
+            animation: spin 12s linear infinite;
         }
 
         @keyframes spin { 
             100% { transform: rotate(360deg); } 
         }
 
-        .buddha-glow {
-            animation: pulseGlow 2s ease-in-out infinite alternate;
+        .floating-lantern {
+            display: inline-block;
+            animation: floatLantern 3s ease-in-out infinite alternate;
         }
 
-        @keyframes pulseGlow {
-            from { transform: scale(1); text-shadow: 0 0 5px #FFD700; }
-            to { transform: scale(1.1); text-shadow: 0 0 15px #FFD700; }
+        @keyframes floatLantern {
+            from { transform: translateY(0); filter: drop-shadow(0 0 2px #ffd700); }
+            to { transform: translateY(-6px); filter: drop-shadow(0 0 10px #ff8c00); }
         }
 
-        /* Buddhist Flag Color Strip */
-        .buddhist-flag-bar {
-            height: 6px;
-            background: linear-gradient(to right, #0080ff, #ffff00, #ff0000, #ffffff, #ff8000);
-            width: 100%;
+        .header-subtitle {
+            margin: 8px 0 0 0;
+            font-size: 14px;
+            color: #fffae6;
+            letter-spacing: 0.5px;
         }
 
         /* Controls Bar */
@@ -79,26 +92,41 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            background-color: #2c1d11;
+            background-color: #21140c;
             color: white;
-            padding: 12px 15px;
+            padding: 12px 20px;
+            gap: 12px;
+            border-bottom: 2px solid var(--secondary-gold);
+        }
+
+        .filter-group {
+            display: flex;
             gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-group label {
+            font-size: 13px;
+            color: var(--secondary-gold);
+            font-weight: bold;
         }
 
         .filter-group select {
-            padding: 6px 12px;
-            border-radius: 4px;
-            border: 1px solid var(--secondary-color);
+            padding: 7px 12px;
+            border-radius: 5px;
+            border: 1px solid var(--secondary-gold);
             background: #111;
             color: #fff;
             cursor: pointer;
+            font-size: 13px;
         }
 
-        /* Map & Layout Container */
+        /* Main Container */
         .main-container {
             display: flex;
             flex-direction: column;
-            height: calc(100vh - 195px);
+            height: calc(100vh - 200px);
         }
 
         @media (min-width: 768px) {
@@ -119,85 +147,100 @@
             flex: 1;
             background: #ffffff;
             overflow-y: auto;
-            padding: 15px;
-            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+            padding: 18px;
+            box-shadow: -3px 0 8px rgba(0,0,0,0.1);
         }
 
         .place-card {
-            border: 1px solid #ddd;
-            border-left: 6px solid var(--primary-color);
+            border: 1px solid #e0d0b0;
+            border-left: 6px solid var(--primary-maroon);
             border-radius: 8px;
-            padding: 15px;
+            padding: 18px;
             margin-bottom: 15px;
-            background: #fff;
+            background: #fffdf9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .place-card h3 {
             margin-top: 0;
-            color: var(--primary-color);
+            color: var(--primary-maroon);
             display: flex;
             align-items: center;
             gap: 8px;
+            font-size: 20px;
+            border-bottom: 1px dashed #d4af37;
+            padding-bottom: 8px;
         }
 
         .tripitaka-quote {
             background-color: #fffde7;
-            border-left: 4px solid var(--secondary-color);
-            padding: 10px 12px;
+            border-left: 4px solid var(--secondary-gold);
+            padding: 12px;
             font-style: italic;
             font-size: 13px;
             margin: 12px 0;
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 6px 6px 0;
             color: #444;
+            line-height: 1.5;
         }
 
         .media-container img {
             width: 100%;
-            max-height: 220px;
+            max-height: 230px;
             border-radius: 6px;
-            margin-top: 8px;
+            margin-top: 10px;
             object-fit: cover;
-            border: 1px solid #ddd;
+            border: 1px solid #d4af37;
         }
 
         .guide-section {
-            background: #f9f9f9;
-            padding: 12px;
+            background: #f7f3e8;
+            padding: 14px;
             border-radius: 6px;
             font-size: 13px;
             margin-top: 12px;
-            border: 1px solid #eee;
+            border: 1px solid #e6dcbe;
+        }
+
+        .guide-section h4 {
+            margin-top: 0;
+            color: var(--primary-maroon);
+            margin-bottom: 8px;
+            font-size: 14px;
+            border-bottom: 1px solid #d4af37;
+            padding-bottom: 4px;
         }
 
         .user-location-info {
             background: #e8f5e9;
-            padding: 10px;
+            padding: 10px 14px;
             font-size: 13px;
             border-radius: 6px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             border-left: 4px solid #2e7d32;
+            font-weight: 500;
         }
 
         /* Footer */
         footer {
-            background-color: var(--primary-color);
+            background-color: var(--primary-maroon);
             color: white;
             text-align: center;
-            padding: 12px;
-            font-size: 14px;
-            border-top: 3px solid var(--secondary-color);
+            padding: 14px;
+            font-size: 13px;
+            border-top: 3px solid var(--secondary-gold);
         }
 
         footer a {
-            color: var(--secondary-color);
+            color: var(--secondary-gold);
             text-decoration: none;
             font-weight: bold;
         }
 
         .visitor-counter {
             font-size: 12px;
-            margin-top: 5px;
-            color: #ffeb3b;
+            margin-top: 6px;
+            color: #ffd700;
         }
 
         #google_translate_element {
@@ -210,14 +253,18 @@
     <!-- Buddhist Flag Color Bar -->
     <div class="buddhist-flag-bar"></div>
 
-    <!-- Header with Animated Graphics -->
+    <!-- Header with Religious Vibe, Floating Lanterns & Rotating Dharmachakra -->
     <header>
         <h1>
             <span class="rotating-wheel">☸️</span> 
-            <span class="buddha-glow">🪷 গৌতম বুদ্ধের বাণী ও বাংলাদেশের বৌদ্ধ ঐতিহ্য 🪷</span>
+            <span class="floating-lantern">🏮</span>
+            <span>বাংলাদেশের বৌদ্ধ ঐতিহ্যবাহী স্থান ভ্রমণ নির্দেশিকা</span>
+            <span class="floating-lantern">🏮</span>
             <span class="rotating-wheel">☸️</span>
         </h1>
-        <p style="margin: 5px 0 0 0; font-size: 14px; color: #FFD700;">প্রত্নস্থল, বিহার, তীর্থস্থান ও ভ্রমণ নির্দেশিকা ম্যাপ (卍 স্বস্তিকা ও পবিত্র ধর্মাঞ্চল)</p>
+        <div class="header-subtitle">
+            卍 পবিত্র ধর্মাঞ্চল, প্রত্নস্থল, বিহার, তীর্থস্থান, ধ্যানকেন্দ্র ও পর্যটন গাইড 卍
+        </div>
     </header>
 
     <!-- Controls Bar -->
@@ -225,7 +272,7 @@
         <div class="filter-group">
             <label for="divisionFilter">বিভাগ (৮টি):</label>
             <select id="divisionFilter" onchange="filterLocations()">
-                <option value="all">সব বিভাগ (বাংলাদেশ)</option>
+                <option value="all">সকল বিভাগ (বাংলাদেশ)</option>
                 <option value="Dhaka">ঢাকা বিভাগ</option>
                 <option value="Chittagong">চট্টগ্রাম বিভাগ</option>
                 <option value="Rajshahi">রাজশাহী বিভাগ</option>
@@ -233,7 +280,7 @@
                 <option value="Barisal">বরিশাল বিভাগ</option>
                 <option value="Sylhet">সিলেট বিভাগ</option>
                 <option value="Rangpur">রংপুর বিভাগ</option>
-                <option value="Mymensingh">ময়মনসিংহ বিভাগ</option>
+                <option value="Mymensingh">ময়মনসিংহ বিভাগ</option>
             </select>
 
             <label for="categoryFilter">ধরন:</label>
@@ -241,13 +288,13 @@
                 <option value="all">সব ক্যাটাগরি</option>
                 <option value="বিহার/প্রত্নস্থল">বিহার ও প্রত্নস্থল</option>
                 <option value="তীর্থস্থান/ভাবনাকেন্দ্র">তীর্থস্থান ও ভাবনাকেন্দ্র</option>
-                <option value="প্রতিষ্ঠান/স্কুল/কলেজ">শিক্ষা প্রতিষ্ঠান ও এতিমখানা</option>
+                <option value="প্রতিষ্ঠান/স্কুল/কলেজ">শিক্ষা প্রতিষ্ঠান ও অনাথালয়</option>
                 <option value="শ্মশান">বৌদ্ধ শ্মশান</option>
             </select>
         </div>
 
         <div>
-            <span style="font-size: 12px;">🌐 ভাষা পরিবর্তন:</span>
+            <span style="font-size: 12px; color: var(--secondary-gold); font-weight: bold;">🌐 ভাষা পরিবর্তন:</span>
             <div id="google_translate_element"></div>
         </div>
     </div>
@@ -265,7 +312,7 @@
             
             <div id="placeDetails">
                 <h3>☸️ ম্যাপের যেকোনো পিন বা তালিকায় ক্লিক করুন</h3>
-                <p>এখানে স্থানটির ইতিহাস, প্রত্নতাত্ত্বিক গুরুত্ব, ত্রিপিটকীয় সূত্র ও রেফারেন্স, যাতায়াত নির্দেশিকা, খরচ, ছবি ও বিবরণ প্রদর্শিত হবে।</p>
+                <p>এখানে স্থানটির ইতিহাস, প্রত্নতাত্ত্বিক গুরুত্ব, ত্রিপিটকীয় সূত্র ও বাণী, যাতায়াত, হোটেল/রিসোর্ট, কাছাকাছি এটিএম বুথ এবং ছবি প্রদর্শিত হবে।</p>
             </div>
         </div>
     </div>
@@ -338,7 +385,7 @@
             renderLocations();
         }
 
-        // ৩. পূর্ণাঙ্গ ডاتاবেজ (সঠিক ছবি ও ৮টি বিভাগসহ)
+        // ৩. পূর্ণাঙ্গ ডাটাসেইট (বুদ্ধ বাণী, ছবি, হোটেল, এটিএম বুথসহ)
         const buddhistLocations = [
             {
                 id: 1,
@@ -346,11 +393,12 @@
                 category: "বিহার/প্রত্নস্থল",
                 division: "Rajshahi",
                 coords: [25.0315, 88.9669],
-                history: "অষ্টম শতকে পাল রাজা ধর্মপাল কর্তৃক প্রতিষ্ঠিত এই মহাবিহারটি ইউনেস্কো ওয়ার্ল্ড হেরিটেজ সাইট। এটি প্রাচীন বাংলার সর্ববৃহৎ ও শ্রেষ্ঠ বৌদ্ধ বিহার এবং আন্তর্জাতিক শিক্ষা ও সংস্কৃতির অন্যতম প্রধান কেন্দ্র ছিল।",
-                tripitakaRef: "বিনয় পিটক, মহাবগ্গ (ভ্রমণ ও দূরবর্তী বিহারে ভিক্ষুদের আবাসের নিয়মাবলি এবং সংঘের শৃঙ্খলা); অংগুত্তোর নিকায়।",
+                history: "অষ্টম শতকে পাল রাজা ধর্মপাল কর্তৃক প্রতিষ্ঠিত এই মহাবিহারটি ইউনেস্কো ওয়ার্ল্ড হেরিটেজ সাইট। এটি প্রাচীন বাংলার সর্ববৃহৎ ও শ্রেষ্ঠ বৌদ্ধ বিহার এবং আন্তর্জাতিক শিক্ষা কেন্দ্র ছিল।",
+                tripitakaRef: "<b>বুদ্ধ বাণী ও ত্রিপিটক সূত্র (ধম্মপদ):</b> 'যেমন সুন্দর ফুল, সুগন্ধহীন অথচ উজ্জ্বল—তেমনি সুভাষিত কথা নিষ্ক্রিয় ব্যক্তির জন্য নিষ্ফল হয়।' — (বিনয় পিটক, মহাবগ্গ ও অঙ্গুত্তর নিকায়)।",
                 travelGuide: {
                     howToGo: "ঢাকা থেকে ট্রেন বা বাসে সান্তাহার/জয়পুরহাট হয়ে সিএনজি বা বাসযোগে বদলগাছী পাহাড়পুর।",
-                    stay: "নওগাঁ জেলা সদর বা জয়পুরহাটের আবাসিক হোটেল।",
+                    stay: "নওগাঁ সার্কিট হাউজ, হোটেল অবকাশ বা জয়পুরহাটের আবাসিক হোটেল।",
+                    atm: "বদলগাছী বাজার ও জয়পুরহাট সদর (সোনালী ও ব্র্যাক ব্যাংক এটিএম বুথ)।",
                     cost: "বাজেট প্রায় ২০০০ - ৩,৫০০ টাকা।",
                     food: "স্থানীয় ঐতিহ্যবাহী খাবার ও নিরামিষ।"
                 },
@@ -362,11 +410,12 @@
                 category: "বিহার/প্রত্নস্থল",
                 division: "Chittagong",
                 coords: [23.4357, 91.1333],
-                history: "দেব রাজবংশের রাজা শ্রীভবদেব অষ্টম শতকে লালমাই-ময়নামতি পাহাড়ের পাদদেশে এটি নির্মাণ করেন। এর চারপাশে ১১৫টি ভিক্ষু কক্ষ এবং কেন্দ্রীয় মন্দির রয়েছে যা প্রাচীন সভ্যতার সাক্ষ্য দেয়।",
-                tripitakaRef: "সংযুত্ত নিকায় (পুণ্যভূমি ও ভিক্ষুসংঘের তীর্থ ভ্রমণ এবং ধ্যানের গুরুত্ব)।",
+                history: "দেব রাজবংশের রাজা শ্রীভবদেব অষ্টম শতকে লালমাই-ময়নামতি পাহাড়ের পাদদেশে এটি নির্মাণ করেন। এর চারপাশে ১১৫টি ভিক্ষু কক্ষ এবং কেন্দ্রীয় মন্দির রয়েছে।",
+                tripitakaRef: "<b>বুদ্ধ বাণী ও ত্রিপিটক সূত্র:</b> 'জয় শত্রু জন্ম দেয়, পরাজিত ব্যক্তি দুঃখী হয়ে বাঁচে। জয়-পরাজয় উভয় ত্যাগ করে যে শান্ত থাকে, সেই সুখেই থাকে।' — (সংযুক্ত নিকায়)।",
                 travelGuide: {
                     howToGo: "ঢাকা থেকে বাসে কুমিল্লা কোটবাড়ী বিশ্বরোড, সেখান থেকে সিএনজি বা অটোতে সরাসরি বিহার।",
-                    stay: "কুমিল্লা শহরের বিভিন্ন মানসম্মত হোটেল।",
+                    stay: "হোটেল শালবন, কুমিল্লা ক্লাব বা হোটেল ময়নামতি।",
+                    atm: "কোটবাড়ী বিশ্বরোড ও কুমিল্লা শহর (ইউসিবি, ডাচ-বাংলা এটিএম বুথ)।",
                     cost: "বাজেট ১০০০ - ১৫০০ টাকা।",
                     food: "কুমিল্লার বিখ্যাত রসমালাই ও স্থানীয় সুস্বাদু খাবার।"
                 },
@@ -379,10 +428,11 @@
                 division: "Chittagong",
                 coords: [22.1953, 92.2172],
                 history: "বান্দরবানের বালাঘাটায় পাহাড়ের চূড়ায় অবস্থিত দেশের সর্ববৃহৎ থেরবাদ বৌদ্ধ ধাতু প্যাগোডা। এখানে মূল্যবান বুদ্ধমূর্তি ও পবিত্র ধাতু সংরক্ষিত আছে।",
-                tripitakaRef: "খুদক নিকায়, ধম্মপদ (চেতিয় বন্দনা, বুদ্ধ পূজা ও মানসিকভাবে শান্তিলাভ)।",
+                tripitakaRef: "<b>বুদ্ধ বাণী ও ত্রিপিটক সূত্র:</b> 'স্বাস্থ্যই পরম লাভ, সন্তুষ্টিই পরম ধন, বিশ্বাসই পরম আত্মীয় এবং নির্বাণই পরম সুখ।' — (খুদক নিকায়, ধম্মপদ)।",
                 travelGuide: {
                     howToGo: "বান্দরবান শহর থেকে অটোরিকশা বা চান্দের গাড়িযোগে বালাঘাটা।",
-                    stay: "বান্দরবান শহরের হোটেল, মোটেল ও রিসোর্ট।",
+                    stay: "হোটেল হিল ভিউ, হোটেল গ্রিন বাংলা ও রিসোর্ট হিল প্যারাডাইস।",
+                    atm: "বান্দরবান শহর ও পোস্ট অফিস মোড় (অগ্রণী ও প্রাইম ব্যাংক এটিএম)।",
                     cost: "বাজেট ২৫০০ - ৫০০০ টাকা।",
                     food: "পাহাড়ি ঐতিহ্যবাহী ব্যঞ্জন ও জুম খাবার।"
                 },
@@ -394,15 +444,16 @@
                 category: "তীর্থস্থান/ভাবনাকেন্দ্র",
                 division: "Chittagong",
                 coords: [22.6533, 92.1557],
-                history: "পরম পূজ্যপাদ শ্রীমৎ সাধনানন্দ মহাস্থবীর (বনভন্তে) প্রতিষ্ঠিত কাপ্তাই হ্রদ সংলগ্ন বিশ্বখ্যাত বৌদ্ধ তীর্থ ও ধ্যানকেন্দ্র। প্রতিবছর এখানে লক্ষাধিক পুণ্যার্থীর সমাগম ঘটে।",
-                tripitakaRef: "মজ্জিম নিকায়, ভাবনা সুত্ত (অরণ্য কুটির ও অখণ্ড মনঃসংযোগে সাধনা)।",
+                history: "পরম পূজ্যপাদ শ্রীমৎ সাধনানন্দ মহাস্থবীর (বনভন্তে) প্রতিষ্ঠিত কাপ্তাই হ্রদ সংলগ্ন বিশ্বখ্যাত বৌদ্ধ তীর্থ ও ধ্যানকেন্দ্র।",
+                tripitakaRef: "<b>বুদ্ধ বাণী ও ত্রিপিটক সূত্র:</b> 'মনই সমস্ত কর্মের পূর্বগামী, মনই প্রধান, মন দ্বারাই সব সম্পাদিত হয়।' — (মজ্জিম নিকায়, ভাবনা সুত্ত)।",
                 travelGuide: {
                     howToGo: "ঢাকা থেকে বাসে রাঙামাটি রিজার্ভ বাজার, সেখান থেকে হেঁটে বা অটোরিকশায় বিহারে যাওয়া যায়।",
-                    stay: "রাঙামাটি শহরের কাপ্তাই লেক ভিউ হোটেল ও রিসোর্ট।",
+                    stay: "হোটেল জর্জিয়া, পর্যটন মোটেল রাঙামাটি।",
+                    atm: "রিজার্ভ বাজার ও তবলছড়ি (ডাচ-বাংলা এবং ইসলামী ব্যাংক এটিএম)।",
                     cost: "বাজেট ২৫০০ - ৪৫০০ টাকা।",
                     food: "স্থানীয় পাহাড়ি বাঁশকোড়ল ও ঐতিহ্যবাহী খাবার।"
                 },
-                img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Rajban_Vihara_Rangamati.jpg/640px-Rajban_Vihara_Rangamati.jpg"
+                img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Rajaban_Vihara.jpg/640px-Rajaban_Vihara.jpg"
             },
             {
                 id: 5,
@@ -410,11 +461,12 @@
                 category: "প্রতিষ্ঠান/স্কুল/কলেজ",
                 division: "Dhaka",
                 coords: [23.7635, 90.3421],
-                history: "রাজধানী ঢাকার মেরুল বাড্ডায় অবস্থিত দেশের প্রধান বৌদ্ধ ধর্মীয়, শিক্ষা ও সামাজিক কেন্দ্র। এখানে নিয়মিত ধর্মীয় শিক্ষা, পালি চর্চা ও দাতব্য চিকিৎসালয় পরিচালিত হয়।",
-                tripitakaRef: "দীর্ঘ নিকায়, সিগালোবাদ সুত্ত (দান, সেবা ও সমাজ কল্যাণমূলক কর্মের মহত্ব)।",
+                history: "রাজধানী ঢাকার মেরুল বাড্ডায় অবস্থিত দেশের প্রধান বৌদ্ধ ধর্মীয়, শিক্ষা ও সামাজিক কেন্দ্র। এখানে নিয়মিত ধর্মীয় শিক্ষা ও দাতব্য চিকিৎসালয় পরিচালিত হয়।",
+                tripitakaRef: "<b>বুদ্ধ বাণী ও ত্রিপিটক সূত্র:</b> 'দানশীল ব্যক্তি সর্বদাই প্রিয় এবং প্রশংসিত হন।' — (দীর্ঘ নিকায়, সিগালোবাদ সুত্ত)।",
                 travelGuide: {
                     howToGo: "ঢাকার যেকোনো প্রান্ত থেকে বাসে বা সিএনজিতে মেরুল বাড্ডা বৌদ্ধ বিহার।",
-                    stay: "ঢাকার যেকোনো আবাসিক হোটেল।",
+                    stay: "ঢাকার যেকোনো মানসম্মত আবাসিক হোটেল বা গেস্টহাউস।",
+                    atm: "বাড্ডা ইউলুপ ও প্রগতি সরণি (এবি ব্যাংক, ব্র্যাক ব্যাংক ও সিটি ব্যাংক এটিএম)।",
                     cost: "স্থানীয় যাতায়াত খরচ (৩০০ - ৫০০ টাকা)।",
                     food: "আশেপাশের মানসম্মত রেস্তোরাঁ।"
                 },
@@ -480,7 +532,6 @@
                     <p><strong>📖 ইতিহাস ও বিবরণ:</strong> ${place.history}</p>
 
                     <div class="tripitaka-quote">
-                        <strong>📜 ত্রিপিটক সূত্র ও রেফারেন্স:</strong><br>
                         ${place.tripitakaRef}
                     </div>
 
@@ -489,12 +540,13 @@
                     <div class="guide-section">
                         <h4>🧳 ভ্রমণ ও ট্যুরিস্ট গাইড:</h4>
                         <p><b>যাতায়াত:</b> ${place.travelGuide.howToGo}</p>
-                        <p><b>থাকা:</b> ${place.travelGuide.stay}</p>
+                        <p><b>হোটেল ও রিসোর্ট:</b> ${place.travelGuide.stay}</p>
+                        <p><b>কাছাকাছি এটিএম বুথ:</b> ${place.travelGuide.atm}</p>
                         <p><b>বাজেট:</b> ${place.travelGuide.cost}</p>
                         <p><b>খাবার:</b> ${place.travelGuide.food}</p>
                     </div>
 
-                    <div style="margin-top:15px; border-top:1px solid #eee; padding-top:10px;">
+                    <div style="margin-top:15px; border-top:1px solid #e0d0b0; padding-top:10px;">
                         <p><b>শেয়ার করুন:</b></p>
                         <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" style="color:#3b5998; font-size:18px; margin-right:12px;"><i class="fab fa-facebook"></i></a>
                         <a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}" target="_blank" style="color:#1da1f2; font-size:18px;"><i class="fab fa-twitter"></i></a>
