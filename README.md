@@ -4,9 +4,9 @@
 
 ## বর্তমান ডিরেক্টরি
 
-- **১৯১টি স্বতন্ত্র স্থান/প্রতিষ্ঠান/ঐতিহ্য রেকর্ড** — প্রতিটি নাম ও লিংক দিয়ে আবার খোঁজা যায়।
+- **258টি স্বতন্ত্র স্থান/প্রতিষ্ঠান/ঐতিহ্য রেকর্ড** — প্রতিটি নাম ও লিংক দিয়ে আবার খোঁজা যায়।
 - ৮ বিভাগভিত্তিক অনুসন্ধান; জেলা, স্থাননাম ও ধরন অনুযায়ী ফিল্টার; Leaflet/OpenStreetMap এবং Google Maps directions.
-- ৭২টি অতিরিক্ত রেকর্ড যুক্ত করে মোট ১৯১টি স্থান/প্রতিষ্ঠান/ঐতিহ্য রেকর্ড: আবুরখীল, রাউজান, রামু/মহেশখালী, বান্দরবান, খাগড়াছড়ি/মহালছড়ি, কুয়াকাটা-পটুয়াখালীসহ বিভিন্ন অঞ্চলের বিহার, প্রত্নস্থান, পালি শিক্ষা ও শিশু-সেবা সংস্থা।
+- ৭২টি অতিরিক্ত রেকর্ড যুক্ত করে মোট 258টি স্থান/প্রতিষ্ঠান/ঐতিহ্য রেকর্ড: আবুরখীল, রাউজান, রামু/মহেশখালী, বান্দরবান, খাগড়াছড়ি/মহালছড়ি, কুয়াকাটা-পটুয়াখালীসহ বিভিন্ন অঞ্চলের বিহার, প্রত্নস্থান, পালি শিক্ষা ও শিশু-সেবা সংস্থা।
 - বৌদ্ধ ক্যানন, জাতক, ধম্মপদ, বুদ্ধবংশ, থেরগাথা/থেরীগাথা, বিমানবত্থু, পেতবত্থু, অট্ঠকথা, দীপবংশ/মহাবংশ, লোককথা ও আধুনিক ফ্যান্টাসি আলাদা করে পরিচয় করানো সাহিত্য বিভাগ।
 - ভ্রমণ-রিভিউ form; রিভিউ এই browser/device-এ save হয়, JSON backup/export করা যায়।
 - no-code Content Studio: লেখা, ছবি, ভিডিও, অডিও, নতুন স্থান/coordinates, source URL এবং media credit.
@@ -38,6 +38,8 @@ GitHub Pages static hosting। আলাদা authenticated backend ছাড�
 - [মানিকছড়ি উপজেলা — বৌদ্ধ মন্দির/বিহার তালিকা](https://manikchari.khagrachhari.gov.bd/pages/static-pages/69911a7d35ce18e1c073fbff)
 - [বান্দরবান রাজবিলা ইউনিয়ন — বৌদ্ধ মন্দির তালিকা](https://rajbilaup.bandarban.gov.bd/pages/static-pages/699145ba516a96d4de414a07)
 - [কক্সবাজার জেলা প্রশাসন — প্যাগোডা তালিকা](https://coxsbazar.gov.bd/pages/static-pages/6991178035ce18e1c073db07)
+- [নাটেশ্বর বৌদ্ধ মন্দির ও স্তূপ — মুন্সীগঞ্জ জেলা প্রশাসন](https://www.munshiganj.gov.bd/bn/site/religious_institutes/4rJh-%E0%A6%A8%E0%A6%BE%E0%A6%9F%E0%A7%87%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%B0-%E0%A6%AC%E0%A7%8C%E0%A6%A6%E0%A7%8D%E0%A6%A7-%E0%A6%AE%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%B0)
+- [উয়ারী-বটেশ্বর — প্রত্নতত্ত্ব অধিদপ্তর](https://archaeology.gov.bd/pages/static-pages/6922de61933eb65569e1a41e)
 - [মহালছড়ি উপজেলা — বৌদ্ধ বিহার তালিকা](https://mohalchari.khagrachhari.gov.bd/pages/static-pages/69910abb35ce18e1c073907f)
 - [বাবুছড়া ইউনিয়ন — বৌদ্ধ বিহার তালিকা](https://babucharaup.khagrachhari.gov.bd/pages/static-pages/69912e1a516a96d4de408ca5)
 - [UNESCO — Somapura Mahavihara](https://whc.unesco.org/en/list/322/)
@@ -47,7 +49,7 @@ GitHub Pages static hosting। আলাদা authenticated backend ছাড�
 
 ## জরুরি তথ্য-সতর্কতা
 
-এই ১৯১টি রেকর্ড **পূর্ণাঙ্গ সরকারি master census নয়**। সরকারি ও স্থানীয় তালিকার দৃশ্যমান নামগুলো থেকে সংগ্রহ চলছে; কিছু জেলা/ইউনিয়নের তালিকা অনেক বড়, কিছু নামের বানান/বর্তমান কার্যক্রম পরিবর্তিত হতে পারে। তাই এটিকে কাজ-চলমান directory হিসেবে বিবেচনা করুন। “সব কিছু বাদ না পড়া” নিশ্চিত করতে প্রতিটি জেলার বিহার/প্যাগোডা তালিকা, স্থানীয় প্রতিষ্ঠান এবং মাঠপর্যায়ের যাচাই ধারাবাহিকভাবে করতে হবে।
+এই 258টি রেকর্ড **পূর্ণাঙ্গ সরকারি master census নয়**। সরকারি ও স্থানীয় তালিকার দৃশ্যমান নামগুলো থেকে সংগ্রহ চলছে; কিছু জেলা/ইউনিয়নের তালিকা অনেক বড়, কিছু নামের বানান/বর্তমান কার্যক্রম পরিবর্তিত হতে পারে। তাই এটিকে কাজ-চলমান directory হিসেবে বিবেচনা করুন। “সব কিছু বাদ না পড়া” নিশ্চিত করতে প্রতিটি জেলার বিহার/প্যাগোডা তালিকা, স্থানীয় প্রতিষ্ঠান এবং মাঠপর্যায়ের যাচাই ধারাবাহিকভাবে করতে হবে।
 
 - অনেক নতুন গ্রাম/উপজেলা-স্তরের marker আনুমানিক; এগুলোকে মন্দিরের verified entrance GPS ধরে যাত্রা করবেন না। মানচিত্র ও details-এ যেখানে প্রযোজ্য সেখানে এই সতর্কতা দেখানো হয়।
 - “সতিমন ডাঙ্গি/সতিমন ঠাকুর” লোকধর্ম-ঐতিহ্যটি **গবেষণাধীন**; নিশ্চিত বৌদ্ধ বিহার বলে ঘোষণা করা হয়নি।
@@ -55,3 +57,10 @@ GitHub Pages static hosting। আলাদা authenticated backend ছাড�
 - ATM, hotel/resort links Google Maps live searches; live list/availability/route guarantee নয়।
 - Site uses third-party online map tiles and some externally hosted photos. The bundled Buddha hero is AI-generated illustration, not a documentary photo of a real Bangladesh site.
 - User location permission is requested only after a user clicks the location control. Browser-local drafts/reviews are not public until manually reviewed and published.
+
+
+## ম্যাপের নির্ভরযোগ্যতা ও চিহ্ন
+
+- অনেক স্থানীয় বিহারের সুনির্দিষ্ট প্রবেশদ্বার GPS যাচাই করা যায়নি। এসব রেকর্ডে map pin আনুমানিক হিসেবে দেখানো হয় এবং Google Maps-এ নাম ধরে খোঁজার লিংক খোলে; সরাসরি সেই আনুমানিক কোঅর্ডিনেটে driving directions দেওয়া হয় না।
+- বহু মার্কার একে অপরের খুব কাছাকাছি থাকলে Leaflet.markercluster সেগুলোকে গুচ্ছবদ্ধ করে; zoom বাড়ালে পৃথক ধর্মচক্র চিহ্ন দেখা যায়। CDN লোড না হলে ordinary Leaflet marker layer-এ fallback রয়েছে।
+- উয়ারী-বটেশ্বর গুরুত্বপূর্ণ প্রত্নস্থল হলেও ব্যবহৃত প্রত্নতত্ত্ব অধিদপ্তর সূত্রে নিশ্চিত বৌদ্ধ বিহার/মন্দিরের দাবি নেই; তাই এটি “বৌদ্ধ-সংযোগ যাচাইাধীন” হিসেবে রাখা হয়েছে।
