@@ -305,3 +305,56 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .hero-image { opacity: .93; background-image: linear-gradient(90deg, rgba(70, 27, 2, .69), rgba(84, 32, 3, .40)), linear-gradient(0deg, rgba(55, 18, 0, .38), transparent 65%), url("assets/images/buddha-hero.png"); background-position: center, center, 65% center; }
   .hero { background: linear-gradient(130deg, #4b1f05, #873708); }
 }
+
+
+/* Buddhist literature library */
+.literature-section { background: #fff7ed; padding-top: 62px; padding-bottom: 68px; }
+.literature-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:-6px 0 24px; }
+.literature-tabs span { padding:7px 11px; border:1px solid #ead1b1; border-radius:999px; color:#81410e; background:#fff0da; font-size:11px; font-weight:700; }
+.literature-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.literature-card { display:flex; flex-direction:column; align-items:flex-start; min-width:0; padding:19px; border:1px solid #ead7c6; border-radius:15px; background:#fffdf9; box-shadow:0 8px 22px rgba(112,48,9,.045); }
+.literature-tag { display:inline-block; padding:4px 8px; border-radius:6px; color:#8b430b; background:#ffebd0; font-size:9px; font-weight:800; }
+.literature-card h3 { margin:11px 0 7px; color:#793806; font-size:16px; line-height:1.5; }
+.literature-card p { margin:0 0 15px; color:#71553d; font-size:12px; line-height:1.9; }
+.literature-card a { display:inline-block; margin:3px 8px 2px 0; color:#994b0b; font-size:11px; font-weight:800; text-decoration:none; }
+.literature-card a:hover { text-decoration:underline; }
+.literature-footnote { margin-top:20px; padding:15px 17px; border-left:4px solid #d07a20; border-radius:0 10px 10px 0; color:#72533c; background:#ffedd8; font-size:11px; line-height:1.9; }
+.literature-footnote a { color:#87400a; font-weight:800; }
+.review-section { padding-top:62px; padding-bottom:68px; }
+.review-count-pill { display:grid; justify-items:center; align-content:center; min-width:76px; padding:8px 14px; border:1px solid #eccfa9; border-radius:13px; color:#8b410a; background:#fff0dc; }
+.review-count-pill strong { font-size:23px; line-height:1.2; }.review-count-pill small { font-size:10px; }
+.review-layout { display:grid; grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr); gap:20px; align-items:start; }
+.review-form,.review-list-panel { min-width:0; padding:22px; border:1px solid #ead7c6; border-radius:16px; background:#fffdf9; box-shadow:0 9px 26px rgba(112,48,9,.055); }
+.review-form h3,.review-list-heading h3 { margin:0 0 14px; color:#803b08; font-size:19px; }
+.review-form label { display:grid; gap:6px; margin:12px 0; color:#6e4625; font-size:12px; font-weight:700; }
+.review-form input,.review-form select,.review-form textarea { width:100%; min-width:0; border:1px solid #e5d5c2; border-radius:9px; padding:10px 11px; background:#fffaf4; color:#4a2811; font:inherit; font-weight:400; }
+.review-form input:focus,.review-form select:focus,.review-form textarea:focus { outline:3px solid rgba(219,144,53,.22); border-color:#cb852e; }
+.review-form textarea { resize:vertical; line-height:1.8; }
+.review-fields-two { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.review-status { margin:12px 0 0; padding:10px 12px; border-radius:8px; color:#795f43; background:#fff0d9; font-size:10px; line-height:1.8; }
+.review-status[data-kind="success"] { color:#5d541e; background:#f8efd0; }.review-status[data-kind="error"] { color:#8a342b; background:#fbebe7; }
+.review-list-heading { margin-bottom:14px; }.review-list-heading h3 { margin-bottom:3px; }.review-list-heading p { margin:0; color:#8a7159; font-size:11px; }
+.review-list { display:grid; gap:11px; }
+.review-empty { padding:24px 14px; border:1px dashed #e5c9a8; border-radius:11px; color:#937e67; background:#fffaf3; text-align:center; font-size:12px; line-height:1.9; }
+.review-card { padding:14px; border:1px solid #ebdfd1; border-radius:12px; background:#fffaf4; }
+.review-card-top { display:flex; justify-content:space-between; align-items:start; gap:10px; }.review-card-top h4 { margin:0; color:#7e3908; font-size:14px; line-height:1.6; }.review-card-top p { margin:3px 0 0; color:#8b745c; font-size:10px; }
+.review-visibility { flex:none; padding:4px 7px; border-radius:5px; font-size:9px; font-weight:800; }.review-visibility.is-public { color:#4d6f32; background:#edf4dc; }.review-visibility.is-local { color:#815015; background:#ffedcf; }
+.review-stars { margin:8px 0; color:#c57b15; font-size:16px; letter-spacing:.08em; }.review-stars small { margin-left:7px; color:#92653a; font-size:10px; letter-spacing:0; }
+.review-card-text { margin:7px 0 12px; color:#62452d; font-size:12px; line-height:1.9; white-space:pre-wrap; overflow-wrap:anywhere; }
+.review-card-footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:7px; padding-top:9px; border-top:1px solid #eee0d1; color:#8b745c; font-size:10px; }
+.review-card-source { margin:7px 0 0; font-size:10px; }.review-card-source a { color:#8b430b; font-weight:800; }
+.review-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:15px; }.review-actions .button { font-size:11px; }
+.review-privacy { margin:14px 0 0; padding:11px 12px; border-radius:8px; color:#795b43; background:#fff0da; font-size:10px; line-height:1.8; }
+.review-privacy code { color:#863d08; background:#fce2c0; padding:2px 4px; border-radius:4px; }
+.map-pin-warning { margin:8px 0; padding:9px 11px; border-left:3px solid #cf771f; border-radius:0 7px 7px 0; color:#81420f !important; background:#fff0d8; font-size:10px !important; line-height:1.8 !important; }
+@media(max-width:900px) {
+  .literature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .review-layout { grid-template-columns:1fr; }
+}
+@media(max-width:560px) {
+  .literature-grid { grid-template-columns:1fr; }
+  .review-form,.review-list-panel { padding:15px; }
+  .review-fields-two { grid-template-columns:1fr; gap:0; }
+  .review-count-pill { min-width:62px; padding:7px 10px; }
+  .review-actions .button { flex:1 1 100%; }
+}
