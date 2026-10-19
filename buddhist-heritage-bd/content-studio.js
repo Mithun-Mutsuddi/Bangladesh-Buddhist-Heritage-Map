@@ -97,7 +97,12 @@
       mediaName: post.mediaName || '',
       sourceUrl: safeExternalUrl(post.sourceUrl),
       credit: post.credit || '',
-      createdAt: post.createdAt || new Date().toISOString()
+      createdAt: post.createdAt || new Date().toISOString(),
+      placeId: post.placeId || '',
+      placeName: post.placeName || '',
+      rating: Number.isFinite(Number(post.rating)) && Number(post.rating) > 0 ? Math.min(5, Math.max(1, Number(post.rating))) : null,
+      visitDate: post.visitDate || '',
+      author: post.author || ''
     };
     if (!Number.isFinite(record.latitude) || record.latitude < -90 || record.latitude > 90) record.latitude = null;
     if (!Number.isFinite(record.longitude) || record.longitude < -180 || record.longitude > 180) record.longitude = null;
@@ -108,6 +113,7 @@
     if (post.type === 'image') return 'ছবি';
     if (post.type === 'video') return 'ভিডিও';
     if (post.type === 'audio') return 'অডিও';
+    if (post.type === 'review') return 'স্থান-ভ্রমণ রিভিউ';
     return 'লেখা';
   }
   function renderMedia(post) {
