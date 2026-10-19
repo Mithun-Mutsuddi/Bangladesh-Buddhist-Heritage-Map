@@ -2526,6 +2526,7 @@ let activePlaceId = destinations[0]?.id ?? null;
 let sortUnvisitedFirst = true;
 const visitedIds = new Set(readStorage('buddhistHeritageVisited', []));
 const itineraryIds = new Set(readStorage('buddhistHeritageItinerary', []));
+let publishedReviewRecords = [];
 
 function readStorage(key, fallback) {
   try {
@@ -2613,7 +2614,7 @@ function renderPlaceDetail(place) {
   const sourceUrl = place.source || commonsSearch;
   byId('placeDetail').innerHTML = `<div class="detail-empty-art" aria-hidden="true">${media ? `<img src="${media.image}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;opacity:.72">` : ''}<span style="position:absolute;right:18px;top:4px">☸</span><i>🪷</i></div>
     <p class="section-kicker">SELECTED DESTINATION</p><h3>${escapeHtml(place.name)}</h3>
-    <div class="detail-meta"><span class="detail-chip">${escapeHtml(place.district)} জেলা</span><span class="detail-chip">${escapeHtml(place.division)} বিভাগ</span><span class="detail-chip">${escapeHtml(place.category)}</span></div>
+    <div class="detail-meta"><span class="detail-chip">${escapeHtml(place.district)} জেলা</span><span class="detail-chip">${escapeHtml(place.division)} বিভাগ</span><span class="detail-chip">${escapeHtml(place.category)}</span></div>${place.pinApproximate ? '<p class="map-pin-warning">⚠ এই মানচিত্রের পিন আনুমানিক; এটি জরিপকৃত প্রবেশদ্বারের GPS নয়। যাওয়ার আগে ঠিকানা স্থানীয়/সরকারি সূত্রে নিশ্চিত করুন।</p>' : ''}
     <p class="detail-history">${escapeHtml(place.history)}</p>
     <p><strong>🧭 যাওয়ার পরিকল্পনা:</strong> ${escapeHtml(place.trip)}</p>
     <p class="detail-quote">☸ <strong>শ্রদ্ধাশীল ভ্রমণ:</strong> ${escapeHtml(place.dhamma)} ${place.id === 'somapura' ? '<a href="https://whc.unesco.org/en/list/322/" target="_blank" rel="noopener noreferrer">[UNESCO]</a>' : ''}</p>
@@ -2651,7 +2652,7 @@ function updateMarkers(list) {
   list.forEach(place => {
     const icon = L.divIcon({ className: '', html: '<div class="custom-map-pin"><span>☸</span></div>', iconSize: [34, 38], iconAnchor: [17, 36], popupAnchor: [0, -32] });
     const marker = L.marker(place.coords, { icon }).addTo(markerLayer);
-    marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ রুট ↗</a>`);
+    marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${place.pinApproximate ? '<br><em>পিন আনুমানিক</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ রুট ↗</a>`);
     marker.on('click', () => selectPlace(place.id, false));
   });
   if (userPosition) addUserMarker(userPosition.lat, userPosition.lng);
@@ -2788,12 +2789,131 @@ byId('siteNav').addEventListener('click', event => {
   if (event.target.closest('a')) { byId('siteNav').classList.remove('is-open'); byId('navToggle').setAttribute('aria-expanded', 'false'); }
 });
 
+
+/* Community travel reviews: device-local submissions plus records published in content.json. */
+function reviewDateLabel(value) {
+  if (!value) return 'তারিখ উল্লেখ নেই';
+  const part = String(value).split('T')[0];
+  const date = new Date(part + 'T12:00:00');
+  return Number.isNaN(date.getTime()) ? escapeHtml(part) : date.toLocaleDateString('bn-BD');
+}
+function normalizePublicReview(post) {
+  return {
+    id: String(post.id || post.title || 'review'),
+    placeId: String(post.placeId || ''),
+    placeName: String(post.placeName || post.title || 'স্থান উল্লেখ নেই'),
+    rating: Math.max(0, Math.min(5, Number(post.rating) || 0)),
+    author: String(post.author || post.credit || 'কমিউনিটি সদস্য'),
+    visitDate: String(post.visitDate || ''),
+    text: String(post.text || post.body || post.summary || ''),
+    createdAt: String(post.createdAt || ''),
+    sourceUrl: String(post.sourceUrl || ''),
+    isPublic: true
+  };
+}
+function localTravelReviews() {
+  return readStorage('buddhistHeritageTravelReviews', []).filter(item => item && item.type === 'review');
+}
+function renderReviewPlaceOptions() {
+  const select = byId('reviewPlaceSelect');
+  if (!select) return;
+  const current = select.value;
+  select.innerHTML = '<option value="">স্থান নির্বাচন করুন…</option>' + destinations.slice()
+    .sort((a,b) => a.name.localeCompare(b.name, 'bn'))
+    .map(place => '<option value="' + escapeHtml(place.id) + '">' + escapeHtml(place.name) + ' — ' + escapeHtml(place.district) + '</option>')
+    .join('');
+  if (destinations.some(place => place.id === current)) select.value = current;
+}
+function renderReviews() {
+  if (!byId('reviewList')) return;
+  renderReviewPlaceOptions();
+  const local = localTravelReviews().map(item => Object.assign({}, normalizePublicReview(item), {
+    author: String(item.author || 'অতিথি'), isPublic: false
+  }));
+  const published = publishedReviewRecords.map(normalizePublicReview);
+  const seen = new Set();
+  const reviews = published.concat(local).filter(item => {
+    const key = item.id + '|' + item.placeName + '|' + item.createdAt;
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  }).sort((a,b) => String(b.createdAt || b.visitDate || '').localeCompare(String(a.createdAt || a.visitDate || '')));
+  byId('reviewCount').textContent = bnDigits(reviews.length);
+  if (!reviews.length) {
+    byId('reviewList').innerHTML = '<p class="review-empty">এখনো কোনো রিভিউ নেই। আপনি প্রথমে একটি স্থান বেছে অভিজ্ঞতা যোগ করতে পারেন।</p>';
+    return;
+  }
+  byId('reviewList').innerHTML = reviews.map(review => {
+    const rating = Math.max(0, Math.min(5, Number(review.rating) || 0));
+    const place = destinations.find(item => item.id === review.placeId);
+    const starLine = rating ? '★'.repeat(rating) + '☆'.repeat(5-rating) + '<small>' + bnDigits(rating) + '/৫</small>' : 'রেটিং নেই';
+    const sourceLink = review.sourceUrl ? '<p class="review-card-source"><a href="' + escapeHtml(review.sourceUrl) + '" target="_blank" rel="noopener noreferrer">তথ্যসূত্র ↗</a></p>' : '';
+    return '<article class="review-card">' +
+      '<div class="review-card-top"><div><h4>' + escapeHtml(review.placeName) + '</h4><p>' + escapeHtml(place ? place.district + ' জেলা' : 'বাংলাদেশ') + '</p></div>' +
+      '<span class="review-visibility ' + (review.isPublic ? 'is-public' : 'is-local') + '">' + (review.isPublic ? 'প্রকাশিত' : 'এই ডিভাইসে') + '</span></div>' +
+      '<div class="review-stars" aria-label="' + (rating ? bnDigits(rating) + ' / ৫' : 'রেটিং উল্লেখ নেই') + '">' + starLine + '</div>' +
+      '<p class="review-card-text">' + escapeHtml(review.text) + '</p>' +
+      '<div class="review-card-footer"><span>✎ ' + escapeHtml(review.author || 'অতিথি') + '</span><span>ভ্রমণ: ' + escapeHtml(reviewDateLabel(review.visitDate)) + '</span></div>' +
+      sourceLink + '</article>';
+  }).join('');
+}
+function downloadReviewBackup() {
+  const reviews = localTravelReviews();
+  if (!reviews.length) { alert('ডাউনলোড করার মতো আপনার কোনো লোকাল রিভিউ নেই।'); return; }
+  const payload = reviews.map(review => Object.assign({}, review, {
+    type:'review', title:review.placeName || review.title,
+    summary:review.text || review.summary || '', body:review.text || review.body || '',
+    credit:review.author || review.credit || 'অতিথি'
+  }));
+  const blob = new Blob(['\ufeff' + JSON.stringify(payload, null, 2)], {type:'application/json;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = url; anchor.download = 'buddhist-heritage-travel-reviews.json';
+  document.body.appendChild(anchor); anchor.click(); anchor.remove(); URL.revokeObjectURL(url);
+}
+byId('reviewForm')?.addEventListener('submit', event => {
+  event.preventDefault();
+  const place = destinations.find(item => item.id === byId('reviewPlaceSelect').value);
+  const rating = Number(byId('reviewRating').value);
+  const textValue = byId('reviewText').value.trim();
+  if (!place || !rating || textValue.length < 10) {
+    byId('reviewStatus').textContent = 'স্থান, রেটিং ও অন্তত ১০ অক্ষরের অভিজ্ঞতা লিখুন.';
+    byId('reviewStatus').dataset.kind = 'error';
+    return;
+  }
+  const author = byId('reviewAuthor').value.trim() || 'অতিথি';
+  const review = {
+    id:'review-' + Date.now() + '-' + Math.random().toString(36).slice(2,8),
+    type:'review', placeId:place.id, placeName:place.name, title:place.name,
+    district:place.district, division:place.division, rating:rating,
+    visitDate:byId('reviewVisitDate').value, author:author, credit:author,
+    summary:textValue, body:textValue, text:textValue, createdAt:new Date().toISOString()
+  };
+  const records = localTravelReviews();
+  records.unshift(review);
+  saveStorage('buddhistHeritageTravelReviews', records);
+  byId('reviewForm').reset();
+  renderReviews();
+  byId('reviewStatus').textContent = 'রিভিউ এই ব্রাউজারে সেভ হয়েছে। অন্য দর্শকদের জন্য প্রকাশ করতে JSON ডাউনলোড করে যাচাইসহ প্রকাশিত content.json-এ যোগ করুন।';
+  byId('reviewStatus').dataset.kind = 'success';
+});
+byId('exportReviews')?.addEventListener('click', downloadReviewBackup);
+byId('clearLocalReviews')?.addEventListener('click', () => {
+  if (!localTravelReviews().length) { alert('এই ডিভাইসে মোছার মতো রিভিউ নেই।'); return; }
+  if (confirm('এই ব্রাউজারে সেভ করা আপনার সব রিভিউ মুছবেন? প্রকাশিত রিভিউ মুছবে না।')) {
+    saveStorage('buddhistHeritageTravelReviews', []);
+    renderReviews();
+    byId('reviewStatus').textContent = 'এই ব্রাউজারের লোকাল রিভিউ মুছে ফেলা হয়েছে।';
+    byId('reviewStatus').dataset.kind = 'success';
+  }
+});
+
 async function loadPublishedCommunityPlaces() {
   try {
     const response = await fetch(new URL('./content.json', document.baseURI), { cache: 'no-store' });
     if (!response.ok) return;
     const loaded = await response.json();
     const posts = Array.isArray(loaded) ? loaded : Array.isArray(loaded.posts) ? loaded.posts : [];
+    publishedReviewRecords = posts.filter(post => post && post.type === 'review');
     posts.filter(post => post && post.type === 'place').forEach(post => {
       const latitude = Number(post.latitude);
       const longitude = Number(post.longitude);
@@ -2830,6 +2950,7 @@ byId('currentYear').textContent = new Date().getFullYear();
   await loadPublishedCommunityPlaces();
   renderPlaces();
   renderItinerary();
+  renderReviews();
   initMap();
   if (activePlaceId) renderPlaceDetail(selectedPlace());
 })();
