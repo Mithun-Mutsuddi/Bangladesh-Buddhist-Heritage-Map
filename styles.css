@@ -395,3 +395,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
  .hero { background:linear-gradient(130deg,#4b1f05,#873708); }
 }
 
+
+.verification-badge { position:absolute; top:38px; left:9px; z-index:2; padding:4px 7px; border:1px solid #eed2ad; border-radius:30px; background:#fff2d9; color:#8f3d08; font-size:10px; font-weight:800; box-shadow:0 2px 8px rgba(90,40,7,.08); }
+.directory-scope-note { margin-top:14px; }
