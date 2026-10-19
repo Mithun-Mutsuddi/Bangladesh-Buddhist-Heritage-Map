@@ -26,27 +26,51 @@
             color: var(--text-color);
         }
 
-        /* Header Style with Iconography */
+        /* Header Style with Iconography & Animation */
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, #8B0000, #5c0000);
             color: var(--secondary-color);
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             border-bottom: 4px solid var(--secondary-color);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: relative;
         }
 
         header h1 {
             margin: 0;
-            font-size: 22px;
+            font-size: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        .icon-symbol {
-            font-size: 26px;
+        /* Rotating Dharmachakra Animation */
+        .rotating-wheel {
+            display: inline-block;
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes spin { 
+            100% { transform: rotate(360deg); } 
+        }
+
+        .buddha-glow {
+            animation: pulseGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            from { transform: scale(1); text-shadow: 0 0 5px #FFD700; }
+            to { transform: scale(1.1); text-shadow: 0 0 15px #FFD700; }
+        }
+
+        /* Buddhist Flag Color Strip */
+        .buddhist-flag-bar {
+            height: 6px;
+            background: linear-gradient(to right, #0080ff, #ffff00, #ff0000, #ffffff, #ff8000);
+            width: 100%;
         }
 
         /* Controls Bar */
@@ -57,12 +81,12 @@
             align-items: center;
             background-color: #2c1d11;
             color: white;
-            padding: 10px 15px;
+            padding: 12px 15px;
             gap: 10px;
         }
 
         .filter-group select {
-            padding: 6px 10px;
+            padding: 6px 12px;
             border-radius: 4px;
             border: 1px solid var(--secondary-color);
             background: #111;
@@ -74,7 +98,7 @@
         .main-container {
             display: flex;
             flex-direction: column;
-            height: calc(100vh - 180px);
+            height: calc(100vh - 195px);
         }
 
         @media (min-width: 768px) {
@@ -183,30 +207,33 @@
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Buddhist Flag Color Bar -->
+    <div class="buddhist-flag-bar"></div>
+
+    <!-- Header with Animated Graphics -->
     <header>
         <h1>
-            <span class="icon-symbol">☸️</span> 
-            <span id="site-title">বাংলাদেশের বৌদ্ধ ঐতিহ্য, প্রত্নস্থল ও ভ্রমণ নির্দেশিকা</span>
-            <span class="icon-symbol">🪷</span>
+            <span class="rotating-wheel">☸️</span> 
+            <span class="buddha-glow">🪷 গৌতম বুদ্ধের বাণী ও বাংলাদেশের বৌদ্ধ ঐতিহ্য 🪷</span>
+            <span class="rotating-wheel">☸️</span>
         </h1>
+        <p style="margin: 5px 0 0 0; font-size: 14px; color: #FFD700;">প্রত্নস্থল, বিহার, তীর্থস্থান ও ভ্রমণ নির্দেশিকা ম্যাপ (卍 স্বস্তিকা ও পবিত্র ধর্মাঞ্চল)</p>
     </header>
 
     <!-- Controls Bar -->
     <div class="controls-bar">
         <div class="filter-group">
-            <label for="divisionFilter">বিভাগ:</label>
+            <label for="divisionFilter">বিভাগ (৮টি):</label>
             <select id="divisionFilter" onchange="filterLocations()">
-                <option value="all">সব বিভাগ</option>
-                <option value="Dhaka">ঢাকা</option>
-                <option value="Chittagong">চট্টগ্রাম ও পার্বত্য চট্টগ্রাম</option>
-                <option value="Comilla">কুমিল্লা</option>
-                <option value="Rajshahi">রাজশাহী ও নওগাঁ</option>
-                <option value="Rangpur">রংপুর ও দিনাজপুর</option>
-                <option value="Khulna">খুলনা ও যশোর</option>
-                <option value="Mymensingh">ময়মনসিংহ</option>
-                <option value="Sylhet">সিলেট</option>
-                <option value="Barisal">বরিশাল</option>
+                <option value="all">সব বিভাগ (বাংলাদেশ)</option>
+                <option value="Dhaka">ঢাকা বিভাগ</option>
+                <option value="Chittagong">চট্টগ্রাম বিভাগ</option>
+                <option value="Rajshahi">রাজশাহী বিভাগ</option>
+                <option value="Khulna">খুলনা বিভাগ</option>
+                <option value="Barisal">বরিশাল বিভাগ</option>
+                <option value="Sylhet">সিলেট বিভাগ</option>
+                <option value="Rangpur">রংপুর বিভাগ</option>
+                <option value="Mymensingh">ময়মনসিংহ বিভাগ</option>
             </select>
 
             <label for="categoryFilter">ধরন:</label>
@@ -273,8 +300,8 @@
 
     <!-- App Logic Script -->
     <script>
-        // ১. ম্যাপ ইনিশিয়ালাইজেশন (সঠিকভাবে সেন্টারিং ও জুম ঠিক করা)
-        var map = L.map('map').setView([23.8103, 90.4125], 8);
+        // ১. ম্যাপ ইনিশিয়ালাইজেশন
+        var map = L.map('map').setView([23.8103, 90.4125], 7);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -311,7 +338,7 @@
             renderLocations();
         }
 
-        // ৩. পূর্ণাঙ্গ ডাটাসেইট (ইতিহাস, ছবি ও ত্রিপিটক রেফারেন্সসহ)
+        // ৩. পূর্ণাঙ্গ ডاتاবেজ (সঠিক ছবি ও ৮টি বিভাগসহ)
         const buddhistLocations = [
             {
                 id: 1,
@@ -322,9 +349,9 @@
                 history: "অষ্টম শতকে পাল রাজা ধর্মপাল কর্তৃক প্রতিষ্ঠিত এই মহাবিহারটি ইউনেস্কো ওয়ার্ল্ড হেরিটেজ সাইট। এটি প্রাচীন বাংলার সর্ববৃহৎ ও শ্রেষ্ঠ বৌদ্ধ বিহার এবং আন্তর্জাতিক শিক্ষা ও সংস্কৃতির অন্যতম প্রধান কেন্দ্র ছিল।",
                 tripitakaRef: "বিনয় পিটক, মহাবগ্গ (ভ্রমণ ও দূরবর্তী বিহারে ভিক্ষুদের আবাসের নিয়মাবলি এবং সংঘের শৃঙ্খলা); অংগুত্তোর নিকায়।",
                 travelGuide: {
-                    howToGo: "ঢাকা থেকে ট্রেন বা বাসে সান্তাহার/জয়পুরহাট হয়ে সিএনজি বা বাসযোগে বদলগাছী পাহাড়পুর।",
+                    howToGo: "ঢাকা থেকে ট্রেন বা বাসে সান্তাহার/জয়পুরহাট হয়ে সিএনজি বা বাসযোগে বদলগাছী পাহাড়পুর।",
                     stay: "নওগাঁ জেলা সদর বা জয়পুরহাটের আবাসিক হোটেল।",
-                    cost: "বাজেট প্রায় ২০০০ - ৩,৫০০ টাকা।",
+                    cost: "বাজেট প্রায় ২০০০ - ৩,৫০০ টাকা।",
                     food: "স্থানীয় ঐতিহ্যবাহী খাবার ও নিরামিষ।"
                 },
                 img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Somapura_Mahavihara_1.jpg/640px-Somapura_Mahavihara_1.jpg"
@@ -333,9 +360,9 @@
                 id: 2,
                 name: "শালবন বিহার ও ময়নামতি",
                 category: "বিহার/প্রত্নস্থল",
-                division: "Comilla",
+                division: "Chittagong",
                 coords: [23.4357, 91.1333],
-                history: "দেব রাজবংশের রাজা শ্রীভবদেব অষ্টম শতকে লালমাই-ময়নামতি পাহাড়ের পাদদেশে এটি নির্মাণ করেন। এর চারপাশে ১১৫টি ভিক্ষু কক্ষ এবং কেন্দ্রীয় মন্দির রয়েছে যা প্রাচীন সভ্যতার সাক্ষ্য দেয়।",
+                history: "দেব রাজবংশের রাজা শ্রীভবদেব অষ্টম শতকে লালমাই-ময়নামতি পাহাড়ের পাদদেশে এটি নির্মাণ করেন। এর চারপাশে ১১৫টি ভিক্ষু কক্ষ এবং কেন্দ্রীয় মন্দির রয়েছে যা প্রাচীন সভ্যতার সাক্ষ্য দেয়।",
                 tripitakaRef: "সংযুত্ত নিকায় (পুণ্যভূমি ও ভিক্ষুসংঘের তীর্থ ভ্রমণ এবং ধ্যানের গুরুত্ব)।",
                 travelGuide: {
                     howToGo: "ঢাকা থেকে বাসে কুমিল্লা কোটবাড়ী বিশ্বরোড, সেখান থেকে সিএনজি বা অটোতে সরাসরি বিহার।",
@@ -370,12 +397,12 @@
                 history: "পরম পূজ্যপাদ শ্রীমৎ সাধনানন্দ মহাস্থবীর (বনভন্তে) প্রতিষ্ঠিত কাপ্তাই হ্রদ সংলগ্ন বিশ্বখ্যাত বৌদ্ধ তীর্থ ও ধ্যানকেন্দ্র। প্রতিবছর এখানে লক্ষাধিক পুণ্যার্থীর সমাগম ঘটে।",
                 tripitakaRef: "মজ্জিম নিকায়, ভাবনা সুত্ত (অরণ্য কুটির ও অখণ্ড মনঃসংযোগে সাধনা)।",
                 travelGuide: {
-                    howToGo: "ঢাকা থেকে বাসে রাঙামাটি রিজার্ভ বাজার, সেখান থেকে হেঁটে বা অটোরিকশায় বিহারে যাওয়া যায়।",
+                    howToGo: "ঢাকা থেকে বাসে রাঙামাটি রিজার্ভ বাজার, সেখান থেকে হেঁটে বা অটোরিকশায় বিহারে যাওয়া যায়।",
                     stay: "রাঙামাটি শহরের কাপ্তাই লেক ভিউ হোটেল ও রিসোর্ট।",
                     cost: "বাজেট ২৫০০ - ৪৫০০ টাকা।",
-                    food: "স্থানীয় পাহাড়ি বাঁশকোড়ল ও ঐতিহ্যবাহী খাবার।"
+                    food: "স্থানীয় পাহাড়ি বাঁশকোড়ল ও ঐতিহ্যবাহী খাবার।"
                 },
-                img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Rajaban_Vihara.jpg/640px-Rajaban_Vihara.jpg"
+                img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Rajban_Vihara_Rangamati.jpg/640px-Rajban_Vihara_Rangamati.jpg"
             },
             {
                 id: 5,
@@ -383,7 +410,7 @@
                 category: "প্রতিষ্ঠান/স্কুল/কলেজ",
                 division: "Dhaka",
                 coords: [23.7635, 90.3421],
-                history: "রাজধানী ঢাকার মেরুল বাড্ডায় অবস্থিত দেশের প্রধান বৌদ্ধ ধর্মীয়, শিক্ষা ও সামাজিক কেন্দ্র। এখানে নিয়মিত ধর্মীয় শিক্ষা, পালি চর্চা ও দাতব্য চিকিৎসালয় পরিচালিত হয়।",
+                history: "রাজধানী ঢাকার মেরুল বাড্ডায় অবস্থিত দেশের প্রধান বৌদ্ধ ধর্মীয়, শিক্ষা ও সামাজিক কেন্দ্র। এখানে নিয়মিত ধর্মীয় শিক্ষা, পালি চর্চা ও দাতব্য চিকিৎসালয় পরিচালিত হয়।",
                 tripitakaRef: "দীর্ঘ নিকায়, সিগালোবাদ সুত্ত (দান, সেবা ও সমাজ কল্যাণমূলক কর্মের মহত্ব)।",
                 travelGuide: {
                     howToGo: "ঢাকার যেকোনো প্রান্ত থেকে বাসে বা সিএনজিতে মেরুল বাড্ডা বৌদ্ধ বিহার।",
@@ -461,14 +488,14 @@
 
                     <div class="guide-section">
                         <h4>🧳 ভ্রমণ ও ট্যুরিস্ট গাইড:</h4>
-                        <p><b>যাতায়াত:</b> ${place.travelGuide.howToGo}</p>
+                        <p><b>যাতায়াত:</b> ${place.travelGuide.howToGo}</p>
                         <p><b>থাকা:</b> ${place.travelGuide.stay}</p>
                         <p><b>বাজেট:</b> ${place.travelGuide.cost}</p>
                         <p><b>খাবার:</b> ${place.travelGuide.food}</p>
                     </div>
 
                     <div style="margin-top:15px; border-top:1px solid #eee; padding-top:10px;">
-                        <p><b>শেয়ার করুন:</b></p>
+                        <p><b>শেয়ার করুন:</b></p>
                         <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" style="color:#3b5998; font-size:18px; margin-right:12px;"><i class="fab fa-facebook"></i></a>
                         <a href="https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}" target="_blank" style="color:#1da1f2; font-size:18px;"><i class="fab fa-twitter"></i></a>
                     </div>
@@ -482,7 +509,7 @@
             renderLocations();
         }
 
-        // ইনিশিয়াল রেন্ডার কল
+        // ইনিশিয়াল রেন্ডার কল
         renderLocations();
     </script>
 </body>
