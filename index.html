@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://upload.wikimedia.org">
   <link rel="preconnect" href="https://tile.openstreetmap.org">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHSobTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -74,7 +76,7 @@
           <p class="section-kicker">HERITAGE EXPLORER</p>
           <h2 id="explore-title">আপনার পরবর্তী গন্তব্য খুঁজুন</h2>
           <p class="section-lead">নাম, জেলা বা বিভাগের ভিত্তিতে খুঁজুন। কোনো স্থান বেছে নিলে তার ইতিহাস, ছবি ও ভ্রমণ-লিংক দেখুন।</p>
-          <p class="research-note directory-scope-note"><strong>বর্তমান ডিরেক্টরি: ১৯১টি রেকর্ড।</strong> এতে বিহার/প্যাগোডা, প্রত্নস্থল, পালি-শিক্ষা ও বৌদ্ধ প্রতিষ্ঠান, শিশু-সেবা এবং গবেষণাধীন লোকঐতিহ্য অন্তর্ভুক্ত। এটি এখনও চূড়ান্ত জাতীয় master list নয়; সরকারি জেলা-তালিকা ধরে গবেষণা চলমান। যেসব পিন আনুমানিক, বিস্তারিততে সতর্কতা দেখানো হয়।</p>
+          <p class="research-note directory-scope-note"><strong>বর্তমান ডিরেক্টরি: 258টি রেকর্ড।</strong> এতে বিহার/প্যাগোডা, প্রত্নস্থল, পালি-শিক্ষা ও বৌদ্ধ প্রতিষ্ঠান, শিশু-সেবা এবং গবেষণাধীন লোকঐতিহ্য অন্তর্ভুক্ত। এটি এখনও চূড়ান্ত জাতীয় master list নয়; সরকারি জেলা-তালিকা ধরে গবেষণা চলমান। যেসব পিন আনুমানিক, বিস্তারিততে সতর্কতা দেখানো হয়।</p>
         </div>
         <div class="progress-pill" aria-live="polite"><span class="progress-wheel">☸</span><span><strong id="visitedCount">০</strong><small>টি স্থান দেখা হয়েছে</small></span></div>
       </div>
@@ -313,7 +315,8 @@
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="app.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
+  <script src="app.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
   <script src="content-studio.js" defer></script>
 </body>
