@@ -6202,11 +6202,18 @@ function renderPlaces() {
   updateProgress();
 }
 function selectedPlace() { return destinations.find(place => place.id === activePlaceId) || null; }
-function selectPlace(id, panMap = true) {
+function selectPlace(id, panMap = true, refreshList = true) {
   const place = destinations.find(item => item.id === id);
   if (!place) return;
   activePlaceId = id;
-  renderPlaces();
+  if (refreshList) {
+    renderPlaces();
+  } else {
+    // Map-marker clicks must not destroy/rebuild markerLayer; otherwise the clicked popup can close instantly.
+    document.querySelectorAll('[data-place-card]').forEach(card => {
+      card.classList.toggle('is-selected', card.dataset.placeCard === id);
+    });
+  }
   renderPlaceDetail(place);
   if (map && panMap && Array.isArray(place.coords) && place.coords.length === 2 &&
       place.coords.every(Number.isFinite)) {
@@ -6306,7 +6313,7 @@ function updateMarkers(list) {
     });
     const marker = L.marker(place.coords, { icon }).addTo(markerLayer);
     marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${place.pinApproximate ? '<br><em>পিন আনুমানিক</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>`);
-    marker.on('click', () => selectPlace(place.id, false));
+    marker.on('click', () => selectPlace(place.id, false, false));
   });
   if (userPosition) addUserMarker(userPosition.lat, userPosition.lng);
 }
