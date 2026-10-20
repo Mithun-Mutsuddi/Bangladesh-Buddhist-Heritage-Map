@@ -402,3 +402,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 /* Override Leaflet's default white square for custom Dharma-wheel div icons. */
 .leaflet-div-icon { background: transparent; border: 0; }
+
+
+/* Progressive results: keep browsing responsive with 300+ locations. */
+.load-more-row { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; margin:16px 0 8px; }
+.load-more-row p { margin:0; color:#85694f; font-size:11px; }
+#loadMorePlaces[hidden] { display:none !important; }
