@@ -11,6 +11,15 @@
     return String(value == null ? '' : value).normalize('NFKC').toLocaleLowerCase('bn')
       .replace(/[ঁংঃ]/g, '').replace(/[য়]/g, 'য়').replace(/[\s,.;:/()\-–—_]+/g, '');
   };
+  var latinDigits = function (value) {
+    return String(value == null ? '' : value).replace(/[০-৯]/g, function (d) {
+      return String('০১২৩৪৫৬৭৮৯'.indexOf(d));
+    });
+  };
+  var extractYear = function (value) {
+    var match = latinDigits(value).match(/(?:^|[^0-9])(1[0-9]{3}|2[0-9]{3})(?:[^0-9]|$)/);
+    return match ? match[1] : '';
+  };
   var safeHttp = function (raw) {
     if (!raw) return '';
     try {
