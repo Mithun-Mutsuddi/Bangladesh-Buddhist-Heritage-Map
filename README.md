@@ -51,7 +51,7 @@ GitHub Pages static hosting। আলাদা authenticated backend ছাড�
 ## ঐতিহাসিক আর্কাইভ, প্রশাসনিক ফিল্টার ও কভারেজ অডিট
 
 কাজের শাখা `feature/heritage-archive-admin-filters-map`-এ যুক্ত হয়েছে:
-- বিভাগ → জেলা → উপজেলা → ইউনিয়ন/পৌরসভা অনুসারে cascading filter; থানা-ফিল্টার রাখা হয়েছে, তবে আলাদা জাতীয় পুলিশ-থানা dataset সম্পূর্ণ না থাকায় অনিশ্চিত থানা বানিয়ে দেখানো হয় না।
+- বিভাগ → জেলা → উপজেলা → শহর-থানা → ইউনিয়ন/এলাকা অনুসারে cascading filter; compact division/district lists আগে লোড হয়, নির্বাচিত জেলার বিশদ তালিকা পরে। প্রশাসনিক উৎস: [Bangladesh Locations Dataset](https://github.com/HedaetShahriar/bangladesh-locations-dataset) — ৬৭টি city-thana রেকর্ড আছে, কিন্তু এটি সম্পূর্ণ পুলিশ-থানা রেজিস্টার নয়; এলাকা/ইউনিয়ন কিছু ক্ষেত্রে একত্রে দেওয়া।
 - পুরোনো ছবি, নথির তারিখ, ছবি ধারণের তারিখ/আনুমানিক সময়, ফটোগ্রাফার/রেকর্ডিস্ট, সংগ্রাহক, আপলোডকারী, প্রতিষ্ঠান/এলাকার পরিচয়, স্থানীয়তা, ইতিহাস, উৎস/শেয়ার লিংক, অনুমতি/লাইসেন্স এবং ট্যাগসহ historical archive।
 - ছবি, ভিডিও, অডিও, PDF ও টেক্সটের জন্য ব্রাউজার-ভিত্তিক preview; IndexedDB-তে local draft; প্রকাশনার ZIP-এ content.json ও assets/archives/ প্যাকেজ করার ব্যবস্থা।
 - ম্যাপের স্থায়ী loading overlay সরানো, content.json fetch ম্যাপের প্রথম render-এ বাধা না দেওয়া, non-blocking tile status এবং cluster-এ chunked insertion।
