@@ -12,10 +12,11 @@ function refill(el, values, prompt, keep) {
  const opts = [new Option(prompt,'all'), ...uniqueSorted(values).map(v=>new Option(v,v))];
  el.replaceChildren(...opts); if (opts.some(o=>o.value===old)) el.value=old;
 }
+function allDistricts() { return (tree||[]).flatMap(d=>d.districts||[]); }
 function divisions() { const v=$('divisionFilter')?.value||'all'; return (tree||[]).filter(d=>v==='all'||bnName(d)===v); }
 function districts() { const v=$('districtFilter')?.value||'all'; return divisions().flatMap(d=>d.districts||[]).filter(d=>v==='all'||bnName(d)===v); }
 function upazilas() { const v=$('upazilaFilter')?.value||'all'; return districts().flatMap(d=>d.upazilas||[]).filter(u=>v==='all'||bnName(u)===v); }
-function norm(value) { return String(value||'').normalize('NFC').toLocaleLowerCase('bn').replace(/[\\s\\u200c\\u200d-]+/g,' ').trim(); }
+function norm(value) { return String(value||'').normalize('NFC').toLocaleLowerCase('bn').replace(/[\s\u200c\u200d-]+/g,' ').trim(); }
 function inferLocalityMetadata() {
  const records=Array.isArray(window.destinations)?window.destinations:[];
  records.forEach(place=>{
