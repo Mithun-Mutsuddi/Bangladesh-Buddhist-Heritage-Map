@@ -6534,7 +6534,16 @@ byId('itineraryList').addEventListener('click', event => {
   const button = event.target.closest('[data-action="remove-itinerary"]');
   if (button) { itineraryIds.delete(button.dataset.id); saveStorage('buddhistHeritageItinerary', [...itineraryIds]); renderPlaces(); renderItinerary(); }
 });
-['placeSearch', 'divisionFilter', 'categoryFilter'].forEach(id => byId(id).addEventListener(id === 'placeSearch' ? 'input' : 'change', renderPlaces));
+let placeSearchTimer = null;
+byId('placeSearch').addEventListener('input', () => {
+  // Wait briefly for typing to stop before rebuilding cards and map markers.
+  if (placeSearchTimer) window.clearTimeout(placeSearchTimer);
+  placeSearchTimer = window.setTimeout(() => {
+    placeSearchTimer = null;
+    renderPlaces();
+  }, 140);
+});
+['divisionFilter', 'categoryFilter'].forEach(id => byId(id).addEventListener('change', renderPlaces));
 byId('clearFilters').addEventListener('click', () => { byId('placeSearch').value = ''; byId('divisionFilter').value = 'all'; byId('categoryFilter').value = 'all'; renderPlaces(); });
 byId('sortVisited').addEventListener('click', () => { sortUnvisitedFirst = !sortUnvisitedFirst; byId('sortVisited').textContent = sortUnvisitedFirst ? 'দেখা হয়নি আগে ↑' : 'নাম অনুসারে A–Z'; renderPlaces(); });
 byId('locateMe').addEventListener('click', () => requestLocation());
