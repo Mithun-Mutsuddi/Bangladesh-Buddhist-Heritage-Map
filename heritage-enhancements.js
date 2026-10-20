@@ -316,7 +316,7 @@
     function matches(value, fields) {
       if (!value) return true;
       var actual = fields.map(function (field) { return place[field]; }).filter(Boolean);
-      if (actual.some(function (item) { return recordDivisionMatches(item, value); })) return true;
+      if (actual.length) return actual.some(function (item) { return recordDivisionMatches(item, value); });
       // Older records often mention locality in their title/history rather than structured columns.
       return allText.indexOf(normalize(value)) !== -1;
     }
@@ -336,13 +336,12 @@
     if (!control) return;
     control.addEventListener('change', function () {
       if (id === 'divisionFilter') fillAdminFilters();
-      if (id === 'districtFilter') fillLowerFilters();
-      if (id === 'upazilaFilter') fillLowerFilters();
-      if (id === 'districtFilter' || id === 'upazilaFilter') {
-        var text = byId('adminGeoStatus');
-        if (text && !adminTree) text.textContent = 'বর্তমান ডিরেক্টরিতে উপজেলা/থানা/ইউনিয়ন তথ্য সব রেকর্ডে নেই। পূর্ণ রেফারেন্সের জন্য তালিকা লোড হচ্ছে…';
-        loadAdminTree();
+      if (id === 'districtFilter') {
+        fillLowerFilters();
+        if (adminTree) loadDistrictLocations();
+        else loadAdminTree().then(function () { loadDistrictLocations(); });
       }
+      if (id === 'upazilaFilter') fillLowerFilters();
       scheduleDirectoryRender();
     });
   });
