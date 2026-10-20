@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="archive.css">
 </head>
 <body>
   <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
@@ -36,6 +37,7 @@
         <a href="#reviews">ভ্রমণ রিভিউ</a>
         <a href="#planner">আমার ভ্রমণ তালিকা</a>
         <a href="#content-studio">কনটেন্ট যোগ করুন</a>
+        <a href="#historical-archive">ঐতিহাসিক আর্কাইভ</a>
         <a href="#references">তথ্যসূত্র</a>
       </nav>
     </div>
@@ -81,11 +83,34 @@
         <div class="progress-pill" aria-live="polite"><span class="progress-wheel">☸</span><span><strong id="visitedCount">০</strong><small>টি স্থান দেখা হয়েছে</small></span></div>
       </div>
 
-      <div class="filters" role="search">
-        <label class="search-box" for="placeSearch"><span aria-hidden="true">⌕</span><input id="placeSearch" type="search" placeholder="স্থান, জেলা বা কীওয়ার্ড লিখুন…" autocomplete="off"><kbd>খুঁজুন</kbd></label>
+      <div class="filters" role="search" aria-label="বৌদ্ধ ঐতিহ্যস্থানের ফিল্টার">
+        <label class="search-box" for="placeSearch"><span aria-hidden="true">⌕</span><input id="placeSearch" type="search" placeholder="স্থান, জেলা, উপজেলা বা কীওয়ার্ড…" autocomplete="off"><kbd>খুঁজুন</kbd></label>
         <label class="filter-select"><span>বিভাগ</span><select id="divisionFilter"><option value="all">সব বিভাগ</option><option value="ঢাকা">ঢাকা</option><option value="চট্টগ্রাম">চট্টগ্রাম</option><option value="রাজশাহী">রাজশাহী</option><option value="রংপুর">রংপুর</option><option value="খুলনা">খুলনা</option><option value="বরিশাল">বরিশাল</option><option value="সিলেট">সিলেট</option><option value="ময়মনসিংহ">ময়মনসিংহ</option></select></label>
-        <label class="filter-select"><span>ধরন</span><select id="categoryFilter"><option value="all">সব ধরনের স্থান</option><option value="প্রত্নস্থল">প্রত্নস্থল ও মহাবিহার</option><option value="বিহার">বিহার ও তীর্থস্থান</option><option value="তীর্থস্থান">তীর্থস্থান / পবিত্র স্থান</option><option value="মঠ">মঠ ও ধর্মীয় কেন্দ্র</option><option value="কমিউনিটি স্থান">কমিউনিটি-যোগ করা স্থান</option><option value="প্রতিষ্ঠান">পালি শিক্ষা ও বৌদ্ধ প্রতিষ্ঠান</option><option value="অনাথালয়/সেবাকেন্দ্র">অনাথালয় ও সমাজসেবা</option><option value="ধ্যানকেন্দ্র">ভাবনাকেন্দ্র ও অরণ্যকুটির</option><option value="লোকধর্ম/গবেষণা">লোকধর্ম / গবেষণাধীন ঐতিহ্য</option><option value="ঐতিহ্য/সম্প্রদায়">জীবন্ত সম্প্রদায় ও লোকঐতিহ্য</option><option value="শ্মশান">বৌদ্ধ শ্মশান</option><option value="যাচাইাধীন">অতিরিক্ত যাচাই প্রয়োজন</option></select></label>
+        <label class="filter-select"><span>জেলা</span><select id="districtFilter"><option value="all">সব জেলা</option></select></label>
+        <label class="filter-select"><span>উপজেলা</span><select id="upazilaFilter"><option value="all">সব উপজেলা</option></select></label>
+        <label class="filter-select"><span>থানা (রেকর্ডভিত্তিক)</span><select id="thanaFilter"><option value="all">সব থানা</option></select></label>
+        <label class="filter-select"><span>ইউনিয়ন</span><select id="unionFilter"><option value="all">সব ইউনিয়ন</option></select></label>
+        <label class="filter-select"><span>ক্যাটাগরি</span><select id="categoryFilter">
+          <option value="all">সব ক্যাটাগরি</option>
+          <option value="প্রত্নস্থল">প্রত্নস্থল ও মহাবিহার</option>
+          <option value="বিহার">বিহার ও প্যাগোডা</option>
+          <option value="তীর্থস্থান">তীর্থস্থান / পবিত্র স্থান</option>
+          <option value="মঠ">মঠ ও ধর্মীয় কেন্দ্র</option>
+          <option value="প্রতিষ্ঠান">বৌদ্ধ শিক্ষা প্রতিষ্ঠান</option>
+          <option value="অনাথালয়/সেবাকেন্দ্র">অনাথালয় ও শিশু-সেবা</option>
+          <option value="বৃদ্ধাশ্রম">বৃদ্ধাশ্রম</option>
+          <option value="শিক্ষা প্রতিষ্ঠান">বিদ্যালয়, কলেজ ও পালি শিক্ষা</option>
+          <option value="সামাজিক সেবা">সামাজিক সেবা ও কল্যাণ</option>
+          <option value="সংঘ/সমিতি">বৌদ্ধ সংঘ, সমিতি ও সংগঠন</option>
+          <option value="ধ্যানকেন্দ্র">ভাবনাকেন্দ্র ও অরণ্যকুটির</option>
+          <option value="লোকধর্ম/গবেষণা">লোকধর্ম / গবেষণাধীন ঐতিহ্য</option>
+          <option value="ঐতিহ্য/সম্প্রদায়">জীবন্ত সম্প্রদায় ও লোকঐতিহ্য</option>
+          <option value="সংগ্রহশালা">সংগ্রহশালা ও সংরক্ষণ</option>
+          <option value="শ্মশান">বৌদ্ধ শ্মশান</option>
+          <option value="যাচাইাধীন">যাচাইাধীন / অতিরিক্ত সূত্র প্রয়োজন</option>
+        </select></label>
         <button type="button" class="button button-outline" id="clearFilters">ফিল্টার মুছুন</button>
+        <p class="admin-filter-note">জেলা/উপজেলা/ইউনিয়নের তালিকা প্রশাসনিক ওপেন-ডেটা থেকে প্রথম ব্যবহারে আনা হবে। শুধুমাত্র নির্ভরযোগ্য অবস্থান-তথ্য থাকা ঐতিহ্যস্থানই নির্দিষ্ট এলাকার ফিল্টারে মিলবে।</p>
       </div>
 
       <div class="explore-layout">
@@ -276,6 +301,46 @@
       </div>
     </section>
 
+
+    <section class="section wrap historical-archive-section" id="historical-archive" aria-labelledby="archive-title">
+      <div class="section-heading"><div><p class="section-kicker">COMMUNITY MEMORY · DIGITAL PRESERVATION</p><h2 id="archive-title">ঐতিহাসিক আর্কাইভ</h2><p class="section-lead">পুরোনো ছবি, দলিল, ভিডিও, অডিও, PDF ও সাক্ষ্য নথিভুক্ত করুন। তারিখ, আলোকচিত্রী, সংগ্রহকারী এবং ইতিহাসসহ প্রতিটি উপাদান সংরক্ষণ করুন।</p></div></div>
+      <div class="archive-notice" role="note"><strong>শেয়ারিং সম্পর্কে:</strong> GitHub Pages static site। তাই আপলোড করা ফাইল প্রথমে শুধু এই ব্রাউজারে থাকবে। ZIP তৈরি করে যাচাইসহ repository-তে প্রকাশ করুন অথবা GitHub submission খুলে ফাইল সংযুক্ত করুন—কোনো পাসওয়ার্ড/টোকেন দেবেন না। ঐতিহাসিক দাবি, ব্যক্তিগত তথ্য ও ছবির কপিরাইট প্রকাশের আগে যাচাই করুন।</div>
+      <div class="archive-layout">
+        <form id="archiveForm" class="archive-panel archive-form">
+          <h3>নতুন আর্কাইভ উপাদান</h3>
+          <label>শিরোনাম <span class="required-mark">*</span><input id="archiveTitle" required maxlength="180" placeholder="যেমন: ১৯৭২ সালের বিহার-উৎসবের ছবি"></label>
+          <div class="archive-two-col">
+            <label>উপাদানের ধরন <select id="archiveType"><option value="image">ছবি</option><option value="video">ভিডিও</option><option value="audio">অডিও</option><option value="pdf">PDF / দলিল</option><option value="text">লিখিত স্মৃতি / সাক্ষাৎকার</option><option value="link">বহিঃলিংক</option></select></label>
+            <label>সংশ্লিষ্ট স্থান<input id="archivePlace" maxlength="180" placeholder="বিহার / গ্রাম / জেলা"></label>
+          </div>
+          <div class="archive-two-col">
+            <label>ঘটনা/নথির তারিখ<input id="archiveHistoricDate" type="text" maxlength="80" placeholder="যেমন: ১৯৬৫ বা আনুমানিক ১৯৫০-এর দশক"></label>
+            <label>ছবি/রেকর্ড ধারণের তারিখ<input id="archiveCaptureDate" type="date"></label>
+          </div>
+          <div class="archive-two-col">
+            <label>আলোকচিত্রী / রেকর্ডকারী<input id="archivePhotographer" maxlength="180" placeholder="নাম; জানা না থাকলে অজ্ঞাত"></label>
+            <label>সংগ্রহকারী<input id="archiveCollector" maxlength="180" placeholder="সংগ্রহের উৎস বা ব্যক্তির নাম"></label>
+          </div>
+          <div class="archive-two-col">
+            <label>আপলোডকারীর নাম<input id="archiveUploader" maxlength="180" placeholder="নাম / ছদ্মনাম (ঐচ্ছিক)"></label>
+            <label>যোগাযোগ বা ঠিকানা (ঐচ্ছিক)<input id="archiveContact" maxlength="240" placeholder="প্রকাশে সম্মতি আছে এমন যোগাযোগ"></label>
+          </div>
+          <label>বিবরণ ও ঐতিহাসিক প্রেক্ষাপট<textarea id="archiveDescription" rows="4" maxlength="10000" placeholder="ছবিতে কী আছে, পেছনের ইতিহাস, কে তথ্য দিয়েছেন, তারিখের নিশ্চয়তা ও সূত্র লিখুন"></textarea></label>
+          <label>মূল ওয়েব লিংক (ঐচ্ছিক)<input id="archiveUrl" type="url" placeholder="https://…"></label>
+          <label>ফাইল যোগ করুন<input id="archiveFile" type="file" accept="image/*,video/*,audio/*,.pdf,.txt,.md"></label>
+          <p class="archive-hint">ফাইল বাছাই করলে এই ডিভাইসে প্রিভিউ হবে। বড় ভিডিও/অডিওর জন্য লিংক ব্যবহার করুন। ব্যক্তিগত/সংবেদনশীল তথ্য বা অনুমতিহীন ছবি প্রকাশ করবেন না।</p>
+          <div class="archive-actions"><button class="button button-dark" type="submit">খসড়া সংরক্ষণ</button><button class="button button-outline" type="reset">ফর্ম পরিষ্কার</button></div>
+          <p id="archiveStatus" class="archive-status" role="status" aria-live="polite">এখনো কোনো উপাদান সংরক্ষণ করা হয়নি।</p>
+        </form>
+        <div class="archive-panel">
+          <div class="archive-list-heading"><div><h3>এই ডিভাইসের সংগ্রহ</h3><p>সংরক্ষিত উপাদান দেখুন, চালান বা পড়ুন</p></div><span id="archiveCount">০</span></div>
+          <div class="archive-actions archive-export-actions"><button type="button" class="button button-gold" id="archiveExport">আর্কাইভ ZIP তৈরি করুন ↓</button><button type="button" class="button button-outline" id="archiveJsonExport">JSON তালিকা ডাউনলোড</button></div>
+          <div id="archiveList" class="archive-list" aria-live="polite"><p class="draft-empty">আর্কাইভ লোড হচ্ছে…</p></div>
+          <div class="archive-share"><h4>কমিউনিটিতে জমা দিন</h4><p>মেটাডেটা দিয়ে GitHub submission খুলুন; মূল ফাইল/প্রমাণ সেখানে সংযুক্ত করুন। জমা দেওয়া উপাদান প্রকাশের আগে সম্পাদকীয় যাচাই প্রয়োজন।</p><button type="button" class="button button-outline" id="archiveSubmit">GitHub-এ জমা দিন ↗</button><a href="https://github.com/Mithun-Mutsuddi/Bangladesh-Buddhist-Heritage-Map/issues" target="_blank" rel="noopener noreferrer">পূর্ববর্তী জমা ও সংশোধনী দেখুন ↗</a></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section wrap resource-section" id="references" aria-labelledby="references-title">
       <div class="section-heading"><div><p class="section-kicker">LEARN MORE · VERIFY BEFORE YOU GO</p><h2 id="references-title">আরও জানুন ও তথ্য যাচাই করুন</h2><p class="section-lead">ইতিহাস, ছবি, মানচিত্র, ভিডিও ও গবেষণাসূত্রে যাওয়ার জন্য নির্বাচিত রিসোর্স।</p></div></div>
       <div class="resource-grid">
@@ -319,10 +384,12 @@
     <div class="wrap footer-bottom"><span>© <span id="currentYear"></span> · কমিউনিটি-উদ্যোগের ভ্রমণ নির্দেশিকা</span><span>ছবির কৃতিত্ব ও সূত্র সংশ্লিষ্ট লিংকে উল্লেখ করা হয়েছে।</span></div>
   </footer>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" async></script>
   <script src="app.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
   <script src="content-studio.js" defer></script>
+  <script src="admin-filters.js" defer></script>
+  <script src="archive.js" defer></script>
 </body>
 </html>
