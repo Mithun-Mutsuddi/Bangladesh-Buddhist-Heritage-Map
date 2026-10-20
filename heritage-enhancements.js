@@ -342,8 +342,10 @@
   function recordText(post) {
     return normalize([
       post.title, post.type, post.eventDate, post.captureDate, post.photographer, post.collector,
-      post.uploader, post.district, post.upazila, post.thana, post.union, post.description,
-      post.history, (post.tags || []).join(' ')
+      post.uploader, post.uploaderAddress, post.district, post.upazila, post.thana, post.union,
+      post.description, post.history, post.sourceUrl, post.shareUrl,
+      (post.attachments || []).map(function (att) { return [att.name, att.filename, att.textContent].join(' '); }).join(' '),
+      (post.tags || []).join(' ')
     ].join(' '));
   }
   function previewAttachment(att, post, index, local) {
@@ -407,7 +409,7 @@
       var okText = !q || recordText(item).indexOf(q) !== -1;
       var okType = !type || normalize(item.type) === normalize(type);
       var date = item.captureDate || item.eventDate || item.uploadedAt || '';
-      var okYear = !year || String(date).slice(0, 4) === year;
+      var okYear = !year || extractYear(date) === extractYear(year) || latinDigits(date).slice(0, 4) === latinDigits(year).trim();
       return okText && okType && okYear;
     }).sort(function (a, b) {
       return String(b.captureDate || b.eventDate || b.uploadedAt || '').localeCompare(String(a.captureDate || a.eventDate || a.uploadedAt || ''));
