@@ -6121,6 +6121,7 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
   "trip": "Google Maps-এ “Mymensingh Buddhist temple” খুঁজুন এবং স্থানীয়/সরকারি সূত্রে নিশ্চিত ঠিকানা জেনে নিন।"}
 ];
 
+window.destinations = destinations;
 const bnDigits = value => String(value).replace(/\d/g, digit => '০১২৩৪৫৬৭৮৯'[Number(digit)]);
 const byId = id => document.getElementById(id);
 let map = null;
@@ -6439,9 +6440,15 @@ byId('itineraryList').addEventListener('click', event => {
   const button = event.target.closest('[data-action="remove-itinerary"]');
   if (button) { itineraryIds.delete(button.dataset.id); saveStorage('buddhistHeritageItinerary', [...itineraryIds]); renderPlaces(); renderItinerary(); }
 });
+let placeSearchTimer = null;
 ['placeSearch', 'divisionFilter', 'districtFilter', 'upazilaFilter', 'thanaFilter', 'unionFilter', 'categoryFilter'].forEach(id => {
   const control = byId(id);
-  if (control) control.addEventListener(id === 'placeSearch' ? 'input' : 'change', renderPlaces);
+  if (control) control.addEventListener(id === 'placeSearch' ? 'input' : 'change', () => {
+    if (id === 'placeSearch') {
+      clearTimeout(placeSearchTimer);
+      placeSearchTimer = setTimeout(renderPlaces, 140);
+    } else renderPlaces();
+  });
 });
 byId('clearFilters').addEventListener('click', () => {
   byId('placeSearch').value = '';
