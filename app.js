@@ -6126,6 +6126,7 @@ const byId = id => document.getElementById(id);
 let map = null;
 let markerLayer = null;
 let userMarker = null;
+const markerCache = new Map();
 let userPosition = null;
 let activePlaceId = destinations[0]?.id ?? null;
 let sortUnvisitedFirst = true;
@@ -6177,11 +6178,20 @@ function renderPlaces() {
   const searchText = byId('placeSearch').value.trim().toLocaleLowerCase('bn');
   const division = byId('divisionFilter').value;
   const category = byId('categoryFilter').value;
+  const district = byId('districtFilter')?.value || 'all';
+  const upazila = byId('upazilaFilter')?.value || 'all';
+  const thana = byId('thanaFilter')?.value || 'all';
+  const unionName = byId('unionFilter')?.value || 'all';
   const filtered = destinations.filter(place => {
-    const matchesSearch = !searchText || [place.name, place.district, place.division, place.category, place.summary].join(' ').toLocaleLowerCase('bn').includes(searchText);
+    const locationText = [place.name, place.district, place.division, place.upazila, place.thana, place.union, place.category, place.kind, place.summary].filter(Boolean).join(' ').toLocaleLowerCase('bn');
+    const matchesSearch = !searchText || locationText.includes(searchText);
     const matchesDivision = division === 'all' || place.division === division;
+    const matchesDistrict = district === 'all' || place.district === district;
+    const matchesUpazila = upazila === 'all' || place.upazila === upazila;
+    const matchesThana = thana === 'all' || place.thana === thana;
+    const matchesUnion = unionName === 'all' || place.union === unionName;
     const matchesCategory = category === 'all' || place.kind === category;
-    return matchesSearch && matchesDivision && matchesCategory;
+    return matchesSearch && matchesDivision && matchesDistrict && matchesUpazila && matchesThana && matchesUnion && matchesCategory;
   });
   if (sortUnvisitedFirst) filtered.sort((a, b) => Number(visitedIds.has(a.id)) - Number(visitedIds.has(b.id)) || a.name.localeCompare(b.name, 'bn'));
   else filtered.sort((a, b) => a.name.localeCompare(b.name, 'bn'));
@@ -6271,14 +6281,22 @@ function initMap() {
     container.innerHTML = '<div class="map-loading">ম্যাপ লাইব্রেরি লোড হয়নি। নিচের Google Maps লিংক দিয়ে স্থান ও রুট দেখুন।</div>';
     return;
   }
-  map = L.map('map', { scrollWheelZoom: false }).setView([23.685, 90.3563], 7);
+  // Clear the static loading overlay before Leaflet creates its map panes.
+  container.innerHTML = '';
+  map = L.map('map', { scrollWheelZoom: false, preferCanvas: true }).setView([23.685, 90.3563], 7);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
+    maxZoom: 18,
+    updateWhenIdle: true,
+    updateWhenZooming: false,
+    keepBuffer: 2,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'
   }).addTo(map);
   markerLayer = typeof L.markerClusterGroup === 'function'
     ? L.markerClusterGroup({
-        maxClusterRadius: 38,
+        chunkedLoading: true,
+        chunkInterval: 200,
+        chunkDelay: 35,
+        maxClusterRadius: 42,
         spiderfyOnMaxZoom: true,
         showCoverageOnHover: false,
         disableClusteringAtZoom: 13,
@@ -6300,20 +6318,27 @@ function initMap() {
 }
 function updateMarkers(list) {
   if (!map || !markerLayer) return;
-  markerLayer.clearLayers();
-  list.filter(place => Array.isArray(place.coords) && place.coords.length === 2 &&
-    place.coords.every(Number.isFinite)).forEach(place => {
-    const icon = L.divIcon({
-      className: '',
-      html: '<div class="custom-map-pin" aria-hidden="true"><span>☸</span></div>',
-      iconSize: [34, 34],
-      iconAnchor: [17, 17],
-      popupAnchor: [0, -18]
-    });
-    const marker = L.marker(place.coords, { icon }).addTo(markerLayer);
-    marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${place.pinApproximate ? '<br><em>পিন আনুমানিক</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>`);
-    marker.on('click', () => selectPlace(place.id, false, false));
+  const pins = list.filter(place => Array.isArray(place.coords) && place.coords.length === 2 &&
+    place.coords.every(Number.isFinite)).map(place => {
+    let marker = markerCache.get(place.id);
+    if (!marker) {
+      const icon = L.divIcon({
+        className: '',
+        html: '<div class="custom-map-pin" aria-hidden="true"><span>☸</span></div>',
+        iconSize: [34, 34],
+        iconAnchor: [17, 17],
+        popupAnchor: [0, -18]
+      });
+      marker = L.marker(place.coords, { icon });
+      marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${place.pinApproximate ? '<br><em>পিন আনুমানিক</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>`);
+      marker.on('click', () => selectPlace(place.id, false, false));
+      markerCache.set(place.id, marker);
+    }
+    return marker;
   });
+  markerLayer.clearLayers();
+  if (typeof markerLayer.addLayers === 'function') markerLayer.addLayers(pins);
+  else pins.forEach(marker => markerLayer.addLayer(marker));
   if (userPosition) addUserMarker(userPosition.lat, userPosition.lng);
 }
 function addUserMarker(lat, lng) {
@@ -6414,8 +6439,18 @@ byId('itineraryList').addEventListener('click', event => {
   const button = event.target.closest('[data-action="remove-itinerary"]');
   if (button) { itineraryIds.delete(button.dataset.id); saveStorage('buddhistHeritageItinerary', [...itineraryIds]); renderPlaces(); renderItinerary(); }
 });
-['placeSearch', 'divisionFilter', 'categoryFilter'].forEach(id => byId(id).addEventListener(id === 'placeSearch' ? 'input' : 'change', renderPlaces));
-byId('clearFilters').addEventListener('click', () => { byId('placeSearch').value = ''; byId('divisionFilter').value = 'all'; byId('categoryFilter').value = 'all'; renderPlaces(); });
+['placeSearch', 'divisionFilter', 'districtFilter', 'upazilaFilter', 'thanaFilter', 'unionFilter', 'categoryFilter'].forEach(id => {
+  const control = byId(id);
+  if (control) control.addEventListener(id === 'placeSearch' ? 'input' : 'change', renderPlaces);
+});
+byId('clearFilters').addEventListener('click', () => {
+  byId('placeSearch').value = '';
+  ['divisionFilter', 'districtFilter', 'upazilaFilter', 'thanaFilter', 'unionFilter', 'categoryFilter'].forEach(id => {
+    const control = byId(id);
+    if (control) control.value = 'all';
+  });
+  renderPlaces();
+});
 byId('sortVisited').addEventListener('click', () => { sortUnvisitedFirst = !sortUnvisitedFirst; byId('sortVisited').textContent = sortUnvisitedFirst ? 'দেখা হয়নি আগে ↑' : 'নাম অনুসারে A–Z'; renderPlaces(); });
 byId('locateMe').addEventListener('click', () => requestLocation());
 byId('nearbyAtm').addEventListener('click', () => {
