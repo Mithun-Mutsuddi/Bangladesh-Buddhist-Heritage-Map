@@ -6482,6 +6482,8 @@ function updateProgress() {
   byId('visitedStat').textContent = bnDigits(visitedIds.size);
   const percent = Math.round((visitedIds.size / destinations.length) * 100);
   byId('progressPercent').textContent = `${bnDigits(percent)}%`;
+  const total = byId('directoryTotalCount');
+  if (total) total.textContent = bnDigits(destinations.length);
 }
 function renderItinerary() {
   const places = destinations.filter(place => itineraryIds.has(place.id));
