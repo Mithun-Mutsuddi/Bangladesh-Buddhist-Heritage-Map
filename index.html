@@ -78,7 +78,7 @@
           <p class="section-kicker">HERITAGE EXPLORER</p>
           <h2 id="explore-title">আপনার পরবর্তী গন্তব্য খুঁজুন</h2>
           <p class="section-lead">নাম, জেলা বা বিভাগের ভিত্তিতে খুঁজুন। কোনো স্থান বেছে নিলে তার ইতিহাস, ছবি ও ভ্রমণ-লিংক দেখুন।</p>
-          <p class="research-note directory-scope-note"><strong>বর্তমান ডিরেক্টরি: 320টি রেকর্ড।</strong> এতে বিহার/প্যাগোডা, প্রত্নস্থল, পালি-শিক্ষা ও বৌদ্ধ প্রতিষ্ঠান, শিশু-সেবা এবং গবেষণাধীন লোকঐতিহ্য অন্তর্ভুক্ত। এটি এখনও চূড়ান্ত জাতীয় master list নয়; সরকারি জেলা-তালিকা ধরে গবেষণা চলমান। যেসব পিন আনুমানিক, বিস্তারিততে সতর্কতা দেখানো হয়।</p>
+          <p class="research-note directory-scope-note"><strong>বর্তমান ডিরেক্টরি: <span id="directoryRecordCount">৩২৩</span>টি মূল রেকর্ড।</strong> এতে বিহার/প্যাগোডা, প্রত্নস্থল, পালি-শিক্ষা ও বৌদ্ধ প্রতিষ্ঠান, শিশু-সেবা এবং গবেষণাধীন লোকঐতিহ্য অন্তর্ভুক্ত। এটি এখনও চূড়ান্ত জাতীয় master list নয়; সরকারি জেলা-তালিকা ধরে গবেষণা চলমান। যেসব পিন আনুমানিক, বিস্তারিততে সতর্কতা দেখানো হয়।</p>
         </div>
         <div class="progress-pill" aria-live="polite"><span class="progress-wheel">☸</span><span><strong id="visitedCount">০</strong><small>টি স্থান দেখা হয়েছে</small></span></div>
       </div>
@@ -108,6 +108,7 @@
           <option value="সংগ্রহশালা">সংগ্রহশালা ও সংরক্ষণ</option>
           <option value="শ্মশান">বৌদ্ধ শ্মশান</option>
           <option value="যাচাইাধীন">যাচাইাধীন / অতিরিক্ত সূত্র প্রয়োজন</option>
+          <option value="কমিউনিটি স্থান">কমিউনিটি-সংযোজিত স্থান</option>
         </select></label>
         <button type="button" class="button button-outline" id="clearFilters">ফিল্টার মুছুন</button>
         <p class="admin-filter-note">জেলা/উপজেলা/ইউনিয়নের তালিকা প্রশাসনিক ওপেন-ডেটা থেকে প্রথম ব্যবহারে আনা হবে। শুধুমাত্র নির্ভরযোগ্য অবস্থান-তথ্য থাকা ঐতিহ্যস্থানই নির্দিষ্ট এলাকার ফিল্টারে মিলবে।</p>
@@ -117,6 +118,7 @@
         <div class="results-panel">
           <div class="results-topline"><span id="resultsCount">স্থান লোড হচ্ছে…</span><button type="button" class="text-button" id="sortVisited">দেখা হয়নি আগে ↑</button></div>
           <div class="place-grid" id="placeGrid" aria-live="polite"></div>
+          <div class="load-more-row"><button type="button" class="button button-outline" id="loadMorePlaces" hidden>আরও স্থান দেখুন</button><p id="shownCount" aria-live="polite">স্থান দেখানো হচ্ছে…</p></div>
           <div class="empty-state" id="emptyState" hidden><span>☸</span><h3>এই ফিল্টারে কোনো স্থান পাওয়া যায়নি</h3><p>অন্য শব্দ বা বিভাগ দিয়ে আবার খুঁজুন।</p></div>
         </div>
 
@@ -385,7 +387,7 @@
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" async></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
   <script src="app.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
   <script src="content-studio.js" defer></script>
