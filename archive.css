@@ -1,0 +1,43 @@
+
+.historical-archive-section { scroll-margin-top: 90px; }
+.archive-notice { padding:13px 15px; margin:0 0 20px; border:1px solid var(--line); border-radius:12px; color:var(--muted); background:#fffdf8; font-size:12px; line-height:1.85; }
+.archive-notice strong { color:var(--forest); }
+.archive-layout { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); align-items:start; gap:18px; }
+.archive-panel { min-width:0; padding:18px; border:1px solid var(--line); border-radius:15px; background:#fffdf8; box-shadow:0 8px 25px rgba(24,53,43,.045); }
+.archive-panel h3 { margin:0 0 14px; color:var(--forest); font-size:19px; }
+.archive-form { display:grid; gap:12px; }
+.archive-form label { display:grid; gap:6px; color:var(--text); font-size:12px; font-weight:700; }
+.archive-form input,.archive-form select,.archive-form textarea { width:100%; min-width:0; padding:10px 11px; border:1px solid #e1dbc9; border-radius:8px; background:#fff; color:var(--text); font:inherit; font-size:12px; font-weight:400; }
+.archive-form textarea { resize:vertical; line-height:1.7; }
+.archive-two-col { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; }
+.archive-hint { margin:-3px 0 0; color:var(--muted); font-size:10px; line-height:1.8; }
+.archive-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+.archive-status { margin:0; color:var(--muted); font-size:11px; line-height:1.7; }
+.archive-status.is-error,.archive-error { color:#a12c16; }
+.archive-list-heading { display:flex; justify-content:space-between; align-items:start; gap:12px; }
+.archive-list-heading h3 { margin-bottom:4px; }
+.archive-list-heading p { margin:0 0 13px; color:var(--muted); font-size:11px; line-height:1.7; }
+.archive-list-heading>span { display:inline-grid; min-width:34px; min-height:34px; place-items:center; border:1px solid #e2d6bb; border-radius:50%; color:var(--forest); font-weight:700; }
+.archive-export-actions { margin-bottom:12px; }
+.archive-list { display:grid; gap:12px; }
+.archive-record { min-width:0; padding:13px; border:1px solid #e9e2d1; border-radius:11px; background:#fff; }
+.archive-record-heading { display:flex; align-items:start; gap:9px; }
+.archive-type-icon { display:grid; flex:0 0 36px; width:36px; height:36px; place-items:center; border-radius:9px; color:#8f3d08; background:#f8efdc; font-size:20px; }
+.archive-record-heading>div { min-width:0; flex:1; }
+.archive-record h4 { margin:1px 0 3px; color:var(--forest); font-size:14px; line-height:1.6; overflow-wrap:anywhere; }
+.archive-meta { margin:0; color:var(--muted); font-size:10px; line-height:1.7; overflow-wrap:anywhere; }
+.archive-delete { flex:0 0 auto; width:29px; height:29px; border:1px solid #e9dcc9; border-radius:7px; background:#fffaf2; color:#8f3d08; font-size:20px; cursor:pointer; }
+.archive-record-meta,.archive-record-description { margin:10px 0 0; color:#655b4b; font-size:11px; line-height:1.8; overflow-wrap:anywhere; }
+.archive-record-description { white-space:pre-wrap; }
+.archive-preview-image { display:block; max-width:100%; max-height:360px; margin-top:12px; border-radius:8px; object-fit:contain; background:#f4f0e6; }
+.archive-player { display:block; width:100%; margin-top:12px; }
+.archive-pdf { width:100%; height:340px; margin-top:12px; border:1px solid #e4dece; border-radius:8px; }
+.archive-record a,.archive-share a,.archive-read-text { display:inline-block; margin-top:9px; color:#87500c; font-size:11px; text-underline-offset:3px; }
+.archive-read-text { padding:6px 9px; border:1px solid #e4dece; border-radius:7px; background:#fffaf0; cursor:pointer; }
+.archive-text-preview { max-height:320px; overflow:auto; padding:12px; margin-top:8px; border-radius:8px; background:#f8f5eb; color:#3e453b; font:12px/1.8 monospace; white-space:pre-wrap; overflow-wrap:anywhere; }
+.archive-share { margin-top:17px; padding:13px; border:1px dashed #d9ceb6; border-radius:10px; background:#fcf8ef; }
+.archive-share h4 { margin:0; color:var(--forest); font-size:14px; }
+.archive-share p { margin:6px 0 10px; color:var(--muted); font-size:11px; line-height:1.8; }
+.archive-share a { margin-left:8px; }
+@media(max-width:850px){.archive-layout{grid-template-columns:1fr;}}
+@media(max-width:520px){.archive-panel{padding:13px}.archive-two-col{grid-template-columns:1fr}.archive-export-actions .button{width:100%}}
