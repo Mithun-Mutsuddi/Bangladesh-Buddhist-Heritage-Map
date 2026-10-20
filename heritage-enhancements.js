@@ -150,7 +150,7 @@
       var explicitThanas = district.thanas || district.police_stations || district.policeStations ||
         (upazilas.filter(function (item) { return item.type === 'thana'; }));
       if (Array.isArray(explicitThanas)) thanaItems = explicitThanas
-        .filter(function (item) { return !up || !item.parentUpazilaId || String(item.parentUpazilaId) === String(up.id); })
+        .filter(function (item) { return !up || (item.parentUpazilaId && String(item.parentUpazilaId) === String(up.id)); })
         .map(function (item) { return { value: labelName(item), label: labelName(item) }; })
         .filter(function (item) { return item.label; });
     }
@@ -336,6 +336,9 @@
     if (!control) return;
     control.addEventListener('change', function () {
       if (id === 'divisionFilter') fillAdminFilters();
+      if (id === 'divisionFilter') {
+        fillAdminFilters();
+      }
       if (id === 'districtFilter') {
         fillLowerFilters();
         if (adminTree) loadDistrictLocations();
