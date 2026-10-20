@@ -6178,10 +6178,16 @@ function renderPlaces() {
   const division = byId('divisionFilter').value;
   const category = byId('categoryFilter').value;
   const filtered = destinations.filter(place => {
-    const matchesSearch = !searchText || [place.name, place.district, place.division, place.category, place.summary].join(' ').toLocaleLowerCase('bn').includes(searchText);
+    const searchFields = [
+      place.name, place.district, place.division, place.category, place.summary,
+      place.history, place.address, place.upazila, place.upazilaName, place.thana,
+      place.thanaName, place.union, place.unionName, place.municipality
+    ];
+    const matchesSearch = !searchText || searchFields.filter(Boolean).join(' ').toLocaleLowerCase('bn').includes(searchText);
     const matchesDivision = division === 'all' || place.division === division;
-    const matchesCategory = category === 'all' || place.kind === category;
-    return matchesSearch && matchesDivision && matchesCategory;
+    const matchesCategory = category === 'all' || place.kind === category || place.category === category;
+    const matchesAdmin = typeof window.__adminFilterMatch !== 'function' || window.__adminFilterMatch(place);
+    return matchesSearch && matchesDivision && matchesCategory && matchesAdmin;
   });
   if (sortUnvisitedFirst) filtered.sort((a, b) => Number(visitedIds.has(a.id)) - Number(visitedIds.has(b.id)) || a.name.localeCompare(b.name, 'bn'));
   else filtered.sort((a, b) => a.name.localeCompare(b.name, 'bn'));
@@ -6267,21 +6273,50 @@ function renderPlaceDetail(place) {
 }
 function initMap() {
   const container = byId('map');
+  const loadingOverlay = container.querySelector('.map-loading');
   if (typeof L === 'undefined') {
-    container.innerHTML = '<div class="map-loading">ম্যাপ লাইব্রেরি লোড হয়নি। নিচের Google Maps লিংক দিয়ে স্থান ও রুট দেখুন।</div>';
+    if (loadingOverlay) loadingOverlay.textContent = 'ম্যাপ লাইব্রেরি লোড হয়নি। Google Maps-এ স্থান খুঁজতে তালিকার লিংক ব্যবহার করুন।';
+    else container.insertAdjacentHTML('afterbegin', '<div class="map-loading">ম্যাপ লাইব্রেরি লোড হয়নি। Google Maps-এ স্থান খুঁজুন।</div>');
     return;
   }
-  map = L.map('map', { scrollWheelZoom: false }).setView([23.685, 90.3563], 7);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  map = L.map('map', { scrollWheelZoom: false, preferCanvas: true }).setView([23.685, 90.3563], 7);
+  // Never leave the original loading overlay covering a successfully created map.
+  if (loadingOverlay) loadingOverlay.remove();
+  const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
+    updateWhenIdle: true,
+    keepBuffer: 2,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'
-  }).addTo(map);
+  });
+  let firstTileLoaded = false;
+  const tileStatus = document.createElement('div');
+  tileStatus.className = 'map-tiles-status';
+  tileStatus.setAttribute('role', 'status');
+  tileStatus.textContent = 'মানচিত্রের টাইল লোড হচ্ছে…';
+  container.appendChild(tileStatus);
+  const hideTileStatus = () => { tileStatus.remove(); };
+  tiles.on('load', () => { firstTileLoaded = true; hideTileStatus(); });
+  tiles.on('tileerror', () => {
+    if (firstTileLoaded) return;
+    tileStatus.textContent = 'ম্যাপ টাইল ধীরে লোড হচ্ছে; পিন/ফিল্টার চালু আছে। প্রয়োজনে Google Maps লিংক ব্যবহার করুন।';
+  });
+  tiles.addTo(map);
+  // A slow tile server must not keep the map in a perpetual loading state.
+  window.setTimeout(() => {
+    if (!firstTileLoaded && tileStatus.isConnected) {
+      tileStatus.textContent = 'মানচিত্রের ব্যাকগ্রাউন্ড ধীর। পিন ও স্থান-তালিকা ব্যবহার করা যাবে; Google Maps লিংকও আছে।';
+      window.setTimeout(hideTileStatus, 2600);
+    }
+  }, 1800);
   markerLayer = typeof L.markerClusterGroup === 'function'
     ? L.markerClusterGroup({
         maxClusterRadius: 38,
         spiderfyOnMaxZoom: true,
         showCoverageOnHover: false,
         disableClusteringAtZoom: 13,
+        chunkedLoading: true,
+        chunkInterval: 100,
+        chunkDelay: 25,
         iconCreateFunction: cluster => L.divIcon({
           className: '',
           html: '<div class="custom-cluster-icon"><span>☸</span><b>' + cluster.getChildCount() + '</b></div>',
@@ -6301,6 +6336,7 @@ function initMap() {
 function updateMarkers(list) {
   if (!map || !markerLayer) return;
   markerLayer.clearLayers();
+  const markers = [];
   list.filter(place => Array.isArray(place.coords) && place.coords.length === 2 &&
     place.coords.every(Number.isFinite)).forEach(place => {
     const icon = L.divIcon({
@@ -6310,10 +6346,16 @@ function updateMarkers(list) {
       iconAnchor: [17, 17],
       popupAnchor: [0, -18]
     });
-    const marker = L.marker(place.coords, { icon }).addTo(markerLayer);
+    const marker = L.marker(place.coords, { icon });
     marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${place.pinApproximate ? '<br><em>পিন আনুমানিক</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>`);
     marker.on('click', () => selectPlace(place.id, false, false));
+    markers.push(marker);
   });
+  if (typeof markerLayer.addLayers === 'function') {
+    markerLayer.addLayers(markers);
+  } else {
+    markers.forEach(marker => markerLayer.addLayer(marker));
+  }
   if (userPosition) addUserMarker(userPosition.lat, userPosition.lng);
 }
 function addUserMarker(lat, lng) {
@@ -6605,11 +6647,14 @@ async function loadPublishedCommunityPlaces() {
 }
 
 byId('currentYear').textContent = new Date().getFullYear();
-(async function startApp() {
-  await loadPublishedCommunityPlaces();
+// Start the map immediately; content.json is optional and must not block the map's first paint.
+initMap();
+renderItinerary();
+renderReviews();
+if (activePlaceId) renderPlaceDetail(selectedPlace());
+loadPublishedCommunityPlaces().then(() => {
   renderPlaces();
   renderItinerary();
   renderReviews();
-  initMap();
   if (activePlaceId) renderPlaceDetail(selectedPlace());
-})();
+});
