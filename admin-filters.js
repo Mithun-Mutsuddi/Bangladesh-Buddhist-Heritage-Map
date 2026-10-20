@@ -47,18 +47,38 @@ function refreshAll(keep) {
  const thanaValues=records.filter(p=>(div==='all'||p.division===div)&&(dist==='all'||p.district===dist)&&(up==='all'||p.upazila===up)).map(p=>p.thana);
  refill($('thanaFilter'),thanaValues,'সব থানা (রেকর্ডভিত্তিক)',keep);
 }
+function refreshRecordLists() {
+ const records=Array.isArray(window.destinations)?window.destinations:[];
+ const div=$('divisionFilter')?.value||'all', dist=$('districtFilter')?.value||'all', up=$('upazilaFilter')?.value||'all';
+ const selected=records.filter(p=>(div==='all'||p.division===div)&&(dist==='all'||p.district===dist)&&(up==='all'||p.upazila===up));
+ refill($('districtFilter'),records.filter(p=>div==='all'||p.division===div).map(p=>p.district),'সব জেলা',true);
+ refill($('upazilaFilter'),selected.map(p=>p.upazila),'সব উপজেলা',true);
+ refill($('thanaFilter'),selected.map(p=>p.thana),'সব থানা (রেকর্ডভিত্তিক)',true);
+ refill($('unionFilter'),selected.map(p=>p.union),'সব ইউনিয়ন (রেকর্ডভিত্তিক)',true);
+}
+function refreshCategories() {
+ const select=$('categoryFilter'); if(!select)return;
+ const previous=select.value||'all', options=new Map();
+ [...select.options].slice(1).forEach(option=>options.set(option.value,option.textContent));
+ (Array.isArray(window.destinations)?window.destinations:[]).forEach(place=>{
+  if(place.kind&&!options.has(place.kind))options.set(place.kind,place.category||place.kind);
+  if(place.category&&!options.has(place.category))options.set(place.category,place.category);
+ });
+ select.replaceChildren(new Option('সব ক্যাটাগরি','all'),...[...options.entries()].sort((a,b)=>a[1].localeCompare(b[1],'bn')).map(([value,label])=>new Option(label,value)));
+ if([...select.options].some(option=>option.value===previous))select.value=previous;
+}
 async function loadGeo() {
  if(tree) return tree;
  if(!loadPromise) loadPromise=fetch(source,{mode:'cors',cache:'force-cache'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();}).then(data=>{
   if(!Array.isArray(data))throw new Error('প্রশাসনিক ডেটার ফরম্যাট সঠিক নয়');
-  tree=data; inferLocalityMetadata(); refill($('divisionFilter'),tree.map(bnName),'সব বিভাগ',true); refreshAll(true);
+  tree=data; inferLocalityMetadata(); refill($('divisionFilter'),tree.map(bnName),'সব বিভাগ',true); refreshAll(true); refreshCategories();
   const note=document.querySelector('.admin-filter-note'); if(note)note.textContent='প্রশাসনিক তালিকা লোড হয়েছে। বিদ্যমান স্থানের উপজেলা/ইউনিয়ন/থানা তথ্য প্রমাণসহ যোগ না থাকলে ওই ফিল্টারে ফল নাও আসতে পারে।';
   return tree;
- }).catch(err=>{loadPromise=null;const note=document.querySelector('.admin-filter-note');if(note)note.textContent='প্রশাসনিক তালিকা এখন লোড করা যায়নি ('+err.message+'); বিভাগ/জেলা ফিল্টার ব্যবহার করুন, পরে আবার চেষ্টা হবে.';throw err;});
+ }).catch(err=>{loadPromise=null;refreshRecordLists(); refreshCategories(); const note=document.querySelector('.admin-filter-note');if(note)note.textContent='প্রশাসনিক তালিকা এখন লোড করা যায়নি ('+err.message+'); বিদ্যমান রেকর্ড থেকে জেলা/থানা/ইউনিয়ন ফিল্টার সচল আছে; পরে আবার চেষ্টা হবে.';throw err;});
  return loadPromise;
 }
 document.addEventListener('DOMContentLoaded',()=>{
- setTimeout(()=>loadGeo().catch(()=>{}),900);
+ refreshRecordLists(); refreshCategories(); setTimeout(()=>loadGeo().catch(()=>{}),900);
  $('divisionFilter')?.addEventListener('change',()=>{if(tree){refreshAll(false);runSearch();}});
  $('districtFilter')?.addEventListener('change',()=>{
   if(!tree)return;
