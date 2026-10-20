@@ -75,7 +75,7 @@
         <div>
           <p class="section-kicker">HERITAGE EXPLORER</p>
           <h2 id="explore-title">আপনার পরবর্তী গন্তব্য খুঁজুন</h2>
-          <p class="section-lead">নাম, জেলা বা বিভাগের ভিত্তিতে খুঁজুন। কোনো স্থান বেছে নিলে তার ইতিহাস, ছবি ও ভ্রমণ-লিংক দেখুন।</p>
+          <p class="section-lead">নাম, বিভাগ, জেলা, উপজেলা, থানা, ইউনিয়ন/পৌরসভা বা শ্রেণির ভিত্তিতে খুঁজুন। কোনো স্থান বেছে নিলে তার ইতিহাস, ছবি ও ভ্রমণ-লিংক দেখুন।</p>
           <p class="research-note directory-scope-note"><strong>বর্তমান ডিরেক্টরি: 320টি রেকর্ড।</strong> এতে বিহার/প্যাগোডা, প্রত্নস্থল, পালি-শিক্ষা ও বৌদ্ধ প্রতিষ্ঠান, শিশু-সেবা এবং গবেষণাধীন লোকঐতিহ্য অন্তর্ভুক্ত। এটি এখনও চূড়ান্ত জাতীয় master list নয়; সরকারি জেলা-তালিকা ধরে গবেষণা চলমান। যেসব পিন আনুমানিক, বিস্তারিততে সতর্কতা দেখানো হয়।</p>
         </div>
         <div class="progress-pill" aria-live="polite"><span class="progress-wheel">☸</span><span><strong id="visitedCount">০</strong><small>টি স্থান দেখা হয়েছে</small></span></div>
@@ -84,8 +84,12 @@
       <div class="filters" role="search">
         <label class="search-box" for="placeSearch"><span aria-hidden="true">⌕</span><input id="placeSearch" type="search" placeholder="স্থান, জেলা বা কীওয়ার্ড লিখুন…" autocomplete="off"><kbd>খুঁজুন</kbd></label>
         <label class="filter-select"><span>বিভাগ</span><select id="divisionFilter"><option value="all">সব বিভাগ</option><option value="ঢাকা">ঢাকা</option><option value="চট্টগ্রাম">চট্টগ্রাম</option><option value="রাজশাহী">রাজশাহী</option><option value="রংপুর">রংপুর</option><option value="খুলনা">খুলনা</option><option value="বরিশাল">বরিশাল</option><option value="সিলেট">সিলেট</option><option value="ময়মনসিংহ">ময়মনসিংহ</option></select></label>
-        <label class="filter-select"><span>ধরন</span><select id="categoryFilter"><option value="all">সব ধরনের স্থান</option><option value="প্রত্নস্থল">প্রত্নস্থল ও মহাবিহার</option><option value="বিহার">বিহার ও তীর্থস্থান</option><option value="তীর্থস্থান">তীর্থস্থান / পবিত্র স্থান</option><option value="মঠ">মঠ ও ধর্মীয় কেন্দ্র</option><option value="কমিউনিটি স্থান">কমিউনিটি-যোগ করা স্থান</option><option value="প্রতিষ্ঠান">পালি শিক্ষা ও বৌদ্ধ প্রতিষ্ঠান</option><option value="অনাথালয়/সেবাকেন্দ্র">অনাথালয় ও সমাজসেবা</option><option value="ধ্যানকেন্দ্র">ভাবনাকেন্দ্র ও অরণ্যকুটির</option><option value="লোকধর্ম/গবেষণা">লোকধর্ম / গবেষণাধীন ঐতিহ্য</option><option value="ঐতিহ্য/সম্প্রদায়">জীবন্ত সম্প্রদায় ও লোকঐতিহ্য</option><option value="শ্মশান">বৌদ্ধ শ্মশান</option><option value="যাচাইাধীন">অতিরিক্ত যাচাই প্রয়োজন</option></select></label>
-        <button type="button" class="button button-outline" id="clearFilters">ফিল্টার মুছুন</button>
+        <label class="filter-select"><span>জেলা</span><select id="districtFilter"><option value="">সব জেলা</option></select></label>
+        <label class="filter-select"><span>উপজেলা</span><select id="upazilaFilter"><option value="">সব উপজেলা</option></select></label>
+        <label class="filter-select"><span>থানা</span><select id="thanaFilter"><option value="">সব থানা</option></select></label>
+        <label class="filter-select"><span>ইউনিয়ন / পৌরসভা</span><select id="unionFilter"><option value="">সব ইউনিয়ন / পৌরসভা</option></select></label>
+        <label class="filter-select"><span>ধরন / শ্রেণি</span><select id="categoryFilter"><option value="all">সব ধরনের স্থান</option><option value="প্রত্নস্থল">প্রত্নস্থল ও মহাবিহার</option><option value="বিহার">বিহার ও তীর্থস্থান</option><option value="তীর্থস্থান">তীর্থস্থান / পবিত্র স্থান</option><option value="মঠ">মঠ ও ধর্মীয় কেন্দ্র</option><option value="ধ্যানকেন্দ্র">ভাবনাকেন্দ্র ও অরণ্যকুটির</option><option value="প্রতিষ্ঠান">বৌদ্ধ শিক্ষা ও প্রতিষ্ঠান</option><option value="শিক্ষাপ্রতিষ্ঠান">বৌদ্ধ শিক্ষা প্রতিষ্ঠান</option><option value="অনাথালয়/সেবাকেন্দ্র">অনাথালয় ও সমাজসেবা</option><option value="প্রবীণসেবা">বৃদ্ধাশ্রম / প্রবীণসেবা</option><option value="স্বাস্থ্যসেবা">হাসপাতাল / স্বাস্থ্যসেবা</option><option value="সাংস্কৃতিক প্রতিষ্ঠান">সাংস্কৃতিক প্রতিষ্ঠান</option><option value="প্রকাশনা/গবেষণা">প্রকাশনা ও গবেষণা</option><option value="কমিউনিটি স্থান">কমিউনিটি-যোগ করা স্থান</option><option value="লোকধর্ম/গবেষণা">লোকধর্ম / গবেষণাধীন ঐতিহ্য</option><option value="ঐতিহ্য/সম্প্রদায়">জীবন্ত সম্প্রদায় ও লোকঐতিহ্য</option><option value="শ্মশান">বৌদ্ধ শ্মশান</option><option value="যাচাইাধীন">অতিরিক্ত যাচাই প্রয়োজন</option></select></label>
+        <button type="button" class="button button-outline" id="clearFilters">ফিল্টার মুছুন</button><p class="admin-geo-status" id="adminGeoStatus" aria-live="polite">জেলা/উপজেলা/ইউনিয়নের রেফারেন্স তালিকা প্রয়োজনে আলাদাভাবে লোড হবে; স্থান রেকর্ডে না থাকলে সেই স্তর ফাঁকা থাকতে পারে।</p>
       </div>
 
       <div class="explore-layout">
@@ -199,6 +203,57 @@
           <div id="reviewList" class="review-list" aria-live="polite"><p class="review-empty">প্রথম রিভিউটি আপনি যোগ করতে পারেন।</p></div>
           <div class="review-actions"><button type="button" class="button button-gold" id="exportReviews">রিভিউ JSON ডাউনলোড ↓</button><button type="button" class="button button-outline" id="clearLocalReviews">আমার রিভিউ মুছুন</button></div>
           <p class="review-privacy">🔒 GitHub Pages একটি static site, তাই এখানে কোনো server/database নেই। এই ডিভাইসে সেভ করা রিভিউ অন্য দর্শক দেখতে পাবেন না, যতক্ষণ না সেটি যাচাই করে প্রকাশিত <code>content.json</code>-এ যোগ করা হয়।</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section wrap archive-section" id="historical-archive" aria-labelledby="archive-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">HISTORICAL ARCHIVE · COMMUNITY MEMORY</p>
+          <h2 id="archive-title">ঐতিহাসিক আর্কাইভ ও স্মৃতি-সংগ্রহ</h2>
+          <p class="section-lead">পুরোনো ছবি, ছবি তোলার তারিখ, দলিল, চিঠি, মানচিত্র, ভিডিও, অডিও, PDF, লিখিত ইতিহাস ও বহিরাগত লিংক নথিবদ্ধ করুন। উৎস, অনুমতি ও ইতিহাস যুক্ত করলে ভবিষ্যৎ প্রজন্মের জন্য তথ্য সংরক্ষণ সহজ হবে।</p>
+        </div>
+      </div>
+      <div class="archive-policy" role="note"><strong>প্রকাশনা ও গোপনীয়তা:</strong> নতুন নথি প্রথমে শুধু এই ব্রাউজারে সংরক্ষিত থাকবে। ZIP তৈরি করে যাচাইয়ের পর GitHub-এ <code>content.json</code> ও <code>assets/archives/</code> প্রকাশ করতে হবে। ছবি/নথি প্রকাশের অনুমতি এবং কপিরাইট নিশ্চিত করুন; ব্যক্তিগত বাসার ঠিকানা, অপ্রাপ্তবয়স্কদের ব্যক্তিগত তথ্য বা অনুমতিহীন ছবি প্রকাশ করবেন না।</div>
+      <div class="archive-workspace">
+        <form class="archive-form" id="archiveForm">
+          <h3>আর্কাইভে নথি যোগ করুন</h3>
+          <p>যা জানা আছে দিন; জানা নেই এমন তারিখ বা নাম অনুমান করে লিখবেন না।</p>
+          <label>নথি / মিডিয়ার শিরোনাম <span class="required-mark">*</span><input id="archiveTitle" required maxlength="180" placeholder="যেমন: ১৯৮২ সালের বিহার উৎসবের ছবি"></label>
+          <div class="archive-form-grid">
+            <label>ধরন <span class="required-mark">*</span><select id="archiveResourceType" required><option value="ঐতিহাসিক ছবি">ঐতিহাসিক ছবি</option><option value="ছবি/আলোকচিত্র">ছবি / আলোকচিত্র</option><option value="ভিডিও">ভিডিও</option><option value="অডিও/সাক্ষাৎকার">অডিও / মৌখিক ইতিহাস</option><option value="PDF/দলিল">PDF / দলিল</option><option value="চিঠি/পাণ্ডুলিপি">চিঠি / পাণ্ডুলিপি</option><option value="লিখিত ইতিহাস">লিখিত ইতিহাস / টেক্সট</option><option value="মানচিত্র">পুরোনো মানচিত্র</option><option value="সংবাদ/প্রকাশনা">সংবাদ / প্রকাশনা</option><option value="বহিরাগত লিংক">বহিরাগত লিংক / শেয়ার</option><option value="অন্যান্য">অন্যান্য</option></select></label>
+            <label>নথি/ঘটনার তারিখ<input id="archiveEventDate" type="date"></label>
+            <label>ছবি/রেকর্ড ধারণের তারিখ<input id="archiveCaptureDate" type="date"></label>
+            <label>ছবি/ভিডিও/অডিও ধারণকারী<input id="archivePhotographer" maxlength="140" placeholder="ফটোগ্রাফার / রেকর্ডিস্ট"></label>
+            <label>সংগ্রাহক / সংগ্রহের উৎস<input id="archiveCollector" maxlength="140" placeholder="ব্যক্তি, পরিবার, প্রতিষ্ঠান, সংগ্রহ"></label>
+            <label>আপলোডকারীর নাম বা ছদ্মনাম<input id="archiveUploader" maxlength="100" placeholder="ঐচ্ছিক"></label>
+            <label>প্রতিষ্ঠান / এলাকার পরিচয়<input id="archiveUploaderAddress" maxlength="180" placeholder="ব্যক্তিগত বাসার ঠিকানা দেবেন না"></label>
+            <label>বিভাগ<select id="archiveDivision"><option value="">উল্লেখ নেই</option><option>ঢাকা</option><option>চট্টগ্রাম</option><option>রাজশাহী</option><option>রংপুর</option><option>খুলনা</option><option>বরিশাল</option><option>সিলেট</option><option>ময়মনসিংহ</option></select></label>
+            <label>জেলা<input id="archiveDistrict" maxlength="80" placeholder="জেলা"></label>
+            <label>উপজেলা<input id="archiveUpazila" maxlength="100" placeholder="উপজেলা"></label>
+            <label>থানা<input id="archiveThana" maxlength="100" placeholder="থানা / পুলিশ স্টেশন"></label>
+            <label>ইউনিয়ন / পৌরসভা<input id="archiveUnion" maxlength="120" placeholder="ইউনিয়ন বা পৌরসভা"></label>
+          </div>
+          <label>সংক্ষিপ্ত বিবরণ <span class="required-mark">*</span><textarea id="archiveDescription" required rows="3" maxlength="1200" placeholder="ছবিতে/নথিতে কী দেখা যায় বা কেন এটি গুরুত্বপূর্ণ?"></textarea></label>
+          <label>ছবির / নথির ইতিহাস<textarea id="archiveHistory" rows="4" maxlength="6000" placeholder="কে দিয়েছেন, কীভাবে সংরক্ষিত ছিল, কোন ঘটনার সঙ্গে সম্পর্কিত, মৌখিক ইতিহাস ও অনিশ্চয়তা…"></textarea></label>
+          <div class="archive-form-grid">
+            <label>মূল সূত্রের লিংক<input id="archiveSourceUrl" type="url" placeholder="https://…"></label>
+            <label>শেয়ার লিংক<input id="archiveShareUrl" type="url" placeholder="https://…"></label>
+            <label>স্বত্ব / লাইসেন্স / অনুমতি<input id="archiveRights" maxlength="240" placeholder="যেমন: মালিকের প্রকাশের অনুমতি আছে"></label>
+            <label>ট্যাগ / কীওয়ার্ড<input id="archiveTags" maxlength="500" placeholder="বিহারের নাম, ব্যক্তি, সাল, উৎস"></label>
+          </div>
+          <label>ছবি, ভিডিও, অডিও, PDF বা টেক্সট ফাইল<input id="archiveFiles" type="file" multiple accept="image/*,video/*,audio/*,application/pdf,text/plain,text/markdown,.md,.txt,.csv,.pdf,.mp4,.webm,.mp3,.wav,.ogg,.m4a"><small>সর্বোচ্চ ১০টি ফাইল; প্রতিটি ৩৫ MB পর্যন্ত এবং একসঙ্গে ৭০ MB পর্যন্ত। বড় ভিডিওর জন্য অনুমোদিত শেয়ার লিংক দিন।</small></label>
+          <button type="submit" class="button button-dark">খসড়া সংরক্ষণ করুন</button>
+          <button type="button" class="button button-gold" id="archiveExportZip">প্রকাশনা ZIP তৈরি করুন ↓</button>
+          <p class="archive-status" id="archiveStatus" aria-live="polite">নতুন রেকর্ড এই ডিভাইসে থাকবে; অন্য দর্শকের জন্য আলাদাভাবে যাচাই ও প্রকাশ করতে হবে।</p>
+        </form>
+        <div class="archive-browser">
+          <div class="archive-browser-head"><div><h3>ডিজিটাল আর্কাইভ</h3><p id="archiveCount">০টি নথি/মিডিয়া</p></div></div>
+          <div class="archive-search-controls"><label for="archiveSearch">শিরোনাম, তারিখ, ব্যক্তি, স্থান বা ট্যাগ খুঁজুন<input id="archiveSearch" type="search" placeholder="যেমন: রাজবন বিহার, ১৯৮২, পাণ্ডুলিপি…"></label><label for="archiveTypeFilter">নথির ধরন<select id="archiveTypeFilter"><option value="">সব ধরন</option><option>ঐতিহাসিক ছবি</option><option>ছবি/আলোকচিত্র</option><option>ভিডিও</option><option>অডিও/সাক্ষাৎকার</option><option>PDF/দলিল</option><option>চিঠি/পাণ্ডুলিপি</option><option>লিখিত ইতিহাস</option><option>মানচিত্র</option><option>সংবাদ/প্রকাশনা</option><option>বহিরাগত লিংক</option><option>অন্যান্য</option></select></label><label for="archiveYearFilter">বছর<input id="archiveYearFilter" inputmode="numeric" maxlength="4" placeholder="যেমন: ১৯৮২ / 1982"></label></div>
+          <div class="archive-list" id="archiveList" aria-live="polite"></div>
+          <div class="archive-empty" id="archiveEmpty" hidden><span>▤</span><h3>এই খোঁজে কোনো আর্কাইভ নথি নেই</h3><p>শব্দ বদলান অথবা নতুন ঐতিহাসিক নথি যোগ করুন।</p></div>
         </div>
       </div>
     </section>
@@ -324,5 +379,6 @@
   <script src="app.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
   <script src="content-studio.js" defer></script>
+  <script src="heritage-enhancements.js" defer></script>
 </body>
 </html>
