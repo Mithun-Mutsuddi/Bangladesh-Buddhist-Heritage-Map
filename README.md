@@ -5,7 +5,9 @@
 ## বর্তমান ডিরেক্টরি
 
 - **320টি স্বতন্ত্র স্থান/প্রতিষ্ঠান/ঐতিহ্য রেকর্ড** — প্রতিটি নাম ও লিংক দিয়ে আবার খোঁজা যায়।
-- ৮ বিভাগভিত্তিক অনুসন্ধান; জেলা, স্থাননাম ও ধরন অনুযায়ী ফিল্টার; Leaflet/OpenStreetMap এবং Google Maps directions.
+- বিভাগ, জেলা, উপজেলা, থানা (যেখানে রেকর্ড আছে), ইউনিয়ন ও ক্যাটাগরি ফিল্টার; প্রশাসনিক তালিকা প্রথম ব্যবহারে lazy-load হয়।
+- Leaflet marker cache, clustered batch-loading ও loading-overlay fix সহ দ্রুততর ম্যাপ।
+- Historical Archive: ছবি/ভিডিও/অডিও/PDF/লিখিত স্মৃতি, তারিখ, আলোকচিত্রী, সংগ্রহকারী, আপলোডকারী, ইতিহাস-বিবরণ এবং ZIP/JSON export.
 - ৭২টি অতিরিক্ত রেকর্ড যুক্ত করে মোট 320টি স্থান/প্রতিষ্ঠান/ঐতিহ্য রেকর্ড: আবুরখীল, রাউজান, রামু/মহেশখালী, বান্দরবান, খাগড়াছড়ি/মহালছড়ি, কুয়াকাটা-পটুয়াখালীসহ বিভিন্ন অঞ্চলের বিহার, প্রত্নস্থান, পালি শিক্ষা ও শিশু-সেবা সংস্থা।
 - বৌদ্ধ ক্যানন, জাতক, ধম্মপদ, বুদ্ধবংশ, থেরগাথা/থেরীগাথা, বিমানবত্থু, পেতবত্থু, অট্ঠকথা, দীপবংশ/মহাবংশ, লোককথা ও আধুনিক ফ্যান্টাসি আলাদা করে পরিচয় করানো সাহিত্য বিভাগ।
 - ভ্রমণ-রিভিউ form; রিভিউ এই browser/device-এ save হয়, JSON backup/export করা যায়।
@@ -80,3 +82,10 @@ GitHub Pages static hosting। আলাদা authenticated backend ছাড�
 - “বিক্রমপুর রঘুরামপুর বৌদ্ধ বিহার” রামপাল ইউনিয়নের সরকারি পাতার সঙ্গে মিলিয়ে একই রেকর্ডে নাম ও সূত্র সংশোধন করা হয়েছে।
 - “বিহার ধাপ” ও “লতিকোট মুড়া” প্রত্নতত্ত্ব অধিদপ্তর/সরকারি সূত্রে উল্লেখ থাকায় যোগ করা হয়েছে। সুনির্দিষ্ট GPS গেট যাচাই না হওয়ায় পিন নেই।
 - রংপুর, নীলফামারী ও ময়মনসিংহের জন্য পৃথক স্থান যাচাই হওয়ার আগ পর্যন্ত কেবল বিভাগ/জেলাভিত্তিক গবেষণা-সূচি আছে; এগুলো কোনো নির্দিষ্ট বিহার নয়।
+
+
+## Historical Archive ও প্রশাসনিক ফিল্টার
+
+- আর্কাইভের খসড়া IndexedDB-তে শুধু এই browser/device-এ সংরক্ষিত হয়; ZIP export-এ metadata ও media থাকে। GitHub Pages নিজে visitor-এর ফাইল public server-এ আপলোড বা repository-তে commit করতে পারে না। প্রকাশের আগে ফাইল review করে commit করুন অথবা GitHub issue-তে জমা দিন।
+- বিভাগ/জেলা/উপজেলা/ইউনিয়নের select তালিকা `iqbalhasandev/bangladesh-geo-json`-এর bilingual ওপেন dataset থেকে first-use fetch করে। প্রশাসনিক lookup কোনো ঐতিহ্যস্থানের অবস্থান প্রমাণ করে না; রেকর্ডে সঠিক `upazila`, `thana`, `union` metadata না থাকলে ঐ স্তরে ফল মিলবে না। পৃথক পুলিশ-থানা তালিকা ও per-place locality এখনও যাচাই/সম্প্রসারণাধীন।
+- প্রশাসনিক dataset reference: https://github.com/iqbalhasandev/bangladesh-geo-json (MIT license; original source attribution retained here). Historical archive submissions need provenance, copyright/permission, and editorial verification.
