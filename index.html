@@ -76,7 +76,7 @@
           <p class="section-kicker">HERITAGE EXPLORER</p>
           <h2 id="explore-title">আপনার পরবর্তী গন্তব্য খুঁজুন</h2>
           <p class="section-lead">নাম, বিভাগ, জেলা, উপজেলা, থানা, ইউনিয়ন/পৌরসভা বা শ্রেণির ভিত্তিতে খুঁজুন। কোনো স্থান বেছে নিলে তার ইতিহাস, ছবি ও ভ্রমণ-লিংক দেখুন।</p>
-          <p class="research-note directory-scope-note"><strong>বর্তমান ডিরেক্টরি: 320টি রেকর্ড।</strong> এতে বিহার/প্যাগোডা, প্রত্নস্থল, পালি-শিক্ষা ও বৌদ্ধ প্রতিষ্ঠান, শিশু-সেবা এবং গবেষণাধীন লোকঐতিহ্য অন্তর্ভুক্ত। এটি এখনও চূড়ান্ত জাতীয় master list নয়; সরকারি জেলা-তালিকা ধরে গবেষণা চলমান। যেসব পিন আনুমানিক, বিস্তারিততে সতর্কতা দেখানো হয়।</p>
+          <p class="research-note directory-scope-note"><strong>বর্তমান ডিরেক্টরি: <span id="directoryTotalCount">৩২৪</span>টি রেকর্ড।</strong> এতে বিহার/প্যাগোডা, প্রত্নস্থল, পালি-শিক্ষা ও বৌদ্ধ প্রতিষ্ঠান, শিশু-সেবা এবং গবেষণাধীন লোকঐতিহ্য অন্তর্ভুক্ত। এটি এখনও চূড়ান্ত জাতীয় master list নয়; সরকারি জেলা-তালিকা ধরে গবেষণা চলমান। যেসব পিন আনুমানিক, বিস্তারিততে সতর্কতা দেখানো হয়।</p>
         </div>
         <div class="progress-pill" aria-live="polite"><span class="progress-wheel">☸</span><span><strong id="visitedCount">০</strong><small>টি স্থান দেখা হয়েছে</small></span></div>
       </div>
@@ -89,7 +89,7 @@
         <label class="filter-select"><span>থানা</span><select id="thanaFilter"><option value="">সব থানা</option></select></label>
         <label class="filter-select"><span>ইউনিয়ন / পৌরসভা</span><select id="unionFilter"><option value="">সব ইউনিয়ন / পৌরসভা</option></select></label>
         <label class="filter-select"><span>ধরন / শ্রেণি</span><select id="categoryFilter"><option value="all">সব ধরনের স্থান</option><option value="প্রত্নস্থল">প্রত্নস্থল ও মহাবিহার</option><option value="বিহার">বিহার ও তীর্থস্থান</option><option value="তীর্থস্থান">তীর্থস্থান / পবিত্র স্থান</option><option value="মঠ">মঠ ও ধর্মীয় কেন্দ্র</option><option value="ধ্যানকেন্দ্র">ভাবনাকেন্দ্র ও অরণ্যকুটির</option><option value="প্রতিষ্ঠান">বৌদ্ধ শিক্ষা ও প্রতিষ্ঠান</option><option value="শিক্ষাপ্রতিষ্ঠান">বৌদ্ধ শিক্ষা প্রতিষ্ঠান</option><option value="অনাথালয়/সেবাকেন্দ্র">অনাথালয় ও সমাজসেবা</option><option value="প্রবীণসেবা">বৃদ্ধাশ্রম / প্রবীণসেবা</option><option value="স্বাস্থ্যসেবা">হাসপাতাল / স্বাস্থ্যসেবা</option><option value="সাংস্কৃতিক প্রতিষ্ঠান">সাংস্কৃতিক প্রতিষ্ঠান</option><option value="প্রকাশনা/গবেষণা">প্রকাশনা ও গবেষণা</option><option value="কমিউনিটি স্থান">কমিউনিটি-যোগ করা স্থান</option><option value="লোকধর্ম/গবেষণা">লোকধর্ম / গবেষণাধীন ঐতিহ্য</option><option value="ঐতিহ্য/সম্প্রদায়">জীবন্ত সম্প্রদায় ও লোকঐতিহ্য</option><option value="শ্মশান">বৌদ্ধ শ্মশান</option><option value="যাচাইাধীন">অতিরিক্ত যাচাই প্রয়োজন</option></select></label>
-        <button type="button" class="button button-outline" id="clearFilters">ফিল্টার মুছুন</button><p class="admin-geo-status" id="adminGeoStatus" aria-live="polite">জেলা/উপজেলা/ইউনিয়নের রেফারেন্স তালিকা প্রয়োজনে আলাদাভাবে লোড হবে; স্থান রেকর্ডে না থাকলে সেই স্তর ফাঁকা থাকতে পারে।</p>
+        <button type="button" class="button button-outline" id="clearFilters">ফিল্টার মুছুন</button><p class="admin-geo-status" id="adminGeoStatus" aria-live="polite">জেলা/উপজেলা/ইউনিয়নের রেফারেন্স তালিকা প্রয়োজনে <a href="https://github.com/iqbalhasandev/bangladesh-geo-json" target="_blank" rel="noopener noreferrer">প্রশাসনিক ভূগোলের উৎস</a> থেকে লোড হবে। পৃথক পুলিশ-থানা তালিকা ও প্রতিটি ঐতিহ্যস্থানের উপজেলা/থানা/ইউনিয়ন সব রেকর্ডে যাচাই করা নেই—অনিশ্চিত অবস্থান অনুমান করে বসানো হবে না।</p>
       </div>
 
       <div class="explore-layout">
@@ -224,8 +224,8 @@
           <label>নথি / মিডিয়ার শিরোনাম <span class="required-mark">*</span><input id="archiveTitle" required maxlength="180" placeholder="যেমন: ১৯৮২ সালের বিহার উৎসবের ছবি"></label>
           <div class="archive-form-grid">
             <label>ধরন <span class="required-mark">*</span><select id="archiveResourceType" required><option value="ঐতিহাসিক ছবি">ঐতিহাসিক ছবি</option><option value="ছবি/আলোকচিত্র">ছবি / আলোকচিত্র</option><option value="ভিডিও">ভিডিও</option><option value="অডিও/সাক্ষাৎকার">অডিও / মৌখিক ইতিহাস</option><option value="PDF/দলিল">PDF / দলিল</option><option value="চিঠি/পাণ্ডুলিপি">চিঠি / পাণ্ডুলিপি</option><option value="লিখিত ইতিহাস">লিখিত ইতিহাস / টেক্সট</option><option value="মানচিত্র">পুরোনো মানচিত্র</option><option value="সংবাদ/প্রকাশনা">সংবাদ / প্রকাশনা</option><option value="বহিরাগত লিংক">বহিরাগত লিংক / শেয়ার</option><option value="অন্যান্য">অন্যান্য</option></select></label>
-            <label>নথি/ঘটনার তারিখ<input id="archiveEventDate" type="date"></label>
-            <label>ছবি/রেকর্ড ধারণের তারিখ<input id="archiveCaptureDate" type="date"></label>
+            <label>নথি/ঘটনার তারিখ<input id="archiveEventDate" type="text" maxlength="40" placeholder="যেমন: ১৯৮২ / 1982-05-12 / আনুমানিক ১৯৮০-এর দশক"></label>
+            <label>ছবি/রেকর্ড ধারণের তারিখ<input id="archiveCaptureDate" type="text" maxlength="40" placeholder="ছবি তোলার তারিখ বা আনুমানিক সময়"></label>
             <label>ছবি/ভিডিও/অডিও ধারণকারী<input id="archivePhotographer" maxlength="140" placeholder="ফটোগ্রাফার / রেকর্ডিস্ট"></label>
             <label>সংগ্রাহক / সংগ্রহের উৎস<input id="archiveCollector" maxlength="140" placeholder="ব্যক্তি, পরিবার, প্রতিষ্ঠান, সংগ্রহ"></label>
             <label>আপলোডকারীর নাম বা ছদ্মনাম<input id="archiveUploader" maxlength="100" placeholder="ঐচ্ছিক"></label>
