@@ -27,7 +27,7 @@
       return (u.protocol === 'http:' || u.protocol === 'https:' || u.protocol === 'blob:') ? u.href : '';
     } catch (e) { return ''; }
   };
-  var labelName = function (item) { return item && (item.bn_name || item.name_bn || item.bangla_name || item.name) || ''; };
+  var labelName = function (item) { return item && (item.bnName || item.bn_name || item.name_bn || item.bangla_name || item.name) || ''; };
   var adminTree = null;
   var publishedData = [];
   var publishedArchives = [];
@@ -92,6 +92,11 @@
   }
   function districtsForDivision(divisionName) {
     if (adminTree) {
+      if (!divisionName) {
+        return adminTree.reduce(function (all, divisionItem) {
+          return all.concat(Array.isArray(divisionItem.districts) ? divisionItem.districts : []);
+        }, []);
+      }
       var d = adminTree.find(function (item) { return recordDivisionMatches(labelName(item), divisionName); });
       return d && Array.isArray(d.districts) ? d.districts : [];
     }
@@ -133,26 +138,30 @@
   function fillLowerFilters() {
     var district = selectedDistrictObject();
     var upazilas = district && Array.isArray(district.upazilas) ? district.upazilas : [];
-    var upazilaItems = upazilas.map(function (item) { return { value: labelName(item), label: labelName(item) }; }).filter(function (item) { return item.label; });
+    var upazilaItems = upazilas.filter(function (item) { return item.type !== 'thana'; })
+      .map(function (item) { return { value: labelName(item), label: labelName(item) }; }).filter(function (item) { return item.label; });
     if (!upazilaItems.length) upazilaItems = fallbackAdminOptions('upazila', byId('districtFilter').value).map(function (v) { return { value: v, label: v }; });
     resetSelect(byId('upazilaFilter'), 'সব উপজেলা', upazilaItems);
 
+    var selectedUpazila = byId('upazilaFilter').value;
+    var up = upazilas.find(function (item) { return item.type !== 'thana' && recordDivisionMatches(labelName(item), selectedUpazila); });
     var thanaItems = [];
     if (district) {
-      var explicitThanas = district.thanas || district.police_stations || district.policeStations || [];
-      if (Array.isArray(explicitThanas)) thanaItems = explicitThanas.map(function (item) {
-        return { value: labelName(item), label: labelName(item) };
-      }).filter(function (item) { return item.label; });
+      var explicitThanas = district.thanas || district.police_stations || district.policeStations ||
+        (upazilas.filter(function (item) { return item.type === 'thana'; }));
+      if (Array.isArray(explicitThanas)) thanaItems = explicitThanas
+        .filter(function (item) { return !up || !item.parentUpazilaId || String(item.parentUpazilaId) === String(up.id); })
+        .map(function (item) { return { value: labelName(item), label: labelName(item) }; })
+        .filter(function (item) { return item.label; });
     }
     if (!thanaItems.length) thanaItems = fallbackAdminOptions('thana', byId('districtFilter').value).map(function (v) { return { value: v, label: v }; });
     resetSelect(byId('thanaFilter'), 'সব থানা', thanaItems);
 
-    var selectedUpazila = byId('upazilaFilter').value;
-    var up = upazilas.find(function (item) { return recordDivisionMatches(labelName(item), selectedUpazila); });
     var unions = [];
     if (up) {
-      (Array.isArray(up.unions) ? up.unions : []).forEach(function (item) {
-        unions.push({ value: labelName(item), label: labelName(item) });
+      (Array.isArray(up.unions) ? up.unions : Array.isArray(up.areas) ? up.areas : []).forEach(function (item) {
+        var n = labelName(item);
+        if (n) unions.push({ value: n, label: n });
       });
       (Array.isArray(up.pourashavas) ? up.pourashavas : []).forEach(function (item) {
         var n = labelName(item);
@@ -166,38 +175,131 @@
       var key = normalize(item.value);
       if (key && !seen.has(key)) { seen.add(key); unique.push(item); }
     });
-    resetSelect(byId('unionFilter'), 'সব ইউনিয়ন / পৌরসভা', unique);
+    resetSelect(byId('unionFilter'), 'সব ইউনিয়ন / পৌরসভা / এলাকা', unique);
   }
 
   function setInitialDistrictFallback() {
     fillAdminFilters();
   }
+  function parseCsv(text) {
+    var rows = [];
+    var row = [];
+    var field = '';
+    var quoted = false;
+    for (var i = 0; i < text.length; i++) {
+      var ch = text[i];
+      if (ch === '"') {
+        if (quoted && text[i + 1] === '"') { field += '"'; i++; }
+        else quoted = !quoted;
+      } else if (ch === ',' && !quoted) {
+        row.push(field); field = '';
+      } else if ((ch === '\\n' || ch === '\\r') && !quoted) {
+        if (ch === '\\r' && text[i + 1] === '\\n') i++;
+        row.push(field); field = '';
+        if (row.some(function (v) { return v !== ''; })) rows.push(row);
+        row = [];
+      } else field += ch;
+    }
+    if (field || row.length) { row.push(field); rows.push(row); }
+    if (!rows.length) return [];
+    var headers = rows.shift();
+    return rows.map(function (values) {
+      var item = {};
+      headers.forEach(function (key, index) { item[key] = values[index] || ''; });
+      return item;
+    });
+  }
+  var geographyBase = 'https://raw.githubusercontent.com/HedaetShahriar/bangladesh-locations-dataset/main/data/';
+  function fetchWithTimeout(url, ms) {
+    var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var timeout = controller ? setTimeout(function () { controller.abort(); }, ms || 9000) : null;
+    return fetch(url, { mode: 'cors', credentials: 'omit', cache: 'force-cache', signal: controller ? controller.signal : undefined })
+      .then(function (response) { if (!response.ok) throw new Error('প্রশাসনিক রেফারেন্স লোড হয়নি'); return response; })
+      .finally(function () { if (timeout) clearTimeout(timeout); });
+  }
   function loadAdminTree() {
     if (geoLoading || adminTree) return Promise.resolve(adminTree);
     geoLoading = true;
-    var url = 'https://iqbalhasandev.github.io/bangladesh-geo-json/bangladesh-geo.json';
-    var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
-    var timeout = controller ? setTimeout(function () { controller.abort(); }, 9000) : null;
-    return fetch(url, { mode: 'cors', credentials: 'omit', cache: 'force-cache', signal: controller ? controller.signal : undefined })
-      .then(function (response) {
-        if (!response.ok) throw new Error('প্রশাসনিক তালিকা লোড হয়নি');
-        return response.json();
-      })
-      .then(function (tree) {
-        if (!Array.isArray(tree)) throw new Error('প্রশাসনিক তালিকার কাঠামো সঠিক নয়');
-        adminTree = tree;
-        fillAdminFilters();
-        if (byId('adminGeoStatus')) byId('adminGeoStatus').textContent = 'বিভাগ, জেলা, উপজেলা ও ইউনিয়নের রেফারেন্স তালিকা লোড হয়েছে।';
+    return Promise.all([
+      fetchWithTimeout(geographyBase + 'exports/divisions.csv', 9000).then(function (r) { return r.text(); }),
+      fetchWithTimeout(geographyBase + 'exports/districts.csv', 9000).then(function (r) { return r.text(); })
+    ]).then(function (files) {
+      var divisionsData = parseCsv(files[0]);
+      var districtsData = parseCsv(files[1]);
+      var divisionsById = new Map();
+      divisionsData.forEach(function (item) {
+        if (item.is_active !== '0') divisionsById.set(String(item.id), {
+          id: String(item.id), name: item.bn_name || item.name, bn_name: item.bn_name || item.name,
+          enName: item.name, slug: item.slug, districts: []
+        });
+      });
+      districtsData.forEach(function (item) {
+        if (item.is_active === '0') return;
+        var division = divisionsById.get(String(item.division_id));
+        if (!division) return;
+        division.districts.push({
+          id: String(item.id), name: item.bn_name || item.name, bn_name: item.bn_name || item.name,
+          enName: item.name, slug: item.slug, upazilas: [], thanas: [], geoLoaded: false, geoLoading: false
+        });
+      });
+      adminTree = Array.from(divisionsById.values());
+      fillAdminFilters();
+      if (byId('adminGeoStatus')) byId('adminGeoStatus').textContent =
+        '৮ বিভাগ ও ৬৪ জেলার রেফারেন্স লোড হয়েছে। উপজেলা/শহর-থানা/ইউনিয়ন-এলাকার তালিকা নির্বাচিত জেলা অনুযায়ী আলাদাভাবে লোড হবে। উৎস: Bangladesh Locations Dataset (২০২৬ সংস্করণ)।';
+      scheduleDirectoryRender();
+      return adminTree;
+    }).catch(function () {
+      if (byId('adminGeoStatus')) byId('adminGeoStatus').textContent =
+        'প্রশাসনিক রেফারেন্স এখন লোড হয়নি; বর্তমান রেকর্ডের অবস্থান-তথ্য দিয়ে অনুসন্ধান চালু আছে। ইন্টারনেট সংযোগ পরীক্ষা করে আবার জেলা নির্বাচন করুন।';
+      return null;
+    }).finally(function () {
+      geoLoading = false;
+    });
+  }
+  function loadDistrictLocations() {
+    var district = selectedDistrictObject();
+    if (!district || district.geoLoaded || district.geoLoading) return Promise.resolve(district);
+    if (!adminTree) return loadAdminTree().then(function () { return loadDistrictLocations(); });
+    if (!district.slug) return Promise.resolve(district);
+    district.geoLoading = true;
+    if (byId('adminGeoStatus')) byId('adminGeoStatus').textContent =
+      district.name + ' জেলার উপজেলা/থানা/ইউনিয়ন-এলাকার তালিকা লোড হচ্ছে…';
+    return fetchWithTimeout(geographyBase + 'districts/' + encodeURIComponent(district.slug) + '.json', 10000)
+      .then(function (response) { return response.json(); })
+      .then(function (payload) {
+        var divisionsData = payload && Array.isArray(payload.divisions) ? payload.divisions : [];
+        var sourceDistrict = null;
+        divisionsData.forEach(function (div) {
+          (div.districts || []).forEach(function (d) {
+            if (String(d.id) === String(district.id) || normalize(labelName(d)) === normalize(district.name)) sourceDistrict = d;
+          });
+        });
+        if (!sourceDistrict) throw new Error('নির্বাচিত জেলার রেফারেন্স পাওয়া যায়নি');
+        var all = Array.isArray(sourceDistrict.upazilas) ? sourceDistrict.upazilas : [];
+        district.upazilas = all.filter(function (item) { return item.type !== 'thana'; }).map(function (item) {
+          return Object.assign({}, item, {
+            name: item.bnName || item.name, bn_name: item.bnName || item.name,
+            unions: (item.areas || []).map(function (area) {
+              return Object.assign({}, area, { name: area.bnName || area.name, bn_name: area.bnName || area.name });
+            })
+          });
+        });
+        district.thanas = all.filter(function (item) { return item.type === 'thana'; }).map(function (item) {
+          return Object.assign({}, item, { name: item.bnName || item.name, bn_name: item.bnName || item.name });
+        });
+        district.geoLoaded = true;
+        fillLowerFilters();
+        if (byId('adminGeoStatus')) byId('adminGeoStatus').textContent =
+          district.name + ' জেলার ' + district.upazilas.length + 'টি উপজেলা এবং ' + district.thanas.length +
+          'টি শহর-থানার রেফারেন্স লোড হয়েছে। ইউনিয়ন/এলাকা নির্বাচিত উপজেলা অনুযায়ী দেখানো হবে; উৎস-ডেটাসেটে কিছু এলাকা ও ইউনিয়ন একত্রে তালিকাভুক্ত।';
         scheduleDirectoryRender();
-        return tree;
-      })
-      .catch(function () {
-        if (byId('adminGeoStatus')) byId('adminGeoStatus').textContent = 'পূর্ণ প্রশাসনিক তালিকা এখন পাওয়া যাচ্ছে না; বর্তমান রেকর্ডের জেলা ও অবস্থান-তথ্য দিয়ে অনুসন্ধান চালু আছে।';
-        return null;
-      })
-      .finally(function () {
-        if (timeout) clearTimeout(timeout);
-        geoLoading = false;
+        return district;
+      }).catch(function () {
+        if (byId('adminGeoStatus')) byId('adminGeoStatus').textContent =
+          district.name + ' জেলার বিস্তারিত প্রশাসনিক তালিকা এখন পাওয়া যায়নি। জেলা/স্থান অনুসন্ধান চালু আছে; পরে আবার চেষ্টা করতে জেলা নির্বাচন বদলে ফিরুন।';
+        return district;
+      }).finally(function () {
+        district.geoLoading = false;
       });
   }
 
