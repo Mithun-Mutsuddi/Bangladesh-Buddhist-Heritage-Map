@@ -47,6 +47,19 @@ GitHub Pages static hosting। আলাদা authenticated backend ছাড�
 - [Pali Text Society — Canon](https://palitextsociety.org/the-books-of-the-pali-canon/) · [Commentaries](https://palitextsociety.org/the-books-of-the-pali-canon-the-commentaries/)
 - [SuttaCentral](https://suttacentral.net/) · [Internet Archive](https://archive.org/search?query=Bangladesh+Buddhist+heritage) · [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Buddhist_monasteries_in_Bangladesh)
 
+
+## ঐতিহাসিক আর্কাইভ, প্রশাসনিক ফিল্টার ও কভারেজ অডিট
+
+কাজের শাখা `feature/heritage-archive-admin-filters-map`-এ যুক্ত হয়েছে:
+- বিভাগ → জেলা → উপজেলা → ইউনিয়ন/পৌরসভা অনুসারে cascading filter; থানা-ফিল্টার রাখা হয়েছে, তবে আলাদা জাতীয় পুলিশ-থানা dataset সম্পূর্ণ না থাকায় অনিশ্চিত থানা বানিয়ে দেখানো হয় না।
+- পুরোনো ছবি, নথির তারিখ, ছবি ধারণের তারিখ/আনুমানিক সময়, ফটোগ্রাফার/রেকর্ডিস্ট, সংগ্রাহক, আপলোডকারী, প্রতিষ্ঠান/এলাকার পরিচয়, স্থানীয়তা, ইতিহাস, উৎস/শেয়ার লিংক, অনুমতি/লাইসেন্স এবং ট্যাগসহ historical archive।
+- ছবি, ভিডিও, অডিও, PDF ও টেক্সটের জন্য ব্রাউজার-ভিত্তিক preview; IndexedDB-তে local draft; প্রকাশনার ZIP-এ content.json ও assets/archives/ প্যাকেজ করার ব্যবস্থা।
+- ম্যাপের স্থায়ী loading overlay সরানো, content.json fetch ম্যাপের প্রথম render-এ বাধা না দেওয়া, non-blocking tile status এবং cluster-এ chunked insertion।
+
+**সতর্কতা:** ৩২০টি প্রাথমিক রেকর্ড অক্ষত রেখে চারটি source-linked education/welfare/cultural entry যোগ করা হয়েছে; এই শাখায় মোট ৩২৪টি রেকর্ড। এর অর্থ সম্পূর্ণ জাতীয় তালিকা নয়। অডিটে ৬২টি record-এর GPS নেই এবং স্থানাঙ্ক থাকা ২৬২টির মধ্যে ২৫৪টি approximate হিসাবে চিহ্নিত। পৃথকভাবে যাচাই না করা বৃদ্ধাশ্রম বা প্রবীণ নিবাসের নাম/ঠিকানা কল্পনা করে যোগ করা হয়নি। জেলা-ভিত্তিক reconciliation, GPS verification, থানা তালিকা ও শিক্ষা/সেবা প্রতিষ্ঠানের আরও গবেষণার জন্য [RESEARCH-GAPS.md](RESEARCH-GAPS.md) দেখুন।
+
+নতুন আর্কাইভ রেকর্ড প্রথমে শুধু বর্তমান ব্রাউজারে private draft হয়। সবার জন্য প্রকাশ করতে প্রকাশনার ZIP তৈরি করুন, তার content.json এবং assets/archives/ একই path-এ repository-তে commit করুন এবং কপিরাইট/প্রাইভেসি যাচাই করুন।
+
 ## জরুরি তথ্য-সতর্কতা
 
 এই 320টি রেকর্ড **পূর্ণাঙ্গ সরকারি master census নয়**। সরকারি ও স্থানীয় তালিকার দৃশ্যমান নামগুলো থেকে সংগ্রহ চলছে; কিছু জেলা/ইউনিয়নের তালিকা অনেক বড়, কিছু নামের বানান/বর্তমান কার্যক্রম পরিবর্তিত হতে পারে। তাই এটিকে কাজ-চলমান directory হিসেবে বিবেচনা করুন। “সব কিছু বাদ না পড়া” নিশ্চিত করতে প্রতিটি জেলার বিহার/প্যাগোডা তালিকা, স্থানীয় প্রতিষ্ঠান এবং মাঠপর্যায়ের যাচাই ধারাবাহিকভাবে করতে হবে।
