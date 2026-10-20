@@ -6122,7 +6122,7 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
   {
     id: "dharmarajika-high-school-college",
     name: "ধর্মরাজিক উচ্চ বিদ্যালয় ও কলেজ",
-    district: "ঢাকা", division: "ঢাকা", upazila: "ঢাকা দক্ষিণ সিটি কর্পোরেশন", thana: "সবুজবাগ",
+    district: "ঢাকা", division: "ঢাকা", thana: "সবুজবাগ",
     kind: "প্রতিষ্ঠান", category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
     coords: [23.72890, 90.43250], imageKey: null, pinApproximate: true,
     verification: "official institutional website",
@@ -6153,7 +6153,7 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
   {
     id: "banophool-adibashi-green-heart-college",
     name: "বনফুল আদিবাসী গ্রীন হার্ট কলেজ",
-    district: "ঢাকা", division: "ঢাকা", upazila: "ঢাকা উত্তর সিটি কর্পোরেশন", thana: "পল্লবী",
+    district: "ঢাকা", division: "ঢাকা", 
     kind: "প্রতিষ্ঠান", category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
     coords: null, imageKey: null, pinApproximate: false,
     verification: "institutional website",
