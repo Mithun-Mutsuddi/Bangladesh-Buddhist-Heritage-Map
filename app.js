@@ -6118,7 +6118,53 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
   "sourceLabel": "স্থানীয়/সরকারি তালিকা সংগ্রহাধীন",
   "dhamma": "যাচাই হওয়ার আগে এটিকে কোনো নির্দিষ্ট ধর্মীয় স্থান হিসেবে প্রচার করবেন না।",
   "quoteRef": "https://brwt.gov.bd/pages/static-pages/6922dbb0933eb65569e0bdb6",
-  "trip": "Google Maps-এ “Mymensingh Buddhist temple” খুঁজুন এবং স্থানীয়/সরকারি সূত্রে নিশ্চিত ঠিকানা জেনে নিন।"}
+  "trip": "Google Maps-এ “Mymensingh Buddhist temple” খুঁজুন এবং স্থানীয়/সরকারি সূত্রে নিশ্চিত ঠিকানা জেনে নিন।"},
+  {
+    id: "dharmarajika-high-school-college",
+    name: "ধর্মরাজিক উচ্চ বিদ্যালয় ও কলেজ",
+    district: "ঢাকা", division: "ঢাকা", upazila: "ঢাকা দক্ষিণ সিটি কর্পোরেশন", thana: "সবুজবাগ",
+    kind: "প্রতিষ্ঠান", category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
+    coords: [23.72890, 90.43250], imageKey: null, pinApproximate: true,
+    verification: "official institutional website",
+    summary: "ধর্মরাজিকা বৌদ্ধ মহাবিহার প্রাঙ্গণ, অতীস দীপঙ্কর সড়ক, সবুজবাগ/বাসাবো, ঢাকায় অবস্থিত বিদ্যালয় ও কলেজ। প্রতিষ্ঠানের নিজস্ব ওয়েবসাইটে ১৯৭২ সালে যাত্রা শুরুর উল্লেখ আছে।",
+    history: "ধর্মরাজিক উচ্চ বিদ্যালয় ও কলেজের নিজস্ব ওয়েবসাইট অনুযায়ী, প্রতিষ্ঠানটি ১৯৭২ সালে প্রতিষ্ঠিত। ঠিকানা: ধর্মরাজিক বৌদ্ধ মহাবিহার, অতীস দীপঙ্কর সড়ক, সবুজবাগ, বাসাবো, ঢাকা-১২১৪। এই পিনটি একই কমপ্লেক্সের আনুমানিক অবস্থান; শিক্ষাপ্রতিষ্ঠানের আলাদা প্রবেশদ্বারের GPS নয়।",
+    source: "https://dharmarajikahs.edu.bd/",
+    sourceLabel: "ধর্মরাজিক উচ্চ বিদ্যালয় ও কলেজ · নিজস্ব ওয়েবসাইট",
+    dhamma: "শিক্ষার্থী, শিক্ষক ও ধর্মীয় কমপ্লেক্সের ব্যক্তিগত পরিসরের প্রতি শ্রদ্ধাশীল থাকুন; ছবি তোলার আগে অনুমতি নিন।",
+    quoteRef: "https://dharmarajikahs.edu.bd/",
+    trip: "যাওয়ার আগে প্রতিষ্ঠানের ওয়েবসাইটে বর্তমান ভর্তি, যোগাযোগ ও প্রবেশপথ যাচাই করুন।"
+  },
+  {
+    id: "dharmarajika-orphanage",
+    name: "ধর্মরাজিক অনাথালয়",
+    district: "ঢাকা", division: "ঢাকা", upazila: "ঢাকা দক্ষিণ সিটি কর্পোরেশন", thana: "সবুজবাগ",
+    kind: "অনাথালয়/সেবাকেন্দ্র", category: "বৌদ্ধ অনাথালয় ও সমাজসেবা",
+    coords: [23.72890, 90.43250], imageKey: null, pinApproximate: true,
+    verification: "institutional history reference; current service status needs confirmation",
+    verificationPending: true,
+    summary: "ধর্মরাজিক প্রতিষ্ঠানের নিজস্ব ওয়েবসাইটে স্বাধীনতার পর অনাথ শিশুদের আশ্রয়, শিক্ষা ও চিকিৎসা সহায়তার ঐতিহাসিক কর্মসূচির বর্ণনা রয়েছে। বর্তমান আবাসিক কার্যক্রম আগে নিশ্চিত করুন।",
+    history: "ধর্মরাজিক উচ্চ বিদ্যালয় ও কলেজের নিজস্ব ইতিহাসে স্বাধীনতাত্তোর সময় যুদ্ধাহত, শহীদ ও বিধ্বস্ত পরিবারের শিশুদের আশ্রয় দেওয়ার জন্য ধর্মরাজিক অনাথালয় প্রতিষ্ঠার বিবরণ রয়েছে। এই আলাদা রেকর্ডটি ঐতিহাসিক সেবা-কার্যক্রম খুঁজে পেতে; বর্তমান বাসিন্দা, ভর্তি, সক্ষমতা বা পরিচালনার অবস্থা সম্পর্কে কোনো দাবি নয়। সেবাপ্রাপ্ত শিশুর ব্যক্তিগত তথ্য প্রকাশ করবেন না।",
+    source: "https://dharmarajikahs.edu.bd/",
+    sourceLabel: "ধর্মরাজিক উচ্চ বিদ্যালয় ও কলেজ · প্রতিষ্ঠানের ইতিহাস",
+    dhamma: "শিশুদের নিরাপত্তা ও গোপনীয়তার জন্য ছবি, নাম, নথি বা ব্যক্তিগত তথ্য প্রকাশের আগে লিখিত অনুমতি ও নৈতিক পর্যালোচনা জরুরি।",
+    quoteRef: "https://dharmarajikahs.edu.bd/",
+    trip: "অনাথালয়ের বর্তমান কার্যক্রম বা সেবা নিশ্চিত করতে প্রতিষ্ঠানের অফিসিয়াল যোগাযোগের মাধ্যমে আগে জেনে নিন।"
+  },
+  {
+    id: "banophool-adibashi-green-heart-college",
+    name: "বনফুল আদিবাসী গ্রীন হার্ট কলেজ",
+    district: "ঢাকা", division: "ঢাকা", upazila: "ঢাকা উত্তর সিটি কর্পোরেশন", thana: "পল্লবী",
+    kind: "প্রতিষ্ঠান", category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
+    coords: null, imageKey: null, pinApproximate: false,
+    verification: "institutional website",
+    summary: "মিরপুর-১৩, ঢাকার আদিবাসী শিক্ষা প্রতিষ্ঠান; এখানে সুনির্দিষ্ট যাচাইকৃত GPS প্রবেশদ্বার পিন যোগ করা হয়নি।",
+    history: "বনফুল আদিবাসী গ্রীন হার্ট কলেজের নিজস্ব ওয়েবসাইটে প্রতিষ্ঠানের পরিচিতি ও যোগাযোগের তথ্য রয়েছে। স্থানাঙ্কের নির্ভরযোগ্যতা নিশ্চিত না হওয়ায় মানচিত্রে পিন দেখানো হয় না; নাম ধরে Google Maps-এ অবস্থান অনুসন্ধান করুন।",
+    source: "https://baghc.edu.bd/",
+    sourceLabel: "বনফুল আদিবাসী গ্রীন হার্ট কলেজ · নিজস্ব ওয়েবসাইট",
+    dhamma: "প্রতিষ্ঠানের ধর্মীয়/সাংস্কৃতিক পরিচয় সম্পর্কে নিজস্ব বর্ণনা ও সংশ্লিষ্ট সম্প্রদায়ের বক্তব্য যাচাই করে উপস্থাপন করুন।",
+    quoteRef: "https://baghc.edu.bd/",
+    trip: "Google Maps-এ প্রতিষ্ঠানের নাম ও মিরপুর-১৩ দিয়ে খুঁজে বর্তমান ঠিকানা, প্রবেশপথ ও যোগাযোগ যাচাই করুন।"
+  }
 ];
 
 window.destinations = destinations;
@@ -6134,6 +6180,8 @@ let sortUnvisitedFirst = true;
 const visitedIds = new Set(readStorage('buddhistHeritageVisited', []));
 const itineraryIds = new Set(readStorage('buddhistHeritageItinerary', []));
 let publishedReviewRecords = [];
+const placePageSize = 48;
+let visiblePlaceLimit = placePageSize;
 
 function readStorage(key, fallback) {
   try {
@@ -6175,7 +6223,8 @@ function imageMarkup(place) {
   if (!media) return `<div class="place-art" aria-hidden="true"><span>${place.kind === 'প্রত্নস্থল' ? '▥' : place.kind === 'মঠ' ? '🪷' : '☸'}</span></div>`;
   return `<img src="${media.image}" alt="${escapeHtml(place.name)}-এর ছবি" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.style.display='none';this.parentElement.classList.add('image-failed');const art=document.createElement('div');art.className='place-art';art.setAttribute('aria-hidden','true');art.innerHTML='<span>☸</span>';this.parentElement.prepend(art)">`;
 }
-function renderPlaces() {
+function renderPlaces(keepVisibleLimit = false) {
+  if (!keepVisibleLimit) visiblePlaceLimit = placePageSize;
   const searchText = byId('placeSearch').value.trim().toLocaleLowerCase('bn');
   const division = byId('divisionFilter').value;
   const category = byId('categoryFilter').value;
@@ -6191,7 +6240,7 @@ function renderPlaces() {
     const matchesUpazila = upazila === 'all' || place.upazila === upazila;
     const matchesThana = thana === 'all' || place.thana === thana;
     const matchesUnion = unionName === 'all' || place.union === unionName;
-    const matchesCategory = category === 'all' || place.kind === category;
+    const matchesCategory = category === 'all' || place.kind === category || place.category === category;
     return matchesSearch && matchesDivision && matchesDistrict && matchesUpazila && matchesThana && matchesUnion && matchesCategory;
   });
   if (sortUnvisitedFirst) filtered.sort((a, b) => Number(visitedIds.has(a.id)) - Number(visitedIds.has(b.id)) || a.name.localeCompare(b.name, 'bn'));
@@ -6199,7 +6248,9 @@ function renderPlaces() {
 
   byId('resultsCount').textContent = `${bnDigits(filtered.length)}টি স্থান পাওয়া গেছে`;
   byId('emptyState').hidden = filtered.length > 0;
-  byId('placeGrid').innerHTML = filtered.map(place => {
+  const recordCount = byId('directoryRecordCount');
+  if (recordCount) recordCount.textContent = bnDigits(destinations.length);
+  byId('placeGrid').innerHTML = filtered.slice(0, visiblePlaceLimit).map(place => {
     const media = mediaFor(place);
     const visited = visitedIds.has(place.id);
     return `<article class="place-card ${activePlaceId === place.id ? 'is-selected' : ''}" data-place-card="${place.id}">
@@ -6208,6 +6259,14 @@ function renderPlaces() {
         <div class="place-card-actions"><button type="button" class="card-action primary" data-action="details" data-id="${place.id}">বিস্তারিত দেখুন</button><button type="button" class="card-action" data-action="visited" data-id="${place.id}">${visited ? '✓ দেখা হয়েছে' : '□ দেখা হয়েছে'}</button><button type="button" class="card-action" data-action="itinerary" data-id="${place.id}">${itineraryIds.has(place.id) ? '✓ তালিকায় আছে' : '+ তালিকায় যোগ'}</button></div>
       </div></article>`;
   }).join('');
+  const shownCount = Math.min(filtered.length, visiblePlaceLimit);
+  const shownCountEl = byId('shownCount');
+  if (shownCountEl) shownCountEl.textContent = `${bnDigits(shownCount)} / ${bnDigits(filtered.length)}টি স্থান দেখানো হচ্ছে`;
+  const moreButton = byId('loadMorePlaces');
+  if (moreButton) {
+    moreButton.hidden = shownCount >= filtered.length;
+    moreButton.textContent = `আরও ${bnDigits(Math.min(placePageSize, filtered.length - shownCount))}টি স্থান দেখুন`;
+  }
   updateMarkers(filtered);
   updateProgress();
 }
@@ -6456,7 +6515,12 @@ byId('clearFilters').addEventListener('click', () => {
     const control = byId(id);
     if (control) control.value = 'all';
   });
+  byId('divisionFilter')?.dispatchEvent(new Event('change', { bubbles: true }));
   renderPlaces();
+});
+byId('loadMorePlaces')?.addEventListener('click', () => {
+  visiblePlaceLimit += placePageSize;
+  renderPlaces(true);
 });
 byId('sortVisited').addEventListener('click', () => { sortUnvisitedFirst = !sortUnvisitedFirst; byId('sortVisited').textContent = sortUnvisitedFirst ? 'দেখা হয়নি আগে ↑' : 'নাম অনুসারে A–Z'; renderPlaces(); });
 byId('locateMe').addEventListener('click', () => requestLocation());
@@ -6647,11 +6711,14 @@ async function loadPublishedCommunityPlaces() {
 }
 
 byId('currentYear').textContent = new Date().getFullYear();
-(async function startApp() {
-  await loadPublishedCommunityPlaces();
+/* Start the map immediately; an optional community content fetch must never block it. */
+renderItinerary();
+renderReviews();
+initMap();
+if (activePlaceId) renderPlaceDetail(selectedPlace());
+loadPublishedCommunityPlaces().then(() => {
   renderPlaces();
   renderItinerary();
   renderReviews();
-  initMap();
   if (activePlaceId) renderPlaceDetail(selectedPlace());
-})();
+});
