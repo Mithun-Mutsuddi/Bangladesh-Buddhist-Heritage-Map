@@ -575,3 +575,20 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .archive-credit-list > div { grid-template-columns: 1fr; gap: 2px; }
   .archive-pdf-wrap iframe { height: 340px; }
 }
+
+.map-tiles-status {
+  position: absolute;
+  z-index: 700;
+  top: 8px;
+  right: 8px;
+  max-width: min(320px, calc(100% - 16px));
+  padding: 7px 10px;
+  border: 1px solid rgba(120, 100, 65, .22);
+  border-radius: 8px;
+  background: rgba(255, 253, 247, .94);
+  color: #65513a;
+  box-shadow: 0 3px 10px rgba(0,0,0,.08);
+  pointer-events: none;
+  font-size: 10px;
+  line-height: 1.5;
+}
