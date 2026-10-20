@@ -38,8 +38,23 @@ async function loadGeo() {
 document.addEventListener('DOMContentLoaded',()=>{
  setTimeout(()=>loadGeo().catch(()=>{}),900);
  $('divisionFilter')?.addEventListener('change',()=>{if(tree){refreshAll(false);runSearch();}});
- $('districtFilter')?.addEventListener('change',()=>{if(tree){refreshAll(false);runSearch();}});
- $('upazilaFilter')?.addEventListener('change',()=>{if(tree){refreshAll(true);runSearch();}});
+ $('districtFilter')?.addEventListener('change',()=>{
+  if(!tree)return;
+  refill($('upazilaFilter'),districts().flatMap(d=>d.upazilas||[]).map(bnName),'সব উপজেলা',false);
+  refill($('unionFilter'),upazilas().flatMap(u=>[...(u.unions||[]),...(u.pourashavas||[])].map(bnName)),'সব ইউনিয়ন / পৌরসভা',false);
+  const div=$('divisionFilter')?.value||'all', dist=$('districtFilter')?.value||'all';
+  const records=Array.isArray(window.destinations)?window.destinations:[];
+  refill($('thanaFilter'),records.filter(p=>(div==='all'||p.division===div)&&(dist==='all'||p.district===dist)).map(p=>p.thana),'সব থানা (রেকর্ডভিত্তিক)',false);
+  runSearch();
+ });
+ $('upazilaFilter')?.addEventListener('change',()=>{
+  if(!tree)return;
+  refill($('unionFilter'),upazilas().flatMap(u=>[...(u.unions||[]),...(u.pourashavas||[])].map(bnName)),'সব ইউনিয়ন / পৌরসভা',false);
+  const div=$('divisionFilter')?.value||'all', dist=$('districtFilter')?.value||'all', up=$('upazilaFilter')?.value||'all';
+  const records=Array.isArray(window.destinations)?window.destinations:[];
+  refill($('thanaFilter'),records.filter(p=>(div==='all'||p.division===div)&&(dist==='all'||p.district===dist)&&(up==='all'||p.upazila===up)).map(p=>p.thana),'সব থানা (রেকর্ডভিত্তিক)',false);
+  runSearch();
+ });
  $('thanaFilter')?.addEventListener('change',runSearch);
  $('unionFilter')?.addEventListener('change',runSearch);
 });
