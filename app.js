@@ -1033,8 +1033,8 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
     name: "দীপঙ্কর পালি কলেজ",
     district: "চট্টগ্রাম",
     division: "চট্টগ্রাম",
-    kind: "মঠ",
-    category: "মঠ ও ধর্মীয় কেন্দ্র",
+    kind: "শিক্ষাপ্রতিষ্ঠান",
+    category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
     coords: [
       22.36,
       91.83
@@ -1053,8 +1053,8 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
     name: "ধর্মবংশ (ডি.বি.) ইনস্টিটিউশন",
     district: "চট্টগ্রাম",
     division: "চট্টগ্রাম",
-    kind: "মঠ",
-    category: "মঠ ও ধর্মীয় কেন্দ্র",
+    kind: "শিক্ষাপ্রতিষ্ঠান",
+    category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
     coords: [
       22.36,
       91.83
@@ -1073,8 +1073,8 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
     name: "চিন্তামণি লাইব্রেরি ও পাঠকক্ষ",
     district: "চট্টগ্রাম",
     division: "চট্টগ্রাম",
-    kind: "মঠ",
-    category: "মঠ ও ধর্মীয় কেন্দ্র",
+    kind: "প্রতিষ্ঠান",
+    category: "প্রকাশনা/গবেষণা",
     coords: [
       22.36,
       91.83
@@ -1093,8 +1093,8 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
     name: "বাংলাদেশ সংস্কৃত ও পালি শিক্ষা বোর্ড",
     district: "ঢাকা",
     division: "ঢাকা",
-    kind: "মঠ",
-    category: "মঠ ও ধর্মীয় কেন্দ্র",
+    kind: "শিক্ষাপ্রতিষ্ঠান",
+    category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
     coords: [
       23.73,
       90.43
@@ -1113,8 +1113,8 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
     name: "ওয়ার্ল্ড বুদ্ধিস্ট অ্যাসোসিয়েশন ইন বাংলাদেশ",
     district: "ঢাকা",
     division: "ঢাকা",
-    kind: "মঠ",
-    category: "মঠ ও ধর্মীয় কেন্দ্র",
+    kind: "প্রতিষ্ঠান",
+    category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
     coords: [
       23.73,
       90.41
@@ -1653,7 +1653,7 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
     name: "একতা পালিটোল বৌদ্ধ বিহার",
     district: "খাগড়াছড়ি",
     division: "চট্টগ্রাম",
-    kind: "প্রতিষ্ঠান",
+    kind: "শিক্ষাপ্রতিষ্ঠান",
     category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
     coords: [
       23.12,
@@ -6124,8 +6124,8 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
     name: 'ধর্মরাজিকা অনাথালয়',
     district: 'ঢাকা',
     division: 'ঢাকা',
-    kind: 'অনাথালয়/সেবাকেন্দ্র',
-    category: 'বৌদ্ধ অনাথালয় ও সমাজসেবা',
+    kind: "শিক্ষাপ্রতিষ্ঠান",
+    category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
     coords: null,
     imageKey: null,
     verificationPending: false,
@@ -6194,6 +6194,25 @@ const destinations = [  {id: 'somapura', name: 'পাহাড়পুর স�
     dhamma: 'সাংস্কৃতিক নথি ও পরিবেশনার কপিরাইট/অনুমতি মেনে চলুন।',
     quoteRef: 'https://www.dharmarajikatrustfoundation.org/bbkps/abcp.html',
     trip: 'ধর্মরাজিকা বৌদ্ধ মহাবিহার কমপ্লেক্সের সঙ্গে যোগাযোগ করে একাডেমির বর্তমান কার্যক্রম ও সুনির্দিষ্ট অবস্থান নিশ্চিত করুন।'
+  },
+  {
+    id: "dhaka-university-pali-buddhist-studies",
+    name: "ঢাকা বিশ্ববিদ্যালয় · পালি ও বৌদ্ধ অধ্যয়ন বিভাগ",
+    district: "ঢাকা",
+    division: "ঢাকা",
+    kind: "শিক্ষাপ্রতিষ্ঠান",
+    category: "বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা",
+    coords: null,
+    imageKey: null,
+    verificationPending: false,
+    verification: "ঢাকা বিশ্ববিদ্যালয়ের অফিসিয়াল বিভাগ ও প্রোগ্রাম পৃষ্ঠা",
+    summary: "ঢাকা বিশ্ববিদ্যালয়ের কলা অনুষদের পালি ও বৌদ্ধ অধ্যয়ন বিভাগে BA Honours, MA ও M.Phil. একাডেমিক প্রোগ্রামের তথ্য প্রকাশ করা হয়েছে।",
+    history: "বিশ্ববিদ্যালয়ের নিজস্ব বিভাগের ওয়েবসাইটে পালি ও বৌদ্ধ অধ্যয়নের প্রোগ্রাম, পাঠ্যক্রম ও বিভাগীয় পরিচিতি রয়েছে। বর্তমান ভর্তি, কোর্স, অফিসের যোগাযোগ এবং বিভাগীয় কক্ষের অবস্থান বিশ্ববিদ্যালয়ের অফিসিয়াল পোর্টালে যাচাই করুন। বিভাগীয় অবস্থানের সুনির্দিষ্ট GPS নিশ্চিত না হওয়ায় এই রেকর্ডে আলাদা ম্যাপ পিন যোগ করা হয়নি।",
+    source: "https://du.ac.bd/body/pbs",
+    sourceLabel: "ঢাকা বিশ্ববিদ্যালয় · পালি ও বৌদ্ধ অধ্যয়ন বিভাগ",
+    dhamma: "শিক্ষার্থী ও শিক্ষকদের ব্যক্তিগত তথ্য প্রকাশ করবেন না; একাডেমিক তথ্যের জন্য অফিসিয়াল বিশ্ববিদ্যালয় পৃষ্ঠা ব্যবহার করুন।",
+    quoteRef: "https://du.ac.bd/undergrad/PBS",
+    trip: "ঢাকা বিশ্ববিদ্যালয়ের অফিসিয়াল ওয়েবসাইটে বিভাগীয় যোগাযোগ ও ক্যাম্পাস নির্দেশিকা দেখে নির্দিষ্ট ভবন/প্রবেশপথ নিশ্চিত করুন।"
   }
 ];
 
@@ -6261,7 +6280,19 @@ function renderPlaces() {
     ];
     const matchesSearch = !searchText || searchFields.filter(Boolean).join(' ').toLocaleLowerCase('bn').includes(searchText);
     const matchesDivision = division === 'all' || place.division === division;
-    const matchesCategory = category === 'all' || place.kind === category || place.category === category;
+    const categoryAliases = {
+      'প্রতিষ্ঠান': ['বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা'],
+      'শিক্ষাপ্রতিষ্ঠান': ['বৌদ্ধ প্রতিষ্ঠান ও শিক্ষা'],
+      'মঠ': ['মঠ ও ধর্মীয় কেন্দ্র'],
+      'ধ্যানকেন্দ্র': ['ভাবনা ও অরণ্যকুটির'],
+      'অনাথালয়/সেবাকেন্দ্র': ['বৌদ্ধ অনাথালয় ও সমাজসেবা'],
+      'লোকধর্ম/গবেষণা': ['লোকধর্ম ও গবেষণাধীন ঐতিহ্য'],
+      'ঐতিহ্য/সম্প্রদায়': ['কমিউনিটি ঐতিহ্য'],
+      'কমিউনিটি স্থান': ['কমিউনিটি ঐতিহ্য'],
+      'প্রকাশনা/গবেষণা': ['প্রকাশনা/গবেষণা', 'প্রকাশনা ও গবেষণা']
+    };
+    const acceptedCategories = [category].concat(categoryAliases[category] || []);
+    const matchesCategory = category === 'all' || acceptedCategories.some(value => place.kind === value || place.category === value);
     const matchesAdmin = typeof window.__adminFilterMatch !== 'function' || window.__adminFilterMatch(place);
     return matchesSearch && matchesDivision && matchesCategory && matchesAdmin;
   });
