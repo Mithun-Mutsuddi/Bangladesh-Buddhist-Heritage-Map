@@ -6199,7 +6199,7 @@ function escapeHtml(value) {
 }
 function mapLinkFor(place) {
   // Approximate/area-level pins must not be used as exact driving destinations.
-  if (place.pinApproximate || !Array.isArray(place.coords)) {
+  if (place.pinApproximate || place.verificationPending || !Array.isArray(place.coords)) {
     return googleSearch(`${place.name}, ${place.district}, Bangladesh`);
   }
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.coords.join(','))}`;
@@ -6310,7 +6310,7 @@ function renderPlaceDetail(place) {
       : (place.sourceLabel || 'সম্পর্কিত রেফারেন্স');
   const locationNote = !Array.isArray(place.coords)
     ? '<p class="map-pin-warning">📍 সুনির্দিষ্ট GPS যাচাই হয়নি—তাই ম্যাপে পিন দেখানো হয়নি। নাম ধরে Google Maps-এ খুঁজুন।</p>'
-    : place.pinApproximate
+    : (place.pinApproximate || place.verificationPending)
       ? '<p class="map-pin-warning">⚠ এই মানচিত্রের পিন আনুমানিক; এটি জরিপকৃত প্রবেশদ্বারের GPS নয়। যাওয়ার আগে ঠিকানা স্থানীয়/সরকারি সূত্রে নিশ্চিত করুন।</p>'
       : '';
   const verificationNote = place.verificationPending
@@ -6323,7 +6323,7 @@ function renderPlaceDetail(place) {
     <p><strong>🧭 যাওয়ার পরিকল্পনা:</strong> ${escapeHtml(place.trip)}</p>
     <p class="detail-quote">☸ <strong>শ্রদ্ধাশীল ভ্রমণ:</strong> ${escapeHtml(place.dhamma)} ${place.id === 'somapura' ? '<a href="https://whc.unesco.org/en/list/322/" target="_blank" rel="noopener noreferrer">[UNESCO]</a>' : ''}</p>
     <div class="detail-actions">
-      <a class="action-primary" href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">↗ ${(place.pinApproximate || !Array.isArray(place.coords)) ? "Google Maps-এ স্থান খুঁজুন" : "Google Maps দিকনির্দেশ"}</a>
+      <a class="action-primary" href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">↗ ${(place.pinApproximate || place.verificationPending || !Array.isArray(place.coords)) ? "Google Maps-এ স্থান খুঁজুন" : "Google Maps দিকনির্দেশ"}</a>
       <a href="${nearbyLink(place, 'ATM')}" target="_blank" rel="noopener noreferrer">▣ কাছাকাছি ATM</a>
       <a href="${nearbyLink(place, 'hotel and resort')}" target="_blank" rel="noopener noreferrer">⌂ হোটেল / রিসোর্ট</a>
       <a href="${videoSearch}" target="_blank" rel="noopener noreferrer">▷ YouTube ভিডিও</a>
@@ -6344,6 +6344,7 @@ function initMap() {
   // Clear the static loading overlay before Leaflet creates its map panes.
   container.innerHTML = '';
   map = L.map('map', { scrollWheelZoom: false, preferCanvas: true }).setView([23.685, 90.3563], 7);
+  window.__heritageLeafletMap = map;
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     updateWhenIdle: true,
@@ -6369,6 +6370,7 @@ function initMap() {
       })
     : L.layerGroup();
   markerLayer.addTo(map);
+  window.__heritageMarkerLayer = markerLayer;
   map.whenReady(() => {
     setTimeout(() => map?.invalidateSize(), 120);
     setTimeout(() => map?.invalidateSize(), 650);
@@ -6390,7 +6392,7 @@ function updateMarkers(list) {
         popupAnchor: [0, -18]
       });
       marker = L.marker(place.coords, { icon });
-      marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${place.pinApproximate ? '<br><em>পিন আনুমানিক</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>`);
+      marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${(place.pinApproximate || place.verificationPending) ? '<br><em>পিন আনুমানিক / যাচাইাধীন</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>`);
       marker.on('click', () => selectPlace(place.id, false, false));
       markerCache.set(place.id, marker);
     }
@@ -6711,14 +6713,20 @@ async function loadPublishedCommunityPlaces() {
 }
 
 byId('currentYear').textContent = new Date().getFullYear();
-/* Start the map immediately; an optional community content fetch must never block it. */
-renderItinerary();
-renderReviews();
-initMap();
-if (activePlaceId) renderPlaceDetail(selectedPlace());
+/* Initialize the map before optional panels. A review/storage error must never leave the map overlay stuck. */
+try {
+  initMap();
+} catch (error) {
+  console.error('Heritage map initialization failed:', error);
+  const mapContainer = byId('map');
+  if (mapContainer) mapContainer.innerHTML = '<div class="map-loading" role="status">ইন্টার‌্যাকটিভ ম্যাপ শুরু করা যায়নি। নিচের গন্তব্য তালিকা বা Google Maps লিংক ব্যবহার করুন।</div>';
+}
+try { renderItinerary(); } catch (error) { console.error('Itinerary rendering failed:', error); }
+try { renderReviews(); } catch (error) { console.error('Review rendering failed:', error); }
+try { if (activePlaceId) renderPlaceDetail(selectedPlace()); } catch (error) { console.error('Place detail rendering failed:', error); }
 loadPublishedCommunityPlaces().then(() => {
-  renderPlaces();
-  renderItinerary();
-  renderReviews();
-  if (activePlaceId) renderPlaceDetail(selectedPlace());
-});
+  try { renderPlaces(); } catch (error) { console.error('Place refresh failed:', error); }
+  try { renderItinerary(); } catch (error) { console.error('Itinerary refresh failed:', error); }
+  try { renderReviews(); } catch (error) { console.error('Review refresh failed:', error); }
+  try { if (activePlaceId) renderPlaceDetail(selectedPlace()); } catch (error) { console.error('Place detail refresh failed:', error); }
+}).catch(error => console.warn('Community content unavailable; base directory remains usable.', error));

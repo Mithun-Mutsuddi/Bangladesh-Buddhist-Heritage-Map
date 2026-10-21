@@ -90,3 +90,45 @@ GitHub Pages static hosting। আলাদা authenticated backend ছাড�
 - আর্কাইভের খসড়া IndexedDB-তে শুধু এই browser/device-এ সংরক্ষিত হয়; ZIP export-এ metadata ও media থাকে। GitHub Pages নিজে visitor-এর ফাইল public server-এ আপলোড বা repository-তে commit করতে পারে না। প্রকাশের আগে ফাইল review করে commit করুন অথবা GitHub issue-তে জমা দিন।
 - বিভাগ/জেলা/উপজেলা/ইউনিয়নের select তালিকা `iqbalhasandev/bangladesh-geo-json`-এর bilingual ওপেন dataset থেকে first-use fetch করে। প্রশাসনিক lookup কোনো ঐতিহ্যস্থানের অবস্থান প্রমাণ করে না; রেকর্ডে সঠিক `upazila`, `thana`, `union` metadata না থাকলে ঐ স্তরে ফল মিলবে না। পৃথক পুলিশ-থানা তালিকা ও per-place locality এখনও যাচাই/সম্প্রসারণাধীন।
 - প্রশাসনিক dataset reference: https://github.com/iqbalhasandev/bangladesh-geo-json (MIT license; original source attribution retained here). Historical archive submissions need provenance, copyright/permission, and editorial verification.
+
+
+## 2026 responsive heritage guide upgrade
+
+A focused implementation is available on branch `feat/heritage-guide-upgrade` and is proposed for review before merging. The original 323-record directory is preserved.
+
+### Included files
+
+- `heritage-enhancements.js` + `upgrade.css`: responsive festival tracker, route planner, local-service Google Maps searches, community correction form, map recovery layer, bilingual SanghaMitra demo and source-aware long-form content UI.
+- `data/heritage-sites.json`: normalized JSON export of all 323 directory records, including location coordinates when present, source URLs, category, history, approximate-pin and verification status.
+- `data/heritage-seo-bn.json` and `seo-content.js`: Bengali SEO/editorial drafts for all 323 records. Every text targets 200+ whitespace-separated words. Some site-specific records lack enough independent historical evidence, so generated pages are explicitly marked as drafts for human editing; they must not be represented as research-verified articles before editorial review.
+- `data/events.json`: Buddhist festivals and lunar/local-date guidance; no fixed Gregorian festival dates are invented.
+- `docs/sanghamitra-system-prompt.md`: bilingual heritage chatbot system prompt, supported intents, evidence and safety rules, and example conversation flow.
+- `server/sanghamitra_api.py` and `requirements.txt`: optional FastAPI endpoint for server-backed AI. The static site keeps a local rule-based demo and can call the server only when `window.SANGHAMITRA_API_URL` is configured.
+- `docs/firestore-schema.json` and `firestore.rules`: Firestore collection design and starter security rules. These are not auto-connected; configure Firebase Auth, Storage rules, App Check, moderator roles and indexes before accepting production submissions.
+- `tools/validate_heritage_data.py`: validates unique IDs, coordinate bounds, JSON structure, festival identifiers and SEO coverage.
+
+### Map reliability and what to know
+
+The main map remains Leaflet + OpenStreetMap with Google Maps name search and route links. A recovery layer tries to initialize the map and create markers if the normal map layer is missing; if the Leaflet CDN is blocked it provides a plain search-link fallback. The main page's map initialization is guarded so an unrelated review/itinerary rendering exception does not leave the initial loading overlay behind.
+
+In the current data snapshot, 264 records have numeric coordinates, but most are marked approximate or verification-pending. A marker is not automatically a surveyed entrance GPS. The “my location” control still requires browser permission and HTTPS (or localhost). A map tile or CDN outage may still prevent the interactive basemap from loading even where search links work.
+
+### Local API setup
+
+See [deployment and local development](docs/deployment.md). For a local API, install `requirements.txt`, set `OPENAI_API_KEY` in the shell/environment, then run:
+
+```bash
+uvicorn server.sanghamitra_api:app --reload --port 8000
+```
+
+Never put provider keys in the public frontend or commit secrets. GitHub Pages serves the static frontend only; deploy the optional Python API separately.
+
+### Validation
+
+From the repository root:
+
+```bash
+python tools/validate_heritage_data.py
+```
+
+This is a structural check, not a guarantee that each historical claim, GPS coordinate, current opening time, event date, travel route or fee is factually verified. Check the source URL and the relevant site/host authority before publishing.

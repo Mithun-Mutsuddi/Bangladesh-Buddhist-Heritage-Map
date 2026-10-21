@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0.0",
+  "project": "Bangladesh Buddhist Heritage Map",
+  "notes": [
+    "Use Firestore document IDs as `id` fields where helpful; never trust client-provided user_id for review ownership.",
+    "Store geo coordinates as Firestore GeoPoint in the live collection, but retain latitude/longitude in JSON export for portability.",
+    "Only show entry_fee when confirmed by the site manager and include currency, valid_from, and source.",
+    "All festival dates may be lunar/local; store Gregorian date only after verification by the host monastery.",
+    "Photo URLs should point to Firebase Storage or an explicitly licensed public source; store uploader consent and license."
+  ],
+  "collections": {
+    "heritage_sites": {
+      "document_id": "site_id",
+      "fields": {
+        "id": "string",
+        "name": {
+          "bn": "string",
+          "en": "string|null"
+        },
+        "alternate_names": "array<string>",
+        "category": "enum: archaeological_site|vihara|pagoda|pilgrimage|education|orphanage|elder_care|community_service|living_heritage|research_record",
+        "location": {
+          "geo": "GeoPoint|null",
+          "latitude": "number|null",
+          "longitude": "number|null",
+          "division": "string|null",
+          "district": "string|null",
+          "upazila": "string|null",
+          "thana": "string|null",
+          "union": "string|null",
+          "address": "string|null",
+          "pin_accuracy": "verified_entrance|approximate_area|no_coordinates"
+        },
+        "history": {
+          "bn": "string",
+          "en": "string|null",
+          "historical_era": "string|null",
+          "archaeological_findings": "string|null",
+          "architectural_significance": "string|null",
+          "sources": "array<{title,url,accessed_at,claim_scope}>"
+        },
+        "visiting": {
+          "entry_fee": {
+            "amount": "number|null",
+            "currency": "BDT",
+            "last_verified_at": "timestamp|null",
+            "source_url": "string|null"
+          },
+          "opening_hours": "map|null",
+          "best_season": "string|null",
+          "etiquette": "array<string>",
+          "travel_notes": "string|null"
+        },
+        "photos": "array<{storage_path,url,caption,photographer,collector,upload_date,photo_date,license,consent,source_url}>",
+        "status": "enum: draft|needs_review|published|rejected",
+        "verification": {
+          "status": "enum: verified|partially_verified|unverified",
+          "verified_by": "string|null",
+          "verified_at": "timestamp|null",
+          "notes": "string|null"
+        },
+        "created_at": "timestamp",
+        "updated_at": "timestamp",
+        "search_keywords": "array<string>"
+      }
+    },
+    "events": {
+      "document_id": "event_id",
+      "fields": {
+        "id": "string",
+        "festival_name": {
+          "bn": "string",
+          "en": "string|null"
+        },
+        "lunar_date": "string|null",
+        "gregorian_start": "timestamp|null",
+        "gregorian_end": "timestamp|null",
+        "date_status": "enum: host_confirmed|estimated_lunar|unconfirmed",
+        "location": {
+          "site_id": "string|null",
+          "site_name": "string|null",
+          "geo": "GeoPoint|null",
+          "address": "string|null"
+        },
+        "description": {
+          "bn": "string",
+          "en": "string|null"
+        },
+        "organizer": "string|null",
+        "source_url": "string|null",
+        "last_verified_at": "timestamp|null",
+        "visibility": "enum: draft|published",
+        "created_at": "timestamp",
+        "updated_at": "timestamp"
+      }
+    },
+    "user_reviews": {
+      "document_id": "review_id",
+      "fields": {
+        "id": "string",
+        "user_id": "string (must equal request.auth.uid)",
+        "site_id": "string",
+        "rating": "integer 1..5",
+        "comment": "string (max 2000)",
+        "language": "bn|en|other",
+        "visit_date": "timestamp|null",
+        "status": "pending|published|hidden",
+        "moderator_note": "string|null (server/moderator write only)",
+        "created_at": "timestamp",
+        "updated_at": "timestamp"
+      }
+    },
+    "community_archive": {
+      "document_id": "archive_id",
+      "fields": {
+        "title": "string",
+        "type": "image|video|audio|pdf|document|oral_history",
+        "site_id": "string|null",
+        "historic_date": "string|null",
+        "photo_date": "timestamp|null",
+        "photographer": "string|null",
+        "collector": "string|null",
+        "uploader_uid": "string|null",
+        "uploader_display_name": "string|null",
+        "contact_private": "string|null (never public)",
+        "description_bn": "string",
+        "media_storage_path": "string|null",
+        "source_url": "string|null",
+        "license": "string|null",
+        "consent_confirmed": "boolean",
+        "provenance_note": "string|null",
+        "status": "draft|needs_review|published|rejected",
+        "created_at": "timestamp",
+        "updated_at": "timestamp"
+      }
+    },
+    "directory_services": {
+      "document_id": "service_id",
+      "fields": {
+        "service_type": "hotel|food|medical|police|fire_service|transport",
+        "name": "string",
+        "geo": "GeoPoint|null",
+        "address": "string|null",
+        "phone": "string|null",
+        "opening_hours": "string|null",
+        "source_url": "string|null",
+        "last_verified_at": "timestamp|null",
+        "verification_status": "verified|unverified"
+      }
+    }
+  },
+  "example_documents": {
+    "heritage_sites": {
+      "somapura": {
+        "id": "somapura",
+        "name": {
+          "bn": "পাহাড়পুর সোমপুর মহাবিহার",
+          "en": "Somapura Mahavihara"
+        },
+        "category": "archaeological_site",
+        "location": {
+          "geo": {
+            "_type": "GeoPoint",
+            "latitude": 25.03197,
+            "longitude": 88.977
+          },
+          "latitude": 25.03197,
+          "longitude": 88.977,
+          "division": "রাজশাহী",
+          "district": "নওগাঁ",
+          "upazila": null,
+          "thana": null,
+          "union": null,
+          "address": null,
+          "pin_accuracy": "approximate_area"
+        },
+        "history": {
+          "bn": "পাল যুগের গুরুত্বপূর্ণ বৌদ্ধ মহাবিহার; সুনির্দিষ্ট দাবির জন্য UNESCO ও সরকারি প্রত্নতাত্ত্বিক সূত্র ব্যবহার করুন।",
+          "en": null,
+          "historical_era": "Pala period",
+          "archaeological_findings": "স্থাপত্য-পরিকল্পনা ও পোড়ামাটির অলংকরণ; বিস্তারিত দাবি উৎসসহ যাচাই করতে হবে।",
+          "architectural_significance": "চতুষ্কোণ মঠ-পরিকল্পনা ও কেন্দ্রীয় মন্দির",
+          "sources": [
+            {
+              "title": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/322/",
+              "accessed_at": "2026-10-21",
+              "claim_scope": "significance, architecture, chronology"
+            }
+          ]
+        },
+        "visiting": {
+          "entry_fee": {
+            "amount": null,
+            "currency": "BDT",
+            "last_verified_at": null,
+            "source_url": null
+          },
+          "opening_hours": null,
+          "best_season": "November-February (general guidance only)",
+          "etiquette": [
+            "Stay on marked paths",
+            "Do not touch or remove artifacts"
+          ],
+          "travel_notes": "Verify entrance point and current opening hours before travel."
+        },
+        "photos": [],
+        "status": "needs_review",
+        "verification": {
+          "status": "partially_verified",
+          "verified_by": null,
+          "verified_at": null,
+          "notes": "Exact entrance GPS and current fee/hours need official verification."
+        },
+        "created_at": "server timestamp",
+        "updated_at": "server timestamp",
+        "search_keywords": [
+          "Somapura",
+          "Paharpur",
+          "পাহাড়পুর",
+          "মহাবিহার",
+          "Pala"
+        ]
+      }
+    },
+    "events": {
+      "vesak": {
+        "id": "vesak-buddha-purnima",
+        "festival_name": {
+          "bn": "বুদ্ধ পূর্ণিমা",
+          "en": "Vesak / Buddha Purnima"
+        },
+        "lunar_date": "বৈশাখী পূর্ণিমা",
+        "gregorian_start": null,
+        "gregorian_end": null,
+        "date_status": "estimated_lunar",
+        "location": {
+          "site_id": null,
+          "site_name": null,
+          "geo": null,
+          "address": null
+        },
+        "description": {
+          "bn": "স্থানীয় বিহারের ঘোষণায় সময়সূচি যাচাই করুন।",
+          "en": "Check the host monastery’s published schedule."
+        },
+        "organizer": null,
+        "source_url": null,
+        "last_verified_at": null,
+        "visibility": "draft",
+        "created_at": "server timestamp",
+        "updated_at": "server timestamp"
+      }
+    },
+    "user_reviews": {
+      "review_example": {
+        "id": "review_example",
+        "user_id": "AUTH_UID_FROM_FIREBASE_AUTH",
+        "site_id": "somapura",
+        "rating": 5,
+        "comment": "প্রত্নস্থলটি পরিচ্ছন্ন রাখুন এবং যাওয়ার আগে সময়সূচি যাচাই করুন।",
+        "language": "bn",
+        "visit_date": null,
+        "status": "pending",
+        "moderator_note": null,
+        "created_at": "server timestamp",
+        "updated_at": "server timestamp"
+      }
+    }
+  }
+}
