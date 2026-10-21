@@ -209,7 +209,7 @@
           const editorial=document.createElement('p');editorial.className='seo-editorial-note seo-article-status';
           editorial.textContent=String(article.editorial_status||'').startsWith('draft')?'সম্পাদকীয় খসড়া · প্রকাশের আগে ঐতিহাসিক তথ্য, স্থানাঙ্ক ও সূত্র মানবসম্পাদনায় যাচাই করুন।':'উৎস-সংযুক্ত তথ্য · যাত্রার আগে পরিবর্তনশীল তথ্য যাচাই করুন।';
           section.insertBefore(editorial,button);
-          String(article.content||'').split(/\\n\\s*\\n/).filter(Boolean).forEach(text=>{
+          String(article.content||'').split(/\n\s*\n/).filter(Boolean).forEach(text=>{
             const paragraph=document.createElement('p');paragraph.className='seo-article-paragraph';paragraph.textContent=text;section.insertBefore(paragraph,button);
           });
           const urls=Array.isArray(article.sources)?article.sources:[];
