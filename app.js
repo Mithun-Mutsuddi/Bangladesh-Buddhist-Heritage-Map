@@ -6711,14 +6711,20 @@ async function loadPublishedCommunityPlaces() {
 }
 
 byId('currentYear').textContent = new Date().getFullYear();
-/* Start the map immediately; an optional community content fetch must never block it. */
-renderItinerary();
-renderReviews();
-initMap();
-if (activePlaceId) renderPlaceDetail(selectedPlace());
+/* Initialize the map before optional panels. A review/storage error must never leave the map overlay stuck. */
+try {
+  initMap();
+} catch (error) {
+  console.error('Heritage map initialization failed:', error);
+  const mapContainer = byId('map');
+  if (mapContainer) mapContainer.innerHTML = '<div class="map-loading" role="status">ইন্টার‌্যাকটিভ ম্যাপ শুরু করা যায়নি। নিচের গন্তব্য তালিকা বা Google Maps লিংক ব্যবহার করুন।</div>';
+}
+try { renderItinerary(); } catch (error) { console.error('Itinerary rendering failed:', error); }
+try { renderReviews(); } catch (error) { console.error('Review rendering failed:', error); }
+try { if (activePlaceId) renderPlaceDetail(selectedPlace()); } catch (error) { console.error('Place detail rendering failed:', error); }
 loadPublishedCommunityPlaces().then(() => {
-  renderPlaces();
-  renderItinerary();
-  renderReviews();
-  if (activePlaceId) renderPlaceDetail(selectedPlace());
-});
+  try { renderPlaces(); } catch (error) { console.error('Place refresh failed:', error); }
+  try { renderItinerary(); } catch (error) { console.error('Itinerary refresh failed:', error); }
+  try { renderReviews(); } catch (error) { console.error('Review refresh failed:', error); }
+  try { if (activePlaceId) renderPlaceDetail(selectedPlace()); } catch (error) { console.error('Place detail refresh failed:', error); }
+}).catch(error => console.warn('Community content unavailable; base directory remains usable.', error));
