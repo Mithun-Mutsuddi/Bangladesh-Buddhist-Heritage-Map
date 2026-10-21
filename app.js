@@ -6238,10 +6238,10 @@ const heritageSearchAliases = {
   'kotila-mura': 'kotila mura mainamati cumilla comilla',
   'mainamati': 'mainamati archaeology museum cumilla comilla',
   'sitakot': 'sitakot vihara nawabganj dinajpur',
-  'vasu-vihara': 'vasu vihara bogura bogra',
+  'vasu': 'vasu vihara bogura bogra',
   'rajban': 'rajban vihara rangamati',
-  'golden-temple': 'golden temple buddha dhatu jadi bandarban',
-  'nandan-kanan': 'nandan kanan buddhist temple chittagong chattogram',
+  'golden': 'golden temple buddha dhatu jadi bandarban',
+  'nandan': 'nandan kanan buddhist temple chittagong chattogram',
   'ramu': 'ramu buddhist vihara coxs bazar',
   'bikrampur-vihara': 'bikrampur buddhist vihara raghurampur munshiganj',
   'nateshwar': 'nateshwar deul munshiganj'
@@ -6396,7 +6396,8 @@ function refreshHeritageMapLayout() {
   if (rect.width < 80 || rect.height < 120) return;
   try {
     activeMap.invalidateSize({pan:false, debounceMoveend:true});
-    if (window.__heritageTileLayer && typeof window.__heritageTileLayer.redraw === 'function') {
+    if (window.refreshHeritageMapTiles) window.refreshHeritageMapTiles();
+    else if (window.__heritageTileLayer && typeof window.__heritageTileLayer.redraw === 'function') {
       window.__heritageTileLayer.redraw();
     }
   } catch (error) {
@@ -6421,6 +6422,66 @@ function installMapResizeRecovery() {
   document.addEventListener('visibilitychange', () => { if (!document.hidden) schedule(); });
   [120, 500, 1100, 1800].forEach(delay => setTimeout(refreshHeritageMapLayout, delay));
 }
+function attachHeritageTileLayer(activeMap) {
+  if (!activeMap || typeof L === 'undefined') return null;
+  const providers = [
+    {name:'OpenStreetMap',url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      options:{subdomains:['a','b','c'],maxZoom:19,keepBuffer:3,updateWhenIdle:true,updateWhenZooming:false,
+        attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'}},
+    {name:'CARTO',url:'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+      options:{subdomains:'abcd',maxZoom:20,keepBuffer:3,updateWhenIdle:true,updateWhenZooming:false,
+        attribution:'&copy; OpenStreetMap contributors &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">CARTO</a>'}},
+    {name:'Esri World Street Map',url:'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
+      options:{maxZoom:19,keepBuffer:3,updateWhenIdle:true,updateWhenZooming:false,
+        attribution:'Tiles &copy; <a href="https://www.esri.com/" target="_blank" rel="noopener noreferrer">Esri</a>'}}
+  ];
+  let providerIndex=0, timer=null, layer=null;
+  const statusNode=()=>byId('mapActionStatus');
+  const setStatus=message=>{
+    const node=statusNode();
+    if(node && (!node.dataset.context || node.dataset.context==='tiles')){
+      node.dataset.context='tiles';node.textContent=message;
+    }
+  };
+  const mount=()=>{
+    if(timer)clearTimeout(timer);
+    if(layer){try{activeMap.removeLayer(layer)}catch(_){}}
+    const provider=providers[providerIndex];
+    let loaded=0,errors=0,switched=false;
+    const failover=()=>{
+      if(switched||providerIndex>=providers.length-1)return;
+      switched=true;providerIndex++;
+      setStatus('ম্যাপের টাইল অসম্পূর্ণ এসেছে; বিকল্প ম্যাপ সার্ভার চালু হচ্ছে…');
+      mount();
+    };
+    layer=L.tileLayer(provider.url,provider.options);
+    window.__heritageTileLayer=layer;
+    layer.on('tileload',()=>{
+      loaded++;
+      if(loaded>=3&&providerIndex>0)setStatus('বিকল্প ম্যাপ চালু হয়েছে ('+provider.name+')।');
+      else if(loaded>=4&&providerIndex===0&&statusNode()?.dataset.context==='tiles'){
+        statusNode().textContent='';delete statusNode().dataset.context;
+      }
+    });
+    layer.on('tileerror',()=>{errors++;if(errors>=3&&loaded<4)failover();});
+    layer.addTo(activeMap);
+    timer=setTimeout(()=>{
+      if(loaded<4&&providerIndex<providers.length-1)failover();
+      else if(loaded===0){
+        setStatus('ম্যাপ সার্ভার থেকে টাইল আসছে না। নেটওয়ার্ক/ট্র্যাকার ব্লকার পরীক্ষা করুন; নিচের সেবা ও স্থান অনুসন্ধান ব্যবহার করা যাবে।');
+      }
+    },7000);
+    return layer;
+  };
+  window.refreshHeritageMapTiles=()=>{
+    try{activeMap.invalidateSize({pan:false,debounceMoveend:true});if(window.__heritageTileLayer)window.__heritageTileLayer.redraw()}catch(_){}
+  };
+  window.__heritageTileProviderReset=()=>{providerIndex=0;mount()};
+  mount();
+  return layer;
+}
+window.attachHeritageTileLayer=attachHeritageTileLayer;
+
 function initMap() {
   const container = byId('map');
   if (typeof L === 'undefined') {
@@ -6431,13 +6492,7 @@ function initMap() {
   container.innerHTML = '';
   map = L.map('map', { scrollWheelZoom: false, preferCanvas: true }).setView([23.685, 90.3563], 7);
   window.__heritageLeafletMap = map;
-  window.__heritageTileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    updateWhenIdle: true,
-    updateWhenZooming: false,
-    keepBuffer: 3,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'
-  }).addTo(map);
+  attachHeritageTileLayer(map);
   installMapResizeRecovery();
   markerLayer = typeof L.markerClusterGroup === 'function'
     ? L.markerClusterGroup({
@@ -6529,8 +6584,11 @@ function requestLocation(onSuccess, onFailure) {
     const lat = position.coords.latitude, lng = position.coords.longitude;
     addUserMarker(lat,lng);
     const activeMap = window.__heritageLeafletMap || map;
-    if (activeMap) activeMap.setView([lat,lng],12,{animate:false});
-    report('আপনার অবস্থান পাওয়া গেছে (' + lat.toFixed(5) + ', ' + lng.toFixed(5) + ')।','success');
+    if (activeMap) {
+      activeMap.setView([lat,lng],12,{animate:false});
+      if (window.refreshHeritageMapTiles) window.refreshHeritageMapTiles();
+    }
+    report('আপনার অবস্থান পাওয়া গেছে (' + lat.toFixed(5) + ', ' + lng.toFixed(5) + ')। ম্যাপের টাইল রিফ্রেশ করা হচ্ছে।','success');
     if (button) { button.disabled = false; button.textContent = '◎ আমার অবস্থান'; }
     if (typeof onSuccess === 'function') onSuccess(lat,lng);
   }, error => {
@@ -6637,7 +6695,50 @@ byId('loadMorePlaces')?.addEventListener('click', () => {
   renderPlaces(true);
 });
 byId('sortVisited').addEventListener('click', () => { sortUnvisitedFirst = !sortUnvisitedFirst; byId('sortVisited').textContent = sortUnvisitedFirst ? 'দেখা হয়নি আগে ↑' : 'নাম অনুসারে A–Z'; renderPlaces(); });
+byId('refreshMap')?.addEventListener('click',()=>{
+  const activeMap=window.__heritageLeafletMap||map;
+  if(!activeMap){alert('ম্যাপ লাইব্রেরি লোড হয়নি। পৃষ্ঠা reload করে আবার চেষ্টা করুন।');return;}
+  if(window.__heritageTileProviderReset)window.__heritageTileProviderReset();
+  if(window.refreshHeritageMapTiles)window.refreshHeritageMapTiles();
+  if(window.refreshHeritageMapLayout)window.refreshHeritageMapLayout();
+  const status=byId('mapActionStatus');
+  if(status){status.textContent='ম্যাপ রিফ্রেশ হচ্ছে…';status.dataset.context='tiles';}
+});
 byId('locateMe').addEventListener('click', () => requestLocation());
+const mapServiceQueries = {
+  medical:'emergency hospital emergency department clinic',
+  pharmacy:'pharmacy drug store',
+  hotel:'hotel guest house',
+  transport:'bus ticket counter train ticket counter launch ticket counter transport terminal',
+  police:'police station',
+  fire:'fire service fire station'
+};
+function placeQueryForService(place){return [place.name,place.upazila,place.district,'Bangladesh'].filter(Boolean).join(', ');}
+function openMapServiceSearch(kind){
+  const query=mapServiceQueries[kind];if(!query)return;
+  const status=byId('mapActionStatus');
+  const report=message=>{if(status){status.textContent=message;status.dataset.context='services';status.dataset.kind='info';}};
+  const makeUrl=target=>googleSearch(query+' near '+target);
+  const open=url=>{const tab=window.open(url,'_blank','noopener,noreferrer');if(!tab)report('নতুন ট্যাব ব্লক হয়েছে—browser pop-up permission দিন অথবা আবার চাপুন।');};
+  if(userPosition){open(makeUrl(userPosition.lat+','+userPosition.lng));report('আপনার বর্তমান অবস্থানের কাছে সেবা অনুসন্ধান খোলা হয়েছে।');return;}
+  const place=selectedPlace();
+  if(place){open(makeUrl(placeQueryForService(place)));report('নির্বাচিত স্থানকে কেন্দ্র করে সেবা অনুসন্ধান খোলা হয়েছে।');return;}
+  // Keep a reference to the blank tab while waiting for the GPS permission response.
+  const tab=window.open('about:blank','_blank');
+  if(tab)tab.opener=null;
+  const fallback=()=>{const url=googleSearch(query+' Bangladesh');if(tab&&!tab.closed)tab.location.href=url;else window.open(url,'_blank','noopener,noreferrer');};
+  if(!navigator.geolocation||!window.isSecureContext){fallback();report('কাছাকাছি ফলাফলের জন্য Location Allow করুন; আপাতত বাংলাদেশের সাধারণ অনুসন্ধান খোলা হয়েছে।');return;}
+  report('আপনার অবস্থান নিয়ে কাছাকাছি সেবা খোঁজা হচ্ছে…');
+  navigator.geolocation.getCurrentPosition(pos=>{
+    userPosition={lat:pos.coords.latitude,lng:pos.coords.longitude};
+    const url=makeUrl(userPosition.lat+','+userPosition.lng);
+    if(tab&&!tab.closed)tab.location.href=url;else window.open(url,'_blank','noopener,noreferrer');
+    report('আপনার অবস্থানের কাছে সেবা খোঁজা হয়েছে। Google Maps-এ দূরত্ব ও সময় যাচাই করুন।');
+  },()=>{
+    fallback();report('অবস্থান পাওয়া যায়নি; বাংলাদেশের সাধারণ অনুসন্ধান খোলা হয়েছে। Location permission চালু করে আবার চেষ্টা করুন।');
+  },{enableHighAccuracy:false,timeout:12000,maximumAge:60000});
+}
+document.querySelectorAll('[data-map-service]').forEach(button=>button.addEventListener('click',()=>openMapServiceSearch(button.dataset.mapService)));
 byId('nearbyAtm').addEventListener('click', () => {
   if (userPosition) { window.open(googleSearch(`ATM near ${userPosition.lat},${userPosition.lng}`), '_blank', 'noopener,noreferrer'); return; }
   // Open a blank tab synchronously to avoid popup blockers after geolocation resolves.

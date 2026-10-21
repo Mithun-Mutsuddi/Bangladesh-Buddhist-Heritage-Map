@@ -128,3 +128,19 @@ html,body{max-width:100%;overflow-x:clip}
   .sangha-panel{width:100%;max-height:64vh}
   .sangha-launcher{min-height:48px}
 }
+
+
+/* Map tile failover and nearby-service controls */
+#map{display:block;width:100%;height:clamp(360px,62vh,600px);min-height:340px;position:relative;overflow:hidden;background:#f0dfc9;isolation:isolate}
+#map.leaflet-container,.leaflet-container{width:100%;height:100%;max-width:100%}
+.leaflet-tile{max-width:none!important;max-height:none!important}
+.map-service-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:12px;padding:11px;border:1px solid #ead5bc;border-radius:13px;background:#fffaf2}
+.map-service-tools strong{grid-column:1/-1;color:#6f3b16;font-size:12px}
+.map-service-tools button{min-width:0;padding:8px 9px;border:1px solid #e7ceb0;border-radius:9px;color:#7b3d0b;background:#fff;font:inherit;font-size:11px;line-height:1.5;overflow-wrap:anywhere;cursor:pointer}
+.map-service-tools button:hover{background:#fff0d8;border-color:#c98c4d}
+.map-action-status{min-height:0;margin:5px 2px 0;color:#74553a;font-size:12px;line-height:1.7;overflow-wrap:anywhere}
+.map-action-status:empty{display:none}
+.map-action-status[data-kind="error"]{padding:8px 10px;border-radius:9px;background:#fff0e4;color:#8c2d12}
+.map-action-status[data-kind="success"]{padding:8px 10px;border-radius:9px;background:#edf8ed;color:#215e31}
+@media(max-width:760px){#map{height:420px;min-height:340px}.map-service-tools{grid-template-columns:repeat(2,minmax(0,1fr))}.map-service-tools button{font-size:10px;padding:9px 7px}}
+@media(max-width:420px){#map{height:380px;min-height:320px}.map-service-tools{gap:6px}.map-service-tools button{font-size:10px}}

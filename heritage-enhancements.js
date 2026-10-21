@@ -105,7 +105,8 @@
       container.innerHTML = '';
       map = window.L.map(container,{scrollWheelZoom:false,preferCanvas:true}).setView([23.685,90.3563],7);
       window.__heritageLeafletMap = map;
-      window.__heritageTileLayer = window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,updateWhenIdle:true,keepBuffer:3,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'}).addTo(map);
+      if(window.attachHeritageTileLayer)window.attachHeritageTileLayer(map);
+      else window.__heritageTileLayer=window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,updateWhenIdle:true,keepBuffer:3,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'}).addTo(map);
       madeFallback=true;
     }
     function addRecoveryPins(layer) {

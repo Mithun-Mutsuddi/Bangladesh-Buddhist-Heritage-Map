@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
   <link rel="stylesheet" href="styles.css?v=20261021d">
-  <link rel="stylesheet" href="upgrade.css?v=20261021d">
+  <link rel="stylesheet" href="upgrade.css?v=20261021h">
   <link rel="stylesheet" href="archive.css?v=20261021d">
 </head>
 <body>
@@ -134,7 +134,16 @@
             <div class="map-heading"><div><p class="section-kicker">EXPLORE THE MAP</p><h3>ঐতিহ্যের মানচিত্র</h3></div><span class="map-compass" aria-hidden="true">N<br>↑</span></div>
             <div class="map-legend"><span><i class="legend-dot"></i> বৌদ্ধ ঐতিহ্যস্থান</span><span><i class="legend-user"></i> আপনার অবস্থান</span></div>
             <div id="map" aria-label="বাংলাদেশের বৌদ্ধ ঐতিহ্যস্থানের মানচিত্র"><div class="map-loading">ম্যাপ লোড হচ্ছে…</div></div>
-            <div class="map-bottom-actions"><button type="button" class="button button-dark button-small" id="locateMe">◎ আমার অবস্থান</button><button type="button" class="button button-outline button-small" id="nearbyAtm">ATM খুঁজুন ↗</button></div>
+            <div class="map-bottom-actions"><button type="button" class="button button-dark button-small" id="locateMe">◎ আমার অবস্থান</button><button type="button" class="button button-outline button-small" id="nearbyAtm">ATM খুঁজুন ↗</button><button type="button" class="button button-outline button-small" id="refreshMap">ম্যাপ রিফ্রেশ ↻</button></div>
+            <div class="map-service-tools" aria-label="কাছাকাছি সেবা খুঁজুন">
+              <strong>কাছাকাছি সেবা</strong>
+              <button type="button" data-map-service="medical">হাসপাতাল / জরুরি চিকিৎসা</button>
+              <button type="button" data-map-service="pharmacy">ফার্মেসি</button>
+              <button type="button" data-map-service="hotel">হোটেল</button>
+              <button type="button" data-map-service="transport">টিকিট কাউন্টার / পরিবহন</button>
+              <button type="button" data-map-service="police">পুলিশ স্টেশন</button>
+              <button type="button" data-map-service="fire">ফায়ার সার্ভিস</button>
+            </div>
             <p id="mapActionStatus" class="map-action-status" role="status" aria-live="polite"></p>
             <p class="map-disclaimer">ধর্মচক্র চিহ্নে চাপ দিয়ে স্থান নির্বাচন করুন। কিছু GPS আনুমানিক; যেসব প্রস্তাবিত স্থানের নির্ভরযোগ্য GPS নেই, সেগুলোতে পিন দেখানো হয় না—নাম ধরে Google Maps-এ খুঁজুন।</p>
           </div>
@@ -396,9 +405,9 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
-  <script src="app.js?v=20261021d" defer></script>
+  <script src="app.js?v=20261021h" defer></script>
   <script src="seo-content.js?v=20261021d" defer></script>
-  <script src="heritage-enhancements.js?v=20261021e" defer></script>
+  <script src="heritage-enhancements.js?v=20261021h" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
   <script src="content-studio.js?v=20261021d" defer></script>
   <script src="admin-filters.js?v=20261021d" defer></script>
