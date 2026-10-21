@@ -6310,7 +6310,7 @@ function renderPlaceDetail(place) {
       : (place.sourceLabel || 'সম্পর্কিত রেফারেন্স');
   const locationNote = !Array.isArray(place.coords)
     ? '<p class="map-pin-warning">📍 সুনির্দিষ্ট GPS যাচাই হয়নি—তাই ম্যাপে পিন দেখানো হয়নি। নাম ধরে Google Maps-এ খুঁজুন।</p>'
-    : place.pinApproximate
+    : (place.pinApproximate || place.verificationPending)
       ? '<p class="map-pin-warning">⚠ এই মানচিত্রের পিন আনুমানিক; এটি জরিপকৃত প্রবেশদ্বারের GPS নয়। যাওয়ার আগে ঠিকানা স্থানীয়/সরকারি সূত্রে নিশ্চিত করুন।</p>'
       : '';
   const verificationNote = place.verificationPending
