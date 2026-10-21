@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import sys
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -104,7 +105,57 @@ def main() -> int:
             under_target.append(f"{article_id}: {words} whitespace-separated words")
     if under_target:
         errors.append("SEO content under 200 words: " + "; ".join(under_target[:10]))
-    missing_articles = ids - article_ids
+    additions_data = read_json(ROOT / "data" / "heritage-sites-additions.json")
+    additions = additions_data.get("records", []) if isinstance(additions_data, dict) else []
+    if not isinstance(additions, list):
+        errors.append("data/heritage-sites-additions.json must contain a records array")
+        additions = []
+    if isinstance(additions_data, dict) and additions_data.get("addition_count") not in (None, len(additions)):
+        errors.append("addition_count does not match heritage-sites-additions records length")
+    addition_ids: set[str] = set()
+    for index, addition in enumerate(additions):
+        add_id = addition.get("id") if isinstance(addition, dict) else None
+        if not add_id:
+            errors.append(f"heritage_additions[{index}] has no id")
+        elif add_id in addition_ids:
+            errors.append(f"duplicate heritage addition id: {add_id}")
+        else:
+            addition_ids.add(add_id)
+        if add_id not in ids:
+            errors.append(f"heritage addition {add_id or index} is missing from data/heritage-sites.json")
+    def normalized_place_name(value: Any) -> str:
+        normalized = unicodedata.normalize("NFKC", str(value or "")).casefold()
+        return "".join(ch for ch in normalized if ch.isalnum())
+    base_names: dict[str, str] = {}
+    for site in sites:
+        if not isinstance(site, dict) or site.get("id") in addition_ids:
+            continue
+        normalized = normalized_place_name(site.get("name"))
+        if normalized:
+            base_names[normalized] = str(site.get("name"))
+    seen_addition_names: dict[str, str] = {}
+    for addition in additions:
+        if not isinstance(addition, dict):
+            continue
+        label = addition.get("name")
+        normalized = normalized_place_name(label)
+        if normalized in base_names:
+            errors.append(f"duplicate heritage addition name: {label} matches existing {base_names[normalized]}")
+        elif normalized in seen_addition_names:
+            errors.append(f"duplicate heritage addition name: {label} matches {seen_addition_names[normalized]}")
+        elif normalized:
+            seen_addition_names[normalized] = str(label)
+    normalized_canonical: dict[str, str] = {}
+    for site in sites:
+        if not isinstance(site, dict):
+            continue
+        label = site.get("name")
+        normalized = normalized_place_name(label)
+        if normalized in normalized_canonical and normalized:
+            errors.append(f"duplicate normalized canonical name: {label} matches {normalized_canonical[normalized]}")
+        elif normalized:
+            normalized_canonical[normalized] = str(label)
+    missing_articles = ids - article_ids - addition_ids
     if missing_articles:
         errors.append(f"{len(missing_articles)} heritage site(s) have no SEO article: {', '.join(sorted(missing_articles)[:10])}")
 
@@ -117,6 +168,7 @@ def main() -> int:
 
     print(f"Sites: {len(sites)} (unique IDs: {len(ids)}; with coordinates: {coord_count})")
     print(f"Approximate or verification-pending map records: {approximate_count}")
+    print(f"Additional UNESCO archaeological components: {len(additions)}")
     print(f"Festival/event records: {len(events)}")
     print(f"SEO drafts: {len(articles)}; shortest article: {min((len(str(a.get('content','')).split()) for a in articles if isinstance(a,dict)), default=0)} words")
     print(f"Firestore schema: {'present' if isinstance(schema,dict) else 'invalid'}")
