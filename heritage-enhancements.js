@@ -283,7 +283,7 @@
     const endpoint=String(window.SANGHAMITRA_API_URL||'').trim();
     if(!endpoint){addMessage(answerBot(query),'bot');return;}
     const input=$('sanghaInput');
-    const lang=/[\\u0980-\\u09FF]/.test(query)?'bn':'en';
+    const lang=/[\u0980-\u09FF]/.test(query)?'bn':'en';
     const site=places().find(p=>[p.name,p.district,p.upazila].filter(Boolean).some(x=>query.toLocaleLowerCase('bn').includes(String(x).toLocaleLowerCase('bn'))));
     const pending=document.createElement('div');
     pending.className='sangha-message bot';pending.textContent=lang==='bn'?'উত্তর তৈরি হচ্ছে…':'Preparing an answer…';
