@@ -6719,14 +6719,14 @@ function openMapServiceSearch(kind){
   const status=byId('mapActionStatus');
   const report=message=>{if(status){status.textContent=message;status.dataset.context='services';status.dataset.kind='info';}};
   const makeUrl=target=>googleSearch(query+' near '+target);
-  const open=url=>{const tab=window.open(url,'_blank','noopener,noreferrer');if(!tab)report('নতুন ট্যাব ব্লক হয়েছে—browser pop-up permission দিন অথবা আবার চাপুন।');};
+  const open=url=>{const tab=window.open(url,'_blank');if(tab){try{tab.opener=null;}catch(_){}}else if(status){status.innerHTML='নতুন ট্যাব ব্লক হয়েছে। <a href="'+escapeHtml(url)+'" target="_blank" rel="noopener noreferrer">Google Maps খুলুন ↗</a>';status.dataset.context='services';status.dataset.kind='info';}};
   if(userPosition){open(makeUrl(userPosition.lat+','+userPosition.lng));report('আপনার বর্তমান অবস্থানের কাছে সেবা অনুসন্ধান খোলা হয়েছে।');return;}
   const place=selectedPlace();
   if(place){open(makeUrl(placeQueryForService(place)));report('নির্বাচিত স্থানকে কেন্দ্র করে সেবা অনুসন্ধান খোলা হয়েছে।');return;}
   // Keep a reference to the blank tab while waiting for the GPS permission response.
   const tab=window.open('about:blank','_blank');
   if(tab)tab.opener=null;
-  const fallback=()=>{const url=googleSearch(query+' Bangladesh');if(tab&&!tab.closed)tab.location.href=url;else window.open(url,'_blank','noopener,noreferrer');};
+  const fallback=()=>{const url=googleSearch(query+' Bangladesh');if(tab&&!tab.closed)tab.location.href=url;else open(url);};
   if(!navigator.geolocation||!window.isSecureContext){fallback();report('কাছাকাছি ফলাফলের জন্য Location Allow করুন; আপাতত বাংলাদেশের সাধারণ অনুসন্ধান খোলা হয়েছে।');return;}
   report('আপনার অবস্থান নিয়ে কাছাকাছি সেবা খোঁজা হচ্ছে…');
   navigator.geolocation.getCurrentPosition(pos=>{
@@ -6925,6 +6925,7 @@ async function loadPublishedCommunityPlaces() {
   }
 }
 
+window.__heritageCoreScriptReady = true;
 byId('currentYear').textContent = new Date().getFullYear();
 /* Initialize the map before optional panels. A review/storage error must never leave the map overlay stuck. */
 try {

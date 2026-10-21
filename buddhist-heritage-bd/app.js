@@ -2516,6 +2516,7 @@ const destinations = [
 
 ];
 
+window.destinations = destinations;
 const bnDigits = value => String(value).replace(/\d/g, digit => '০১২৩৪৫৬৭৮৯'[Number(digit)]);
 const byId = id => document.getElementById(id);
 let map = null;
@@ -2945,6 +2946,7 @@ async function loadPublishedCommunityPlaces() {
   }
 }
 
+window.__heritageCoreScriptReady = true;
 byId('currentYear').textContent = new Date().getFullYear();
 (async function startApp() {
   await loadPublishedCommunityPlaces();
