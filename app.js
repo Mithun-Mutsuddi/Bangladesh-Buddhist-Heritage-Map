@@ -6199,7 +6199,7 @@ function escapeHtml(value) {
 }
 function mapLinkFor(place) {
   // Approximate/area-level pins must not be used as exact driving destinations.
-  if (place.pinApproximate || !Array.isArray(place.coords)) {
+  if (place.pinApproximate || place.verificationPending || !Array.isArray(place.coords)) {
     return googleSearch(`${place.name}, ${place.district}, Bangladesh`);
   }
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.coords.join(','))}`;
@@ -6323,7 +6323,7 @@ function renderPlaceDetail(place) {
     <p><strong>🧭 যাওয়ার পরিকল্পনা:</strong> ${escapeHtml(place.trip)}</p>
     <p class="detail-quote">☸ <strong>শ্রদ্ধাশীল ভ্রমণ:</strong> ${escapeHtml(place.dhamma)} ${place.id === 'somapura' ? '<a href="https://whc.unesco.org/en/list/322/" target="_blank" rel="noopener noreferrer">[UNESCO]</a>' : ''}</p>
     <div class="detail-actions">
-      <a class="action-primary" href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">↗ ${(place.pinApproximate || !Array.isArray(place.coords)) ? "Google Maps-এ স্থান খুঁজুন" : "Google Maps দিকনির্দেশ"}</a>
+      <a class="action-primary" href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">↗ ${(place.pinApproximate || place.verificationPending || !Array.isArray(place.coords)) ? "Google Maps-এ স্থান খুঁজুন" : "Google Maps দিকনির্দেশ"}</a>
       <a href="${nearbyLink(place, 'ATM')}" target="_blank" rel="noopener noreferrer">▣ কাছাকাছি ATM</a>
       <a href="${nearbyLink(place, 'hotel and resort')}" target="_blank" rel="noopener noreferrer">⌂ হোটেল / রিসোর্ট</a>
       <a href="${videoSearch}" target="_blank" rel="noopener noreferrer">▷ YouTube ভিডিও</a>
@@ -6392,7 +6392,7 @@ function updateMarkers(list) {
         popupAnchor: [0, -18]
       });
       marker = L.marker(place.coords, { icon });
-      marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${place.pinApproximate ? '<br><em>পিন আনুমানিক</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>`);
+      marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${(place.pinApproximate || place.verificationPending) ? '<br><em>পিন আনুমানিক / যাচাইাধীন</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>`);
       marker.on('click', () => selectPlace(place.id, false, false));
       markerCache.set(place.id, marker);
     }
