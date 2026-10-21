@@ -127,9 +127,9 @@
       event.preventDefault();
       const origin=$('travelOrigin').value.trim();const p=byPlaceId(select.value);
       if(!origin||!p){$('routeStatus').textContent='শুরুর স্থান ও গন্তব্য নির্বাচন করুন।';return;}
-      const dest=(p.pinApproximate||!validCoords(p))?placeQuery(p):Number(p.coords[0])+','+Number(p.coords[1]);
+      const dest=(p.pinApproximate||p.verificationPending||!validCoords(p))?placeQuery(p):Number(p.coords[0])+','+Number(p.coords[1]);
       const url=new URL('https://www.google.com/maps/dir/');url.searchParams.set('api','1');url.searchParams.set('origin',origin);url.searchParams.set('destination',dest);url.searchParams.set('travelmode',$('travelMode').value);
-      $('routeStatus').textContent=(p.pinApproximate||!validCoords(p))?'সতর্কতা: এই স্থানটির পিন আনুমানিক বা নেই; Google Maps-এ গন্তব্য যাচাই করুন।':'Google Maps-এ রুট খোলা হচ্ছে। সড়ক ও সময় যাত্রার দিন যাচাই করুন।';
+      $('routeStatus').textContent=(p.pinApproximate||p.verificationPending||!validCoords(p))?'সতর্কতা: এই স্থানটির পিন আনুমানিক বা নেই; Google Maps-এ গন্তব্য যাচাই করুন।':'Google Maps-এ রুট খোলা হচ্ছে। সড়ক ও সময় যাত্রার দিন যাচাই করুন।';
       window.open(url.toString(),'_blank','noopener,noreferrer');
     });
   }
