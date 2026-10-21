@@ -77,3 +77,13 @@
 @media(max-width:760px){.upgrade-heading{gap:12px}.upgrade-heading p:not(.upgrade-kicker){font-size:13px}.upgrade-emblem{flex-basis:42px;width:42px;height:42px;border-radius:14px;font-size:22px}.upgrade-toolbar{align-items:stretch;flex-direction:column}.upgrade-search{max-width:none}.upgrade-select{max-width:180px}.festival-grid,.travel-layout,.community-report-bar{grid-template-columns:1fr}.festival-card{padding:18px}.service-link-grid{gap:8px}.service-link-grid a{padding:9px;grid-template-columns:30px minmax(0,1fr)}.service-link-grid a>span{width:30px;height:30px}.sangha-widget{right:10px;bottom:10px;width:min(360px,calc(100vw - 20px))}.sangha-panel{max-height:min(72vh,590px)}.sangha-launcher{min-height:48px}}
 @media(max-width:420px){.upgrade-section{padding-block:42px}.upgrade-heading h2{font-size:24px}.community-note-actions{display:grid;grid-template-columns:1fr}.service-link-grid{grid-template-columns:1fr 1fr}.sangha-widget{width:calc(100vw - 16px);right:8px;bottom:8px}.sangha-message{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.upgrade-primary,.upgrade-secondary,.service-link-grid a{transition:none}}
+
+/* Long-form, source-aware SEO content injected for the currently selected heritage site. */
+.seo-longform{margin-top:24px;padding:clamp(18px,3vw,28px);border:1px solid var(--up-line);border-radius:20px;background:#fffaf3}
+.seo-longform h4{margin:0 0 10px;color:var(--up-ink);font-size:clamp(18px,2vw,24px);line-height:1.4}
+.seo-longform>p:not(.seo-editorial-note){margin:0 0 14px;color:#5f5043;font-size:13px;line-height:2}
+.seo-longform>p:last-of-type{margin-bottom:0}
+.seo-editorial-note{margin:0 0 14px;padding:9px 11px;border-left:3px solid #d18b3b;border-radius:0 8px 8px 0;color:#80501f;background:#fff0d7;font-size:10px;line-height:1.7}
+.seo-source-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid #efdfcc}
+.seo-source-links a{padding:7px 10px;border:1px solid #e2c39d;border-radius:10px;color:#8d410b;background:#fffdf8;font-size:11px;font-weight:700;text-decoration:none}
+.seo-source-links a:hover{background:#fff0d8}
