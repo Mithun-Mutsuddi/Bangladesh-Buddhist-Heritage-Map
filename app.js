@@ -6404,15 +6404,22 @@ function updateMarkers(list) {
   if (userPosition) addUserMarker(userPosition.lat, userPosition.lng);
 }
 function addUserMarker(lat, lng) {
-  if (!map) return;
+  const activeMap = window.__heritageLeafletMap || map;
+  if (!activeMap || typeof L === 'undefined') return;
   userPosition = { lat, lng };
   if (userMarker) userMarker.remove();
   const icon = L.divIcon({ className: '', html: '<div class="user-map-pin"></div>', iconSize: [18, 18], iconAnchor: [9, 9] });
-  userMarker = L.marker([lat, lng], { icon }).addTo(map).bindPopup('আপনার বর্তমান অবস্থান');
+  userMarker = L.marker([lat, lng], { icon }).addTo(activeMap).bindPopup('আপনার বর্তমান অবস্থান');
 }
 function requestLocation(onSuccess, onFailure) {
   if (!navigator.geolocation) {
-    alert('এই ব্রাউজারে অবস্থান শনাক্ত করার সুবিধা নেই।');
+    const reason = 'এই ব্রাউজারে অবস্থান শনাক্ত করার সুবিধা নেই।';
+    if (typeof onFailure === 'function') onFailure(reason); else alert(reason);
+    return;
+  }
+  if (!window.isSecureContext) {
+    const reason = 'নিরাপত্তার কারণে অবস্থান জানতে HTTPS সাইট খুলুন; GitHub Pages-এর HTTPS ঠিকানা ব্যবহার করুন।';
+    if (typeof onFailure === 'function') onFailure(reason); else alert(reason);
     return;
   }
   const button = byId('locateMe');
@@ -6420,16 +6427,27 @@ function requestLocation(onSuccess, onFailure) {
   navigator.geolocation.getCurrentPosition(position => {
     const lat = position.coords.latitude;
     const lng = position.coords.longitude;
-    addUserMarker(lat, lng);
-    if (map) map.setView([lat, lng], 12, { animate: true });
+    const activeMap = window.__heritageLeafletMap || map;
+    if (activeMap && typeof L !== 'undefined') {
+      addUserMarker(lat, lng);
+      activeMap.setView([lat, lng], 12, { animate: true });
+    } else {
+      const status = byId('mapRuntimeStatus');
+      const url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(lat + ',' + lng);
+      if (status) status.innerHTML = 'আপনার অবস্থান পাওয়া গেছে: ' + lat.toFixed(5) + ', ' + lng.toFixed(5) + ' · <a href="' + url + '" target="_blank" rel="noopener noreferrer">Google Maps-এ খুলুন ↗</a>';
+      else alert('আপনার অবস্থান: ' + lat.toFixed(5) + ', ' + lng.toFixed(5) + '\nGoogle Maps: ' + url);
+    }
     if (button) { button.disabled = false; button.textContent = '◎ আমার অবস্থান'; }
     if (typeof onSuccess === 'function') onSuccess(lat, lng);
   }, error => {
     if (button) { button.disabled = false; button.textContent = '◎ আমার অবস্থান'; }
-    const reason = error.code === 1 ? 'অবস্থান ব্যবহারের অনুমতি দেওয়া হয়নি।' : 'অবস্থান পাওয়া যায়নি।';
+    const reason = error.code === 1
+      ? 'অবস্থান ব্যবহারের অনুমতি দেওয়া হয়নি। ব্রাউজার Site settings → Location → Allow করুন।'
+      : error.code === 3 ? 'অবস্থান পাওয়ার সময় শেষ হয়েছে; Location চালু করে আবার চেষ্টা করুন।'
+      : 'ডিভাইসের অবস্থান পাওয়া যায়নি; GPS/Location চালু আছে কি না দেখুন।';
     if (typeof onFailure === 'function') onFailure(reason);
-    else alert(`${reason} ব্রাউজারের location permission চালু করে আবার চেষ্টা করুন, অথবা কোনো স্থান বেছে Google Maps লিংক ব্যবহার করুন।`);
-  }, { enableHighAccuracy: false, timeout: 12000, maximumAge: 60000 });
+    else alert(reason);
+  }, { enableHighAccuracy: false, timeout: 15000, maximumAge: 60000 });
 }
 function toggleVisited(id) {
   if (visitedIds.has(id)) visitedIds.delete(id); else visitedIds.add(id);
@@ -6719,7 +6737,11 @@ try {
 } catch (error) {
   console.error('Heritage map initialization failed:', error);
   const mapContainer = byId('map');
-  if (mapContainer) mapContainer.innerHTML = '<div class="map-loading" role="status">ইন্টার‌্যাকটিভ ম্যাপ শুরু করা যায়নি। নিচের গন্তব্য তালিকা বা Google Maps লিংক ব্যবহার করুন।</div>';
+  // Do not destroy Leaflet's panes when initialization fails after L.map() succeeds.
+  // heritage-enhancements.js can then validate/rebuild a stale map and restore missing pins.
+  if (mapContainer && !window.__heritageLeafletMap) {
+    mapContainer.innerHTML = '<div class="map-loading" role="status">ম্যাপ শুরু করা যায়নি; বিকল্প মানচিত্র চালু করার চেষ্টা হচ্ছে…</div>';
+  }
 }
 try { renderItinerary(); } catch (error) { console.error('Itinerary rendering failed:', error); }
 try { renderReviews(); } catch (error) { console.error('Review rendering failed:', error); }

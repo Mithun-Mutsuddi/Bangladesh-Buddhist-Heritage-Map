@@ -64,10 +64,33 @@
     }
     if (!window.L) {
       const names = all.slice(0,8).map(p=>'<a href="' + queryFor(p) + '" target="_blank" rel="noopener noreferrer">' + esc(p.name) + ' ↗</a>').join('');
-      container.innerHTML = '<div class="map-library-fallback"><strong>ইন্টার‌্যাকটিভ ম্যাপ লাইব্রেরি লোড হয়নি</strong><p>CDN বা সংযোগ ব্লক হলে পিন দেখা যায় না। আপাতত স্থাননাম দিয়ে Google Maps-এ খুঁজুন।</p><div>' + names + '</div></div>';
+      container.innerHTML = '<div class="map-library-fallback"><strong>ইন্টার‌্যাকটিভ ম্যাপ লাইব্রেরি লোড হয়নি</strong><p>CDN বা সংযোগ ব্লক হলে পিন দেখা যায় না। আপাতত স্থাননাম দিয়ে Google Maps-এ খুঁজুন।</p><button type="button" id="mapFallbackLocate" class="button button-dark button-small">◎ আমার অবস্থান খুঁজুন</button><p id="mapFallbackLocation" role="status" aria-live="polite"></p><div>' + names + '</div></div>';
+      const locationButton = $('mapFallbackLocate');
+      locationButton?.addEventListener('click',()=>{
+        if(!navigator.geolocation){alert('এই ব্রাউজারে অবস্থান শনাক্ত করা যায় না।');return;}
+        if(!window.isSecureContext){alert('অবস্থান শনাক্ত করতে HTTPS সাইট খুলুন.');return;}
+        locationButton.disabled=true;locationButton.textContent='অবস্থান খোঁজা হচ্ছে…';
+        navigator.geolocation.getCurrentPosition(pos=>{
+          locationButton.disabled=false;locationButton.textContent='◎ আমার অবস্থান খুঁজুন';
+          const lat=pos.coords.latitude,lng=pos.coords.longitude,url=mapsSearch(lat+','+lng),output=$('mapFallbackLocation');
+          if(output)output.innerHTML='অবস্থান: '+lat.toFixed(5)+', '+lng.toFixed(5)+' · <a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Google Maps-এ খুলুন ↗</a>';
+        },err=>{
+          locationButton.disabled=false;locationButton.textContent='◎ আমার অবস্থান খুঁজুন';
+          alert(err.code===1?'Browser Site settings → Location → Allow করুন.':err.code===3?'অবস্থানের অনুরোধের সময় শেষ হয়েছে; আবার চেষ্টা করুন.':'Device Location/GPS চালু আছে কি না দেখুন.');
+        },{enableHighAccuracy:false,timeout:15000,maximumAge:60000});
+      });
       statusNote(true); return;
     }
     let map = window.__heritageLeafletMap || null;
+    // A prior error handler may have replaced the map's DOM but left a stale Leaflet instance.
+    // Recreate the instance whenever its panes are no longer inside the visible map container.
+    if(map && !container.querySelector('.leaflet-pane')){
+      try{map.remove();}catch(_){}
+      map=null;
+      window.__heritageLeafletMap=null;
+      window.__heritageMarkerLayer=null;
+      window.__heritageFallbackMarkerLayer=null;
+    }
     let madeFallback = false;
     if (!map) {
       container.innerHTML = '';
