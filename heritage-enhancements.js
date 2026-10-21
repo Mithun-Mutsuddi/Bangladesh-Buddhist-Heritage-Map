@@ -114,6 +114,7 @@
         const markerIcon=window.L.divIcon({className:'heritage-fallback-marker',html:'<span aria-hidden="true">☸</span>',iconSize:[36,36],iconAnchor:[18,18],popupAnchor:[0,-17]});
         const marker=window.L.marker([Number(p.coords[0]),Number(p.coords[1])],{icon:markerIcon,title:p.name,alt:p.name});
         marker.bindPopup(popup(p),{maxWidth:290});
+        marker.on('click',()=>{ if(typeof window.selectPlace==='function') window.selectPlace(p.id,false,false); });
         layer.addLayer(marker);
       });
     }
