@@ -43,7 +43,14 @@
       const el = document.createElement('aside');
       el.id='sanghamitra-widget'; el.className='sangha-widget';
       el.innerHTML = '<button type="button" id="sanghaToggle" class="sangha-launcher" aria-expanded="false" aria-controls="sanghaPanel"><span aria-hidden="true">☸</span><span><strong>SanghaMitra Bot</strong><small>বাংলা · English</small></span><b>＋</b></button><div id="sanghaPanel" class="sangha-panel" hidden><div class="sangha-topbar"><div><strong>SanghaMitra Bot</strong><small>ঐতিহ্য ও ভ্রমণ সহায়ক / Heritage guide</small></div><button type="button" id="sanghaClose" aria-label="চ্যাট বন্ধ করুন">×</button></div><div id="sanghaMessages" class="sangha-messages" aria-live="polite"><div class="sangha-message bot">নমস্কার! কোন বিহারের ইতিহাস, ভ্রমণ রুট, উৎসব বা দর্শনার্থীর নিয়ম জানতে চান?<br><span>Hello! Ask about a site’s history, routes, festivals or visitor etiquette.</span></div></div><div class="sangha-quick-actions"><button type="button" data-sangha-quick="history">ইতিহাস</button><button type="button" data-sangha-quick="route">ভ্রমণ রুট</button><button type="button" data-sangha-quick="nearby">কাছাকাছি সেবা</button><button type="button" data-sangha-quick="etiquette">আচরণবিধি</button></div><form id="sanghaForm" class="sangha-form"><input id="sanghaInput" autocomplete="off" maxlength="500" placeholder="প্রশ্ন লিখুন… / Ask a question" aria-label="SanghaMitra-কে প্রশ্ন লিখুন" required><button type="submit" aria-label="প্রশ্ন পাঠান">➤</button></form><p class="sangha-disclaimer">এই ডেমো সাইটে স্থানীয় তথ্য-ভিত্তিক সহায়তা দেয়। লাইভ AI/API, real-time service checks বা emergency dispatch যুক্ত নয়।</p></div>';
-      document.body.append(el);
+      const community = $('community-contact');
+      const reportBar = community && community.querySelector('.community-report-bar');
+      if (reportBar) reportBar.insertAdjacentElement('afterend', el);
+      else if (community) community.append(el);
+      else {
+        const footer = document.querySelector('footer');
+        if (footer) footer.before(el); else document.body.append(el);
+      }
     }
   }
 
@@ -98,7 +105,7 @@
       container.innerHTML = '';
       map = window.L.map(container,{scrollWheelZoom:false,preferCanvas:true}).setView([23.685,90.3563],7);
       window.__heritageLeafletMap = map;
-      window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,updateWhenIdle:true,keepBuffer:2,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'}).addTo(map);
+      window.__heritageTileLayer = window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,updateWhenIdle:true,keepBuffer:3,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'}).addTo(map);
       madeFallback=true;
     }
     if (pins.length && container.querySelectorAll('.leaflet-marker-icon').length===0) {
@@ -110,11 +117,29 @@
         const marker=window.L.marker([Number(p.coords[0]),Number(p.coords[1])],{icon:markerIcon,title:p.name,alt:p.name});
         marker.bindPopup(popup(p),{maxWidth:290}); layer.addLayer(marker);
       });
-      layer.addTo(map); window.__heritageFallbackMarkerLayer=layer;
+      layer.addTo(map);
+      window.__heritageFallbackMarkerLayer=layer;
+      window.__heritageMarkerLayer=layer;
     }
     statusNote(madeFallback);
-    setTimeout(()=>{try{map.invalidateSize(true);}catch(_){}},120);
-    setTimeout(()=>{try{map.invalidateSize(true);}catch(_){}},700);
+    const refresh = () => {
+      try {
+        map.invalidateSize({pan:false,debounceMoveend:true});
+        if(window.__heritageTileLayer && typeof window.__heritageTileLayer.redraw==='function')window.__heritageTileLayer.redraw();
+      } catch(_){}
+    };
+    setTimeout(refresh,120);
+    setTimeout(refresh,500);
+    setTimeout(refresh,1100);
+    if(typeof ResizeObserver==='function' && !container.__heritageResizeObserver){
+      container.__heritageResizeObserver=new ResizeObserver(refresh);
+      container.__heritageResizeObserver.observe(container);
+    }
+    if(!container.__heritageResizeHandler){
+      container.__heritageResizeHandler=refresh;
+      window.addEventListener('resize',refresh,{passive:true});
+      window.addEventListener('pageshow',refresh);
+    }
     if (madeFallback) {
       const btn=document.createElement('button');
       btn.type='button'; btn.id='enhancedLocateMe'; btn.className='button button-dark button-small enhanced-locate'; btn.textContent='◎ আমার অবস্থান';

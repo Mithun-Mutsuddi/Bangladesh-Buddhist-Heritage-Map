@@ -6223,9 +6223,56 @@ function imageMarkup(place) {
   if (!media) return `<div class="place-art" aria-hidden="true"><span>${place.kind === 'প্রত্নস্থল' ? '▥' : place.kind === 'মঠ' ? '🪷' : '☸'}</span></div>`;
   return `<img src="${media.image}" alt="${escapeHtml(place.name)}-এর ছবি" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.style.display='none';this.parentElement.classList.add('image-failed');const art=document.createElement('div');art.className='place-art';art.setAttribute('aria-hidden','true');art.innerHTML='<span>☸</span>';this.parentElement.prepend(art)">`;
 }
+function normalizeHeritageSearch(value) {
+  return String(value == null ? '' : value)
+    .normalize('NFC')
+    .toLocaleLowerCase('bn')
+    .replace(/[০-৯]/g, digit => String('০১২৩৪৫৬৭৮৯'.indexOf(digit)))
+    .replace(/[^\p{L}\p{N}\s-]/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+const heritageSearchAliases = {
+  'somapura': 'paharpur paharpur vihara somapura mahavihara sompura buddhist monastery',
+  'shalban': 'shalban vihara mainamati comilla cumilla',
+  'kotila-mura': 'kotila mura mainamati cumilla comilla',
+  'mainamati': 'mainamati archaeology museum cumilla comilla',
+  'sitakot': 'sitakot vihara nawabganj dinajpur',
+  'vasu-vihara': 'vasu vihara bogura bogra',
+  'rajban': 'rajban vihara rangamati',
+  'golden-temple': 'golden temple buddha dhatu jadi bandarban',
+  'nandan-kanan': 'nandan kanan buddhist temple chittagong chattogram',
+  'ramu': 'ramu buddhist vihara coxs bazar',
+  'bikrampur-vihara': 'bikrampur buddhist vihara raghurampur munshiganj',
+  'nateshwar': 'nateshwar deul munshiganj'
+};
+function focusMapOnSearchResults(list, query) {
+  const status = byId('mapActionStatus');
+  if (!query) {
+    if (status && status.dataset.context === 'search') { status.textContent = ''; delete status.dataset.context; }
+    return;
+  }
+  const matches = Array.isArray(list) ? list : [];
+  const withCoords = matches.filter(place => Array.isArray(place.coords) &&
+    place.coords.length === 2 && place.coords.every(Number.isFinite));
+  if (status) {
+    status.dataset.context = 'search';
+    if (!matches.length) status.textContent = 'আপনার অনুসন্ধানে কোনো স্থান মেলেনি। বানান বা ইংরেজি/বাংলা নাম দিয়ে আবার খুঁজুন।';
+    else if (!withCoords.length) status.textContent = bnDigits(matches.length) + 'টি স্থান মিলেছে, তবে সেগুলোর নির্ভরযোগ্য স্থানাঙ্ক নেই। তালিকার কার্ড থেকে Google Maps-এ খুঁজুন।';
+    else status.textContent = bnDigits(matches.length) + 'টি স্থান মিলেছে; ' + bnDigits(withCoords.length) + 'টির পিন ম্যাপে দেখানো হচ্ছে।';
+  }
+  const activeMap = window.__heritageLeafletMap || map;
+  if (!activeMap || typeof L === 'undefined' || !withCoords.length) return;
+  if (withCoords.length === 1) {
+    activeMap.setView(withCoords[0].coords, Math.max(activeMap.getZoom(), 12), {animate:false});
+  } else if (withCoords.length <= 40) {
+    activeMap.fitBounds(L.latLngBounds(withCoords.map(place => place.coords)), {padding:[24,24], maxZoom:10, animate:false});
+  }
+}
 function renderPlaces(keepVisibleLimit = false) {
   if (!keepVisibleLimit) visiblePlaceLimit = placePageSize;
-  const searchText = byId('placeSearch').value.trim().toLocaleLowerCase('bn');
+  const rawSearchText = byId('placeSearch').value.trim();
+  const searchText = normalizeHeritageSearch(rawSearchText);
   const division = byId('divisionFilter').value;
   const category = byId('categoryFilter').value;
   const district = byId('districtFilter')?.value || 'all';
@@ -6233,7 +6280,11 @@ function renderPlaces(keepVisibleLimit = false) {
   const thana = byId('thanaFilter')?.value || 'all';
   const unionName = byId('unionFilter')?.value || 'all';
   const filtered = destinations.filter(place => {
-    const locationText = [place.name, place.district, place.division, place.upazila, place.thana, place.union, place.category, place.kind, place.summary].filter(Boolean).join(' ').toLocaleLowerCase('bn');
+    const locationText = normalizeHeritageSearch([
+      place.id, place.name, place.district, place.division, place.upazila, place.thana,
+      place.union, place.category, place.kind, place.summary, place.history,
+      place.sourceLabel, place.source, heritageSearchAliases[place.id]
+    ].filter(Boolean).join(' '));
     const matchesSearch = !searchText || locationText.includes(searchText);
     const matchesDivision = division === 'all' || place.division === division;
     const matchesDistrict = district === 'all' || place.district === district;
@@ -6268,6 +6319,7 @@ function renderPlaces(keepVisibleLimit = false) {
     moreButton.textContent = `আরও ${bnDigits(Math.min(placePageSize, filtered.length - shownCount))}টি স্থান দেখুন`;
   }
   updateMarkers(filtered);
+  focusMapOnSearchResults(filtered, rawSearchText);
   updateProgress();
 }
 function selectedPlace() { return destinations.find(place => place.id === activePlaceId) || null; }
@@ -6284,9 +6336,10 @@ function selectPlace(id, panMap = true, refreshList = true) {
     });
   }
   renderPlaceDetail(place);
-  if (map && panMap && Array.isArray(place.coords) && place.coords.length === 2 &&
+  const activeMap = window.__heritageLeafletMap || map;
+  if (activeMap && panMap && Array.isArray(place.coords) && place.coords.length === 2 &&
       place.coords.every(Number.isFinite)) {
-    map.setView(place.coords, Math.max(map.getZoom(), 10), { animate: true });
+    activeMap.setView(place.coords, Math.max(activeMap.getZoom(), 10), {animate:false});
   }
   if (window.matchMedia('(max-width: 800px)').matches && panMap) {
     byId('placeDetail').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
@@ -6335,6 +6388,39 @@ function renderPlaceDetail(place) {
     </div>
     <p class="detail-source">তথ্যসূত্র: <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceDisplayLabel)} ↗</a>${media ? ` · <a href="${media.creditUrl}" target="_blank" rel="noopener noreferrer">ছবির কৃতিত্ব ↗</a>` : ''}</p>`;
 }
+function refreshHeritageMapLayout() {
+  const container = byId('map');
+  const activeMap = window.__heritageLeafletMap || map;
+  if (!container || !activeMap) return;
+  const rect = container.getBoundingClientRect();
+  if (rect.width < 80 || rect.height < 120) return;
+  try {
+    activeMap.invalidateSize({pan:false, debounceMoveend:true});
+    if (window.__heritageTileLayer && typeof window.__heritageTileLayer.redraw === 'function') {
+      window.__heritageTileLayer.redraw();
+    }
+  } catch (error) {
+    console.warn('Map resize refresh deferred:', error);
+  }
+}
+window.refreshHeritageMapLayout = refreshHeritageMapLayout;
+function installMapResizeRecovery() {
+  const container = byId('map');
+  if (!container || container.dataset.resizeRecoveryInstalled === 'true') return;
+  container.dataset.resizeRecoveryInstalled = 'true';
+  const schedule = () => {
+    if (window.__heritageMapResizeTimer) clearTimeout(window.__heritageMapResizeTimer);
+    window.__heritageMapResizeTimer = setTimeout(refreshHeritageMapLayout, 90);
+  };
+  if (typeof ResizeObserver === 'function') {
+    window.__heritageMapResizeObserver = new ResizeObserver(schedule);
+    window.__heritageMapResizeObserver.observe(container);
+  }
+  window.addEventListener('resize', schedule, {passive:true});
+  window.addEventListener('pageshow', schedule);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) schedule(); });
+  [120, 500, 1100, 1800].forEach(delay => setTimeout(refreshHeritageMapLayout, delay));
+}
 function initMap() {
   const container = byId('map');
   if (typeof L === 'undefined') {
@@ -6345,13 +6431,14 @@ function initMap() {
   container.innerHTML = '';
   map = L.map('map', { scrollWheelZoom: false, preferCanvas: true }).setView([23.685, 90.3563], 7);
   window.__heritageLeafletMap = map;
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
+  window.__heritageTileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
     updateWhenIdle: true,
     updateWhenZooming: false,
-    keepBuffer: 2,
+    keepBuffer: 3,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'
   }).addTo(map);
+  installMapResizeRecovery();
   markerLayer = typeof L.markerClusterGroup === 'function'
     ? L.markerClusterGroup({
         chunkedLoading: true,
@@ -6379,7 +6466,9 @@ function initMap() {
   renderPlaces();
 }
 function updateMarkers(list) {
-  if (!map || !markerLayer) return;
+  const activeMap = window.__heritageLeafletMap || map;
+  const activeLayer = window.__heritageMarkerLayer || markerLayer;
+  if (!activeMap || !activeLayer || typeof L === 'undefined') return;
   const pins = list.filter(place => Array.isArray(place.coords) && place.coords.length === 2 &&
     place.coords.every(Number.isFinite)).map(place => {
     let marker = markerCache.get(place.id);
@@ -6391,63 +6480,68 @@ function updateMarkers(list) {
         iconAnchor: [17, 17],
         popupAnchor: [0, -18]
       });
-      marker = L.marker(place.coords, { icon });
-      marker.bindPopup(`<strong>${escapeHtml(place.name)}</strong><br>${escapeHtml(place.district)}, ${escapeHtml(place.division)}${(place.pinApproximate || place.verificationPending) ? '<br><em>পিন আনুমানিক / যাচাইাধীন</em>' : ''}<br><a href="${mapLinkFor(place)}" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>`);
+      marker = L.marker(place.coords, {icon, title:place.name, alt:place.name});
+      marker.bindPopup('<strong>' + escapeHtml(place.name) + '</strong><br>' +
+        escapeHtml(place.district || '') + ', ' + escapeHtml(place.division || '') +
+        ((place.pinApproximate || place.verificationPending) ? '<br><em>পিন আনুমানিক / যাচাইাধীন</em>' : '') +
+        '<br><a href="' + mapLinkFor(place) + '" target="_blank" rel="noopener noreferrer">Google Maps-এ স্থান / রুট খুঁজুন ↗</a>');
       marker.on('click', () => selectPlace(place.id, false, false));
       markerCache.set(place.id, marker);
     }
     return marker;
   });
-  markerLayer.clearLayers();
-  if (typeof markerLayer.addLayers === 'function') markerLayer.addLayers(pins);
-  else pins.forEach(marker => markerLayer.addLayer(marker));
+  activeLayer.clearLayers();
+  if (typeof activeLayer.addLayers === 'function') activeLayer.addLayers(pins);
+  else pins.forEach(marker => activeLayer.addLayer(marker));
   if (userPosition) addUserMarker(userPosition.lat, userPosition.lng);
 }
 function addUserMarker(lat, lng) {
   const activeMap = window.__heritageLeafletMap || map;
   if (!activeMap || typeof L === 'undefined') return;
-  userPosition = { lat, lng };
-  if (userMarker) userMarker.remove();
-  const icon = L.divIcon({ className: '', html: '<div class="user-map-pin"></div>', iconSize: [18, 18], iconAnchor: [9, 9] });
-  userMarker = L.marker([lat, lng], { icon }).addTo(activeMap).bindPopup('আপনার বর্তমান অবস্থান');
+  userPosition = {lat, lng};
+  const previous = window.__heritageUserLocationMarker || userMarker;
+  if (previous) { try { previous.remove(); } catch (_) {} }
+  const icon = L.divIcon({className:'', html:'<div class="user-map-pin"></div>', iconSize:[18,18], iconAnchor:[9,9]});
+  userMarker = L.marker([lat,lng], {icon}).addTo(activeMap).bindPopup('আপনার বর্তমান অবস্থান');
+  window.__heritageUserLocationMarker = userMarker;
 }
 function requestLocation(onSuccess, onFailure) {
+  const status = byId('mapActionStatus');
+  const report = (message, kind='info') => {
+    if (status) { status.textContent = message; status.dataset.kind = kind; status.dataset.context = 'location'; }
+  };
   if (!navigator.geolocation) {
     const reason = 'এই ব্রাউজারে অবস্থান শনাক্ত করার সুবিধা নেই।';
+    report(reason,'error');
     if (typeof onFailure === 'function') onFailure(reason); else alert(reason);
     return;
   }
   if (!window.isSecureContext) {
-    const reason = 'নিরাপত্তার কারণে অবস্থান জানতে HTTPS সাইট খুলুন; GitHub Pages-এর HTTPS ঠিকানা ব্যবহার করুন।';
+    const reason = 'অবস্থান জানার জন্য HTTPS ঠিকানা খুলুন; GitHub Pages-এর secure URL ব্যবহার করুন।';
+    report(reason,'error');
     if (typeof onFailure === 'function') onFailure(reason); else alert(reason);
     return;
   }
   const button = byId('locateMe');
   if (button) { button.disabled = true; button.textContent = 'অবস্থান খোঁজা হচ্ছে…'; }
+  report('আপনার ডিভাইসের অবস্থানের অনুমতি চাওয়া হয়েছে…');
   navigator.geolocation.getCurrentPosition(position => {
-    const lat = position.coords.latitude;
-    const lng = position.coords.longitude;
+    const lat = position.coords.latitude, lng = position.coords.longitude;
+    addUserMarker(lat,lng);
     const activeMap = window.__heritageLeafletMap || map;
-    if (activeMap && typeof L !== 'undefined') {
-      addUserMarker(lat, lng);
-      activeMap.setView([lat, lng], 12, { animate: true });
-    } else {
-      const status = byId('mapRuntimeStatus');
-      const url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(lat + ',' + lng);
-      if (status) status.innerHTML = 'আপনার অবস্থান পাওয়া গেছে: ' + lat.toFixed(5) + ', ' + lng.toFixed(5) + ' · <a href="' + url + '" target="_blank" rel="noopener noreferrer">Google Maps-এ খুলুন ↗</a>';
-      else alert('আপনার অবস্থান: ' + lat.toFixed(5) + ', ' + lng.toFixed(5) + '\nGoogle Maps: ' + url);
-    }
+    if (activeMap) activeMap.setView([lat,lng],12,{animate:false});
+    report('আপনার অবস্থান পাওয়া গেছে (' + lat.toFixed(5) + ', ' + lng.toFixed(5) + ')।','success');
     if (button) { button.disabled = false; button.textContent = '◎ আমার অবস্থান'; }
-    if (typeof onSuccess === 'function') onSuccess(lat, lng);
+    if (typeof onSuccess === 'function') onSuccess(lat,lng);
   }, error => {
     if (button) { button.disabled = false; button.textContent = '◎ আমার অবস্থান'; }
     const reason = error.code === 1
-      ? 'অবস্থান ব্যবহারের অনুমতি দেওয়া হয়নি। ব্রাউজার Site settings → Location → Allow করুন।'
-      : error.code === 3 ? 'অবস্থান পাওয়ার সময় শেষ হয়েছে; Location চালু করে আবার চেষ্টা করুন।'
-      : 'ডিভাইসের অবস্থান পাওয়া যায়নি; GPS/Location চালু আছে কি না দেখুন।';
-    if (typeof onFailure === 'function') onFailure(reason);
-    else alert(reason);
-  }, { enableHighAccuracy: false, timeout: 15000, maximumAge: 60000 });
+      ? 'অবস্থান অনুমতি বন্ধ আছে। ব্রাউজারের Site settings → Location → Allow করে আবার চাপুন।'
+      : error.code === 3 ? 'অবস্থান পাওয়ার সময় শেষ হয়েছে। GPS/Location চালু করে আবার চেষ্টা করুন।'
+      : 'ডিভাইসের অবস্থান পাওয়া যায়নি। GPS/Location চালু আছে কি না দেখুন।';
+    report(reason,'error');
+    if (typeof onFailure === 'function') onFailure(reason); else alert(reason);
+  }, {enableHighAccuracy:false, timeout:15000, maximumAge:60000});
 }
 function toggleVisited(id) {
   if (visitedIds.has(id)) visitedIds.delete(id); else visitedIds.add(id);
