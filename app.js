@@ -6344,6 +6344,7 @@ function initMap() {
   // Clear the static loading overlay before Leaflet creates its map panes.
   container.innerHTML = '';
   map = L.map('map', { scrollWheelZoom: false, preferCanvas: true }).setView([23.685, 90.3563], 7);
+  window.__heritageLeafletMap = map;
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     updateWhenIdle: true,
@@ -6369,6 +6370,7 @@ function initMap() {
       })
     : L.layerGroup();
   markerLayer.addTo(map);
+  window.__heritageMarkerLayer = markerLayer;
   map.whenReady(() => {
     setTimeout(() => map?.invalidateSize(), 120);
     setTimeout(() => map?.invalidateSize(), 650);
