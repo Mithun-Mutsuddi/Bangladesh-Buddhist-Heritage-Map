@@ -37,10 +37,23 @@ function addCss(){
  }
  if(!cssLoaded){
   cssLoaded=true;
+  function minimalCss(){
+   if($('heritageLeafletMinimalCss'))return;
+   var s=document.createElement('style');s.id='heritageLeafletMinimalCss';
+   s.textContent='.leaflet-container{overflow:hidden;position:relative;outline:0}.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0}.leaflet-tile{max-width:none!important;max-height:none!important}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}.leaflet-control{position:relative;z-index:800;pointer-events:auto;float:left;clear:both}.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}.leaflet-top .leaflet-control{margin-top:10px}.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}.leaflet-marker-icon,.leaflet-marker-shadow{display:block}.leaflet-control-zoom a{display:block;width:30px;height:30px;line-height:30px;text-align:center;background:#fff;color:#333;text-decoration:none}';
+   document.head.appendChild(s);
+  }
+  function backupCss(){
+   if(document.querySelector('link[data-heritage-map-rescue-css-backup]'))return;
+   var b=document.createElement('link');b.rel='stylesheet';b.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css';b.setAttribute('data-heritage-map-rescue-css-backup','1');
+   var loaded=false;b.onload=function(){loaded=true;};b.onerror=minimalCss;document.head.appendChild(b);
+   setTimeout(function(){if(!loaded)minimalCss();},4200);
+  }
   var l=document.createElement('link');l.rel='stylesheet';l.href='https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css';l.setAttribute('data-heritage-map-rescue-css','1');
   var custom=document.querySelector('link[href*="styles.css"]');
+  var loaded=false;l.onload=function(){loaded=true;};l.onerror=backupCss;
   if(custom&&custom.parentNode)custom.parentNode.insertBefore(l,custom);else document.head.appendChild(l);
-  l.onerror=function(){var b=document.createElement('link');b.rel='stylesheet';b.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css';document.head.appendChild(b);};
+  setTimeout(function(){if(!loaded)backupCss();},4200);
  }
 }
 function loadLib(url){

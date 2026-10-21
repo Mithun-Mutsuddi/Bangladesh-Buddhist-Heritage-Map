@@ -6732,7 +6732,7 @@ function openMapServiceSearch(kind){
   navigator.geolocation.getCurrentPosition(pos=>{
     userPosition={lat:pos.coords.latitude,lng:pos.coords.longitude};
     const url=makeUrl(userPosition.lat+','+userPosition.lng);
-    if(tab&&!tab.closed)tab.location.href=url;else window.open(url,'_blank','noopener,noreferrer');
+    if(tab&&!tab.closed)tab.location.href=url;else open(url);
     report('আপনার অবস্থানের কাছে সেবা খোঁজা হয়েছে। Google Maps-এ দূরত্ব ও সময় যাচাই করুন।');
   },()=>{
     fallback();report('অবস্থান পাওয়া যায়নি; বাংলাদেশের সাধারণ অনুসন্ধান খোলা হয়েছে। Location permission চালু করে আবার চেষ্টা করুন।');
