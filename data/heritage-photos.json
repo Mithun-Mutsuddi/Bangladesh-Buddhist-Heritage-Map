@@ -1,0 +1,60 @@
+{
+ "schema_version": "2026-10-21.heritage-photos.v1",
+ "license_note": "উইকিমিডিয়া কমন্স থেকে CC/পাবলিক ডোমেইন লাইসেন্সের ছবি; প্রতিটি ছবির উৎস ও ফটোগ্রাফারের নাম দেওয়া আছে।",
+ "photos": {
+  "somapura": {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/First_level_plinth_at_Somapura_Mahavihara.jpg/960px-First_level_plinth_at_Somapura_Mahavihara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Man · CC BY 2.0",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:First_level_plinth_at_Somapura_Mahavihara.jpg",
+   "title": "File:First level plinth at Somapura Mahavihara.jpg"
+  },
+  "shalban": {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Shalbon-vihara-05-by-Sakib-Ahmed-Nasim.jpg/960px-Shalbon-vihara-05-by-Sakib-Ahmed-Nasim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Sakib Ahmed Nasim · CC BY-SA 3.0",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Shalbon-vihara-05-by-Sakib-Ahmed-Nasim.jpg",
+   "title": "File:Shalbon-vihara-05-by-Sakib-Ahmed-Nasim.jpg"
+  },
+  "mainamati": {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/%E0%A6%AE%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A6%BE%E0%A6%AE%E0%A6%A4%E0%A6%BF_%E0%A6%B0%E0%A6%BE%E0%A6%A3%E0%A7%80%E0%A6%B0_%E0%A6%95%E0%A7%81%E0%A6%A0%E0%A6%BF%E0%A6%B0_%28Maynamati_Ranir_Kuthir%29.jpg/960px-%E0%A6%AE%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A6%BE%E0%A6%AE%E0%A6%A4%E0%A6%BF_%E0%A6%B0%E0%A6%BE%E0%A6%A3%E0%A7%80%E0%A6%B0_%E0%A6%95%E0%A7%81%E0%A6%A0%E0%A6%BF%E0%A6%B0_%28Maynamati_Ranir_Kuthir%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "আরিফ হোসেন সাঈদ · CC BY-SA 4.0",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:%E0%A6%AE%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A6%BE%E0%A6%AE%E0%A6%A4%E0%A6%BF_%E0%A6%B0%E0%A6%BE%E0%A6%A3%E0%A7%80%E0%A6%B0_%E0%A6%95%E0%A7%81%E0%A6%A0%E0%A6%BF%E0%A6%B0_(Maynamati_Ranir_Kuthir).jpg",
+   "title": "File:ময়নামতি রাণীর কুঠির (Maynamati Ranir Kuthir).jpg"
+  },
+  "rajban": {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Rajban_Bihar_Buddhist_temple_in_Rangamati_District.jpg/960px-Rajban_Bihar_Buddhist_temple_in_Rangamati_District.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Sharmin Juthy · CC BY 3.0",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Rajban_Bihar_Buddhist_temple_in_Rangamati_District.jpg",
+   "title": "File:Rajban Bihar Buddhist temple in Rangamati District.jpg"
+  },
+  "dharmarajika": {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Dharmarajika_Buddhist_Monastery.jpg/960px-Dharmarajika_Buddhist_Monastery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Prince Roy · CC BY 2.0",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Dharmarajika_Buddhist_Monastery.jpg",
+   "title": "File:Dharmarajika Buddhist Monastery.jpg"
+  },
+  "vasu": {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Vasu_Vihara.jpg/960px-Vasu_Vihara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Jubair1985 · CC BY-SA 4.0",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Vasu_Vihara.jpg",
+   "title": "File:Vasu Vihara.jpg"
+  },
+  "jagaddala": {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0_%E0%A6%9A%E0%A6%BE%E0%A6%B0_%E0%A6%95%E0%A7%8B%E0%A6%A3%E0%A7%87_%E0%A6%AA%E0%A6%A6%E0%A7%8D%E0%A6%AE_%E0%A6%AB%E0%A7%81%E0%A6%B2%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A6%BE%E0%A6%AA%E0%A6%A1%E0%A6%BC%E0%A6%BF%E0%A6%B0_%E0%A6%AE%E0%A6%A4%E0%A7%8B_%E0%A6%A8%E0%A6%95%E0%A6%B6%E0%A6%BE_%E0%A6%95%E0%A6%B0%E0%A6%BE_%E0%A6%9B%E0%A6%BF%E0%A6%B2.jpg/960px-%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0_%E0%A6%9A%E0%A6%BE%E0%A6%B0_%E0%A6%95%E0%A7%8B%E0%A6%A3%E0%A7%87_%E0%A6%AA%E0%A6%A6%E0%A7%8D%E0%A6%AE_%E0%A6%AB%E0%A7%81%E0%A6%B2%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A6%BE%E0%A6%AA%E0%A6%A1%E0%A6%BC%E0%A6%BF%E0%A6%B0_%E0%A6%AE%E0%A6%A4%E0%A7%8B_%E0%A6%A8%E0%A6%95%E0%A6%B6%E0%A6%BE_%E0%A6%95%E0%A6%B0%E0%A6%BE_%E0%A6%9B%E0%A6%BF%E0%A6%B2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Najmul Huda · CC BY-SA 4.0",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0_%E0%A6%9A%E0%A6%BE%E0%A6%B0_%E0%A6%95%E0%A7%8B%E0%A6%A3%E0%A7%87_%E0%A6%AA%E0%A6%A6%E0%A7%8D%E0%A6%AE_%E0%A6%AB%E0%A7%81%E0%A6%B2%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A6%BE%E0%A6%AA%E0%A6%A1%E0%A6%BC%E0%A6%BF%E0%A6%B0_%E0%A6%AE%E0%A6%A4%E0%A7%8B_%E0%A6%A8%E0%A6%95%E0%A6%B6%E0%A6%BE_%E0%A6%95%E0%A6%B0%E0%A6%BE_%E0%A6%9B%E0%A6%BF%E0%A6%B2.jpg",
+   "title": "File:বিহারের চার কোণে পদ্ম ফুলের পাপড়ির মতো নকশা করা ছিল.jpg"
+  },
+  "bhitargarh": {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E0%A6%AD%E0%A6%BF%E0%A6%A4%E0%A6%B0%E0%A6%97%E0%A6%A1%E0%A6%BC_%E0%A6%A6%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%97_%E0%A6%A8%E0%A6%97%E0%A6%B0%E0%A7%80%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%B0_%E0%A6%AB%E0%A6%B2%E0%A6%95.jpg/960px-%E0%A6%AD%E0%A6%BF%E0%A6%A4%E0%A6%B0%E0%A6%97%E0%A6%A1%E0%A6%BC_%E0%A6%A6%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%97_%E0%A6%A8%E0%A6%97%E0%A6%B0%E0%A7%80%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%B0_%E0%A6%AB%E0%A6%B2%E0%A6%95.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Najmul Huda · CC BY-SA 4.0",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:%E0%A6%AD%E0%A6%BF%E0%A6%A4%E0%A6%B0%E0%A6%97%E0%A6%A1%E0%A6%BC_%E0%A6%A6%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%97_%E0%A6%A8%E0%A6%97%E0%A6%B0%E0%A7%80%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%B0_%E0%A6%AB%E0%A6%B2%E0%A6%95.jpg",
+   "title": "File:ভিতরগড় দুর্গ নগরীর প্রস্তর ফলক.jpg"
+  },
+  "halud-vihara": {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Halud_Vihara%2C_Archaeological_site_of_8th_-_9th_century_-_panoramio.jpg/960px-Halud_Vihara%2C_Archaeological_site_of_8th_-_9th_century_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "credit": "Mohammad Mahmodul ha… · CC BY 3.0",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Halud_Vihara,_Archaeological_site_of_8th_-_9th_century_-_panoramio.jpg",
+   "title": "File:Halud Vihara, Archaeological site of 8th - 9th century - panoramio.jpg"
+  }
+ }
+}

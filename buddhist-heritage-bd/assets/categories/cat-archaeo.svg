@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200" role="img" aria-label="প্রত্নাঞ্চল ও প্রত্ন নিদর্শন — শ্রেণি-চিত্রণ">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf7ee"/><stop offset="1" stop-color="#e9e0cc"/></linearGradient></defs>
+<rect width="300" height="200" fill="url(#g)"/>
+<circle cx="150" cy="120" r="74" fill="#7a5230" opacity=".07"/>
+<path d="M96 156 h108 v10 h-108z" fill="#7a5230" opacity=".9"/>
+<path d="M104 156 v-24 h92 v24z" fill="#7a5230" opacity=".55"/>
+<path d="M116 132 v-22 h68 v22z" fill="#7a5230" opacity=".8"/>
+<path d="M130 110 v-18 h40 v18z" fill="#7a5230"/>
+<rect x="144" y="78" width="12" height="14" fill="#7a5230"/>
+<path d="M120 166 l14 -8 M180 166 l-14 -8" stroke="#7a5230" stroke-width="3" opacity=".5"/>
+<text x="150" y="188" text-anchor="middle" font-family="Noto Sans Bengali, sans-serif" font-size="12.5" fill="#7a5230">প্রত্নাঞ্চল ও প্রত্ন নিদর্শন</text>
+</svg>

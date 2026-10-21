@@ -6365,6 +6365,7 @@ function contactMarkup(place) {
   return `<p class="detail-contact">☎ ${parts.join('<br>')}</p>`;
 }
 function renderPlaceDetail(place) {
+  window.currentPlace = place;
   const media = mediaFor(place);
   const visited = visitedIds.has(place.id);
   const inTrip = itineraryIds.has(place.id);
@@ -6407,6 +6408,7 @@ function renderPlaceDetail(place) {
       <button type="button" data-action="itinerary" data-id="${place.id}">${inTrip ? '✓ তালিকায় আছে' : '+ তালিকায় যোগ'}</button>
     </div>
     <p class="detail-source">তথ্যসূত্র: <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceDisplayLabel)} ↗</a>${media ? ` · <a href="${media.creditUrl}" target="_blank" rel="noopener noreferrer">ছবির কৃতিত্ব ↗</a>` : ''}</p>`;
+  document.dispatchEvent(new CustomEvent('heritage-detail-rendered', { detail: { id: place.id } }));
 }
 function refreshHeritageMapLayout() {
   const container = byId('map');

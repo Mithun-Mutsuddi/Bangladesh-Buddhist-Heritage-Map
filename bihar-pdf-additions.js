@@ -43,7 +43,8 @@
     vihara: 'বিহার',
     cremat: 'শশ্মান',
     verify: 'যাচাইধীন/অতিরিক্ত সূত্র প্রয়োজন',
-    museum: 'সংগ্রহশালা ও সংরক্ষণ'
+    museum: 'সংগ্রহশালা ও সংরক্ষণ',
+    archaeo: 'প্রত্নাঞ্চল ও প্রত্ন নিদর্শন'
   };
   var CAT_LIST = Object.keys(CATS).map(function (k) { return CATS[k]; });
   /* শ্রেণি-ভিত্তিক নিজস্ব চিত্রণ (ফটো নয়) — প্রতিটি এন্ট্রিতে অন্তত একটি ভিজুয়াল থাকে */
@@ -54,6 +55,7 @@
   CAT_ART[CATS.welfare] = 'cat-welfare'; CAT_ART[CATS.edu] = 'cat-edu';
   CAT_ART[CATS.cremat] = 'cat-cremat'; CAT_ART[CATS.village] = 'cat-village';
   CAT_ART[CATS.museum] = 'cat-museum'; CAT_ART[CATS.elder] = 'cat-elder';
+  CAT_ART[CATS.archaeo] = 'cat-archaeo';
   function artFor(category) {
     var key = CAT_ART[category];
     return key ? 'buddhist-heritage-bd/assets/categories/' + key + '.svg' : null;
@@ -69,7 +71,8 @@
     if (/জাদী|জাদি|স্তূপ|স্মৃতিচিহ্ন|ঢিবি|মুড়া/.test(t)) return CATS.relic;
     if (/পালি\s*টোল|স্কুল|কলেজ|বিশ্ববিদ্যাল|শিক্ষা|ক্রীড়া|সাংস্কৃতিক|কৃষ্টি/.test(t)) return CATS.edu;
     if (/সংঘ|সমিতি|সংগঠন|ফেডারেশন|পরিষদ|কমিটি|মঠ/.test(t)) return CATS.org;
-    if (/প্রত্নস্থল|মহাবিহার|সংগ্রহশালা|জাদুঘর|প্রত্ন/.test(t)) return CATS.museum;
+    if (/প্রত্নাঞ্চল|প্রত্ননিদর্শন|প্রত্ন নিদর্শন|প্রত্নঢিবি|ঢিবি|মুড়া|প্রত্নস্থল|প্রত্ন/.test(t)) return CATS.archaeo;
+    if (/মহাবিহার|সংগ্রহশালা|জাদুঘর/.test(t)) return CATS.museum;
     if (/পল্লী|লোকালয়|কমিউনিটি|গ্রাম/.test(t)) return CATS.village;
     if (/যাচাই|লোকধর্ম|গবেষণা/.test(t)) return CATS.verify;
     return CATS.vihara;
