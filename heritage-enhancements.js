@@ -181,8 +181,6 @@
       let p=selectedCard?byPlaceId(selectedCard.dataset.placeCard):null;
       if(!p)p=places().find(site=>site.name===heading.textContent)||null;
       if(!p)return;
-      const article=(window.heritageSeoContent||{})[p.id];
-      if(!article)return;
       const existing=detail.querySelector('.seo-longform');
       if(existing&&existing.dataset.seoId===p.id)return;
       if(existing)existing.remove();
@@ -190,31 +188,49 @@
       section.className='seo-longform';
       section.dataset.seoId=p.id;
       const title=document.createElement('h4');
-      title.textContent=article.title||p.name;
+      title.textContent='ইতিহাস ও বিস্তারিত ভ্রমণ গাইড';
       section.append(title);
-      const status=document.createElement('p');
-      status.className='seo-editorial-note';
-      status.textContent=article.editorial_status==='draft-needs-human-review'
-        ? 'সম্পাদকীয় খসড়া · প্রকাশের আগে ঐতিহাসিক তথ্য ও সূত্র মানবসম্পাদনায় যাচাই করুন।'
-        : 'ঐতিহাসিক তথ্য ও প্রবেশ-সংক্রান্ত তথ্যের জন্য সংযুক্ত সূত্র যাচাই করুন।';
-      section.append(status);
-      String(article.content||'').split(/\\n\\s*\\n/).filter(Boolean).forEach(text=>{
-        const paragraph=document.createElement('p');
-        paragraph.textContent=text;
-        section.append(paragraph);
+      const intro=document.createElement('p');
+      intro.className='seo-editorial-note';
+      intro.textContent='স্থানভিত্তিক দীর্ঘ নিবন্ধটি পড়তে ক্লিক করুন। কিছু লেখা গবেষণার খসড়া; অনিশ্চিত তারিখ, প্রত্নতাত্ত্বিক দাবি, প্রবেশমূল্য ও GPS আগে যাচাই করুন।';
+      section.append(intro);
+      const button=document.createElement('button');
+      button.type='button';button.className='seo-load-button';button.textContent='সম্পূর্ণ ইতিহাস ও ভ্রমণ নির্দেশিকা পড়ুন ↓';
+      const status=document.createElement('p');status.className='seo-load-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');
+      button.addEventListener('click',async()=>{
+        button.disabled=true;button.textContent='নিবন্ধ লোড হচ্ছে…';status.textContent='';
+        try{
+          if(typeof window.loadHeritageSeoArticle!=='function')throw new Error('SEO loader unavailable');
+          const article=await window.loadHeritageSeoArticle(p.id);
+          if(!article)throw new Error('এই স্থানের নিবন্ধ পাওয়া যায়নি');
+          section.querySelectorAll('.seo-article-paragraph,.seo-source-links,.seo-article-title,.seo-article-status').forEach(node=>node.remove());
+          const articleTitle=document.createElement('h4');articleTitle.className='seo-article-title';articleTitle.textContent=article.title||p.name;
+          section.insertBefore(articleTitle,button);
+          const editorial=document.createElement('p');editorial.className='seo-editorial-note seo-article-status';
+          editorial.textContent=String(article.editorial_status||'').startsWith('draft')?'সম্পাদকীয় খসড়া · প্রকাশের আগে ঐতিহাসিক তথ্য, স্থানাঙ্ক ও সূত্র মানবসম্পাদনায় যাচাই করুন।':'উৎস-সংযুক্ত তথ্য · যাত্রার আগে পরিবর্তনশীল তথ্য যাচাই করুন।';
+          section.insertBefore(editorial,button);
+          String(article.content||'').split(/\\n\\s*\\n/).filter(Boolean).forEach(text=>{
+            const paragraph=document.createElement('p');paragraph.className='seo-article-paragraph';paragraph.textContent=text;section.insertBefore(paragraph,button);
+          });
+          const urls=Array.isArray(article.sources)?article.sources:[];
+          if(urls.length){
+            const links=document.createElement('div');links.className='seo-source-links';
+            urls.filter(Boolean).slice(0,6).forEach((source,index)=>{
+              const url=typeof source==='string'?source:source.url;
+              if(!url)return;
+              const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='তথ্যসূত্র '+(index+1)+' ↗';links.append(link);
+            });
+            section.insertBefore(links,button);
+          }
+          button.textContent='নিবন্ধ লোড হয়েছে ✓';button.disabled=true;button.setAttribute('aria-label','দীর্ঘ নিবন্ধ লোড করা হয়েছে');
+          intro.remove();status.textContent='';
+        }catch(error){
+          console.warn('SEO article could not be loaded',error);
+          button.disabled=false;button.textContent='আবার চেষ্টা করুন / Retry';
+          status.textContent='নিবন্ধ লোড হয়নি। সংযোগ যাচাই করে আবার চেষ্টা করুন।';
+        }
       });
-      const urls=Array.isArray(article.sources)?article.sources:[];
-      const links=document.createElement('div');
-      links.className='seo-source-links';
-      urls.filter(Boolean).slice(0,6).forEach((url,index)=>{
-        const anchor=document.createElement('a');
-        anchor.href=String(url);
-        anchor.target='_blank';
-        anchor.rel='noopener noreferrer';
-        anchor.textContent='তথ্যসূত্র '+(index+1)+' ↗';
-        links.append(anchor);
-      });
-      if(urls.length)section.append(links);
+      section.append(button,status);
       detail.append(section);
     };
     const observer=new MutationObserver(()=>render());
