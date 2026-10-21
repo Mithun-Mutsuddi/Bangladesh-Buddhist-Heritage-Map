@@ -86,6 +86,8 @@
     // Recreate the instance whenever its panes are no longer inside the visible map container.
     if(map && !container.querySelector('.leaflet-pane')){
       try{map.remove();}catch(_){}
+      // Leaflet sets this internal guard on the container; clear it if remove() was interrupted.
+      container._leaflet_id = undefined;
       map=null;
       window.__heritageLeafletMap=null;
       window.__heritageMarkerLayer=null;

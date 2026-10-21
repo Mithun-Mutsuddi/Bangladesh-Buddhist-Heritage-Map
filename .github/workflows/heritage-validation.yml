@@ -21,3 +21,8 @@ jobs:
         run: python tools/validate_heritage_data.py
       - name: Compile Python source
         run: python -m compileall -q server tools
+      - name: Check JavaScript syntax
+        run: |
+          node --check app.js
+          node --check heritage-enhancements.js
+          node --check seo-content.js
