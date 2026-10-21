@@ -19,8 +19,11 @@
       const el = document.createElement('section');
       el.id = 'festival-tracker'; el.className = 'upgrade-section wrap';
       el.innerHTML = '<div class="upgrade-heading"><div><p class="upgrade-kicker">CULTURE & CALENDAR</p><h2>বৌদ্ধ উৎসব ও সাংস্কৃতিক ক্যালেন্ডার</h2><p>বুদ্ধ পূর্ণিমা, কঠিন চীবর দান, মাঘী পূর্ণিমা, আষাঢ়ী পূর্ণিমা, বর্ষাবাস ও স্থানীয় বিহার-অনুষ্ঠান। চন্দ্রপঞ্জিকা ও স্থানীয় সংঘের ঘোষণায় দিন বদলাতে পারে।</p></div><span class="upgrade-emblem" aria-hidden="true">☸</span></div><div class="upgrade-toolbar"><label class="upgrade-search"><span>⌕</span><input id="festivalSearch" type="search" placeholder="উৎসব খুঁজুন / Search festivals" aria-label="উৎসব খুঁজুন"></label><label class="upgrade-select"><span>ভাষা / Language</span><select id="festivalLanguage"><option value="bn">বাংলা</option><option value="en">English</option></select></label></div><p class="upgrade-caution">তারিখের সতর্কতা: কোনো Gregorian তারিখ এখানে অনুমান করে দেখানো হয় না। ভ্রমণের আগে সংশ্লিষ্ট বিহারের আনুষ্ঠানিক ঘোষণা যাচাই করুন।</p><div id="festivalGrid" class="festival-grid" aria-live="polite"><div class="upgrade-skeleton">উৎসবের তথ্য লোড হচ্ছে…</div></div>';
+      const explore = $('explore');
       const map = $('map-section');
-      if (map) map.after(el); else ($('historical-archive') || document.querySelector('footer'))?.before(el);
+      if (explore) explore.after(el);
+      else if (map) map.closest('section')?.after(el);
+      else ($('historical-archive') || document.querySelector('footer'))?.before(el);
     }
     if (!$('travel-guide')) {
       const el = document.createElement('section');
