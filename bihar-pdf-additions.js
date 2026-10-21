@@ -32,57 +32,75 @@
      দুই ক্যাটাগরিতে দেখা যায় না।
   ------------------------------------------------------------------ */
   var CATS = {
-    welfare: 'সামাজিক সেবা ও কল্যাণ প্রতিষ্ঠান (অনাথালয়, শিশু সদন)',
-    org: 'বৌদ্ধ সংঘ/সমিতি/সংগঠনসমূহ',
-    elder: 'বৃদ্ধাশ্রম',
-    edu: 'বৌদ্ধ শিক্ষা প্রতিষ্ঠান (পালি টোল, স্কুল, কলেজ, ক্রীড়া ও সাংস্কৃতিক)',
-    village: 'লোকালয়/পল্লী',
-    relic: 'বুদ্ধ স্মৃতিচিহ্ন/জাদী/স্তূপ',
-    medit: 'ভাবনাকেন্দ্র',
-    forest: 'অরণ্যকুঠি',
-    vihara: 'বিহার',
-    cremat: 'শশ্মান',
-    verify: 'যাচাইধীন/অতিরিক্ত সূত্র প্রয়োজন',
-    museum: 'সংগ্রহশালা ও সংরক্ষণ',
-    archaeo: 'প্রত্নাঞ্চল ও প্রত্ন নিদর্শন'
+    vihara:   'বিহার',
+    archaeo:  'প্রত্নাঞ্চল ও প্রত্ন নিদর্শন',
+    relic:    'বুদ্ধ স্মৃতিচিহ্ন/জাদী/স্তূপ',
+    medit:    'ভাবনাকেন্দ্র',
+    forest:   'অরণ্যকুঠি',
+    org:      'বৌদ্ধ সংঘ/সমিতি/সংগঠনসমূহ',
+    social:   'বৌদ্ধ সামাজিক প্রতিষ্ঠান',
+    art:      'বৌদ্ধ ললিতকলা ও সাংস্কৃতিক প্রতিষ্ঠান',
+    kirtan:   'কীর্তনীয়া ও সংগীতশিল্পী',
+    business: 'বৌদ্ধ ব্যবসা প্রতিষ্ঠান',
+    publish:  'বৌদ্ধ প্রকাশনা ও প্রকাশক',
+    edu:      'বৌদ্ধ শিক্ষা প্রতিষ্ঠান (পালি টোল, স্কুল, কলেজ, ক্রীড়া ও সাংস্কৃতিক)',
+    museum:   'সংগ্রহশালা ও সংরক্ষণ',
+    welfare:  'সামাজিক সেবা ও কল্যাণ প্রতিষ্ঠান (অনাথালয়, শিশু সদন)',
+    elder:    'বৃদ্ধাশ্রম',
+    cremat:   'শশ্মান',
+    village:  'লোকালয়/পল্লী',
+    verify:   'যাচাইধীন/অতিরিক্ত সূত্র প্রয়োজন'
   };
   var CAT_LIST = Object.keys(CATS).map(function (k) { return CATS[k]; });
-  /* শ্রেণি-ভিত্তিক নিজস্ব চিত্রণ (ফটো নয়) — প্রতিটি এন্ট্রিতে অন্তত একটি ভিজুয়াল থাকে */
-  var CAT_ART = {};
-  CAT_ART[CATS.vihara] = 'cat-vihara'; CAT_ART[CATS.verify] = 'cat-verify';
-  CAT_ART[CATS.forest] = 'cat-forest'; CAT_ART[CATS.medit] = 'cat-medit';
-  CAT_ART[CATS.relic] = 'cat-relic';   CAT_ART[CATS.org] = 'cat-org';
-  CAT_ART[CATS.welfare] = 'cat-welfare'; CAT_ART[CATS.edu] = 'cat-edu';
-  CAT_ART[CATS.cremat] = 'cat-cremat'; CAT_ART[CATS.village] = 'cat-village';
-  CAT_ART[CATS.museum] = 'cat-museum'; CAT_ART[CATS.elder] = 'cat-elder';
-  CAT_ART[CATS.archaeo] = 'cat-archaeo';
+  var CAT_ART = {
+    'cat-vihara': CATS.vihara, 'cat-archaeo': CATS.archaeo
+  };
+  var ART_BY_CAT = {};
+  ART_BY_CAT[CATS.vihara] = 'cat-vihara'; ART_BY_CAT[CATS.archaeo] = 'cat-archaeo';
+  ART_BY_CAT[CATS.relic] = 'cat-relic'; ART_BY_CAT[CATS.medit] = 'cat-medit';
+  ART_BY_CAT[CATS.forest] = 'cat-forest'; ART_BY_CAT[CATS.org] = 'cat-org';
+  ART_BY_CAT[CATS.social] = 'cat-org'; ART_BY_CAT[CATS.art] = 'cat-edu';
+  ART_BY_CAT[CATS.kirtan] = 'cat-edu'; ART_BY_CAT[CATS.business] = 'cat-village';
+  ART_BY_CAT[CATS.publish] = 'cat-edu'; ART_BY_CAT[CATS.edu] = 'cat-edu';
+  ART_BY_CAT[CATS.museum] = 'cat-museum'; ART_BY_CAT[CATS.welfare] = 'cat-welfare';
+  ART_BY_CAT[CATS.elder] = 'cat-elder'; ART_BY_CAT[CATS.cremat] = 'cat-cremat';
+  ART_BY_CAT[CATS.village] = 'cat-village'; ART_BY_CAT[CATS.verify] = 'cat-verify';
   function artFor(category) {
-    var key = CAT_ART[category];
+    var key = ART_BY_CAT[category];
     return key ? 'buddhist-heritage-bd/assets/categories/' + key + '.svg' : null;
   }
-  function canonicalCategory(text) {
-    var t = String(text || '');
-    if (!t) return CATS.vihara;
-    if (/বৃদ্ধাশ্রম/.test(t)) return CATS.elder;
-    if (/অনাথ|শিশু\s*সদন|সামাজিক সেবা|সমাজসেবা|কল্যাণ প্রতিষ্ঠান/.test(t)) return CATS.welfare;
+  /* নাম/পুরোনো লেবেল থেকে একক ক্যাটাগরি — বিল্ডার (catrule.py) এর হুবহু একই অগ্রাধিকার */
+  function canonicalCategory(text, name) {
+    var t = String(text || '') + ' ' + String(name || '');
+    if (/বৃদ্ধাশ্রুম|বৃদ্ধাশ্রম/.test(t)) return CATS.elder;
+    if (/অনাথ|শিশু\s*সদন|কল্যাণ প্রতিষ্ঠান|সমাজসেবা/.test(t)) return CATS.welfare;
     if (/শ্মশান|শশ্মান/.test(t)) return CATS.cremat;
-    if (/অরণ্য|কুটির/.test(t)) return CATS.forest;
+    if (/কীর্তন/.test(t)) return CATS.kirtan;
+    if (/ললিতকলা|সাংস্কৃতিক গোষ্ঠী|সাংস্কৃতিক প্রতিষ্ঠান|নাট্যদল|নাট্য সংঘ/.test(t)) return CATS.art;
+    if (/প্রকাশন|প্রকাশক|মুখপত্র|সাময়িকী|পত্রিকা/.test(t)) return CATS.publish;
+    if (/ব্যবসা|ব্যবসায়ী|বাণিজ্য/.test(t)) return CATS.business;
+    if (/বিহার/.test(t)) return CATS.vihara;
+    if (/কুটির|অরণ্য/.test(t)) return CATS.forest;
     if (/ভাবনা|ধ্যান/.test(t)) return CATS.medit;
-    if (/জাদী|জাদি|স্তূপ|স্মৃতিচিহ্ন|ঢিবি|মুড়া/.test(t)) return CATS.relic;
-    if (/পালি\s*টোল|স্কুল|কলেজ|বিশ্ববিদ্যাল|শিক্ষা|ক্রীড়া|সাংস্কৃতিক|কৃষ্টি/.test(t)) return CATS.edu;
-    if (/সংঘ|সমিতি|সংগঠন|ফেডারেশন|পরিষদ|কমিটি|মঠ/.test(t)) return CATS.org;
-    if (/প্রত্নাঞ্চল|প্রত্ননিদর্শন|প্রত্ন নিদর্শন|প্রত্নঢিবি|ঢিবি|মুড়া|প্রত্নস্থল|প্রত্ন/.test(t)) return CATS.archaeo;
-    if (/মহাবিহার|সংগ্রহশালা|জাদুঘর/.test(t)) return CATS.museum;
+    if (/জাদী|জাদি|স্মৃতিচিহ্ন/.test(t)) return CATS.relic;
+    if (/প্রত্নাঞ্চল|প্রত্ননিদর্শন|প্রত্ন নিদর্শন|ঢিবি|মুড়া|প্রত্নস্থল|প্রত্ন/.test(t)) return CATS.archaeo;
+    if (/জাদুঘর|সংগ্রহশালা|মহাবিহার/.test(t)) return CATS.museum;
+    if (/পালি\s*টোল|স্কুল|কলেজ|বিশ্ববিদ্যাল|শিক্ষা|ক্রীড়া/.test(t)) return CATS.edu;
+    if (/সংঘ|সমিতি|সংগঠন|ফেডারেশন|পরিষদ|কমিটি|সমাজ/.test(t)) return CATS.org;
     if (/পল্লী|লোকালয়|কমিউনিটি|গ্রাম/.test(t)) return CATS.village;
     if (/যাচাই|লোকধর্ম|গবেষণা/.test(t)) return CATS.verify;
     return CATS.vihara;
   }
+  /* পুরোনো রেকর্ডের kind/category → একক ক্যাটাগরি, এবং ছবি না থাকলে শ্রেণি-চিত্রণ */
   function normalizeExisting(list) {
     var changed = 0;
     list.forEach(function (p) {
       var best = p.category || p.kind || '';
-      if (p.verificationPending) best = CATS.verify;
-      var c = canonicalCategory(best + ' ' + (p.name || ''));
+      if (CAT_LIST.indexOf(best) < 0) {
+        if (p.verificationPending) best = CATS.verify;
+        best = canonicalCategory(best, p.name);
+      }
+      var c = best;
       if (p.category !== c) changed++;
       p.category = c;
       p.kind = c;
@@ -93,7 +111,6 @@
     });
     return changed;
   }
-
   function kindFor(type, category) {
     var t = String(type || '') + ' ' + String(category || '');
     if (/প্রত্নস্থল|মহাবিহার|স্তূপ/.test(t)) return 'প্রত্নস্থল';
@@ -141,11 +158,11 @@
       union: r.union || null,
       village: r.village || null,
       postOffice: r.post_office || null,
-      kind: canonicalCategory((r.category || '') + ' ' + (r.name || '') + ' ' + (r.type || '')),
-      category: canonicalCategory((r.category || '') + ' ' + (r.name || '') + ' ' + (r.type || '')),
+      kind: r.category || canonicalCategory((r.type || ''), r.name),
+      category: r.category || canonicalCategory((r.type || ''), r.name),
       coords: coords,
       imageKey: null,
-      customImageUrl: artFor(canonicalCategory((r.category || '') + ' ' + (r.name || '') + ' ' + (r.type || ''))),
+      customImageUrl: artFor(r.category || canonicalCategory((r.type || ''), r.name)),
       contactPerson: r.contact_person || null,
       mobile: r.mobile || null,
       pinApproximate: r.pin_approximate !== false,
@@ -244,6 +261,7 @@
       if (typeof window.renderPlaces === 'function') window.renderPlaces();
       if (typeof window.refreshAdminFilters === 'function') window.refreshAdminFilters();
     } catch (e) { console.warn(e); }
+    normalizeExisting(list);
     updateCounts(added);
     document.dispatchEvent(new CustomEvent('bihar-additions-ready', { detail: window.__biharPdfAdditions }));
   }
