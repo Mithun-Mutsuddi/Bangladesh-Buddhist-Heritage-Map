@@ -1,0 +1,61 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function owns(uid) { return signedIn() && request.auth.uid == uid; }
+    function validRating() {
+      return request.resource.data.rating is int
+        && request.resource.data.rating >= 1
+        && request.resource.data.rating <= 5;
+    }
+
+    match /heritage_sites/{siteId} {
+      allow read: if resource.data.status == "published";
+      // Editorial publishing should happen from a trusted admin/server role.
+      allow create, update, delete: if false;
+    }
+
+    match /events/{eventId} {
+      allow read: if resource.data.visibility == "published";
+      allow create, update, delete: if false;
+    }
+
+    match /user_reviews/{reviewId} {
+      allow read: if resource.data.status == "published"
+        || (signedIn() && resource.data.user_id == request.auth.uid);
+      allow create: if signedIn()
+        && request.resource.data.user_id == request.auth.uid
+        && request.resource.data.site_id is string
+        && request.resource.data.comment is string
+        && request.resource.data.comment.size() <= 2000
+        && validRating()
+        && request.resource.data.status == "pending";
+      allow update: if signedIn()
+        && resource.data.user_id == request.auth.uid
+        && request.resource.data.user_id == resource.data.user_id
+        && request.resource.data.status == "pending"
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(["rating", "comment", "language", "visit_date", "updated_at"])
+        && validRating()
+        && request.resource.data.comment is string
+        && request.resource.data.comment.size() <= 2000;
+      allow delete: if signedIn() && resource.data.user_id == request.auth.uid
+        && resource.data.status == "pending";
+    }
+
+    match /community_archive/{archiveId} {
+      allow read: if resource.data.status == "published";
+      allow create: if signedIn()
+        && request.resource.data.uploader_uid == request.auth.uid
+        && request.resource.data.consent_confirmed == true
+        && request.resource.data.status == "needs_review";
+      // Moderation and publication must be handled by trusted server/admin.
+      allow update, delete: if false;
+    }
+
+    match /directory_services/{serviceId} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}
