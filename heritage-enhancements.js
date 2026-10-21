@@ -168,6 +168,57 @@
     });
   }
 
+  function setupSeoContent(){
+    const detail=$('placeDetail');
+    if(!detail)return;
+    const render=()=>{
+      const heading=detail.querySelector('h3');
+      if(!heading)return;
+      const selectedCard=document.querySelector('.place-card.is-selected');
+      let p=selectedCard?byPlaceId(selectedCard.dataset.placeCard):null;
+      if(!p)p=places().find(site=>site.name===heading.textContent)||null;
+      if(!p)return;
+      const article=(window.heritageSeoContent||{})[p.id];
+      if(!article)return;
+      const existing=detail.querySelector('.seo-longform');
+      if(existing&&existing.dataset.seoId===p.id)return;
+      if(existing)existing.remove();
+      const section=document.createElement('article');
+      section.className='seo-longform';
+      section.dataset.seoId=p.id;
+      const title=document.createElement('h4');
+      title.textContent=article.title||p.name;
+      section.append(title);
+      const status=document.createElement('p');
+      status.className='seo-editorial-note';
+      status.textContent=article.editorial_status==='draft-needs-human-review'
+        ? 'সম্পাদকীয় খসড়া · প্রকাশের আগে ঐতিহাসিক তথ্য ও সূত্র মানবসম্পাদনায় যাচাই করুন।'
+        : 'ঐতিহাসিক তথ্য ও প্রবেশ-সংক্রান্ত তথ্যের জন্য সংযুক্ত সূত্র যাচাই করুন।';
+      section.append(status);
+      String(article.content||'').split(/\\n\\s*\\n/).filter(Boolean).forEach(text=>{
+        const paragraph=document.createElement('p');
+        paragraph.textContent=text;
+        section.append(paragraph);
+      });
+      const urls=Array.isArray(article.sources)?article.sources:[];
+      const links=document.createElement('div');
+      links.className='seo-source-links';
+      urls.filter(Boolean).slice(0,6).forEach((url,index)=>{
+        const anchor=document.createElement('a');
+        anchor.href=String(url);
+        anchor.target='_blank';
+        anchor.rel='noopener noreferrer';
+        anchor.textContent='তথ্যসূত্র '+(index+1)+' ↗';
+        links.append(anchor);
+      });
+      if(urls.length)section.append(links);
+      detail.append(section);
+    };
+    const observer=new MutationObserver(()=>render());
+    observer.observe(detail,{childList:true,subtree:true});
+    render();
+  }
+
   function addMessage(content,role){
     const box=$('sanghaMessages');if(!box)return;
     const node=document.createElement('div');node.className='sangha-message '+role;node.innerHTML=content;box.append(node);box.scrollTop=box.scrollHeight;
@@ -209,13 +260,36 @@
     }
     return '<p>'+intro+'</p><p>'+answer+'</p>'+(links?'<div class="sangha-answer-links">'+links+'</div>':'');
   }
+  async function sendBotMessage(query){
+    const endpoint=String(window.SANGHAMITRA_API_URL||'').trim();
+    if(!endpoint){addMessage(answerBot(query),'bot');return;}
+    const input=$('sanghaInput');
+    const lang=/[\\u0980-\\u09FF]/.test(query)?'bn':'en';
+    const site=places().find(p=>[p.name,p.district,p.upazila].filter(Boolean).some(x=>query.toLocaleLowerCase('bn').includes(String(x).toLocaleLowerCase('bn'))));
+    const pending=document.createElement('div');
+    pending.className='sangha-message bot';pending.textContent=lang==='bn'?'উত্তর তৈরি হচ্ছে…':'Preparing an answer…';
+    $('sanghaMessages').append(pending);
+    try{
+      const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:query,language:lang,site_id:site?site.id:null})});
+      if(!response.ok)throw new Error('API status '+response.status);
+      const result=await response.json();
+      pending.remove();
+      addMessage('<p>'+esc(result.answer||result.response||'এই মুহূর্তে উত্তর পাওয়া যায়নি।')+'</p>'+(Array.isArray(result.sources)&&result.sources.length?'<div class="sangha-answer-links">'+result.sources.slice(0,5).map(s=>'<a href="'+esc(s.url||s)+'" target="_blank" rel="noopener noreferrer">'+esc(s.title||'তথ্যসূত্র')+' ↗</a>').join('')+'</div>':''),'bot');
+    }catch(error){
+      pending.remove();
+      addMessage(answerBot(query)+'<p class="seo-editorial-note">লাইভ AI service পাওয়া যায়নি; এখানে স্থানীয় ডেমো সহায়ক ব্যবহার করা হয়েছে।</p>','bot');
+      console.warn('SanghaMitra API unavailable; local fallback used.',error);
+    }
+  }
+
   function setupBot(){
     const panel=$('sanghaPanel'),toggle=$('sanghaToggle');
     toggle?.addEventListener('click',()=>{const open=panel.hidden;panel.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.querySelector('b').textContent=open?'−':'＋';if(open)$('sanghaInput')?.focus();});
     $('sanghaClose')?.addEventListener('click',()=>{panel.hidden=true;toggle?.setAttribute('aria-expanded','false');if(toggle)toggle.querySelector('b').textContent='＋';});
     $('sanghaForm')?.addEventListener('submit',event=>{
       event.preventDefault();const q=$('sanghaInput').value.trim();if(!q)return;
-      addMessage('<p>'+esc(q)+'</p>','user');addMessage(answerBot(q),'bot');$('sanghaInput').value='';
+      addMessage('<p>'+esc(q)+'</p>','user');$('sanghaInput').value='';
+      sendBotMessage(q);
     });
     const quick={history:'বাংলাদেশের বৌদ্ধ ইতিহাস ও স্থাপত্য সম্পর্কে বলুন',route:'ঢাকা থেকে পাহাড়পুর যাওয়ার রুট কীভাবে পরিকল্পনা করব?',nearby:'নির্বাচিত স্থানের কাছে হাসপাতাল ও হোটেল কোথায়?',etiquette:'সক্রিয় বিহার ভ্রমণের আচরণবিধি কী?'};
     document.querySelectorAll('[data-sangha-quick]').forEach(btn=>btn.addEventListener('click',()=>{const q=quick[btn.dataset.sanghaQuick]||'বৌদ্ধ ঐতিহ্য সম্পর্কে বলুন';addMessage('<p>'+esc(q)+'</p>','user');addMessage(answerBot(q),'bot');}));
@@ -224,7 +298,7 @@
   function init(){
     addSections();
     try{setupMapRecovery();}catch(e){console.error('Map recovery failed',e);const m=$('map');if(m)m.innerHTML='<div class="map-library-fallback"><strong>ম্যাপ শুরু করা যায়নি</strong><p>Google Maps-এ স্থাননাম অনুসন্ধান করুন বা পৃষ্ঠা reload করুন।</p></div>';}
-    setupTravel();setupCommunity();setupBot();setupFestivals();
+    setupTravel();setupCommunity();setupBot();setupFestivals();setupSeoContent();
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
