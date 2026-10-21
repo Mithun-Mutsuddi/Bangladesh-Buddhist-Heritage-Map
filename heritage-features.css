@@ -1,0 +1,89 @@
+/* Material-inspired additions for the Bangladesh Buddhist Heritage Guide.
+   Kept separate from styles.css so the existing site can be rolled back safely. */
+:root {
+  --hf-primary: #82512b;
+  --hf-primary-dark: #4b2d1c;
+  --hf-primary-soft: #f5e8d7;
+  --hf-secondary: #47675b;
+  --hf-surface: #fffdf8;
+  --hf-surface-container: #f4efe6;
+  --hf-outline: #dfd5c7;
+  --hf-on-surface: #2e261e;
+  --hf-muted: #706558;
+  --hf-radius: 24px;
+}
+.hf-section { padding: clamp(56px, 7vw, 92px) 0; scroll-margin-top: 92px; }
+.hf-section:nth-of-type(even) { background: rgba(244, 239, 230, .68); }
+.hf-section .hf-wrap { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+.hf-eyebrow { margin: 0 0 9px; color: var(--hf-primary); font-size: .76rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.hf-heading { max-width: 820px; margin: 0 0 13px; color: var(--hf-on-surface); font-size: clamp(1.8rem, 4vw, 2.75rem); line-height: 1.22; letter-spacing: -.025em; }
+.hf-lead { max-width: 780px; margin: 0 0 28px; color: var(--hf-muted); line-height: 1.8; }
+.hf-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.hf-card { min-width: 0; padding: 22px; border: 1px solid var(--hf-outline); border-radius: var(--hf-radius); background: var(--hf-surface); box-shadow: 0 5px 18px rgba(45, 31, 18, .045); }
+.hf-card h3 { margin: 5px 0 8px; color: var(--hf-on-surface); font-size: 1.15rem; line-height: 1.45; }
+.hf-card p { margin: 0; color: var(--hf-muted); line-height: 1.8; }
+.hf-chip { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; padding: 5px 10px; border-radius: 999px; background: var(--hf-primary-soft); color: var(--hf-primary-dark); font-size: .76rem; font-weight: 700; }
+.hf-icon-disc { display: grid; width: 43px; height: 43px; place-items: center; margin-bottom: 12px; border-radius: 15px; background: var(--hf-primary-soft); color: var(--hf-primary-dark); font-size: 1.3rem; }
+.hf-inline-link { color: var(--hf-primary); font-weight: 750; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.hf-button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 8px; padding: 11px 17px; border: 1px solid var(--hf-primary); border-radius: 999px; background: var(--hf-primary); color: white; font: inherit; font-weight: 750; text-decoration: none; cursor: pointer; transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
+.hf-button:hover { transform: translateY(-1px); box-shadow: 0 7px 18px rgba(68, 44, 24, .16); }
+.hf-button:focus-visible, .hf-input:focus-visible, .hf-select:focus-visible, .hf-textarea:focus-visible { outline: 3px solid #d9a75e; outline-offset: 3px; }
+.hf-button-secondary { background: transparent; color: var(--hf-primary-dark); }
+.hf-button-small { min-height: 38px; padding: 8px 12px; font-size: .88rem; }
+.hf-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.hf-field { display: flex; flex-direction: column; gap: 7px; color: var(--hf-on-surface); font-size: .91rem; font-weight: 750; }
+.hf-input, .hf-select, .hf-textarea { width: 100%; min-height: 47px; padding: 11px 13px; border: 1px solid var(--hf-outline); border-radius: 13px; background: white; color: var(--hf-on-surface); font: inherit; font-weight: 450; }
+.hf-textarea { min-height: 100px; resize: vertical; }
+.hf-panel { padding: clamp(20px, 3vw, 32px); border: 1px solid var(--hf-outline); border-radius: 28px; background: var(--hf-surface); box-shadow: 0 9px 26px rgba(45, 31, 18, .055); }
+.hf-panel + .hf-panel { margin-top: 20px; }
+.hf-note { margin-top: 12px; color: var(--hf-muted); font-size: .85rem; line-height: 1.7; }
+.hf-button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.hf-nearby-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-top: 18px; }
+.hf-nearby-grid .hf-button { border-radius: 14px; background: #f6eee3; border-color: #ead8c2; color: var(--hf-primary-dark); }
+.hf-story-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+.hf-story { padding: 24px; border: 1px solid var(--hf-outline); border-radius: 22px; background: var(--hf-surface); }
+.hf-story h3 { margin: 10px 0 8px; font-size: 1.25rem; line-height: 1.45; }
+.hf-story p { color: var(--hf-muted); line-height: 1.85; }
+.hf-story-meta { display: flex; flex-wrap: wrap; gap: 7px; }
+.hf-story details { margin-top: 13px; }
+.hf-story summary { color: var(--hf-primary); cursor: pointer; font-weight: 800; }
+.hf-source-list { margin: 10px 0 0; padding-left: 22px; }
+.hf-source-list li { margin: 5px 0; overflow-wrap: anywhere; }
+.hf-community-grid { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); gap: 20px; align-items: start; }
+.hf-chat { display: flex; min-height: 440px; flex-direction: column; overflow: hidden; border: 1px solid var(--hf-outline); border-radius: 26px; background: white; box-shadow: 0 8px 24px rgba(45,31,18,.06); }
+.hf-chat-header { display: flex; align-items: center; gap: 12px; padding: 18px 20px; background: #f4eadc; border-bottom: 1px solid var(--hf-outline); }
+.hf-bot-avatar { display: grid; width: 43px; height: 43px; flex: 0 0 auto; place-items: center; border-radius: 50%; background: var(--hf-primary); color: white; font-size: 1.25rem; }
+.hf-chat-header strong { display: block; color: var(--hf-on-surface); }
+.hf-chat-header small { color: var(--hf-muted); }
+.hf-chat-log { display: flex; flex: 1; flex-direction: column; gap: 12px; padding: 18px; overflow-y: auto; max-height: 390px; }
+.hf-chat-message { max-width: 92%; padding: 12px 14px; border-radius: 17px; background: #f4efe6; color: var(--hf-on-surface); line-height: 1.75; white-space: pre-wrap; overflow-wrap: anywhere; }
+.hf-chat-message.user { align-self: flex-end; background: #486b5d; color: white; border-bottom-right-radius: 5px; }
+.hf-chat-message.bot { align-self: flex-start; border-bottom-left-radius: 5px; }
+.hf-chat-composer { display: flex; gap: 9px; padding: 12px; border-top: 1px solid var(--hf-outline); }
+.hf-chat-composer input { flex: 1; min-width: 0; }
+.hf-story-status { padding: 14px; border: 1px dashed var(--hf-outline); border-radius: 14px; color: var(--hf-muted); }
+.hf-footer-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.hf-footer-links a { color: var(--hf-primary); font-weight: 800; }
+.hf-error { border-left: 4px solid #9b3c2f; padding: 10px 13px; background: #fff0ed; color: #6f241b; border-radius: 8px; }
+.hf-success { border-left: 4px solid #376d4d; padding: 10px 13px; background: #edf7ef; color: #234b32; border-radius: 8px; }
+.hf-nav-pill { display: inline-flex !important; align-items: center; gap: 5px; padding: 7px 10px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; }
+.hf-nav-pill:hover { background: rgba(255,255,255,.08); }
+@media (max-width: 920px) {
+  .hf-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .hf-community-grid { grid-template-columns: 1fr; }
+  .hf-nearby-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 620px) {
+  .hf-section .hf-wrap { width: min(100% - 28px, 1180px); }
+  .hf-grid, .hf-story-grid, .hf-controls { grid-template-columns: 1fr; }
+  .hf-card, .hf-story { padding: 19px; }
+  .hf-nearby-grid { grid-template-columns: 1fr 1fr; }
+  .hf-panel { border-radius: 19px; }
+  .hf-chat { min-height: 400px; }
+  .hf-chat-composer { flex-direction: column; }
+  .hf-chat-composer .hf-button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hf-button { transition: none; }
+  .hf-button:hover { transform: none; }
+}
