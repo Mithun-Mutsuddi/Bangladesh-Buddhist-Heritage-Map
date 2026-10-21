@@ -58,14 +58,24 @@ function refreshRecordLists() {
 }
 function refreshCategories() {
  const select=$('categoryFilter'); if(!select)return;
- const previous=select.value||'all', options=new Map();
- [...select.options].slice(1).forEach(option=>options.set(option.value,option.textContent));
- (Array.isArray(window.destinations)?window.destinations:[]).forEach(place=>{
-  if(place.kind&&!options.has(place.kind))options.set(place.kind,place.category||place.kind);
-  if(place.category&&!options.has(place.category))options.set(place.category,place.category);
- });
- select.replaceChildren(new Option('সব ক্যাটাগরি','all'),...[...options.entries()].sort((a,b)=>a[1].localeCompare(b[1],'bn')).map(([value,label])=>new Option(label,value)));
- if([...select.options].some(option=>option.value===previous))select.value=previous;
+ /* একক, স্থির ক্যাটাগরি-তালিকা — পুরোনো এলোমেলো লেবেল আর দেখানো হয় না */
+ const ORDER=[
+  'বিহার',
+  'বুদ্ধ স্মৃতিচিহ্ন/জাদী/স্তূপ',
+  'ভাবনাকেন্দ্র',
+  'অরণ্যকুঠি',
+  'বৌদ্ধ সংঘ/সমিতি/সংগঠনসমূহ',
+  'বৌদ্ধ শিক্ষা প্রতিষ্ঠান (পালি টোল, স্কুল, কলেজ, ক্রীড়া ও সাংস্কৃতিক)',
+  'সংগ্রহশালা ও সংরক্ষণ',
+  'সামাজিক সেবা ও কল্যাণ প্রতিষ্ঠান (অনাথালয়, শিশু সদন)',
+  'বৃদ্ধাশ্রম',
+  'শশ্মান',
+  'লোকালয়/পল্লী',
+  'যাচাইধীন/অতিরিক্ত সূত্র প্রয়োজন'
+ ];
+ const previous=select.value||'all';
+ select.replaceChildren(new Option('সব ক্যাটাগরি','all'), ...ORDER.map(c=>new Option(c,c)));
+ if([...select.options].some(o=>o.value===previous)) select.value=previous;
 }
 async function loadGeo() {
  if(tree) return tree;

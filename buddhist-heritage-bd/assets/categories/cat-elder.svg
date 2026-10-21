@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200" role="img" aria-label="বৃদ্ধাশ্রম — শ্রেণি-চিত্রণ">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf7ee"/><stop offset="1" stop-color="#efe7d6"/></linearGradient></defs>
+<rect width="300" height="200" fill="url(#g)"/>
+<circle cx="150" cy="120" r="72" fill="#4a6b8a" opacity=".07"/>
+<path d="M150 158 q-44 -26 -44 -52 a22 22 0 0 1 44 -8 a22 22 0 0 1 44 8 q0 26 -44 52z" fill="#4a6b8a"/>
+<text x="150" y="186" text-anchor="middle" font-family="Noto Sans Bengali, sans-serif" font-size="13" fill="#4a6b8a" opacity=".9">বৃদ্ধাশ্রম</text>
+</svg>

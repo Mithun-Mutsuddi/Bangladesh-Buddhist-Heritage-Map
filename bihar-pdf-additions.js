@@ -25,6 +25,72 @@
       .replace(/[\p{P}\p{Z}\s]+/gu, '')
       .toLocaleLowerCase('bn');
   }
+
+  /* ------------------------------------------------------------------
+     একক ক্যাটাগরি ব্যবস্থা (ব্যবহারকারীর নির্দেশ অনুযায়ী ১২টি শ্রেণি)
+     পুরোনো রেকর্ডের kind/category-ও এখানেই রূপান্তরিত হয়, তাই একই জায়গা
+     দুই ক্যাটাগরিতে দেখা যায় না।
+  ------------------------------------------------------------------ */
+  var CATS = {
+    welfare: 'সামাজিক সেবা ও কল্যাণ প্রতিষ্ঠান (অনাথালয়, শিশু সদন)',
+    org: 'বৌদ্ধ সংঘ/সমিতি/সংগঠনসমূহ',
+    elder: 'বৃদ্ধাশ্রম',
+    edu: 'বৌদ্ধ শিক্ষা প্রতিষ্ঠান (পালি টোল, স্কুল, কলেজ, ক্রীড়া ও সাংস্কৃতিক)',
+    village: 'লোকালয়/পল্লী',
+    relic: 'বুদ্ধ স্মৃতিচিহ্ন/জাদী/স্তূপ',
+    medit: 'ভাবনাকেন্দ্র',
+    forest: 'অরণ্যকুঠি',
+    vihara: 'বিহার',
+    cremat: 'শশ্মান',
+    verify: 'যাচাইধীন/অতিরিক্ত সূত্র প্রয়োজন',
+    museum: 'সংগ্রহশালা ও সংরক্ষণ'
+  };
+  var CAT_LIST = Object.keys(CATS).map(function (k) { return CATS[k]; });
+  /* শ্রেণি-ভিত্তিক নিজস্ব চিত্রণ (ফটো নয়) — প্রতিটি এন্ট্রিতে অন্তত একটি ভিজুয়াল থাকে */
+  var CAT_ART = {};
+  CAT_ART[CATS.vihara] = 'cat-vihara'; CAT_ART[CATS.verify] = 'cat-verify';
+  CAT_ART[CATS.forest] = 'cat-forest'; CAT_ART[CATS.medit] = 'cat-medit';
+  CAT_ART[CATS.relic] = 'cat-relic';   CAT_ART[CATS.org] = 'cat-org';
+  CAT_ART[CATS.welfare] = 'cat-welfare'; CAT_ART[CATS.edu] = 'cat-edu';
+  CAT_ART[CATS.cremat] = 'cat-cremat'; CAT_ART[CATS.village] = 'cat-village';
+  CAT_ART[CATS.museum] = 'cat-museum'; CAT_ART[CATS.elder] = 'cat-elder';
+  function artFor(category) {
+    var key = CAT_ART[category];
+    return key ? 'buddhist-heritage-bd/assets/categories/' + key + '.svg' : null;
+  }
+  function canonicalCategory(text) {
+    var t = String(text || '');
+    if (!t) return CATS.vihara;
+    if (/বৃদ্ধাশ্রম/.test(t)) return CATS.elder;
+    if (/অনাথ|শিশু\s*সদন|সামাজিক সেবা|সমাজসেবা|কল্যাণ প্রতিষ্ঠান/.test(t)) return CATS.welfare;
+    if (/শ্মশান|শশ্মান/.test(t)) return CATS.cremat;
+    if (/অরণ্য|কুটির/.test(t)) return CATS.forest;
+    if (/ভাবনা|ধ্যান/.test(t)) return CATS.medit;
+    if (/জাদী|জাদি|স্তূপ|স্মৃতিচিহ্ন|ঢিবি|মুড়া/.test(t)) return CATS.relic;
+    if (/পালি\s*টোল|স্কুল|কলেজ|বিশ্ববিদ্যাল|শিক্ষা|ক্রীড়া|সাংস্কৃতিক|কৃষ্টি/.test(t)) return CATS.edu;
+    if (/সংঘ|সমিতি|সংগঠন|ফেডারেশন|পরিষদ|কমিটি|মঠ/.test(t)) return CATS.org;
+    if (/প্রত্নস্থল|মহাবিহার|সংগ্রহশালা|জাদুঘর|প্রত্ন/.test(t)) return CATS.museum;
+    if (/পল্লী|লোকালয়|কমিউনিটি|গ্রাম/.test(t)) return CATS.village;
+    if (/যাচাই|লোকধর্ম|গবেষণা/.test(t)) return CATS.verify;
+    return CATS.vihara;
+  }
+  function normalizeExisting(list) {
+    var changed = 0;
+    list.forEach(function (p) {
+      var best = p.category || p.kind || '';
+      if (p.verificationPending) best = CATS.verify;
+      var c = canonicalCategory(best + ' ' + (p.name || ''));
+      if (p.category !== c) changed++;
+      p.category = c;
+      p.kind = c;
+      if (!p.customImageUrl && !p.imageKey) {
+        var art = artFor(c);
+        if (art) { p.customImageUrl = art; p.sourceLabel = 'শ্রেণি-চিত্রণ (প্রকৃত ছবি নয়)'; p.source = art; }
+      }
+    });
+    return changed;
+  }
+
   function kindFor(type, category) {
     var t = String(type || '') + ' ' + String(category || '');
     if (/প্রত্নস্থল|মহাবিহার|স্তূপ/.test(t)) return 'প্রত্নস্থল';
@@ -72,10 +138,11 @@
       union: r.union || null,
       village: r.village || null,
       postOffice: r.post_office || null,
-      kind: kindFor(r.type, r.category),
-      category: r.category || 'বিহার ও তীর্থস্থান',
+      kind: canonicalCategory((r.category || '') + ' ' + (r.name || '') + ' ' + (r.type || '')),
+      category: canonicalCategory((r.category || '') + ' ' + (r.name || '') + ' ' + (r.type || '')),
       coords: coords,
       imageKey: null,
+      customImageUrl: artFor(canonicalCategory((r.category || '') + ' ' + (r.name || '') + ' ' + (r.type || ''))),
       contactPerson: r.contact_person || null,
       mobile: r.mobile || null,
       pinApproximate: r.pin_approximate !== false,
@@ -138,6 +205,7 @@
     var data = await res.json();
     var raw = expandBulk(data).concat(data.records || []);
     var list = window.destinations;
+    var normalized = normalizeExisting(list);
     var ids = new Set(list.map(function (p) { return String(p.id); }));
     /* duplicate প্রতিরোধ: নাম + জেলা + গ্রাম/থানা/উপজেলা একসাথে মিললেই duplicate ধরা হয়।
        শুধু নাম মিললে নয় — একই নামের বিহার ভিন্ন জেলা বা ভিন্ন গ্রামে থাকতে পারে। */

@@ -830,7 +830,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "চট্টগ্রাম",
-   "upazila": null,
+   "upazila": "সীতাকুণ্ড",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -863,7 +863,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "চট্টগ্রাম",
-   "upazila": null,
+   "upazila": "রাউজান",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -886,7 +886,8 @@
    "verification_status": "approximate-coordinates",
    "verification_note": "public-source; approximate pin",
    "sourcePdf": "chittigong buddhist tempel list.pdf",
-   "contactSource": "বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের জেলা-ভিত্তিক বিহার তালিকা (PDF)"
+   "contactSource": "বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের জেলা-ভিত্তিক বিহার তালিকা (PDF)",
+   "village": "১৪১ আবুরখীল তালুকদার পাড়া সংঘরাজ বিহার"
   },
   {
    "id": "jagatpur-ashram",
@@ -1083,7 +1084,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "রামু",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -2322,7 +2323,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "চট্টগ্রাম",
-   "upazila": null,
+   "upazila": "পটিয়া",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -2347,7 +2348,8 @@
    "mobile": "01911-153332, 01930-683275",
    "contactPerson": "তুহিন বড়ুয়া, শ্যালী চৌধুরী",
    "sourcePdf": "chittigong buddhist tempel list.pdf",
-   "contactSource": "বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের জেলা-ভিত্তিক বিহার তালিকা (PDF)"
+   "contactSource": "বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের জেলা-ভিত্তিক বিহার তালিকা (PDF)",
+   "village": "কালারপুল"
   },
   {
    "id": "bandarban-ujani",
@@ -2643,7 +2645,7 @@
    "type": "ধ্যানকেন্দ্র",
    "division": "চট্টগ্রাম",
    "district": "খাগড়াছড়ি",
-   "upazila": null,
+   "upazila": "খাগড়াছড়ি সদর",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -3868,7 +3870,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "মহেশখালী",
    "thana": "মহেশখালী",
    "union": null,
    "location_lat_long": {
@@ -3904,7 +3906,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "মহেশখালী",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -3938,7 +3940,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "মহেশখালী",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -3961,7 +3963,8 @@
    "verification_status": "approximate-coordinates",
    "verification_note": "government/local directory entry; approximate locality pin",
    "sourcePdf": "coxbazr buddhist tempel list.pdf",
-   "contactSource": "বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের জেলা-ভিত্তিক বিহার তালিকা (PDF)"
+   "contactSource": "বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের জেলা-ভিত্তিক বিহার তালিকা (PDF)",
+   "village": "শাপলাপুর"
   },
   {
    "id": "ramu-saddharmodaya",
@@ -6163,7 +6166,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "টেকনাফ",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -7128,7 +7131,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "উখিয়া",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -7163,7 +7166,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "উখিয়া",
    "thana": "উখিয়া",
    "union": null,
    "location_lat_long": {
@@ -7229,7 +7232,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "উখিয়া",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -7853,7 +7856,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "উখিয়া",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -7919,7 +7922,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "উখিয়া",
    "thana": "উখিয়া",
    "union": null,
    "location_lat_long": {
@@ -7985,7 +7988,7 @@
    "type": "বিহার",
    "division": "চট্টগ্রাম",
    "district": "কক্সবাজার",
-   "upazila": null,
+   "upazila": "উখিয়া",
    "thana": null,
    "union": null,
    "location_lat_long": {
@@ -9976,7 +9979,10 @@
    "travel_note": "যাওয়ার আগে প্রতিষ্ঠানের ওয়েবসাইটে বর্তমান ভর্তি, যোগাযোগ ও প্রবেশপথ যাচাই করুন।",
    "pin_approximate": true,
    "verification_status": "approximate-coordinates",
-   "verification_note": "official institutional website"
+   "verification_note": "official institutional website",
+   "mobile": "+88027274256",
+   "village": "বাসাবো",
+   "contactSource": "বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের জেলা-ভিত্তিক বিহার তালিকা (PDF)"
   },
   {
    "id": "dharmarajika-orphanage",
@@ -10007,7 +10013,9 @@
    "travel_note": "অনাথালয়ের বর্তমান কার্যক্রম বা সেবা নিশ্চিত করতে প্রতিষ্ঠানের অফিসিয়াল যোগাযোগের মাধ্যমে আগে জেনে নিন।",
    "pin_approximate": true,
    "verification_status": "needs-verification",
-   "verification_note": "institutional history reference; current service status needs confirmation"
+   "verification_note": "institutional history reference; current service status needs confirmation",
+   "village": "বাসাবো",
+   "contactSource": "বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের জেলা-ভিত্তিক বিহার তালিকা (PDF)"
   },
   {
    "id": "mainamati-rani-mainamatir-bari",
