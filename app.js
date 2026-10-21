@@ -6283,6 +6283,7 @@ function renderPlaces(keepVisibleLimit = false) {
     const locationText = normalizeHeritageSearch([
       place.id, place.name, place.district, place.division, place.upazila, place.thana,
       place.union, place.category, place.kind, place.summary, place.history,
+      place.contactPerson, place.mobile, place.village, place.postOffice,
       place.sourceLabel, place.source, heritageSearchAliases[place.id]
     ].filter(Boolean).join(' '));
     const matchesSearch = !searchText || locationText.includes(searchText);
@@ -6345,6 +6346,24 @@ function selectPlace(id, panMap = true, refreshList = true) {
     byId('placeDetail').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
   }
 }
+function telDigits(value) {
+  return String(value || '').replace(/[^0-9+]/g, '');
+}
+function contactMarkup(place) {
+  const person = (place.contactPerson || '').trim();
+  const mobiles = String(place.mobile || '')
+    .split(/[,;/|]+/)
+    .map(item => item.trim())
+    .filter(Boolean)
+    .map(num => `<a href="tel:${escapeHtml(telDigits(num))}">${escapeHtml(num)}</a>`);
+  if (!person && !mobiles.length) {
+    return '<p class="detail-contact is-empty">☎ <strong>যোগাযোগ:</strong> এই প্রতিষ্ঠানের ভিক্ষুর নাম বা মোবাইল নম্বর সরকারি তালিকায় দেওয়া নেই, তাই কোনো নম্বর অনুমান করা হয়নি। স্থানীয় সংঘ বা বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের মাধ্যমে যাচাই করুন।</p>';
+  }
+  const parts = [];
+  if (person) parts.push(`<strong>যোগাযোগ:</strong> ${escapeHtml(person)}`);
+  if (mobiles.length) parts.push(`<strong>মোবাইল:</strong> ${mobiles.join(' · ')}`);
+  return `<p class="detail-contact">☎ ${parts.join('<br>')}</p>`;
+}
 function renderPlaceDetail(place) {
   const media = mediaFor(place);
   const visited = visitedIds.has(place.id);
@@ -6373,6 +6392,7 @@ function renderPlaceDetail(place) {
     <p class="section-kicker">SELECTED DESTINATION</p><h3>${escapeHtml(place.name)}</h3>
     <div class="detail-meta"><span class="detail-chip">${escapeHtml(place.district)} জেলা</span><span class="detail-chip">${escapeHtml(place.division)} বিভাগ</span><span class="detail-chip">${escapeHtml(place.category)}</span></div>${locationNote}${verificationNote}
     <p class="detail-history">${escapeHtml(place.history)}</p>
+    ${contactMarkup(place)}
     <p><strong>🧭 যাওয়ার পরিকল্পনা:</strong> ${escapeHtml(place.trip)}</p>
     <p class="detail-quote">☸ <strong>শ্রদ্ধাশীল ভ্রমণ:</strong> ${escapeHtml(place.dhamma)} ${place.id === 'somapura' ? '<a href="https://whc.unesco.org/en/list/322/" target="_blank" rel="noopener noreferrer">[UNESCO]</a>' : ''}</p>
     <div class="detail-actions">

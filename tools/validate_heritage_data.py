@@ -106,45 +106,71 @@ def main() -> int:
     if under_target:
         errors.append("SEO content under 200 words: " + "; ".join(under_target[:10]))
     additions_data = read_json(ROOT / "data" / "heritage-sites-additions.json")
-    additions = additions_data.get("records", []) if isinstance(additions_data, dict) else []
-    if not isinstance(additions, list):
+    additions_raw = additions_data.get("records", []) if isinstance(additions_data, dict) else []
+    if not isinstance(additions_raw, list):
         errors.append("data/heritage-sites-additions.json must contain a records array")
-        additions = []
+        additions_raw = []
+    bulk_fields = additions_data.get("bulk_fields", []) if isinstance(additions_data, dict) else []
+    bulk_rows = additions_data.get("bulk", []) if isinstance(additions_data, dict) else []
+    if bulk_rows and not isinstance(bulk_fields, list):
+        errors.append("bulk_fields must be a list when bulk rows are present")
+        bulk_fields = []
+    additions: list[dict[str, Any]] = list(additions_raw)
+    for index, row in enumerate(bulk_rows):
+        if not isinstance(row, list) or len(row) > len(bulk_fields):
+            errors.append(f"bulk[{index}] does not match bulk_fields")
+            continue
+        additions.append(dict(zip(bulk_fields, row)))
     if isinstance(additions_data, dict) and additions_data.get("addition_count") not in (None, len(additions)):
-        errors.append("addition_count does not match heritage-sites-additions records length")
+        errors.append("addition_count does not match heritage-sites-additions (bulk + records) length")
     addition_ids: set[str] = set()
     for index, addition in enumerate(additions):
         add_id = addition.get("id") if isinstance(addition, dict) else None
         if not add_id:
             errors.append(f"heritage_additions[{index}] has no id")
-        elif add_id in addition_ids:
+            continue
+        if add_id in addition_ids:
             errors.append(f"duplicate heritage addition id: {add_id}")
-        else:
-            addition_ids.add(add_id)
-        if add_id not in ids:
-            errors.append(f"heritage addition {add_id or index} is missing from data/heritage-sites.json")
+            continue
+        addition_ids.add(add_id)
+        if not addition.get("name"):
+            errors.append(f"heritage addition {add_id} has no name")
+        if add_id in ids and not addition.get("in_base"):
+            errors.append(f"heritage addition {add_id} duplicates a base record id")
     def normalized_place_name(value: Any) -> str:
         normalized = unicodedata.normalize("NFKC", str(value or "")).casefold()
+        normalized = normalized.replace("\u09af\u09bc", "\u09df").replace("\u09a1\u09bc", "\u09dc")
         return "".join(ch for ch in normalized if ch.isalnum())
-    base_names: dict[str, str] = {}
+    def district_of(site: dict[str, Any]) -> str:
+        return normalized_place_name(site.get("district"))
+
+    def locality_of(site: dict[str, Any]) -> str:
+        return normalized_place_name(site.get("village") or site.get("thana") or site.get("upazila"))
+    base_names: dict[tuple[str, str], str] = {}
     for site in sites:
-        if not isinstance(site, dict) or site.get("id") in addition_ids:
+        if not isinstance(site, dict):
             continue
         normalized = normalized_place_name(site.get("name"))
         if normalized:
-            base_names[normalized] = str(site.get("name"))
-    seen_addition_names: dict[str, str] = {}
+            base_names[(normalized, district_of(site), locality_of(site))] = str(site.get("name"))
+    seen_addition_names: dict[tuple[str, str], str] = {}
     for addition in additions:
         if not isinstance(addition, dict):
             continue
         label = addition.get("name")
-        normalized = normalized_place_name(label)
-        if normalized in base_names:
-            errors.append(f"duplicate heritage addition name: {label} matches existing {base_names[normalized]}")
-        elif normalized in seen_addition_names:
-            errors.append(f"duplicate heritage addition name: {label} matches {seen_addition_names[normalized]}")
-        elif normalized:
-            seen_addition_names[normalized] = str(label)
+        key = (normalized_place_name(label), district_of(addition), locality_of(addition))
+        if addition.get("in_base"):
+            continue
+        if key in base_names and str(label) == str(base_names[key]):
+            errors.append(f"duplicate heritage addition name: {label} matches existing {base_names[key]} in the same locality")
+        elif key in base_names:
+            warnings.append(f"possible duplicate (human review): {label} ≈ {base_names[key]} in the same locality")
+        elif key in seen_addition_names and str(label) == str(seen_addition_names[key]):
+            errors.append(f"duplicate heritage addition name: {label} matches {seen_addition_names[key]} in the same locality")
+        elif key in seen_addition_names:
+            warnings.append(f"possible duplicate (human review): {label} ≈ {seen_addition_names[key]} in the same locality")
+        elif key[0]:
+            seen_addition_names[key] = str(label)
     normalized_canonical: dict[str, str] = {}
     for site in sites:
         if not isinstance(site, dict):
@@ -168,7 +194,7 @@ def main() -> int:
 
     print(f"Sites: {len(sites)} (unique IDs: {len(ids)}; with coordinates: {coord_count})")
     print(f"Approximate or verification-pending map records: {approximate_count}")
-    print(f"Additional UNESCO archaeological components: {len(additions)}")
+    print(f"Additional records (heritage-sites-additions): {len(additions)}; with mobile: {sum(1 for a in additions if isinstance(a, dict) and a.get('mobile'))}")
     print(f"Festival/event records: {len(events)}")
     print(f"SEO drafts: {len(articles)}; shortest article: {min((len(str(a.get('content','')).split()) for a in articles if isinstance(a,dict)), default=0)} words")
     print(f"Firestore schema: {'present' if isinstance(schema,dict) else 'invalid'}")
