@@ -108,18 +108,42 @@
       window.__heritageTileLayer = window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,updateWhenIdle:true,keepBuffer:3,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'}).addTo(map);
       madeFallback=true;
     }
-    if (pins.length && container.querySelectorAll('.leaflet-marker-icon').length===0) {
-      const layer = typeof window.L.markerClusterGroup==='function'
-        ? window.L.markerClusterGroup({chunkedLoading:true,maxClusterRadius:40,disableClusteringAtZoom:13,showCoverageOnHover:false})
-        : window.L.layerGroup();
+    function addRecoveryPins(layer) {
+      if (!layer || !pins.length) return;
       pins.forEach(p=>{
         const markerIcon=window.L.divIcon({className:'heritage-fallback-marker',html:'<span aria-hidden="true">☸</span>',iconSize:[36,36],iconAnchor:[18,18],popupAnchor:[0,-17]});
         const marker=window.L.marker([Number(p.coords[0]),Number(p.coords[1])],{icon:markerIcon,title:p.name,alt:p.name});
-        marker.bindPopup(popup(p),{maxWidth:290}); layer.addLayer(marker);
+        marker.bindPopup(popup(p),{maxWidth:290});
+        layer.addLayer(marker);
       });
+    }
+    if (pins.length && madeFallback) {
+      // The main app failed before it could mount its marker layer; create a dedicated layer.
+      const layer = typeof window.L.markerClusterGroup==='function'
+        ? window.L.markerClusterGroup({chunkedLoading:false,maxClusterRadius:40,disableClusteringAtZoom:13,showCoverageOnHover:false})
+        : window.L.layerGroup();
+      addRecoveryPins(layer);
       layer.addTo(map);
       window.__heritageFallbackMarkerLayer=layer;
       window.__heritageMarkerLayer=layer;
+    } else if (pins.length) {
+      // app.js uses chunked marker loading. Don't add a second pin layer before it finishes,
+      // otherwise searching cannot clear the duplicate markers. Recover only if still empty.
+      setTimeout(()=>{
+        if(container.querySelectorAll('.leaflet-marker-icon').length>0)return;
+        const activeLayer=window.__heritageMarkerLayer;
+        if(activeLayer){
+          try{activeLayer.clearLayers();addRecoveryPins(activeLayer);window.__heritageFallbackMarkerLayer=null;}
+          catch(error){console.warn('Could not repair the existing marker layer; creating a fallback.',error);}
+          return;
+        }
+        const fallback=typeof window.L.markerClusterGroup==='function'
+          ? window.L.markerClusterGroup({chunkedLoading:false,maxClusterRadius:40,disableClusteringAtZoom:13,showCoverageOnHover:false})
+          : window.L.layerGroup();
+        addRecoveryPins(fallback);fallback.addTo(map);
+        window.__heritageFallbackMarkerLayer=fallback;
+        window.__heritageMarkerLayer=fallback;
+      },1000);
     }
     statusNote(madeFallback);
     const refresh = () => {
