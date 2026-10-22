@@ -275,3 +275,53 @@
 .inst-badge.ok { color: #1f5f43; border-color: #9fd0b8; background: #eaf6ef; }
 .inst-badge.local { color: #7a5a00; border-color: #e3cd8a; background: #fdf6e3; }
 .inst-badge.pending { color: #7d4415; border-color: #e6c3a3; background: #fdf1e7; }
+
+/* ═══════════ রাউন্ড ১১: লাইব্রেরি (বই/অডিও/ভিডিও/ছবি) ═══════════ */
+.lib-toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 0 0 14px; }
+.lib-select { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.lib-select select { font: inherit; font-size: 13.5px; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--paper); color: var(--forest-deep); }
+.lib-reset { font: inherit; font-size: 13px; cursor: pointer; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: #fffdf7; color: var(--forest-deep); }
+.lib-reset:hover { border-color: var(--forest-mid); background: #fff6e6; }
+.lib-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+.lib-count { margin: 8px 0 18px; font-size: 13.5px; }
+
+.lib-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; align-items: start; }
+.lib-card { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.lib-card.t-pdf { border-top: 4px solid #8f3d08; }
+.lib-card.t-audio { border-top: 4px solid #2f6d7d; }
+.lib-card.t-video { border-top: 4px solid #7d2f4f; }
+.lib-card.t-image { border-top: 4px solid #2f7d5b; }
+.lib-card.t-article { border-top: 4px solid #6b6b6b; }
+.lib-thumb { display: block; background: #efe7d5; }
+.lib-thumb img { display: block; width: 100%; height: 190px; object-fit: cover; }
+.lib-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 7px; }
+.lib-top { display: flex; flex-wrap: wrap; gap: 6px; justify-content: space-between; align-items: center; }
+.lib-type { font-size: 11.5px; color: var(--forest-deep); background: #f2ece0; border: 1px solid var(--line); border-radius: 999px; padding: 3px 9px; }
+.lib-rights { font-size: 11px; border-radius: 999px; padding: 3px 9px; border: 1px solid var(--line); white-space: nowrap; }
+.lib-rights.ok { color: #1f5f43; border-color: #9fd0b8; background: #eaf6ef; }
+.lib-rights.warn { color: #7d4415; border-color: #e6c3a3; background: #fdf1e7; }
+.lib-rights.mute { color: var(--muted); background: #f6f2e8; }
+.lib-card h3 { margin: 2px 0 0; font-size: 16.5px; line-height: 1.4; }
+.lib-sub { margin: 0; font-size: 12.5px; color: var(--muted); font-style: italic; }
+.lib-meta { margin: 0; font-size: 13.5px; color: #3b2d22; }
+.lib-meta2 { margin: 0; font-size: 12.5px; color: var(--maroon); }
+.lib-about { margin: 2px 0 0; font-size: 13.5px; color: #4a3a2c; }
+.lib-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.lib-chip { font: inherit; font-size: 11.5px; cursor: pointer; background: #f2ece0; border: 1px solid #e3d9c6; color: #4a3a2c; padding: 3px 9px; border-radius: 8px; }
+.lib-chip:hover { background: #fff6e6; border-color: var(--forest-mid); }
+.lib-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.lib-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; text-decoration: none; padding: 9px 14px; border-radius: 10px; border: 1px solid transparent; }
+.lib-btn.view { background: var(--forest-deep); color: #fff6e2; }
+.lib-btn.view:hover { background: var(--forest-mid); }
+.lib-btn.dl { background: var(--gold); color: #3a1f08; }
+.lib-btn.dl:hover { filter: brightness(1.05); }
+.lib-btn.dl.off { background: #efe9dc; color: #8b7a68; border-color: #ded3bf; cursor: not-allowed; }
+.lib-src { margin: 6px 0 0; font-size: 11.5px; color: var(--muted); }
+.lib-notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.lib-note { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 0 12px 12px 0; padding: 12px 14px; }
+.lib-note strong { display: block; font-size: 14px; margin-bottom: 4px; }
+.lib-note p { margin: 0; font-size: 13px; color: var(--muted); }
+@media (max-width: 560px) {
+  .lib-grid { grid-template-columns: 1fr; }
+  .lib-thumb img { height: 160px; }
+}

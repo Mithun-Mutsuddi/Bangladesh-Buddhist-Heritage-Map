@@ -1,0 +1,2158 @@
+{
+ "schema_version": "2026-10-22.library.v1",
+ "generated_at": "2026-10-22",
+ "title": "বৌদ্ধ ঐতিহ্য লাইব্রেরি — বই, অডিও, ভিডিও ও ছবি",
+ "intro": [
+  "এখানে বাংলা ও বাংলাদেশের বৌদ্ধ ইতিহাস, সংস্কৃতি, ধর্মপালন, বিয়ে-রীতি, কীর্তন, ভাস্কর্য-মূর্তি ও বিহার নিয়ে বই (PDF), অডিও, ভিডিও, ছবি ও গবেষণাপত্র — সব এক জায়গায়।",
+  "প্রতিটি এন্ট্রিতে লেখক/নির্মাতা/শিল্পীর নাম, ভাষা, অঞ্চল, বিষয় এবং দেখার ও ডাউনলোডের আলাদা লিংক আছে।",
+  "যেখানে ডাউনলোড আইনত সম্ভব নয় (ইউটিউব, কিছু গবেষণাপত্র), সেখানে স্পষ্ট লেখা “ডাউনলোড নেই” — ভুয়া লিংক দেওয়া হয়নি।"
+ ],
+ "notes": [
+  {
+   "title": "সূত্র ও সংগ্রহ",
+   "text": "Internet Archive (Digital Library of India, Ministry of Culture, Kalpataru Rangamati, BDRC), Wikimedia Commons, YouTube, Academia.edu, buddhismbd.com."
+  },
+  {
+   "title": "কপিরাইট",
+   "text": "১৯২৯ সালের আগের প্রকাশনা সাধারণত পাবলিক ডোমেইন। “কপিরাইট অস্পষ্ট” লেখা বইগুলো ব্যবহারকারীর আপলোড — পড়াশোনার জন্য ব্যবহার করুন, বাণিজ্যিক ব্যবহার বা পুনঃপ্রকাশ করবেন না।"
+  },
+  {
+   "title": "ডাউনলোড কীভাবে",
+   "text": "PDF বাটনে চাপলে সরাসরি ফাইল নামে (কয়েকটি ২০–৭০ MB হতে পারে)। ছবির ক্ষেত্রে মূল ফাইল বা থাম্বনেইল নামে। ইউটিউব ভিডিও/অডিও শুধু দেখা/শোনার লিংক।"
+  },
+  {
+   "title": "যাচাই",
+   "text": "প্রতিটি লিংকের HTTP অবস্থা যাচাই করা হয়েছে; ভাঙা লিংক তালিকা থেকে বাদ দেওয়া হয়েছে (নিচে সংখ্যা দেখুন)।"
+  }
+ ],
+ "types": [
+  {
+   "key": "pdf",
+   "label": "📕 বই / PDF",
+   "desc": "পূর্ণ বই বা গবেষণাপত্র — পড়া ও নামানো যায়"
+  },
+  {
+   "key": "audio",
+   "label": "🎧 অডিও",
+   "desc": "কীর্তন, বন্দনা, ধর্মদেশনা, অডিওবুক"
+  },
+  {
+   "key": "video",
+   "label": "🎬 ভিডিও",
+   "desc": "বিহার, উৎসব ও সংস্কৃতির দৃশ্য-নথি"
+  },
+  {
+   "key": "image",
+   "label": "📷 ছবি",
+   "desc": "মূর্তি, পুঁথি, প্রত্নস্থল, কারুশিল্প"
+  },
+  {
+   "key": "article",
+   "label": "📄 নিবন্ধ",
+   "desc": "অনলাইন গবেষণা ও নির্দেশিকা"
+  }
+ ],
+ "topics": {
+  "itihas": "📜 ইতিহাস ও রাজবংশ",
+  "charjapad": "🎼 চর্যাপদ ও প্রাচীন সাহিত্য",
+  "pali": "📖 পালি, ত্রিপিটক ও ধর্মগ্রন্থ",
+  "pothi": "🗞️ পুঁথি ও পান্ডুলিপি",
+  "bihar": "🏛️ বিহার ও প্রত্নতত্ত্ব",
+  "silpo": "🗿 ভাস্কর্য, মূর্তি ও ধাতুশিল্প",
+  "kristi": "🎭 সংস্কৃতি ও উৎসব",
+  "bibaho": "💍 বিয়ে ও পারিবারিক রীতি",
+  "jibon": "🏡 জীবনধারা ও সমাজ",
+  "kirtan": "🎵 কীর্তন, বন্দনা ও সংগীত",
+  "sadhana": "🧘 ধর্মপালন ও সাধনা",
+  "sahitya": "✍️ সাহিত্য ও গবেষণা",
+  "probash": "🌍 বিদেশি বিবরণ"
+ },
+ "items": [
+  {
+   "id": "lib-bouddhagan-doha",
+   "type": "pdf",
+   "title": "বৌদ্ধগান ও দোহা (চর্যাপদ)",
+   "sub": "Hajar Bacharer Purano Bangala Bhashay Bouddhagan O Doha (1916)",
+   "creator": "হরপ্রসাদ শাস্ত্রী (সম্পা.)",
+   "role": "সম্পাদক·আবিষ্কারক",
+   "year": "১৯১৬",
+   "language": "বাংলা",
+   "place": "পশ্চিমবঙ্গ / নেপাল-প্রাপ্ত পুঁথি",
+   "topics": [
+    "charjapad",
+    "pothi",
+    "sahitya"
+   ],
+   "about": "বাংলা ভাষার আদি নিদর্শন চর্যাপদের প্রথম প্রকাশিত সংস্করণ — ৪৭টি বৌদ্ধগান ও দোহা, হরপ্রসাদ শাস্ত্রীর সম্পাদনায়।",
+   "view": "https://archive.org/details/BouddhaGanODoha",
+   "download": [
+    "https://archive.org/download/BouddhaGanODoha/Bouddha%20Gan%20O%20Doha.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "১৯১৬ সালের মূল মুদ্রণ — পাবলিক ডোমেইন।",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-naba-charyapada",
+   "type": "pdf",
+   "title": "নব চর্যাপদ",
+   "sub": "Naba Charyapada (Calcutta University, 1989)",
+   "creator": "অসিত কুমার বন্দ্যোপাধ্যায় (সম্পা.)",
+   "role": "সম্পাদক·গবেষক",
+   "year": "১৯৮৯",
+   "language": "বাংলা",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "charjapad",
+    "sahitya"
+   ],
+   "about": "চর্যাপদের নতুন পাঠ, ভূমিকা ও ভাষা-বিশ্লেষণসহ বিশ্ববিদ্যালয়-প্রকাশনা (কলিকাতা বিশ্ববিদ্যালয়)।",
+   "view": "https://archive.org/details/naba_charyapada_CU_pub",
+   "download": [
+    "https://archive.org/download/naba_charyapada_CU_pub/naba_charyapada_CU_pub.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "আপলোড-করা কপি; কপিরাইট অবস্থা স্পষ্ট নয় — পড়াশোনার জন্য, বাণিজ্যিক ব্যবহার নয়।",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-charyagiti-parichay",
+   "type": "pdf",
+   "title": "চর্যাগীতি পরিচয়",
+   "sub": "Charyagiti Parichaya",
+   "creator": "সত্যব্রত দে",
+   "role": "লেখক",
+   "year": "১৯৬০",
+   "language": "বাংলা",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "charjapad",
+    "sahitya"
+   ],
+   "about": "চর্যাপদের পাঠ, ব্যাখ্যা ও রাগ-তাল বিশ্লেষণ নিয়ে পাণ্ডিত্যপূর্ণ গ্রন্থ।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.302051",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.302051/2015.302051.Charyagiti-Parichaya_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "Digital Library of India (DST/Ernet) স্ক্যান।",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-charyagitika",
+   "type": "pdf",
+   "title": "চর্যাগীতিকা",
+   "sub": "Charyagitika (ed. Adul Hai & Anwar Pasha)",
+   "creator": "মুহম্মদ আদুল হাই ও আনোয়ার পাশা (সম্পা.)",
+   "role": "সম্পাদক",
+   "year": "আনু. ১৯৯০-এর দশক",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "charjapad",
+    "sahitya",
+    "pothi"
+   ],
+   "about": "বাংলাদেশি গবেষকদের সম্পাদনায় চর্যাপদের পাঠ ও অনুবাদ — বাংলা একাডেমি-ধারার পাঠ্য সংস্করণ।",
+   "view": "https://archive.org/details/xahin_live_20170410",
+   "download": [
+    "https://archive.org/download/xahin_live_20170410/%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%97%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%95%E0%A6%BE%20%E0%A5%A4%E0%A5%A4%20%E0%A6%AE%E0%A7%81%E0%A6%B9%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6%20%E0%A6%86%E0%A6%A6%E0%A7%81%E0%A6%B2%20%E0%A6%B9%E0%A6%BE%E0%A6%87%20%E0%A6%93%20%E0%A6%86%E0%A6%A8%E0%A7%8B%E0%A7%9F%E0%A6%BE%E0%A6%B0%20%E0%A6%AA%E0%A6%BE%E0%A6%B6%E0%A6%BE_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-dharmankur-report",
+   "type": "pdf",
+   "title": "বৌদ্ধ ধর্ম্মাঙ্কুর সভা — পঞ্চবিংশ বার্ষিক কার্য্য বিবরণী (১৯১৬–১৭)",
+   "sub": "Bauddha Dharmankur Sabha Annual Report 1916-17",
+   "creator": "বেঙ্গল বুদ্ধিস্ট অ্যাসোসিয়েশন (বৌদ্ধধর্মাঙ্কুর সভা)",
+   "role": "প্রতিষ্ঠান-প্রকাশনা",
+   "year": "১৯১৭",
+   "language": "বাংলা ও ইংরেজি",
+   "place": "পশ্চিমবঙ্গ (কলকাতা)",
+   "topics": [
+    "itihas",
+    "sadhana",
+    "kristi"
+   ],
+   "about": "কলকাতার বৌদ্ধধর্মাঙ্কুর সভার বার্ষিক প্রতিবেদন — বাংলার বৌদ্ধ সংগঠন-ইতিহাসের দুর্লভ প্রাথমিক দলিল।",
+   "view": "https://archive.org/details/dli.ministry.27862",
+   "download": [
+    "https://archive.org/download/dli.ministry.27862/34431.9147.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "ভারত সরকারের Ministry of Culture-এর ডিজিটাল সংগ্রহ থেকে।",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-bouddha-dharma-1901",
+   "type": "pdf",
+   "title": "বৌদ্ধ ধর্ম্ম",
+   "sub": "Bouddha Dharma (1901)",
+   "creator": "সত্যেন্দ্রনাথ ঠাকুর",
+   "role": "লেখক",
+   "year": "১৯০১",
+   "language": "বাংলা",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "sadhana",
+    "sahitya",
+    "itihas"
+   ],
+   "about": "বাংলার বুদ্ধিজীবী সমাজে বৌদ্ধধর্মের প্রথম আধুনিক ভাষ্য-গ্রন্থগুলোর একটি; ঠাকুর পরিবারের বৌদ্ধ-চর্চার নিদর্শন।",
+   "view": "https://archive.org/details/dli.bengal.10689.4186",
+   "download": [
+    "https://archive.org/download/dli.bengal.10689.4186/10689.4186.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-ashok-anushasan",
+   "type": "pdf",
+   "title": "অশোক অনুশাসন",
+   "sub": "Ashok Anushasan (1915)",
+   "creator": "ললিতমোহন কর (সম্পা.)",
+   "role": "সম্পাদক",
+   "year": "১৯১৫",
+   "language": "বাংলা",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "itihas",
+    "pothi"
+   ],
+   "about": "অশোকের শিলালিপি ও অনুশাসনের বাংলা অনুবাদ-সংকলন — বাংলায় বৌদ্ধ শাসন-চর্চার ভিত্তিগ্রন্থ।",
+   "view": "https://archive.org/details/dli.bengal.10689.8337",
+   "download": [
+    "https://archive.org/download/dli.bengal.10689.8337/10689.8337.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-dhammapada-shilbhadra",
+   "type": "pdf",
+   "title": "ধম্মপদ (ভিক্ষু শীলভদ্রের অনুবাদ)",
+   "sub": "Dhammapada, tr. Bhikshu Shilabhadra (1944)",
+   "creator": "ভিক্ষু শীলভদ্র",
+   "role": "ভিক্ষু·অনুবাদক",
+   "year": "১৯৪৪",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ/পশ্চিমবঙ্গ",
+   "topics": [
+    "pali",
+    "sadhana"
+   ],
+   "about": "চট্টগ্রাম অঞ্চলের পণ্ডিত ভিক্ষু শীলভদ্রের ধম্মপদ-বঙ্গানুবাদ — বাংলায় ধর্মগ্রন্থ-পাঠের জনপ্রিয় সংস্করণ।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.456770",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.456770/2015.456770.Dhammapada_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-dhammapada-ramprasad",
+   "type": "pdf",
+   "title": "ধম্মপদ (রামপ্রসাদ সেনের অনুবাদ)",
+   "sub": "Dhammapada, tr. Ramprasad Sen (1960)",
+   "creator": "রামপ্রসাদ সেন (অনু.)",
+   "role": "অনুবাদক",
+   "year": "১৯৬০",
+   "language": "বাংলা",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "pali",
+    "sadhana"
+   ],
+   "about": "পালি ধম্মপদ-এর আরেকটি বাংলা অনুবাদ — ভাষা সহজ, সাধারণ পাঠকের জন্য।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.456359",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.456359/2015.456359.Dhammapada_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-dharmapad-1905",
+   "type": "pdf",
+   "title": "ধর্ম্মপদ (১৯০৫)",
+   "sub": "Dharmapad, ed. Charuchandra Basu",
+   "creator": "চারুচন্দ্র বসু",
+   "role": "সম্পাদক·অনুবাদক",
+   "year": "১৯০৫",
+   "language": "বাংলা",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "pali",
+    "sadhana",
+    "pothi"
+   ],
+   "about": "বিংশ শতকের গোড়ার দিকের ধম্মপদ-সংস্করণ — পালি পাঠ ও বাংলা ব্যাখ্যা।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.291198",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.291198/2015.291198.Dharmapad-Ed_text.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-bodhisattabadan",
+   "type": "pdf",
+   "title": "বোধিসত্ত্বাবদান-কল্পলতা",
+   "sub": "Bodhisattvavadanakalpalata (Bengali, 1912)",
+   "creator": "শরচ্চন্দ্র দাশ (অনু.)",
+   "role": "অনুবাদক",
+   "year": "১৯১২",
+   "language": "বাংলা",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "sahitya",
+    "pali",
+    "pothi"
+   ],
+   "about": "সংস্কৃত বৌদ্ধ অবদান-সাহিত্যের বাংলা অনুবাদ — বোধিসত্ত্বের জীবন-কথার সংকলন।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.290837",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.290837/2015.290837.Bodhisattabadan-kalpalata_text.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-vinayapitaka-pachittiya",
+   "type": "pdf",
+   "title": "বিনয়পিটক পাচিত্তিয়",
+   "sub": "Vinayapitaka Pacittiya (Bengali, 1935)",
+   "creator": "জিনবংশ ধীয়ান (অনু.)",
+   "role": "ভিক্ষু·অনুবাদক",
+   "year": "১৯৩৫",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ/বার্মা",
+   "topics": [
+    "pali",
+    "sadhana"
+   ],
+   "about": "সংঘ-শৃঙ্খলার মূল গ্রন্থ বিনয়পিটকের পাচিত্তিয় ভাগের বাংলা অনুবাদ — ভিক্ষু-প্রশিক্ষণের পাঠ্য।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.289872",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.289872/2015.289872.Binaypitak-Pachittinang_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-dhammapada-commentary",
+   "type": "pdf",
+   "title": "ধম্মপদ-অট্ঠকথার ভাষ্য (১ম খণ্ড)",
+   "sub": "Commentary on Dhammapada Vol.1 (1952)",
+   "creator": "অজ্ঞাত (পালি টীকা-ভাষ্য)",
+   "role": "সংকলন",
+   "year": "১৯৫২",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "pali",
+    "sahitya"
+   ],
+   "about": "ধম্মপদের প্রাচীন টীকা (অট্ঠকথা) অবলম্বনে বাংলা ভাষ্য — গল্পের ভেতর দিয়ে ধর্মীয় শিক্ষা।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.316075",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.316075/2015.316075.1621-Commentary_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-banglay-bauddha-dharma",
+   "type": "pdf",
+   "title": "বাংলায় বৌদ্ধধর্ম",
+   "sub": "Banglay Bauddha Dharma (ed. Dr. Sukomal Chowdhury)",
+   "creator": "ড. সুকোমল চৌধুরী (সম্পা.)",
+   "role": "সম্পাদক·গবেষক",
+   "year": "আধুনিক",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "itihas",
+    "kristi",
+    "jibon"
+   ],
+   "about": "বাংলায় বৌদ্ধধর্মের ইতিহাস, সমাজ ও সংস্কৃতি নিয়ে গবেষণা-সংকলন — বাংলাদেশের বৌদ্ধ সমাজতত্ত্বের মূল গ্রন্থ।",
+   "view": "https://archive.org/details/4.3.-by-.",
+   "download": [
+    "https://archive.org/download/4.3.-by-./4.3.%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A7%9F%20%E0%A6%AC%E0%A7%87%E0%A7%97%E0%A6%A6%E0%A7%8D%E0%A6%A7%E0%A6%A7%E0%A6%B0%E0%A7%8D%E0%A6%AE%20by%20%E0%A6%A1.%20%E0%A6%B8%E0%A7%81%E0%A6%95%E0%A7%8B%E0%A6%AE%E0%A6%B2%20%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80%20%E0%A6%B8%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%BE%E0%A6%A6%E0%A6%BF%E0%A6%A4_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-kalpataru-tripitak",
+   "type": "pdf",
+   "title": "প্রসঙ্গ: পার্বত্য চট্টগ্রাম",
+   "sub": "Proshongo: Parbottya Chattagram (Kalpataru, Rangamati)",
+   "creator": "সিদ্ধার্থ চাকমা",
+   "role": "লেখক",
+   "year": "আধুনিক",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ (রাঙামাটি)",
+   "topics": [
+    "itihas",
+    "jibon",
+    "kristi"
+   ],
+   "about": "পার্বত্য চট্টগ্রামের বৌদ্ধ সমাজ, সংস্কৃতি ও ইতিহাস নিয়ে স্থানীয় প্রকাশনা — কালপতরু (রাঙামাটি) থেকে।",
+   "view": "https://archive.org/details/by-1_20200724",
+   "download": [
+    "https://archive.org/download/by-1_20200724/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B8%E0%A6%99%E0%A7%8D%E0%A6%97%20%20%20%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%A4%E0%A7%8D%E0%A6%AF%20%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%20%E0%A5%A4%E0%A5%A4%20%20%E0%A6%B8%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%A7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%20%E0%A6%9A%E0%A6%BE%E0%A6%95%E0%A6%AE%E0%A6%BE_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "বাংলাদেশি বৌদ্ধ প্রকাশনী “কালপতরু, রাঙামাটি”-র আপলোড।",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-banabhante-desana",
+   "type": "pdf",
+   "title": "বনভন্তের দেশনা সম্ভার (১ম)",
+   "sub": "Banabhanter Desona Sombhar-1 — Indragupta Bhikkhu",
+   "creator": "ইন্দ্রগুপ্ত ভিক্ষু",
+   "role": "ভিক্ষু·ধর্মদেশক",
+   "year": "আধুনিক",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ (রাঙামাটি)",
+   "topics": [
+    "sadhana",
+    "jibon"
+   ],
+   "about": "বনভন্তে-ধারার ধর্মদেশনার সংকলন — পার্বত্য অঞ্চলের বৌদ্ধ সাধনা-জীবনের দলিল (কালপতরু, রাঙামাটি)।",
+   "view": "https://archive.org/details/bishakha",
+   "download": [
+    "https://archive.org/download/bishakha/Banabhanter%20Deshona%20Sombhar-1%20by%20Indragupta%20Bhikkhu.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-buddha-golpomala",
+   "type": "pdf",
+   "title": "বুদ্ধ গল্পমালা",
+   "sub": "Buddha Golpomala — Kartrik Chandra Tanchangya",
+   "creator": "কার্তিক চন্দ্র তঞ্চঙ্গ্যা",
+   "role": "লেখক",
+   "year": "আধুনিক",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ (পার্বত্য অঞ্চল)",
+   "topics": [
+    "sahitya",
+    "jibon",
+    "sadhana"
+   ],
+   "about": "বুদ্ধের জীবন ও জাতক-কাহিনির সরল বাংলা গল্প-সংকলন — স্থানীয় বৌদ্ধ পাঠকদের জন্য লেখা।",
+   "view": "https://archive.org/details/buddha-golpomala",
+   "download": [
+    "https://archive.org/download/buddha-golpomala/Buddha%20Golpomala-%E0%A6%AC%E0%A7%87%E0%A7%97%E0%A6%A6%E0%A7%8D%E0%A6%A7%20%E0%A6%97%E0%A6%B2%E0%A7%8D%E0%A6%AA%E0%A6%AE%E0%A6%BE%E0%A6%B2%E0%A6%BE.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-dhammapada-kabita",
+   "type": "pdf",
+   "title": "ধম্মপদ — কাব্য অনুবাদ",
+   "sub": "Dhammapada in Bengali verse",
+   "creator": "অজ্ঞাত",
+   "role": "অনুবাদক",
+   "year": "আধুনিক",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "pali",
+    "sahitya"
+   ],
+   "about": "ধম্মপদের ছন্দোবদ্ধ বাংলা অনুবাদ — ছোট ফাইল, সহজে পড়া যায়।",
+   "view": "https://archive.org/details/dhammapada-_kabita_bengali",
+   "download": [
+    "https://archive.org/download/dhammapada-_kabita_bengali/dhammapada-_kabita_bengali.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-banglar-baul",
+   "type": "pdf",
+   "title": "বাংলার বাউল ও বাউল গান",
+   "sub": "Banglar Baul O Baul Gan (1957)",
+   "creator": "উপেন্দ্রনাথ ভট্টাচার্য",
+   "role": "লেখক",
+   "year": "১৯৫৭",
+   "language": "বাংলা",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "kirtan",
+    "kristi",
+    "jibon"
+   ],
+   "about": "বাউল সাধনা ও গানের ভেতর দিয়ে বাংলার লোকধর্মের ইতিহাস — চর্যাপদ-সহজিয়া ধারার প্রভাব নিয়ে আলোচনা।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.354955",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.354955/2015.354955.Banglar-Baul_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-lalan-fakir",
+   "type": "pdf",
+   "title": "লালন ফকির: কবি ও কাব্য",
+   "sub": "Lalan Fakir: Kabi O Kabya (1960)",
+   "creator": "সনাতকুমার মিত্র",
+   "role": "লেখক",
+   "year": "১৯৬০",
+   "language": "বাংলা",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "kirtan",
+    "kristi"
+   ],
+   "about": "লালন-গানের পাঠ ও ব্যাখ্যা — বাংলার লোকধর্ম-সংগীতের ভিত্তিগ্রন্থ।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.299151",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.299151/2015.299151.Lalan-Fakir.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-baulsufi",
+   "type": "pdf",
+   "title": "বাংলার বাউল: সুফি সাধনা ও সংগীত",
+   "sub": "Banglar Baul Sufi Sadhona O Sangeet (1999)",
+   "creator": "আবদুল ওয়াহাব",
+   "role": "লেখক",
+   "year": "১৯৯৯",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "kirtan",
+    "kristi",
+    "sadhana"
+   ],
+   "about": "বাউল ও সুফি সাধনার মিলন-বিন্দু এবং বাংলার গান-ঐতিহ্য নিয়ে গবেষণা।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.266130",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.266130/2015.266130.Banglar-Baul_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-radharaman-geeti",
+   "type": "pdf",
+   "title": "বাউল কবি রাধারমণ গীতি সংগ্ৰহ",
+   "sub": "Baul Kabi Radharaman Geeti Sangraha (2009)",
+   "creator": "বিজন কৃষ্ণ চৌধুরী (সম্পা.)",
+   "role": "সম্পাদক",
+   "year": "২০০৯",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ (চট্টগ্রাম)",
+   "topics": [
+    "kirtan",
+    "kristi"
+   ],
+   "about": "চট্টগ্রামের বাউল কবি রাধারমণের গানের সংকলন — বন্দনা, দেহতত্ত্ব ও ভক্তি-গীতি।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.457853",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.457853/2015.457853.Baul-Kabi_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-sreehatta",
+   "type": "pdf",
+   "title": "শ্রীহট্ট-কাছাড়ের প্রাচীন ইতিহাস ও সংস্কৃতির রূপরেখা",
+   "sub": "Sreehatta-Kachharer Prachin Itihas O Sanskritir Ruprekha (1996)",
+   "creator": "মনবেন্দ্র ভট্টাচার্য (সম্পা.)",
+   "role": "সম্পাদক",
+   "year": "১৯৯৬",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ (সিলেট) ও ভারত",
+   "topics": [
+    "itihas",
+    "kristi",
+    "jibon"
+   ],
+   "about": "সিলেট-কাছাড় অঞ্চলের প্রাচীন ইতিহাস ও সংস্কৃতি — বৌদ্ধ-হিন্দু-লোকধর্মের স্তর আলাদা করে দেখানো।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.265076",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.265076/2015.265076.Sreehatta-kachharer-Prachin_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-obscure-cults",
+   "type": "pdf",
+   "title": "Obscure Religious Cults as Background of Bengali Literature",
+   "sub": "Shashibhusan Dasgupta (1946)",
+   "creator": "শশিভূষণ দাশগুপ্ত",
+   "role": "লেখক·গবেষক",
+   "year": "১৯৪৬",
+   "language": "ইংরেজি",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "sadhana",
+    "sahitya",
+    "itihas"
+   ],
+   "about": "বাংলা সাহিত্যের পেছনে বৌদ্ধ সহজিয়া, নাথ ও লোকধর্মের প্রভাব — আন্তর্জাতিকভাবে বহুল উদ্ধৃত গবেষণা।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.31035",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.31035/2015.31035.Obscure-Religious-Cults-As-Background-Of-Bengali-Literature_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-hindu-buddha-jaina",
+   "type": "pdf",
+   "title": "হিন্দু, বৌদ্ধ, জৈন ও শিখ ধর্মের ইতিহাস",
+   "sub": "History of Hindu, Buddhist, Jaina and Sikh religions",
+   "creator": "অজ্ঞাত সংকলক",
+   "role": "সংকলন",
+   "year": "২০২৫ (আপলোড)",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "itihas",
+    "sadhana"
+   ],
+   "about": "চার ধর্মের তুলনামূলক ইতিহাস — বৌদ্ধ অধ্যায়ে বাংলার পাল-চন্দ্র-দেব যুগের আলোচনা।",
+   "view": "https://archive.org/details/20250326_20250326_0427",
+   "download": [
+    "https://archive.org/download/20250326_20250326_0427/%E0%A6%B9%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A7%81%2C%20%E0%A6%AC%E0%A7%8C%E0%A6%A6%E0%A7%8D%E0%A6%A7%2C%20%E0%A6%9C%E0%A7%88%E0%A6%A8%20%E0%A6%93%20%E0%A6%B6%E0%A6%BF%E0%A6%96%20%E0%A6%A7%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A7%87%E0%A6%B0%20%E0%A6%87%E0%A6%A4%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B8.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-barua-prolegomena",
+   "type": "pdf",
+   "title": "Prolegomena to a History of Buddhist Philosophy",
+   "sub": "B. M. Barua (1918)",
+   "creator": "বেণীমাধব বড়ুয়া",
+   "role": "লেখক·অধ্যাপক",
+   "year": "১৯১৮",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ (চট্টগ্রাম) → কলকাতা",
+   "topics": [
+    "itihas",
+    "sahitya",
+    "sadhana"
+   ],
+   "about": "চট্টগ্রামের বেণীমাধব বড়ুয়ার বিশ্বখ্যাত গবেষণা — বৌদ্ধ-পূর্ব ভারতীয় দর্শনের ভিত্তি ও বৌদ্ধ দর্শনের উৎস।",
+   "view": "https://archive.org/details/prolegomenatohis00barurich",
+   "download": [
+    "https://archive.org/download/prolegomenatohis00barurich/prolegomenatohis00barurich.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "১৯১৮ সালের মূল সংস্করণ; টরন্টো বিশ্ববিদ্যালয় স্ক্যান।",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-barua-gaya",
+   "type": "pdf",
+   "title": "Gayā and Buddha-Gayā (Vol. 1)",
+   "sub": "Benimadhab Barua (1934)",
+   "creator": "বেণীমাধব বড়ুয়া",
+   "role": "লেখক·প্রত্নতাত্ত্বিক",
+   "year": "১৯৩৪",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ (চট্টগ্রাম)",
+   "topics": [
+    "bihar",
+    "itihas",
+    "silpo"
+   ],
+   "about": "বুদ্ধগয়ার প্রত্নতত্ত্ব ও ইতিহাস — বাংলার পণ্ডিতের হাতে লেখা আন্তর্জাতিক মানের মাঠ-গবেষণা।",
+   "view": "https://archive.org/details/benimadhab-barua-gaya-and-buddha-gaya-early-history-of-the-holy-land-volume-1-satis-chandra-1934",
+   "download": [
+    "https://archive.org/download/benimadhab-barua-gaya-and-buddha-gaya-early-history-of-the-holy-land-volume-1-satis-chandra-1934/Benimadhab%20Barua%20-%20Gay%C4%81%20and%20Buddha-Gay%C4%81_%20%28early%20history%20of%20the%20holy%20land%29%20volume%201%20-Satis%20Chandra%20%281934%29.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-dikshit-paharpur",
+   "type": "pdf",
+   "title": "Excavations at Paharpur, Bengal (1938)",
+   "sub": "K. N. Dikshit — Archaeological Survey of India",
+   "creator": "কে. এন. দীক্ষিত",
+   "role": "প্রত্নতাত্ত্বিক·খনন-পরিচালক",
+   "year": "১৯৩৮",
+   "language": "ইংরেজি",
+   "place": "ভারত (এএসআই) — পাহাড়পুর, বাংলাদেশ",
+   "topics": [
+    "bihar",
+    "silpo",
+    "itihas"
+   ],
+   "about": "পাহাড়পুর (সোমপুর মহাবিহার) খননের মূল সরকারি প্রতিবেদন — টেরাকোটা, ভাস্কর্য ও স্থাপত্যের প্রাথমিক দলিল।",
+   "view": "https://archive.org/details/excavationsatpaharpurbengalrbkndikshit1938_571_R",
+   "download": [
+    "https://archive.org/download/excavationsatpaharpurbengalrbkndikshit1938_571_R/Excavations%20at%20Paharpur%2C%20Bengal%20-%20RB%20KN%20Dikshit%20%281938%29_text.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-khan-mainamati",
+   "type": "pdf",
+   "title": "Mainamati",
+   "sub": "F. A. Khan — Department of Archaeology, Pakistan",
+   "creator": "এফ. এ. খান",
+   "role": "প্রত্নতাত্ত্বিক",
+   "year": "১৯৬০-এর দশক",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ (কুমিল্লা)",
+   "topics": [
+    "bihar",
+    "silpo",
+    "itihas"
+   ],
+   "about": "ময়নামতি-লালমাই অঞ্চলের খনন ও প্রত্নবস্তুর প্রথম পূর্ণ প্রতিবেদন — শালবন বিহার, কোটিলা মুড়া, চারপত্র মুড়া।",
+   "view": "https://archive.org/details/mainamati-by-f-a-khan",
+   "download": [
+    "https://archive.org/download/mainamati-by-f-a-khan/MAINAMATI%20BY%20F%20A%20KHAN.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-bhattasali-iconography",
+   "type": "pdf",
+   "title": "Iconography of Buddhist and Brahmanical Sculptures in the Dacca Museum (1929)",
+   "sub": "Nalini Kanta Bhattasali",
+   "creator": "নলিনীকান্ত ভট্টশালী",
+   "role": "কিউরেটর·গবেষক",
+   "year": "১৯২৯",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ (ঢাকা)",
+   "topics": [
+    "silpo",
+    "bihar",
+    "itihas"
+   ],
+   "about": "ঢাকা জাদুঘরের পাল-যুগীয় মূর্তি ও ভাস্কর্যের তালিকা-বিশ্লেষণ — বাংলার ভাস্কর্য-চর্চার মূল বই।",
+   "view": "https://archive.org/details/iconographyofbud00dacc",
+   "download": [
+    "https://archive.org/download/iconographyofbud00dacc/iconographyofbud00dacc.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-mitra-bronzes",
+   "type": "pdf",
+   "title": "Bronzes from Bangladesh: A Study of Buddhist Images from District Chittagong (1982)",
+   "sub": "Debala Mitra",
+   "creator": "দেবলা মিত্র",
+   "role": "প্রত্নতাত্ত্বিক",
+   "year": "১৯৮২",
+   "language": "ইংরেজি",
+   "place": "ভারত — চট্টগ্রাম, বাংলাদেশ",
+   "topics": [
+    "silpo",
+    "bihar"
+   ],
+   "about": "চট্টগ্রাম অঞ্চলের ব্রোঞ্জ-বুদ্ধমূর্তি নিয়ে একমাত্র পূর্ণাঙ্গ গবেষণা — মূর্তির ধরন, কাল ও শিল্পীর ঐতিহ্য।",
+   "view": "https://archive.org/details/kmkl_bronzes-from-bangladesh-a-study-of-buddhist-images-from-district-chittagong",
+   "download": [
+    "https://archive.org/download/kmkl_bronzes-from-bangladesh-a-study-of-buddhist-images-from-district-chittagong/Bronzes%20From%20Bangladesh%20A%20Study%20Of%20Buddhist%20Images%20From%20District%20Chittagong%20By%20Debala%20Mitra%20Buddhist%20Art%20Illustrated%20Delhi%201982%20-%20Agam%20Kala%20Prakashan.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "আপলোড-করা কপি; কপিরাইট অবস্থা স্পষ্ট নয়।",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-mitra-sanskrit-lit",
+   "type": "pdf",
+   "title": "The Sanskrit Buddhist Literature of Nepal (1882)",
+   "sub": "Rājendralāla Mitra",
+   "creator": "রাজেন্দ্রলাল মিত্র",
+   "role": "গবেষক",
+   "year": "১৮৮২",
+   "language": "ইংরেজি",
+   "place": "ভারত (কলকাতা)",
+   "topics": [
+    "pothi",
+    "sahitya",
+    "pali"
+   ],
+   "about": "নেপালে সংরক্ষিত সংস্কৃত বৌদ্ধ পুঁথির প্রথম পূর্ণ তালিকা — চর্যাপদ-সংলগ্ন সাহিত্যের ভিত্তি।",
+   "view": "https://archive.org/details/sanskritbuddhis00mitrgoog",
+   "download": [
+    "https://archive.org/download/sanskritbuddhis00mitrgoog/sanskritbuddhis00mitrgoog.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-palas-banerjee",
+   "type": "pdf",
+   "title": "The Palas of Bengal",
+   "sub": "R. D. Banerjee",
+   "creator": "রাখালদাস বন্দ্যোপাধ্যায়",
+   "role": "ইতিহাসবিদ",
+   "year": "১৯১৫",
+   "language": "ইংরেজি",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "itihas",
+    "bihar",
+    "silpo"
+   ],
+   "about": "পাল রাজবংশের ইতিহাসের প্রথম আধুনিক গবেষণা — বাংলায় বৌদ্ধ যুগের রাজনৈতিক ও সাংস্কৃতিক রূপরেখা।",
+   "view": "https://archive.org/details/PalasOfBengalByRakhalDasBanerjee",
+   "download": [
+    "https://archive.org/download/PalasOfBengalByRakhalDasBanerjee/Palas-of-Bengal-by-Rakhal-Das-Banerjee.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-hiuen-tsiang",
+   "type": "pdf",
+   "title": "Buddhist Records of the Western World (Vol. 1)",
+   "sub": "Hiuen Tsiang, tr. Samuel Beal (1906)",
+   "creator": "হিউয়েন সাঙ / স্যামুয়েল বিয়াল (অনু.)",
+   "role": "পরিব্রাজক·অনুবাদক",
+   "year": "১৯০৬",
+   "language": "ইংরেজি",
+   "place": "চীন → ভারত ও বঙ্গ",
+   "topics": [
+    "probash",
+    "itihas",
+    "jibon"
+   ],
+   "about": "সপ্তম শতকের চীনা পরিব্রাজকের বিবরণ — সমতট, পুণ্ড্রবর্ধন ও কর্ণসুবর্ণের বৌদ্ধ-জীবনের মূল বিদেশি সাক্ষ্য।",
+   "view": "https://archive.org/details/buddhist-records-of-the-western-world-vol-1_202205",
+   "download": [
+    "https://archive.org/download/buddhist-records-of-the-western-world-vol-1_202205/Buddhist%20Records%20of%20the%20Western%20World-Vol%201.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-faxian",
+   "type": "pdf",
+   "title": "A Record of Buddhistic Kingdoms",
+   "sub": "Fa Xian, tr. James Legge (1886)",
+   "creator": "ফা-হিয়েন / জেমস লেগ (অনু.)",
+   "role": "পরিব্রাজক·অনুবাদক",
+   "year": "১৮৮৬",
+   "language": "ইংরেজি",
+   "place": "চীন → ভারত ও বঙ্গ",
+   "topics": [
+    "probash",
+    "itihas"
+   ],
+   "about": "পঞ্চম শতকের চীনা পরিব্রাজকের ভ্রমণ-বিবরণ — বাংলার প্রাচীন বৌদ্ধ-কেন্দ্রগুলোর প্রাথমিক উল্লেখ।",
+   "view": "https://archive.org/details/ARecordOfBuddhisticKingdoms",
+   "download": [
+    "https://archive.org/download/ARecordOfBuddhisticKingdoms/ARecordOfBuddhisticKingdoms_text.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-shahidullah-chants",
+   "type": "pdf",
+   "title": "Les chants mystiques de Kāṇha et de Saraha (1928)",
+   "sub": "Dr Muhammad Shahidullah",
+   "creator": "মুহম্মদ শহীদুল্লাহ",
+   "role": "ভাষাবিদ·সম্পাদক",
+   "year": "১৯২৮",
+   "language": "ফরাসি ও বাংলা/সংস্কৃত",
+   "place": "বাংলাদেশ (ঢাকা) → প্যারিস",
+   "topics": [
+    "charjapad",
+    "sahitya",
+    "pothi"
+   ],
+   "about": "চর্যাপদের কাহ্ণপা ও সরহপার গানের ফরাসি অনুবাদ-সংস্করণ — বাঙালি পণ্ডিতের আন্তর্জাতিক প্রকাশনা।",
+   "view": "https://archive.org/details/leschantsmystiques",
+   "download": [
+    "https://archive.org/download/leschantsmystiques/leschantsmystiques.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-arakan-evidence",
+   "type": "pdf",
+   "title": "Archaeological Evidence of Buddhist Links between Sri Lanka and Arakan",
+   "sub": "C. Raymond",
+   "creator": "সি. রেমন্ড",
+   "role": "গবেষক",
+   "year": "আধুনিক",
+   "language": "ইংরেজি",
+   "place": "মিয়ানমার (আরাকান) ও শ্রীলঙ্কা — বাংলাদেশ-সংযোগ",
+   "topics": [
+    "itihas",
+    "bihar",
+    "silpo"
+   ],
+   "about": "আরাকান ও সিংহলি সংঘের প্রত্নতাত্ত্বিক যোগসূত্র — চট্টগ্রাম অঞ্চলের বৌদ্ধ ধারার আঞ্চলিক প্রেক্ষাপট।",
+   "view": "https://archive.org/details/ArchaeologicalEvidenceOfBuddhistLinksBetweenSriLankaAndArakan",
+   "download": [
+    "https://archive.org/download/ArchaeologicalEvidenceOfBuddhistLinksBetweenSriLankaAndArakan/Archaeological%20Evidence%20of%20Buddhist%20Links%20between%20Sri%20Lanka%20and%20Arakan.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-prasad-archaeology",
+   "type": "pdf",
+   "title": "Archaeology of Religion in South Asia: Buddhist, Brahmanical and Jaina Centres in Bihar and Bengal, c. AD 600–1200",
+   "sub": "Birendra Nath Prasad",
+   "creator": "বীরেন্দ্র নাথ প্রসাদ",
+   "role": "গবেষক",
+   "year": "২০১৭",
+   "language": "ইংরেজি",
+   "place": "বিহার ও বাংলা",
+   "topics": [
+    "bihar",
+    "itihas",
+    "jibon"
+   ],
+   "about": "বিহার ও বাংলার ধর্মীয় কেন্দ্রগুলোর প্রত্নতাত্ত্বিক সমাজ-ইতিহাস — বিহার-কেন্দ্রিক অর্থনীতি ও জনজীবন।",
+   "view": "https://archive.org/details/archaeology-of-religion-in-south-asia-buddhist-brahmanical-and-jaina-religious-c",
+   "download": [
+    "https://archive.org/download/archaeology-of-religion-in-south-asia-buddhist-brahmanical-and-jaina-religious-c/Archaeology%20of%20Religion%20in%20South%20Asia%20Buddhist%2C%20Brahmanical%20and%20Jaina%20Religious%20Centres%20in%20Bihar%20and%20Bengal%2C%20c.%20AD%20600%E2%80%931200%20%28Birendra%20Nath%20Prasad%29%20%28z-lib.org%29.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "আপলোড-করা কপি; কপিরাইট অবস্থা স্পষ্ট নয়।",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-chakma-genesis",
+   "type": "pdf",
+   "title": "Genesis of Indigenous Chakma Buddhist and their Pulverization Worldwide",
+   "sub": "S. P. Talukder",
+   "creator": "এস. পি. তালুকদার",
+   "role": "লেখক",
+   "year": "আধুনিক",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ (পার্বত্য চট্টগ্রাম)",
+   "topics": [
+    "itihas",
+    "jibon",
+    "kristi"
+   ],
+   "about": "চাকমা বৌদ্ধ সমাজের উৎস ও বিস্তার — পার্বত্য অঞ্চলের নৃগোষ্ঠী-ইতিহাসের দলিল।",
+   "view": "https://archive.org/details/genesis-of-indigenous-chakma-buddhist-and-their-puverization-worldwide",
+   "download": [
+    "https://archive.org/download/genesis-of-indigenous-chakma-buddhist-and-their-puverization-worldwide/Genesis%20of%20indigenous%20Chakma%20Buddhist%20and%20their%20puverization%20worldwide_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-bangladesh-reader",
+   "type": "pdf",
+   "title": "The Bangladesh Reader: History, Culture, Politics",
+   "sub": "ed. Meghna Guhathakurta & Willem van Schendel (2013)",
+   "creator": "মেঘনা গুহঠাকুরতা ও উইলেম ফন স্যান্ডেল (সম্পা.)",
+   "role": "সম্পাদক (বাংলাদেশি+বিদেশি)",
+   "year": "২০১৩",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ ও বিদেশ",
+   "topics": [
+    "itihas",
+    "kristi",
+    "bibaho"
+   ],
+   "about": "বাংলাদেশের ইতিহাস-সংস্কৃতির সূত্র-সংকলন — বৌদ্ধ সম্প্রদায়, উৎসব ও বিয়ে-রীতি নিয়ে ইংরেজি অধ্যায়।",
+   "view": "https://archive.org/details/bangladeshreader0000unse",
+   "download": null,
+   "rights": "view-only",
+   "source": "Internet Archive (ডিজিটাল লেন্ডিং)",
+   "note": "কপিরাইট-সুরক্ষিত বই — আর্কাইভে শুধু পড়া যায় (লগইন লাগে), ডাউনলোড নেই।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "lib-lalan-salomon",
+   "type": "pdf",
+   "title": "City of Mirrors: Songs of Lalan Sai",
+   "sub": "Carol Salomon (2017)",
+   "creator": "ক্যারল স্যালোমন",
+   "role": "বিদেশি গবেষক",
+   "year": "২০১৭",
+   "language": "ইংরেজি ও বাংলা",
+   "place": "বাংলাদেশ (কুষ্টিয়া)",
+   "topics": [
+    "kirtan",
+    "sadhana",
+    "jibon"
+   ],
+   "about": "বিদেশি গবেষকের লেখা লালন-গানের পূর্ণ সংস্করণ — বাংলার লোকধর্ম ও বৌদ্ধ-সহজিয়া প্রভাবের আলোচনা।",
+   "view": "https://archive.org/details/city-of-mirrors-songs-of-lalan-sai",
+   "download": [
+    "https://archive.org/download/city-of-mirrors-songs-of-lalan-sai/City%20of%20Mirrors%20Songs%20of%20Lalan%20Sai.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "আপলোড-করা কপি; কপিরাইট অবস্থা স্পষ্ট নয়।",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-makutagama",
+   "type": "pdf",
+   "title": "Makutagama Kriyapada and Charyapada",
+   "sub": "Dr Rama Ghose",
+   "creator": "রমা ঘোষ",
+   "role": "গবেষক",
+   "year": "আধুনিক",
+   "language": "ইংরেজি",
+   "place": "ভারত / বঙ্গ-সংযোগ",
+   "topics": [
+    "charjapad",
+    "sadhana",
+    "pothi"
+   ],
+   "about": "বজ্রযান আচার-গ্রন্থ মাকুটাগম ও চর্যাপদের তুলনামূলক পাঠ — চর্যার তান্ত্রিক প্রেক্ষাপট।",
+   "view": "https://archive.org/details/dpxm-makutagama-kriyapada-and-charyapada-dr-rama-ghose_",
+   "download": [
+    "https://archive.org/download/dpxm-makutagama-kriyapada-and-charyapada-dr-rama-ghose_/Makutagama%20Kriyapada%20and%20Charyapada%20-%20Dr%20Rama%20Ghose.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-sadhana-mala",
+   "type": "pdf",
+   "title": "Sādhana-mālā (1925)",
+   "sub": "Benoytosh Bhattacharyya (ed.)",
+   "creator": "বিনয়তোষ ভট্টাচার্য",
+   "role": "সম্পাদক",
+   "year": "১৯২৫",
+   "language": "সংস্কৃত",
+   "place": "ভারত / বঙ্গ-প্রভাবিত বৌদ্ধ ধারা",
+   "topics": [
+    "sadhana",
+    "pothi",
+    "silpo"
+   ],
+   "about": "বৌদ্ধ সিদ্ধাচার্যদের সাধনা-সংকলন (Gaekwad Oriental Series) — বাংলার সহজিয়া সাধনার মূল পাঠ।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.485433",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.485433/2015.485433.Sadhana-mala_text.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-sankrityayan-sanskriti",
+   "type": "pdf",
+   "title": "बौद्ध संस्कृति (Bauddha Sanskriti)",
+   "sub": "Rahul Sankrityayan (1952)",
+   "creator": "রাহুল সাংকৃত্যায়ন",
+   "role": "বিদেশি (ভারতীয়) লেখক",
+   "year": "১৯৫২",
+   "language": "হিন্দি",
+   "place": "ভারত / বঙ্গ-সংযোগ",
+   "topics": [
+    "itihas",
+    "sadhana",
+    "sahitya"
+   ],
+   "about": "বৌদ্ধ সংস্কৃতির ইতিহাস — বাংলা ও বিহারের বৌদ্ধ কেন্দ্রও এতে আলোচিত; হিন্দিভাষী পাঠকের জন্য বহুল পঠিত।",
+   "view": "https://archive.org/details/in.gov.ignca.4745",
+   "download": [
+    "https://archive.org/download/in.gov.ignca.4745/4745_text.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-bauddha-tantra-hindi",
+   "type": "pdf",
+   "title": "तान्त्रिक बौद्ध साधना और साहित्य (Tantrika Bauddha Sadhana Aur Sahitya)",
+   "sub": "Nagendranath Upadhyaya (1958)",
+   "creator": "নগেন্দ্রনাথ উপাধ্যায়",
+   "role": "গবেষক",
+   "year": "১৯৫৮",
+   "language": "হিন্দি",
+   "place": "ভারত / বাংলা প্রভাব",
+   "topics": [
+    "sadhana",
+    "sahitya"
+   ],
+   "about": "তান্ত্রিক বৌদ্ধ সাধনা ও সাহিত্যের পূর্ণ বিবরণ — বাংলার সহজযান-বজ্রযান ধারার ভিত্তি-পাঠ।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.429811",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.429811/2015.429811.tantrika-bauddha_text.pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-buddha-charita-sanskrit",
+   "type": "pdf",
+   "title": "बुद्धचरित (Buddha Charita, cantos 1–5)",
+   "sub": "Aśvaghoṣa (ed. K. M. Joglekar, 1912)",
+   "creator": "অশ্বঘোষ",
+   "role": "কবি (প্রাচীন)",
+   "year": "১৯১২ (সংস্করণ)",
+   "language": "সংস্কৃত",
+   "place": "ভারত / বৌদ্ধ সাহিত্য-ঐতিহ্য",
+   "topics": [
+    "sahitya",
+    "sadhana"
+   ],
+   "about": "বুদ্ধের জীবন-কাব্য — বাংলার বৌদ্ধ পণ্ডিতদের পাঠ্য সংস্কৃত গ্রন্থ, পালি-পরম্পরার সঙ্গে যুক্ত।",
+   "view": "https://archive.org/details/in.ernet.dli.2015.312642",
+   "download": [
+    "https://archive.org/download/in.ernet.dli.2015.312642/2015.312642.Buddha-Charita_text.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-bauddha-bharat",
+   "type": "pdf",
+   "title": "বৌদ্ধ-ভারত (Bauddha Bharata)",
+   "sub": "শরৎকুমার রায় (১৯৩১)",
+   "creator": "শরৎকুমার রায়",
+   "role": "লেখক",
+   "year": "১৯৩১",
+   "language": "ইংরেজি",
+   "place": "ভারত / বাংলা-সংযোগ",
+   "topics": [
+    "itihas",
+    "silpo",
+    "bihar"
+   ],
+   "about": "বৌদ্ধ ভারতের সভ্যতা-ইতিহাস — বাংলার পাল যুগ ও বিহার-স্থাপত্যের বর্ণনা।",
+   "view": "https://archive.org/details/dli.bengal.10689.16719",
+   "download": [
+    "https://archive.org/download/dli.bengal.10689.16719/10689.16719.pdf"
+   ],
+   "rights": "public-domain",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "lib-somapura-connection",
+   "type": "pdf",
+   "title": "Somapura Mahavihara: Foreign Culture Connection",
+   "sub": "Refayetur Reza Arnab, Sumit Roy (2021)",
+   "creator": "রেফায়েতুর রেজা আরনব ও সুমিত রায়",
+   "role": "গবেষক (বাংলাদেশ)",
+   "year": "২০২১",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ (পাহাড়পুর)",
+   "topics": [
+    "bihar",
+    "itihas",
+    "kristi"
+   ],
+   "about": "সোমপুর মহাবিহারের বিদেশি (সিংহলি, তিব্বতীয়, ইন্দো-গ্রিক) যোগসূত্র নিয়ে আধুনিক গবেষণাপত্র।",
+   "view": "https://archive.org/details/foreign-culture-connection-somapura-mahavihara",
+   "download": [
+    "https://archive.org/download/foreign-culture-connection-somapura-mahavihara/Sinhalese%2C%20Tibetan....pdf"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "aud-atisha-lamp",
+   "type": "audio",
+   "title": "Atisha’s Lamp for the Path — শ্রবণ-বক্তৃতা (২০০৩)",
+   "sub": "",
+   "creator": "Geshe Ngawang Samten",
+   "role": "শিক্ষক",
+   "year": "২০০৩",
+   "language": "ইংরেজি",
+   "place": "তিব্বতি ঐতিহ্য (অতীশ-সংযোগ)",
+   "topics": [
+    "sadhana",
+    "sahitya"
+   ],
+   "about": "অতীশ দীপঙ্করের “বোধিপথপ্রদীপ” নিয়ে ধারাবাহিক শ্রবণ-বক্তৃতা — বাংলার পণ্ডিতের রচনার আন্তর্জাতিক পাঠ।",
+   "view": "https://archive.org/details/AtishasLampForThePath-Weeks1-4-November2003",
+   "download": [
+    "https://archive.org/download/AtishasLampForThePath-Weeks1-4-November2003/GNS-atisha-01a-lamp-on-the-path-nov-05-2003.mp3"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive (শ্রবণযোগ্য)",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "aud-dhammapada-pali",
+   "type": "audio",
+   "title": "ধম্মপদপালি — সম্পূর্ণ অডিওবুক (পালি পাঠ)",
+   "sub": "Dhammapada Pali audiobook",
+   "creator": "ভিক্ষু সিরিমঙ্গল",
+   "role": "ভিক্ষু·পাঠক",
+   "year": "২০২৬ (আপলোড)",
+   "language": "পালি",
+   "place": "দক্ষিণ এশিয়া",
+   "topics": [
+    "pali",
+    "sadhana"
+   ],
+   "about": "ধম্মপদের ২৬টি বর্গ পালি ভাষায় পাঠ — ২৬টি ফাইল, ধর্মপালন ও শ্রবণ-সাধনার জন্য।",
+   "view": "https://archive.org/details/dhammapadapali",
+   "download": [
+    "https://archive.org/download/dhammapadapali/01.Yamakavaggo.mp3"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive (২৬টি mp3 ফাইল)",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "aud-buddha-vandana",
+   "type": "audio",
+   "title": "Buddha Vandana (বুদ্ধ বন্দনা)",
+   "sub": "Buddhist devotional chanting",
+   "creator": "Upul Silvs",
+   "role": "শিল্পী",
+   "year": "২০১৯",
+   "language": "পালি",
+   "place": "শ্রীলঙ্কা/দক্ষিণ এশিয়া",
+   "topics": [
+    "kirtan",
+    "sadhana"
+   ],
+   "about": "বুদ্ধ বন্দনার শ্রবণ-নমুনা — বাংলাদেশ ও পশ্চিমবঙ্গের বিহারেও একই পালি বন্দনা গাওয়া হয়।",
+   "view": "https://archive.org/details/buddhavandanabest",
+   "download": [
+    "https://archive.org/download/buddhavandanabest/Buddha%20Vandana%20best.mp3"
+   ],
+   "rights": "unknown",
+   "source": "Internet Archive",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "aud-charyapada-song",
+   "type": "audio",
+   "title": "চর্যাপদের গান — “কাআ তরুবর পঞ্চবি ডাল” (লুইপাদ)",
+   "sub": "Charyapada song",
+   "creator": "শিল্পী: অজ্ঞাত (ইউটিউব পরিবেশনা)",
+   "role": "সংগীতশিল্পী",
+   "year": "২০১৯",
+   "language": "বাংলা (প্রাচীন)",
+   "place": "বাংলাদেশ/পশ্চিমবঙ্গ",
+   "topics": [
+    "charjapad",
+    "kirtan"
+   ],
+   "about": "চর্যাপদের সবচেয়ে পরিচিত পদটি সুর করে গাওয়া হয়েছে — বাংলা গানের আদি রূপ শোনার সহজ উপায়।",
+   "view": "https://www.youtube.com/watch?v=Ka39I-A3Kbk",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "aud-buddha-kirtan",
+   "type": "audio",
+   "title": "বুদ্ধ কীর্তন — “একবার বুদ্ধ বলে ডাক রে”",
+   "sub": "Buddha Kirtan (Barua family)",
+   "creator": "অনিক বড়ুয়া (কণ্ঠ), দিপ্র বড়ুয়া (ঢোল), দুর্জয় বড়ুয়া (ইউকুলেলে)",
+   "role": "সংগীতশিল্পী (বাংলাদেশ)",
+   "year": "২০২০",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ (চট্টগ্রাম)",
+   "topics": [
+    "kirtan",
+    "kristi",
+    "sadhana"
+   ],
+   "about": "বাংলাদেশি বড়ুয়া পরিবারের বুদ্ধ-কীর্তন — ঢোল ও ইউকুলেলের সঙ্গে বাংলা বৌদ্ধ ভক্তিগীতি।",
+   "view": "https://www.youtube.com/watch?v=sJvHrVlBXmg",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "aud-nishita-barua",
+   "type": "audio",
+   "title": "বুদ্ধ ধর্মীয় গান — নিশিতা বড়ুয়া",
+   "sub": "Buddha kirtan by Nishita Barua",
+   "creator": "নিশিতা বড়ুয়া (কণ্ঠ)",
+   "role": "সংগীতশিল্পী (বাংলাদেশ)",
+   "year": "২০২২",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "kirtan",
+    "kristi"
+   ],
+   "about": "বাংলাদেশি বৌদ্ধ সংগীতশিল্পীর ধর্মীয় গান — বুদ্ধ-কীর্তনের আধুনিক রূপ।",
+   "view": "https://www.youtube.com/watch?v=Y5LuqUtOVs0",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "aud-chakma-song",
+   "type": "audio",
+   "title": "চাকমা বৌদ্ধ গান (পূর্ণিমা/ধর্মগীতি)",
+   "sub": "Chakma Buddhist Dhammageet",
+   "creator": "অজ্ঞাত শিল্পী (চাকমা)",
+   "role": "সংগীতশিল্পী",
+   "year": "২০২৩",
+   "language": "চাকমা",
+   "place": "বাংলাদেশ (পার্বত্য চট্টগ্রাম)",
+   "topics": [
+    "kirtan",
+    "kristi",
+    "jibon"
+   ],
+   "about": "চাকমা ভাষার বৌদ্ধ ধর্মগীতি — পার্বত্য চট্টগ্রামের বৌদ্ধ সংগীত-ঐতিহ্যের নমুনা।",
+   "view": "https://www.youtube.com/watch?v=ZGPjMSpfyuw",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-paharpur-1",
+   "type": "video",
+   "title": "পাহাড়পুর বৌদ্ধবিহার (সোমপুর মহাবিহার) — ভ্রমণ-ভিডিও",
+   "sub": "",
+   "creator": "YouTube চ্যানেল (বাংলা)",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০২১",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ (নওগাঁ)",
+   "topics": [
+    "bihar",
+    "itihas",
+    "silpo"
+   ],
+   "about": "সোমপুর মহাবিহারের ধ্বংসাবশেষ, কেন্দ্রীয় মন্দির ও টেরাকোটা-ফলক — ইউনেস্কো বিশ্ব ঐতিহ্য (১৯৮৫)।",
+   "view": "https://www.youtube.com/watch?v=SBjHvCVUpD4",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-paharpur-2",
+   "type": "video",
+   "title": "পাহাড়পুর বৌদ্ধ বিহার — প্রামাণ্য ভ্রমণ",
+   "sub": "",
+   "creator": "YouTube চ্যানেল (বাংলা)",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০২১",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ (নওগাঁ)",
+   "topics": [
+    "bihar",
+    "silpo"
+   ],
+   "about": "বিহারের ১৭৭টি কক্ষ, চতুর্ভুজ পরিকল্পনা ও ২১ মিটার উঁচু কেন্দ্রীয় মন্দিরের দৃশ্য।",
+   "view": "https://www.youtube.com/watch?v=9VTbMWUp_Tw",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-sompur",
+   "type": "video",
+   "title": "সোমপুর বিহার (Sompur Bihar): পাহাড়পুর",
+   "sub": "",
+   "creator": "YouTube চ্যানেল",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০২১",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ (নওগাঁ)",
+   "topics": [
+    "bihar",
+    "itihas"
+   ],
+   "about": "সংক্ষিপ্ত পরিচিতি-ভিডিও — পাল রাজা ধর্মপালের নির্মাণকথা সহ।",
+   "view": "https://www.youtube.com/watch?v=vskNBiU4jng",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-somapura-en",
+   "type": "video",
+   "title": "Somapura Mahavihara: Relic of an Ancient Academia",
+   "sub": "",
+   "creator": "YouTube চ্যানেল (ইংরেজি)",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০১৯",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ (নওগাঁ)",
+   "topics": [
+    "bihar",
+    "itihas",
+    "sahitya"
+   ],
+   "about": "ইংরেজিতে সোমপুর মহাবিহারের বিশ্ববিদ্যালয়-ভূমিকা নিয়ে ভিডিও।",
+   "view": "https://www.youtube.com/watch?v=AevI3ngGRMM",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-shalban",
+   "type": "video",
+   "title": "Shalban Vihara, Mainamati — প্রত্নস্থল পরিদর্শন",
+   "sub": "",
+   "creator": "YouTube চ্যানেল",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০২০",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ (কুমিল্লা)",
+   "topics": [
+    "bihar",
+    "silpo"
+   ],
+   "about": "শালবন বিহারের ১৫৫ কক্ষ, কেন্দ্রীয় মণ্ডপ ও লালমাই পাহাড়ের দৃশ্য।",
+   "view": "https://www.youtube.com/watch?v=9Ldr9PeaB_8",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-shalbon-2",
+   "type": "video",
+   "title": "Ancient Shalbon Bihar in Mainamati",
+   "sub": "",
+   "creator": "YouTube চ্যানেল",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০১৭",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ (কুমিল্লা)",
+   "topics": [
+    "bihar",
+    "itihas"
+   ],
+   "about": "ময়নামতি-শালবন বিহারের প্রত্নতাত্ত্বিক পরিচিতি।",
+   "view": "https://www.youtube.com/watch?v=QiJgMdykgRY",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-buddha-purnima-1",
+   "type": "video",
+   "title": "বুদ্ধ পূর্ণিমা — দেশজুড়ে বৌদ্ধ সম্প্রদায়ের উৎসব (চ্যানেল ২৪)",
+   "sub": "",
+   "creator": "চ্যানেল ২৪",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০২৫",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "kristi",
+    "sadhana",
+    "jibon"
+   ],
+   "about": "বাংলাদেশের সংবাদ-চ্যানেলের প্রতিবেদন — বিহারগুলোতে বুদ্ধপূজা, শোভাযাত্রা ও পঞ্চশীল।",
+   "view": "https://www.youtube.com/watch?v=mfULv-1qg7c",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-buddha-purnima-2",
+   "type": "video",
+   "title": "সারাদেশে উদযাপিত বুদ্ধ পূর্ণিমা (সময় টিভি)",
+   "sub": "",
+   "creator": "সময় টিভি",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০২৫",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "kristi",
+    "jibon"
+   ],
+   "about": "বিভিন্ন জেলার বিহারে বুদ্ধ পূর্ণিমার আয়োজন নিয়ে মাঠ-প্রতিবেদন।",
+   "view": "https://www.youtube.com/watch?v=Rwnc8SPj6aQ",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-buddha-purnima-3",
+   "type": "video",
+   "title": "সম্বোধি বুদ্ধ বিহারে ২৫তম বুদ্ধ পূর্ণিমা ও আন্তর্জাতিক বিসাখ দিবস",
+   "sub": "",
+   "creator": "বৌদ্ধ সমিতি (YouTube)",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০২৬",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "kristi",
+    "sadhana"
+   ],
+   "about": "বাংলাদেশের বিহারে বুদ্ধ পূর্ণিমার পূর্ণ আনুষ্ঠানিকতা — বন্দনা, পূজা ও ধর্মদেশনা।",
+   "view": "https://www.youtube.com/watch?v=JlIml3Pw2Gw",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-bizu",
+   "type": "video",
+   "title": "Bizu Festival — চাকমা নববর্ষ ও বৌদ্ধ উৎসব",
+   "sub": "",
+   "creator": "YouTube চ্যানেল",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০২৪",
+   "language": "বাংলা/চাকমা",
+   "place": "বাংলাদেশ (পার্বত্য চট্টগ্রাম)",
+   "topics": [
+    "kristi",
+    "jibon"
+   ],
+   "about": "বিজু উৎসবের নাচ-গান ও আচার — পার্বত্য বৌদ্ধ সমাজের প্রধান সাংস্কৃতিক উৎসব।",
+   "view": "https://www.youtube.com/watch?v=w4sT9E8n26U",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "vid-charyapada-doc",
+   "type": "video",
+   "title": "চর্যাপদ — বাংলা সাহিত্যের প্রাচীনতম নিদর্শন",
+   "sub": "",
+   "creator": "YouTube চ্যানেল",
+   "role": "ভিডিও-নির্মাতা/প্রকাশক",
+   "year": "২০২০",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ/পশ্চিমবঙ্গ",
+   "topics": [
+    "charjapad",
+    "sahitya"
+   ],
+   "about": "চর্যাপদের আবিষ্কার, ভাষা ও সাধনতত্ত্ব নিয়ে ব্যাখ্যামূলক ভিডিও।",
+   "view": "https://www.youtube.com/watch?v=Yx7M7dmkwyo",
+   "download": null,
+   "rights": "view-only",
+   "source": "YouTube",
+   "note": "ইউটিউব — ডাউনলোডের সুযোগ নেই (কপিরাইট সুরক্ষা)।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "art-barua-marriage",
+   "type": "article",
+   "title": "Marriage Ceremony of Barua Buddhists in Bangladesh (গবেষণাপত্র)",
+   "sub": "Academia.edu — নৃবিজ্ঞান/সমাজতত্ত্ব প্রবন্ধ",
+   "creator": "গবেষক",
+   "role": "গবেষক",
+   "year": "২০০৮",
+   "language": "ইংরেজি",
+   "place": "বাংলাদেশ (চট্টগ্রাম)",
+   "topics": [
+    "bibaho",
+    "kristi",
+    "jibon"
+   ],
+   "about": "বড়ুয়া বৌদ্ধদের বিয়ের দুই রীতি — “চলন্ত বিয়ে” ও “টোকেমন্ত বিয়ে”; আংটি/আয়োজন, ভিক্ষুর আশীর্বাদ ও আচার-অনুক্রম।",
+   "view": "https://www.academia.edu/101529874/Marriage_Ceremony_of_Barua_Buddhists_in_Bangladesh",
+   "download": null,
+   "rights": "view-only",
+   "source": "Academia.edu",
+   "note": "অ্যাকাউন্ট ছাড়াও সারসংক্ষেপ পড়া যায়; পূর্ণ পিডিএফে লগইন লাগতে পারে।",
+   "viewStatus": 403,
+   "downloadStatus": null
+  },
+  {
+   "id": "art-bondana",
+   "type": "article",
+   "title": "বুদ্ধ পূজা উৎসর্গ ও বন্দনা — বিধি ও ব্যাখ্যা",
+   "sub": "Buddhism in Bangladesh (buddhismbd.com)",
+   "creator": "স্থানীয় বৌদ্ধ লেখক",
+   "role": "অনলাইন প্রকাশনা",
+   "year": "২০২৬",
+   "language": "বাংলা",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "sadhana",
+    "kirtan"
+   ],
+   "about": "বাংলাদেশের বৌদ্ধদের দৈনন্দিন পূজা-বন্দনার বিধি, পালি পাঠ ও অর্থ — ধর্মপালনের ব্যবহারিক নির্দেশিকা।",
+   "view": "https://www.buddhismbd.com/2026/03/blog-post_57.html",
+   "download": null,
+   "rights": "view-only",
+   "source": "buddhismbd.com",
+   "note": "ওয়েবসাইট — ডাউনলোডের আলাদা ব্যবস্থা নেই।",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "art-sandhya-bondana",
+   "type": "article",
+   "title": "সকাল-সন্ধ্যা বুদ্ধ বন্দনা (পালি)",
+   "sub": "Buddhism in Bangladesh (buddhismbd.com)",
+   "creator": "স্থানীয় বৌদ্ধ লেখক",
+   "role": "অনলাইন প্রকাশনা",
+   "year": "২০২৪",
+   "language": "বাংলা ও পালি",
+   "place": "বাংলাদেশ",
+   "topics": [
+    "sadhana",
+    "pali"
+   ],
+   "about": "প্রতিদিনের সকাল-সন্ধ্যা বন্দনার পালি পাঠ ও বাংলা অর্থ — বিহার ও গৃহে দুটোই ব্যবহৃত।",
+   "view": "https://www.buddhismbd.com/2024/10/blog-post_45.html",
+   "download": null,
+   "rights": "view-only",
+   "source": "buddhismbd.com",
+   "note": "",
+   "viewStatus": 200,
+   "downloadStatus": null
+  },
+  {
+   "id": "img-charyapada-ms",
+   "type": "image",
+   "title": "চর্যাপদ পুঁথির ৩৯ নং পৃষ্ঠা",
+   "sub": "চর্যাপদ-এর ৩৯ নং পৃষ্ঠা",
+   "creator": "মোহমনি",
+   "role": "ফটোগ্রাফার",
+   "year": "২০২০-এর দশক",
+   "language": "বাংলা",
+   "place": "নেপাল-প্রাপ্ত পুঁথি",
+   "topics": [
+    "charjapad",
+    "pothi",
+    "sahitya"
+   ],
+   "about": "আসল পুঁথির পৃষ্ঠা (আবিষ্কার: হরপ্রসাদ শাস্ত্রী, ১৯০৭)",
+   "view": "https://commons.wikimedia.org/wiki/File:%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE;_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript,_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg",
+   "download": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%3B_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript%2C_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   ],
+   "rights": "cc",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: CC BY-SA 4.0 · ফটোগ্রাফার: Mohmoni",
+   "license": "CC BY-SA 4.0",
+   "credit": "Mohmoni",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-atisha",
+   "type": "image",
+   "title": "অতীশ দীপঙ্কর শ্রীজ্ঞান",
+   "sub": "File:Atisha.jpg",
+   "creator": "অজ্ঞাত",
+   "role": "ঐতিহ্যবাহী চিত্র",
+   "year": "—",
+   "language": "—",
+   "place": "তিব্বত/বঙ্গ",
+   "topics": [
+    "itihas",
+    "sadhana"
+   ],
+   "about": "একাদশ শতকের বাংলার পণ্ডিতের ঐতিহ্যবাহী চিত্রণ",
+   "view": "https://commons.wikimedia.org/wiki/File:Atisha.jpg",
+   "download": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Atisha.jpg/1280px-Atisha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   ],
+   "rights": "public-domain",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: Public domain · ফটোগ্রাফার: Unknown不具名 [Tibet (a Kadampa monastery)]",
+   "license": "Public domain",
+   "credit": "Unknown不具名 [Tibet (a Kadampa monastery)]",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-paharpur",
+   "type": "image",
+   "title": "সোমপুর মহাবিহার, পাহাড়পুর",
+   "sub": "File:Paharpur Buddhist Monastery.jpg",
+   "creator": "অজ্ঞাত (কমন্স)",
+   "role": "ফটোগ্রাফার",
+   "year": "—",
+   "language": "—",
+   "place": "বাংলাদেশ (নওগাঁ)",
+   "topics": [
+    "bihar",
+    "itihas"
+   ],
+   "about": "ইউনেস্কো বিশ্ব ঐতিহ্য (১৯৮৫) — পাল রাজা ধর্মপালের বিহার",
+   "view": "https://commons.wikimedia.org/wiki/File:Paharpur_Buddhist_Monastery.jpg",
+   "download": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Paharpur_Buddhist_Monastery.jpg/1280px-Paharpur_Buddhist_Monastery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   ],
+   "rights": "cc",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: CC BY-SA 4.0 · ফটোগ্রাফার: Hafizur Rahaman",
+   "license": "CC BY-SA 4.0",
+   "credit": "Hafizur Rahaman",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-terracotta",
+   "type": "image",
+   "title": "পোড়ামাটির ফলক, পাহাড়পুর",
+   "sub": "Terracotta Plaques (27433726423).jpg",
+   "creator": "অজ্ঞাত",
+   "role": "ফটোগ্রাফার",
+   "year": "—",
+   "language": "—",
+   "place": "বাংলাদেশ (নওগাঁ)",
+   "topics": [
+    "silpo",
+    "bihar"
+   ],
+   "about": "বিহারের অলংকরণ-ফলক — বাংলার টেরাকোটা শিল্পের নিদর্শন",
+   "view": "https://commons.wikimedia.org/wiki/File:Terracotta_Plaques_(27433726423).jpg",
+   "download": [
+    "https://upload.wikimedia.org/wikipedia/commons/b/bc/Terracotta_Plaques_%2827433726423%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+   ],
+   "rights": "cc",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: CC BY 2.0 · ফটোগ্রাফার: David Stanley from Nanaimo, Canada",
+   "license": "CC BY 2.0",
+   "credit": "David Stanley from Nanaimo, Canada",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-pala-ms",
+   "type": "image",
+   "title": "পাল যুগের পাণ্ডুলিপির পাতা (গণ্ডব্যহ সূত্র)",
+   "sub": "Seven Leaves from a Manuscript of the Gandavyuha",
+   "creator": "অজ্ঞাত",
+   "role": "চিত্রকর (প্রাচীন)",
+   "year": "১০ম–১২শ শতক",
+   "language": "সংস্কৃত",
+   "place": "পূর্ব ভারত/বঙ্গ",
+   "topics": [
+    "pothi",
+    "sahitya",
+    "silpo"
+   ],
+   "about": "পুথিচিত্রের নমুনা — পাল যুগের অলংকরণ",
+   "view": "https://commons.wikimedia.org/wiki/File:Eastern_India,_Pala_period_-_Seven_Leaves_from_a_Manuscript_of_the_Gandavyuha-sutra_-_1955.49_-_Cleveland_Museum_of_Art.tif",
+   "download": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Eastern_India%2C_Pala_period_-_Seven_Leaves_from_a_Manuscript_of_the_Gandavyuha-sutra_-_1955.49_-_Cleveland_Museum_of_Art.tif/lossy-page1-1280px-Eastern_India%2C_Pala_period_-_Seven_Leaves_from_a_Manuscript_of_the_Gandavyuha-sutra_-_1955.49_-_Cleveland_Museum_of_Art.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   ],
+   "rights": "cc",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: CC0 · ফটোগ্রাফার: anonymous",
+   "license": "CC0",
+   "credit": "anonymous",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-pancaraksa",
+   "type": "image",
+   "title": "একাদশ শতকের বৌদ্ধ পঞ্চরক্ষা পাণ্ডুলিপি",
+   "sub": "11th-century Buddhist Pancaraksa manuscript",
+   "creator": "অজ্ঞাত",
+   "role": "লেখক (প্রাচীন)",
+   "year": "১১শ শতক",
+   "language": "পালি",
+   "place": "বঙ্গ/বিহার",
+   "topics": [
+    "pothi",
+    "pali"
+   ],
+   "about": "তালপাতার পুঁথি, পালি লিপি",
+   "view": "https://commons.wikimedia.org/wiki/File:11th-century_Buddhist_Pancaraksa_manuscript_of_8th-century_original,_Pali_script,_text_on_spells,_benefits_and_goddess_rituals.jpg",
+   "download": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/11th-century_Buddhist_Pancaraksa_manuscript_of_8th-century_original%2C_Pali_script%2C_text_on_spells%2C_benefits_and_goddess_rituals.jpg/1280px-11th-century_Buddhist_Pancaraksa_manuscript_of_8th-century_original%2C_Pali_script%2C_text_on_spells%2C_benefits_and_goddess_rituals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   ],
+   "rights": "cc",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: CC BY-SA 4.0 · ফটোগ্রাফার: Ms Sarah Welch",
+   "license": "CC BY-SA 4.0",
+   "credit": "Ms Sarah Welch",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-prajna-folio",
+   "type": "image",
+   "title": "প্রজ্ঞাপারমিতার ফোলিও (পঞ্চবিংশতিসাহস্রিকা)",
+   "sub": "Folio from a Buddhist Manuscript of Pancavimsatisahasrika",
+   "creator": "অজ্ঞাত",
+   "role": "চিত্রকর (প্রাচীন)",
+   "year": "১১–১২শ শতক",
+   "language": "সংস্কৃত",
+   "place": "বঙ্গ/বিহার",
+   "topics": [
+    "pothi",
+    "sahitya"
+   ],
+   "about": "বৌদ্ধ পুথির পাতা — লাইব্রেরি-সংরক্ষিত",
+   "view": "https://commons.wikimedia.org/wiki/File:Folio_from_a_Buddhist_Manuscript_of_Pancavimsatisahasrika_Prajnaparamita_(IA_mma_folio_from_a_buddhist_manuscript_of_pancavimsatisahasrika_prajnaparamita_74851).jpg",
+   "download": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Folio_from_a_Buddhist_Manuscript_of_Pancavimsatisahasrika_Prajnaparamita_%28IA_mma_folio_from_a_buddhist_manuscript_of_pancavimsatisahasrika_prajnaparamita_74851%29.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   ],
+   "rights": "public-domain",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: Public domain · ফটোগ্রাফার: অজ্ঞাত",
+   "license": "Public domain",
+   "credit": "",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-vangasena",
+   "type": "image",
+   "title": "চিকিৎসাসারসংগ্রহ — বঙ্গসেন (১৩শ শতকের নকল)",
+   "sub": "Cikitsa-sara-sangraha",
+   "creator": "বঙ্গসেন",
+   "role": "চিকিৎসাবিদ (১১–১২শ শতক)",
+   "year": "১৩শ শতক (নকল)",
+   "language": "সংস্কৃত",
+   "place": "বঙ্গ",
+   "topics": [
+    "pothi",
+    "sahitya"
+   ],
+   "about": "বাংলার চিকিৎসা-গ্রন্থের তালপাতার পাণ্ডুলিপি",
+   "view": "https://commons.wikimedia.org/wiki/File:13th-century_Cikitsa-sara-sangraha,_Vangasena,_medical_text,_Sanskrit,_palm_leaf_manuscript.jpg",
+   "download": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/13th-century_Cikitsa-sara-sangraha%2C_Vangasena%2C_medical_text%2C_Sanskrit%2C_palm_leaf_manuscript.jpg/1280px-13th-century_Cikitsa-sara-sangraha%2C_Vangasena%2C_medical_text%2C_Sanskrit%2C_palm_leaf_manuscript.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   ],
+   "rights": "cc",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: CC BY-SA 4.0 · ফটোগ্রাফার: Ms Sarah Welch",
+   "license": "CC BY-SA 4.0",
+   "credit": "Ms Sarah Welch",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-mainamati-museum",
+   "type": "image",
+   "title": "ময়নামতি জাদুঘর",
+   "sub": "Mainamati Museum in 2022.02",
+   "creator": "অজ্ঞাত",
+   "role": "ফটোগ্রাফার",
+   "year": "২০২২",
+   "language": "—",
+   "place": "বাংলাদেশ (কুমিল্লা)",
+   "topics": [
+    "bihar",
+    "silpo"
+   ],
+   "about": "প্রত্নবস্তুর সংগ্রহশালা — ব্রোঞ্জ-মূর্তি ও তাম্রপট্ট",
+   "view": "https://commons.wikimedia.org/wiki/File:Mainamati_Museum_in_2022.02.jpg",
+   "download": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Mainamati_Museum_in_2022.02.jpg/1280px-Mainamati_Museum_in_2022.02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   ],
+   "rights": "cc",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: CC BY-SA 4.0 · ফটোগ্রাফার: CAPTAIN RAJU",
+   "license": "CC BY-SA 4.0",
+   "credit": "CAPTAIN RAJU",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-kutila",
+   "type": "image",
+   "title": "কোটিলা মুড়া, ময়নামতি",
+   "sub": "কোটিলা মুড়া ১",
+   "creator": "অজ্ঞাত",
+   "role": "ফটোগ্রাফার",
+   "year": "—",
+   "language": "—",
+   "place": "বাংলাদেশ (কুমিল্লা)",
+   "topics": [
+    "bihar",
+    "silpo"
+   ],
+   "about": "লালমাই পাহাড়ের প্রধান স্তূপ-অবশেষ",
+   "view": "https://commons.wikimedia.org/wiki/File:%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A7%A7.png",
+   "download": [
+    "https://upload.wikimedia.org/wikipedia/commons/a/a1/%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A7%A7.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+   ],
+   "rights": "cc",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: CC BY 3.0 · ফটোগ্রাফার: Sabilaenun",
+   "license": "CC BY 3.0",
+   "credit": "Sabilaenun",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-buddha-walters",
+   "type": "image",
+   "title": "উপবিষ্ট বুদ্ধ (ওয়াল্টার্স মিউজিয়াম)",
+   "sub": "Enthroned Seated Buddha - Walters",
+   "creator": "অজ্ঞাত",
+   "role": "শিল্পী (প্রাচীন)",
+   "year": "—",
+   "language": "—",
+   "place": "বাংলাদেশ/বঙ্গ",
+   "topics": [
+    "silpo"
+   ],
+   "about": "বাংলাদেশ/বঙ্গ-অঞ্চলের ধাতুশিল্পের নিদর্শন",
+   "view": "https://commons.wikimedia.org/wiki/File:Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg",
+   "download": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg/1280px-Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   ],
+   "rights": "public-domain",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: Public domain · ফটোগ্রাফার: Bangladeshi\n\nBase: Thai",
+   "license": "Public domain",
+   "credit": "Bangladeshi\n\nBase: Thai",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-terracotta-temple",
+   "type": "image",
+   "title": "বাংলার টেরাকোটা মন্দির (গঙ্গেশ্বর, বরানগর)",
+   "sub": "Gangeshwar Temple of Baranagar",
+   "creator": "অজ্ঞাত",
+   "role": "ফটোগ্রাফার",
+   "year": "—",
+   "language": "—",
+   "place": "পশ্চিমবঙ্গ",
+   "topics": [
+    "silpo",
+    "kristi"
+   ],
+   "about": "পরে টেরাকোটা-ধারার স্থাপত্য (বৌদ্ধ ফলক-শিল্পের উত্তরসূরি)",
+   "view": "https://commons.wikimedia.org/wiki/File:Terracotta_Temples_of_Bengal_,The_Gangeshwar_Temple_of_Baranagar.jpg",
+   "download": [
+    "https://upload.wikimedia.org/wikipedia/commons/8/89/Terracotta_Temples_of_Bengal_%2CThe_Gangeshwar_Temple_of_Baranagar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+   ],
+   "rights": "cc",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: CC BY-SA 4.0 · ফটোগ্রাফার: SpeakingArch",
+   "license": "CC BY-SA 4.0",
+   "credit": "SpeakingArch",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  },
+  {
+   "id": "img-chakma-weaving",
+   "type": "image",
+   "title": "চাকমা নারী তাঁতে বস্ত্র বুনছেন",
+   "sub": "Chakma woman weaving textiles, Bangladesh",
+   "creator": "অজ্ঞাত",
+   "role": "ফটোগ্রাফার",
+   "year": "—",
+   "language": "—",
+   "place": "বাংলাদেশ (পার্বত্য চট্টগ্রাম)",
+   "topics": [
+    "jibon",
+    "kristi"
+   ],
+   "about": "পার্বত্য বৌদ্ধ সমাজের জীবন্ত কারুশিল্প",
+   "view": "https://commons.wikimedia.org/wiki/File:Chakma_woman_weaving_textiles,_Bangladesh.jpg",
+   "download": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Chakma_woman_weaving_textiles%2C_Bangladesh.jpg/1280px-Chakma_woman_weaving_textiles%2C_Bangladesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+   ],
+   "rights": "public-domain",
+   "source": "Wikimedia Commons",
+   "note": "লাইসেন্স: Public domain · ফটোগ্রাফার: Creator:Harrison Forman",
+   "license": "Public domain",
+   "credit": "Creator:Harrison Forman",
+   "viewStatus": 200,
+   "downloadStatus": 200
+  }
+ ],
+ "stats": {
+  "total": 82,
+  "pdf": 48,
+  "audio": 7,
+  "video": 11,
+  "article": 3,
+  "image": 13,
+  "languages": 13
+ }
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>বৌদ্ধ ঐতিহ্য লাইব্রেরি — বই (PDF), অডিও, ভিডিও ও ছবি</title>
+  <meta name="description" content="বাংলা ও বাংলাদেশের বৌদ্ধ ইতিহাস, সংস্কৃতি, বিয়ে-রীতি, কীর্তন, ভাস্কর্য-মূর্তি ও বিহার নিয়ে বই (PDF ডাউনলোড), অডিও, ভিডিও, ছবি ও গবেষণাপত্র — লেখক/নির্মাতার নাম দিয়ে সার্চ, প্রতিটিতে দেখার ও ডাউনলোডের লিংক।">
+  <link rel="icon" href="buddhist-heritage-bd/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261021d">
+  <link rel="stylesheet" href="history.css?v=20261022h">
+</head>
+<body>
+  <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
+  <div class="flag-ribbon" aria-label="বৌদ্ধ ধর্মীয় পতাকার রং">
+    <span class="flag-blue"></span><span class="flag-yellow"></span><span class="flag-red"></span><span class="flag-white"></span><span class="flag-orange"></span><span class="flag-mixed"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="প্রথম পাতায় ফিরে যান">
+        <span class="brand-mark" aria-hidden="true">☸</span>
+        <span class="brand-copy"><strong>বৌদ্ধ ঐতিহ্য</strong><small>বাংলাদেশ · ভ্রমণ ও ইতিহাস</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">☰ <span class="sr-only">মেনু খুলুন</span></button>
+      <nav class="site-nav" id="siteNav" aria-label="প্রধান নেভিগেশন">
+        <a href="index.html">স্থান খুঁজুন</a>
+        <a href="history.html">ইতিহাস</a>
+        <a href="kings.html">রাজাদের প্রোফাইল</a>
+        <a href="contribution.html">ক্ষেত্রভিত্তিক অবদান</a>
+        <a href="library.html" aria-current="page">লাইব্রেরি</a>
+        <a href="institutions.html">প্রতিষ্ঠান</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hist-hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow">বই · PDF · অডিও · ভিডিও · ছবি</p>
+        <h1>বৌদ্ধ ঐতিহ্য লাইব্রেরি</h1>
+        <p class="hist-lead" id="libLead">বাংলা ও বাংলাদেশের বৌদ্ধ ইতিহাস, ধর্মপালন, সংস্কৃতি, বিয়ে-রীতি, কীর্তন, ভাস্কর্য-মূর্তি ও বিহার — সব এক জায়গায়: বই, অডিও, ভিডিও, ছবি ও গবেষণাপত্র।</p>
+        <p class="hist-note" id="libNote"></p>
+        <div class="contrib-stats" id="libStats" aria-live="polite"></div>
+        <div class="hist-actions">
+          <a class="hist-btn ghost" href="#browse">তালিকায় যান ↓</a>
+          <a class="hist-btn ghost" href="contribution.html">ক্ষেত্রভিত্তিক অবদান</a>
+          <a class="hist-btn ghost" href="history.html">বৌদ্ধ শাসনের ইতিহাস</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hist-section" id="browse">
+      <div class="wrap">
+        <h2>সব একসাথে — ছেঁকে নিন</h2>
+        <p class="hist-sub">লেখকের নাম (যেমন “বেণীমাধব”, “হরপ্রসাদ”), বই বা ভিডিওর নাম, বিষয় (“বিয়ে”, “কীর্তন”, “মূর্তি”, “বিহার”) বা ভাষা লিখে খুঁজুন।</p>
+        <div class="lib-toolbar">
+          <label class="king-search">🔎 <input id="libSearch" type="search" placeholder="লেখক / শিল্পী / বইয়ের নাম / বিষয়…" autocomplete="off"></label>
+          <label class="lib-select"><span>ভাষা</span><select id="libLanguage"><option value="all">সব ভাষা</option></select></label>
+          <button type="button" class="lib-reset" id="libReset">ছাঁকনি মুছুন</button>
+        </div>
+        <div class="lib-filters" id="libTypeFilters" role="group" aria-label="ধরন অনুযায়ী ছাঁকনি"></div>
+        <div class="lib-filters" id="libTopicFilters" role="group" aria-label="বিষয় অনুযায়ী ছাঁকনি"></div>
+        <p class="hist-sub lib-count" id="libCount" aria-live="polite"></p>
+        <div id="libList" class="lib-grid"></div>
+        <p class="hist-sub contrib-empty" id="libEmpty" hidden>কিছু পাওয়া যায়নি। অন্য শব্দে চেষ্টা করুন বা “ছাঁকনি মুছুন” চাপুন।</p>
+      </div>
+    </section>
+
+    <section class="hist-section alt" id="help">
+      <div class="wrap">
+        <h2>কীভাবে ব্যবহার করবেন</h2>
+        <div class="lib-notes" id="libNotes"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>☸ বৌদ্ধ ঐতিহ্য — বাংলাদেশের বৌদ্ধ বিহার, প্রত্নস্থল ও ইতিহাসের ডেটাসেট।</p>
+      <div class="footer-links"><a href="index.html">স্থান খুঁজুন</a><a href="history.html">ইতিহাস</a><a href="kings.html">রাজাদের প্রোফাইল</a><a href="contribution.html">অবদান</a><a href="institutions.html">প্রতিষ্ঠান</a></div>
+    </div>
+  </footer>
+
+  <script src="nav-mini.js?v=20261022a" defer></script>
+  <script src="library.js?v=20261022a" defer></script>
+</body>
+</html>
