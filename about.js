@@ -27,6 +27,7 @@
     var b = info.brand || {};
     if ($('aboutLead') && info.hero) $('aboutLead').textContent = info.hero.lead;
     if ($('aboutMotto') && b.motto) $('aboutMotto').innerHTML = 'মূলমন্ত্র: <b>' + esc(b.motto) + '</b>';
+    if ($('aboutSlogan') && b.slogan) { $('aboutSlogan').textContent = b.slogan; $('aboutSlogan').style.color = 'var(--cb-forest)'; }
 
     // সূচি
     var toc = $('cbToc');

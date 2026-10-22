@@ -1,0 +1,171 @@
+{
+ "schema_version": "2026-10-22.quiz-images.v1",
+ "license_note": "সব ছবি উইকিমিডিয়া কমন্স থেকে, CC বা পাবলিক ডোমেইন লাইসেন্সে; ফটোগ্রাফার ও লাইসেন্স প্রতিটির সঙ্গে লেখা আছে।",
+ "images": [
+  {
+   "slug": "somapura",
+   "file": "assets/quiz/somapura.jpg",
+   "ans": "সোমপুর মহাবিহার",
+   "q": "এই ইটের ধ্বংসাবশেষ কোন বিহারের?",
+   "note": "নওগাঁর পাহাড়পুর; পাল রাজা ধর্মপালের প্রতিষ্ঠা, ইউনেস্কো বিশ্ব ঐতিহ্য (১৯৮৫)।",
+   "credit": "Khan-Tanvir",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ruins_of_Bhuddist_Bihara_-_Somapura_Mahavihara.jpg",
+   "title": "File:Ruins of Bhuddist Bihara - Somapura Mahavihara.jpg"
+  },
+  {
+   "slug": "mahasthangarh",
+   "file": "assets/quiz/mahasthangarh.jpg",
+   "ans": "মহাস্থানগড়",
+   "q": "এই প্রাচীন দুর্গ-ঢিবি কোন স্থানের?",
+   "note": "বগুড়া; প্রাচীন পুণ্ড্রনগর/পুণ্ড্রবর্ধন।",
+   "credit": "P.K.Niyogi",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:BD_Mahasthangarh6.JPG",
+   "title": "File:BD Mahasthangarh6.JPG"
+  },
+  {
+   "slug": "bodhgaya",
+   "file": "assets/quiz/bodhgaya.jpg",
+   "ans": "মহাবোধি মন্দির, বোধগয়া",
+   "q": "এই মন্দিরটি কোন স্থানের?",
+   "note": "যেখানে বুদ্ধ বোধি লাভ করেন; ইউনেস্কো বিশ্ব ঐতিহ্য।",
+   "credit": "Rohit Sharma",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mahabodhi_temple_complex,_Bodhgaya_23.jpg",
+   "title": "File:Mahabodhi temple complex, Bodhgaya 23.jpg"
+  },
+  {
+   "slug": "sarnath",
+   "file": "assets/quiz/sarnath.jpg",
+   "ans": "ধামেক স্তূপ, সারনাথ",
+   "q": "এই স্তূপটি কোথায়?",
+   "note": "সারনাথ, যেখানে বুদ্ধ প্রথম উপদেশ দেন।",
+   "credit": "Maskaravivek",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Dhamek_Stupa.jpg",
+   "title": "File:Dhamek Stupa.jpg"
+  },
+  {
+   "slug": "sanchi",
+   "file": "assets/quiz/sanchi.jpg",
+   "ans": "সাঁচি স্তূপ",
+   "q": "এই স্তূপটি কোন স্থানের?",
+   "note": "মধ্যপ্রদেশ, ভারত; অশোকের আমলে নির্মাণ শুরু।",
+   "credit": "Bernard Gagnon",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Stupa_1,_Sanchi_02.jpg",
+   "title": "File:Stupa 1, Sanchi 02.jpg"
+  },
+  {
+   "slug": "lumbini",
+   "file": "assets/quiz/lumbini.jpg",
+   "ans": "লুম্বিনী",
+   "q": "এই লাল-ইটের মন্দিরটি কোন স্থানের?",
+   "note": "মায়াদেবী মন্দির, লুম্বিনী — বুদ্ধের জন্মস্থান (নেপাল)।",
+   "credit": "Wes Olson",
+   "license": "CC BY-SA 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Maya_Devi_Lumbini.jpg",
+   "title": "File:Maya Devi Lumbini.jpg"
+  },
+  {
+   "slug": "kushinagar",
+   "file": "assets/quiz/kushinagar.jpg",
+   "ans": "রামভার স্তূপ, কুশীনগর",
+   "q": "এই ঢিবিটি কোন স্থাপনার?",
+   "note": "কুশীনগর, যেখানে মহাপরিনির্বাণ ঘটে।",
+   "credit": "Rangan Datta Wiki",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ramabhar_Stupa_3.jpg",
+   "title": "File:Ramabhar Stupa 3.jpg"
+  },
+  {
+   "slug": "nalanda",
+   "file": "assets/quiz/nalanda.jpg",
+   "ans": "নালন্দা মহাবিহার",
+   "q": "এই ইটের স্তূপ-ধ্বংসাবশেষ কোথাকার?",
+   "note": "নালন্দা, মগধ — প্রাচীন বিশ্ববিদ্যালয়।",
+   "credit": "Sumitsurai",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Temple_3_-_Sariputta_Stupa_-_Brick_Votive_Stupas_-_Nalanda_Mahavihara_(12).jpg",
+   "title": "File:Temple 3 - Sariputta Stupa - Brick Votive Stupas - Nalanda Mahavihara (12).jpg"
+  },
+  {
+   "slug": "vikramashila",
+   "file": "assets/quiz/vikramashila.jpg",
+   "ans": "বিক্রমশীলা মহাবিহার",
+   "q": "এই ধ্বংসাবশেষ কোন বিহারের?",
+   "note": "ধর্মপালের প্রতিষ্ঠা, গঙ্গার তীরে; অতীশ এখানকার মহাস্থবির ছিলেন।",
+   "credit": "Saurav Sen Tonandada",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:VikramshilaRuins.jpg",
+   "title": "File:VikramshilaRuins.jpg"
+  },
+  {
+   "slug": "mainamati",
+   "file": "assets/quiz/mainamati.jpg",
+   "ans": "শালবন বিহার (ময়নামতি)",
+   "q": "এই বৌদ্ধ বিহারের ধ্বংসাবশেষ কোথায়?",
+   "note": "কুমিল্লার লালমাই-ময়নামতি; চন্দ্র রাজাদের আমল।",
+   "credit": "Shahidul Hasan Roman",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shalban_Bihar_Buddhist_Monastery.jpg",
+   "title": "File:Shalban Bihar Buddhist Monastery.jpg"
+  },
+  {
+   "slug": "parinirvana",
+   "file": "assets/quiz/parinirvana.jpg",
+   "ans": "মহাপরিনির্বাণ মূর্তি",
+   "q": "এই শায়িত বুদ্ধমূর্তিটি কী নামে পরিচিত?",
+   "note": "বুদ্ধের দেহত্যাগের দৃশ্য — মহাপরিনির্বাণ।",
+   "credit": "myself",
+   "license": "CC BY-SA 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Mahaparinirvana.jpg",
+   "title": "File:Mahaparinirvana.jpg"
+  },
+  {
+   "slug": "atish",
+   "file": "assets/quiz/atish.jpg",
+   "ans": "অতীশ দীপঙ্কর",
+   "q": "এই থাঙ্কা-চিত্রে কে?",
+   "note": "বিক্রমপুরের শ্রীজ্ঞান অতীশ দীপঙ্কর (৯৮২–১০৫৪)।",
+   "credit": "অজ্ঞাত (তিব্বত, কদম্পা মঠ)",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Atisha.jpg",
+   "title": "File:Atisha.jpg"
+  },
+  {
+   "slug": "ambedkar",
+   "file": "assets/quiz/ambedkar.jpg",
+   "ans": "বি. আর. আম্বেদকর",
+   "q": "এই ব্যক্তি কে?",
+   "note": "নবযান বৌদ্ধধর্মের প্রতিষ্ঠাতা, ১৯৫৬।",
+   "credit": "Unknown authorUnknown author",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Dr_B_R_Ambedkar_as_Barrister_in_1922.jpg",
+   "title": "File:Dr B R Ambedkar as Barrister in 1922.jpg"
+  },
+  {
+   "slug": "ashoka",
+   "file": "assets/quiz/ashoka.jpg",
+   "ans": "অশোকস্তম্ভের সিংহশীর্ষ",
+   "q": "এই ভাস্কর্যটি কী?",
+   "note": "সারনাথের অশোকস্তম্ভের সিংহশীর্ষ — ভারতের রাষ্ট্রীয় প্রতীক।",
+   "credit": "lisa bat",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lion_capital_of_Ashoka,_Sarnath.jpg",
+   "title": "File:Lion capital of Ashoka, Sarnath.jpg"
+  },
+  {
+   "slug": "xuanzang",
+   "file": "assets/quiz/xuanzang.jpg",
+   "ans": "হিউয়েন সাং",
+   "q": "এই মূর্তিটি কার?",
+   "note": "চীনা পরিব্রাজক, নালন্দায় শীলভদ্রের কাছে পড়েন।",
+   "credit": "Sau22K",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Xuanzang_(Hieun_Tsang)_Memorial_Statue.jpg",
+   "title": "File:Xuanzang (Hieun Tsang) Memorial Statue.jpg"
+  }
+ ]
+}

@@ -151,3 +151,66 @@ html,body{max-width:100%;overflow-x:clip}
 .locality-list li span { font-size: 10.5px; letter-spacing: .04em; color: #8a7767; text-transform: uppercase; }
 .locality-list li b { font-size: 13px; color: #4b2a12; font-weight: 700; }
 @media (max-width: 520px) { .locality-list li { min-width: 90px; flex: 1 1 40%; } }
+
+/* ==========================================================================
+   রাউন্ড ১৬ — সূচিপত্র, উৎসব ও যাতায়াত-থাকা (index-old.html)
+   ========================================================================== */
+.toc-section { padding-top: 54px; }
+.toc-group-title {
+  margin: 26px 0 12px; font-size: 15px; font-weight: 700; color: #8a3907;
+  border-left: 4px solid #d99b2b; padding-left: 10px;
+}
+.toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+.toc-card {
+  position: relative; display: block; padding: 16px 46px 16px 16px; border-radius: 14px;
+  border: 1px solid #ecd3b8; background: #fffaf3; text-decoration: none;
+  box-shadow: 0 6px 18px rgba(75, 31, 7, .05); transition: transform .16s, box-shadow .16s, border-color .16s;
+}
+.toc-card:hover, .toc-card:focus-visible {
+  transform: translateY(-2px); border-color: #d98531; box-shadow: 0 14px 30px rgba(75, 31, 7, .12);
+}
+.toc-num {
+  display: inline-block; font-size: 11px; font-weight: 700; color: #a4560f;
+  background: #ffeccf; border-radius: 999px; padding: 2px 9px; margin-bottom: 7px;
+}
+.toc-card strong { display: block; font-size: 16px; color: #7f3407; margin-bottom: 4px; }
+.toc-card small { display: block; font-size: 12.5px; color: #806b58; line-height: 1.7; }
+.toc-card b { position: absolute; right: 14px; top: 16px; color: #c2843a; font-size: 15px; }
+.toc-pages { display: flex; flex-wrap: wrap; gap: 8px; }
+.toc-pages a {
+  font-size: 13px; text-decoration: none; color: #8a3907; background: #fff5e8;
+  border: 1px solid #e8c89f; border-radius: 999px; padding: 6px 14px;
+}
+.toc-pages a:hover { background: #8a3907; color: #fff6e2; }
+
+/* উৎসব */
+.festival-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.festival-card {
+  position: relative; padding: 18px 18px 18px 20px; border-radius: 16px;
+  border: 1px solid #ecd3b8; border-left: 5px solid #d99b2b; background: #fffaf3;
+  box-shadow: 0 8px 22px rgba(75, 31, 7, .06);
+}
+.festival-card h3 { margin: 0 0 6px; font-size: 17px; color: #7f3407; padding-right: 34px; }
+.festival-num {
+  position: absolute; right: 14px; top: 14px; width: 26px; height: 26px; border-radius: 50%;
+  background: #8a3907; color: #fff3dd; display: grid; place-items: center; font-size: 12px; font-weight: 700;
+}
+.festival-card p { margin: 0 0 8px; font-size: 13.5px; line-height: 1.8; color: #4a2811; }
+.festival-when { color: #a4560f !important; font-weight: 600; }
+.festival-tip { background: #fff2dd; border-radius: 9px; padding: 8px 11px; }
+.festival-meta { color: #806b58 !important; font-size: 12px !important; margin-top: 10px !important; }
+
+/* যাতায়াত ও থাকা */
+.travel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.travel-card {
+  padding: 18px 20px; border-radius: 16px; border: 1px solid #ecd3b8;
+  background: #fffaf3; box-shadow: 0 8px 22px rgba(75, 31, 7, .06);
+}
+.travel-card h3 { margin: 0 0 8px; font-size: 17px; color: #7f3407; }
+.travel-card p { margin: 0 0 8px; font-size: 13.5px; line-height: 1.8; color: #4a2811; }
+.travel-card a { color: #a4560f; }
+
+@media (max-width: 640px) {
+  .toc-card { padding: 14px 40px 14px 14px; }
+  .toc-pages a { font-size: 12px; padding: 5px 11px; }
+}

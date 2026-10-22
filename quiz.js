@@ -4,14 +4,38 @@
 (function () {
   'use strict';
   var BANK = 'data/quiz-bank.json?v=20261022a';
+  var EXTRA = 'data/quiz-extra14.json?v=20261022b';   /* রাউন্ড ১৫: জীবনী · ত্রিপিটক · দর্শন · ইতিহাস · ছবি */
   var PER = 10;
   var LS_SCORES = 'charyabhumi.scores.v1';
   var LS_NAME = 'charyabhumi.name.v1';
 
+  /* বিষয়ভিত্তিক ছাঁকনি — ট্যাগগুলো গ্রুপে ভাগ করা */
+  var CATS = [
+    { id: 'all', label: 'সব প্রশ্ন', match: null },
+    { id: 'life', label: '☸ বুদ্ধের জীবন', match: ['বুদ্ধের জীবন'] },
+    { id: 'tripitaka', label: '📚 ত্রিপিটক', match: ['ত্রিপিটক'] },
+    { id: 'doc', label: '🧠 দর্শন ও ধারা', match: ['দর্শন ও ধারা', 'ধর্ম'] },
+    { id: 'hist', label: '🏛️ বৌদ্ধ ইতিহাস', match: ['বৌদ্ধ ইতিহাস', 'ইতিহাস', 'রাজবংশ'] },
+    { id: 'place', label: '📍 স্থান', match: ['স্থান', 'স্থাপত্য'] },
+    { id: 'people', label: '👤 ব্যক্তিত্ব', match: ['ব্যক্তিত্ব'] },
+    { id: 'img', label: '🖼️ ছবি-কুইজ', match: ['ছবি'] },
+    { id: 'mix', label: '🧩 ব্যক্তি ও স্থান (মিশ্র)', match: ['ব্যক্তিত্ব', 'স্থান', 'বৌদ্ধ ইতিহাস', 'স্থাপত্য'] },
+    { id: 'lit', label: '📖 সাহিত্য ও চর্যাপদ', match: ['সাহিত্য ও গণমাধ্যম', 'চর্যাপদ'] },
+    { id: 'culture', label: '🎭 সংস্কৃতি ও উৎসব', match: ['সংস্কৃতি', 'উৎসব', 'শিল্পরীতি', 'ভিক্ষু-জীবন'] }
+  ];
+  function catOf(id) {
+    for (var i = 0; i < CATS.length; i++) if (CATS[i].id === id) return CATS[i];
+    return CATS[0];
+  }
+  function inCat(q, cat) {
+    if (!cat.match) return true;
+    return cat.match.indexOf(q.tag) >= 0;
+  }
+
   var shell = document.getElementById('quizShell');
   if (!shell) return;
 
-  var state = { bank: [], round: [], idx: 0, score: 0, answered: false, started: false, t0: 0, wrong: [] };
+  var state = { bank: [], round: [], idx: 0, score: 0, answered: false, started: false, t0: 0, wrong: [], cat: 'all' };
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -58,21 +82,43 @@
   }
 
   /* ---------------- কুইজ প্রবাহ ---------------- */
+  function catBar(active) {
+    return '<div class="cb-qcats" role="tablist" aria-label="কুইজের বিষয়">' +
+      CATS.map(function (c) {
+        var n = state.bank.filter(function (q) { return inCat(q, c); }).length;
+        if (!n) return '';
+        return '<button type="button" role="tab" class="cb-chip' + (c.id === active ? ' on' : '') +
+          '" data-cat="' + c.id + '" aria-selected="' + (c.id === active) + '">' + esc(c.label) +
+          ' <small>' + bn(n) + '</small></button>';
+      }).join('') + '</div>';
+  }
+
   function startScreen() {
     state.started = false;
+    var cat = catOf(state.cat);
+    var pool = state.bank.filter(function (q) { return inCat(q, cat); });
     shell.innerHTML =
+      catBar(state.cat) +
       '<div class="cb-qcard cb-result">' +
         '<div class="ring" style="--p:0"><b>🎮</b></div>' +
-        '<h3>১০টি প্রশ্নে যাচাই করুন আপনার জ্ঞান</h3>' +
-        '<p>' + bn(state.bank.length) + 'টি প্রশ্নের ভাণ্ডার থেকে প্রতিবার নতুন ' + bn(PER) + 'টি প্রশ্ন আসবে — ছবি ও সূত্রসহ।</p>' +
+        '<h3>' + (cat.id === 'all' ? '১০টি প্রশ্নে যাচাই করুন আপনার জ্ঞান' : esc(cat.label) + ' — ১০টি প্রশ্ন') + '</h3>' +
+        '<p>' + bn(pool.length) + 'টি প্রশ্নের ভাণ্ডার থেকে প্রতিবার নতুন ' + bn(Math.min(PER, pool.length)) + 'টি প্রশ্ন আসবে — ছবি ও সূত্রসহ।</p>' +
         '<p style="font-size:13.5px;color:var(--cb-muted)">সময় ধরা হবে; দ্রুত ও সঠিক উত্তরে লিডারবোর্ডে উপরে ওঠার সুযোগ।</p>' +
         '<div class="cb-actions" style="justify-content:center"><button class="cb-btn" id="qbStart" type="button">কুইজ শুরু করুন →</button></div>' +
       '</div>';
+    var bar = shell.querySelector('.cb-qcats');
+    if (bar) bar.addEventListener('click', function (ev) {
+      var b = ev.target.closest('[data-cat]');
+      if (!b) return;
+      state.cat = b.getAttribute('data-cat');
+      startScreen();
+    });
     document.getElementById('qbStart').addEventListener('click', begin);
   }
 
   function begin() {
-    state.round = shuffle(state.bank.slice()).slice(0, PER);
+    var cat = catOf(state.cat);
+    state.round = shuffle(state.bank.filter(function (q) { return inCat(q, cat); })).slice(0, PER);
     state.idx = 0; state.score = 0; state.wrong = []; state.started = true;
     state.t0 = Date.now();
     questionScreen();
@@ -198,16 +244,39 @@
   }
 
   /* ---------------- শুরু ---------------- */
-  fetch(BANK).then(function (r) {
-    if (!r.ok) throw new Error('quiz-bank ' + r.status);
-    return r.json();
-  }).then(function (data) {
-    state.bank = (data.questions || []).filter(function (q) {
+  Promise.all([
+    fetch(BANK).then(function (r) { if (!r.ok) throw new Error('quiz-bank ' + r.status); return r.json(); }),
+    fetch(EXTRA).then(function (r) { if (!r.ok) throw new Error('quiz-extra ' + r.status); return r.json(); })
+  ]).then(function (parts) {
+    var all = (parts[0].questions || []).concat(parts[1].questions || []);
+    state.bank = all.filter(function (q) {
       return q.o && q.o.length === 4 && q.a >= 0 && q.a < 4;
     });
-    if (data.per_round) PER = data.per_round;
+    if (parts[0].per_round) PER = parts[0].per_round;
+
+    /* ?cat=লিংক থেকে বিষয় বেছে নেওয়া যায় (যেমন philosophy.html থেকে) */
+    var want = null;
+    try { want = new URLSearchParams(location.search).get('cat'); } catch (e) {}
+    if (want) {
+      for (var i = 0; i < CATS.length; i++) {
+        if (CATS[i].label.indexOf(want) >= 0 || CATS[i].id === want) { state.cat = CATS[i].id; break; }
+      }
+    }
+
+    /* ছবি-কুইজের কৃতিত্ব-তালিকা */
+    var cred = document.getElementById('qbCreditList');
+    if (cred) {
+      var imgQs = state.bank.filter(function (q) { return q.img; });
+      var seen = {};
+      cred.innerHTML = imgQs.map(function (q) {
+        if (seen[q.img]) return '';
+        seen[q.img] = 1;
+        return '<li><b>' + esc(q.o[q.a]) + '</b> — <a href="' + esc(q.img) + '" target="_blank" rel="noopener">ছবি দেখুন</a> · সূত্র: ' + esc(q.src) + '</li>';
+      }).join('') || '<li>ছবি-প্রশ্ন পাওয়া যায়নি।</li>';
+    }
+
     var lead = document.getElementById('quizHeroLead');
-    if (lead) lead.textContent = '১০টি প্রশ্ন · ' + bn(state.bank.length) + 'টি প্রশ্নের ভাণ্ডার · প্রতিবার নতুন সেট';
+    if (lead) lead.textContent = '১০টি প্রশ্ন · ' + bn(state.bank.length) + 'টি প্রশ্নের ভাণ্ডার · ১০টি বিষয় · প্রতিবার নতুন সেট';
     startScreen();
     renderBoard();
     var clr = document.getElementById('lbClear');
@@ -216,7 +285,6 @@
       state.lastId = null;
       renderBoard();
     });
-    // #leaderboard সরাসরি খুললে সেখানে স্ক্রল
     if (location.hash === '#leaderboard') {
       var el = document.getElementById('leaderboard');
       if (el) el.scrollIntoView({ behavior: 'smooth' });

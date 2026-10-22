@@ -3,8 +3,10 @@
   'use strict';
   var INFO = 'data/site-info.json?v=20261022a';
   var QUIZ = 'data/quiz-bank.json?v=20261022a';
+  var QUIZ2 = 'data/quiz-extra14.json?v=20261022b';   /* রাউন্ড ১৫ সংযোজন */
   var SITES = 'data/heritage-sites.json?v=20261022a';
   var ADD = 'data/heritage-sites-additions.json?v=20261022a';
+  var DIST = 'data/district-famous.json?v=20261022a';
   var LIB = 'data/heritage-library.json?v=20261022a';
 
   function esc(s) {
@@ -125,10 +127,85 @@
     }).join('');
   }
 
+
+  /* ---------------- কোন জেলায় কী বিখ্যাত ---------------- */
+  var distState = { q: '', div: 'all', data: null };
+
+  function districtSection(data) {
+    distState.data = data;
+    var chips = $('distDivChips');
+    var divs = [];
+    (data.districts || []).forEach(function (d) {
+      if (d.division && divs.indexOf(d.division) === -1) divs.push(d.division);
+    });
+    if (chips) {
+      chips.innerHTML = ['all'].concat(divs).map(function (dv) {
+        var label = dv === 'all' ? 'সব বিভাগ' : dv;
+        return '<button type="button" class="cb-chip dist-chip" data-div="' + esc(dv) + '"' +
+          (distState.div === dv ? ' style="background:var(--cb-forest);color:#fff8e6;border-color:var(--cb-forest)"' : '') +
+          '>' + esc(label) + '</button>';
+      }).join('');
+      chips.querySelectorAll('.dist-chip').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          distState.div = btn.getAttribute('data-div');
+          districtSection(distState.data);
+        });
+      });
+    }
+    var grid = $('distGrid');
+    if (!grid) return;
+    var q = distState.q;
+    var list = (data.districts || []).filter(function (d) {
+      if (distState.div !== 'all' && d.division !== distState.div) return false;
+      if (!q) return true;
+      return (d.district + ' ' + (d.division || '')).toLowerCase().indexOf(q) > -1;
+    });
+    if (!list.length) {
+      grid.innerHTML = '<p class="cb-dist-empty">এই ছাঁকনিতে কোনো জেলা পাওয়া যায়নি।</p>';
+    } else {
+      grid.innerHTML = list.map(function (d) {
+        var types = Object.keys(d.types || {}).sort(function (a, b) { return d.types[b] - d.types[a]; }).slice(0, 4);
+        var eg = (d.top || []).slice(0, 3).map(function (t) { return t.name; }).join(' · ');
+        return '<article class="cb-dcard">' +
+          '<h3>' + esc(d.district) + (d.division ? '<span class="div">' + esc(d.division) + ' বিভাগ</span>' : '') + '</h3>' +
+          '<p class="cnt">আমাদের তালিকায় <b>' + bn(d.total) + '</b>টি বৌদ্ধ স্থান / প্রতিষ্ঠান</p>' +
+          (types.length ? '<div class="types">' + types.map(function (t) {
+            return '<span>' + esc(t) + ' · ' + bn(d.types[t]) + '</span>';
+          }).join('') + '</div>' : '') +
+          (d.specialty ? '<p class="star">⭐ <b>বিশেষত্ব:</b> ' + esc(d.specialty.text) +
+            (d.specialty.url ? ' <a href="' + esc(d.specialty.url) + '" target="_blank" rel="noopener">সূত্র</a>' : '') + '</p>' : '') +
+          (eg ? '<p class="eg"><b>উদাহরণ:</b> ' + esc(eg) + '</p>' : '') +
+          '<a class="cb-feat-link" href="index-old.html#explore" style="font-size:13px;font-weight:700;color:var(--cb-bark);text-decoration:none">পুরো তালিকা দেখুন →</a>' +
+        '</article>';
+      }).join('');
+    }
+    var cnt = $('distCount');
+    if (cnt) cnt.textContent = bn(list.length) + 'টি জেলা দেখানো হচ্ছে · মোট ' + bn(data.total_records) + 'টি রেকর্ড';
+    var note = $('distNote');
+    if (note) note.textContent = data.note;
+  }
+
+  function bindDistrict() {
+    var q = $('distSearch');
+    if (q) q.addEventListener('input', function () {
+      distState.q = (q.value || '').trim().toLowerCase();
+      districtSection(distState.data);
+      if (q.focus) q.focus();
+    });
+    var r = $('distReset');
+    if (r) r.addEventListener('click', function () {
+      distState.q = ''; distState.div = 'all';
+      if (q) q.value = '';
+      districtSection(distState.data);
+    });
+  }
+
   function brandText(info) {
     var h = $('cbHeroLead'), m = $('cbMotto');
     if (h && info.hero) h.textContent = info.hero.lead;
     if (m && info.brand) m.innerHTML = 'মূলমন্ত্র: <b>' + esc(info.brand.motto) + '</b>';
+    var sl = $('cbSlogan');
+    if (sl && info.brand && info.brand.slogan) sl.textContent = info.brand.slogan;
     if (info.brand) document.title = info.brand.name_bn + ' (' + info.brand.name_en + ') — বাংলাদেশের বৌদ্ধ ঐতিহ্য, ইতিহাস ও ভ্রমণ';
   }
 
@@ -138,7 +215,8 @@
     };
     Promise.all([
       get(INFO, null), get(QUIZ, { bank_size: 500 }), get(SITES, { records: [] }),
-      get(ADD, { bulk: [], records: [] }), get(LIB, { items: [] })
+      get(ADD, { bulk: [], records: [] }), get(LIB, { items: [] }), get(DIST, null),
+      get(QUIZ2, { questions: [] })
     ]).then(function (res) {
       var info = res[0];
       if (!info) return;
@@ -148,7 +226,8 @@
       promises(info);
       founder(info);
       contact(info);
-      quizFacts(info, res[1].bank_size || 0);
+      var quizTotal = (res[1].bank_size || 0) + ((res[6] && res[6].questions || []).length);
+      quizFacts(info, quizTotal);
       // bulk তালিকাগুলো array-আকারে আসে; bulk_fields দিয়ে object বানাই
       var flds = res[3].bulk_fields || [];
       var di = flds.indexOf('district');
@@ -156,7 +235,8 @@
         return Array.isArray(row) ? { district: row[di] } : row;
       });
       heroStats(info, res[2].records || [], bulkObjs, res[3].records || [],
-                (res[4].items || []).length, res[1].bank_size || 0);
+                (res[4].items || []).length, quizTotal);
+      if (res[5]) { districtSection(res[5]); bindDistrict(); }
     });
   }
 

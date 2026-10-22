@@ -11,11 +11,13 @@
     { href: 'index.html#explore', label: 'স্থান খুঁজুন' },
     { href: 'index.html#planner', label: 'ভ্রমণ প্ল্যানার' },
     { href: 'history.html', label: 'ইতিহাস' },
+    { href: 'philosophy.html', label: 'বৌদ্ধধর্ম' },
     { href: 'culture.html', label: 'শিল্প ও সংস্কৃতি' },
     { href: 'kings.html', label: 'রাজাদের প্রোফাইল' },
     { href: 'library.html', label: 'লাইব্রেরি' },
     { href: 'contribution.html', label: 'অবদান' },
     { href: 'institutions.html', label: 'প্রতিষ্ঠান' },
+    { href: 'calendar.html', label: 'পঞ্জিকা' },
     { href: 'quiz.html', label: 'কুইজ', cta: true },
     { href: 'about.html', label: 'আমাদের কথা' }
   ];
@@ -75,6 +77,7 @@
               '<small>' + esc(b.motto || '') + '</small></span>' +
             '</div>' +
             '<p>' + esc(b.tagline || '') + '</p>' +
+            (b.slogan ? '<p style="color:#e6d3ab">' + esc(b.slogan) + '</p>' : '') +
             '<p><b>' + esc(fo.role || '') + ':</b> ' + esc(fo.name || '') + '<br>' +
               'শুরু: ' + esc(fo.since || '') + '</p>' +
           '</div>' +

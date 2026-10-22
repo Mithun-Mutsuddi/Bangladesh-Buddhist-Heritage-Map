@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123f39">
+  <title>বৌদ্ধ পঞ্জিকা ও বাংলা ক্যালেন্ডার — আজকের তিথি, নক্ষত্র, বঙ্গাব্দ ও সময় | চর্যাভূমি</title>
+  <meta name="description" content="আজকের বাংলা তারিখ, বঙ্গাব্দ, বুদ্ধাব্দ, ইংরেজি তারিখ ও ঘড়ি; তিথি, পক্ষ, নক্ষত্র, যোগ, করণ, সূর্যোদয়-সূর্যাস্ত; আসন্ন পূর্ণিমা, অমাবস্যা ও উপোসথ — সব নিজে নিজে আপডেট হয়। লোকনাথ ও বেণীমাধব শীলের পঞ্জিকার সঙ্গে তুলনার নোটসহ।">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261022b">
+</head>
+<body class="cb">
+  <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
+  <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
+  <header class="cb-header" id="cbHeader"></header>
+
+  <main id="main">
+    <section class="cb-hero">
+      <div class="cb-hero-bg"><img src="assets/brand/hero.svg" alt="" width="1200" height="620"></div>
+      <div class="cb-wrap cb-hero-in" style="padding:52px 0 56px">
+        <p class="cb-kicker">📅 পঞ্জিকা · সময় · তিথি</p>
+        <h1 style="font-size:clamp(28px,4.4vw,44px)">আজকের <span class="accent">পঞ্জিকা</span></h1>
+        <p class="cb-lead">বাংলা তারিখ, বঙ্গাব্দ, বুদ্ধাব্দ, ইংরেজি তারিখ আর ঘড়ি — সাথে পঞ্চাঙ্গের পাঁচ অঙ্গ: বার, তিথি, নক্ষত্র, যোগ, করণ। সব হিসাব আপনার ব্রাউজারেই হয়, প্রতি সেকেন্ডে নিজে নিজে আপডেট হয় — কোনো সাইন-আপ নেই।</p>
+        <div class="cb-actions">
+          <a class="cb-btn" href="#today">আজকের পঞ্জিকা</a>
+          <a class="cb-btn ghost" href="#month">মাস-ক্যালেন্ডার</a>
+          <a class="cb-btn ghost" href="#note">কীভাবে হিসাব হয়</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ আজকের কার্ড + ঘড়ি ============ -->
+    <section class="cb-section" id="today">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">আজ</p>
+        <div class="cb-today" id="todayCard">
+          <div class="cb-today-main">
+            <p class="cb-today-week" id="todayWeek">—</p>
+            <p class="cb-today-bn" id="todayBnDate">—</p>
+            <p class="cb-today-en" id="todayEnDate">—</p>
+          </div>
+          <div class="cb-today-clock">
+            <p class="cb-clock" id="todayClock">--:--:--</p>
+            <p class="cb-clock-zone">ঢাকা সময় (UTC+৬)</p>
+            <p class="cb-today-era" id="todayEra"></p>
+          </div>
+        </div>
+        <div class="cb-panch" id="panchGrid"></div>
+        <p class="cb-note" id="sunNote">—</p>
+      </div>
+    </section>
+
+    <!-- ============ আসন্ন দিন ============ -->
+    <section class="cb-section alt" id="coming">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">আসছে</p>
+        <h2>পূর্ণিমা, অমাবস্যা ও উপোসথ</h2>
+        <p class="cb-sub">থেরবাদী বৌদ্ধরা পূর্ণিমা ও অমাবস্যার দিনে এবং প্রতি পক্ষের অষ্টমীতে উপোসথ (অষ্টশীল) পালন করেন। নিচের তারিখগুলো সূর্যোদয়ের তিথি অনুসারে গোনা।</p>
+        <div class="cb-upo-grid" id="upoGrid"></div>
+        <h3 class="cb-h3">এ বছরের বড় বৌদ্ধ পূর্ণিমাগুলো</h3>
+        <ul class="cb-obs" id="obsList"></ul>
+      </div>
+    </section>
+
+    <!-- ============ মাস-ক্যালেন্ডার ============ -->
+    <section class="cb-section" id="month">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">মাস-পাতা</p>
+        <div class="cb-cal-head">
+          <h2 id="calTitle">ক্যালেন্ডার</h2>
+          <div class="cb-cal-nav">
+            <button type="button" class="cb-chip" id="calPrev" aria-label="আগের মাস">←</button>
+            <button type="button" class="cb-chip" id="calToday">আজ</button>
+            <button type="button" class="cb-chip" id="calNext" aria-label="পরের মাস">→</button>
+          </div>
+        </div>
+        <p class="cb-sub" id="calSub">প্রতিটি ঘরে বড় সংখ্যা ইংরেজি তারিখ, ছোট সংখ্যা বাংলা তারিখ; 🌕 পূর্ণিমা, 🌑 অমাবস্যা।</p>
+        <div class="cb-cal-wrap">
+          <table class="cb-cal" id="calGrid"><caption class="sr-only">মাসিক ক্যালেন্ডার</caption></table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ বঙ্গাব্দের মাস ============ -->
+    <section class="cb-section alt" id="months">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">বঙ্গাব্দ</p>
+        <h2 id="bnYearTitle">বাংলা বর্ষপঞ্জি</h2>
+        <p class="cb-sub" id="bnYearSub"></p>
+        <div class="cb-table-wrap">
+          <table class="cb-table" id="bnMonthTable"></table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ব্যাখ্যা ============ -->
+    <section class="cb-section" id="note">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">সৎভাবে</p>
+        <h2>এই পঞ্জিকা কীভাবে হিসাব করে — আর কী কী পারে না</h2>
+        <div class="cb-honest">
+          <p><b>যা করতে পারে:</b> বাংলা তারিখ (বাংলা একাডেমির ২০১৯-সংশোধিত নিয়ম), বঙ্গাব্দ, বুদ্ধাব্দ, তিথি-পক্ষ, নক্ষত্র, যোগ, করণ, সূর্যোদয়-সূর্যাস্ত, পূর্ণিমা-অমাবস্যা ও উপোসথের দিন — সবই আধুনিক খগোল-গণিতে (গ্রহের দ্রাঘিমা হিসাব করে) ব্রাউজারেই, তাই প্রতি মুহূর্তে আপডেট।</p>
+          <p><b>যা পারে না:</b> ছাপা পঞ্জিকার মতো লগ্ন, মূহূর্ত, দোষ-বল, রাশিফল, শুভ-অশুভ সময় দেওয়া। বাজারের বড় পঞ্জিকা — <b>শ্রীশ্রীবৃহৎ বেণীমাধব শীলের ফুল পঞ্জিকা</b> (কলকাতা, দেড়শো বছর পুরোনো) আর ঢাকার <b>লোকনাথ পঞ্জিকা</b> (লোকনাথ বুক এজেন্সি, ১৯৫৩ থেকে) — সূর্যসিদ্ধান্ত-ভিত্তিক গণনা ব্যবহার করে; আমাদের গণনা দৃক-ধাঁচের, তাই তিথির সন্ধিক্ষণে কয়েক মিনিট থেকে ঘণ্টাখানেক পার্থক্য হতে পারে।</p>
+          <p><b>কী করবেন:</b> পূজা, দীক্ষা বা সংস্কারের দিন ঠিক করতে অবশ্যই ছাপা পঞ্জিকা বা মন্দিরের ভিক্ষু-পুরোহিতের সঙ্গে মিলিয়ে নিন। এই পাতা পড়াশোনা ও পরিকল্পনার জন্য, বিধিগত নির্দেশিকা নয়।</p>
+        </div>
+        <p class="cb-src"><b>মিলিয়ে দেখতে:</b>
+          <a href="https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%9E%E0%A7%8D%E0%A6%9C%E0%A6%BF%E0%A6%95%E0%A6%BE" target="_blank" rel="noopener">বাংলাপিডিয়া — পঞ্জিকা ↗</a> ·
+          <a href="https://benimadhabsilpanjika.com/" target="_blank" rel="noopener">বেণীমাধব শীলের পঞ্জিকা ↗</a> ·
+          <a href="https://bd.ponjika.com/" target="_blank" rel="noopener">লোকনাথ/বিডি পঞ্জিকা ↗</a> ·
+          <a href="https://www.drikpanchang.com/" target="_blank" rel="noopener">দৃক পঞ্চাঙ্গ ↗</a>
+        </p>
+        <p class="cb-note">📱 ফোনে সাইটটি বুকমার্ক করে রাখুন — প্রতিবার খোলার সময় তারিখ, তিথি ও ঘড়ি নিজে নিজেই ঠিক হয়ে যাবে। ইন্টারনেট না থাকলেও বাংলা-ইংরেজি তারিখ দেখাবে; শুধু তিথি-নক্ষত্রের হিসাব হবে না।</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer" id="cbFooter"></footer>
+  <script src="brand.js?v=20261022b" defer></script>
+  <script src="calendar.js?v=20261022b" defer></script>
+</body>
+</html>

@@ -1,15 +1,16 @@
 {
- "schema_version": "2026-10-22.siteinfo.v1",
+ "schema_version": "2026-10-22.site-info.v3",
  "generated_at": "2026-10-22",
  "brand": {
   "name_bn": "চর্যাভূমি",
   "name_en": "Charyabhumi",
   "mark": "☸",
   "motto": "হাজার বছরের পথ ধরে",
-  "slogan": "যেখানে বাংলা ভাষা শুরু, সেই মাটি ঘুরে দেখুন",
-  "tagline": "বাংলাদেশের বৌদ্ধ ঐতিহ্য — ভ্রমণ, ইতিহাস, মানুষ",
+  "slogan": "বাংলার বৌদ্ধ স্থানগুলো নিজে ঘুরে দেখুন — ইতিহাস, পথ আর মানুষের সঙ্গে।",
+  "tagline": "বাংলাদেশের বৌদ্ধ স্থান — ভ্রমণ, ইতিহাস, মানুষ",
   "tagline_en": "Bangladesh's Buddhist heritage — travel, history, people.",
-  "since": "অক্টোবর ২০২৬"
+  "since": "অক্টোবর ২০২৬",
+  "slogan_en": "Go and see Bengal’s Buddhist places yourself — with their history, the roads that lead there, and the people who keep them."
  },
  "hero": {
   "kicker": "ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই",
@@ -170,14 +171,36 @@
    "linkText": ""
   },
   {
+   "id": "philosophy",
+   "icon": "☸",
+   "title": "বৌদ্ধধর্ম ও দর্শন",
+   "title_en": "Buddhism & philosophy",
+   "desc": "বুদ্ধের জীবন, চার আর্যসত্য-অষ্টাঙ্গিক মার্গ, ত্রিপিটক, আর বাংলায় বৌদ্ধধর্মের সাড়ে আঠারো শ বছরের ইতিহাস — থেরবাদ, মহাযান, বজ্রযান, নবযান।",
+   "desc_en": "The Buddha's life, core doctrine, the Tripitaka, and the full history of Buddhism in Bengal — Theravada, Mahayana, Vajrayana, Navayana.",
+   "status": "live",
+   "link": "philosophy.html",
+   "linkText": "পড়ুন"
+  },
+  {
+   "id": "calendar",
+   "icon": "📅",
+   "title": "পঞ্জিকা, বাংলা-ইংরেজি ক্যালেন্ডার ও ঘড়ি",
+   "title_en": "Panjika, calendars & clock",
+   "desc": "আজকের বঙ্গাব্দ-বুদ্ধাব্দ-ইংরেজি তারিখ, ঢাকার ঘড়ি, তিথি-পক্ষ-নক্ষত্র-যোগ-করণ, সূর্যোদয়, আসন্ন পূর্ণিমা-অমাবস্যা-উপোসথ — সব নিজে নিজে আপডেট।",
+   "desc_en": "Today's Bangla, Buddhist and English dates, Dhaka clock, tithi/nakshatra/yoga/karana, sunrise, upcoming full moon, new moon and uposatha — all self-updating.",
+   "status": "live",
+   "link": "calendar.html",
+   "linkText": "আজকের পঞ্জিকা"
+  },
+  {
    "id": "district",
    "icon": "🍲",
-   "title": "কোন জেলা কিসের জন্য বিখ্যাত",
-   "title_en": "District profiles",
-   "desc": "প্রতিটি জেলার বিহার, বৌদ্ধ পাড়া ও স্থানীয় বিশেষত্ব — আমাদের ডেটাসেট থেকে।",
-   "desc_en": "Each district's monasteries and Buddhist neighbourhoods, from our own dataset.",
-   "status": "partial",
-   "link": "index.html#explore",
+   "title": "কোন জেলায় কী বিখ্যাত",
+   "title_en": "What each district is known for",
+   "desc": "৩০টি জেলার বৌদ্ধ ঐতিহ্য এক নজরে — কতটি স্থান, কোন ধরনের, সূত্রসহ বিশেষত্ব ও উদাহরণ।",
+   "desc_en": "Buddhist heritage across 30 districts — how many sites, of what kind, sourced specialties and examples.",
+   "status": "live",
+   "link": "index.html#districts",
    "linkText": "জেলা ধরে দেখুন"
   },
   {
@@ -368,7 +391,7 @@
  },
  "quiz_info": {
   "title": "কুইজ — বৌদ্ধ ধর্ম, ইতিহাস ও সংস্কৃতি",
-  "lead": "১০টি প্রশ্ন, ছবি ও ম্যাপসহ। প্রতিবার নতুন সেট। বিখ্যাত স্থান, বিহার, ব্যক্তিত্ব, জাতক-কাহিনি, ত্রিপিটক, রাজবংশ ও সাধারণ জ্ঞান থেকে প্রশ্ন — সবই সাইটের যাচাই করা ডেটা থেকে তৈরি।",
+  "lead": "১০টি প্রশ্ন, ১০টি বিষয় — বুদ্ধের জীবন, ত্রিপিটক, দর্শন ও চার ধারা, বাংলায় বৌদ্ধ ইতিহাস, স্থান, ব্যক্তিত্ব, ছবি-কুইজ। প্রতিবার নতুন সেট, প্রতিটি প্রশ্নে সূত্র।",
   "note": "লিডারবোর্ড আপনার ব্রাউজারেই সংরক্ষিত হয় (সাইন-আপ নেই)। তাই এটি আপনার ডিভাইসের ফল — সবার জন্য আলাদা।"
  },
  "coverage": {
