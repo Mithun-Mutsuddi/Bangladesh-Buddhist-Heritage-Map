@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid slice" role="img" aria-label="সূর্যাস্তে স্তূপ ও বৌদ্ধ স্থাপত্যের আলংকারিক দৃশ্য">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d2f2b"/><stop offset=".45" stop-color="#174c44"/>
+      <stop offset=".72" stop-color="#3f6b52"/><stop offset="1" stop-color="#8a6a35"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffd98a"/><stop offset=".55" stop-color="#e8a63f" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#e8a63f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123f39"/><stop offset="1" stop-color="#0b2622"/></linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a221f"/><stop offset="1" stop-color="#071714"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7d391"/><stop offset="1" stop-color="#c9922f"/></linearGradient>
+  </defs>
+  <rect width="1200" height="620" fill="url(#sky)"/>
+  <circle cx="880" cy="300" r="250" fill="url(#sun)"/>
+  <circle cx="880" cy="300" r="86" fill="#ffcf7a" opacity=".85"/>
+  <g opacity=".07" stroke="#ffe9bd" stroke-width="2" fill="none">
+    <g transform="translate(880 300)">
+      <circle r="150"/><circle r="118"/><circle r="86"/>
+      <g stroke-width="1.5">
+        <path d="M0 -150V150M-150 0H150M-106 -106L106 106M-106 106L106 -106"/>
+      </g>
+      <circle r="150" stroke-dasharray="3 12"/>
+    </g>
+  </g>
+  <g fill="#0b2622" opacity=".55">
+    <path d="M0 560h1200v60H0z"/>
+  </g>
+  <path d="M0 520c120-30 210-16 320 6s210 30 330 6 250-40 400-16c60 10 110 22 150 34v70H0z" fill="url(#hill1)"/>
+  <g transform="translate(250 300)">
+    <g fill="url(#gold)" opacity=".95">
+      <rect x="-84" y="150" width="168" height="16" rx="3"/>
+      <rect x="-66" y="126" width="132" height="16" rx="3"/>
+      <rect x="-48" y="104" width="96" height="14" rx="3"/>
+      <path d="M-44 104c0-46 18-70 44-70s44 24 44 70z"/>
+      <rect x="-8" y="16" width="16" height="22"/>
+      <path d="M0 6l16 14h-32z"/>
+      <rect x="-26" y="42" width="52" height="6" rx="3"/>
+      <rect x="-34" y="56" width="68" height="6" rx="3"/>
+      <rect x="-42" y="70" width="84" height="6" rx="3"/>
+    </g>
+    <g fill="#0b2622" opacity=".28"><rect x="-14" y="130" width="28" height="36" rx="14"/></g>
+  </g>
+  <g transform="translate(760 380) scale(.72)" fill="url(#gold)" opacity=".85">
+    <rect x="-70" y="120" width="140" height="13" rx="3"/>
+    <rect x="-52" y="100" width="104" height="13" rx="3"/>
+    <path d="M-38 100c0-38 16-58 38-58s38 20 38 58z"/>
+    <rect x="-6" y="26" width="12" height="18"/>
+    <rect x="-22" y="44" width="44" height="5" rx="2"/>
+    <rect x="-28" y="56" width="56" height="5" rx="2"/>
+    <rect x="-34" y="68" width="68" height="5" rx="2"/>
+  </g>
+  <path d="M0 594c160-18 300-6 430 12s270 10 400-12 250-22 370 8v28H0z" fill="url(#hill2)"/>
+  <g fill="#0b2622" opacity=".85">
+    <g transform="translate(1120 470) scale(.5)"><path d="M0 0c-40 0-70-24-70-24s10 44 70 44 70-44 70-44S40 0 0 0z"/></g>
+  </g>
+  <g opacity=".18" fill="#fff5e0">
+    <circle cx="180" cy="120" r="2.5"/><circle cx="300" cy="72" r="2"/><circle cx="470" cy="140" r="2.2"/>
+    <circle cx="640" cy="90" r="1.8"/><circle cx="1010" cy="120" r="2.2"/><circle cx="1120" cy="70" r="1.7"/>
+  </g>
+</svg>
