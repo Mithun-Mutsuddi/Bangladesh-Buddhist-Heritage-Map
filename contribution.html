@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>বাঙালি বৌদ্ধদের অবদান — ২৬ ক্ষেত্রের ইতিহাস</title>
+  <meta name="description" content="কৃষি, শিল্প, দর্শন, চিকিৎসা, প্রকৌশল, গণিত, সংগীত, নৃত্য, চিত্রকলা, ভাস্কর্য, প্রকাশনা ও শিক্ষা — ২৬টি ক্ষেত্রে বাঙালি বৌদ্ধদের ঐতিহাসিক অবদান; ব্যক্তি, গোষ্ঠী, ভান্তে ও গৃহী, কাজের তালিকা, ছবি-অডিও-ভিডিও-গ্রন্থ প্রমাণ এবং প্রতিটি দাবির যাচাই-অবস্থা।">
+  <link rel="icon" href="buddhist-heritage-bd/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261021d">
+  <link rel="stylesheet" href="history.css?v=20261022g">
+</head>
+<body>
+  <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
+  <div class="flag-ribbon" aria-label="বৌদ্ধ ধর্মীয় পতাকার রং">
+    <span class="flag-blue"></span><span class="flag-yellow"></span><span class="flag-red"></span><span class="flag-white"></span><span class="flag-orange"></span><span class="flag-mixed"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="প্রথম পাতায় ফিরে যান">
+        <span class="brand-mark" aria-hidden="true">☸</span>
+        <span class="brand-copy"><strong>বৌদ্ধ ঐতিহ্য</strong><small>বাংলাদেশ · ভ্রমণ ও ইতিহাস</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">☰ <span class="sr-only">মেনু খুলুন</span></button>
+      <nav class="site-nav" id="siteNav" aria-label="প্রধান নেভিগেশন">
+        <a href="index.html">স্থান খুঁজুন</a>
+        <a href="history.html">বৌদ্ধ শাসন ও ইতিহাস</a>
+        <a href="kings.html">রাজাদের প্রোফাইল</a>
+        <a href="contribution.html" aria-current="page">ক্ষেত্রভিত্তিক অবদান</a>
+        <a href="institutions.html">নতুন প্রতিষ্ঠান</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hist-hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow">কৃষি · শিল্প · দর্শন · বিজ্ঞান · শিল্পকলা</p>
+        <h1>বাঙালি বৌদ্ধদের অবদান</h1>
+        <p class="hist-lead" id="contribLead">২৬টি ক্ষেত্রে ঐতিহাসিক অবদান — ব্যক্তি, গোষ্ঠী, ভান্তে ও গৃহী; প্রতিটি এন্ট্রিতে কাজের তালিকা, প্রমাণ ও যাচাই-অবস্থা।</p>
+        <p class="hist-note" id="contribNote"></p>
+        <div class="contrib-stats" id="contribStats" aria-live="polite"></div>
+        <div class="hist-actions">
+          <a class="hist-btn ghost" href="history.html">← বৌদ্ধ শাসনের ইতিহাস</a>
+          <a class="hist-btn ghost" href="kings.html">রাজাদের প্রোফাইল</a>
+          <a class="hist-btn ghost" href="institutions.html">নতুন ছয় বিভাগের প্রতিষ্ঠান</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hist-section" id="browse">
+      <div class="wrap">
+        <h2>ক্ষেত্র ধরে দেখুন</h2>
+        <p class="hist-sub">একটি ক্ষেত্র বেছে নিন, অথবা নাম লিখে খুঁজুন। “যাচাই-অবস্থা” দিয়ে ছেঁকে দেখতে পারেন কোন তথ্য কতটা নিশ্চিত।</p>
+        <div class="contrib-toolbar">
+          <label class="king-search">🔎 <input id="contribSearch" type="search" placeholder="নাম, ক্ষেত্র বা কাজ লিখুন… (যেমন: অতীশ, চর্যাপদ, ব্রোঞ্জ)" autocomplete="off"></label>
+          <div class="contrib-status" id="contribStatusFilters" role="group" aria-label="যাচাই-অবস্থা অনুযায়ী ছাঁকনি"></div>
+        </div>
+        <nav class="contrib-domjump" id="contribDomainJump" aria-label="ক্ষেত্র-তালিকা"></nav>
+        <p class="hist-sub contrib-empty" id="contribEmpty" hidden>এই শব্দে কিছু পাওয়া যায়নি। বানান বদলে দেখুন বা “সব” চাপুন।</p>
+      </div>
+    </section>
+
+    <div id="contribList"></div>
+
+    <section class="hist-section alt" id="rejected">
+      <div class="wrap">
+        <h2>প্রত্যাখ্যাত ও সংশোধিত দাবি</h2>
+        <p class="hist-sub">তৃতীয় পক্ষের (DeepSeek শেয়ার-লিংক) তালিকায় থাকা প্রতিটি দাবি আলাদা করে যাচাই করা হয়েছে। যেগুলো সূত্রে মেলেনি, সেগুলো <strong>মুছে ফেলা হয়নি</strong> — নিচে কারণসহ রাখা হলো, যাতে ভবিষ্যতে কেউ একই ভুলের পুনরাবৃত্তি না করেন।</p>
+        <div id="contribRejected" class="rejected-list"></div>
+        <h2 class="contrib-h2-gap">সূত্রে পরস্পরবিরোধ</h2>
+        <p class="hist-sub">একই বিষয়ে দুই সূত্র আলাদা কথা বললে দুই পক্ষই দেখানো হয়েছে — একটি বেছে নিয়ে অন্যটি লুকানো হয়নি।</p>
+        <div id="contribConflicts" class="conflict-list"></div>
+      </div>
+    </section>
+
+    <section class="hist-section" id="sources">
+      <div class="wrap">
+        <h2>পদ্ধতি ও সূত্র</h2>
+        <p class="hist-sub" id="contribMethod"></p>
+        <ul class="contrib-scale" id="contribScale"></ul>
+        <p class="contrib-fine">তথ্যসূত্রের ধরন: বাংলাপিডিয়া (বাংলা ও ইংরেজি সংস্করণ), ইউনেস্কো বিশ্ব ঐতিহ্য, জাদুঘর ও প্রত্নতত্ত্ব-নথি, উইকিমিডিয়া কমন্সের লাইসেন্সযুক্ত আলোকচিত্র, ইন্টারনেট আর্কাইভ ও ইউটিউবের শ্রবণ-দৃশ্য নমুনা। ছবির নিচে লাইসেন্স ও মূল পাতা-লিংক দেওয়া আছে — কোনো ছবি “শ্রেণি-চিত্রণ” হিসেবে বসানো হয়নি।</p>
+        <p class="contrib-fine">এই পৃষ্ঠার ডেটা: <code>data/heritage-contributions.json</code> — যেকোনো এন্ট্রি সংশোধন বা যোগ করতে চাইলে ওই ফাইলটিই বদলাতে হবে। দেখা হচ্ছে <a href="institutions.html">নতুন ছয় বিভাগে যোগ করা প্রতিষ্ঠানের তালিকা</a>।</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>☸ বৌদ্ধ ঐতিহ্য — বাংলাদেশের বৌদ্ধ বিহার, প্রত্নস্থল ও ইতিহাসের ডেটাসেট।</p>
+      <div class="footer-links"><a href="index.html">স্থান খুঁজুন</a><a href="history.html">ইতিহাস</a><a href="kings.html">রাজাদের প্রোফাইল</a><a href="institutions.html">নতুন প্রতিষ্ঠান</a></div>
+    </div>
+  </footer>
+
+  <script src="nav-mini.js?v=20261022a" defer></script>
+  <script src="contribution.js?v=20261022a" defer></script>
+</body>
+</html>

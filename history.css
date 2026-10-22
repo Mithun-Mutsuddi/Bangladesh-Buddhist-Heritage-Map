@@ -153,3 +153,125 @@
 .dyn-sources ul { margin: 0 0 6px; padding-inline-start: 18px; font-size: 12.5px; }
 .dyn-sources a { color: #2b6340; }
 .verify-line { margin: 0; font-size: 12px; color: #4f5f52; }
+
+/* রাউন্ড ৬ — সংশোধনী-ব্যাজ ও নতুন রাজবংশের কার্ড */
+.verify-badge.correction { background: #fdecec; color: #8a2020; border-color: #f0cfcf; }
+.dyn-card .caution { margin-top: 14px; }
+@media print { .verify-badge.correction { border: 1px solid #8a2020; } }
+
+/* ── রাউন্ড ৮: ভূমিকা-ব্যাজ, ভূমিকা-ছাঁকনি, মিনি-কার্ডের মুখ, ছবির লেবেল ── */
+.role-badge { display: inline-block; margin-top: 4px; padding: 3px 9px; border-radius: 999px; font-size: 11.5px; font-weight: 600; border: 1px solid var(--line, #e3d6c3); background: #fbf6ec; color: #4a3a2c; }
+.role-badge.r-buddhist { background: #eef6ef; border-color: #cbe3d0; color: #1f5b33; }
+.role-badge.r-patron { background: #fdf3e6; border-color: #f0d9b8; color: #7a4a12; }
+.role-badge.r-chief { background: #eef2f9; border-color: #ccd8ee; color: #26456f; }
+.role-badge.r-zamindar { background: #f7eef7; border-color: #e6cfe6; color: #5c2b5c; }
+.role-badge.r-none { background: #f4f1ee; border-color: #e2dbd3; color: #6d6157; }
+.role-note { margin: 2px 0 10px; padding: 8px 11px; border-left: 3px solid #d8b98a; background: #fdfaf3; border-radius: 0 8px 8px 0; font-size: 13px; color: #4c3d31; }
+.role-jump { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 9px; }
+.role-jump a { padding: 5px 11px; border-radius: 999px; font-size: 12.5px; text-decoration: none; color: #4a3a2c; background: #f6efe3; border: 1px solid var(--line, #e3d6c3); }
+.role-jump a:hover { border-color: var(--forest-mid, #4b7a5e); }
+.role-jump a.active { background: var(--forest-mid, #4b7a5e); color: #fff; border-color: var(--forest-mid, #4b7a5e); }
+.king-photo .photo-note { display: block; margin-top: 5px; font-size: 10.5px; line-height: 1.45; color: #7a4a12; background: #fdf3e6; border-radius: 6px; padding: 4px 6px; }
+.king-mini { position: relative; }
+.king-mini-face { display: block; width: 100%; height: 96px; border-radius: 10px; overflow: hidden; background: #f2e9da; margin-bottom: 6px; }
+.king-mini-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.king-mini-face.noimg { background: repeating-linear-gradient(45deg, #f2e9da, #f2e9da 8px, #ebdfc9 8px, #ebdfc9 16px); }
+.king-mini-role { font-size: 11px; color: #6d6157; }
+
+/* রাউন্ড ৯: ভিক্ষু ও পণ্ডিত-লেবেল, যাচাই-বাকি নোট, গ্রন্থ-তালিকা */
+.role-badge.r-monk { background: #eef4f6; border-color: #c9dde4; color: #1d4f5e; }
+.role-badge.r-lay { background: #f5f0e6; border-color: #e3d3b6; color: #5d4a1f; }
+.verify-note { margin: 2px 0 10px; padding: 9px 12px; border-left: 3px solid #c2610f; background: #fdf1e3; border-radius: 0 8px 8px 0; font-size: 13px; color: #6b3d09; }
+
+/* ═══════════ রাউন্ড ১০: ক্ষেত্রভিত্তিক অবদান পাতা ═══════════ */
+.contrib-stats { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 22px; }
+.cs-box { background: rgba(255,255,255,.08); border: 1px solid rgba(255,210,139,.35); border-radius: 12px; padding: 10px 16px; min-width: 92px; text-align: center; }
+.cs-box strong { display: block; font-size: 22px; color: var(--gold); line-height: 1.1; }
+.cs-box span { font-size: 12px; color: #d9e6df; }
+
+.contrib-toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 0 0 16px; }
+.contrib-status { display: flex; flex-wrap: wrap; gap: 8px; }
+.cs-chip { font: inherit; font-size: 13px; cursor: pointer; padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); color: var(--forest-deep); }
+.cs-chip span { color: var(--muted); font-size: 12px; }
+.cs-chip.on { background: var(--forest-deep); color: #fff6e2; border-color: var(--forest-deep); }
+.cs-chip.on span { color: #ffe6bd; }
+
+.contrib-domjump { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+.dj-chip { font-size: 13px; text-decoration: none; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); color: var(--forest-deep); }
+.dj-chip:hover { border-color: var(--forest-mid); background: #fff6e6; }
+.dj-chip.is-off { opacity: .35; }
+
+.contrib-domain h2 { display: flex; align-items: center; gap: 10px; }
+.dm-icon { font-size: 1.05em; }
+.dm-period { color: var(--maroon); font-size: 13px; margin: 6px 0 0; letter-spacing: .02em; }
+.dm-philosophy { background: #f7f1e2; border-left: 4px solid var(--gold); border-radius: 0 12px 12px 0; padding: 10px 14px; margin: 0 0 18px; font-size: 14px; color: #4a3a2c; max-width: 96ch; }
+
+.contrib-grid { column-width: 340px; column-gap: 16px; }
+.contrib-grid > .contrib-card { break-inside: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid; width: 100%; display: flex; margin: 0 0 16px; }
+.contrib-card { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px; }
+.contrib-card.st-verified { border-top: 4px solid #2f7d5b; }
+.contrib-card.st-partial { border-top: 4px solid #b8860b; }
+.contrib-card.st-thin { border-top: 4px solid #a5642a; }
+.contrib-card.st-rejected { border-top: 4px solid #8b2f2f; }
+.cc-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; justify-content: space-between; }
+.cc-head h4 { margin: 0; font-size: 17px; line-height: 1.35; }
+.cc-flags { display: flex; flex-wrap: wrap; gap: 6px; }
+.cc-kind, .cc-status { font-size: 11px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); background: #fffdf7; white-space: nowrap; }
+.st-verified .cc-status { color: #1f5f43; border-color: #9fd0b8; background: #eaf6ef; }
+.st-partial .cc-status { color: #7a5a00; border-color: #e3cd8a; background: #fdf6e3; }
+.st-thin .cc-status { color: #7d4415; border-color: #e6c3a3; background: #fdf1e7; }
+.st-rejected .cc-status { color: #7a1f1f; border-color: #e0b0b0; background: #fbecec; }
+.cc-meta { margin: 0; font-size: 13px; color: var(--muted); }
+.cc-claims { margin: 0; padding-left: 20px; font-size: 14px; color: #3b2d22; display: grid; gap: 5px; }
+.cc-works .cc-label { display: block; font-size: 12px; letter-spacing: .04em; color: var(--muted); margin-bottom: 6px; }
+.cc-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.cc-chip { font-size: 12.5px; background: #f2ece0; border: 1px solid #e3d9c6; color: #4a3a2c; padding: 4px 10px; border-radius: 8px; }
+.cc-verifynote { margin: 0; font-size: 13px; color: #5c4a3a; background: #fbf6ea; border: 1px dashed #ddd0b6; border-radius: 10px; padding: 9px 12px; }
+.cc-evidence { display: grid; gap: 10px; }
+.ev-figure { margin: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fffdf7; }
+.ev-figure img { display: block; width: 100%; height: auto; max-height: 260px; object-fit: cover; background: #eee6d6; }
+.ev-figure figcaption { padding: 9px 12px; font-size: 12.5px; color: #4a3a2c; display: grid; gap: 3px; }
+.ev-note { display: block; color: var(--muted); font-size: 12px; }
+.ev-meta { display: block; color: var(--muted); font-size: 11.5px; }
+.ev-meta a { color: var(--forest-mid); }
+.ev-link { display: flex; gap: 10px; align-items: flex-start; text-decoration: none; color: inherit; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: #fffdf7; }
+.ev-link:hover { border-color: var(--forest-mid); background: #fff6e6; }
+.ev-icon { font-size: 18px; line-height: 1.2; }
+.ev-body { display: grid; gap: 2px; font-size: 13px; }
+.cc-foot { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 6px; }
+.cc-src { font-size: 12px; text-decoration: none; color: var(--forest-deep); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; background: #fffdf7; }
+.cc-src:hover { border-color: var(--forest-mid); background: #fff6e6; }
+.cc-src.cc-king { color: var(--maroon); font-weight: 700; }
+
+.rejected-list, .conflict-list { display: grid; gap: 12px; }
+.rj-card, .cf-card { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid #8b2f2f; border-radius: 0 14px 14px 0; padding: 12px 16px; }
+.cf-card { border-left-color: var(--forest-mid); }
+.rj-card p, .cf-card p { margin: 6px 0 0; font-size: 13.5px; color: #4a3a2c; }
+.rj-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; justify-content: space-between; }
+.rj-verdict { font-size: 11.5px; background: #fbecec; color: #7a1f1f; border: 1px solid #e0b0b0; border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+.cf-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 8px; }
+.cf-two > div { background: #fbf6ea; border: 1px solid #e6dcc6; border-radius: 10px; padding: 9px 12px; font-size: 13px; }
+.cf-two span { display: block; font-size: 11px; letter-spacing: .05em; color: var(--muted); margin-bottom: 3px; }
+.cf-note { font-size: 12.5px; color: var(--muted); }
+.contrib-h2-gap { margin-top: 40px; }
+.contrib-scale { margin: 0 0 18px; padding-left: 20px; display: grid; gap: 8px; font-size: 14px; color: #3b2d22; }
+.contrib-fine { font-size: 12.5px; color: var(--muted); max-width: 90ch; }
+.contrib-empty { color: var(--maroon); }
+@media (max-width: 560px) {
+  .contrib-grid { column-width: auto; }
+  .contrib-stats { gap: 8px; }
+  .cs-box { padding: 8px 12px; min-width: 78px; }
+}
+
+/* ═══════════ নতুন প্রতিষ্ঠান-তালিকা পাতা ═══════════ */
+.inst-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: var(--shadow); }
+.inst-table { width: 100%; border-collapse: collapse; min-width: 760px; font-size: 13.5px; }
+.inst-table th, .inst-table td { text-align: left; padding: 11px 14px; border-bottom: 1px solid #e8e0d0; vertical-align: top; }
+.inst-table thead th { background: #f2ece0; font-size: 12.5px; letter-spacing: .03em; color: var(--forest-deep); position: sticky; top: 0; }
+.inst-table tbody th { font-weight: 700; color: #33221a; }
+.inst-table tbody tr:nth-child(even) { background: #fbf7ee; }
+.inst-table tbody tr:hover { background: #fff6e6; }
+.inst-badge { font-size: 11.5px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); white-space: nowrap; }
+.inst-badge.ok { color: #1f5f43; border-color: #9fd0b8; background: #eaf6ef; }
+.inst-badge.local { color: #7a5a00; border-color: #e3cd8a; background: #fdf6e3; }
+.inst-badge.pending { color: #7d4415; border-color: #e6c3a3; background: #fdf1e7; }

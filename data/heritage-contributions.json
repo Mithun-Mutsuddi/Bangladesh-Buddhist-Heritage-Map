@@ -1,0 +1,3564 @@
+{
+ "schema_version": "2026-10-22.contributions.v1",
+ "generated_at": "2026-10-22",
+ "title": "বাঙালি বৌদ্ধদের অবদান — ক্ষেত্রভিত্তিক ইতিহাস",
+ "intro": [
+  "বৌদ্ধ ঐতিহ্য শুধু ধর্মবিশ্বাসে সীমাবদ্ধ ছিল না — দর্শন, স্থাপত্য, চিকিৎসা, গণিত, সংগীত, তাঁত, নৌকা, রন্ধন থেকে প্রকাশনা ও প্রত্নতত্ত্ব পর্যন্ত প্রায় প্রতিটি ক্ষেত্রে বাঙালি বৌদ্ধ ভিক্ষু, পণ্ডিত, শিল্পী ও গৃহীদের ছাপ আছে।",
+  "এই পাতাটি ২৬টি ক্ষেত্রে সেই অবদান সাজিয়েছে — ৮৩টি এন্ট্রি, প্রতিটিতে ব্যক্তি/গোষ্ঠী, কাল, স্থান, অবদানের তালিকা, প্রমাণ (ছবি/অডিও/ভিডিও/গ্রন্থ/নথি) এবং যাচাই-অবস্থা।",
+  "একটি সূত্র থেকে আরেকটি সূত্রে তথ্য মিলিয়ে দেখা হয়েছে — বাংলাপিডিয়া (বাংলা ও ইংরেজি), ইউনেস্কো, জাদুঘর-নথি, উইকিমিডিয়া কমন্সের লাইসেন্সযুক্ত ছবি, ইন্টারনেট আর্কাইভ ও ইউটিউবের শ্রবণ-দৃশ্য নমুনা। ব্যবহারকারীর দেওয়া DeepSeek শেয়ার-লিংককে “সূত্র” নয়, “দাবির তালিকা” হিসেবে ধরা হয়েছে — প্রতিটি দাবি আলাদা করে যাচাই করা।"
+ ],
+ "status_scale": [
+  {
+   "key": "verified",
+   "label": "✅ যাচাইকৃত",
+   "desc": "স্বতন্ত্র সূত্রে (বাংলাপিডিয়া/ইউনেস্কো/জাদুঘর-নথি) নিশ্চিত"
+  },
+  {
+   "key": "partial",
+   "label": "🟡 আংশিক",
+   "desc": "মূল দাবি নিশ্চিত, কিন্তু সংখ্যা/তারিখ/পরিচয়ে অনিশ্চয়তা আছে"
+  },
+  {
+   "key": "thin",
+   "label": "⚠️ প্রমাণ অপ্রতুল",
+   "desc": "শুধু লোকজ স্মৃতি বা একক দুর্বল সূত্র — অনুমান করা হয়নি"
+  },
+  {
+   "key": "rejected",
+   "label": "❌ প্রত্যাখ্যাত",
+   "desc": "সূত্র মেলেনি বা ভুল প্রমাণিত — এন্ট্রি রাখা হয়েছে সততার জন্য"
+  }
+ ],
+ "evidence_types": {
+  "image": "📷 ছবি",
+  "audio": "🎧 অডিও",
+  "video": "🎬 ভিডিও",
+  "book": "📖 গ্রন্থ",
+  "doc": "📜 নথি",
+  "object": "🏺 নিদর্শন",
+  "site": "🏛️ প্রত্নস্থল"
+ },
+ "method_note": "কোনো নাম, তারিখ, ফোন বা ছবি অনুমান করা হয়নি। যেখানে সূত্র পাতলা, সেখানে স্পষ্ট লেখা আছে “প্রমাণ অপ্রতুল”। কোনো প্রতিষ্ঠানের প্রকাশ্য ঠিকানা-ফোন না থাকলে খালি রাখা হয়েছে।",
+ "domains": [
+  {
+   "id": "darshan",
+   "icon": "🧠",
+   "name": "দর্শন ও তত্ত্বচর্চা",
+   "period": "৭ম–২০শ শতক",
+   "summary": "অষ্টম থেকে দ্বাদশ শতক পর্যন্ত বাংলার বৌদ্ধ বিহারগুলিই ছিল দার্শনিক তত্ত্বালোচনা ও সর্বপ্রকার বিদ্যাচর্চার কেন্দ্র। বাংলাপিডিয়ার ভাষায়— “প্রথম বাঙালি দার্শনিক হিসেবে যিনি সুপ্রসিদ্ধ, তিনি খ্রিস্টীয় সপ্তম-অষ্টম শতকের বৌদ্ধ আচার্য শান্তদেব।”",
+   "philosophy": "শূন্যতা (শূন্যসম্ভার), লক্ষণ-বিচার, প্রমাণশাস্ত্র ও সহজযান — এই চার ধারা বাংলার বৌদ্ধ পণ্ডিতদের হাতে পরিণত রূপ পায়। বজ্রযানের তত্ত্ব বাংলা থেকে তিব্বতে যায়, আর সহজিয়ার ভাষা বাংলার মাটিতেই জন্ম নেয়।",
+   "entries": [
+    {
+     "id": "c-shantideva",
+     "name": "শান্তিদেব (শান্তিদেব আচার্য)",
+     "kind": "person",
+     "role": "বৌদ্ধ আচার্য ও দার্শনিক",
+     "era": "৭ম–৮ম শতক",
+     "place": "বঙ্গ — জন্মস্থান বিতর্কিত",
+     "claims": [
+      "বাংলাপিডিয়া তাঁকে বাংলার প্রথম সুপ্রসিদ্ধ দার্শনিক বলে উল্লেখ করে।",
+      "তাঁর তত্ত্ব বাংলা, তিব্বত ও চীন পর্যন্ত প্রভাব ফেলেছে; তিব্বতীয় সংঘে তাঁর “বোধিচর্যাবতার” আজও পাঠ্য।"
+     ],
+     "works": [
+      "শ্রীগুহ্যসমাজ-মহাযোগ-তন্ত্রবলিবিধি",
+      "সহজগীতি",
+      "চিত্তচৈতন্য-শমনোপায়",
+      "বোধিচর্যাবতার (সর্বজনস্বীকৃত আরোপণ — বাংলাপিডিয়ার তালিকায় নেই)"
+     ],
+     "status": "partial",
+     "statusNote": "বাংলাপিডিয়ার তালিকায় তিনটি গ্রন্থ; বোধিচর্যাবতার তাঁর নামেই প্রচলিত হলেও বাংলাপিডিয়া সেটি উল্লেখ করেনি — দুটোই দেখানো হয়েছে। জন্মভূমি সৌরাষ্ট্র বলে তিব্বতীয় সূত্রে উল্লেখ থাকায় “বাঙালি” পরিচয় নিয়ে বিতর্ক আছে।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — দর্শন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8"
+      },
+      {
+       "label": "Banglapedia (en) — Philosophy",
+       "url": "https://en.banglapedia.org/index.php?title=Philosophy"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "চর্যাপদ পুঁথির পৃষ্ঠা (বৌদ্ধ সিদ্ধাচার্য-যুগের সমকালীন নিদর্শন)",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%3B_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript%2C_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "সহজযান ধারার দৃশ্যমান নথি",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE;_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript,_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg",
+       "credit": "Mohmoni"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-shantarakshita",
+     "name": "শান্তরক্ষিত",
+     "kind": "person",
+     "role": "বজ্রযানী আচার্য ও নৈয়ায়িক",
+     "era": "৮ম শতক",
+     "place": "বঙ্গ–নালন্দা",
+     "claims": [
+      "বজ্রযানী বৌদ্ধ আচার্যদের মধ্যে অন্যতম প্রধান নৈয়ায়িক।",
+      "তাঁর তিনটি তান্ত্রিক গ্রন্থের কথা জানা যায়; মূল গ্রন্থগুলো এখন দুর্লভ।"
+     ],
+     "works": [
+      "তান্ত্রিক গ্রন্থত্রয় (নাম-বিবরণ বাংলাপিডিয়ায় অসম্পূর্ণ)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (দর্শন) শান্তরক্ষিতকে নৈয়ায়িক ও তিন তান্ত্রিক গ্রন্থের রচয়িতা হিসেবে নিশ্চিত করে।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — দর্শন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8"
+      },
+      {
+       "label": "Banglapedia (en) — Philosophy",
+       "url": "https://en.banglapedia.org/index.php?title=Philosophy"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া “দর্শন” নিবন্ধ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-silabhadra",
+     "name": "শীলভদ্র",
+     "kind": "monk",
+     "role": "নালন্দা মহাবিহারের অধ্যক্ষ",
+     "era": "৬ষ্ঠ–৭ম শতক",
+     "place": "নালন্দা (বঙ্গ-সংযোগ)",
+     "claims": [
+      "নালন্দার বিশিষ্ট পণ্ডিত ও বৌদ্ধ দর্শনের অন্যতম প্রধান শিক্ষক।",
+      "চীনা পরিব্রাজক হিউয়েন সাঙ তাঁর শিষ্যত্ব গ্রহণ করেন।"
+     ],
+     "works": [
+      "নালন্দার দর্শন-পাঠক্রম ও সংঘ-শৃঙ্খলা পরিচালনা"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়ার শীলভদ্র নিবন্ধ ও দর্শন নিবন্ধ — দুই জায়গাতেই নিশ্চিত। “বাঙালি” পরিচয় পরোক্ষ (বঙ্গ-নালন্দা যোগসূত্র)।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — শীলভদ্র",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A7%80%E0%A6%B2%E0%A6%AD%E0%A6%A6%E0%A7%8D%E0%A6%B0"
+      },
+      {
+       "label": "বাংলাপিডিয়া — দর্শন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — শীলভদ্র",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A7%80%E0%A6%B2%E0%A6%AD%E0%A6%A6%E0%A7%8D%E0%A6%B0",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-atisa",
+     "name": "অতীশ দীপঙ্কর শ্রীজ্ঞান",
+     "kind": "monk",
+     "role": "ধর্মগুরু, দার্শনিক ও অনুবাদক",
+     "era": "৯৮০–১০৫৩ খ্রিস্টাব্দ",
+     "place": "বিক্রমপুর (বর্তমান মুন্সিগঞ্জ)",
+     "claims": [
+      "বিক্রমপুরের সন্তান; সংস্কৃত ও তিব্বতিতে শতাধিক গ্রন্থ রচনা ও অনুবাদ করেন।",
+      "তিব্বতে বৌদ্ধধর্ম পুনর্জীবিত করতে দীর্ঘকাল ধর্মপ্রচার করেন; সোমপুর মহাবিহারে বসে “মাধ্যমক রত্নপ্রদীপ” তিব্বতিতে অনুবাদ করেন।"
+     ],
+     "works": [
+      "বোধিপথপ্রদীপ",
+      "মাধ্যমক রত্নপ্রদীপ (তিব্বতিতে অনুবাদ)",
+      "চর্যাসংগ্রহ-সংক্রান্ত রচনা"
+     ],
+     "status": "verified",
+     "statusNote": "তিব্বতে অবস্থানের মেয়াদ নিয়ে সূত্রে ভিন্নতা (বাংলাপিডিয়া: দীর্ঘকাল; প্রচলিত বিবরণে ১৩ বছর) — সংখ্যাটি একক সূত্রে নিশ্চিত নয় বলে আলাদা করে বলা হলো।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — দর্শন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8"
+      },
+      {
+       "label": "বাংলাপিডিয়া — শ্রীজ্ঞান অতীশ দীপঙ্কর",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A7%8D%E0%A6%B0%E0%A7%80%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%A8%20%E0%A6%85%E0%A6%A4%E0%A7%80%E0%A6%B6%20%E0%A6%A6%E0%A7%80%E0%A6%AA%E0%A6%99%E0%A7%8D%E0%A6%95%E0%A6%B0"
+      },
+      {
+       "label": "বাংলাপিডিয়া — সোমপুর মহাবিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0%20%E0%A6%AE%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "Internet Archive — Atisha’s “Lamp for the Path” শ্রবণ-বক্তৃতা (২০০৩)",
+       "url": "https://archive.org/details/AtishasLampForThePath-Weeks1-4-November2003"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "অতীশ দীপঙ্করের চিত্র",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Atisha.jpg/1280px-Atisha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "ঐতিহাসিক চিত্রণ (পাবলিক ডোমেইন)",
+       "license": "Public domain",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Atisha.jpg"
+      },
+      {
+       "type": "audio",
+       "label": "“Lamp for the Path” — অতীশের বোধিপথপ্রদীপ নিয়ে শ্রবণ-বক্তৃতা",
+       "url": "https://archive.org/details/AtishasLampForThePath-Weeks1-4-November2003",
+       "note": "ইংরেজিতে, ২০০৩"
+      },
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — অতীশ দীপঙ্কর",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A7%8D%E0%A6%B0%E0%A7%80%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%A8%20%E0%A6%85%E0%A6%A4%E0%A7%80%E0%A6%B6%20%E0%A6%A6%E0%A7%80%E0%A6%AA%E0%A6%99%E0%A7%8D%E0%A6%95%E0%A6%B0",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-gaudapada",
+     "name": "গৌড়পাদ",
+     "kind": "person",
+     "role": "দার্শনিক",
+     "era": "৬ষ্ঠ–৭ম শতক (মতান্তর ৮ম)",
+     "place": "গৌড় (বঙ্গ)",
+     "claims": [
+      "বাংলাপিডিয়া লিখছে — গৌড়পাদের অধ্যাত্মচিন্তা ও দার্শনিক মতবাদ বাংলা থেকে সর্বভারতীয় খ্যাতি পায়।",
+      "তাঁর মাণ্ডূক্যকারিকা পরবর্তী বেদান্ত-ধারায় যুগান্তকারী।"
+     ],
+     "works": [
+      "মাণ্ডূক্যকারিকা",
+      "আগমশাস্ত্র-সংক্রান্ত রচনা"
+     ],
+     "status": "partial",
+     "statusNote": "তিনি বৌদ্ধ ভিক্ষু ছিলেন না — বৌদ্ধ দর্শনের সঙ্গে নিকট সম্পর্কযুক্ত বেদান্ত-চিন্তক। তাই “বৌদ্ধ অবদান” হিসেবে গণ্য করা যায় আংশিকভাবেই; দাবিটি স্পষ্ট করে বলা হলো।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — গৌড়পাদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A7%8C%E0%A6%A1%E0%A6%BC%E0%A6%AA%E0%A6%BE%E0%A6%A6"
+      },
+      {
+       "label": "বাংলাপিডিয়া — দর্শন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — গৌড়পাদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A7%8C%E0%A6%A1%E0%A6%BC%E0%A6%AA%E0%A6%BE%E0%A6%A6",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-gauda-purnananda",
+     "name": "গৌড় পূর্ণানন্দ",
+     "kind": "person",
+     "role": "দার্শনিক ও তর্কশাস্ত্রবিদ",
+     "era": "১৪শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "শঙ্করের মায়াবাদ খণ্ডন করে গ্রন্থ রচনা করেন।",
+      "বাংলাপিডিয়া তাঁর রচনায় “আধুনিক বস্তুবাদী মনোবৃত্তির পূর্বাভাস” দেখে।"
+     ],
+     "works": [
+      "তত্ত্বমুক্তাবলী",
+      "মায়াবাদ-শতদূষণী"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়ার দর্শন নিবন্ধে সরাসরি উল্লিখিত; স্বতন্ত্র গবেষণাপত্র সমর্থন করে।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — দর্শন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া “দর্শন” — গৌড় পূর্ণানন্দ প্রসঙ্গ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-ramchandra-barua",
+     "name": "রামচন্দ্র বড়ুয়া",
+     "kind": "lay",
+     "role": "গৃহী পণ্ডিত ও লেখক",
+     "era": "১৮৪৭–১৯২২",
+     "place": "চট্টগ্রাম",
+     "claims": [
+      "বাংলা ভাষায় বৌদ্ধ দর্শন ও অভিধর্মচর্চার পথিকৃৎ — বাংলাপিডিয়া তাঁর চারটি প্রধান গ্রন্থের নাম দেয়।",
+      "পালি-বাংলা অনুবাদ ও পাঠ্যবই রচনায় অগ্রণী।"
+     ],
+     "works": [
+      "শ্রমণকর্তব্য",
+      "অভিধর্মার্থসংগ্রহ",
+      "নির্বাণ দর্শন",
+      "মহাসতিপট্ঠান সুত্ত"
+     ],
+     "status": "partial",
+     "statusNote": "বাংলাপিডিয়ায় গ্রন্থের প্রকাশকাল (১৯৩১, ১৯৪১, ১৯৪২) লেখকের মৃত্যু-সনের (১৯২২) পরে দেখানো হয়েছে — তারিখের অসঙ্গতি আছে, তাই কাল অনিশ্চিত হিসেবে চিহ্নিত।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি (বাঙালি পণ্ডিতদের তালিকা)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": "king-lay-6"
+    },
+    {
+     "id": "c-benimadhab",
+     "name": "বেণীমাধব বড়ুয়া",
+     "kind": "lay",
+     "role": "পণ্ডিত, অধ্যাপক, গবেষক",
+     "era": "১৮৮৮–১৯৪৮",
+     "place": "চট্টগ্রাম → কলকাতা",
+     "claims": [
+      "“Pre-Buddhistic Indian Philosophy” (১৯২১) ও “Asoka and His Inscriptions” (১৯৪৬) বিশ্ববিদ্যালয়ে পাঠ্য হয়ে ওঠে।",
+      "কলকাতা বিশ্ববিদ্যালয়ে পালি অধ্যাপনা এবং ধর্মাঙ্কুর বিহারে “নালন্দা বিদ্যাভবন” পালি টোল স্থাপনে ভূমিকা।"
+     ],
+     "works": [
+      "Pre-Buddhistic Indian Philosophy (১৯২১)",
+      "Asoka and His Inscriptions (১৯৪৬)",
+      "মজ্ঝিমনিকায়ের বঙ্গানুবাদ (১৯৪০)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া ও একাধিক বিশ্ববিদ্যালয়-গ্রন্থসূত্রে নিশ্চিত; প্রতিকৃতি নিশ্চিতভাবে তাঁর।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Barua, Benimadhab",
+       "url": "https://en.banglapedia.org/index.php?title=Barua%2C%20Benimadhab"
+      },
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "বেণীমাধব বড়ুয়ার প্রতিকৃতি",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/B.M.Barua.jpg/1280px-B.M.Barua.jpg",
+       "note": "একমাত্র নিশ্চিত প্রতিকৃতি (পাবলিক ডোমেইন)",
+       "license": "Public domain"
+      }
+     ],
+     "kingRef": "king-lay-5"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "sahitya",
+   "icon": "📚",
+   "name": "সাহিত্য, কাব্য ও অনুবাদ",
+   "period": "১০ম–২০শ শতক",
+   "summary": "বাংলা ভাষার প্রথম নিদর্শনই বৌদ্ধদের হাতে লেখা — চর্যাপদ। তারপর পালি-বাংলা অনুবাদ, বৌদ্ধ কাব্য ও আধুনিক গবেষণা — তিন ধারাতেই বাঙালি বৌদ্ধদের অবদান দীর্ঘ।",
+   "philosophy": "সহজিয়ার রহস্যময় ভাষা বাংলা কাব্যের প্রথম ভঙ্গি তৈরি করে; “দোহা” ও “চর্যা”র রূপকল্প পরে বাউল-মারফতি গানে ফিরে আসে।",
+   "entries": [
+    {
+     "id": "c-charyapada",
+     "name": "চর্যাপদ (বৌদ্ধগান ও দোহা)",
+     "kind": "group",
+     "role": "২৩ জন সিদ্ধাচার্য-পদকর্তা",
+     "era": "৯ম–১২শ শতক (রচনা), ১৯০৭ (আবিষ্কার), ১৯১৬ (প্রকাশ)",
+     "place": "বঙ্গ, উড়িষ্যা, বিহার, আসামের সীমান্ত-অঞ্চল",
+     "claims": [
+      "বাংলা ভাষা ও সাহিত্যের আদি নিদর্শন; হরপ্রসাদ শাস্ত্রী ১৯০৭ সালে নেপালের রাজদরবার-গ্রন্থাগার থেকে পুঁথি পান, ১৯১৬ সালে প্রকাশ করেন।",
+      "৪৭টি পদ, ২৩ জন পদকর্তা — সরহপা, শবরপা, লুইপা, ডোম্বীপা, ভুসুকুপা, কাহ্ণপা, কুক্কুরীপা, মীনপা, আর্যদেব, ঢেণ্ঢনপা প্রমুখ।",
+      "প্রতিটি পদের শুরুতে রাগ-তাল ও ধ্রুবের উল্লেখ — অর্থাৎ এগুলো গাওয়া হতো; প্রাচীন বাংলা গানেরও নিদর্শন।"
+     ],
+     "works": [
+      "চর্যাশ্চর্যবিনিশ্চয় (মূল পুঁথি)",
+      "হাজার বছরের পুরাণ বাঙ্গালা ভাষায় বৌদ্ধগান ও দোহা (সম্পা. হরপ্রসাদ শাস্ত্রী, ১৯১৬)"
+     ],
+     "status": "verified",
+     "statusNote": "চর্যাপদের ভাষা অবিমিশ্র বাংলা নয় — অসমিয়া ও ওড়িয়াও দাবি করে; তবে “বঙ্গাল দেশ”, “পঁউয়া খাল” উল্লেখে বাঙালির দাবি অগ্রগণ্য (বাংলাপিডিয়া)।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      },
+      {
+       "label": "ইউটিউব — চর্যাপদ গান “কাআ তরুবর পঞ্চবিডাল” (লুইপাদ)",
+       "url": "https://www.youtube.com/watch?v=Ka39I-A3Kbk"
+      },
+      {
+       "label": "ইউটিউব — “চর্যাপদ: বাংলা সাহিত্যের প্রাচীনতম নিদর্শন”",
+       "url": "https://www.youtube.com/watch?v=Yx7M7dmkwyo"
+      },
+      {
+       "label": "Internet Archive — Les chants mystiques de Kanha et de Saraha (১৯২৮)",
+       "url": "https://archive.org/details/leschantsmystiques"
+      },
+      {
+       "label": "রকমারি — চর্যাপদ (হরপ্রসাদ শাস্ত্রী)",
+       "url": "https://www.rokomari.com/book/168003/chorzapod-bangla-sahitter-prachintom-nidorshon"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "চর্যাপদ পুঁথির ৩৯ নং পৃষ্ঠা",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%3B_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript%2C_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "আসল পুঁথির পৃষ্ঠা",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE;_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript,_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg",
+       "credit": "Mohmoni"
+      },
+      {
+       "type": "audio",
+       "label": "চর্যাপদ গান — “কাআ তরুবর পঞ্চবিডাল” (লুইপাদ)",
+       "url": "https://www.youtube.com/watch?v=Ka39I-A3Kbk",
+       "note": "ইউটিউবে শোনা যায়"
+      },
+      {
+       "type": "video",
+       "label": "চর্যাপদ: বাংলা সাহিত্যের প্রাচীনতম নিদর্শন",
+       "url": "https://www.youtube.com/watch?v=Yx7M7dmkwyo",
+       "note": "বাংলা তথ্যচিত্রধর্মী ভিডিও"
+      },
+      {
+       "type": "book",
+       "label": "Les chants mystiques de Kanha et de Saraha (১৯২৮)",
+       "url": "https://archive.org/details/leschantsmystiques",
+       "note": "ফরাসি অনুবাদ-সংস্করণ, আর্কাইভে পূর্ণপাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-sarbananda",
+     "name": "সর্বানন্দ বড়ুয়া",
+     "kind": "lay",
+     "role": "কবি, সংকীর্তন-রচয়িতা, সম্পাদক",
+     "era": "১৮৬৬–১৯০৮",
+     "place": "চট্টগ্রাম",
+     "claims": [
+      "এডুইন আর্নল্ডের “The Light of Asia”-এর ছাঁদে “জগজ্জ্যোতি” কাব্য রচনা করেন।",
+      "অনেক বৌদ্ধ সংকীর্তন ও গান লেখেন এবং “বৌদ্ধ পত্রিকা” মাসিক সম্পাদনা করেন।"
+     ],
+     "works": [
+      "জগজ্জ্যোতি (কাব্য)",
+      "শ্রীশ্রীবুদ্ধচরিতামৃত",
+      "ঋষিসন্দর্শন"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়ার পালি নিবন্ধে জীবনকাল ও গ্রন্থতালিকা সরবরাহ করা হয়েছে।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": "সর্বানন্দ বড়ুয়া প্রসঙ্গ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-dharmaraj",
+     "name": "পণ্ডিত ধর্মরাজ বড়ুয়া",
+     "kind": "lay",
+     "role": "পালি পণ্ডিত ও অনুবাদক",
+     "era": "১৮৬০–১৮৯৪",
+     "place": "চট্টগ্রাম",
+     "claims": [
+      "খুদ্দক নিকায়ের সূত্রনিপাতের সূত্রগুলো সরল বাংলা পদ্যে অনুবাদ করে ১৮৮৭ সালে প্রকাশ করেন।",
+      "“হস্তসার” গ্রন্থটি সমকালে খুবই জনপ্রিয় ছিল।"
+     ],
+     "works": [
+      "সূত্রনিপাতের পদ্যানুবাদ (১৮৮৭)",
+      "হস্তসার (১–৩ ভাগ)",
+      "ধর্মপুরাবৃত্ত",
+      "সিগালোবাদসূত্র",
+      "শ্যামাবতী",
+      "জ্ঞানসোপান",
+      "সত্য সার",
+      "মাতৃদেবী"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (পালি) — সঠিক জীবনকাল ও গ্রন্থতালিকা।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "book",
+       "label": "বাংলাপিডিয়া — পালি নিবন্ধে গ্রন্থতালিকা",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": "নথি"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-navaraja",
+     "name": "সাধু নবরাজ বড়ুয়া",
+     "kind": "lay",
+     "role": "লেখক ও ব্যাকরণকার",
+     "era": "১৮৬৬–১৮৯৬",
+     "place": "চট্টগ্রাম",
+     "claims": [
+      "বাংলা ভাষায় পালি ব্যাকরণ রচনা করেন।"
+     ],
+     "works": [
+      "বাংলা পালি ব্যাকরণ",
+      "বৌদ্ধালঙ্কার",
+      "নীতিরত্ন",
+      "প্রাথমিক বৌদ্ধশিক্ষা",
+      "অভিধানপ্পদীপিকা",
+      "বুদ্ধপরিচয়"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (পালি)।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-phulchandra",
+     "name": "ফুলচন্দ্র বড়ুয়া",
+     "kind": "lay",
+     "role": "লেখক",
+     "era": "১৯শ শতকের মধ্যভাগ",
+     "place": "চট্টগ্রাম অঞ্চল",
+     "claims": [
+      "“পাদিমুখ” বাংলা ভাষায় রচিত পালিবিষয়ক প্রথম গ্রন্থ বলে অনেকে মত দেন (মতান্তরে মঘা খমুজা প্রথম)।"
+     ],
+     "works": [
+      "পাদিমুখ",
+      "বৌদ্ধরঞ্জিকা (পদ্য, পালি ধাতুবংশ অবলম্বনে)",
+      "বিসন্দর জাতক"
+     ],
+     "status": "partial",
+     "statusNote": "“প্রথম বই” দাবিটি বিতর্কিত — বাংলাপিডিয়াই দুই মতের কথা বলে; তাই দুই মতই লেখা হলো।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-rabindrabijay",
+     "name": "রবীন্দ্র বিজয় বড়ুয়া",
+     "kind": "lay",
+     "role": "পালি পণ্ডিত ও অধ্যাপক",
+     "era": "১৯৩৩–১৯৯০",
+     "place": "ঢাকা",
+     "claims": [
+      "১৯৬২ সালে ঢাকা বিশ্ববিদ্যালয়ে যোগ দেন; ১৯৭২ সালে স্বতন্ত্র সংস্কৃত ও পালি বিভাগ চালু হলে সেখানে যুক্ত হন।",
+      "ঢাবিতে পালিতে স্নাতক সম্মান ও স্নাতকোত্তর পাঠ্যক্রম গড়ে তোলায় মূল ভূমিকা।"
+     ],
+     "works": [
+      "পালি সাহিত্যের ইতিহাস (২ খণ্ড, ১৯৮০ ও ১৯৮৮)",
+      "মধ্যভারতীয় আর্যভাষা সংকলন (১৯৬৬)",
+      "কথায় ধম্মপদ (১৯৬৮)",
+      "থেরবাদ সংঘ (১৯৭৮)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (পালি) — বিস্তারিত জীবনী ও গ্রন্থতালিকা।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-ishanchandra",
+     "name": "ঈশানচন্দ্র ঘোষ",
+     "kind": "lay",
+     "role": "অনুবাদক",
+     "era": "১৯শ–২০শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "ত্রিপিটকের জাতকগুলো বাংলায় অনুবাদ করেন (১৯২৯) — বাংলাভাষী পাঠকের কাছে জাতক পৌঁছানোর প্রথম বড় উদ্যোগ।"
+     ],
+     "works": [
+      "জাতক-বাংলা অনুবাদ (১৯২৯)"
+     ],
+     "status": "partial",
+     "statusNote": "বৌদ্ধ নন — তবু বৌদ্ধ শাস্ত্র বাংলায় পৌঁছানোয় তাঁর ভূমিকা অনস্বীকার্য; তাই “সহযোগী গৃহী” হিসেবে রাখা হলো।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "book",
+       "label": "বাংলাপিডিয়া — পালি (ত্রিপিটক অনুবাদের ইতিহাস)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "shikkha",
+   "icon": "🎓",
+   "name": "শিক্ষার প্রসার ও পালি চর্চা",
+   "period": "৭ম–২০শ শতক",
+   "summary": "বাংলার বৌদ্ধ বিহারগুলো ছিল আন্তর্জাতিক বিশ্ববিদ্যালয় — সোমপুর, শালবন, জগদ্দল, বিক্রমশিলা। আধুনিক যুগে সেই ধারা ফিরে আসে পালি টোল, কলেজ-বিশ্ববিদ্যালয়ের পালি বিভাগ ও ত্রিপিটক অনুবাদের মধ্য দিয়ে।",
+   "philosophy": "বুদ্ধের “সব্বে সত্তা সুখিত হোন্তু” ও “অবিবাদ-পরম সুখ” শিক্ষা — সংঘের পাঠক্রমে তর্ক, স্মৃতি ও নৈতিক শৃঙ্খলা একসাথে শেখানো হতো।",
+   "entries": [
+    {
+     "id": "c-pali-tol-1885",
+     "name": "পাহাড়তলী মহামুনি পালি টোল (১৮৮৫)",
+     "kind": "group",
+     "role": "প্রথম বাংলা পালি টোল",
+     "era": "১৮৮৫",
+     "place": "পাহাড়তলী, চট্টগ্রাম",
+     "claims": [
+      "আচার্য পুন্নাচার (চন্দ্রমোহন) ১৮৮৫ সালে জমিদার হরগোবিন্দ মুৎসুদ্দীর অর্থানুকূল্যে মহামুনিতে বাংলার প্রথম পালি টোল স্থাপন করেন।",
+      "১৯০২ সালে দ্বিতীয় পালি টোল স্থাপিত হয় সারানন্দ নামের সিংহলি ভিক্ষুর উদ্যোগে; পরে রাজানগর, সাতবাড়িয়া, উনাইনপুরা, মির্জাপুর গৌতমাশ্রমেও টোল হয়।"
+     ],
+     "works": [
+      "পালি টোল (মহামুনি, ১৮৮৫)",
+      "পালি টোল (১৯০২)",
+      "পরে আরও পাঁচ-ছয়টি টোল"
+     ],
+     "status": "verified",
+     "statusNote": "পৃষ্ঠপোষকের নাম হরগোবিন্দ মুৎসুদ্দী — রাউন্ড ৯-এ যোগ করা মুৎসুদ্দী পরিবারের সঙ্গে সরাসরি যোগ। বাংলাপিডিয়ার পালি নিবন্ধই মূল সূত্র।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      },
+      {
+       "label": "এই সাইট — রাজাদের প্রোফাইল",
+       "url": "kings.html"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি (টোল স্থাপনের বিবরণ)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": "king-zamindar-3"
+    },
+    {
+     "id": "c-pali-college",
+     "name": "কলেজ-বিশ্ববিদ্যালয়ে পালি",
+     "kind": "group",
+     "role": "প্রাতিষ্ঠানিক ধারা",
+     "era": "১৮৯৯–১৯৬৮",
+     "place": "কলকাতা → ঢাকা → রাজশাহী → চট্টগ্রাম",
+     "claims": [
+      "১৮৯৯ সালে কলকাতা বিশ্ববিদ্যালয়ে পালি বিভাগ খোলে; বেণীমাধব বড়ুয়াসহ এক ঝাঁক বাঙালি পণ্ডিত সেখানে অধ্যাপনা করেন।",
+      "১৯০৮ সালে চট্টগ্রাম কলেজিয়েট স্কুলে পালি পড়ানো শুরু হয় — ধর্মবংশ মহাস্থবির শিক্ষক নিযুক্ত হন।",
+      "পালি শিক্ষা ঢাকা (১৯২১), রাজশাহী (১৯৫৫) ও চট্টগ্রাম বিশ্ববিদ্যালয়ে (১৯৬৮) বিস্তৃত হয়।"
+     ],
+     "works": [
+      "কলকাতা বিশ্ববিদ্যালয় পালি বিভাগ (১৮৯৯)",
+      "চট্টগ্রাম কলেজিয়েট স্কুলে পালি (১৯০৮)",
+      "ঢাকা (১৯২১), রাজশাহী (১৯৫৫), চট্টগ্রাম বিশ্ববিদ্যালয় (১৯৬৮)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়ার পালি নিবন্ধ — তারিখগুলো একই উৎসে ধারাবাহিকভাবে দেওয়া।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": "king-monk-10"
+    },
+    {
+     "id": "c-tripitaka-fund",
+     "name": "ত্রিপিটক প্রকাশনা ফান্ড ও অনুবাদ",
+     "kind": "group",
+     "role": "প্রকাশনা-উদ্যোগ",
+     "era": "১৯২৯–১৯৪০",
+     "place": "চট্টগ্রাম ও রেঙ্গুন",
+     "claims": [
+      "প্রজ্ঞানন্দ মহাস্থবিরের অনূদিত বিনয়পিটকের “মহাবগ্গ” (১৯৩৭) ও বেণীমাধবের “মধ্যম নিকায়” প্রথম খণ্ড (১৯৪০) এই ফান্ডের পৃষ্ঠপোষকতায় প্রকাশিত হয়।",
+      "রেঙ্গুনে বুদ্ধিস্ট মিশন প্রেস (১৯৩০) প্রতিষ্ঠায় প্রজ্ঞালোক ও সুধাংশু বিমল বড়ুয়া অগ্রণী।"
+     ],
+     "works": [
+      "মহাবগ্গ বঙ্গানুবাদ (১৯৩৭)",
+      "মধ্যম নিকায় ১ম খণ্ড (১৯৪০)",
+      "জাতক বঙ্গানুবাদ (১৯২৯)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (পালি)।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "book",
+       "label": "বাংলাপিডিয়া — পালি (ত্রিপিটক অনুবাদ)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": ""
+      }
+     ],
+     "kingRef": "king-monk-11"
+    },
+    {
+     "id": "c-bihar-universities",
+     "name": "বিহার-বিশ্ববিদ্যালয়সমূহ",
+     "kind": "group",
+     "role": "শিক্ষাকেন্দ্র",
+     "era": "৮ম–১২শ শতক",
+     "place": "পাহাড়পুর, ময়নামতি, নওগাঁ, বিক্রমপুর",
+     "claims": [
+      "সোমপুরে অতীশ দীপঙ্কর কয়েক বছর ছিলেন; তাঁর দীক্ষাগুরু রত্নাকর শান্তি ছিলেন এ বিহারের স্থবির।",
+      "তিব্বতীয় সূত্র (তারনাথ, Pag-Sam-Jon-Zang) অনুযায়ী ৯ম–১২শ শতকে বহু তিব্বতীয় ভিক্ষু সোমপুরে পড়তে আসেন।"
+     ],
+     "works": [
+      "সোমপুর মহাবিহার",
+      "শালবন বিহার",
+      "জগদ্দল বিহার",
+      "বিক্রমশিলা (বঙ্গ-সংযোগ)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (সোমপুর, শালবন) ও তিব্বতীয় সূত্রের উদ্ধৃতি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — সোমপুর মহাবিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0%20%E0%A6%AE%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "UNESCO World Heritage — Ruins of the Buddhist Vihara at Paharpur (১৯৮৫)",
+       "url": "https://whc.unesco.org/en/list/322"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "সোমপুর মহাবিহার, পাহাড়পুর",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Paharpur_Buddhist_Monastery.jpg/1280px-Paharpur_Buddhist_Monastery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "ইউনেস্কো বিশ্ব ঐতিহ্য (১৯৮৫)",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Paharpur_Buddhist_Monastery.jpg",
+       "credit": "Hafizur Rahaman"
+      },
+      {
+       "type": "site",
+       "label": "ইউনেস্কো — Paharpur",
+       "url": "https://whc.unesco.org/en/list/322",
+       "note": "আন্তর্জাতিক স্বীকৃতি-নথি"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "prokashona",
+   "icon": "🖨️",
+   "name": "প্রকাশনা, পত্রিকা ও সাংবাদিকতা",
+   "period": "১৮৯১–বর্তমান",
+   "summary": "উনিশ শতকের শেষ থেকে বাঙালি বৌদ্ধরা নিজেরাই পত্রিকা, প্রকাশনী ও সংস্থা গড়ে তোলেন — ধর্মগ্রন্থ ছাপানো থেকে আধুনিক গবেষণা-সাহিত্য পর্যন্ত।",
+   "philosophy": "“বহুজনহিতায়, বহুজনসুখায়” — সংঘ-কল্যাণের ধর্মীয় দায় থেকেই প্রকাশনা-উদ্যোগের সূচনা।",
+   "entries": [
+    {
+     "id": "c-dharmankur",
+     "name": "বৌদ্ধধর্মাঙ্কুর সভা ও ধর্মাঙ্কুর বিহার",
+     "kind": "group",
+     "role": "প্রকাশনা ও শিক্ষা-সংস্থা",
+     "era": "১৮৯১",
+     "place": "কলকাতা",
+     "claims": [
+      "বাংলা ভাষায় বৌদ্ধ প্রকাশনার অন্যতম প্রধান প্ল্যাটফর্ম; বিহার থেকে পত্রিকা ও গ্রন্থ প্রকাশিত হতো।",
+      "কৃপাশরণ মহাস্থবির ছিলেন এর প্রতিষ্ঠাতা অধ্যক্ষ ও জগজ্জ্যোতি পত্রিকার সম্পাদক।"
+     ],
+     "works": [
+      "ধর্মাঙ্কুর বিহার (কলকাতা)",
+      "জগজ্জ্যোতি পত্রিকা",
+      "নালন্দা বিদ্যাভবন পালি টোল"
+     ],
+     "status": "verified",
+     "statusNote": "প্রতিষ্ঠাকাল নিয়ে সূত্রে ভিন্নতা (১৮৯১ বনাম ১৮৯২) — দুই তারিখই আগের রাউন্ডে পাশাপাশি দেখানো হয়েছে।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Bauddha Dharmankur Sabha",
+       "url": "https://en.banglapedia.org/index.php?title=Bauddha%20Dharmankur%20Sabha"
+      },
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "Banglapedia (en) — Bauddha Dharmankur Sabha",
+       "url": "https://en.banglapedia.org/index.php?title=Bauddha%20Dharmankur%20Sabha",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": "king-monk-9"
+    },
+    {
+     "id": "c-journals",
+     "name": "বৌদ্ধ পত্র-পত্রিকার ধারা",
+     "kind": "group",
+     "role": "সাংবাদিকতা",
+     "era": "১৮৯২–বর্তমান",
+     "place": "কলকাতা, চট্টগ্রাম, ঢাকা",
+     "claims": [
+      "বাংলাপিডিয়ার তালিকা অনুযায়ী প্রধান পত্রিকা: দি মহাবোধি (১৮৯২, কলকাতা), বৌদ্ধ পত্রিকা (১৯০৬, চট্টগ্রাম), জগজ্জ্যোতি (১৯০৮, কলকাতা), বৌদ্ধবন্ধু (১৯১১, চট্টগ্রাম), বুদ্ধিস্ট ইন্ডিয়া (১৯৩৪), মৈত্রীবাণী (ঢাকা)।"
+     ],
+     "works": [
+      "দি মহাবোধি (১৮৯২)",
+      "বৌদ্ধ পত্রিকা (১৯০৬)",
+      "জগজ্জ্যোতি (১৯০৮)",
+      "বৌদ্ধবন্ধু (১৯১১)",
+      "বুদ্ধিস্ট ইন্ডিয়া (১৯৩৪)",
+      "মৈত্রীবাণী (ঢাকা)"
+     ],
+     "status": "verified",
+     "statusNote": "একটি দাবি প্রত্যাখ্যাত: “জগজ্জ্যোতি ১৯৫৭ সালে প্রথম প্রকাশিত” — বাংলাপিডিয়া বলছে ১৯০৮ (কলকাতা)। নিচের “প্রত্যাখ্যাত দাবি” তালিকাও দেখুন।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি (পত্রিকার তালিকা)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-modern-press",
+     "name": "আধুনিক প্রকাশনা-সংস্থা",
+     "kind": "group",
+     "role": "প্রকাশনা",
+     "era": "১৯৯০–বর্তমান",
+     "place": "ঢাকা ও চট্টগ্রাম",
+     "claims": [
+      "বাংলাদেশ বৌদ্ধ কৃষ্টি প্রচার সংঘ, ন্যাশনাল বুদ্ধিস্ট ইয়ুথ ফেডারেশন ও বাংলাদেশ বৌদ্ধ সমিতির উদ্যোগে দুষ্প্রাপ্য ত্রিপিটক-অনুবাদ পুনর্মুদ্রিত হয় (তাইওয়ানের কর্পোরেট বডি অফ দ্য বুদ্ধ এডুকেশনাল ফাউন্ডেশনের পৃষ্ঠপোষকতায়)।",
+      "বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্ট বাংলায় ত্রিপিটক অনুবাদ প্রকাশের উদ্যোগ নেয়।"
+     ],
+     "works": [
+      "ত্রিপিটক অনুবাদ পুনর্মুদ্রণ",
+      "শান্তরক্ষিত মহাস্থবিরের পালি-বাংলা অভিধান"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (পালি) — সংস্থাগুলোর নাম ও ভূমিকা সরাসরি উল্লিখিত।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি (সম্প্রতিক প্রকাশনা)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "sthapotto",
+   "icon": "🏛️",
+   "name": "স্থাপত্য, প্রকৌশল ও নগর-পরিকল্পনা",
+   "period": "৭ম–১২শ শতক",
+   "summary": "পাল-চন্দ্র-দেব যুগের বাংলায় ইট ও পোড়ামাটির স্থাপত্যের স্বর্ণযুগ। ক্রুশাকার বিহার-পরিকল্পনা, পুরু প্রাচীর, জল-নিষ্কাশন ও স্নানাগার — প্রাচীন বাংলার প্রকৌশল-দক্ষতার প্রমাণ।",
+   "philosophy": "বিহার-স্থাপত্যে বৌদ্ধ সংঘের সাংঘিক জীবনযাত্রা প্রতিফলিত — কেন্দ্রীয় মণ্ডপে সমবেত উপাসনা, চার পাশে ভিক্ষু-আবাস, একটিমাত্র প্রবেশপথে নিরাপত্তা।",
+   "entries": [
+    {
+     "id": "c-somapura",
+     "name": "সোমপুর মহাবিহার (পাহাড়পুর)",
+     "kind": "group",
+     "role": "স্থাপত্য-কীর্তি",
+     "era": "আনু. ৭৮১–৮২১ খ্রি. (ধর্মপাল)",
+     "place": "পাহাড়পুর, নওগাঁ",
+     "claims": [
+      "পাল রাজা ধর্মপাল স্থাপন করেন; মাটির সিলে লেখা “শ্রী-সোমপুরে-শ্রী-ধর্মপালদেব-মহাবিহারিয়ার্য-ভিক্ষু-সংঘস্য”।",
+      "প্রথম মহীপালের (আনু. ৯৯৫–১০৪৩) আমলে সংস্কার হয়; ১৯৮৫ সালে ইউনেস্কো বিশ্ব ঐতিহ্য।"
+     ],
+     "works": [
+      "ক্রুশাকার বিহার-পরিকল্পনা (১৭৭টি কক্ষ)",
+      "কেন্দ্রীয় মন্দির ও পোড়ামাটির ফলক-বন্ধনী",
+      "বিহার-প্রাঙ্গণ ও স্নানাগার"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া ও ইউনেস্কো — দুই স্বতন্ত্র সূত্রে নিশ্চিত।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — সোমপুর মহাবিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0%20%E0%A6%AE%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "Banglapedia (en) — Somapura Mahavihara",
+       "url": "https://en.banglapedia.org/index.php?title=Somapura%20Mahavihara"
+      },
+      {
+       "label": "UNESCO World Heritage — Ruins of the Buddhist Vihara at Paharpur (১৯৮৫)",
+       "url": "https://whc.unesco.org/en/list/322"
+      },
+      {
+       "label": "Internet Archive — Somapura Mahavihara: foreign culture connection",
+       "url": "https://archive.org/details/foreign-culture-connection-somapura-mahavihara"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "সোমপুর মহাবিহার",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Paharpur_Buddhist_Monastery.jpg/1280px-Paharpur_Buddhist_Monastery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "মূল ধ্বংসাবশেষ",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Paharpur_Buddhist_Monastery.jpg",
+       "credit": "Hafizur Rahaman"
+      },
+      {
+       "type": "image",
+       "label": "পোড়ামাটির ফলক, পাহাড়পুর",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Terracotta_Plaques_%2827433726423%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+       "note": "বিহারের অলংকরণ-ফলক",
+       "license": "CC BY 2.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Terracotta_Plaques_(27433726423).jpg",
+       "credit": "David Stanley from Nanaimo, Canada"
+      },
+      {
+       "type": "site",
+       "label": "ইউনেস্কো নথি — Paharpur",
+       "url": "https://whc.unesco.org/en/list/322",
+       "note": "বিশ্ব ঐতিহ্য তালিকাভুক্তি"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-shalban",
+     "name": "শালবন বিহার",
+     "kind": "group",
+     "role": "স্থাপত্য-কীর্তি",
+     "era": "৭ম–৮ম শতক (শ্রী ভবদেব)",
+     "place": "কোটবাড়ি, লালমাই, কুমিল্লা",
+     "claims": [
+      "দেব বংশের চতুর্থ শাসক শ্রী ভবদেব আনু. সপ্তম শতকের শেষে বা অষ্টম শতকের শুরুতে এটি নির্মাণ করেন।",
+      "১৫৫টি কক্ষ, ৫ মিটার পুরু পেছনের দেয়াল, একটিমাত্র প্রবেশপথ ও দুটি প্রহরিকক্ষ — দুর্গের মতো নিরাপত্তা-ব্যবস্থা।",
+      "কক্ষের ভেতরে রান্নার পরিকল্পিত ব্যবস্থা ও নকশি ইটের পাদস্তম্ভ পাওয়া গেছে; ছিল বিরাট বারোয়ারি রন্ধনশালাও।"
+     ],
+     "works": [
+      "১৫৫ কক্ষের বিহার",
+      "ক্রুশাকার কেন্দ্রীয় মণ্ডপ",
+      "বারোয়ারি রন্ধনশালা ও কুলুঙ্গি"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (শালবন) ও (en) Mainamati — দুই জায়গায় একই তথ্য।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "কোটিলা মুড়া, ময়নামতি",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A7%A7.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+       "note": "লালমাই-ময়নামতির প্রত্নস্থল",
+       "license": "CC BY 3.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A7%A7.png",
+       "credit": "Sabilaenun"
+      },
+      {
+       "type": "image",
+       "label": "ময়নামতি জাদুঘর",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Mainamati_Museum_in_2022.02.jpg/1280px-Mainamati_Museum_in_2022.02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "প্রত্নবস্তুর সংগ্রহশালা",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Mainamati_Museum_in_2022.02.jpg",
+       "credit": "CAPTAIN RAJU"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-water-engineering",
+     "name": "জল-নিষ্কাশন ও স্বাস্থ্য-প্রকৌশল",
+     "kind": "group",
+     "role": "প্রকৌশল",
+     "era": "৮ম–১২শ শতক",
+     "place": "পাহাড়পুর, ময়নামতি",
+     "claims": [
+      "বিহার-প্রাঙ্গণে পানি নিষ্কাশনের নালা, স্নানাগার ও শৌচাগারের ব্যবস্থা ছিল — প্রাচীন বাংলার নগর-প্রকৌশলের প্রমাণ (বাংলাপিডিয়া, স্থাপত্য-অনুচ্ছেদ)।"
+     ],
+     "works": [
+      "নিষ্কাশন-নালা",
+      "স্নানাগার",
+      "শৌচাগার-ব্লক"
+     ],
+     "status": "partial",
+     "statusNote": "নির্দিষ্ট নকশা বা মাপের বিবরণ সীমিত; প্রমাণ মূলত খনন-প্রতিবেদনভিত্তিক। তাই “ব্যবস্থা ছিল” — এই পর্যন্তই নিশ্চিত।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Architecture",
+       "url": "https://en.banglapedia.org/index.php?title=Architecture"
+      },
+      {
+       "label": "বাংলাপিডিয়া — সোমপুর মহাবিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0%20%E0%A6%AE%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "Banglapedia (en) — Architecture",
+       "url": "https://en.banglapedia.org/index.php?title=Architecture",
+       "note": "স্থাপত্য-অনুচ্ছেদ"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "bhaskarjo",
+   "icon": "🗿",
+   "name": "ভাস্কর্য ও ধাতুশিল্প",
+   "period": "৬ষ্ঠ–১২শ শতক",
+   "summary": "পাল যুগের পাথর ও ব্রোঞ্জের বুদ্ধমূর্তি, পোড়ামাটির ফলক আর অষ্টধাতুর মূর্তি — বাংলার ভাস্কর্য ভারতশিল্পের ইতিহাসে নিজস্ব ঘরানা (“পাল-সেন শৈলী”) তৈরি করে।",
+   "philosophy": "মহাযান-বজ্রযানের দেবতত্ত্ব (তারা, পঞ্চিক, মঞ্জুশ্রী, অক্ষোভ্য) মূর্তির ভাষায় রূপ পায় — শিল্প এখানে সাধনারই অংশ।",
+   "entries": [
+    {
+     "id": "c-pala-sculpture",
+     "name": "পাল যুগের পাথর-ভাস্কর্য",
+     "kind": "group",
+     "role": "শিল্পী-গোষ্ঠী",
+     "era": "৮ম–১২শ শতক",
+     "place": "পাহাড়পুর, নালন্দা, ময়নামতি",
+     "claims": [
+      "পাহাড়পুরের বৌদ্ধ মন্দিরের ভিত্তিমুখে খোদিত পাথরের গভীর রিলিফ পাল ভাস্কর্যের প্রধান নিদর্শন।",
+      "নালন্দা ছিল পাল শিল্পের প্রধান কেন্দ্র — নবম শতক থেকে সমগ্র পাল যুগ ধরে পাথর ও ধাতুর অসংখ্য বৌদ্ধ মূর্তি সেখানে নির্মিত।"
+     ],
+     "works": [
+      "পাহাড়পুরের ভিত্তি-রিলিফ",
+      "কালো পাথরের বুদ্ধ ও বোধিসত্ত্ব মূর্তি",
+      "পঞ্চিকার ব্রোঞ্জ"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (ভাস্কর্য) — বিস্তারিত ধারা-বিভাজনসহ।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — ভাস্কর্য",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AD%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AF"
+      },
+      {
+       "label": "Banglapedia (en) — Sculpture",
+       "url": "https://en.banglapedia.org/index.php?title=Sculpture"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "সিংহাসনে উপবিষ্ট বুদ্ধ, বাংলা (ওয়াল্টার্স মিউজিয়াম)",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg/1280px-Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "পাল-যুগীয় ধাতুশিল্প",
+       "license": "Public domain",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg",
+       "credit": "Bangladeshi\n\nBase: Thai"
+      },
+      {
+       "type": "object",
+       "label": "অক্ষোভ্য ব্রোঞ্জ (ক্লিভল্যান্ড মিউজিয়াম, পাল-সেন শৈলী)",
+       "url": "https://archive.org/details/clevelandart-1970.10-akshobhya-the-buddha",
+       "note": "জাদুঘর-নথি"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-mainamati-bronze",
+     "name": "ময়নামতির ধাতুশিল্প",
+     "kind": "group",
+     "role": "ধাতুশিল্পী",
+     "era": "৭ম–১২শ শতক",
+     "place": "ময়নামতি, কুমিল্লা",
+     "claims": [
+      "ময়নামতি-দেবপর্বত এলাকা থেকে বহু বৌদ্ধ মঠ-স্তূপ এবং প্রচুর পোড়ামাটির ফলক, পাথর ও ব্রোঞ্জের বুদ্ধমূর্তি পাওয়া গেছে।",
+      "খননে ৮টি শিলালিপিযুক্ত তাম্রপট্ট, প্রায় ৪০০ স্বর্ণ ও রৌপ্য মুদ্রা এবং বহু ভাস্কর্য-নমুনা মিলেছে।"
+     ],
+     "works": [
+      "ব্রোঞ্জ ও পাথরের বুদ্ধমূর্তি",
+      "তাম্রপট্ট (৮টি)",
+      "স্বর্ণ-রৌপ্য মুদ্রা (আনু. ৪০০)"
+     ],
+     "status": "verified",
+     "statusNote": "Banglapedia (en) Mainamati — খনন-তথ্য সরাসরি।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati"
+      },
+      {
+       "label": "বাংলাপিডিয়া — ভাস্কর্য",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AD%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "ময়নামতি জাদুঘর",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Mainamati_Museum_in_2022.02.jpg/1280px-Mainamati_Museum_in_2022.02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "প্রত্নবস্তুর সংগ্রহ",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Mainamati_Museum_in_2022.02.jpg",
+       "credit": "CAPTAIN RAJU"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-terracotta",
+     "name": "পোড়ামাটির ফলক-শিল্প (টেরাকোটা)",
+     "kind": "group",
+     "role": "কারুশিল্পী",
+     "era": "৬ষ্ঠ শতক থেকে",
+     "place": "বাংলা ও বঙ্গ",
+     "claims": [
+      "বৌদ্ধ মন্দির-বিহারের বাইরের অলংকরণে পোড়ামাটির ফলক ব্যবহৃত হতো; ষষ্ঠ শতক থেকেই এ শিল্পের নিদর্শন মেলে।",
+      "পরে বাংলার মন্দির-স্থাপত্যে টেরাকোটা-বন্ধনী ধারাবাহিক শিল্পরূপে টিকে থাকে।"
+     ],
+     "works": [
+      "পাহাড়পুরের ফলক-বন্ধনী",
+      "ময়নামতির পোড়ামাটি ফলক",
+      "বাংলার মন্দির-টেরাকোটা ধারা"
+     ],
+     "status": "partial",
+     "statusNote": "ধারাবাহিকতা নিশ্চিত, তবে কোন ফলক কার হাতে তৈরি তার শিল্পী-নাম কোথাও নেই — ব্যক্তিনাম দেওয়া যায় না।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — ভাস্কর্য",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AD%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AF"
+      },
+      {
+       "label": "Banglapedia (en) — Architecture",
+       "url": "https://en.banglapedia.org/index.php?title=Architecture"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "পোড়ামাটির ফলক, পাহাড়পুর",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Terracotta_Plaques_%2827433726423%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+       "note": "বিহারের অলংকরণ",
+       "license": "CC BY 2.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Terracotta_Plaques_(27433726423).jpg",
+       "credit": "David Stanley from Nanaimo, Canada"
+      },
+      {
+       "type": "image",
+       "label": "বাংলার টেরাকোটা মন্দির (গঙ্গেশ্বর, বরানগর)",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Terracotta_Temples_of_Bengal_%2CThe_Gangeshwar_Temple_of_Baranagar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+       "note": "পরে টেরাকোটা-ধারার নিদর্শন",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Terracotta_Temples_of_Bengal_,The_Gangeshwar_Temple_of_Baranagar.jpg",
+       "credit": "SpeakingArch"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "chitrokola",
+   "icon": "🎨",
+   "name": "চিত্রকলা ও পাণ্ডুলিপি-অলংকরণ",
+   "period": "১০ম–১২শ শতক",
+   "summary": "বাংলার চিত্রকলার সর্বপ্রাচীন প্রামাণিক নিদর্শন পাল আমলের তালপাতার পুথি ও কাঠের প্রচ্ছদে আঁকা বৌদ্ধ অনুচিত্র — ভারতশিল্পের ইতিহাসে “পালচিত্র” নামে পরিচিত।",
+   "philosophy": "পুথিকে দৈবগুণ দেওয়ার উদ্দেশ্যেই বুদ্ধ ও দেবতাদের ক্ষুদ্র, সূক্ষ্ম চিত্র আঁকা হতো — শিল্প এখানে অর্চনার অঙ্গ।",
+   "entries": [
+    {
+     "id": "c-pala-painting",
+     "name": "পালচিত্র (পুথিচিত্র)",
+     "kind": "group",
+     "role": "চিত্রকর",
+     "era": "১০ম–১২শ শতক",
+     "place": "নালন্দা ও বঙ্গ",
+     "claims": [
+      "মহীপাল দেবের (৯৯৩–১০৪৩) সময়ে তালপাতায় অঙ্কিত নালন্দা মহাবিহারের “বৌদ্ধ-অনুচিত্র” বাংলার প্রাচীনতম চিত্রকর্মের নিদর্শন।",
+      "চিত্রগুলো আয়তনে ক্ষুদ্র হলেও অত্যন্ত সূক্ষ্ম — পুথি ও কাঠের প্রচ্ছদে আঁকা হতো।"
+     ],
+     "works": [
+      "পুথি-অনুচিত্র (তালপাতা)",
+      "কাঠের প্রচ্ছদ-চিত্র",
+      "প্রজ্ঞাপারমিতা-জাতীয় পাণ্ডুলিপির অলংকরণ"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (চিত্রকলা) — সরাসরি উদ্ধৃতি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চিত্রকলা",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%95%E0%A6%B2%E0%A6%BE"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "পাল যুগের পাণ্ডুলিপির পাতা (গণ্ডব্যহ সূত্র)",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Eastern_India%2C_Pala_period_-_Seven_Leaves_from_a_Manuscript_of_the_Gandavyuha-sutra_-_1955.49_-_Cleveland_Museum_of_Art.tif/lossy-page1-1280px-Eastern_India%2C_Pala_period_-_Seven_Leaves_from_a_Manuscript_of_the_Gandavyuha-sutra_-_1955.49_-_Cleveland_Museum_of_Art.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "পুথিচিত্রের নমুনা",
+       "license": "CC0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Eastern_India,_Pala_period_-_Seven_Leaves_from_a_Manuscript_of_the_Gandavyuha-sutra_-_1955.49_-_Cleveland_Museum_of_Art.tif",
+       "credit": "anonymous"
+      },
+      {
+       "type": "image",
+       "label": "একাদশ শতকের বৌদ্ধ পঞ্চরক্ষা পাণ্ডুলিপি",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/11th-century_Buddhist_Pancaraksa_manuscript_of_8th-century_original%2C_Pali_script%2C_text_on_spells%2C_benefits_and_goddess_rituals.jpg/1280px-11th-century_Buddhist_Pancaraksa_manuscript_of_8th-century_original%2C_Pali_script%2C_text_on_spells%2C_benefits_and_goddess_rituals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "তালপাতার পুথি",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:11th-century_Buddhist_Pancaraksa_manuscript_of_8th-century_original,_Pali_script,_text_on_spells,_benefits_and_goddess_rituals.jpg",
+       "credit": "Ms Sarah Welch"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-illustrated-pothi",
+     "name": "অলংকৃত পুথি ও প্রচ্ছদ-শিল্প",
+     "kind": "group",
+     "role": "কারুশিল্পী",
+     "era": "১১শ–১৩শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "পাঁচশতাধিক বছরের পুরোনো তালপাতার পুথিতে লেখা ও অলংকরণ — কাঠের প্রচ্ছদ (পট্টিকা) সহ সংরক্ষিত হয়েছে।"
+     ],
+     "works": [
+      "প্রজ্ঞাপারমিতা-জাতীয় পুথির ফোলিও",
+      "কাঠের প্রচ্ছদ"
+     ],
+     "status": "partial",
+     "statusNote": "নির্দিষ্ট শিল্পী-নাম অজানা; প্রমাণ বস্তুগত (পুথি) — ব্যক্তি নয়।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চিত্রকলা",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%95%E0%A6%B2%E0%A6%BE"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "পঞ্চবিংশতিসাহস্রিকা প্রজ্ঞাপারমিতার ফোলিও",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Folio_from_a_Buddhist_Manuscript_of_Pancavimsatisahasrika_Prajnaparamita_%28IA_mma_folio_from_a_buddhist_manuscript_of_pancavimsatisahasrika_prajnaparamita_74851%29.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "বৌদ্ধ পুথিচিত্র",
+       "license": "Public domain",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Folio_from_a_Buddhist_Manuscript_of_Pancavimsatisahasrika_Prajnaparamita_(IA_mma_folio_from_a_buddhist_manuscript_of_pancavimsatisahasrika_prajnaparamita_74851).jpg"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "songit",
+   "icon": "🎵",
+   "name": "সুর, সংগীত ও সংকীর্তন",
+   "period": "১০ম–২০শ শতক",
+   "summary": "চর্যাপদের প্রতিটি পদে রাগ-তাল ও ধ্রুবের উল্লেখ — অর্থাৎ বাংলা গানের ইতিহাস শুরুই বৌদ্ধ সাধন-সংগীত দিয়ে। পরে বৌদ্ধ সংকীর্তন, বুদ্ধ-গীতি ও আধুনিক কণ্ঠসংগীত সেই ধারা বহন করে।",
+   "philosophy": "সহজিয়ার গানে দেহ-সাধনার রূপক; বাউল, মারফতি ও যুগীগানের সুর-গঠন চর্যার ছাঁদেই গড়া (বাংলাপিডিয়া, দর্শন)।",
+   "entries": [
+    {
+     "id": "c-charya-song",
+     "name": "চর্যাগীতি (বৌদ্ধ সাধন-সংগীত)",
+     "kind": "group",
+     "role": "সিদ্ধাচার্য-সংগীতকার",
+     "era": "১০ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "প্রতিটি পদের শুরুতে রাগ-তাল ও প্রতি জোড়-পদে “ধ্রুব” শব্দের উল্লেখ — প্রমাণ করে এগুলো সুর করে গাওয়া হতো।",
+      "বাংলাপিডিয়া: চর্যার কবিরা রাগসংগীতে পারদর্শী ছিলেন এবং সাধন-সঙ্গীতে গুরু-রহস্যের ব্যবহারিক জ্ঞান ধারণ করেছিলেন।"
+     ],
+     "works": [
+      "৪৭টি চর্যাপদ (সুরারোপিত)",
+      "ধ্রুব-সংগীত রীতির প্রথম বাংলা নমুনা"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (চর্যাপদ) — রাগ-তাল-ধ্রুবের উল্লেখ সরাসরি উদ্ধৃত।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      },
+      {
+       "label": "ইউটিউব — চর্যাপদ গান “কাআ তরুবর পঞ্চবিডাল” (লুইপাদ)",
+       "url": "https://www.youtube.com/watch?v=Ka39I-A3Kbk"
+      },
+      {
+       "label": "Internet Archive — Les chants mystiques de Kanha et de Saraha (১৯২৮)",
+       "url": "https://archive.org/details/leschantsmystiques"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "audio",
+       "label": "চর্যাপদ গান — “কাআ তরুবর পঞ্চবিডাল”",
+       "url": "https://www.youtube.com/watch?v=Ka39I-A3Kbk",
+       "note": "শ্রবণযোগ্য নমুনা"
+      },
+      {
+       "type": "video",
+       "label": "চর্যাপদ বিষয়ক বাংলা ভিডিও",
+       "url": "https://www.youtube.com/watch?v=Yx7M7dmkwyo",
+       "note": "প্রেক্ষাপট"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-buddha-kirtan",
+     "name": "বৌদ্ধ সংকীর্তন ও বুদ্ধ-গীতি",
+     "kind": "group",
+     "role": "সংকীর্তনকার",
+     "era": "১৯শ–২০শ শতক",
+     "place": "চট্টগ্রাম",
+     "claims": [
+      "সর্বানন্দ বড়ুয়া “অনেক বৌদ্ধ সংকীর্তন ও গান” রচনা করেন (বাংলাপিডিয়া)।",
+      "কীর্তনের বাংলা ধারায় বৌদ্ধ বিষয়বস্তু যুক্ত হয় — বুদ্ধচরিত, বোধি ও সংঘের গুণগান।"
+     ],
+     "works": [
+      "বৌদ্ধ সংকীর্তন",
+      "জগজ্জ্যোতি কাব্যের গীতাংশ",
+      "বুদ্ধ-গীতি"
+     ],
+     "status": "partial",
+     "statusNote": "রচনার সংখ্যা ও নির্দিষ্ট নাম সূত্রে আলাদা করে পাওয়া যায় না; “অনেক” — এই পর্যন্তই নিশ্চিত।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — কীর্তন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%95%E0%A7%80%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%A8"
+      },
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — কীর্তন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%95%E0%A7%80%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%A8",
+       "note": "ধারা-পরিচিতি"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-baul-link",
+     "name": "সহজিয়া → বাউল/মারফতি ধারা",
+     "kind": "group",
+     "role": "ধারার ধারক",
+     "era": "১৪শ–২০শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "বাংলাপিডিয়া: সহজ সাধনার এসব গীতি থেকেই কালক্রমে বয়ে চলেছে বৈষ্ণব সহজিয়া গান, বৈষ্ণব ও শাক্ত পদাবলি এবং আউল-বাউল-মারফতি-মুর্শিদি গানের ধারা।"
+     ],
+     "works": [
+      "বাউল গান",
+      "মারফতি",
+      "যুগী/যোগী গান"
+     ],
+     "status": "partial",
+     "statusNote": "ধারার প্রভাব নিশ্চিত, কিন্তু “বাউল গান = বৌদ্ধ গান” — এমন সমীকরণ ভুল হবে। তাই রূপান্তর-সম্পর্ক হিসেবেই বলা হলো।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — বাউল",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A6%BE%E0%A6%89%E0%A6%B2"
+      },
+      {
+       "label": "বাংলাপিডিয়া — দর্শন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — বাউল",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A6%BE%E0%A6%89%E0%A6%B2",
+       "note": "ধারা-পরিচিতি"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "nritto",
+   "icon": "💃",
+   "name": "নৃত্য, নাট্য ও পরিবেশনা",
+   "period": "১০ম–২০শ শতক",
+   "summary": "বৌদ্ধ আচার-অনুষ্ঠানে নৃত্যের ব্যবহার ছিল — তবে বাংলার “চর্যা নৃত্য” নিয়ে প্রচারিত অনেক দাবি এখনো স্বাধীন গবেষণায় প্রমাণিত নয়। পার্বত্য বৌদ্ধ সমাজে নৃত্যের জীবন্ত ধারা অবশ্য আছে।",
+   "philosophy": "আচারনৃত্যে শরীরী ভঙ্গির মাধ্যমে আধ্যাত্মিক অভিব্যক্তি — বজ্রযানের মণ্ডল-কল্পনার সঙ্গে যুক্ত।",
+   "entries": [
+    {
+     "id": "c-charya-nritya",
+     "name": "চর্যা নৃত্য (দাবি)",
+     "kind": "group",
+     "role": "আচার-নৃত্য",
+     "era": "দাবি: সহস্রাব্দপ্রাচীন",
+     "place": "বঙ্গ / নেপাল",
+     "claims": [
+      "দাবি করা হয় — চর্যা নৃত্য বৌদ্ধ আচারনৃত্য, পঞ্চ বুদ্ধ প্রভৃতির প্রতিনিধিত্ব করে।",
+      "এ ধরনের “চর্যা নৃত্য” নেপালের নেওয়ার বৌদ্ধদের মধ্যে জীবিত; বাংলায় এর ধারাবাহিক প্রমাণ দুর্লভ।"
+     ],
+     "works": [
+      "চর্যা নৃত্যের আচারিক রূপ (দাবি)"
+     ],
+     "status": "thin",
+     "statusNote": "বাংলাদেশ/বঙ্গে চর্যা নৃত্যের ধারাবাহিক প্রমাণ পাওয়া যায়নি — নেপালি নেওয়ার ঐতিহ্যের সঙ্গে নাম-মিল থাকলেও আলাদা প্রমাণ দরকার। কোনো ব্যক্তি বা গোষ্ঠীর নাম জুড়ে দেওয়া হয়নি।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Dance",
+       "url": "https://en.banglapedia.org/index.php?title=Dance"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "Banglapedia (en) — Dance",
+       "url": "https://en.banglapedia.org/index.php?title=Dance",
+       "note": "নৃত্য-ধারার সাধারণ পরিচিতি"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-marma-soing",
+     "name": "মারমা সইং নৃত্য",
+     "kind": "group",
+     "role": "জাতিগত আচার-নৃত্য",
+     "era": "চলমান লোকঐতিহ্য",
+     "place": "বান্দরবান, রাঙ্গামাটি",
+     "claims": [
+      "মারমা বৌদ্ধ সম্প্রদায়ের ঐতিহ্যবাহী নৃত্য; ভিক্ষুদের অন্ত্যেষ্টিক্রিয়ায় মৃতদেহ বা কফিন ঘিরে পরিবেশিত হয় — এই বর্ণনা লোকজ ও নৃতাত্ত্বিক বিবরণে পাওয়া যায়।"
+     ],
+     "works": [
+      "সইং নৃত্য (অন্ত্যেষ্টি-আচার)"
+     ],
+     "status": "thin",
+     "statusNote": "স্বাধীন প্রকাশিত নৃতাত্ত্বিক গবেষণা সীমিত; তাই “প্রচলিত বর্ণনা” হিসেবে রাখা হলো, প্রতিষ্ঠিত তথ্য হিসেবে নয়।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Dance",
+       "url": "https://en.banglapedia.org/index.php?title=Dance"
+      },
+      {
+       "label": "Banglapedia (en) — Folk Music",
+       "url": "https://en.banglapedia.org/index.php?title=Folk%20Music"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "Banglapedia (en) — Folk Music",
+       "url": "https://en.banglapedia.org/index.php?title=Folk%20Music",
+       "note": "পার্বত্য লোকসংগীত-প্রসঙ্গ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-buddha-natak",
+     "name": "বুদ্ধ-নাটক",
+     "kind": "group",
+     "role": "লোকনাট্য",
+     "era": "মধ্যযুগ",
+     "place": "বঙ্গ",
+     "claims": [
+      "প্রাচীন বাংলার লোকায়ত সমাজে “বুদ্ধ নাটক” পরিবেশনার রীতি ছিল বলে উল্লেখ পাওয়া যায়; চর্যাপদে এর ইঙ্গিত আছে বলে কেউ কেউ বলেন।"
+     ],
+     "works": [
+      "বুদ্ধ-নাটক (লোকনাট্য রূপ)"
+     ],
+     "status": "thin",
+     "statusNote": "চর্যাপদে সরাসরি “বুদ্ধ নাটক” শব্দটি নেই — দাবিটি ব্যাখ্যাভিত্তিক। তাই প্রমাণ-অপ্রতুল হিসেবে চিহ্নিত।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Dance",
+       "url": "https://en.banglapedia.org/index.php?title=Dance"
+      },
+      {
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "badyojontro",
+   "icon": "🥁",
+   "name": "বাদ্যযন্ত্র ও ধ্বনি-ঐতিহ্য",
+   "period": "১০ম–২০শ শতক",
+   "summary": "চর্যাপদেই ঢাক-ঢোল, কাড়া-নাকাড়ার উল্লেখ আছে — বিয়ের আসর ও উৎসবে ব্যবহৃত হতো। বৌদ্ধ বিহার-উৎসবের বাদ্য-ঐতিহ্য পরে লোকসংগীতে মিশে যায়।",
+   "philosophy": "উৎসব-বাদ্য (পূজা, বিহার-যাত্রা, অন্ত্যেষ্টি) — ধর্মীয় অনুষ্ঠানের ছন্দেই বাদ্যযন্ত্রের ব্যবহার গড়ে উঠেছে।",
+   "entries": [
+    {
+     "id": "c-charya-instruments",
+     "name": "চর্যাপদ-যুগের বাদ্য",
+     "kind": "group",
+     "role": "বাদক",
+     "era": "১০ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "বাংলাপিডিয়া: কাড়া-নাকাড়া ও ঢাক-ঢোল বাজিয়ে বর-কনেকে বিয়ের আসরে নিয়ে যাওয়া হতো — চর্যাপদে এ উল্লেখ আছে।"
+     ],
+     "works": [
+      "কাড়া-নাকাড়া",
+      "ঢাক-ঢোল"
+     ],
+     "status": "verified",
+     "statusNote": "এটি সরাসরি চর্যাপদের সমাজচিত্র-উদ্ধৃতি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — চর্যাপদ (সমাজচিত্র)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-ektara-duggi",
+     "name": "একতারা, দুগ্গি, খমক (দাবি)",
+     "kind": "group",
+     "role": "লোকবাদ্য",
+     "era": "চলমান লোকঐতিহ্য",
+     "place": "পার্বত্য ও সমতল বৌদ্ধ সমাজ",
+     "claims": [
+      "দাবি: এগুলো বৌদ্ধ সংগীত ও আধ্যাত্মিক পরিবেশনায় ব্যবহৃত হতো।",
+      "একতারা ও দুগ্গি বাস্তবে বাংলার বাউল-লোকসংগীতে ব্যবহৃত হয় — বৌদ্ধ-নির্দিষ্ট ব্যবহারের প্রমাণ আলাদা নয়।"
+     ],
+     "works": [
+      "একতারা",
+      "দুগ্গি",
+      "খমক"
+     ],
+     "status": "thin",
+     "statusNote": "“বৌদ্ধ সংগীতের বাদ্য” হিসেবে সরাসরি সূত্র পাওয়া যায়নি; লোকসংগীতে ব্যবহার নিশ্চিত। দুই দাবি আলাদা রাখা হলো।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Folk Music",
+       "url": "https://en.banglapedia.org/index.php?title=Folk%20Music"
+      },
+      {
+       "label": "বাংলাপিডিয়া — বাউল",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A6%BE%E0%A6%89%E0%A6%B2"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "Banglapedia (en) — Folk Music",
+       "url": "https://en.banglapedia.org/index.php?title=Folk%20Music",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "chikitsa",
+   "icon": "🩺",
+   "name": "চিকিৎসা ও ভেষজবিদ্যা",
+   "period": "৭ম–২০শ শতক",
+   "summary": "বাংলায় আয়ুর্বেদ-চিকিৎসার সবচেয়ে বিখ্যাত দুই গ্রন্থকার — বঙ্গসেন ও চক্রপাণিদত্ত — বাংলারই সন্তান। বৌদ্ধ বিহারগুলোতে ঔষধ-বিধি ও চিকিৎসা-শিক্ষার ধারা ছিল।",
+   "philosophy": "বুদ্ধের “গিলান-উপট্ঠান” — রোগীর সেবা ধর্মীয় কর্তব্য; বিনয়পিটকে ভিক্ষুদের ঔষধপত্রের ব্যবহার বিস্তারিত নিয়ন্ত্রিত।",
+   "entries": [
+    {
+     "id": "c-vangasena",
+     "name": "বঙ্গসেন",
+     "kind": "person",
+     "role": "চিকিৎসাবিদ",
+     "era": "১১শ–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "“চিকিৎসাসারসংগ্রহ” রচনা করেন — বাংলার নামাঙ্কিত সর্বাধিক পরিচিত আয়ুর্বেদ-গ্রন্থ; দীর্ঘকাল হাতে-হাতে চলে।",
+      "গ্রন্থটি সংস্কৃত, তালপাতার পাণ্ডুলিপি-formে সংরক্ষিত (১৩শ শতকের নকল বিদ্যমান)।"
+     ],
+     "works": [
+      "চিকিৎসাসারসংগ্রহ (বৃহৎ সংকলন)"
+     ],
+     "status": "partial",
+     "statusNote": "তিনি বৌদ্ধ ছিলেন কি না — এ নিয়ে স্পষ্ট সাক্ষ্য নেই। বাংলার চিকিৎসা-ধারায় তাঁর ভূমিকা নিশ্চিত, ধর্মীয় পরিচয় অনিশ্চিত। দুই তথ্য আলাদা রাখা হলো।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Bauddha Dharmankur Sabha",
+       "url": "https://en.banglapedia.org/index.php?title=Bauddha%20Dharmankur%20Sabha"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "চিকিৎসাসারসংগ্রহ, বঙ্গসেন — ১৩শ শতকের তালপাতার পাণ্ডুলিপি",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/13th-century_Cikitsa-sara-sangraha%2C_Vangasena%2C_medical_text%2C_Sanskrit%2C_palm_leaf_manuscript.jpg/1280px-13th-century_Cikitsa-sara-sangraha%2C_Vangasena%2C_medical_text%2C_Sanskrit%2C_palm_leaf_manuscript.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "চিকিৎসা-গ্রন্থের মূল নিদর্শন",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:13th-century_Cikitsa-sara-sangraha,_Vangasena,_medical_text,_Sanskrit,_palm_leaf_manuscript.jpg",
+       "credit": "Ms Sarah Welch"
+      },
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — চিকিৎসা-সাহিত্য প্রসঙ্গ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%86%E0%A6%AF%E0%A6%BC%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A7%87%E0%A6%A6",
+       "note": "সহায়ক"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-monastic-medicine",
+     "name": "বিহার-চিকিৎসা ও ঔষধ-বিধি",
+     "kind": "group",
+     "role": "ভিক্ষু-চিকিৎসক",
+     "era": "বুদ্ধকাল থেকে",
+     "place": "বঙ্গের বিহার",
+     "claims": [
+      "বিনয়পিটকের মহাবগ্গে ভিক্ষুদের ঔষধপত্র, বাসস্থান ও রোগীর সেবার নিয়ম বিস্তারিত আছে।",
+      "বাংলাপিডিয়া: প্রাচীন বাংলার বৌদ্ধ মঠগুলোতে ধর্মীয় শিক্ষার সঙ্গে রসায়নশাস্ত্র, চিকিৎসাবিজ্ঞান ও জ্যোতির্বিদ্যা পাঠানো হতো (সমতট, রাঢ়, বরেন্দ্র, পুণ্ড্রবর্ধনের প্রায় ৫০টি প্রতিষ্ঠান)।"
+     ],
+     "works": [
+      "মহাবগ্গের ঔষধ-বিধি",
+      "মঠ-কেন্দ্রিক চিকিৎসা-শিক্ষা (৫০টি প্রতিষ্ঠান)"
+     ],
+     "status": "verified",
+     "statusNote": "ত্রিপিটক ও বাংলাপিডিয়া (গণিত নিবন্ধের ভূমিকাংশ) — দুই সূত্রে একই কথা।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — ত্রিপিটক",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%BF%E0%A6%9F%E0%A6%95"
+      },
+      {
+       "label": "বাংলাপিডিয়া — গণিত",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — ত্রিপিটক (মহাবগ্গ: ঔষধপত্র)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%BF%E0%A6%9F%E0%A6%95",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-modern-health",
+     "name": "আধুনিক যুগে সমাজ-স্বাস্থ্য",
+     "kind": "group",
+     "role": "সংগঠন",
+     "era": "২০শ–২১শ শতক",
+     "place": "বাংলাদেশ",
+     "claims": [
+      "বৌদ্ধ বিহার-কেন্দ্রিক দাতব্য চিকিৎসা ও ঔষধ-সাহায্যের ধারা আজও চলে; ধর্মীয় কল্যাণ ট্রাস্ট ও সংঘ-সংগঠন এতে যুক্ত।"
+     ],
+     "works": [
+      "বিহার-কেন্দ্রিক দাতব্য চিকিৎসা কেন্দ্র",
+      "ঔষধ-সাহায্য"
+     ],
+     "status": "thin",
+     "statusNote": "এ ধরনের কেন্দ্রের সুনির্দিষ্ট তালিকা বা সংখ্যা কোনো সরকারি সূত্রে প্রকাশিত নেই — তাই ব্যক্তিনাম বা সংখ্যা দেওয়া হয়নি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি (বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্ট প্রসঙ্গ)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "gonit",
+   "icon": "➗",
+   "name": "গণিত",
+   "period": "৫০০ খ্রি.পূ.–১৮শ শতক",
+   "summary": "সৎভাবে বলতে হয় — ধ্রুপদী অঙ্কশাস্ত্রে বাংলার অবদান “প্রায় নেই বললেই চলে” (বাংলাপিডিয়া)। বৌদ্ধ যুগে বড় সংখ্যার ধারণা ও পাঠশালার আর্যা-গণিতই এখানে প্রধান অবদান।",
+   "philosophy": "বৌদ্ধ শাস্ত্রে অকল্পনীয় বড় সংখ্যার (অসংখেয়) কল্পনা — মহাযান গ্রন্থে সংখ্যার দার্শনিক ব্যবহার।",
+   "entries": [
+    {
+     "id": "c-lalitavistara-numbers",
+     "name": "বড় সংখ্যার পদ্ধতি (ললিতবিস্তার)",
+     "kind": "group",
+     "role": "গ্রন্থ-ঐতিহ্য",
+     "era": "আনু. ১০০ খ্রি.পূ.",
+     "place": "বঙ্গ-সংলগ্ন বৌদ্ধ সাহিত্য",
+     "claims": [
+      "বাংলাপিডিয়া: বৌদ্ধদের ললিতবিস্তারে শততমিক মানের ভিত্তিতে কোটি, অযুত, নিযুত থেকে তাল্লক্ষ্মণ = ১০^৫৩ ইত্যাদি সংখ্যাক্রমের ব্যাখ্যা আছে।"
+     ],
+     "works": [
+      "ললিতবিস্তারের সংখ্যাক্রম"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (গণিত) — সরাসরি উদ্ধৃতি। তবে এটি বাংলার মৌলিক অবদান নয়, বৌদ্ধ সাহিত্য-ঐতিহ্যের অংশ।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — গণিত",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — গণিত (বৌদ্ধ ও জৈন যুগ)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-arya-patshala",
+     "name": "আর্যা-গণিত ও পাঠশালা",
+     "kind": "group",
+     "role": "দেশি গণিত-শিক্ষা",
+     "era": "১৬০০–১৮০০",
+     "place": "বাংলা ও আসাম",
+     "claims": [
+      "শুভঙ্কর (১৬০০–১৭০০) ও অন্যান্যের ছড়া-ছন্দে লেখা “আর্যা” গণিতের বিধি বাংলার পাঠশালায় অষ্টাদশ শতকের শেষ পর্যন্ত পড়ানো হতো, আসামেও জনপ্রিয় ছিল।"
+     ],
+     "works": [
+      "ছড়া-ছন্দে আর্যা (গণিতের বিধি)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (গণিত)। এটি হিন্দু-বৌদ্ধ নির্বিশেষে দেশি ধারা — ধর্মীয় মালিকানা দাবি করা যায় না।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — গণিত",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — গণিত (বঙ্গীয় গণিত ধারণা)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-zero-claim",
+     "name": "“শূন্য বৌদ্ধ দর্শন থেকে এসেছে” — দাবি",
+     "kind": "group",
+     "role": "দাবি",
+     "era": "আধুনিক ব্যাখ্যা",
+     "place": "—",
+     "claims": [
+      "কেউ কেউ বলেন, গণিতে শূন্যের ধারণা বৌদ্ধ শূন্যতা-দর্শন থেকে এসেছে; বুদ্ধ-সমকালীন বিমলকীর্তি-মঞ্জুশ্রী সংলাপে “শূন্যতা” বিষয়ক আলোচনা ছিল।"
+     ],
+     "works": [
+      "—"
+     ],
+     "status": "thin",
+     "statusNote": "দার্শনিক শূন্যতা আর গাণিতিক শূন্য এক জিনিস নয়; এ দাবির পক্ষে সরাসরি প্রমাণ নেই। অনুমান হিসেবে চিহ্নিত, তথ্য হিসেবে নয়।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — গণিত",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — গণিত",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "biggan",
+   "icon": "🔬",
+   "name": "বিজ্ঞান: জ্যোতির্বিদ্যা ও রসায়ন",
+   "period": "৭ম–১২শ শতক",
+   "summary": "প্রাচীন বাংলার বৌদ্ধ মঠগুলোতে ধর্মীয় শিক্ষার পাশাপাশি রসায়নশাস্ত্র, চিকিৎসাবিজ্ঞান ও জ্যোতির্বিদ্যা শেখানো হতো। তবে জ্যোতির্বিদ্যায় আর্যভট্ট-ধারার কৃতিত্ব বাংলার নয়।",
+   "philosophy": "তন্ত্রযানে জ্যোতিষ-গণনার ব্যবহার (মুহূর্ত নির্ণয়) — বিহারের পঞ্জিকা-চর্চার ভিত্তি।",
+   "entries": [
+    {
+     "id": "c-vihara-science",
+     "name": "মঠ-কেন্দ্রিক বিজ্ঞানশিক্ষা",
+     "kind": "group",
+     "role": "শিক্ষাকেন্দ্র",
+     "era": "৭ম–১২শ শতক",
+     "place": "সমতট, রাঢ়, বরেন্দ্র, পুণ্ড্রবর্ধন",
+     "claims": [
+      "বাংলাপিডিয়া: সমতট, রাঢ়, বরেন্দ্র ও পুণ্ড্রবর্ধনের পঞ্চাশটি শিক্ষা প্রতিষ্ঠানে ও প্রাচীন বৌদ্ধ মঠসমূহে ধর্মীয় শিক্ষাসহ রসায়নশাস্ত্র, চিকিৎসাবিজ্ঞান ও জ্যোতির্বিদ্যায় পাঠদান করা হতো।"
+     ],
+     "works": [
+      "রসায়নশাস্ত্র",
+      "চিকিৎসাবিজ্ঞান",
+      "জ্যোতির্বিদ্যা"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (গণিত) — একটিমাত্র সূত্র, কিন্তু বাক্যটি স্পষ্ট। ৫০ সংখ্যাটি ওই নিবন্ধেরই দাবি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — গণিত",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — গণিত (শিক্ষাপ্রতিষ্ঠান প্রসঙ্গ)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-metallurgy",
+     "name": "ধাতুবিদ্যা ও রসায়ন-প্রয়োগ",
+     "kind": "group",
+     "role": "কারিগর",
+     "era": "৮ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "ব্রোঞ্জ ও অষ্টধাতুর মূর্তি নির্মাণে ধাতুর অনুপাত, গলানো ও ছাঁচ-নির্মাণের জ্ঞান — ময়নামতি-পাহাড়পুরের মূর্তিগুলোই প্রমাণ।"
+     ],
+     "works": [
+      "ব্রোঞ্জ-মূর্তি নির্মাণ",
+      "অষ্টধাতু মিশ্রণ"
+     ],
+     "status": "partial",
+     "statusNote": "লিখিত রেসিপি পাওয়া যায়নি; প্রমাণ বস্তুগত ও পরীক্ষাগার-বিশ্লেষণনির্ভর।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — ভাস্কর্য",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AD%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AF"
+      },
+      {
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "বাংলার ধাতুশিল্প — উপবিষ্ট বুদ্ধ",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg/1280px-Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "ধাতু-কৌশলের নমুনা",
+       "license": "Public domain",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg",
+       "credit": "Bangladeshi\n\nBase: Thai"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-aryabhata-claim",
+     "name": "“আর্যভট্ট প্রাচীন বাংলার জ্যোতির্বিদ” — দাবি",
+     "kind": "group",
+     "role": "দাবি",
+     "era": "—",
+     "place": "—",
+     "claims": [
+      "দাবি করা হয় — বাংলায় জ্যোতির্বিদ্যায় আর্যভট্ট গণিত প্রয়োগ করেন।"
+     ],
+     "works": [
+      "—"
+     ],
+     "status": "rejected",
+     "statusNote": "আর্যভট্ট (৪৭৬–৫৫০) পাটলিপুত্র-কেন্দ্রিক; বাংলার সঙ্গে তাঁর সরাসরি সম্পর্কের প্রমাণ নেই। বাংলাপিডিয়াও জ্যোতির্বিজ্ঞানে বাংলার অবদান সীমিত বলে উল্লেখ করে।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — গণিত",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — গণিত",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%97%E0%A6%A3%E0%A6%BF%E0%A6%A4",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "krishi",
+   "icon": "🌾",
+   "name": "কৃষি, ভূমিব্যবস্থা ও অর্থনীতি",
+   "period": "৭ম–১২শ শতক",
+   "summary": "রাজারা বিহার ও সংঘকে বিপুল জমি দান করতেন; সেই জমির আয়েই বিহারের পূজা, ভোজন, বস্ত্র ও ঔষধ চলত। দানপত্রগুলোতে বাগান ও জমির প্লটের বিবরণ বাংলার কৃষি-অর্থনীতির দুর্লভ দলিল।",
+   "philosophy": "দান-পুণ্যের ধর্মীয় মূল্য কৃষিকে পৃষ্ঠপোষকতা দেয়; বিহার-অর্থনীতি গড়ে ওঠে ভূমি-আয়ের ওপর।",
+   "entries": [
+    {
+     "id": "c-bhavadeva-grant",
+     "name": "ভবদেবের দানপত্র",
+     "kind": "group",
+     "role": "দলিল",
+     "era": "৭ম–৮ম শতক",
+     "place": "দেবপর্বত (ময়নামতি)",
+     "claims": [
+      "শালবন বিহার নির্মাণকারী শ্রী ভবদেবের দানপত্রে পানের বাগান ও চারটি জমির প্লট দানের উল্লেখ পাওয়া যায় — বাণিজ্যিক ফসল উৎপাদনের দিকেও ইঙ্গিত।"
+     ],
+     "works": [
+      "পান-বাগান দান",
+      "চারটি জমির প্লট"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (কৃষি/দানপত্র-প্রসঙ্গ) ও ময়নামতির তাম্রপট্ট-তালিকা (৮টি) সমর্থন করে।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati"
+      },
+      {
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "Banglapedia (en) — Mainamati (তাম্রপট্ট)",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati",
+       "note": "খনন-প্রতিবেদন"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-vihara-estates",
+     "name": "বিহার-জমিদান ও ভূমি-আয়",
+     "kind": "group",
+     "role": "অর্থনীতি",
+     "era": "৮ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "রাজারা বৌদ্ধ বিহার ও সংঘকে ব্যাপক ভূমিদান করতেন; জমির আয় দিয়ে বিহারের পূজা, ভোজন, বস্ত্র ও ঔষধের ব্যবস্থা হতো।"
+     ],
+     "works": [
+      "বিহার-ভূমি",
+      "ভূমি-আয় থেকে সংঘ-ব্যয়"
+     ],
+     "status": "partial",
+     "statusNote": "পরিমাণগত হিসাব (কত একর/কত আয়) সূত্রে পাওয়া যায় না; ব্যবস্থার বর্ণনাই প্রমাণ।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "Banglapedia (en) — Architecture",
+       "url": "https://en.banglapedia.org/index.php?title=Architecture"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-daily-life",
+     "name": "চর্যাপদে কৃষি ও গ্রামীণ জীবন",
+     "kind": "group",
+     "role": "সমাজচিত্র",
+     "era": "১০ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "চর্যাপদ থেকে জানা যায় — গরু ছিল গৃহপালিত পশু, হরিণ শিকার, নৌকা চালনা ও হাতির ব্যবহার ছিল সমকালীন জীবনের অংশ।"
+     ],
+     "works": [
+      "গৃহপালিত গরু",
+      "হরিণ শিকার",
+      "নৌকা চালনা"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া — চর্যাপদের সমাজচিত্র-অনুচ্ছেদ।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "চর্যাপদ পুঁথির পৃষ্ঠা",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%3B_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript%2C_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "সমকালীন নিদর্শন",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE;_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript,_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg",
+       "credit": "Mohmoni"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "karushilpo",
+   "icon": "🧶",
+   "name": "কারুশিল্প, বস্ত্র ও নৌকা-নির্মাণ",
+   "period": "১০ম–২১শ শতক",
+   "summary": "চর্যাপদের সমাজচিত্রে চেঙারি তৈরি, শুঁড়ির কাজ ও নৌকা চালনার উল্লেখ আছে। পার্বত্য বৌদ্ধ সমাজে তাঁতের জীবন্ত ধারা আজও আছে।",
+   "philosophy": "শিল্পকর্মে অহিংস ও পরিমিত উপকরণের নীতি — মৃৎ, বাঁশ, সুতা ও ধাতুতে সীমিত থাকা।",
+   "entries": [
+    {
+     "id": "c-charya-crafts",
+     "name": "চর্যাপদ-যুগের কারুশিল্প",
+     "kind": "group",
+     "role": "কারিগর",
+     "era": "১০ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "বাংলাপিডিয়া: তখনকার মানুষ হরিণ শিকার, নৌকা চালনা, চেঙারি তৈরি ও শুঁড়ির কাজ করত — মৃৎশিল্প ও কুটিরশিল্পের সরাসরি উল্লেখ।"
+     ],
+     "works": [
+      "চেঙারি (মাছ ধরার পাত্র)",
+      "শুঁড়ির কাজ (মৃৎশিল্প)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া — চর্যাপদ নিবন্ধের সমাজচিত্র-অনুচ্ছেদ।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-chakma-weaving",
+     "name": "চাকমা ও পার্বত্য বৌদ্ধ তাঁত",
+     "kind": "group",
+     "role": "তাঁতি",
+     "era": "চলমান (লোক ঐতিহ্য)",
+     "place": "রাঙ্গামাটি, খাগড়াছড়ি, বান্দরবান",
+     "claims": [
+      "চাকমা নারীর হাতে তাঁত বোনা বস্ত্রের ছবি ও বিবরণ সংরক্ষিত; বৌদ্ধ পার্বত্য সমাজে এ শিল্প পারিবারিক ঐতিহ্য।"
+     ],
+     "works": [
+      "পিনন",
+      "হাদি",
+      "খাদি-জাতীয় বস্ত্র"
+     ],
+     "status": "partial",
+     "statusNote": "নৃতাত্ত্বিক ও আলোকচিত্র-প্রমাণ শক্তিশালী, কিন্তু ঐতিহাসিক কালপঞ্জি নেই। বৌদ্ধ-ধর্মীয় ব্যবহারের প্রমাণ আলাদা নয়।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Architecture",
+       "url": "https://en.banglapedia.org/index.php?title=Architecture"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "চাকমা নারী তাঁতে বস্ত্র বুনছেন (বাংলাদেশ)",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Chakma_woman_weaving_textiles%2C_Bangladesh.jpg/1280px-Chakma_woman_weaving_textiles%2C_Bangladesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "জীবন্ত কারুশিল্প",
+       "license": "Public domain",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Chakma_woman_weaving_textiles,_Bangladesh.jpg",
+       "credit": "Creator:Harrison Forman"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-boat-building",
+     "name": "নৌকা-নির্মাণ ও নদীবাণিজ্য",
+     "kind": "group",
+     "role": "কারিগর",
+     "era": "প্রাচীন–আধুনিক",
+     "place": "বাংলার নদীপথ",
+     "claims": [
+      "বাংলার নৌকা-নির্মাণের নিজস্ব ঘরানা (বজরা, পালকি-নৌকা প্রভৃতি) — বাংলাপিডিয়ায় বিস্তারিত; বৌদ্ধ বিহারগুলো নদীপথেই বাণিজ্য ও তীর্থ-যোগাযোগে যুক্ত ছিল।"
+     ],
+     "works": [
+      "দেশি নৌকার ঘরানা",
+      "নদীপথে বিহার-সংযোগ"
+     ],
+     "status": "partial",
+     "statusNote": "“বৌদ্ধদের নৌকা” বলে আলাদা প্রমাণ নেই — বাংলার সাধারণ নৌকা-নির্মাণ-ঐতিহ্যের অংশ হিসেবে দেখানো হলো।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — নৌকা",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A8%E0%A7%8C%E0%A6%95%E0%A6%BE"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — নৌকা",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A8%E0%A7%8C%E0%A6%95%E0%A6%BE",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "rondon",
+   "icon": "🍽️",
+   "name": "রন্ধন ও ভোজন-ঐতিহ্য",
+   "period": "৭ম–২১শ শতক",
+   "summary": "এ ক্ষেত্রেই সবচেয়ে সততার দরকার: প্রত্নতাত্ত্বিক প্রমাণ দুর্বল, প্রধান ভর লোকজ স্মৃতি ও বিহার-বিধির ওপর। তবে শালবন বিহারে “বারোয়ারি রন্ধনশালা”র প্রমাণ নিশ্চিত।",
+   "philosophy": "ভিক্ষুদের একবেল ভোজন, নৈরাশ্রয় (নির্দিষ্ট খাদ্য না চাওয়া) ও “অমিষ-নিরামিষ” বিধি? — নিরামিষ ও অহিংস খাদ্য-নীতির ধর্মীয় ভিত্তি।",
+   "entries": [
+    {
+     "id": "c-monastery-kitchen",
+     "name": "বিহার-রন্ধনশালা ও ভোজন-বিধি",
+     "kind": "group",
+     "role": "ভিক্ষু-সংঘ",
+     "era": "৭ম–১২শ শতক",
+     "place": "শালবন বিহার, কোটবাড়ি",
+     "claims": [
+      "শালবন বিহারে সকল সন্ন্যাসীর জন্য বিরাট বারোয়ারি রন্ধনশালা ছিল; পরে অনেক কক্ষে স্বতন্ত্র রান্নার ব্যবস্থাও যুক্ত হয়।",
+      "বিনয়পিটকের মহাবগ্গে খাদ্য, বাসস্থান ও ঔষধ-সংক্রান্ত নিয়ম বিস্তারিত আছে।"
+     ],
+     "works": [
+      "বারোয়ারি রন্ধনশালা",
+      "মহাবগ্গের খাদ্য-বিধি"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (শালবন) — খনন-প্রমাণ সরাসরি উদ্ধৃত।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "বাংলাপিডিয়া — ত্রিপিটক",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%BF%E0%A6%9F%E0%A6%95"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "কোটিলা মুড়া, ময়নামতি",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A7%A7.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+       "note": "ময়নামতির প্রত্ন-অঞ্চল",
+       "license": "CC BY 3.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A7%A7.png",
+       "credit": "Sabilaenun"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-baruya-cuisine",
+     "name": "বড়ুয়া রন্ধন-ঐতিহ্য (দাবি)",
+     "kind": "group",
+     "role": "গৃহী সমাজ",
+     "era": "আধুনিক",
+     "place": "চট্টগ্রাম ও উত্তরবঙ্গ",
+     "claims": [
+      "দাবি: বৌদ্ধ খাদ্য-ঐতিহ্য মহাযান বৌদ্ধধর্ম-প্রভাবিত অঞ্চলের ভিক্ষু ও অনুসারীদের মধ্যে প্রচলিত ছিল; উত্তরবঙ্গের বড়ুয়া বৌদ্ধদের খাদ্যাভ্যাসে চট্টগ্রামের প্রভাব আছে।"
+     ],
+     "works": [
+      "চাটগাঁই বড়ুয়া রান্না",
+      "উৎসব-মিষ্টান্ন"
+     ],
+     "status": "thin",
+     "statusNote": "লিখিত কোনো প্রামাণ্য ইতিহাস বা গবেষণা-সূত্র পাওয়া যায়নি; মূলত মৌখিক/লোকজ জ্ঞান। সংখ্যা-নাম-তারিখ কিছুই অনুমান করা হয়নি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — বৌদ্ধধর্ম",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A7%8C%E0%A6%A6%E0%A7%8D%E0%A6%A7%E0%A6%A7%E0%A6%B0%E0%A7%8D%E0%A6%AE"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — বৌদ্ধধর্ম",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A7%8C%E0%A6%A6%E0%A7%8D%E0%A6%A7%E0%A6%A7%E0%A6%B0%E0%A7%8D%E0%A6%AE",
+       "note": "সহায়ক"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "manchitro",
+   "icon": "🗺️",
+   "name": "মানচিত্র, ভূগোল ও ভ্রমণ-বিবরণ",
+   "period": "৭ম–২১শ শতক",
+   "summary": "প্রাচীন বাংলার বৌদ্ধ কেন্দ্রগুলোর অবস্থান আমরা জানি মূলত পরিব্রাজকদের বিবরণ ও তিব্বতীয়-চীনা গ্রন্থ থেকে। আধুনিক মানচিত্র-নির্মাণে বাঙালি বৌদ্ধদের ভূমিকা শুরু হয় বিংশ শতকে।",
+   "philosophy": "তীর্থযাত্রার ভূগোল — কোন বিহার কোথায়, কোন পথে যেতে হয়; এই ব্যবহারিক জ্ঞানই প্রাচীন ভৌগোলিক বিবরণের ভিত্তি।",
+   "entries": [
+    {
+     "id": "c-hiuen-tsang",
+     "name": "হিউয়েন সাঙ ও চীনা বিবরণ",
+     "kind": "person",
+     "role": "পরিব্রাজক (চীনা)",
+     "era": "৭ম শতক",
+     "place": "সমতট, পুণ্ড্রবর্ধন, কর্ণসুবর্ণ",
+     "claims": [
+      "হিউয়েন সাঙের বিবরণ প্রাচীন বাংলার বৌদ্ধ কেন্দ্র, জনপদ ও দূরত্বের প্রধান ঐতিহাসিক সূত্র — আধুনিক প্রত্নস্থল-মানচিত্র নির্মাণে এটি ভিত্তি।"
+     ],
+     "works": [
+      "সমতট ও পুণ্ড্রবর্ধন-বিবরণ",
+      "বিহার-অবস্থানের দূরত্ব-তালিকা"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া — বৌদ্ধধর্ম ও প্রত্নতত্ত্ব নিবন্ধে বারবার উদ্ধৃত। তবে তিনি বাঙালি নন — “বাংলার ভূগোলের সূত্র”, “বাঙালির অবদান” নয়।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — বৌদ্ধধর্ম",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A7%8C%E0%A6%A6%E0%A7%8D%E0%A6%A7%E0%A6%A7%E0%A6%B0%E0%A7%8D%E0%A6%AE"
+      },
+      {
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — বৌদ্ধধর্ম",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A7%8C%E0%A6%A6%E0%A7%8D%E0%A6%A7%E0%A6%A7%E0%A6%B0%E0%A7%8D%E0%A6%AE",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-tibetan-guides",
+     "name": "তিব্বতীয় সূত্র ও লামা তারনাথ",
+     "kind": "group",
+     "role": "ইতিহাস-ভূগোল সূত্র",
+     "era": "১৭শ শতক (তারনাথ)",
+     "place": "তিব্বত → বঙ্গ",
+     "claims": [
+      "তারনাথ ও Pag-Sam-Jon-Zang-এর মতো তিব্বতীয় গ্রন্থ থেকে সোমপুর, বিক্রমশিলা প্রভৃতি কেন্দ্রের অবস্থান ও পৃষ্ঠপোষকতার তথ্য পাওয়া যায়।"
+     ],
+     "works": [
+      "তারনাথের ইতিহাস",
+      "Pag-Sam-Jon-Zang"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (সোমপুর) — তিব্বতীয় সূত্রের উদ্ধৃতি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — সোমপুর মহাবিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0%20%E0%A6%AE%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "Internet Archive — Somapura Mahavihara: foreign culture connection",
+       "url": "https://archive.org/details/foreign-culture-connection-somapura-mahavihara"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — সোমপুর মহাবিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0%20%E0%A6%AE%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-modern-map",
+     "name": "আধুনিক মানচিত্র ও এই ডেটাসেট",
+     "kind": "group",
+     "role": "আধুনিক উদ্যোগ",
+     "era": "২০২৬",
+     "place": "বাংলাদেশ",
+     "claims": [
+      "এই সাইটে ৩৩৭টি নথিভুক্ত স্থান (২৭৯ বিহারসহ) জেলা-উপজেলা-থানা-ইউনিয়ন অনুযায়ী মানচিত্রে বসানো হয়েছে — বৌদ্ধ ঐতিহ্যের একটি ব্যবহারযোগ্য ভৌগোলিক ডেটাসেট।"
+     ],
+     "works": [
+      "৩৩৭টি স্থানের ভৌগোলিক ডেটাসেট",
+      "৬৪ জেলা-ভিত্তিক মানচিত্র"
+     ],
+     "status": "verified",
+     "statusNote": "এই প্রকল্পের নিজের ডেটা — যাচাইযোগ্য।",
+     "sources": [
+      {
+       "label": "এই সাইট — স্থান-নির্দেশিকা",
+       "url": "index.html"
+      },
+      {
+       "label": "এই সাইট — বৌদ্ধ শাসন ও ইতিহাস",
+       "url": "history.html"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "site",
+       "label": "এই সাইটের মানচিত্র পাতা",
+       "url": "index.html",
+       "note": "লাইভ ডেটাসেট"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "dhyan",
+   "icon": "🧘",
+   "name": "ধ্যান, আধ্যাত্মিকতা ও সংঘজীবন",
+   "period": "৭ম–২১শ শতক",
+   "summary": "বাংলার বৌদ্ধ ঐতিহ্যের প্রাণ হলো সাধনা — সতিপট্ঠান, সমথ-বিপশ্যনা ও সহজ-যোগ। উনিশ-বিশ শতকে থেরবাদ সংঘ-পুনরুজ্জীবন হয়, আধুনিক ভাবনা-কেন্দ্র গড়ে ওঠে।",
+   "philosophy": "সতিপট্ঠান (চার স্মৃতিপ্রস্থান) — বাংলা ভাষায় প্রথম এর অনুবাদ ও চর্চা রামচন্দ্র বড়ুয়ার হাতে।",
+   "entries": [
+    {
+     "id": "c-satipatthana",
+     "name": "মহাসতিপট্ঠান সুত্তের বাংলা পাঠ",
+     "kind": "group",
+     "role": "ধ্যান-গ্রন্থ",
+     "era": "১৯শ–২০শ শতক",
+     "place": "চট্টগ্রাম",
+     "claims": [
+      "রামচন্দ্র বড়ুয়া “মহাসতিপট্ঠান সুত্ত” ও “নির্বাণ দর্শন” রচনা/অনুবাদ করেন — বাংলায় ধ্যান-চর্চার পাঠ্যবই।"
+     ],
+     "works": [
+      "মহাসতিপট্ঠান সুত্ত",
+      "নির্বাণ দর্শন",
+      "শ্রমণকর্তব্য"
+     ],
+     "status": "partial",
+     "statusNote": "গ্রন্থের প্রকাশকাল সূত্রে অসঙ্গতিপূর্ণ (মৃত্যুর পরের তারিখ) — কাল অনিশ্চিত, কিন্তু গ্রন্থ-অস্তিত্ব নিশ্চিত।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": ""
+      }
+     ],
+     "kingRef": "king-lay-6"
+    },
+    {
+     "id": "c-sangha-revival",
+     "name": "থেরবাদ সংঘ-পুনরুজ্জীবন",
+     "kind": "group",
+     "role": "সংঘ",
+     "era": "১৮৬৪–বর্তমান",
+     "place": "চট্টগ্রাম, পার্বত্য অঞ্চল, ঢাকা",
+     "claims": [
+      "উনিশ শতকে সিংহলি ভিক্ষু সারানন্দের উদ্যোগে পালি টোল ও সংঘ-শৃঙ্খলা পুনর্গঠিত হয় (১৯০২)।",
+      "বিংশ শতকে বাংলাদেশে সংঘনায়ক ও ভিক্ষু-সংঘ গড়ে ওঠে; বনভান্তে সাধনানন্দ (১৯২০–২০১২) বন-ধ্যান-কেন্দ্র গড়ে তোলেন।"
+     ],
+     "works": [
+      "পালি টোল (১৯০২)",
+      "সংঘ-সংগঠন",
+      "বন-ধ্যান কেন্দ্র"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (পালি) ও রাউন্ড ৯-এ যাচাই করা ভিক্ষু-জীবনী।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": ""
+      }
+     ],
+     "kingRef": "king-monk-12"
+    },
+    {
+     "id": "c-bhavana-centres",
+     "name": "ভাবনা কেন্দ্র ও ধ্যানশালা",
+     "kind": "group",
+     "role": "আধুনিক",
+     "era": "২০–২১শ শতক",
+     "place": "বাংলাদেশ",
+     "claims": [
+      "আজ বাংলাদেশের বৌদ্ধ স্থান-তালিকায় “ভাবনাকেন্দ্র” ও ধ্যানশালা আলাদা শ্রেণি হিসেবে নথিভুক্ত।"
+     ],
+     "works": [
+      "ভাবনাকেন্দ্র",
+      "ধ্যানশালা"
+     ],
+     "status": "verified",
+     "statusNote": "এই প্রকল্পের নিজের শ্রেণিবিন্যাসে ৪টি ভাবনাকেন্দ্র নথিভুক্ত।",
+     "sources": [
+      {
+       "label": "এই সাইট — স্থান-নির্দেশিকা",
+       "url": "index.html"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "site",
+       "label": "স্থান-নির্দেশিকা — ভাবনাকেন্দ্র",
+       "url": "index.html",
+       "note": "লাইভ তালিকা"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "shorir",
+   "icon": "🤸",
+   "name": "শরীরচর্চা ও যুদ্ধবিদ্যা",
+   "period": "৭ম–২১শ শতক",
+   "summary": "এ ক্ষেত্রে প্রমাণ সবচেয়ে কম। বিহার-জীবনে শারীরিক শৃঙ্খলা ও যোগ-আসন ছিল, দুর্গসদৃশ বিহার-স্থাপত্য প্রতিরক্ষার প্রয়োজন বোঝায়, কিন্তু বৌদ্ধ যোদ্ধা-কলার কোনো লিখিত বিবরণ পাওয়া যায় না।",
+   "philosophy": "শীল-সমাধি-প্রজ্ঞার অনুশীলনে দেহের স্থিরতা ও শ্বাস-নিয়ন্ত্রণ — যোগ-অনুশীলনের ভিত্তি।",
+   "entries": [
+    {
+     "id": "c-yoga-posture",
+     "name": "যোগ ও দেহ-সাধনা",
+     "kind": "group",
+     "role": "সাধক",
+     "era": "৮ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "চর্যাপদে “দেহ-সাধনা”র ভঙ্গি ও যোগের রূপক আছে; সিদ্ধাচার্যদের জীবনীতে কঠোর শারীরিক-মানসিক অনুশীলনের উল্লেখ পাওয়া যায়।"
+     ],
+     "works": [
+      "যোগ-আসন ও শ্বাস-অনুশীলন (সহজযান)"
+     ],
+     "status": "thin",
+     "statusNote": "নির্দিষ্ট আসনের তালিকা বা পদ্ধতির লিখিত প্রমাণ বাংলা সূত্রে নেই; তিব্বতীয় ও নেপালি সংস্করণ থেকে অনুমান।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      },
+      {
+       "label": "বাংলাপিডিয়া — দর্শন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-fortified-vihara",
+     "name": "দুর্গসদৃশ বিহার ও নিরাপত্তা",
+     "kind": "group",
+     "role": "প্রতিরক্ষা",
+     "era": "৭ম–১০শ শতক",
+     "place": "শালবন বিহার",
+     "claims": [
+      "শালবন বিহারের ৫ মিটার পুরু পেছনের দেয়াল, একটিমাত্র প্রবেশপথ ও দুটি প্রহরিকক্ষ — বাংলাপিডিয়া এগুলোকে “দুর্গের নমুনা” বলে বর্ণনা করে।"
+     ],
+     "works": [
+      "প্রহরিকক্ষ",
+      "পুরু প্রতিরক্ষা-প্রাচীর"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (শালবন বিহার)।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "ময়নামতির প্রত্ন-অঞ্চল",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A7%A7.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+       "note": "বিহার-অবশেষ",
+       "license": "CC BY 3.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A7%A7.png",
+       "credit": "Sabilaenun"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-martial-claim",
+     "name": "“বৌদ্ধ যুদ্ধবিদ্যা” — দাবি",
+     "kind": "group",
+     "role": "দাবি",
+     "era": "—",
+     "place": "—",
+     "claims": [
+      "দাবি: বিহারে শারীরিক ও যুদ্ধ-শৃঙ্খলার চর্চা হতো।"
+     ],
+     "works": [
+      "—"
+     ],
+     "status": "thin",
+     "statusNote": "বিনয়পিটক ও বাংলাপিডিয়ায় এমন কোনো বিবরণ নেই; বরং ভিক্ষুদের অস্ত্র-ধারণ নিষিদ্ধ। সুতরাং দাবিটি গ্রহণযোগ্য নয় — শুধু প্রতিরক্ষা-স্থাপত্যের প্রমাণ আছে।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "বাংলাপিডিয়া — ত্রিপিটক",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%BF%E0%A6%9F%E0%A6%95"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — ত্রিপিটক (বিনয়বিধি)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%BF%E0%A6%9F%E0%A6%95",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "projukti",
+   "icon": "⚙️",
+   "name": "প্রযুক্তি, লিখন-সামগ্রী ও মুদ্রণ",
+   "period": "৭ম–২১শ শতক",
+   "summary": "তালপাতার পুথি, কালি, কাঠের প্রচ্ছদ, ইট-নির্মাণ ও ধাতু-ছাঁচ — এসবই প্রাচীন বাংলার প্রযুক্তি। আধুনিক যুগে বাঙালি বৌদ্ধরা ছাপাখানা ও প্রকাশনা-প্রযুক্তি আয়ত্ত করেন (রেঙ্গুনের বুদ্ধিস্ট মিশন প্রেস, ১৯৩০)।",
+   "philosophy": "পুথি-সংরক্ষণ = শাসন-ধারণ; বৌদ্ধদের “ধর্মকে লিখে রাখার” তাগিদেই পাণ্ডুলিপি-প্রযুক্তির বিকাশ।",
+   "entries": [
+    {
+     "id": "c-palm-leaf",
+     "name": "তালপাতার পুথি ও প্রচ্ছদ-প্রযুক্তি",
+     "kind": "group",
+     "role": "কারিগর",
+     "era": "৮ম–১৩শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "তালপাতা প্রক্রিয়াকরণ, লিখন ও কাঠের প্রচ্ছদে বাঁধাই — পাল যুগের পুথিগুলো ১,০০০ বছর পরেও পাঠযোগ্য; প্রমাণ হিসেবে সংরক্ষিত ফোলিও।"
+     ],
+     "works": [
+      "তালপাতার ফোলিও",
+      "কাঠের প্রচ্ছদ (পট্টিকা)",
+      "পুথি-বাঁধাই"
+     ],
+     "status": "verified",
+     "statusNote": "সংরক্ষিত মূল পাণ্ডুলিপি (জাদুঘর-নথি) — বস্তুগত প্রমাণ।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চিত্রকলা",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%95%E0%A6%B2%E0%A6%BE"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "object",
+       "label": "প্রজ্ঞাপারমিতার পুথি-ফোলিও (১০ম শতক)",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Eastern_India%2C_Pala_period_-_Seven_Leaves_from_a_Manuscript_of_the_Gandavyuha-sutra_-_1955.49_-_Cleveland_Museum_of_Art.tif/lossy-page1-1280px-Eastern_India%2C_Pala_period_-_Seven_Leaves_from_a_Manuscript_of_the_Gandavyuha-sutra_-_1955.49_-_Cleveland_Museum_of_Art.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "প্রযুক্তি-নিদর্শন",
+       "license": "CC0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Eastern_India,_Pala_period_-_Seven_Leaves_from_a_Manuscript_of_the_Gandavyuha-sutra_-_1955.49_-_Cleveland_Museum_of_Art.tif",
+       "credit": "anonymous"
+      },
+      {
+       "type": "image",
+       "label": "পঞ্চরক্ষা পাণ্ডুলিপি (১১শ শতক)",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/11th-century_Buddhist_Pancaraksa_manuscript_of_8th-century_original%2C_Pali_script%2C_text_on_spells%2C_benefits_and_goddess_rituals.jpg/1280px-11th-century_Buddhist_Pancaraksa_manuscript_of_8th-century_original%2C_Pali_script%2C_text_on_spells%2C_benefits_and_goddess_rituals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "তালপাতার পুথি",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:11th-century_Buddhist_Pancaraksa_manuscript_of_8th-century_original,_Pali_script,_text_on_spells,_benefits_and_goddess_rituals.jpg",
+       "credit": "Ms Sarah Welch"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-brick-terracotta-tech",
+     "name": "ইট ও পোড়ামাটি-প্রযুক্তি",
+     "kind": "group",
+     "role": "নির্মাণ-প্রযুক্তি",
+     "era": "৭ম–১২শ শতক",
+     "place": "পাহাড়পুর, ময়নামতি",
+     "claims": [
+      "নকশি ইট, পুরু দেয়াল ও পোড়ামাটির ফলক-বন্ধনী — বাংলার মাটি-ভিত্তিক নির্মাণ-প্রযুক্তির শিখর।"
+     ],
+     "works": [
+      "নকশি ইট",
+      "টেরাকোটা ফলক",
+      "ইট-গাঁথনি"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (শালবন, ভাস্কর্য, স্থাপত্য)।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "বাংলাপিডিয়া — ভাস্কর্য",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AD%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "পোড়ামাটির ফলক",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Terracotta_Plaques_%2827433726423%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+       "note": "প্রযুক্তি-নিদর্শন",
+       "license": "CC BY 2.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Terracotta_Plaques_(27433726423).jpg",
+       "credit": "David Stanley from Nanaimo, Canada"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-printing-press",
+     "name": "ছাপাখানা ও মুদ্রণ-প্রযুক্তি",
+     "kind": "group",
+     "role": "আধুনিক",
+     "era": "১৯৩০–বর্তমান",
+     "place": "রেঙ্গুন → চট্টগ্রাম → ঢাকা",
+     "claims": [
+      "রেঙ্গুনে বুদ্ধিস্ট মিশন প্রেস (১৯৩০) প্রতিষ্ঠা করেন কয়েকজন বাঙালি বৌদ্ধ মনীষী; সেখানেই বাংলায় ত্রিপিটক-চর্চার মুদ্রিত সূচনা।",
+      "শতাব্দীব্যাপী প্রকাশনা-প্রযুক্তির ধারা আজ ডিজিটাল ডেটাসেট ও ওয়েব-মানচিত্র পর্যন্ত পৌঁছেছে (এই প্রকল্প)।"
+     ],
+     "works": [
+      "বুদ্ধিস্ট মিশন প্রেস (১৯৩০)",
+      "ত্রিপিটক মুদ্রণ",
+      "ডিজিটাল আর্কাইভ"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (পালি) — প্রেসের নাম ও সাল সরাসরি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "samaj",
+   "icon": "🤝",
+   "name": "সমাজ, নারী ও দানশীলতা",
+   "period": "৭ম–২১শ শতক",
+   "summary": "বৌদ্ধ সংঘে নারীর নিজস্ব বিধি ও ভিক্ষুণী-ধারা ছিল; চর্যাপদে ডোম্বীপা নারী পদকর্তা। আধুনিক যুগে শিক্ষা, প্রকাশনা ও সমাজসেবায় বৌদ্ধ নারীর ভূমিকা বাড়ে।",
+   "philosophy": "মাতৃস্থানীয় নারী — “মাতা” ও “ভগিনী”র সম্বোধন; সংঘে ভিক্ষুণী-শাখার বিধান।",
+   "entries": [
+    {
+     "id": "c-dombipa",
+     "name": "ডোম্বীপা",
+     "kind": "person",
+     "role": "নারী সিদ্ধাচার্য ও পদকর্তা",
+     "era": "১০ম–১১শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "চর্যাপদের ২৩ জন পদকর্তার মধ্যে একজন নারী — ডোম্বীপা; তাঁর ১৪ নং পদ বাংলা সাহিত্যের প্রথম নারী-কণ্ঠ।"
+     ],
+     "works": [
+      "চর্যাপদের ১৪ নং পদ (ডোম্বীপার)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (চর্যাপদ) — পদকর্তার তালিকায় নাম ও পদ-উদ্ধৃতি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "চর্যাপদ পুঁথির পৃষ্ঠা",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%3B_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript%2C_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "মূল নিদর্শন",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE;_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript,_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg",
+       "credit": "Mohmoni"
+      },
+      {
+       "type": "audio",
+       "label": "চর্যাপদ গান",
+       "url": "https://www.youtube.com/watch?v=Ka39I-A3Kbk",
+       "note": "ধারা-নমুনা"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-bhikkhuni-rules",
+     "name": "ভিক্ষুণী-ধারা ও নারী-শিক্ষা",
+     "kind": "group",
+     "role": "সংঘ",
+     "era": "বুদ্ধকাল থেকে",
+     "place": "বঙ্গ",
+     "claims": [
+      "বিনয়পিটকের পাচিত্তিয় ও চুল্লবগ্গে ভিক্ষুণীদের স্বতন্ত্র নিয়মাবলি সংকলিত।",
+      "থেরীগাথা-জাতীয় নারী-কণ্ঠ বৌদ্ধ সাহিত্যের অংশ।"
+     ],
+     "works": [
+      "ভিক্ষুণী-বিধি (পাচিত্তিয়, চুল্লবগ্গ)",
+      "থেরীগাথা"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (ত্রিপিটক) — সরাসরি উদ্ধৃতি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — ত্রিপিটক",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%BF%E0%A6%9F%E0%A6%95"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — ত্রিপিটক",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%BF%E0%A6%9F%E0%A6%95",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-modern-women",
+     "name": "আধুনিক শিক্ষা ও সাংস্কৃতিক উদ্যোগে বৌদ্ধ নারী",
+     "kind": "group",
+     "role": "নারী-সংগঠন",
+     "era": "২০–২১শ শতক",
+     "place": "চট্টগ্রাম, ঢাকা",
+     "claims": [
+      "বৌদ্ধ নারীদের সাংস্কৃতিক দল, কীর্তনীয়া দল ও প্রকাশনা-উদ্যোগ আজ সংগঠিত রূপে চলছে — তবে প্রকাশ্য নথি সীমিত।"
+     ],
+     "works": [
+      "কীর্তনীয়া দল",
+      "সাংস্কৃতিক গোষ্ঠী"
+     ],
+     "status": "thin",
+     "statusNote": "সংগঠনগুলোর নাম-ঠিকানা-ফোন কোনো প্রকাশ্য তালিকায় নেই; অনুমান করা হয়নি। “তথ্য যোগ করুন” ফর্মেই তা সংগ্রহ করা হবে।",
+     "sources": [
+      {
+       "label": "এই সাইট — স্থান-নির্দেশিকা",
+       "url": "index.html"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "site",
+       "label": "স্থান-নির্দেশিকা — সাংস্কৃতিক প্রতিষ্ঠান",
+       "url": "index.html",
+       "note": "লাইভ তালিকা"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "mudra",
+   "icon": "🪙",
+   "name": "মুদ্রা, বাণিজ্য ও নগরায়ণ",
+   "period": "৭ম–১২শ শতক",
+   "summary": "বিহার-নগরগুলো ছিল বাণিজ্য-কেন্দ্র; খননে শত শত স্বর্ণ-রৌপ্য মুদ্রা মিলেছে। বাংলার নিজস্ব মুদ্রা-ধারা (হরিকেল) এই যুগেরইফসল।",
+   "philosophy": "দানের অর্থনীতি — শ্রদ্ধেয় (দায়ক) ও ভিক্ষু-সংঘের পারস্পরিক নির্ভরতা নগর-অর্থনীতিকে সচল রাখে।",
+   "entries": [
+    {
+     "id": "c-coin-hoards",
+     "name": "মুদ্রা-ভাণ্ডার",
+     "kind": "group",
+     "role": "অর্থনীতি",
+     "era": "৭ম–১২শ শতক",
+     "place": "ময়নামতি ও বঙ্গ",
+     "claims": [
+      "ময়নামতি খননে প্রায় ৪০০ স্বর্ণ ও রৌপ্য মুদ্রা এবং ৮টি তাম্রপট্ট পাওয়া গেছে — বাংলার বাণিজ্য-সম্পদের প্রত্যক্ষ প্রমাণ।"
+     ],
+     "works": [
+      "স্বর্ণ-রৌপ্য মুদ্রা (আনু. ৪০০)",
+      "তাম্রপট্ট (৮)"
+     ],
+     "status": "verified",
+     "statusNote": "Banglapedia (en) Mainamati।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati",
+       "note": "খনন-তথ্য"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-harikela-coin",
+     "name": "হরিকেল ও আঞ্চলিক মুদ্রা",
+     "kind": "group",
+     "role": "মুদ্রা",
+     "era": "৮ম–১২শ শতক",
+     "place": "সমতট-হরিকেল অঞ্চল",
+     "claims": [
+      "হরিকেল জনপদের নিজস্ব রৌপ্য মুদ্রা (প্রতীক ও লিপি সহ) আবিষ্কৃত — বাংলার আঞ্চলিক অর্থনীতির সাক্ষ্য; বিস্তারিত এই সাইটের ৭ম রাউন্ডে।"
+     ],
+     "works": [
+      "হরিকেল রৌপ্য মুদ্রা"
+     ],
+     "status": "verified",
+     "statusNote": "এই সাইটের রাউন্ড ৭ ও বাংলাদেশ জাতীয় জাদুঘরের নথি।",
+     "sources": [
+      {
+       "label": "এই সাইট — বৌদ্ধ শাসন ও ইতিহাস",
+       "url": "history.html"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "site",
+       "label": "এই সাইট — হরিকেল-অধ্যায়",
+       "url": "history.html#dynasties",
+       "note": "রাউন্ড ৭-এর কাজ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-trade-guilds",
+     "name": "শ্রেণি-সংঘ ও নদীবাণিজ্য",
+     "kind": "group",
+     "role": "বণিক",
+     "era": "৮ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "শ্রেণি (গিল্ড)-ভিত্তিক বাণিজ্য ও নদীপথ — চর্যাপদে নৌকা চালনার উল্লেখ; বিহারগুলো এই পথেই সংযুক্ত।"
+     ],
+     "works": [
+      "শ্রেণি-সংঘ",
+      "নদীপথে বাণিজ্য"
+     ],
+     "status": "partial",
+     "statusNote": "বাংলার বৌদ্ধ-বণিকদের আলাদা নথি নেই; সাধারণ অর্থনীতি-ইতিহাস থেকে অনুমান।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — নৌকা",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A8%E0%A7%8C%E0%A6%95%E0%A6%BE"
+      },
+      {
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — নৌকা",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A8%E0%A7%8C%E0%A6%95%E0%A6%BE",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "ain",
+   "icon": "⚖️",
+   "name": "আইন, সংঘ-শাসন ও প্রশাসন",
+   "period": "৬ষ্ঠ খ্রি.পূ.–১২শ শতক",
+   "summary": "বিনয়পিটক পৃথিবীর প্রাচীনতম সংগঠন-বিধিগুলোর একটি — সভা, ভোট, অভিযোগ-নিষ্পত্তি ও শাস্তির নিয়ম লিখিত। তাম্রশাসন ছিল ভূমি-দানের আইনি দলিল।",
+   "philosophy": "সংঘের “অপলোকন” — অপরাধ স্বীকার করে সমাধান; আজকের আধুনিক পুনর্বাসনমূলক বিচার-ভাবনার প্রাচীন নমুনা।",
+   "entries": [
+    {
+     "id": "c-vinaya-law",
+     "name": "বিনয়পিটক: সংঘ-বিধি",
+     "kind": "group",
+     "role": "আইন-সংকলন",
+     "era": "বুদ্ধকাল",
+     "place": "মগধ-বঙ্গ সংযোগ",
+     "claims": [
+      "পারাজিকা, পাচিত্তিয়, মহাবগ্গ, চুল্লবগ্গ ও পরিবার — পাঁচ গ্রন্থে ভিক্ষু-জীবনের সম্পূর্ণ বিধি লিপিবদ্ধ।",
+      "মহাবগ্গকে বাংলাপিডিয়া “বৌদ্ধসংঘের উৎপত্তি ও বিকাশের গ্রন্থ” বলে; উপোসথ, প্রবারণা ও বর্ষাবাসের নিয়ম এতে।"
+     ],
+     "works": [
+      "পারাজিকা",
+      "পাচিত্তিয়",
+      "মহাবগ্গ",
+      "চুল্লবগ্গ",
+      "পরিবার"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (ত্রিপিটক)।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — ত্রিপিটক",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%BF%E0%A6%9F%E0%A6%95"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — ত্রিপিটক",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%BF%E0%A6%9F%E0%A6%95",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-copperplate",
+     "name": "তাম্রশাসন ও দান-দলিল",
+     "kind": "group",
+     "role": "প্রশাসন",
+     "era": "৭ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "তাম্রশাসনে রাজার ভূমি-দান আইনসম্মতভাবে লিপিবদ্ধ হতো — সীমানা, দাতা, প্রাপক ও শর্ত সহ। ময়নামতিতেই ৮টি তাম্রপট্ট মিলেছে।"
+     ],
+     "works": [
+      "শালবন/ময়নামতির তাম্রপট্ট",
+      "ভূমি-দান লিপি"
+     ],
+     "status": "verified",
+     "statusNote": "Banglapedia (en) Mainamati + বাংলাপিডিয়া (সোমপুরের সিল-লিপি)।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati"
+      },
+      {
+       "label": "বাংলাপিডিয়া — সোমপুর মহাবিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0%20%E0%A6%AE%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-gram-admin",
+     "name": "গ্রাম-প্রশাসন ও সংঘ-প্রভাব",
+     "kind": "group",
+     "role": "স্থানীয় প্রশাসন",
+     "era": "৭ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "বিহার-কেন্দ্রিক অর্থনীতি ও ভূমি-দানের ফলে গ্রাম-প্রশাসনে সংঘ-প্রভাব বাড়ে; স্থানীয় নাম (দেবপর্বত, সমতট) লিপিতে সংরক্ষিত।"
+     ],
+     "works": [
+      "দেবপর্বত-নামকরণ",
+      "সংঘ-নির্ভর গ্রাম-অর্থনীতি"
+     ],
+     "status": "partial",
+     "statusNote": "প্রশাসনিক কাঠামোর বিস্তারিত বিবরণ সূত্রে কম।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "bhasha",
+   "icon": "🔤",
+   "name": "ভাষা, ব্যাকরণ ও অভিধান",
+   "period": "১০ম–২১শ শতক",
+   "summary": "বাংলা ভাষার জন্ম-পর্বে বৌদ্ধ সহজিয়া গানের ভূমিকা সর্বজনস্বীকৃত। পালি-বাংলা অভিধান ও ব্যাকরণ রচনায় বাঙালি বৌদ্ধ পণ্ডিতরা পথিকৃৎ।",
+   "philosophy": "সহজিয়া গানের “সন্ধ্যা ভাষা” — রহস্যময় কিন্তু দেশজ; বাংলা কাব্য-ভাষার প্রথম স্তর।",
+   "entries": [
+    {
+     "id": "c-bangla-birth",
+     "name": "বাংলা ভাষার জন্মে বৌদ্ধ গান",
+     "kind": "group",
+     "role": "ভাষা-ইতিহাস",
+     "era": "১০ম–১২শ শতক",
+     "place": "বঙ্গ",
+     "claims": [
+      "চর্যাপদ বাংলা ভাষার আদি নিদর্শন; বিশ্লেষণে দেখা যায় বাংলা, অসমিয়া ও ওড়িয়া একই মূল কথ্য ভাষা থেকে এসেছে।",
+      "সহজ সাধনার গীতিধারা থেকেই পরে বৈষ্ণব পদাবলি ও বাউল-মারফতি গানের ভাষা গড়ে ওঠে।"
+     ],
+     "works": [
+      "চর্যাপদের ভাষা",
+      "সন্ধ্যা-ভাষা"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (চর্যাপদ, দর্শন) — দুই নিবন্ধেই সমর্থিত।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — চর্যাপদ",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      },
+      {
+       "label": "বাংলাপিডিয়া — দর্শন",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "চর্যাপদ পুঁথির পৃষ্ঠা",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%3B_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript%2C_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "ভাষার আদি নিদর্শন",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE;_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript,_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg",
+       "credit": "Mohmoni"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-pali-grammar",
+     "name": "পালি ব্যাকরণ ও অভিধান",
+     "kind": "group",
+     "role": "পণ্ডিত",
+     "era": "১৯শ–২১শ শতক",
+     "place": "চট্টগ্রাম, ঢাকা",
+     "claims": [
+      "নবরাজ বড়ুয়া বাংলায় পালি ব্যাকরণ লেখেন; অগ্গসার মহাস্থবির “পালি-বাংলা অভিধান” রচনা করেন।",
+      "আধুনিক যুগে শান্তরক্ষিত মহাস্থবিরের পালি-বাংলা অভিধান প্রকাশিত হয়।"
+     ],
+     "works": [
+      "বাংলা পালি ব্যাকরণ (নবরাজ)",
+      "পালি-বাংলা অভিধান (অগ্গসার)",
+      "পালি-বাংলা অভিধান (শান্তরক্ষিত)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (পালি)।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": "মূল পাঠ"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-pali-selection",
+     "name": "পাঠ্যবই ও নির্বাচন-সংকলন",
+     "kind": "group",
+     "role": "শিক্ষাবিদ",
+     "era": "১৯৫৩–১৯৬৮",
+     "place": "চট্টগ্রাম",
+     "claims": [
+      "প্রমোদরঞ্জন বড়ুয়া ম্যাট্রিকুলেশন পালি সিলেকশান (১৯৫৩), পালি গ্রামার (১৯৬১), এ নিউ পালি রীডার (১৯৬৮) প্রভৃতি রচনা করেন।"
+     ],
+     "works": [
+      "ম্যাট্রিকুলেশন পালি সিলেকশান (১৯৫৩)",
+      "পালি গ্রামার (১৯৬১)",
+      "এ নিউ পালি রীডার (১৯৬৮)",
+      "আর্লি বুদ্ধিজম অ্যান্ড দ্য ব্রাহ্মনিক্যাল ডকট্রিনস (১৯৬৭)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া (পালি)।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — পালি",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "book",
+       "label": "বাংলাপিডিয়া — পালি (গ্রন্থতালিকা)",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2%E0%A6%BF",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "jogajog",
+   "icon": "🛣️",
+   "name": "যোগাযোগ, পথ ও তীর্থযাত্রা",
+   "period": "৭ম–২১শ শতক",
+   "summary": "বিহারগুলো নদীপথ ও স্থলপথে যুক্ত ছিল; তিব্বতীয় ও চীনা ভিক্ষুরা বাংলায় আসতেন তীর্থে। আধুনিক যুগে সেই পথই পর্যটন-মার্গে পরিণত।",
+   "philosophy": "তীর্থ-সংকল্প — “চার পুণ্যতীর্থ” ধারণা বাংলার বৌদ্ধ লেখকদের রচনায়ও আসে।",
+   "entries": [
+    {
+     "id": "c-pilgrim-routes",
+     "name": "তীর্থপথ ও আন্তর্জাতিক যোগাযোগ",
+     "kind": "group",
+     "role": "পথ",
+     "era": "৮ম–১২শ শতক",
+     "place": "বঙ্গ–তিব্বত–নেপাল",
+     "claims": [
+      "তিব্বতীয় ভিক্ষুরা সোমপুরে পড়তে আসতেন; পথটি ছিল তিব্বত-নেপাল-বঙ্গ স্থলপথ।"
+     ],
+     "works": [
+      "সোমপুর-তিব্বত পথ"
+     ],
+     "status": "partial",
+     "statusNote": "পথের নির্দিষ্ট মানচিত্র বা স্টেশন-তালিকা পাওয়া যায়নি।",
+     "sources": [
+      {
+       "label": "বাংলাপিডিয়া — সোমপুর মহাবিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0%20%E0%A6%AE%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "doc",
+       "label": "বাংলাপিডিয়া — সোমপুর মহাবিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B8%E0%A7%8B%E0%A6%AE%E0%A6%AA%E0%A7%81%E0%A6%B0%20%E0%A6%AE%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0",
+       "note": ""
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-modern-pilgrimage",
+     "name": "আধুনিক তীর্থ ও পর্যটন-চর্চা",
+     "kind": "group",
+     "role": "আধুনিক",
+     "era": "২০–২১শ শতক",
+     "place": "বাংলাদেশ",
+     "claims": [
+      "বুদ্ধপূর্ণিমায় বিহার-কেন্দ্রিক তীর্থযাত্রা ও পাহাড়পুর-ময়নামতি পর্যটন আজ সংগঠিত; এই সাইট সেই ভ্রমণপথের তালিকা দেয়।"
+     ],
+     "works": [
+      "বুদ্ধপূর্ণিমা তীর্থ",
+      "প্রত্নস্থল-পর্যটন"
+     ],
+     "status": "verified",
+     "statusNote": "এই সাইটের ভ্রমণ-বিভাগ ও উৎসব-ট্র্যাকার।",
+     "sources": [
+      {
+       "label": "এই সাইট — স্থান-নির্দেশিকা",
+       "url": "index.html"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "site",
+       "label": "এই সাইট — ভ্রমণ-নির্দেশিকা",
+       "url": "index.html#travel-guide",
+       "note": "লাইভ তালিকা"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  },
+  {
+   "id": "protnototto",
+   "icon": "🏺",
+   "name": "প্রত্নতত্ত্ব, জাদুঘর ও সংরক্ষণ",
+   "period": "১৯২৩–বর্তমান",
+   "summary": "বৌদ্ধ ঐতিহ্যকে জানা গেছে খনন, জাদুঘর ও সংরক্ষণ-প্রচেষ্টার মাধ্যমে — কোটিলা মুড়া, শালবন, পাহাড়পুর। আজ জাদুঘরে সংরক্ষিত মূর্তি ও তাম্রপট্টই মূল সাক্ষ্য।",
+   "philosophy": "সংরক্ষণ = করুণা ও অহিংসার স্মৃতি-রক্ষা; বৌদ্ধ সম্প্রদায়ের উদ্যোগেই অনেক বিহার সংস্কার হয়।",
+   "entries": [
+    {
+     "id": "c-excavations",
+     "name": "প্রত্নখনন ও সংরক্ষণ",
+     "kind": "group",
+     "role": "প্রত্নতত্ত্ব",
+     "era": "১৯২৩–বর্তমান",
+     "place": "পাহাড়পুর, ময়নামতি, নওগাঁ",
+     "claims": [
+      "পাহাড়পুর ও ময়নামতির খননে বিহার, স্তূপ, চৈত্য ও মূর্তি আবিষ্কৃত হয়; ময়নামতিতে ৮টি তাম্রপট্ট ও ৪০০ মুদ্রা মিলেছে।"
+     ],
+     "works": [
+      "শালবন বিহার খনন",
+      "কোটিলা মুড়া",
+      "পাহাড়পুর খনন (ইউনেস্কো ১৯৮৫)"
+     ],
+     "status": "verified",
+     "statusNote": "বাংলাপিডিয়া ও ইউনেস্কো নথি।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati"
+      },
+      {
+       "label": "বাংলাপিডিয়া — শালবন বিহার",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8%20%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "label": "UNESCO World Heritage — Ruins of the Buddhist Vihara at Paharpur (১৯৮৫)",
+       "url": "https://whc.unesco.org/en/list/322"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "কোটিলা মুড়া",
+       "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A7%A7.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+       "note": "ময়নামতির প্রধান স্তূপ-অবশেষ",
+       "license": "CC BY 3.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE_%E0%A7%A7.png",
+       "credit": "Sabilaenun"
+      },
+      {
+       "type": "image",
+       "label": "ময়নামতি জাদুঘর",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Mainamati_Museum_in_2022.02.jpg/1280px-Mainamati_Museum_in_2022.02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "সংরক্ষিত প্রত্নবস্তু",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Mainamati_Museum_in_2022.02.jpg",
+       "credit": "CAPTAIN RAJU"
+      },
+      {
+       "type": "site",
+       "label": "ইউনেস্কো — Paharpur",
+       "url": "https://whc.unesco.org/en/list/322",
+       "note": "আন্তর্জাতিক তালিকা"
+      }
+     ],
+     "kingRef": null
+    },
+    {
+     "id": "c-museums",
+     "name": "জাদুঘর ও সংগ্রহ",
+     "kind": "group",
+     "role": "প্রতিষ্ঠান",
+     "era": "২০–২১শ শতক",
+     "place": "ঢাকা, ময়নামতি, পাহাড়পুর",
+     "claims": [
+      "বাংলাদেশ জাতীয় জাদুঘর, ময়নামতি জাদুঘর ও পাহাড়পুর সংগ্রহশালায় পাল-যুগীয় মূর্তি, টেরাকোটা ও পুথি সংরক্ষিত।"
+     ],
+     "works": [
+      "ময়নামতি জাদুঘর",
+      "পাহাড়পুর সংগ্রহশালা",
+      "জাতীয় জাদুঘর"
+     ],
+     "status": "verified",
+     "statusNote": "জাদুঘর-নথি ও বাংলাপিডিয়া।",
+     "sources": [
+      {
+       "label": "Banglapedia (en) — Mainamati",
+       "url": "https://en.banglapedia.org/index.php?title=Mainamati"
+      },
+      {
+       "label": "বাংলাপিডিয়া — ভাস্কর্য",
+       "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%AD%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AF"
+      }
+     ],
+     "evidence": [
+      {
+       "type": "image",
+       "label": "ময়নামতি জাদুঘর (২০২২)",
+       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Mainamati_Museum_in_2022.02.jpg/1280px-Mainamati_Museum_in_2022.02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+       "note": "সংগ্রহভবন",
+       "license": "CC BY-SA 4.0",
+       "source_page": "https://commons.wikimedia.org/wiki/File:Mainamati_Museum_in_2022.02.jpg",
+       "credit": "CAPTAIN RAJU"
+      }
+     ],
+     "kingRef": null
+    }
+   ],
+   "note": ""
+  }
+ ],
+ "rejected": [
+  {
+   "claim": "জগজ্জ্যোতিঃ পত্রিকা ১৯৫৭ সালে প্রথম প্রকাশিত হয়",
+   "who": "DeepSeek শেয়ার-লিংক",
+   "why": "বাংলাপিডিয়ার পালি নিবন্ধ অনুযায়ী জগজ্জ্যোতি ১৯০৮ সালে কলকাতা থেকে প্রকাশিত হয়। ১৯৫৭ সালের কোনো সূত্র পাওয়া যায়নি।",
+   "verdict": "বাতিল"
+  },
+  {
+   "claim": "আর্যভট্ট বাংলায় জ্যোতির্বিজ্ঞানে গণিত প্রয়োগ করেন",
+   "who": "DeepSeek শেয়ার-লিংক",
+   "why": "আর্যভট্ট (৪৭৬–৫৫০) পাটলিপুত্র-কেন্দ্রিক; বাংলার সঙ্গে সরাসরি যোগের প্রমাণ নেই। বাংলাপিডিয়াও জ্যোতির্বিজ্ঞানে বাংলার অবদান সীমিত বলে।",
+   "verdict": "বাতিল"
+  },
+  {
+   "claim": "বৌদ্ধ ভিক্ষু জীবক বাংলার চিকিৎসক ছিলেন",
+   "who": "DeepSeek শেয়ার-লিংক",
+   "why": "জীবক ছিলেন মগধের রাজবৈদ্য (বিম্বিসার ও বুদ্ধের চিকিৎসক) — বাঙালি নন, বাংলার অবদান নন।",
+   "verdict": "প্রাসঙ্গিক নয়"
+  },
+  {
+   "claim": "অশ্বঘোষ, নাগার্জুন, অসঙ্গ, বসুবন্ধু, দিঙ্নাগ — বাঙালি বৌদ্ধ পণ্ডিত",
+   "who": "DeepSeek শেয়ার-লিংক",
+   "why": "এঁরা বৌদ্ধ দর্শনের স্তম্ভ, কিন্তু বাংলার পূর্বে বা বাংলার বাইরে — বাঙালি পরিচয়ের সাক্ষ্য নেই। তালিকায় রাখা যায় “ভারতীয় বৌদ্ধ ঐতিহ্য” হিসেবে, “বাঙালি অবদান” হিসেবে নয়।",
+   "verdict": "বাতিল (বাঙালি-দাবি)"
+  },
+  {
+   "claim": "শ্রীধর ভট্ট বৌদ্ধ দার্শনিক",
+   "who": "DeepSeek শেয়ার-লিংক / বাংলাপিডিয়া বাক্যগঠন",
+   "why": "শ্রীধর ভট্ট ন্যায়-দার্শনিক (ন্যায়কন্দলী); তাঁর বৌদ্ধ-পরিচয় বিতর্কিত ও গবেষণায় অমীমাংসিত। বাংলাপিডিয়ার বাক্যটি গৌড়পাদ ও শ্রীধরকে একসাথে রেখে অস্পষ্টতা তৈরি করেছে।",
+   "verdict": "অনিশ্চিত"
+  },
+  {
+   "claim": "চর্যা নৃত্য সহস্রাব্দপ্রাচীন বাংলার আচার-নৃত্য",
+   "who": "DeepSeek শেয়ার-লিংক",
+   "why": "বাংলায় এর ধারাবাহিক প্রমাণ নেই; “চর্যা নৃত্য” নামে জীবিত ঐতিহ্য নেপালের নেওয়ার বৌদ্ধদের মধ্যে। বাংলার প্রমাণ হিসেবে উপস্থাপন করা যায় না।",
+   "verdict": "প্রমাণ অপ্রতুল"
+  },
+  {
+   "claim": "“পাঁচ বুদ্ধ”-এর প্রতিনিধিত্বকারী চর্যা নৃত্যের বর্ণনা",
+   "who": "DeepSeek শেয়ার-লিংক",
+   "why": "বর্ণনাটি কোথাও উদ্ধৃত হয়নি; কোনো প্রাথমিক বা দ্বিতীয় সূত্র দেখানো হয়নি।",
+   "verdict": "প্রমাণ অপ্রতুল"
+  },
+  {
+   "claim": "ময়নামতিতে “সাতটি ছোট ব্রোঞ্জের বুদ্ধমূর্তি, সোনার রঙের চিহ্নসহ, ১২শ শতকের প্রোটো-বাংলা লিপি”",
+   "who": "DeepSeek শেয়ার-লিংক",
+   "why": "ময়নামতিতে বহু ব্রোঞ্জ-মূর্তি পাওয়া গেছে (বাংলাপিডিয়া), কিন্তু ঠিক “সাতটি” ও “সোনার রঙের চিহ্ন” — এই দুটি বিবরণ স্বতন্ত্র সূত্রে মেলেনি। সংখ্যাটি অযাচাইকৃত।",
+   "verdict": "আংশিক বাতিল"
+  },
+  {
+   "claim": "গণিতে শূন্যের উদ্ভব বৌদ্ধ শূন্যতা-দর্শন থেকে",
+   "who": "DeepSeek শেয়ার-লিংক",
+   "why": "দার্শনিক শূন্যতা ও গাণিতিক শূন্য এক নয়; দাবিটির পক্ষে প্রমাণ নেই। অনুমান হিসেবে রাখা হয়েছে।",
+   "verdict": "অনুমান"
+  },
+  {
+   "claim": "বৌদ্ধ বিহারে যুদ্ধবিদ্যা ও শারীরিক শৃঙ্খলার চর্চা হতো",
+   "who": "DeepSeek শেয়ার-লিংক",
+   "why": "বিনয়পিটকে ভিক্ষুদের অস্ত্রধারণ নিষিদ্ধ; যুদ্ধ-প্রশিক্ষণের কোনো বিবরণ নেই। প্রতিরক্ষা-স্থাপত্যের প্রমাণ আছে, যুদ্ধবিদ্যার নয়।",
+   "verdict": "বাতিল"
+  },
+  {
+   "claim": "শান্তদেব নিশ্চিতভাবে বাঙালি",
+   "who": "বাংলাপিডিয়া বনাম তিব্বতীয় সূত্র",
+   "why": "বাংলাপিডিয়া তাঁকে প্রথম বাঙালি দার্শনিক বলে; তিব্বতীয় জীবনীতে জন্মস্থান সৌরাষ্ট্র বলা হয়। তাই “বাঙালি” পরিচয় আংশিক।",
+   "verdict": "বিতর্কিত"
+  }
+ ],
+ "conflicts": [
+  {
+   "topic": "জগজ্জ্যোতিঃ পত্রিকার সূচনা",
+   "a": "১৯০৮, কলকাতা (বাংলাপিডিয়া)",
+   "b": "১৯৫৭ (DeepSeek)",
+   "note": "বাংলাপিডিয়াকে গ্রহণ করা হলো; ১৯৫৭-র পক্ষে সূত্র নেই।"
+  },
+  {
+   "topic": "বৌদ্ধধর্মাঙ্কুর সভার প্রতিষ্ঠাকাল",
+   "a": "১৮৯১ (ধর্মাঙ্কুর বিহার-ভিত্তিক বিবরণ)",
+   "b": "১৮৯২ (কিছু সূত্র)",
+   "note": "রাউন্ড ৯-এ দুই তারিখই পাশাপাশি দেখানো হয়েছে।"
+  },
+  {
+   "topic": "রামচন্দ্র বড়ুয়ার গ্রন্থ-প্রকাশকাল",
+   "a": "১৯৩১ / ১৯৪১ / ১৯৪২ (বাংলাপিডিয়া)",
+   "b": "মৃত্যু ১৯২২",
+   "note": "মৃত্যুর পরে প্রকাশ — সম্ভবত সংকলন/পুনঃপ্রকাশ; কাল অনিশ্চিত হিসেবে চিহ্নিত।"
+  },
+  {
+   "topic": "“পাদিমুখ” বাংলায় পালি-বিষয়ক প্রথম বই",
+   "a": "অনেকে বলেন পাদিমুখ (ফুলচন্দ্র বড়ুয়া)",
+   "b": "কেউ কেউ বলেন মঘা খমুজা",
+   "note": "বাংলাপিডিয়াই দুই মত দেয়।"
+  },
+  {
+   "topic": "অতীশের তিব্বত-অবস্থান",
+   "a": "“দীর্ঘকাল” (বাংলাপিডিয়া)",
+   "b": "১৩ বছর (প্রচলিত বিবরণ)",
+   "note": "সংখ্যাটি একক সূত্রে নিশ্চিত নয়।"
+  }
+ ],
+ "stats": {
+  "domains": 26,
+  "entries": 83,
+  "verified": 53,
+  "partial": 19,
+  "thin": 10,
+  "rejected": 1
+ }
+}

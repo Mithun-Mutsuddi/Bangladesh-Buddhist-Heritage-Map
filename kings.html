@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#8f3d08">
   <title>রাজাদের প্রোফাইল — বৌদ্ধ শাসকদের ইতিহাস</title>
-  <meta name="description" content="মৌর্য থেকে দেব বংশ পর্যন্ত বৌদ্ধ যুগের ৫৭ জন রাজার আলাদা প্রোফাইল — রাজত্বকাল, রাজধানী, বৌদ্ধধর্মে অবদান, বিহার নির্মাণ, শিলালিপি, মুদ্রা ও ঐতিহ্য।">
+  <meta name="description" content="বৌদ্ধ শাসক, জমিদার ও পৃষ্ঠপোষক, পার্বত্য প্রধান মিলিয়ে ১১১ জন — রাজা, জমিদার, পণ্ডিত ও ভিক্ষু রাজা-রানির আলাদা প্রোফাইল — রাজত্বকাল, রাজধানী, বৌদ্ধধর্মে অবদান, বিহার নির্মাণ, শিলালিপি, মুদ্রা ও ঐতিহ্য।">
   <link rel="icon" href="buddhist-heritage-bd/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=20261021d">
-  <link rel="stylesheet" href="history.css?v=20261022b">
+  <link rel="stylesheet" href="history.css?v=20261022g">
 </head>
 <body>
   <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
@@ -26,7 +26,7 @@
       <nav class="site-nav" id="siteNav" aria-label="প্রধান নেভিগেশন">
         <a href="index.html">স্থান খুঁজুন</a>
         <a href="history.html">বৌদ্ধ শাসন ও ইতিহাস</a>
-        <a href="kings.html" aria-current="page">রাজাদের প্রোফাইল</a>
+        <a href="kings.html" aria-current="page">রাজাদের প্রোফাইল</a><a href="contribution.html">ক্ষেত্রভিত্তিক অবদান</a><a href="institutions.html">নতুন প্রতিষ্ঠান</a>
         <a href="history.html#timeline">সময়রেখা</a>
       </nav>
     </div>
@@ -52,6 +52,7 @@
         <p class="hist-sub" id="kingsSectionSub"></p>
         <div class="king-toolbar">
           <label class="king-search">🔎 <input id="kingSearch" type="search" placeholder="রাজার নাম বা রাজবংশ লিখুন…" autocomplete="off"></label>
+          <div class="role-jump" id="kingRoleFilters" aria-label="ভূমিকা অনুযায়ী ছাঁকনি"></div>
           <div class="dyn-jump" id="kingFilters"></div>
         </div>
         <div id="kingsList" class="kings-grid"></div>
@@ -66,7 +67,10 @@
           <li>রাজত্বকাল, রাজধানী, শিলালিপি ও দানের বিবরণ — <a href="https://bn.banglapedia.org/" target="_blank" rel="noopener noreferrer">বাংলাপিডিয়া</a>-র নিবন্ধ (Khadga Dynasty, Deva Dynasty, Pala Dynasty, Kamboja Gaudapatis) থেকে।</li>
           <li>প্রত্নতাত্ত্বিক প্রমাণের জন্য — <a href="https://archaeology.gov.bd/" target="_blank" rel="noopener noreferrer">বাংলাদেশ প্রত্নতত্ত্ব অধিদপ্তর</a> ও <a href="https://bangladeshmuseum.gov.bd/" target="_blank" rel="noopener noreferrer">বাংলাদেশ জাতীয় জাদুঘর</a>।</li>
           <li>যে রাজার সম্পর্কে প্রাথমিক সূত্র কম (শুধু নাম ও রাজত্বকাল জানা), তাঁর কার্ডে “সংক্ষিপ্ত তথ্য” লেখা থাকে — সেখানে অনুমান যোগ করা হয়নি।</li>
-          <li>ছবি/প্রতিকৃতি — <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">উইকিমিডিয়া কমন্স</a>, লাইসেন্স ও ফটোগ্রাফারের নামসহ।</li>
+          <li>ছবি/প্রতিকৃতি — <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">উইকিমিডিয়া কমন্স</a>, লাইসেন্স ও ফটোগ্রাফারের নামসহ। মধ্যযুগের আগের কারও প্রতিকৃতি পাওয়া যায় না, তাই মুদ্রা, শিলালিপি বা বিহারের ছবি দেওয়া হয়েছে — ছবির নিচে লেখা থাকে “প্রতিকৃতি পাওয়া যায়নি”, যাতে ভুল করে প্রতিকৃতি মনে না হয়।</li>
+          <li>রাউন্ড ৮-এ যোগ হওয়া জমিদার ও সমাজ-পৃষ্ঠপোষকদের তথ্য — বাংলাপিডিয়ার “পালি”, “বাংলাদেশ বৌদ্ধ সমিতি” ও “বৌদ্ধ ধর্মাঙ্কুর সভা” নিবন্ধ থেকে; যেখানে জীবনকাল কেবল স্থানীয় স্মারক-সূত্রে পাওয়া গেছে, সেখানে তা আলাদা করে লেখা আছে।</li>
+          <li>রাউন্ড ৯-এ যোগ হওয়া ভিক্ষু ও পণ্ডিতদের জীবনী — বাংলাপিডিয়ার ব্যক্তি-নিবন্ধ (“মহাস্থবির, কৃপাশরণ”, “ধর্মবংশ মহাস্থবির”, “মহাস্থবির, প্রজ্ঞালোক”, “মহাস্থবির, সাধনানন্দ”, “বড়ুয়া, বেণীমাধব”) এবং “পালি” নিবন্ধ থেকে; সত্যপ্রিয় মহাথেরের তথ্য দৈনিক পত্রিকার প্রতিবেদন থেকে (বাংলাপিডিয়ায় নিবন্ধ নেই)।</li>
+          <li><b>“স্থানীয়/পারিবারিক সূত্র”</b> ট্যাগ — মুৎসুদ্দী পরিবারের চারজনের ক্ষেত্রে ব্যবহৃত: নাম ও বিবরণ সংরক্ষণ করা হয়েছে, কিন্তু স্বতন্ত্র প্রকাশিত গবেষণায় যাচাই বাকি — তাই কার্ডে কমলা রঙের সতর্কতা-বাক্স দেওয়া আছে, কোনো তারিখ বা ঘটনা অনুমান করা হয়নি।</li>
         </ul>
       </div>
     </section>
@@ -79,6 +83,7 @@
     </div>
   </footer>
 
-  <script src="kings.js?v=20261022b" defer></script>
+  <script src="nav-mini.js?v=20261022a" defer></script>
+  <script src="kings.js?v=20261022i" defer></script>
 </body>
 </html>

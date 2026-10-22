@@ -32,7 +32,8 @@
       </figcaption></figure>`;
   }
 
-  const VERIFY_LABEL = { banglapedia: 'বাংলাপিডিয়া অনুসারে যাচাই', partial: 'আংশিক যাচাই — দ্বিতীয় সূত্র আছে', standard: 'সাধারণ ঐতিহাসিক ঐকমত্য' };
+  const VERIFY_LABEL = { banglapedia: 'বাংলাপিডিয়া অনুসারে যাচাই', partial: 'আংশিক যাচাই — দ্বিতীয় সূত্র আছে',
+    standard: 'সাধারণ ঐতিহাসিক ঐকমত্য', correction: 'সংশোধনী — এই নামে রাজবংশ পাওয়া যায়নি' };
   function rulerTable(rows, dynId) {
     if (!rows || !rows.length) return '';
     return `<table class="ruler-table"><caption>শাসকদের তালিকা (তারিখ আনুমানিক) · <a href="kings.html?dynasty=${encodeURIComponent(dynId)}">প্রতিটি রাজার আলাদা প্রোফাইল →</a></caption>
@@ -83,14 +84,15 @@
   function timeline(rows) {
     const svg = $('timelineSvg');
     if (!svg) return;
-    const min = -350, max = 1350, W = 1000, H = 520, L = 110, R = 30, T = 40, B = 40;
-    const x = v => L + (v - min) / (max - min) * (W - L - R);
     const rowsSorted = rows.slice().sort((a, b) => a.start - b.start);
+    const min = -350, max = Math.max(1360, ...rowsSorted.map(r => r.end)), W = 1000, L = 110, R = 30, T = 40, B = 40;
+    const H = Math.max(520, rowsSorted.length * 27 + 90);
+    const x = v => L + (v - min) / (max - min) * (W - L - R);
     const rowH = (H - T - B) / rowsSorted.length;
     const colors = ['#8f3d08', '#b64c0a', '#762d32', '#2f5b3d', '#7a5320', '#4b1f07'];
     let out = '';
-    const step = 100;
-    for (let y = -300; y <= 1300; y += step) {
+    const step = (max - min) > 1800 ? 200 : 100;
+    for (let y = Math.ceil(min / step) * step; y <= max; y += step) {
       const px = x(y).toFixed(1);
       out += `<line class="tl-tick" x1="${px}" y1="${T - 10}" x2="${px}" y2="${H - B + 10}"></line>`;
       out += `<text class="tl-tick-label" x="${px}" y="${H - B + 24}" text-anchor="middle">${y < 0 ? bn(Math.abs(y)) + ' খ্রিঃপূঃ' : bn(y)}</text>`;
@@ -106,6 +108,7 @@
         <text class="tl-label" x="${(L - 8).toFixed(1)}" y="${(y + h * 0.72).toFixed(1)}" text-anchor="end">${esc(r.label)}</text></a>`;
     });
     out += `<line class="tl-axis" x1="${L}" y1="${H - B}" x2="${W - R}" y2="${H - B}"></line>`;
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
     svg.innerHTML = out;
   }
 
