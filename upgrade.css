@@ -144,3 +144,10 @@ html,body{max-width:100%;overflow-x:clip}
 .map-action-status[data-kind="success"]{padding:8px 10px;border-radius:9px;background:#edf8ed;color:#215e31}
 @media(max-width:760px){#map{height:420px;min-height:340px}.map-service-tools{grid-template-columns:repeat(2,minmax(0,1fr))}.map-service-tools button{font-size:10px;padding:9px 7px}}
 @media(max-width:420px){#map{height:380px;min-height:320px}.map-service-tools{gap:6px}.map-service-tools button{font-size:10px}}
+
+/* ঠিকানা-বিবরণ: উপজেলা / থানা / ইউনিয়ন / গ্রাম / ডাকঘর */
+.locality-list { list-style: none; margin: 10px 0 4px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.locality-list li { display: flex; flex-direction: column; gap: 1px; padding: 7px 11px; border: 1px solid rgba(143,61,8,.18); border-radius: 10px; background: #fffaf0; min-width: 108px; }
+.locality-list li span { font-size: 10.5px; letter-spacing: .04em; color: #8a7767; text-transform: uppercase; }
+.locality-list li b { font-size: 13px; color: #4b2a12; font-weight: 700; }
+@media (max-width: 520px) { .locality-list li { min-width: 90px; flex: 1 1 40%; } }

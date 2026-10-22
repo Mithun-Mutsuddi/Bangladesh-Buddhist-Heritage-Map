@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>বৌদ্ধ শাসন ও ইতিহাস — বাংলাদেশ বৌদ্ধ ঐতিহ্য মানচিত্র</title>
+  <meta name="description" content="বাংলার বৌদ্ধ রাজবংশের পূর্ণাঙ্গ তালিকা—মৌর্য, শুঙ্গ, কুষাণ, কম্বোজ, খড়্গ, গুপ্ত, বর্মণ, গৌড়, ভদ্র, ভৌম-কার, পাল, চন্দ্র, দেব, সেন: সময়, রাজধানী, বিস্তৃতি, শাসক, মুদ্রা, স্থাপত্য, সাহিত্য, প্রশাসন ও পতন।">
+  <link rel="icon" href="buddhist-heritage-bd/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://upload.wikimedia.org">
+  <link rel="stylesheet" href="styles.css?v=20261021d">
+  <link rel="stylesheet" href="history.css?v=20261022a">
+</head>
+<body>
+  <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
+  <div class="flag-ribbon" aria-label="বৌদ্ধ ধর্মীয় পতাকার রং">
+    <span class="flag-blue"></span><span class="flag-yellow"></span><span class="flag-red"></span><span class="flag-white"></span><span class="flag-orange"></span><span class="flag-mixed"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="প্রথম পাতায় ফিরে যান">
+        <span class="brand-mark" aria-hidden="true">☸</span>
+        <span class="brand-copy"><strong>বৌদ্ধ ঐতিহ্য</strong><small>বাংলাদেশ · ভ্রমণ ও ইতিহাস</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">☰ <span class="sr-only">মেনু খুলুন</span></button>
+      <nav class="site-nav" id="siteNav" aria-label="প্রধান নেভিগেশন">
+        <a href="index.html">স্থান খুঁজুন</a>
+        <a href="index.html#map-section">মানচিত্র</a>
+        <a href="history.html" aria-current="page">বৌদ্ধ শাসন ও ইতিহাস</a>
+        <a href="#ruins">প্রত্ননিদর্শন</a>
+        <a href="#sources">তথ্যসূত্র</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hist-hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow">রাজবংশ · সময় · স্থাপত্য · সাহিত্য · মুদ্রা</p>
+        <h1 id="hist-title">বৌদ্ধ শাসন ও ইতিহাস</h1>
+        <p class="hist-lead" id="hist-lead"></p>
+        <p class="hist-note" id="hist-note"></p>
+        <div class="hist-actions">
+          <a class="hist-btn" href="#timeline">সময়রেখা দেখুন</a>
+          <a class="hist-btn ghost" href="#dynasties">রাজবংশের তালিকা</a>
+          <a class="hist-btn ghost" href="index.html">← স্থান-নির্দেশিকায় ফিরুন</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hist-section" id="timeline">
+      <div class="wrap">
+        <h2>তুলনামূলক সময়রেখা</h2>
+        <p class="hist-sub">খ্রিস্টপূর্ব ৩২২ থেকে ১৩১০ খ্রিস্টাব্দ — কোন রাজবংশ কোন সময়ে টিকে ছিল। ডান-বামে স্ক্রল করে দেখুন; নামের উপর ক্লিক করলে সেই রাজবংশের কার্ডে যাবে।</p>
+        <div class="timeline-scroll"><svg id="timelineSvg" role="img" aria-label="বৌদ্ধ রাজবংশগুলোর সময়রেখা" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMid meet"></svg></div>
+        <div class="era-cards" id="eraCards"></div>
+      </div>
+    </section>
+
+    <section class="hist-section" id="dynasties">
+      <div class="wrap">
+        <h2>রাজবংশগুলোর পূর্ণাঙ্গ পরিচিতি</h2>
+        <p class="hist-sub">প্রতিটি কার্ডে: সময়, রাজধানী, বিস্তৃতি, শাসকদের তালিকা, বৌদ্ধধর্মে অবদান, শিক্ষা, বিহার, জনকল্যাণ, স্থাপত্য, ভাস্কর্য, সাহিত্য, মুদ্রা, প্রশাসন, উত্থান-পতন এবং বাংলাদেশে টিকে থাকা স্মৃতিচিহ্ন।</p>
+        <nav class="dyn-jump" id="dynJump" aria-label="রাজবংশে যাওয়ার তালিকা"></nav>
+        <div id="dynList" class="dyn-list"></div>
+      </div>
+    </section>
+
+    <section class="hist-section alt" id="ruins">
+      <div class="wrap">
+        <h2>বাংলাদেশে যে প্রত্ননিদর্শন তাঁরা রেখে গেছেন</h2>
+        <p class="hist-sub">এই স্থানগুলোর পূর্ণ বিবরণ, মানচিত্র ও যোগাযোগ-তথ্য <a href="index.html">স্থান-নির্দেশিকায়</a> আছে।</p>
+        <div id="ruinsList" class="ruins-grid"></div>
+      </div>
+    </section>
+
+    <section class="hist-section" id="sources">
+      <div class="wrap">
+        <h2>তথ্যসূত্র ও ছবির উৎস</h2>
+        <p class="hist-sub">ছবি ও মানচিত্র ব্যবহার করা হয়েছে শুধু মুক্ত-লাইসেন্স (উইকিমিডিয়া কমন্স) সূত্র থেকে; প্রতিটি ছবির নিচে ফটোগ্রাফার/মানচিত্র-নির্মাতার নাম ও লাইসেন্স লেখা আছে।</p>
+        <ul id="sourceList" class="source-list"></ul>
+        <p class="hist-warn">সতর্কতা: প্রাচীন রাজ্যগুলোর সীমানা ও কিছু তারিখ নিয়ে গবেষকদের মধ্যে মতভেদ আছে। যেখানে তথ্য নিশ্চিত নয়, সেখানে “তথ্য সীমিত” লিখে দেওয়া হয়েছে — কোনো নাম, তারিখ বা রাজত্বকাল অনুমান করে বসানো হয়নি।</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hist-footer">
+    <div class="wrap">
+      <p>বাংলাদেশ বৌদ্ধ ঐতিহ্য মানচিত্র · ইতিহাস বিভাগ · ফাইল: <code>data/heritage-history.json</code></p>
+      <p><a href="index.html">স্থান-নির্দেশিকা</a> · <a href="index.html#historical-archive">ঐতিহাসিক আর্কাইভ</a> · <a href="#top">উপরে ফিরুন ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="history.js?v=20261022a" defer></script>
+</body>
+</html>
