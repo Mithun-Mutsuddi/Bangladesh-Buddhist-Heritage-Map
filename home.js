@@ -1,7 +1,7 @@
 /* চর্যাভূমি — হোমপেজ রেন্ডার (data/site-info.json + data/quiz-bank.json) */
 (function () {
   'use strict';
-  var INFO = 'data/site-info.json?v=20261022a';
+  var INFO = 'data/site-info.json?v=20261022d1';
   var QUIZ = 'data/quiz-bank.json?v=20261022a';
   var QUIZ2 = 'data/quiz-extra14.json?v=20261022b';   /* রাউন্ড ১৫ সংযোজন */
   var SITES = 'data/heritage-sites.json?v=20261022a';

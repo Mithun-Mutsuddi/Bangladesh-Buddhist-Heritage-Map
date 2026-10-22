@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#123f39">
+  <meta name="theme-color" content="#8f3d08">
   <title>চর্যাভূমি — বাংলাদেশের বৌদ্ধ ঐতিহ্য, ইতিহাস ও ভ্রমণ (ফ্রি)</title>
   <meta name="description" content="চর্যাভূমি (Charyabhumi) — বাংলাদেশের ৬৪ জেলার দর্শনীয় বৌদ্ধ স্থান, যাতায়াত, খরচ ও থাকার তথ্য; নিজের ভ্রমণ-ম্যাপ, ট্রিপ প্ল্যানার, ইতিহাস-শিল্পরীতি, কুইজ ও জরুরি নম্বর। ফ্রি, সাইন-আপ নেই, বিজ্ঞাপন নেই।">
   <meta name="keywords" content="বাংলাদেশ বৌদ্ধ বিহার, বৌদ্ধ ঐতিহ্য, বৌদ্ধ ভ্রমণ, Charyabhumi, Buddhist heritage Bangladesh, Buddhist travel Bangladesh">
   <meta property="og:title" content="চর্যাভূমি — বাংলাদেশের বৌদ্ধ ঐতিহ্য, ইতিহাস ও ভ্রমণ">
   <meta property="og:description" content="৬৪ জেলার বৌদ্ধ স্থান, ভ্রমণ-ম্যাপ, ট্রিপ প্ল্যানার, ইতিহাস ও কুইজ — সব এক জায়গায়, বিনামূল্যে।">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/brand/hero.svg">
+  <meta property="og:image" content="assets/brand/buddha-hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="charyabhumi.css?v=20261022b">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261022d1">
 </head>
 <body class="cb">
   <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
@@ -22,9 +22,12 @@
   <header class="cb-header" id="cbHeader"></header>
 
   <main id="main">
-    <!-- ================= হিরো ================= -->
-    <section class="cb-hero" id="top">
-      <div class="cb-hero-bg"><img src="assets/brand/hero.svg" alt="" width="1200" height="620"></div>
+    <!-- ================= হিরো =================
+         হিরো-অদলবদল: বুদ্ধের ছবি + পুরোনো ড্যাশবোর্ডের গেরুয়া-সোনালি থিম
+         (cb-hero-buddha, charyabhumi.css) এখন হোমে। আগের hero.svg থিম
+         গেছে index-old.html-এ (.hero-forest, styles.css)। -->
+    <section class="cb-hero cb-hero-photo cb-hero-buddha" id="top">
+      <div class="cb-hero-bg"><img src="assets/brand/buddha-hero.jpg" alt="" width="1600" height="900"></div>
       <div class="cb-wrap cb-hero-in">
         <p class="cb-kicker">☸ ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই</p>
         <h1>বাংলাদেশের <span class="accent">বৌদ্ধ ঐতিহ্য</span>,<br>এক জায়গায়</h1>
@@ -41,12 +44,14 @@
       </div>
     </section>
 
-    <!-- ================= বুদ্ধের ছবি + নতুন দুই পাতা ================= -->
+    <!-- ================= স্তূপের ছবি + নতুন দুই পাতা =================
+         বুদ্ধের ছবিটি এখন হোমের সবার ওপরের হিরোতে, তাই এখানে বসেছে
+         হোমের আগেকার হিরো-ইলাস্ট্রেশন (hero.svg) — একই ছবি পরপর দুবার নয়। -->
     <section class="cb-buddha" aria-labelledby="buddhaTitle">
       <div class="cb-wrap cb-buddha-in">
         <figure class="cb-buddha-fig">
-          <img src="assets/brand/buddha-hero.jpg" alt="সূর্যাস্তের আলোয় ধ্যানমগ্ন বুদ্ধমূর্তি, পেছনে প্রাচীন স্তূপ" width="1600" height="900" loading="lazy">
-          <figcaption>ধ্যানমগ্ন বুদ্ধমূর্তি — বৌদ্ধ ঐতিহ্যের চিরচেনা প্রতীক। ছবিটি সাইটের পুরোনো হোমপেজের, এখন আবার ফিরে এসেছে।</figcaption>
+          <img src="assets/brand/hero.svg" alt="সূর্যাস্তে স্তূপ ও বৌদ্ধ স্থাপত্যের আলংকারিক দৃশ্য" width="1200" height="620" loading="lazy">
+          <figcaption>সূর্যাস্তে স্তূপ — হোমপেজের আগেকার হিরো-ইলাস্ট্রেশন, এখন এই অংশে। ধ্যানমগ্ন বুদ্ধমূর্তির ছবিটি এখন হোমের সবার ওপরে।</figcaption>
         </figure>
         <div class="cb-buddha-text">
           <p class="cb-eyebrow">☸ নতুন দুই পাতা</p>
@@ -86,6 +91,11 @@
           <div class="cb-sitemap-col">
             <h3>📖 পড়া ও জানা</h3>
             <a href="philosophy.html">বৌদ্ধধর্ম ও দর্শন <small>নতুন</small></a>
+            <a href="philosophy.html#darshan">দর্শন চিত্রে ও চার্টে <small>ভবচক্র · ৩১ লোকভূমি · ধ্যান</small></a>
+            <a href="philosophy.html#grihi">গৃহী নীতি ও নৈতিকতা <small>পঞ্চশীল · সিগালোবাদ · নতুন</small></a>
+            <a href="philosophy.html#sutta">সূত্র ও গাথা <small>মহামঙ্গল · রতন · জিনপাঞ্জর</small></a>
+            <a href="philosophy.html#bandana">বন্দনা, উৎসর্গ ও জীবনাচার <small>বিবাহ · সৎকার</small></a>
+            <a href="#sanghamitra">সংঘমিত্রকে জিজ্ঞাসা করুন <small>শিশুর নাম · প্রতিষ্ঠানের নাম</small></a>
             <a href="calendar.html">পঞ্জিকা, ক্যালেন্ডার ও ঘড়ি <small>নতুন</small></a>
             <a href="history.html">ইতিহাস</a>
             <a href="culture.html">শিল্প ও সংস্কৃতি</a>
@@ -235,6 +245,53 @@
       </div>
     </section>
 
+    <!-- ================= সংঘমিত্র (পুরোনো ড্যাশবোর্ড থেকে সরানো) =================
+         উইজেটটি আগে index-old.html-এ ছিল (heritage-enhancements.js);
+         এখন হোমেরই স্বতন্ত্র সেকশন। স্ক্রিপ্ট: sanghamitra.js
+         স্থানীয় নিয়মভিত্তিক সহায়ক; window.SANGHAMITRA_API_URL বসালে লাইভ API। -->
+    <section class="cb-section" id="sanghamitra" aria-labelledby="sanghamitraTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">☸ সহায়ক</p>
+        <h2 id="sanghamitraTitle">সংঘমিত্রকে জিজ্ঞাসা করুন</h2>
+        <p class="cb-sub">ঐতিহ্য ও ইতিহাস, বিহারে যাওয়ার রুট, আচরণবিধি, উৎসবের পঞ্জিকা, গৃহী নীতি ও বন্দনা — আর নতুন করে <b>শিশুর ধর্মীয় নাম</b> এবং <b>প্রতিষ্ঠান ও স্থানের নামের সাজেশন</b>। নিচের যেকোনো বোতামে চাপ দিন, বা নিজের প্রশ্ন লিখুন।</p>
+        <div class="cb-sangha-grid">
+          <div>
+            <div class="cb-sangha-feats">
+              <div class="cb-promise"><i aria-hidden="true">👶</i><b>শিশুর ধর্মীয় নাম</b><p>পালি-মূলের অর্থসহ নাম; জন্মবার লিখলে ওই রীতির প্রথম বর্ণ অনুযায়ী। যেমন: “শনিবারে জন্ম নেওয়া মেয়ের নাম”।</p></div>
+              <div class="cb-promise"><i aria-hidden="true">🏛️</i><b>প্রতিষ্ঠান ও স্থানের নাম</b><p>বিহার, ভাবনাকেন্দ্র, স্কুল, লাইব্রেরি বা সেবা-সংগঠনের জন্য নামের খসড়া ধরন ও মূলশব্দের ভাণ্ডার।</p></div>
+              <div class="cb-promise"><i aria-hidden="true">🧭</i><b>ভ্রমণ ও আচরণবিধি</b><p>কোথায় যাবেন, কাছাকাছি কী সেবা, বিহারে কী মেনে চলবেন — সাইটেরই সংশ্লিষ্ট অংশের লিংকসহ।</p></div>
+              <div class="cb-promise"><i aria-hidden="true">📖</i><b>গৃহী নীতি ও সূত্র</b><p>পঞ্চশীল, সিগালোবাদ, মহামঙ্গল, বন্দনা — নতুন অধ্যায়ে সূত্র-রেফারেন্সসহ পথ দেখিয়ে দেবে।</p></div>
+            </div>
+            <p class="cb-note" style="margin-top:18px">ℹ️ এটি সাইটের স্থানীয় নিয়মভিত্তিক সহায়ক (ডেমো) — লাইভ AI/API, রিয়েল-টাইম তারিখ বা জরুরি সেবা ডাকার ব্যবস্থা যুক্ত নয়। লাইভ সংস্করণের জন্য <code>server/sanghamitra_api.py</code> রিপোতে প্রস্তুত আছে। জরুরি প্রয়োজনে <a href="about.html#emergency">জরুরি নম্বর</a> দেখুন।</p>
+          </div>
+          <div class="cb-sangha-panel">
+            <div class="cb-sangha-topbar">
+              <div><strong>সংঘমিত্র</strong><small>SanghaMitra · ঐতিহ্য, ভ্রমণ ও গৃহী সহায়ক</small></div>
+              <span class="wheel" aria-hidden="true">☸</span>
+            </div>
+            <div class="cb-sangha-messages" id="sanghaHomeMessages" aria-live="polite">
+              <div class="cb-sangha-msg bot"><p>নমস্কার! আমি সংঘমিত্র — আগে ছিলাম পুরোনো ড্যাশবোর্ডে, এখন হোমপেজেই। বিহারের ইতিহাস, ভ্রমণ রুট, উৎসব, আচরণবিধি কিংবা গৃহী নীতি জানতে চান?</p><p>নতুন করে <b>শিশুর ধর্মীয় নাম</b> এবং <b>বিহার/প্রতিষ্ঠানের নাম</b>-ও সাজেস্ট করতে পারি — নিচের বোতামে চাপ দিন।</p></div>
+            </div>
+            <div class="cb-sangha-quick">
+              <button type="button" data-sangha-home-quick="babyname">👶 শিশুর নাম</button>
+              <button type="button" data-sangha-home-quick="babygirl">🎀 মেয়ের নাম</button>
+              <button type="button" data-sangha-home-quick="weekday">📅 জন্মবারে নাম</button>
+              <button type="button" data-sangha-home-quick="placename">🏛️ বিহারের নাম</button>
+              <button type="button" data-sangha-home-quick="grihi">📖 গৃহী নীতি</button>
+              <button type="button" data-sangha-home-quick="route">🧭 ভ্রমণ রুট</button>
+              <button type="button" data-sangha-home-quick="etiquette">🙏 আচরণবিধি</button>
+              <button type="button" data-sangha-home-quick="festival">🌕 উৎসব</button>
+            </div>
+            <form class="cb-sangha-form" id="sanghaHomeForm">
+              <input id="sanghaHomeInput" type="text" autocomplete="off" maxlength="500" placeholder="প্রশ্ন লিখুন… যেমন: শুক্রবারে জন্ম নেওয়া ছেলের নাম" aria-label="সংঘমিত্রকে প্রশ্ন লিখুন" required>
+              <button type="submit" aria-label="প্রশ্ন পাঠান">➤</button>
+            </form>
+            <p class="cb-sangha-disclaimer">উত্তর সাজেশনের জন্য মাত্র — ধর্মীয় সিদ্ধান্তে নিজের বিহারের ভান্তের পরামর্শ নিন।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= যোগাযোগ ================= -->
     <section class="cb-section dark" id="contact" aria-labelledby="contactTitle">
       <div class="cb-wrap">
@@ -249,6 +306,7 @@
   <footer class="cb-footer" id="cbFooter"></footer>
 
   <script src="brand.js?v=20261022b" defer></script>
-  <script src="home.js?v=20261022b" defer></script>
+  <script src="home.js?v=20261022d1" defer></script>
+  <script src="sanghamitra.js?v=20261022d1" defer></script>
 </body>
 </html>

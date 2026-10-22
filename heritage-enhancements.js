@@ -39,10 +39,12 @@
       const travel = $('travel-guide');
       if (travel) travel.after(el); else ($('historical-archive') || document.querySelector('footer'))?.before(el);
     }
-    if (!$('sanghamitra-widget')) {
+    if (!$('sanghamitra-moved-note')) {
       const el = document.createElement('aside');
-      el.id='sanghamitra-widget'; el.className='sangha-widget';
-      el.innerHTML = '<button type="button" id="sanghaToggle" class="sangha-launcher" aria-expanded="false" aria-controls="sanghaPanel"><span aria-hidden="true">☸</span><span><strong>SanghaMitra Bot</strong><small>বাংলা · English</small></span><b>＋</b></button><div id="sanghaPanel" class="sangha-panel" hidden><div class="sangha-topbar"><div><strong>SanghaMitra Bot</strong><small>ঐতিহ্য ও ভ্রমণ সহায়ক / Heritage guide</small></div><button type="button" id="sanghaClose" aria-label="চ্যাট বন্ধ করুন">×</button></div><div id="sanghaMessages" class="sangha-messages" aria-live="polite"><div class="sangha-message bot">নমস্কার! কোন বিহারের ইতিহাস, ভ্রমণ রুট, উৎসব বা দর্শনার্থীর নিয়ম জানতে চান?<br><span>Hello! Ask about a site’s history, routes, festivals or visitor etiquette.</span></div></div><div class="sangha-quick-actions"><button type="button" data-sangha-quick="history">ইতিহাস</button><button type="button" data-sangha-quick="route">ভ্রমণ রুট</button><button type="button" data-sangha-quick="nearby">কাছাকাছি সেবা</button><button type="button" data-sangha-quick="etiquette">আচরণবিধি</button></div><form id="sanghaForm" class="sangha-form"><input id="sanghaInput" autocomplete="off" maxlength="500" placeholder="প্রশ্ন লিখুন… / Ask a question" aria-label="SanghaMitra-কে প্রশ্ন লিখুন" required><button type="submit" aria-label="প্রশ্ন পাঠান">➤</button></form><p class="sangha-disclaimer">এই ডেমো সাইটে স্থানীয় তথ্য-ভিত্তিক সহায়তা দেয়। লাইভ AI/API, real-time service checks বা emergency dispatch যুক্ত নয়।</p></div>';
+      el.id='sanghamitra-moved-note'; el.className='upgrade-caution sangha-moved-note';
+      /* সংঘমিত্র চ্যাট এখন নতুন হোমপেজে (index.html#sanghamitra, sanghamitra.js) —
+         এই এমবেডেড উইজেটটি ইচ্ছাকৃতভাবে খুলে নেওয়া হলো; নিচে পথনির্দেশ মাত্র। */
+      el.innerHTML = '☸ <strong>সংঘমিত্র সহায়ক এখন নতুন হোমপেজে:</strong> <a href="index.html#sanghamitra">হোমের সংঘমিত্র সেকশনে যান →</a> সেখানে শিশুর ধর্মীয় নাম ও প্রতিষ্ঠান/স্থানের নামের সাজেশনও যোগ হয়েছে।';
       const community = $('community-contact');
       const reportBar = community && community.querySelector('.community-report-bar');
       if (reportBar) reportBar.insertAdjacentElement('afterend', el);
@@ -393,7 +395,7 @@
   function init(){
     addSections();
     try{setupMapRecovery();}catch(e){console.error('Map recovery failed',e);const m=$('map');if(m)m.innerHTML='<div class="map-library-fallback"><strong>ম্যাপ শুরু করা যায়নি</strong><p>Google Maps-এ স্থাননাম অনুসন্ধান করুন বা পৃষ্ঠা reload করুন।</p></div>';}
-    setupTravel();setupCommunity();setupBot();setupFestivals();setupSeoContent();
+    setupTravel();setupCommunity();setupFestivals();setupSeoContent(); /* setupBot() বাদ: চ্যাট এখন হোমে */
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();

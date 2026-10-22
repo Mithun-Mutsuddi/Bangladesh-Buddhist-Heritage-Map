@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#123f39">
   <title>বৌদ্ধধর্ম ও দর্শন — বাংলায় কীভাবে এলো, থেরবাদ মহাযান বজ্রযান নবযান | চর্যাভূমি</title>
-  <meta name="description" content="বুদ্ধের জীবন, চতুরার্য সত্য ও অষ্টাঙ্গিক মার্গ, ত্রিপিটক, আর বাংলায় বৌদ্ধধর্মের সাড়ে আঠারো শ বছরের ইতিহাস — অশোক, সমতট, পাল, চর্যাপদ, সেন যুগ, নবযান পর্যন্ত, সূত্রসহ।">
+  <meta name="description" content="বুদ্ধের জীবন, মূল শিক্ষা ও বাংলায় বৌদ্ধধর্মের ইতিহাস; চিত্র ও চার্টে ভবচক্রের ১২ নিদান, ৩১ লোকভূমি, কর্ম, প্রতিসন্ধি, ধ্যান, চিত্ত-চৈতসিক, ২২৭ বিনয় ও ত্রিপিটক; সঙ্গে গৃহী নীতি, সূত্র-গাথা, বন্দনা, উৎসর্গ, প্রতীক ও জীবনাচার — সূত্র-রেফারেন্স ও পালি মূল পদসহ।">
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="charyabhumi.css?v=20261022b">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261022d1">
 </head>
 <body class="cb">
   <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
@@ -23,8 +23,10 @@
         <p class="cb-lead">বুদ্ধের জীবন ও মূল শিক্ষা, চারটি ধারা — থেরবাদ, মহাযান, বজ্রযান, নবযান — আর বাংলায় বৌদ্ধধর্ম কবে এলো, কীভাবে রাজপৃষ্ঠপোষকতা পেল, কেন দ্বাদশ শতকে হারিয়ে গেল: সব এক পাতায়, সূত্রসহ।</p>
         <div class="cb-actions">
           <a class="cb-btn" href="#life">বুদ্ধের জীবন</a>
+          <a class="cb-btn ghost" href="#darshan">দর্শন চিত্রে</a>
           <a class="cb-btn ghost" href="#bengal">বাংলার ইতিহাস</a>
-          <a class="cb-btn ghost" href="#schools">চার ধারা</a>
+          <a class="cb-btn ghost" href="#grihi">গৃহী নীতি</a>
+          <a class="cb-btn ghost" href="#bandana">বন্দনা ও জীবনাচার</a>
           <a class="cb-btn ghost" href="quiz.html">🎮 কুইজ</a>
         </div>
       </div>
@@ -34,11 +36,15 @@
       <div class="cb-wrap">
         <a href="#life">বুদ্ধের জীবন</a>
         <a href="#doctrine">মূল শিক্ষা</a>
+        <a href="#darshan">দর্শন চিত্রে</a>
         <a href="#bengal">বাংলায় ইতিহাস</a>
         <a href="#schools">চার ধারা</a>
         <a href="#tripitaka">ত্রিপিটক</a>
+        <a href="#grihi">গৃহী নীতি</a>
+        <a href="#sutta">সূত্র ও গাথা</a>
+        <a href="#bandana">বন্দনা ও জীবনাচার</a>
         <a href="#glossary">শব্দকোষ</a>
-        <a href="#sources">সূত্র</a>
+        <a href="#sources">তথ্যসূত্র</a>
       </div>
     </nav>
 
@@ -68,9 +74,28 @@
       </div>
     </section>
 
-    <section class="cb-section alt" id="bengal">
+    <!-- ================= দর্শন চিত্রে ও চার্টে =================
+         ডেটা: data/darshan.json · রেন্ডার ও ইনলাইন SVG: darshan.js
+         সূত্র, অভিধম্ম ও অট্ঠকথার স্তর আলাদা করে চিহ্নিত। -->
+
+    <section class="cb-section alt" id="darshan">
       <div class="cb-wrap">
-        <p class="cb-eyebrow">৩ · বাংলার ইতিহাস</p>
+        <p class="cb-eyebrow">৩ · ভিজ্যুয়াল দর্শন</p>
+        <h2 id="darshanTitle">দর্শন চিত্রে ও চার্টে</h2>
+        <p class="cb-sub" id="darshanLead">ভবচক্র, লোকভূমি, কর্ম, ধ্যান, মন ও বিনয়ের মানচিত্র লোড হচ্ছে…</p>
+        <div class="cb-d-hero-note">
+          <p id="darshanHow">গোলক, ধাপ বা বারে ক্লিক/ট্যাপ করলে নিচের ব্যাখ্যা বদলায়।</p>
+          <div class="cb-d-stats" id="darshanStats" aria-label="অধ্যায়ের প্রধান সংখ্যাসমূহ"></div>
+          <div class="cb-d-jump" id="darshanJump"></div>
+        </div>
+        <div id="darshanGroups"><p class="cb-sub">চিত্র ও চার্ট তৈরি হচ্ছে…</p></div>
+        <p class="cb-note" id="darshanNote"></p>
+      </div>
+    </section>
+
+    <section class="cb-section" id="bengal">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">৪ · বাংলার ইতিহাস</p>
         <h2 id="bengalTitle">বাংলায় বৌদ্ধধর্ম</h2>
         <p class="cb-sub" id="bengalLeads"></p>
         <ol class="cb-tl cb-tl-long" id="bengalList"></ol>
@@ -78,9 +103,9 @@
       </div>
     </section>
 
-    <section class="cb-section" id="schools">
+    <section class="cb-section alt" id="schools">
       <div class="cb-wrap">
-        <p class="cb-eyebrow">৪ · ধারা</p>
+        <p class="cb-eyebrow">৫ · ধারা</p>
         <h2 id="schTitle">চারটি ধারা</h2>
         <p class="cb-sub" id="schLeads"></p>
         <div class="cb-schools" id="schGrid"></div>
@@ -91,9 +116,9 @@
       </div>
     </section>
 
-    <section class="cb-section alt" id="tripitaka">
+    <section class="cb-section" id="tripitaka">
       <div class="cb-wrap">
-        <p class="cb-eyebrow">৫ · গ্রন্থ</p>
+        <p class="cb-eyebrow">৬ · গ্রন্থ</p>
         <h2 id="tripTitle">ত্রিপিটক</h2>
         <p class="cb-sub" id="tripLeads"></p>
         <div class="cb-pitakas" id="tripGrid"></div>
@@ -102,9 +127,47 @@
       </div>
     </section>
 
+    <!-- ================= গৃহী নীতি · সূত্র-গাথা · বন্দনা =================
+         ডেটা: data/practice.json · রেন্ডার: practice.js
+         যাচাইকৃত সার + পালি মূল পদ; পূর্ণ পাঠের লিংক প্রতিটি অনুচ্ছেদে। -->
+
+    <section class="cb-section alt" id="grihi">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">৭ · গৃহীজীবন</p>
+        <h2 id="grihiTitle">গৃহী নীতি ও নৈতিকতা</h2>
+        <p class="cb-sub">ত্রিপিটকে ভিক্ষুর পাশাপাশি গৃহীর জন্যও পরিপূর্ণ নৈতিক জীবনের কথা আছে — শীল, দান, ভাবনা, ন্যায্য জীবিকা ও পারিবারিক সম্পর্ক। যেকোনো শিরোনামে চাপ দিলে মূল উৎস, পালি মূল পদ ও আজকের জীবনে প্রয়োগ খুলবে।</p>
+        <div id="grihiList"><p class="cb-sub">লোড হচ্ছে…</p></div>
+        <p class="cb-note" id="grihiNote"></p>
+      </div>
+    </section>
+
+    <section class="cb-section" id="sutta">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">৮ · পাঠ ও ভাবনা</p>
+        <h2 id="suttaTitle">সূত্র ও গাথা</h2>
+        <p class="cb-sub">পরিত্রাণ-পাঠ ও ভাবনায় ব্যবহৃত প্রধান সুত্ত ও গাথা: কোনটি ত্রিপিটকের কোন অংশে, মূল পদ কী, কখন পাঠ হয়। কোনটি ক্যানোনিক্যাল আর কোনটি পরবর্তী পরিত্ত-গাথা, তা প্রতি অনুচ্ছেদে চিহ্নিত।</p>
+        <div id="suttaList"><p class="cb-sub">লোড হচ্ছে…</p></div>
+        <p class="cb-note" id="suttaNote"></p>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="bandana">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">৯ · চর্চা ও আচার</p>
+        <h2 id="bandanaTitle">বন্দনা, উৎসর্গ, প্রতীক ও জীবনাচার</h2>
+        <p class="cb-sub">গৃহে ও বিহারে প্রতিদিনের বন্দনা ও দানের প্রচলিত রূপ, বৌদ্ধ প্রতীক ও রঙের ব্যাখ্যা এবং বিবাহ ও সৎকারের ধর্মীয় অংশটুকু। উৎসর্গের গাথা বই ও অঞ্চলভেদে বদলায় — এখানে কাঠামো ও সর্বজনীন পদগুলোই দেওয়া হয়েছে।</p>
+        <div id="bandanaGroups"><p class="cb-sub">লোড হচ্ছে…</p></div>
+        <p class="cb-note" id="bandanaNote"></p>
+        <div class="cb-actions" style="margin-top:18px">
+          <a class="cb-btn solid" href="index.html#sanghamitra">☸ সংঘমিত্রকে জিজ্ঞাসা করুন</a>
+          <a class="cb-btn ghost" href="library.html">📚 বন্দনা ও দেশনার লাইব্রেরি</a>
+        </div>
+      </div>
+    </section>
+
     <section class="cb-section" id="glossary">
       <div class="cb-wrap">
-        <p class="cb-eyebrow">৬ · শব্দ</p>
+        <p class="cb-eyebrow">১০ · শব্দ</p>
         <h2 id="glosTitle">শব্দকোষ</h2>
         <dl class="cb-gloss" id="glosList"></dl>
       </div>
@@ -112,7 +175,7 @@
 
     <section class="cb-section alt" id="sources">
       <div class="cb-wrap">
-        <p class="cb-eyebrow">৭ · সূত্র</p>
+        <p class="cb-eyebrow">১১ · সূত্র</p>
         <h2 id="srcTitle">তথ্যসূত্র</h2>
         <p class="cb-sub">এই পাতার প্রতিটি বড় দাবির পাশে সূত্রের লিংক আছে। কোনো তথ্যে ভুল পেলে <a href="about.html#contact">আমাদের লিখুন</a> — সূত্রসহ সংশোধন করা হবে।</p>
         <ul class="cb-src-list" id="srcList"></ul>
@@ -128,5 +191,7 @@
   <footer class="cb-footer" id="cbFooter"></footer>
   <script src="brand.js?v=20261022b" defer></script>
   <script src="philosophy.js?v=20261022b" defer></script>
+  <script src="darshan.js?v=20261022d1" defer></script>
+  <script src="practice.js?v=20261022p1" defer></script>
 </body>
 </html>

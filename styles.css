@@ -446,3 +446,57 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .cp-actions .btn-ghost { background: #fff; border: 1px solid #cdd7d0; color: #0f4d2c; }
 .cp-status { margin: 0; font-size: 12px; color: #0f6b3d; min-height: 16px; }
 @media (max-width: 800px) { .photo-contribute { padding: 14px; } .community-photo img { height: 84px; } }
+
+/* ==========================================================================
+   হিরো-অদলবদল — পুরোনো ড্যাশবোর্ডে হোমের ছবি (.hero-forest)
+   নতুন হোমপেজের (index.html · charyabhumi.css) আগেকার হিরো-থিম এখানে:
+   assets/brand/hero.svg ইলাস্ট্রেশন + বনসবুজ (#123f39) / সোনালি ওভারলে।
+   শুধু index-old.html-এর হিরোর জন্য স্কোপড (.hero-forest) — এই styles.css
+   ব্যবহার করা অন্য পাতায় (history/culture/kings ইত্যাদি) কোনো প্রভাব নেই।
+   বুদ্ধের ছবির পুরোনো .hero / .hero-image নিয়ম ওপরে যেমন ছিল তেমনই আছে;
+   ফেরাতে চাইলে index-old.html থেকে hero-forest ক্লাস তুলে দিলেই ফিরে আসবে।
+   ========================================================================== */
+.hero-forest {
+  background: radial-gradient(ellipse at 78% 14%, rgba(245, 199, 106, .20), transparent 38%),
+              linear-gradient(116deg, #0a302d 0%, #123f39 53%, #1d5c4f 100%);
+}
+.hero-forest .hero-image {
+  inset: 0;
+  opacity: 1;
+  background-image: linear-gradient(115deg, rgba(9, 34, 30, .93) 0%, rgba(12, 46, 41, .82) 45%, rgba(12, 46, 41, .28) 100%),
+                    url("assets/brand/hero.svg");
+  background-position: center, center;
+  background-size: cover, cover;
+}
+.hero-forest .eyebrow { color: #f5c76a; }
+.hero-forest .eyebrow-line { background-color: #f5c76a; }
+.hero-forest h1 em { color: #f5c76a; }
+.hero-forest .hero-description { color: #e8efe9; }
+.hero-forest .hero-note { color: #cfe0d5; }
+.hero-forest .hero-wheel { color: #f5c76a; background-color: transparent; }
+.hero-forest .button-gold { background: #d99b2b; color: #3a1f08; }
+.hero-forest .button-gold:hover { background: #f5c76a; color: #3a1f08; }
+.hero-forest .button-glass { background: rgba(255, 255, 255, .06); color: #fff6e2; border-color: rgba(245, 199, 106, .5); }
+.hero-forest .button-glass:hover { background: rgba(245, 199, 106, .18); color: #fffaf0; }
+.hero-forest .hero-symbols { color: #f5c76a; }
+.hero-forest .symbol-swastika { border-color: rgba(245, 199, 106, .8); }
+
+@media (max-width: 900px) {
+  .hero-forest .hero-image {
+    background-image: linear-gradient(90deg, rgba(9, 34, 30, .97), rgba(12, 46, 41, .64)),
+                      linear-gradient(0deg, rgba(9, 34, 30, .45), transparent 58%),
+                      url("assets/brand/hero.svg");
+    background-position: center, center, center;
+    background-size: cover, cover, cover;
+  }
+}
+@media (max-width: 560px) {
+  .hero-forest { background: linear-gradient(130deg, #0a302d, #123f39); }
+  .hero-forest .hero-image {
+    background-image: linear-gradient(90deg, rgba(9, 34, 30, .72), rgba(12, 46, 41, .40)),
+                      linear-gradient(0deg, rgba(9, 34, 30, .38), transparent 65%),
+                      url("assets/brand/hero.svg");
+    background-position: center, center, center;
+    background-size: cover, cover, cover;
+  }
+}

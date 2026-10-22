@@ -701,3 +701,416 @@ body.cb {
 .cb-sitemap-col a:last-child { border-bottom: 0; }
 .cb-sitemap-col a:hover { color: var(--cb-bark); }
 .cb-sitemap-col a small { color: var(--cb-muted); font-size: 12px; margin-left: 6px; }
+
+/* ==========================================================================
+   হিরো-অদলবদল — হোমে বুদ্ধের ছবি (cb-hero-buddha)
+   পুরোনো ড্যাশবোর্ডের (index-old.html · styles.css) গেরুয়া-সোনালি হিরো-থিম
+   হুবহু এখানে আনা হয়েছে, শুধু হোমের হিরোর (index.html #top) জন্য।
+   .cb-hero-photo (philosophy.html) আগের সবুজ-বাদামি ওভারলেতেই আছে — বদলায়নি।
+   ছবি: assets/brand/buddha-hero.jpg (পুরোনো buddha-hero.png-র একই শিল্পচিত্রের
+   হালকা JPG সংস্করণ) — বুদ্ধমূর্তি ছবির ডানদিকে, লেখা বসে বাঁদিকের গাঢ় অংশে।
+   ========================================================================== */
+.cb-hero-buddha {
+  background: radial-gradient(ellipse at 78% 13%, rgba(255, 186, 72, .30), transparent 39%),
+              linear-gradient(116deg, #4b1f05 0%, #873708 54%, #ad4a0a 100%);
+}
+.cb-hero-buddha .cb-hero-bg img {
+  object-fit: cover; width: 100%; height: 100%;
+  opacity: 1; object-position: 63% center;
+}
+.cb-hero-buddha::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(73, 27, 2, .88) 0%, rgba(93, 36, 3, .68) 28%, rgba(109, 44, 4, .12) 70%, rgba(109, 44, 4, .04) 100%),
+              linear-gradient(0deg, rgba(57, 20, 0, .34), transparent 65%);
+}
+.cb-hero-buddha .cb-hero-in { position: relative; z-index: 2; }
+.cb-hero-buddha h1 .accent { color: #ffd17c; }
+.cb-hero-buddha .cb-lead { color: #fff0d9; }
+.cb-hero-buddha .cb-motto { color: #f1d8b5; }
+.cb-hero-buddha .cb-motto b { color: #ffd17c; }
+.cb-hero-buddha .cb-slogan { color: #ffe4ad; border-inline-start-color: #ffd17c; }
+.cb-hero-buddha .cb-kicker { color: #ffe4ad; border-color: rgba(255, 232, 190, .6); background: rgba(81, 32, 3, .38); }
+.cb-hero-buddha .cb-btn { background: #ffbd57; color: #512305; }
+.cb-hero-buddha .cb-btn:hover { background: #ffda91; color: #512305; }
+.cb-hero-buddha .cb-btn.ghost { background: rgba(81, 32, 3, .38); color: #fff6e2; border-color: rgba(255, 232, 190, .6); }
+.cb-hero-buddha .cb-btn.ghost:hover { background: rgba(255, 189, 87, .28); color: #fffaf0; }
+.cb-hero-buddha .cb-hero-stats div { background: rgba(81, 32, 3, .38); border-color: rgba(255, 232, 190, .35); }
+.cb-hero-buddha .cb-hero-stats b { color: #ffd17c; }
+.cb-hero-buddha .cb-hero-stats span { color: #f1d8b5; }
+.cb-hero-buddha .cb-coverage { background: rgba(81, 32, 3, .38); color: #fff0d9; border-color: rgba(255, 232, 190, .5); }
+.cb-hero-buddha .cb-coverage a { color: #ffd98e; }
+
+@media (max-width: 900px) {
+  .cb-hero-buddha::after {
+    background: linear-gradient(90deg, rgba(73, 27, 2, .65), rgba(88, 33, 3, .20)),
+                linear-gradient(0deg, rgba(57, 20, 0, .35), transparent 65%);
+  }
+  .cb-hero-buddha .cb-hero-bg img { object-position: 63% center; }
+}
+@media (max-width: 560px) {
+  .cb-hero-buddha { background: linear-gradient(130deg, #4b1f05, #873708); }
+  .cb-hero-buddha::after {
+    background: linear-gradient(90deg, rgba(70, 27, 2, .72), rgba(84, 32, 3, .40)),
+                linear-gradient(0deg, rgba(55, 18, 0, .38), transparent 65%);
+  }
+  .cb-hero-buddha .cb-hero-bg img { object-position: 65% center; }
+}
+
+/* ==========================================================================
+   রাউন্ড: গৃহী নীতি · সূত্র-গাথা · বন্দনা (philosophy.html · data/practice.json)
+   প্রতিটি বিষয় একটি করে <details>: শিরোনাম + রেফারেন্স-চিপ, ভেতরে পাঠ।
+   ========================================================================== */
+.cb-prac-group { margin-bottom: 42px; }
+.cb-prac {
+  background: var(--cb-white); border: 1px solid var(--cb-line); border-radius: var(--cb-radius-sm);
+  margin-bottom: 12px; box-shadow: var(--cb-shadow); overflow: hidden;
+}
+.cb-prac > summary {
+  list-style: none; cursor: pointer; padding: 15px 18px; display: flex; flex-wrap: wrap;
+  gap: 8px 14px; align-items: baseline; justify-content: space-between;
+}
+.cb-prac > summary::-webkit-details-marker { display: none; }
+.cb-prac > summary::after { content: "▸"; color: var(--cb-bark); font-weight: 800; margin-inline-start: auto; }
+.cb-prac[open] > summary::after { content: "▾"; }
+.cb-prac > summary:hover { background: var(--cb-forest-lite); }
+.cb-prac-title { font-weight: 700; font-size: 16px; color: var(--cb-forest); }
+.cb-prac-meta { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.cb-prac-ref {
+  font-size: 11.5px; font-weight: 700; padding: 2px 9px; border-radius: 999px;
+  background: var(--cb-forest-lite); color: var(--cb-forest); border: 1px solid #d3e5d9;
+}
+.cb-prac-status {
+  font-size: 11.5px; font-weight: 700; padding: 2px 9px; border-radius: 999px;
+  background: #fdf1dc; color: #8a5009; border: 1px solid #efd8a8;
+}
+.cb-prac-pali-name { font-size: 12.5px; color: var(--cb-muted); font-style: italic; }
+.cb-prac-body { padding: 0 18px 18px; }
+.cb-prac-body p { margin: 0 0 12px; font-size: 15px; color: var(--cb-ink-soft); }
+.cb-prac-verse {
+  margin: 0 0 14px; padding: 12px 16px; border-radius: var(--cb-radius-sm);
+  background: #fdf6e6; border: 1px dashed #e5cf9e;
+}
+.cb-prac-verse figcaption {
+  font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--cb-bark-soft); font-weight: 700; margin-bottom: 6px;
+}
+.cb-prac-verse blockquote {
+  margin: 0; font-size: 15px; line-height: 1.85; color: #5a3a12;
+}
+.cb-prac-points { margin: 0 0 6px; padding-inline-start: 22px; }
+.cb-prac-points li { margin-bottom: 7px; font-size: 14.5px; color: var(--cb-ink-soft); }
+.cb-prac-srcs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+
+/* ==========================================================================
+   সংঘমিত্র — নতুন হোমপেজের সেকশন (#sanghamitra · sanghamitra.js)
+   পুরোনো ড্যাশবোর্ডের উইজেট এখানে সরানো; থিম চর্যাভূমি-বনসবুজ/সোনালি।
+   ========================================================================== */
+.cb-sangha-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; align-items: start; }
+.cb-sangha-feats { display: grid; gap: 12px; margin-top: 18px; }
+.cb-sangha-panel {
+  display: flex; flex-direction: column; overflow: hidden;
+  border: 1px solid var(--cb-line); border-radius: var(--cb-radius);
+  background: var(--cb-paper); box-shadow: var(--cb-shadow-lg);
+}
+.cb-sangha-topbar {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 15px 18px; color: #fff8e9;
+  background: linear-gradient(135deg, var(--cb-forest), var(--cb-forest-mid) 60%, #7a4a12);
+}
+.cb-sangha-topbar strong, .cb-sangha-topbar small { display: block; }
+.cb-sangha-topbar strong { font-size: 16px; }
+.cb-sangha-topbar small { margin-top: 2px; color: #f3d4ab; font-size: 12px; }
+.cb-sangha-topbar .wheel { font-size: 26px; color: var(--cb-gold-lite); }
+.cb-sangha-messages {
+  display: flex; flex-direction: column; gap: 10px; overflow: auto;
+  min-height: 230px; max-height: 460px; padding: 15px;
+}
+.cb-sangha-msg {
+  max-width: 96%; padding: 11px 13px; border-radius: 14px;
+  border: 1px solid var(--cb-line); background: var(--cb-forest-lite);
+  color: var(--cb-ink-soft); font-size: 14px; line-height: 1.75; overflow-wrap: anywhere;
+}
+.cb-sangha-msg.user { align-self: flex-end; background: var(--cb-forest); color: #fff8e6; border-color: var(--cb-forest); }
+.cb-sangha-msg p { margin: 0 0 7px; }
+.cb-sangha-msg p:last-child { margin-bottom: 0; }
+.cb-sangha-msg .cb-sangha-note { font-size: 12px; color: var(--cb-muted); }
+.cb-sangha-names { margin: 4px 0 8px; padding-inline-start: 20px; }
+.cb-sangha-names li { margin-bottom: 4px; }
+.cb-sangha-links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 8px; }
+.cb-sangha-links a {
+  padding: 6px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700;
+  text-decoration: none; color: var(--cb-forest); background: var(--cb-white);
+  border: 1px solid var(--cb-line);
+}
+.cb-sangha-links a:hover { background: var(--cb-forest); color: #fff8e6; }
+.cb-sangha-quick { display: flex; flex-wrap: wrap; gap: 7px; padding: 0 13px 12px; }
+.cb-sangha-quick button {
+  padding: 7px 11px; border: 1px solid var(--cb-line); border-radius: 999px;
+  color: var(--cb-forest); background: var(--cb-sand); font: inherit; font-size: 12.5px; cursor: pointer;
+}
+.cb-sangha-quick button:hover { background: var(--cb-gold-lite); color: #3a1f08; }
+.cb-sangha-form {
+  display: flex; gap: 8px; padding: 11px; border-top: 1px solid var(--cb-line); background: var(--cb-sand);
+}
+.cb-sangha-form input {
+  flex: 1; min-width: 0; padding: 11px 13px; border: 1.5px solid var(--cb-line);
+  border-radius: 12px; font: inherit; font-size: 14px; background: var(--cb-white);
+}
+.cb-sangha-form input:focus { outline: 2px solid var(--cb-gold); outline-offset: 1px; border-color: var(--cb-gold); }
+.cb-sangha-form button[type="submit"] {
+  width: 46px; border: 0; border-radius: 12px; cursor: pointer; font-size: 17px;
+  color: #3a1f08; background: var(--cb-gold);
+}
+.cb-sangha-form button[type="submit"]:hover { background: var(--cb-gold-lite); }
+.cb-sangha-disclaimer { margin: 0; padding: 0 13px 12px; font-size: 12px; color: var(--cb-muted); line-height: 1.65; }
+@media (max-width: 900px) {
+  .cb-sangha-grid { grid-template-columns: 1fr; gap: 22px; }
+  .cb-sangha-messages { max-height: 380px; }
+}
+@media print {
+  .cb-prac .cb-prac-body { display: block; }
+  .cb-prac > summary::after { content: none; }
+}
+
+/* ==========================================================================
+   দর্শন চিত্রে ও চার্টে — philosophy.html #darshan · darshan.js
+   সব ছবি ইনলাইন SVG/HTML; বাংলা লেবেল, মোবাইলে স্কেল, প্রিন্টে ব্যবহারযোগ্য।
+   ========================================================================== */
+.cb-d-hero-note {
+  display: grid; gap: 14px; margin: 20px 0 26px; padding: 18px;
+  border: 1px solid var(--cb-line); border-radius: var(--cb-radius);
+  background: linear-gradient(135deg, #fffaf0, var(--cb-forest-lite));
+}
+.cb-d-hero-note p { margin: 0; color: var(--cb-ink-soft); font-size: 14.5px; }
+.cb-d-stats {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;
+}
+.cb-d-stat {
+  padding: 13px 10px; text-align: center; border-radius: 14px;
+  background: rgba(255, 255, 255, .78); border: 1px solid var(--cb-line);
+}
+.cb-d-stat strong { display: block; color: var(--cb-bark); font-size: 26px; line-height: 1.1; }
+.cb-d-stat span { display: block; margin-top: 3px; color: var(--cb-muted); font-size: 12.5px; line-height: 1.35; }
+.cb-d-jump > p { margin: 0 0 8px; color: var(--cb-forest); font-weight: 800; font-size: 13px; }
+.cb-d-jump > div { display: flex; flex-wrap: wrap; gap: 7px; }
+.cb-d-jump button {
+  padding: 7px 10px; border: 1px solid var(--cb-line); border-radius: 999px;
+  background: var(--cb-white); color: var(--cb-forest); font: inherit;
+  font-size: 12.5px; font-weight: 650; cursor: pointer; text-align: left;
+}
+.cb-d-jump button:hover, .cb-d-jump button:focus-visible {
+  background: var(--cb-forest); color: #fff8e6; border-color: var(--cb-forest);
+}
+.cb-d-group { margin: 34px 0 44px; scroll-margin-top: 90px; }
+.cb-d-group-head {
+  margin-bottom: 16px; padding: 0 0 12px; border-bottom: 2px solid var(--cb-sand-deep);
+}
+.cb-d-group-head h3 { margin: 0 0 6px; color: var(--cb-forest); font-size: clamp(21px, 3vw, 28px); }
+.cb-d-group-head p { margin: 0; max-width: 860px; color: var(--cb-ink-soft); font-size: 15px; }
+.cb-d-topic { scroll-margin-top: 92px; }
+.cb-d-topic > summary { align-items: flex-start; }
+.cb-d-summary {
+  display: block; flex-basis: 100%; color: var(--cb-muted);
+  font-size: 13.5px; line-height: 1.55; font-weight: 400;
+}
+.cb-d-topic[open] .cb-prac-body { animation: cbDFade .35s ease both; }
+@keyframes cbDFade {
+  from { opacity: .25; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.cb-d-viz {
+  margin: 18px 0; padding: 18px; overflow: hidden;
+  border: 1px solid var(--cb-line); border-radius: var(--cb-radius);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(245, 199, 106, .2), transparent 34%),
+    linear-gradient(145deg, #fffdf7, #f5f0df);
+  box-shadow: var(--cb-shadow);
+}
+.cb-d-viz-title {
+  margin: 0 0 14px; color: var(--cb-forest); font-size: 17px; font-weight: 800;
+}
+.cb-d-caption { margin: 14px 0 0; color: var(--cb-muted); font-size: 13px; line-height: 1.65; }
+.cb-d-info {
+  margin-top: 15px; padding: 16px 17px; border-radius: 15px;
+  border: 1px solid #cddacd; background: rgba(255, 255, 255, .9);
+  border-inline-start: 5px solid var(--cb-gold);
+}
+.cb-d-info.is-changing { animation: cbDInfo .3s ease both; }
+@keyframes cbDInfo { from { opacity: .35; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+.cb-d-info-kicker {
+  margin: 0 0 4px !important; color: var(--cb-bark-soft) !important;
+  font-size: 12px !important; font-weight: 800; letter-spacing: .02em;
+}
+.cb-d-info h4 { margin: 0 0 6px; color: var(--cb-forest); font-size: 19px; line-height: 1.35; }
+.cb-d-info h4 span { color: var(--cb-muted); font-size: 13px; font-weight: 500; font-style: italic; }
+.cb-d-info p:last-child { margin-bottom: 0; }
+
+/* ----- প্রবাহ ও ধাপ ----- */
+.cb-d-flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; }
+.cb-d-flow.is-steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cb-d-node {
+  position: relative; flex: 1 1 150px; min-height: 92px; padding: 13px 13px 12px 48px;
+  border: 1.5px solid var(--cb-line); border-radius: 15px; background: rgba(255, 255, 255, .9);
+  color: var(--cb-ink-soft); font: inherit; text-align: left; cursor: pointer;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+.cb-d-flow.is-flow .cb-d-node:not(:last-child)::after {
+  content: "→"; position: absolute; top: 50%; inset-inline-end: -14px; z-index: 2;
+  transform: translateY(-50%); color: var(--cb-bark); font-weight: 900; font-size: 18px;
+}
+.cb-d-node:hover { transform: translateY(-2px); border-color: var(--cb-gold); }
+.cb-d-node:focus-visible, .cb-d-bar:focus-visible, .cb-d-controls button:focus-visible {
+  outline: 3px solid rgba(217, 155, 43, .55); outline-offset: 2px;
+}
+.cb-d-node.is-active {
+  border-color: var(--cb-forest); background: var(--cb-forest); color: #fff7df;
+  box-shadow: 0 10px 22px rgba(18, 63, 57, .18);
+}
+.cb-d-node-num {
+  position: absolute; top: 13px; inset-inline-start: 12px; display: grid; place-items: center;
+  width: 27px; height: 27px; border-radius: 50%; background: var(--cb-gold-lite);
+  color: #4a2605; font-size: 13px; font-weight: 900;
+}
+.cb-d-node strong { display: block; font-size: 15.5px; line-height: 1.4; }
+.cb-d-node small { display: block; margin-top: 3px; color: var(--cb-muted); font-size: 12px; font-style: italic; line-height: 1.4; }
+.cb-d-node em { display: block; margin-top: 5px; color: var(--cb-bark-soft); font-size: 12px; font-style: normal; line-height: 1.45; }
+.cb-d-node.is-active small { color: #cfe0d5; }
+.cb-d-node.is-active em { color: #f5c76a; }
+
+/* ----- বার চার্ট ----- */
+.cb-d-bars { display: grid; gap: 8px; }
+.cb-d-bar {
+  display: grid; grid-template-columns: minmax(150px, .9fr) 2fr 46px; gap: 12px; align-items: center;
+  width: 100%; padding: 10px 12px; border: 1px solid transparent; border-radius: 12px;
+  background: rgba(255, 255, 255, .72); color: var(--cb-ink-soft); font: inherit; text-align: left; cursor: pointer;
+}
+.cb-d-bar:hover { border-color: var(--cb-gold); }
+.cb-d-bar.is-active { border-color: var(--cb-forest); background: #eef5ef; }
+.cb-d-bar-label strong { display: block; color: var(--cb-forest); font-size: 14px; line-height: 1.35; }
+.cb-d-bar-label small { display: block; color: var(--cb-muted); font-size: 11.5px; font-style: italic; }
+.cb-d-bar-track { display: block; height: 16px; overflow: hidden; border-radius: 999px; background: #e7dcc3; }
+.cb-d-bar-track i {
+  display: block; width: 0; height: 100%; border-radius: inherit;
+  background: linear-gradient(90deg, var(--cb-forest-mid), var(--cb-gold));
+  transition: width .8s cubic-bezier(.2, .7, .2, 1);
+}
+.cb-d-viz.inview .cb-d-bar-track i { width: var(--w); }
+.cb-d-bar b { color: var(--cb-bark); font-size: 17px; text-align: right; }
+
+/* ----- ভবচক্র ----- */
+.cb-d-wheel-layout { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(280px, .92fr); gap: 20px; align-items: start; }
+.cb-d-wheel-layout .cb-d-info { margin-top: 0; position: sticky; top: 92px; }
+.cb-d-wheel-svg { display: block; width: 100%; max-width: 680px; height: auto; margin: 0 auto; }
+.cb-d-wheel-outer { fill: #fffaf0; stroke: var(--cb-sand-deep); stroke-width: 2; }
+.cb-d-wheel-spin {
+  fill: none; stroke: rgba(143, 61, 8, .34); stroke-width: 2; stroke-dasharray: 8 13;
+  transform-origin: 380px 380px; animation: cbDWheelSpin 70s linear infinite;
+}
+@keyframes cbDWheelSpin { to { transform: rotate(360deg); } }
+.cb-d-wheel-ring { fill: none; stroke: #cdbd96; stroke-width: 3; }
+.cb-d-wheel-arrow { fill: var(--cb-bark-soft); opacity: .78; }
+.cb-d-wheel-center { fill: var(--cb-forest); stroke: var(--cb-gold); stroke-width: 4; }
+.cb-d-wheel-center-kicker { fill: #f5c76a; font-size: 17px; font-weight: 700; text-anchor: middle; }
+.cb-d-wheel-center-main { fill: #fff8e6; font-size: 25px; font-weight: 800; text-anchor: middle; }
+.cb-d-wheel-center-sub { fill: #dbe9de; font-size: 16px; text-anchor: middle; }
+.cb-d-wheel-node { cursor: pointer; outline: none; }
+.cb-d-wheel-node circle {
+  stroke-width: 3; transition: filter .18s ease, stroke .18s ease, transform .18s ease;
+  transform-box: fill-box; transform-origin: center;
+}
+.cb-d-wheel-node.g0 circle { fill: #f2c894; stroke: #b5571f; }
+.cb-d-wheel-node.g1 circle { fill: #dcead9; stroke: #4c7a5b; }
+.cb-d-wheel-node.g2 circle { fill: #f5d7d7; stroke: #a44747; }
+.cb-d-wheel-node.g3 circle { fill: #d9e0ee; stroke: #536b91; }
+.cb-d-wheel-node:hover circle, .cb-d-wheel-node:focus circle { filter: brightness(1.05); stroke: var(--cb-forest); stroke-width: 5; }
+.cb-d-wheel-node.is-active circle { stroke: var(--cb-bark); stroke-width: 7; filter: drop-shadow(0 5px 8px rgba(74, 38, 5, .22)); }
+.cb-d-wheel-num { fill: #6b3d11; font-size: 15px; font-weight: 900; text-anchor: middle; pointer-events: none; }
+.cb-d-wheel-label { fill: #263d36; font-weight: 800; text-anchor: middle; pointer-events: none; }
+.cb-d-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 8px; }
+.cb-d-controls button {
+  padding: 8px 12px; border: 1px solid var(--cb-line); border-radius: 999px;
+  background: var(--cb-white); color: var(--cb-forest); font: inherit; font-size: 13px; font-weight: 750; cursor: pointer;
+}
+.cb-d-controls button:hover, .cb-d-controls button[aria-pressed="true"] {
+  background: var(--cb-gold); border-color: var(--cb-gold); color: #3a1f08;
+}
+
+/* ----- লোকভূমি ----- */
+.cb-d-planes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; align-items: start; }
+.cb-d-plane-group { overflow: hidden; border: 1px solid var(--cb-line); border-radius: 15px; background: rgba(255, 255, 255, .78); }
+.cb-d-plane-group h4 { margin: 0; padding: 12px 13px 3px; color: var(--cb-forest); font-size: 16px; }
+.cb-d-plane-group > p { margin: 0; padding: 0 13px 11px; color: var(--cb-muted); font-size: 12px; line-height: 1.45; }
+.cb-d-plane-group ol { margin: 0; padding: 9px; list-style: none; }
+.cb-d-plane-group li { margin: 0 0 6px; padding: 8px 9px; border-radius: 10px; background: #f7f0db; border: 1px solid rgba(143, 61, 8, .09); }
+.cb-d-plane-group li:last-child { margin-bottom: 0; }
+.cb-d-plane-group strong { display: block; color: var(--cb-ink); font-size: 13.5px; line-height: 1.4; }
+.cb-d-plane-group span { display: block; color: var(--cb-muted); font-size: 11.5px; font-style: italic; line-height: 1.35; }
+.cb-d-plane-group small { display: block; margin-top: 3px; color: var(--cb-bark-soft); font-size: 11.5px; line-height: 1.45; }
+.cb-d-plane-group.p0 li { background: #e3e9f3; }
+.cb-d-plane-group.p1 li { background: #f4e6c2; }
+.cb-d-plane-group.p2 li { background: #e6ecdc; }
+.cb-d-plane-group li.is-human {
+  background: var(--cb-forest); border-color: var(--cb-forest); box-shadow: 0 7px 16px rgba(18, 63, 57, .16);
+}
+.cb-d-plane-group li.is-human strong { color: #fff8e6; }
+.cb-d-plane-group li.is-human span { color: #cfe0d5; }
+.cb-d-plane-group li.is-human small { color: #f5c76a; }
+
+/* ----- ট্রি ও তালিকা ----- */
+.cb-d-tree { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 13px; }
+.cb-d-tree-col { padding: 15px; border: 1px solid var(--cb-line); border-radius: 15px; background: rgba(255, 255, 255, .82); }
+.cb-d-tree-col > h4 { margin: 0 0 5px; color: var(--cb-forest); font-size: 16px; }
+.cb-d-tree-sub { margin: 0 0 11px !important; color: var(--cb-muted) !important; font-size: 12.5px !important; }
+.cb-d-tree-items { display: grid; gap: 8px; }
+.cb-d-tree-items article { padding: 10px 11px; border-inline-start: 4px solid var(--cb-gold); border-radius: 9px; background: var(--cb-sand); }
+.cb-d-tree-items strong { display: block; color: var(--cb-ink); font-size: 14px; line-height: 1.45; }
+.cb-d-tree-items p { margin: 3px 0 0 !important; font-size: 12.8px !important; line-height: 1.55; }
+.cb-d-list { margin: 18px 0; }
+.cb-d-list > h4 { margin: 0 0 9px; color: var(--cb-forest); font-size: 16px; }
+.cb-d-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.cb-d-chips span {
+  padding: 7px 10px; border: 1px solid var(--cb-line); border-radius: 999px;
+  background: #fffaf0; color: var(--cb-ink-soft); font-size: 13px; line-height: 1.45;
+}
+.cb-d-viz .cb-table-wrap { margin-top: 0; }
+
+@media (max-width: 980px) {
+  .cb-d-planes { grid-template-columns: 1fr; }
+  .cb-d-plane-group ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .cb-d-plane-group li { margin: 0; }
+}
+@media (max-width: 780px) {
+  .cb-d-stats { grid-template-columns: repeat(2, 1fr); }
+  .cb-d-stat:last-child { grid-column: 1 / -1; }
+  .cb-d-wheel-layout { grid-template-columns: 1fr; }
+  .cb-d-wheel-layout .cb-d-info { position: static; }
+  .cb-d-flow.is-steps { grid-template-columns: 1fr; }
+  .cb-d-flow.is-flow { display: grid; grid-template-columns: 1fr; }
+  .cb-d-flow.is-flow .cb-d-node:not(:last-child)::after {
+    content: "↓"; inset-inline-end: 18px; top: auto; bottom: -17px; transform: none;
+  }
+  .cb-d-bar { grid-template-columns: minmax(118px, .8fr) 1.4fr 38px; gap: 8px; padding: 9px; }
+  .cb-d-viz { padding: 13px; }
+}
+@media (max-width: 520px) {
+  .cb-d-plane-group ol { grid-template-columns: 1fr; }
+  .cb-d-bar { grid-template-columns: 1fr 36px; }
+  .cb-d-bar-track { grid-column: 1 / -1; order: 3; }
+  .cb-d-bar b { order: 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cb-d-wheel-spin { animation: none; }
+  .cb-d-topic[open] .cb-prac-body, .cb-d-info.is-changing { animation: none; }
+  .cb-d-node, .cb-d-bar-track i, .cb-d-wheel-node circle { transition: none; }
+}
+@media print {
+  .cb-d-controls, .cb-d-jump { display: none !important; }
+  .cb-d-viz, .cb-d-topic, .cb-d-plane-group, .cb-d-tree-col { box-shadow: none; break-inside: avoid; }
+  .cb-d-wheel-spin { animation: none; }
+  .cb-d-bar-track i { width: var(--w) !important; }
+  .cb-d-wheel-layout .cb-d-info { position: static; }
+}
+.cb-d-topic > summary .cb-prac-title { order: 1; }
+.cb-d-topic > summary .cb-prac-meta { order: 2; }
+.cb-d-topic > summary .cb-d-summary { order: 3; flex: 1 1 calc(100% - 34px); }
+.cb-d-topic > summary::after { order: 4; margin-inline-start: 0; }
