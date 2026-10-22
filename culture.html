@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>বৌদ্ধ শিল্প, সমাজ-আচার, ভিক্ষু-জীবন ও ইতিহাস — সহজ ব্যাখ্যা</title>
+  <meta name="description" content="বৌদ্ধ শিল্পরীতি (মুদ্রা, ৩২ মহাপুরুষলক্ষণ, স্তূপ-চৈত্য-চালা-গম্বুজ, পটচিত্র, কীর্তন, পোশাক), জন্ম-বিয়ে-মৃত্যুর আচার, ভিক্ষুর দিনলিপি এবং বাঙালি বৌদ্ধ ইতিহাস ও পদবি — প্রতিটি এন্ট্রিতে ছবি, ভিডিও, অডিও ও বই (PDF)।">
+  <link rel="icon" href="buddhist-heritage-bd/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261021d">
+  <link rel="stylesheet" href="history.css?v=20261022i">
+</head>
+<body>
+  <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
+  <div class="flag-ribbon" aria-label="বৌদ্ধ ধর্মীয় পতাকার রং">
+    <span class="flag-blue"></span><span class="flag-yellow"></span><span class="flag-red"></span><span class="flag-white"></span><span class="flag-orange"></span><span class="flag-mixed"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="প্রথম পাতায় ফিরে যান">
+        <span class="brand-mark" aria-hidden="true">☸</span>
+        <span class="brand-copy"><strong>বৌদ্ধ ঐতিহ্য</strong><small>বাংলাদেশ · ভ্রমণ ও ইতিহাস</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">☰ <span class="sr-only">মেনু খুলুন</span></button>
+      <nav class="site-nav" id="siteNav" aria-label="প্রধান নেভিগেশন">
+        <a href="index.html">স্থান খুঁজুন</a>
+        <a href="history.html">ইতিহাস</a>
+        <a href="culture.html" aria-current="page">শিল্প ও সংস্কৃতি</a>
+        <a href="kings.html">রাজাদের প্রোফাইল</a>
+        <a href="contribution.html">ক্ষেত্রভিত্তিক অবদান</a>
+        <a href="library.html">লাইব্রেরি</a>
+        <a href="institutions.html">প্রতিষ্ঠান</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hist-hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow">রাউন্ড ১২ · শিল্প · আচার · ভিক্ষু · ইতিহাস</p>
+        <h1>শিল্পরীতি, সমাজ-আচার, ভিক্ষু-জীবন ও বাঙালি বৌদ্ধ ইতিহাস</h1>
+        <p class="hist-lead" id="culLead">চারটি বড় বিভাগ। প্রতিটি এন্ট্রিতে ছবি, আর প্রতিটি বিভাগে ছবি-ভিডিও-অডিও-PDF — চারটিই আছে। যেখানে প্রমাণ সরু, সেখানেই সেটি লেখা আছে।</p>
+        <p class="hist-note" id="culNote"></p>
+        <div class="contrib-stats" id="culStats" aria-live="polite"></div>
+        <div class="hist-actions">
+          <a class="hist-btn ghost" href="#browse">বিভাগ বেছে নিন ↓</a>
+          <a class="hist-btn ghost" href="library.html">পুরো লাইব্রেরি</a>
+          <a class="hist-btn ghost" href="history.html">রাজবংশের ইতিহাস</a>
+        </div>
+        <nav class="cul-jump" id="culJump" aria-label="বিভাগে যান"></nav>
+      </div>
+    </section>
+
+    <section class="hist-section" id="browse">
+      <div class="wrap">
+        <h2>খুঁজুন ও ছেঁকে নিন</h2>
+        <p class="hist-sub">যেমন লিখুন: “মুদ্রা”, “৩২ লক্ষণ”, “চালা”, “বিয়ে”, “শ্রাদ্ধ”, “পদবি”, “চা”, “চর্যাপদ”, “দিনলিপি”। ভিডিও, অডিও বা বই (PDF) আছে এমন এন্ট্রি আলাদা করে দেখতেও পারবেন।</p>
+        <div class="lib-toolbar">
+          <label class="king-search">🔎 <input id="culSearch" type="search" placeholder="শব্দ / বিষয় / সূত্র…" autocomplete="off"></label>
+          <label class="lib-select"><span>মিডিয়া</span>
+            <select id="culMedia">
+              <option value="all">সব এন্ট্রি</option>
+              <option value="image">ছবি আছে</option>
+              <option value="video">ভিডিও আছে</option>
+              <option value="audio">অডিও আছে</option>
+              <option value="pdf">বই/PDF আছে</option>
+            </select>
+          </label>
+          <button type="button" class="lib-reset" id="culReset">ছাঁকনি মুছুন</button>
+        </div>
+        <div class="lib-filters" id="culSectionFilters" role="group" aria-label="বিভাগ অনুযায়ী ছাঁকনি"></div>
+        <p class="hist-sub lib-count" id="culCount" aria-live="polite"></p>
+        <div id="culList" class="cul-sections"></div>
+        <p class="hist-sub contrib-empty" id="culEmpty" hidden>কিছু পাওয়া যায়নি। অন্য শব্দে চেষ্টা করুন বা “ছাঁকনি মুছুন” চাপুন।</p>
+      </div>
+    </section>
+
+    <section class="hist-section alt" id="legend">
+      <div class="wrap">
+        <h2>কীভাবে পড়বেন</h2>
+        <div class="cul-legend" id="culLegend"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>☸ বৌদ্ধ ঐতিহ্য — বাংলাদেশের বৌদ্ধ বিহার, প্রত্নস্থল ও ইতিহাসের ডেটাসেট।</p>
+      <div class="footer-links"><a href="index.html">স্থান খুঁজুন</a><a href="history.html">ইতিহাস</a><a href="culture.html">শিল্প ও সংস্কৃতি</a><a href="kings.html">রাজাদের প্রোফাইল</a><a href="contribution.html">অবদান</a><a href="library.html">লাইব্রেরি</a><a href="institutions.html">প্রতিষ্ঠান</a></div>
+    </div>
+  </footer>
+
+  <script src="nav-mini.js?v=20261022a" defer></script>
+  <script src="culture.js?v=20261022a" defer></script>
+</body>
+</html>

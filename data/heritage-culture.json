@@ -1,0 +1,1816 @@
+{
+ "schema_version": "2026-10-22.culture.v1",
+ "generated_at": "2026-10-22",
+ "title": "বৌদ্ধ শিল্প, সমাজ ও ইতিহাস — রাউন্ড ১২",
+ "intro": "চারটি বিভাগে সাজানো: শিল্প-সংস্কৃতির রীতি, সমাজ-আচার, ভিক্ষু-জীবন এবং বাঙালি বৌদ্ধ ইতিহাস। প্রতিটি এন্ট্রিতে ছবি আছে, প্রতিটি বিভাগে ছবি-ভিডিও-অডিও-PDF চারটিই আছে। যেখানে প্রমাণ সরু, সেখানে ‘যাচাই বাকি’ লেখা হয়েছে।",
+ "notes": [
+  "প্রতিটি এন্ট্রির média-রেফারেন্স হয় রাউন্ড ১১-এর লাইব্রেরি আইটেম (lib: আইডি), নয়তো উইকিমিডিয়া কমন্সের ছবি।",
+  "যে দাবির লিখিত সূত্র পাওয়া যায়নি, সেটি status=\"thin\" এবং লেখায় ‘যাচাই বাকি’ বলে চিহ্নিত।",
+  "ছবির লাইসেন্স ও মূল পাতা প্রতিটি ছবির নিচে দেওয়া আছে।"
+ ],
+ "status_labels": {
+  "verified": "সূত্রে নিশ্চিত",
+  "partial": "আংশিক — কিছু অংশ লোকাচার/সেকেন্ডারি",
+  "thin": "সরু প্রমাণ — যাচাই বাকি"
+ },
+ "images": {
+  "mudra-bhumisparsha": {
+   "key": "mudra-bhumisparsha",
+   "title": "Buddha in Bhumisparsha Mudra - Bronze - Circa 18th Century CE - ACCN 12-275 - Government Museum - Mathura 2013-02-24 6576.JPG",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Buddha_in_Bhumisparsha_Mudra_-_Bronze_-_Circa_18th_Century_CE_-_ACCN_12-275_-_Government_Museum_-_Mathura_2013-02-24_6576.JPG/1280px-Buddha_in_Bhumisparsha_Mudra_-_Bronze_-_Circa_18th_Century_CE_-_ACCN_12-275_-_Government_Museum_-_Mathura_2013-02-24_6576.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Buddha_in_Bhumisparsha_Mudra_-_Bronze_-_Circa_18th_Century_CE_-_ACCN_12-275_-_Government_Museum_-_Mathura_2013-02-24_6576.JPG",
+   "license": "CC BY 3.0",
+   "artist": "Biswarup Ganguly"
+  },
+  "mudra-dhyana": {
+   "key": "mudra-dhyana",
+   "title": "Sculpture of Buddha seated in Dhyana Mudra, circa 700 CE, Sandstone Sanchi Museum, Madhya Pradesh.jpg",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/63/Sculpture_of_Buddha_seated_in_Dhyana_Mudra%2C_circa_700_CE%2C_Sandstone_Sanchi_Museum%2C_Madhya_Pradesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Sculpture_of_Buddha_seated_in_Dhyana_Mudra,_circa_700_CE,_Sandstone_Sanchi_Museum,_Madhya_Pradesh.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "SpeakingArch"
+  },
+  "mudra-dharmachakra": {
+   "key": "mudra-dharmachakra",
+   "title": "Buddha - Dharmachakra Pravartana Mudra - Bodh Gaya ASI Museum - AN - 1128.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Buddha_-_Dharmachakra_Pravartana_Mudra_-_Bodh_Gaya_ASI_Museum_-_AN_-_1128.jpg/1280px-Buddha_-_Dharmachakra_Pravartana_Mudra_-_Bodh_Gaya_ASI_Museum_-_AN_-_1128.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Buddha_-_Dharmachakra_Pravartana_Mudra_-_Bodh_Gaya_ASI_Museum_-_AN_-_1128.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Sumitsurai"
+  },
+  "mudra-abhaya": {
+   "key": "mudra-abhaya",
+   "title": "Buddha - Abhaya Mudra - Bodh Gaya ASI Museum - AN - 0001.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Buddha_-_Abhaya_Mudra_-_Bodh_Gaya_ASI_Museum_-_AN_-_0001.jpg/1280px-Buddha_-_Abhaya_Mudra_-_Bodh_Gaya_ASI_Museum_-_AN_-_0001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Buddha_-_Abhaya_Mudra_-_Bodh_Gaya_ASI_Museum_-_AN_-_0001.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Sumitsurai"
+  },
+  "footprints": {
+   "key": "footprints",
+   "title": "013 Siripada (Buddha's Footprints) (9222192156).jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/013_Siripada_%28Buddha%27s_Footprints%29_%289222192156%29.jpg/1280px-013_Siripada_%28Buddha%27s_Footprints%29_%289222192156%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:013_Siripada_(Buddha%27s_Footprints)_(9222192156).jpg",
+   "license": "CC BY 2.0",
+   "artist": "Photo Dharma from Penang, Malaysia"
+  },
+  "lakshana": {
+   "key": "lakshana",
+   "title": "Buddha - Sandstone - ca 5th Century CE - Gupta Period - Sarnath - ACCN S 16-A25085 - Indian Museum - Kolkata 2016-03-06 1492.JPG",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Buddha_-_Sandstone_-_ca_5th_Century_CE_-_Gupta_Period_-_Sarnath_-_ACCN_S_16-A25085_-_Indian_Museum_-_Kolkata_2016-03-06_1492.JPG/1280px-Buddha_-_Sandstone_-_ca_5th_Century_CE_-_Gupta_Period_-_Sarnath_-_ACCN_S_16-A25085_-_Indian_Museum_-_Kolkata_2016-03-06_1492.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Buddha_-_Sandstone_-_ca_5th_Century_CE_-_Gupta_Period_-_Sarnath_-_ACCN_S_16-A25085_-_Indian_Museum_-_Kolkata_2016-03-06_1492.JPG",
+   "license": "CC BY 3.0",
+   "artist": "Biswarup Ganguly"
+  },
+  "ushnisha": {
+   "key": "ushnisha",
+   "title": "Ushnisha, Covering for the head of the Buddha.jpg",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Ushnisha%2C_Covering_for_the_head_of_the_Buddha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Ushnisha,_Covering_for_the_head_of_the_Buddha.jpg",
+   "license": "CC0",
+   "artist": "The Museum of Fine Arts, Houston"
+  },
+  "stupa-sanchi": {
+   "key": "stupa-sanchi",
+   "title": "Stupa 1, Sanchi 02.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Stupa_1%2C_Sanchi_02.jpg/1280px-Stupa_1%2C_Sanchi_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Stupa_1,_Sanchi_02.jpg",
+   "license": "CC BY-SA 3.0",
+   "artist": "Bernard Gagnon"
+  },
+  "somapura-aerial": {
+   "key": "somapura-aerial",
+   "title": "Aerial view of Somapura Mahavihara.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Aerial_view_of_Somapura_Mahavihara.jpg/1280px-Aerial_view_of_Somapura_Mahavihara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Somapura_Mahavihara.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Md. Ahsanul Haque Nayem"
+  },
+  "charchala": {
+   "key": "charchala",
+   "title": "Charchala temple at Putsuri in Purba Bardhaman district 01.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Charchala_temple_at_Putsuri_in_Purba_Bardhaman_district_01.jpg/1280px-Charchala_temple_at_Putsuri_in_Purba_Bardhaman_district_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Charchala_temple_at_Putsuri_in_Purba_Bardhaman_district_01.jpg",
+   "license": "CC BY 4.0",
+   "artist": "Amitabha Gupta"
+  },
+  "temple-class": {
+   "key": "temple-class",
+   "title": "Classification of Bengal Temple Architecture 12.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Classification_of_Bengal_Temple_Architecture_12.jpg/1280px-Classification_of_Bengal_Temple_Architecture_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Classification_of_Bengal_Temple_Architecture_12.jpg",
+   "license": "CC BY 4.0",
+   "artist": "Arunava Sanyal"
+  },
+  "gombuj": {
+   "key": "gombuj",
+   "title": "Shat Gombuj Mosque 0016.JPG",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Shat_Gombuj_Mosque_0016.JPG/1280px-Shat_Gombuj_Mosque_0016.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Shat_Gombuj_Mosque_0016.JPG",
+   "license": "CC BY 3.0",
+   "artist": "Belayet (User:Bellayet)"
+  },
+  "kantajew": {
+   "key": "kantajew",
+   "title": "Kantajew Temple by Ahammed Saad (2).jpg",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/35/Kantajew_Temple_by_Ahammed_Saad_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Kantajew_Temple_by_Ahammed_Saad_(2).jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Ahammed Saad"
+  },
+  "songket": {
+   "key": "songket",
+   "title": "Melestarikan Songket Palembang.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Melestarikan_Songket_Palembang.jpg/1280px-Melestarikan_Songket_Palembang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Melestarikan_Songket_Palembang.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Afrinaldi Zulhen"
+  },
+  "bodhidharma": {
+   "key": "bodhidharma",
+   "title": "BodhidharmaYoshitoshi1887.jpg",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a2/BodhidharmaYoshitoshi1887.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:BodhidharmaYoshitoshi1887.jpg",
+   "license": "Public domain",
+   "artist": "Yoshitoshi"
+  },
+  "dharmachakra-symbol": {
+   "key": "dharmachakra-symbol",
+   "title": "Dharma wheel icon.png",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/49/Dharma_wheel_icon.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Dharma_wheel_icon.png",
+   "license": "Public domain",
+   "artist": "GrandEscogriffe"
+  },
+  "vajra-bell": {
+   "key": "vajra-bell",
+   "title": "Buddhist ritual bell, five-pronged vajra handle featuring images of five vidyarajah, China, Tang dynasty, 8th century, gilt bronze - Tokyo National Museum - DSC05196.JPG",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Buddhist_ritual_bell%2C_five-pronged_vajra_handle_featuring_images_of_five_vidyarajah%2C_China%2C_Tang_dynasty%2C_8th_century%2C_gilt_bronze_-_Tokyo_National_Museum_-_DSC05196.JPG/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Buddhist_ritual_bell,_five-pronged_vajra_handle_featuring_images_of_five_vidyarajah,_China,_Tang_dynasty,_8th_century,_gilt_bronze_-_Tokyo_National_Museum_-_DSC05196.JPG",
+   "license": "Public domain",
+   "artist": "Daderot"
+  },
+  "mandala": {
+   "key": "mandala",
+   "title": "Buddhist Monks performing traditional Sand mandala made from coloured sand.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Buddhist_Monks_performing_traditional_Sand_mandala_made_from_coloured_sand.jpg/1280px-Buddhist_Monks_performing_traditional_Sand_mandala_made_from_coloured_sand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Buddhist_Monks_performing_traditional_Sand_mandala_made_from_coloured_sand.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Karan"
+  },
+  "bodhi-leaf": {
+   "key": "bodhi-leaf",
+   "title": "Bo tree leaf.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Bo_tree_leaf.jpg/1280px-Bo_tree_leaf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Bo_tree_leaf.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Kamindamanuraj"
+  },
+  "incense": {
+   "key": "incense",
+   "title": "Offering of the First Incense 2.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Offering_of_the_First_Incense_2.jpg/1280px-Offering_of_the_First_Incense_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Offering_of_the_First_Incense_2.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": ""
+  },
+  "monk-village": {
+   "key": "monk-village",
+   "title": "Buddhist monk in village temple, Bangladesh.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Buddhist_monk_in_village_temple%2C_Bangladesh.jpg/1280px-Buddhist_monk_in_village_temple%2C_Bangladesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Buddhist_monk_in_village_temple,_Bangladesh.jpg",
+   "license": "Public domain",
+   "artist": "Creator:Harrison Forman"
+  },
+  "purnima": {
+   "key": "purnima",
+   "title": "Buddha Purnima 1.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Buddha_Purnima_1.jpg/1280px-Buddha_Purnima_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Buddha_Purnima_1.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Shahriar Amin Fahim247"
+  },
+  "rakhine-water": {
+   "key": "rakhine-water",
+   "title": "Rakhine Water Festival in Bangladesh cox bazar.png",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Rakhine_Water_Festival_in_Bangladesh_cox_bazar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Rakhine_Water_Festival_in_Bangladesh_cox_bazar.png",
+   "license": "CC0",
+   "artist": "Johan Photography Wedding and Events, Cox Bazar"
+  },
+  "marma-dancer": {
+   "key": "marma-dancer",
+   "title": "Marma Dancer (s), Indigenous People's Day, 2014, Dhaka, Bangladesh © Biplob Rahman-0.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Marma_Dancer_%28s%29%2C_Indigenous_People%27s_Day%2C_2014%2C_Dhaka%2C_Bangladesh_%C2%A9_Biplob_Rahman-0.jpg/1280px-Marma_Dancer_%28s%29%2C_Indigenous_People%27s_Day%2C_2014%2C_Dhaka%2C_Bangladesh_%C2%A9_Biplob_Rahman-0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Marma_Dancer_(s),_Indigenous_People%27s_Day,_2014,_Dhaka,_Bangladesh_%C2%A9_Biplob_Rahman-0.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Biplobcht"
+  },
+  "marma-museum": {
+   "key": "marma-museum",
+   "title": "Marma at Ethnological Museum (01).jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Marma_at_Ethnological_Museum_%2801%29.jpg/1280px-Marma_at_Ethnological_Museum_%2801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Marma_at_Ethnological_Museum_(01).jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Moheen Reeyad"
+  },
+  "chakma-dancers": {
+   "key": "chakma-dancers",
+   "title": "Chakma Dancers, Indigenous People's Day, 2014, Dhaka, Bangladesh © Biplob Rahman.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Chakma_Dancers%2C_Indigenous_People%27s_Day%2C_2014%2C_Dhaka%2C_Bangladesh_%C2%A9_Biplob_Rahman.jpg/1280px-Chakma_Dancers%2C_Indigenous_People%27s_Day%2C_2014%2C_Dhaka%2C_Bangladesh_%C2%A9_Biplob_Rahman.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Chakma_Dancers,_Indigenous_People%27s_Day,_2014,_Dhaka,_Bangladesh_%C2%A9_Biplob_Rahman.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Biplobcht"
+  },
+  "buddha-dhatu-jadi": {
+   "key": "buddha-dhatu-jadi",
+   "title": "Buddha Dhatu Jadi (01).jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Buddha_Dhatu_Jadi_%2801%29.jpg/1280px-Buddha_Dhatu_Jadi_%2801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Buddha_Dhatu_Jadi_(01).jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Moheen Reeyad"
+  },
+  "rajban-bihar": {
+   "key": "rajban-bihar",
+   "title": "Rajban Bihar Buddhist temple in Rangamati District.jpg",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Rajban_Bihar_Buddhist_temple_in_Rangamati_District.jpg/1280px-Rajban_Bihar_Buddhist_temple_in_Rangamati_District.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Rajban_Bihar_Buddhist_temple_in_Rangamati_District.jpg",
+   "license": "CC BY 3.0",
+   "artist": "Sharmin Juthy"
+  },
+  "tea-garden": {
+   "key": "tea-garden",
+   "title": "Malnichora Tea Garden at Sylhet 02.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Malnichora_Tea_Garden_at_Sylhet_02.jpg/1280px-Malnichora_Tea_Garden_at_Sylhet_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Malnichora_Tea_Garden_at_Sylhet_02.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "IqbalHossain"
+  },
+  "sandesh": {
+   "key": "sandesh",
+   "title": "Bengali Sandesh.jpg",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/55/Bengali_Sandesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Bengali_Sandesh.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "1Bongfoodie"
+  },
+  "funeral-pyre": {
+   "key": "funeral-pyre",
+   "title": "Buddhist monks procession in front of a pyre.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Buddhist_monks_procession_in_front_of_a_pyre.jpg/1280px-Buddhist_monks_procession_in_front_of_a_pyre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Buddhist_monks_procession_in_front_of_a_pyre.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Basile Morin"
+  },
+  "shakyamuni-statue": {
+   "key": "shakyamuni-statue",
+   "title": "Statue of Shakyamuni at Buddha Dhatu Jadi.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Statue_of_Shakyamuni_at_Buddha_Dhatu_Jadi.jpg/1280px-Statue_of_Shakyamuni_at_Buddha_Dhatu_Jadi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Statue_of_Shakyamuni_at_Buddha_Dhatu_Jadi.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "Shakil Ahmed Sarowar"
+  },
+  "big-buddha": {
+   "key": "big-buddha",
+   "title": "Bhuvan shanti 100 feet lion bed statue of Gautama Buddha.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Bhuvan_shanti_100_feet_lion_bed_statue_of_Gautama_Buddha.jpg/1280px-Bhuvan_shanti_100_feet_lion_bed_statue_of_Gautama_Buddha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Bhuvan_shanti_100_feet_lion_bed_statue_of_Gautama_Buddha.jpg",
+   "license": "CC BY-SA 4.0",
+   "artist": "RockyMasum"
+  },
+  "alms-bowl": {
+   "key": "alms-bowl",
+   "title": "清乾隆 青玉鉢-Alms bowl for a Buddhist monk MET 14886.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/%E6%B8%85%E4%B9%BE%E9%9A%86_%E9%9D%92%E7%8E%89%E9%89%A2-Alms_bowl_for_a_Buddhist_monk_MET_14886.jpg/1280px-%E6%B8%85%E4%B9%BE%E9%9A%86_%E9%9D%92%E7%8E%89%E9%89%A2-Alms_bowl_for_a_Buddhist_monk_MET_14886.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:%E6%B8%85%E4%B9%BE%E9%9A%86_%E9%9D%92%E7%8E%89%E9%89%A2-Alms_bowl_for_a_Buddhist_monk_MET_14886.jpg",
+   "license": "CC0",
+   "artist": ""
+  },
+  "monastery-bd": {
+   "key": "monastery-bd",
+   "title": "Bangladesh Buddhist Monastery - IMG 6636.jpg",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Bangladesh_Buddhist_Monastery_-_IMG_6636.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Bangladesh_Buddhist_Monastery_-_IMG_6636.jpg",
+   "license": "CC BY 2.0",
+   "artist": "Evan-Lovely"
+  },
+  "mudra-vitarka": {
+   "key": "mudra-vitarka",
+   "title": "Borobudur - Buddha Statue - 041 Vitarka Mudra (11678522145).jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Borobudur_-_Buddha_Statue_-_041_Vitarka_Mudra_%2811678522145%29.jpg/1280px-Borobudur_-_Buddha_Statue_-_041_Vitarka_Mudra_%2811678522145%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Borobudur_-_Buddha_Statue_-_041_Vitarka_Mudra_(11678522145).jpg",
+   "license": "CC BY 2.0",
+   "artist": "Photo Dharma from Penang, Malaysia"
+  }
+ },
+ "sections": [
+  {
+   "id": "silpo",
+   "no": "১",
+   "title": "শিল্প ও সংস্কৃতির রীতি",
+   "lead": "মূর্তি দেখে বোঝা যায় ভিক্ষু নাকি বুদ্ধ, কোন মুহূর্তের ছবি, কোন যুগের কাজ। এই বিভাগে হাতের মুদ্রা, চোখ-পদ-শরীরের লক্ষণ, ৩২ মহাপুরুষলক্ষণ, স্তূপ-চৈত্য-বিহার-চালা-গম্বুজের স্থাপত্য রীতি, পোড়ামাটি ও পটচিত্র, সংগীত-কীর্তন, পোশাক, কুফু এবং প্রতীক-পবিত্র বস্তু — সব এক জায়গায় সহজ ভাষায় সাজানো।",
+   "media": {
+    "image": "somapura-aerial",
+    "video": "lib:vid-paharpur-1",
+    "audio": "lib:aud-buddha-vandana",
+    "pdf": "lib:lib-bhattasali-iconography"
+   },
+   "entries": [
+    {
+     "id": "art-pratima",
+     "title": "মূর্তি, প্রতিমা, বিগ্রহ ও প্রতিবিম্ব — চারটি শব্দের পার্থক্য",
+     "sub": "কোনটাকে কী বলবেন, কেন পার্থক্য জানা দরকার",
+     "about": "বাংলা ভাষায় চারটি শব্দই প্রায়ই একই অর্থে ব্যবহৃত হয়, কিন্তু শিল্প-ইতিহাসে অর্থ আলাদা। ‘মূর্তি’ হলো সাধারণ অর্থে কোনো দেব-দেবীর অবয়ব; ‘প্রতিমা’ সাধারণত উৎসব-পূজার জন্য তৈরি অস্থায়ী বা কাঠামোবদ্ধ অবয়ব; ‘বিগ্রহ’ হলো বিহার বা মন্দিরের গর্ভগৃহে স্থায়ীভাবে প্রতিষ্ঠিত পূজার অবয়ব; আর ‘প্রতিবিম্ব’ শব্দটি ব্যবহৃত হয় ছাপচিত্র, প্রতিকৃতি বা পবিত্র স্থানের অনুকরণে নির্মিত প্রতীকের ক্ষেত্রে। বাংলাদেশের বৌদ্ধ বিহারগুলোতে পূজার মূল অবয়বকে সাধারণত ‘বুদ্ধ মূর্তি’ বা ‘বুদ্ধ বিগ্রহ’ বলা হয়, আর পোড়ামাটির ফলকে যে ছোট অবয়ব থাকে সেগুলোকে মূর্তি-ফলক বলা হয়।",
+     "points": [
+      {
+       "k": "মূর্তি",
+       "v": "দেব-দেবীর বা বুদ্ধের অবয়ব — বৃহত্তম ও সাধারণ শব্দ।"
+      },
+      {
+       "k": "প্রতিমা",
+       "v": "উৎসব-উপলক্ষে তৈরি অবয়ব; স্থায়ী হতে পারে, নাও হতে পারে।"
+      },
+      {
+       "k": "বিগ্রহ",
+       "v": "বিহার/মন্দিরে পূজার জন্য স্থাপিত মূল অবয়ব।"
+      },
+      {
+       "k": "প্রতিবিম্ব",
+       "v": "প্রতীকী বা অনুকরণমূলক প্রতিরূপ — যেমন পাহাড়পুরের ফলকে বুদ্ধের ছোট অবয়ব।"
+      }
+     ],
+     "media": {
+      "images": [
+       "shakyamuni-statue"
+      ],
+      "video": null,
+      "audio": "lib:lib-aud-buddha-vandana",
+      "pdf": "lib:mitra-bronzes"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Iconography",
+       "u": "https://en.banglapedia.org/index.php?title=Iconography"
+      },
+      {
+       "t": "Bronzes from Bangladesh (Internet Archive)",
+       "u": "https://archive.org/details/kmkl_bronzes-from-bangladesh-a-study-of-buddhist-images-from-district-chittagong"
+      }
+     ],
+     "status": "partial"
+    },
+    {
+     "id": "art-mudra",
+     "title": "মুদ্রা — হাতের ভাষা",
+     "sub": "একটি মূর্তি কোন মুহূর্তের, তা হাত দেখেই বোঝা যায়",
+     "about": "মুদ্রা মানে ‘মুদ্রার মতো ছাপ’, অর্থাৎ হাত ও আঙুলের একটি নির্দিষ্ট ভঙ্গি। বৌদ্ধ শিল্পে মুদ্রা দেখে বোঝা যায় মূর্তিটি বুদ্ধের জীবনের কোন ঘটনার স্মারক — ধ্যান করছেন, নির্বাণ লাভ করছেন, ধর্ম প্রচার করছেন, নাকি ভয় দূর করছেন। বাংলাদেশে ময়নামতির রূপবান মুড়ার বিখ্যাত অভয়মুদ্রার বুদ্ধ (প্রায় ২.৪৪ মিটার, আনুমানিক ৭ম শতক) অভয়মুদ্রার সবচেয়ে বড় প্রাচীন উদাহরণ — এই তথ্য বাংলাপিডিয়ার ‘Iconography’ নিবন্ধে স্পষ্ট করে লেখা আছে।",
+     "points": [
+      {
+       "k": "ধ্যান মুদ্রা",
+       "v": "দুই হাত কোলে, ডান হাত বাঁ-র উপর, হাতের তালু উপরে — গভীর ধ্যান।"
+      },
+      {
+       "k": "ভূমিস্পর্শ মুদ্রা",
+       "v": "ডান হাত নিচে প্রসারিত, আঙুল মাটি স্পর্শ করে — ‘মার বিজয়’, বোধিলাভের মুহূর্ত।"
+      },
+      {
+       "k": "ধর্মচক্র মুদ্রা",
+       "v": "দুই হাত বুকের সামনে, চাকা ঘোরানোর মতো — প্রথম দেশনা, সারনাথ।"
+      },
+      {
+       "k": "অভয় মুদ্রা",
+       "v": "ডান হাত কাঁধের সমান উঁচু, তালু বাইরে — ‘ভয় নেই’, অভয়দান।"
+      },
+      {
+       "k": "বরদ মুদ্রা",
+       "v": "ডান হাত নিচে প্রসারিত, তালু বাইরে — বরদান, কামনা পূরণ।"
+      },
+      {
+       "k": "বিতর্ক মুদ্রা",
+       "v": "বৃদ্ধাঙ্গুলি ও তর্জনী মিলিয়ে বৃত্ত — তর্ক, ব্যাখ্যা, শিক্ষাদান।"
+      },
+      {
+       "k": "অঞ্জলি মুদ্রা",
+       "v": "দুই হাত কপালের সামনে জোড়া — শ্রদ্ধা, বন্দনা।"
+      },
+      {
+       "k": "ভূমি-স্পর্শ + অঞ্জলি",
+       "v": "পৃথিবী সাক্ষী ডেকে ভিক্ষু-সংঘের সামনে বোধি গ্রহণ — পাহাড়পুরের ফলকে দেখা যায়।"
+      }
+     ],
+     "media": {
+      "images": [
+       "mudra-bhumisparsha",
+       "mudra-dhyana",
+       "mudra-dharmachakra",
+       "mudra-abhaya",
+       "mudra-vitarka"
+      ],
+      "video": "lib:vid-shalban",
+      "audio": "lib:aud-buddha-vandana",
+      "pdf": null
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Iconography (ময়নামতি, অভয়মুদ্রা)",
+       "u": "https://en.banglapedia.org/index.php?title=Iconography"
+      },
+      {
+       "t": "Mudra — মুদ্রার তালিকা ও ব্যাখ্যা (উইকিপিডিয়া)",
+       "u": "https://en.wikipedia.org/wiki/Mudra"
+      },
+      {
+       "t": "Iconography of Buddhist and Brahmanical Sculptures (Bhattasali, PDF)",
+       "u": "https://archive.org/details/in.ernet.dli.2015.71705"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "art-lakkhan",
+     "title": "৩২ মহাপুরুষলক্ষণ",
+     "sub": "শিল্পে বুদ্ধকে চেনার ৩২টি চিহ্ন",
+     "about": "বৌদ্ধ গ্রন্থে বুদ্ধের শরীরে ৩২টি বড় চিহ্ন ও ৮০টি ছোট চিহ্নের কথা আছে; এগুলোকে বলা হয় ‘দ্বাত্রিংশ মহাপুরুষলক্ষণ’। দীর্ঘ নিকায়ের ‘লক্খণ সুত্ত’ (DN ৩০) এবং মজ্ঝিম নিকায়ের ‘ব্রহ্মায়ু সুত্ত’ (MN ৯১) — এই দুটি জায়গায় তালিকাটি সবচেয়ে বিস্তারিত। শিল্পীরা এই লক্ষণগুলো দেখেই বোঝান, মূর্তিটি বুদ্ধ বা চক্রবর্তী রাজার। শাস্ত্র ও শিল্পের সম্পর্ক বোঝার জন্য জরুরি, তবে আধুনিক গবেষকরা (যেমন ভিক্ষু অনালয়) অনেকগুলো লক্ষণকে পরে যুক্ত হওয়া হিসেবে দেখেন — এটাও জানিয়ে রাখা বেশি নিরাপদ।",
+     "points": [
+      {
+       "k": "১–৮ পা",
+       "v": "সমতল পা; পায়ের তলায় সহস্র-চাকার চিহ্ন; লম্বা গোড়ালি; দীর্ঘ আঙুল; কোমল হাত-পা; জালের মতো যুক্ত হাত-পা; উঁচু গোড়ালি; হরিণের মতো ছোটলা।"
+      },
+      {
+       "k": "৯–১২ শরীর",
+       "v": "দাঁড়িয়ে হাত ছাড়াই হাঁটু স্পর্শ করতে পারেন; গুপ্ত অঙ্গ আবৃত; সোনার মতো রং; এত সূক্ষ্ম ত্বক যে ধুলা লাগে না।"
+      },
+      {
+       "k": "১৩–১৮ আঁশ ও গড়ন",
+       "v": "প্রতিটি রোম এক এক করে বাঁ দিকে কুণ্ডলিত; সরল-সোজা শরীর; সাতটি উঁচু অংশ; সিংহের মতো বুক; কাঁধের মাঝে ফাঁক নেই; বটবৃক্ষের মতো সমানুপাতিক জোড়া।"
+      },
+      {
+       "k": "১৯–২৬ মুখ",
+       "v": "গোলাকার সুগঠিত কাঁধ; সূক্ষ্ম স্বাদগ্রাহী জিভ; সিংহের মতো চোয়াল; চল্লিশটি দাঁত; সমান দাঁত; দাঁতের মাঝে ফাঁক নেই; শুভ্র দাঁত; দীর্ঘ জিভ।"
+      },
+      {
+       "k": "২৭–৩২ মাথা",
+       "v": "ব্রহ্মের মতো বিশুদ্ধ কণ্ঠ; নীল (গাঢ়) চোখ; গরুর মতো চোখের পাপড়ি; মাথায় উষ্ণীষ (মাংসপিণ্ড); মাথার চুল ঘন ও স্বস্তিক আকারে বাঁ দিকে কুণ্ডলিত; ললাটে উর্ণা।"
+      }
+     ],
+     "media": {
+      "images": [
+       "lakshana",
+       "ushnisha",
+       "footprints"
+      ],
+      "video": "lib:lib-vid-charyapada-doc",
+      "audio": "lib:aud-dhammapada-pali",
+      "pdf": "lib:bauddha-bharat"
+     },
+     "sources": [
+      {
+       "t": "Physical characteristics of the Buddha (৩২ লক্ষণ, DN ৩০)",
+       "u": "https://en.wikipedia.org/wiki/Physical_characteristics_of_the_Buddha"
+      },
+      {
+       "t": "Banglapedia — Iconography",
+       "u": "https://en.banglapedia.org/index.php?title=Iconography"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "art-chokh-pod",
+     "title": "চোখ, হাত, পদ ও শরীর — সহজে চেনার নিয়ম",
+     "sub": "মূর্তির দিকে তাকিয়ে প্রথম যে জিনিসগুলো দেখবেন",
+     "about": "মূর্তি দেখে বোঝার সবচেয়ে সহজ নিয়ম হলো তিনটি প্রশ্ন করা: (১) হাত কী বলছে? (২) বসে আছেন না দাঁড়িয়ে? (৩) পা-চোখ-মাথায় বিশেষ কিছু আছে কি? বৌদ্ধ শিল্পে চোখ প্রায়ই অর্ধ-নিমীলিত — বাইরের দিকে নয়, ভেতরের দিকে তাকিয়ে ধ্যান। হাতের তালু দেখালে বোঝায় ‘ভয় নেই’ বা ‘আশীর্বাদ’; মাটি স্পর্শ করলে বোধিলাভ। পায়ের তলায় চাকা বা পদ্মচিহ্ন থাকলে সেটি ‘বুদ্ধপদ’ — বাংলাদেশসহ সমগ্র বৌদ্ধ বিশ্বে এই পদচিহ্ন স্বতন্ত্রভাবে পূজিত হয়, কারণ আদি যুগে বুদ্ধের অবয়ব বানানোই হতো না, প্রতীক দিয়ে বোঝানো হতো।",
+     "points": [
+      {
+       "k": "চোখ",
+       "v": "অর্ধ-বন্ধ = ধ্যান; বড় করে খোলা = ভয় দূর করে দেখা, অভয়।"
+      },
+      {
+       "k": "হাত",
+       "v": "তালু বাইরে = অভয়/বরদ; মাটি স্পর্শ = ভূমিস্পর্শ; কোলে = ধ্যান।"
+      },
+      {
+       "k": "পদ",
+       "v": "পায়ের তলায় চাকা/পদ্ম = মহাপুরুষলক্ষণ; শুধু পদচিহ্ন আকারে পূজাও প্রচলিত।"
+      },
+      {
+       "k": "শরীর",
+       "v": "সোনালি রং, লম্বা কান (কুণ্ডলসহ), মাথায় উষ্ণীষ — বুদ্ধের চেনা রূপ।"
+      },
+      {
+       "k": "আসন",
+       "v": "পদ্মাসন = স্থিরতা; বজ্রাসন = বোধিলাভ; ললিতাসন = বোধিসত্ত্বের স্বচ্ছন্দ ভঙ্গি।"
+      }
+     ],
+     "media": {
+      "images": [
+       "footprints",
+       "mudra-abhaya"
+      ],
+      "video": "lib:vid-paharpur-2",
+      "audio": null,
+      "pdf": "lib:lib-bhattasali-iconography"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Iconography",
+       "u": "https://en.banglapedia.org/index.php?title=Iconography"
+      },
+      {
+       "t": "Siripada — বুদ্ধপদ (Commons ছবি)",
+       "u": "https://commons.wikimedia.org/wiki/File:013_Siripada_(Buddha's_Footprints)_(9222192156).jpg"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "art-sthapatto",
+     "title": "স্থূপ, চৈত্য, সুপা ও বিহার — বৌদ্ধ স্থাপত্যের রীতি",
+     "sub": "চারটি কাঠামো: কোনটা কী কাজে",
+     "about": "বৌদ্ধ স্থাপত্যের সবচেয়ে পুরোনো রূপ হলো স্তূপ — ভিক্ষুদের বা পবিত্র ব্যক্তির দেহাবশেষ সংরক্ষণের টিলা। বাংলাপিডিয়ার ‘Stupa’ নিবন্ধ অনুযায়ী ভূমির ঢিবি থেকে স্তূপের জন্ম; শ্রীলঙ্কায় একেই বলে দাগোবা, চীনে প্যাগোডা, দেহাবশেষের নাম থেকে ‘সুপা/টোপে’। মহাপরিনিবাণের মুহূর্তে বুদ্ধের নির্দেশে অষ্টধাতু ভাগ করে আটটি স্থানে স্তূপ তৈরি হয় — এই ধারণাই বাংলাদেশে পাহাড়পুর, কোটিলা মুড়া, আনন্দবিহারে ছোট ছোট ‘নিবেদন স্তূপ’-এর আকারে পাওয়া গেছে (১০ম–১২শ শতক)। চৈত্য হলো স্তূপকে ঘিরে তৈরি প্রার্থনাগৃহ, আর বিহার হলো ভিক্ষুদের মূল আবাসিক-শিক্ষাকেন্দ্র — যার চারপাশে শতাধিক কক্ষ আর মাঝে কেন্দ্রীয় মণ্ডপ।",
+     "points": [
+      {
+       "k": "স্তূপ / সুপা / দাগোবা / প্যাগোডা",
+       "v": "একই জিনিসের দেশভেদে নাম। ধানের মতো আধা-গোলাকার (অণ্ড) অংশ, উপরে চূড়া।"
+      },
+      {
+       "k": "চৈত্য",
+       "v": "স্তূপের চারপাশে ঘেরা প্রার্থনাগৃহ; স্তূপই এর কেন্দ্র, ভেতরে প্রদক্ষিণের পথ বোঝা যায়।"
+      },
+      {
+       "k": "নিবেদন স্তূপ",
+       "v": "ছোট ছোট স্তূপ, যা ভক্তরা পুণ্যার্থে পবিত্র স্থানে উৎসর্গ করতেন — বাংলাদেশে হাজারো পাওয়া গেছে।"
+      },
+      {
+       "k": "বিহার",
+       "v": "চতুর্ভুজ পরিকল্পনা, একটিমাত্র প্রবেশপথ, চারপাশে ভিক্ষুকক্ষ, মাঝে কেন্দ্রীয় মণ্ডপ।"
+      },
+      {
+       "k": "মঠ / কিয়াং",
+       "v": "পাহাড়ি অঞ্চলে বিহারকে ‘কিয়াং’ বলা হয়; শালবন বিহারের ১৫৫টি কক্ষ এর আকার বোঝায়।"
+      }
+     ],
+     "media": {
+      "images": [
+       "stupa-sanchi",
+       "somapura-aerial",
+       "rajban-bihar"
+      ],
+      "video": "lib:vid-shalban",
+      "audio": null,
+      "pdf": "lib:dikshit-paharpur"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Stupa (bn:স্তূপ, en:Stupa)",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A7%82%E0%A6%AA"
+      },
+      {
+       "t": "Banglapedia — শালবন বিহার",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8_%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "t": "Excavations at Paharpur (1938) — PDF",
+       "u": "https://archive.org/details/in.ernet.dli.2015.71938"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "art-chala-gombuj",
+     "title": "চালা, রত্ন, গম্বুজ ও দুয়াল — বাংলার ছাদের রীতি",
+     "sub": "বাংলা অঞ্চলে মন্দির-বিহারের চেহারা কোথা থেকে এল",
+     "about": "বাংলার মাটিতে পাথর কম, তাই এখানে ইট, পোড়ামাটি আর চুন-সুরকির কাজ বেশি। বাংলাপিডিয়ার ‘Temple Architecture’ নিবন্ধ অনুযায়ী বাংলার স্থাপত্যে ঘরের নিম্নকাষ্ঠ দিয়ে তৈরি ছাদ ‘চালা’ থেকে ‘দো-চালা’, ‘চার-চালা’, ‘আট-চালা’ নামগুলো এসেছে; আর বাঁকা কার্নিস বাংলার গ্রামীণ কোটাল/কুঁড়েঘরের ছাদ থেকে নেওয়া। ইসলামি স্থাপত্যের গম্বুজ-খিলান বাংলায় ঢুকলে ‘রত্ন’ (ছাদের উপরে ছোট ছোট চূড়া — পঞ্চরত্ন, নবরত্ন) রীতি তৈরি হয়। বিহার ও কিয়াং-এও বাংলার কারিগররা এই ছাদের ভাষা ব্যবহার করেছেন; পাহাড়ি কিয়াং ঢালু, বহুস্তর ছাদে ঢাকা, আর নিচে চতুর্ভুজ বা অষ্টকোণ ‘দুয়াল’ (বেড়া) দিয়ে ঘেরা।",
+     "points": [
+      {
+       "k": "দুয়াল / বেড়া",
+       "v": "পবিত্র সীমানা; সীমা বোঝানোই এর ধর্মীয় কাজ — ভেতরে ‘সীমা-রাজ্য’, বাইরে সাধারণ গ্রাম।"
+      },
+      {
+       "k": "চালা",
+       "v": "ছাদের ঢাল। দো-চালা = দুটি ঢাল, চার-চালা = চারদিকের চারটি ত্রিকোণ ঢাল।"
+      },
+      {
+       "k": "রত্ন",
+       "v": "ছাদে বসানো ছোট চূড়া; পাঁচটি থাকলে পঞ্চরত্ন, নয়টি থাকলে নবরত্ন (কান্তনগর, দিনাজপুর)।"
+      },
+      {
+       "k": "গম্বুজ",
+       "v": "ইসলামি প্রভাবের ঢালাই-কাঠামো; ষাটগম্বুজ মসজিদ বাংলার সবচেয়ে খ্যাত গম্বুজ-স্থাপত্য।"
+      },
+      {
+       "k": "কিয়াং",
+       "v": "পাহাড়ি বৌদ্ধ মন্দির — যাড়াচ্ছাদিত, অনেক ধাপের ছাদ, নিচে সীমানা-দুয়াল।"
+      }
+     ],
+     "media": {
+      "images": [
+       "charchala",
+       "temple-class",
+       "gombuj",
+       "kantajew",
+       "buddha-dhatu-jadi"
+      ],
+      "video": "lib:vid-bizu",
+      "audio": null,
+      "pdf": "lib:khan-mainamati"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Temple Architecture (চালা/রত্ন/গম্বুজ শ্রেণিবিভাগ)",
+       "u": "https://en.banglapedia.org/index.php?title=Temple_Architecture"
+      },
+      {
+       "t": "Banglapedia — Bishnupur/Kantanagar প্রসঙ্গ একই নিবন্ধে",
+       "u": "https://en.banglapedia.org/index.php?title=Temple_Architecture"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "art-poramati",
+     "title": "পোড়ামাটি, পটচিত্র ও পাণ্ডুলিপি চিত্র",
+     "sub": "বাংলার ছবি-শিল্পের তিনটি ধারা",
+     "about": "বাংলার সবচেয়ে পুরোনো ছবি-শিল্পের নমুনা পোড়ামাটি। পাহাড়পুরের (সোমপুর মহাবিহার) দেয়ালে প্রায় দুই হাজার পোড়ামাটির ফলক ছিল; বাংলাপিডিয়ার ‘Terracotta Art’ নিবন্ধে বলা হয়েছে পোড়ামাটি বাংলার মাটি ও ইটের স্থাপত্যের সঙ্গে অবিচ্ছেদ্য। দ্বিতীয় ধারা পাণ্ডুলিপি-চিত্র — পাল যুগে (৮ম–১২শ শতক) কাগজের বদলে তালপাতায় লেখা হতো এবং রঙিন ছোট ছবি আঁকা হতো; এর নমুনা বিক্ষিপ্তভাবে জাদুঘরে সংরক্ষিত। তৃতীয় ধারা পটচিত্র — চট বা কাপড়ে আঁকা লম্বা ছবি, যাযাবর শিল্পীরা গান গেয়ে গল্প বলতেন; বাংলাপিডিয়ার ‘পটচিত্র’ নিবন্ধ বৌদ্ধ অনুষ্ঠানেও পট বা ‘যাত্রাপট’ ব্যবহৃত হওয়ার কথা বলে।",
+     "points": [
+      {
+       "k": "পোড়ামাটি",
+       "v": "ইটের ফলক, দেয়ালে বসানো; ভাস্কর্য নয়, ছবিও নয় — দুইয়ের মাঝামাঝি।"
+      },
+      {
+       "k": "পাহাড়পুর",
+       "v": "বৌদ্ধবিহারের দেয়ালে হাজারো ফলক, দেবতা-প্রাণী-মিথুনের বিন্যাস।"
+      },
+      {
+       "k": "পাণ্ডুলিপি চিত্র",
+       "v": "তালপাতা/কাগজে অলংকরণ; রঙ করে করা হতো, ধর্মগ্রন্থের পৃষ্ঠায়।"
+      },
+      {
+       "k": "পটচিত্র",
+       "v": "কাপড়ে আঁকা লম্বা পট, গানসহ পরিবেশনা; গল্প বলার শিল্প।"
+      }
+     ],
+     "media": {
+      "images": [
+       "lib:img-terracotta",
+       "lib:img-pala-ms",
+       "lib:img-pancaraksa"
+      ],
+      "video": "lib:lib-vid-paharpur-2",
+      "audio": "lib:aud-charyapada-song",
+      "pdf": "lib:obscure-cults"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Terracotta Art",
+       "u": "https://en.banglapedia.org/index.php?title=Terracotta_Art"
+      },
+      {
+       "t": "Banglapedia — পটচিত্র",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%9F%E0%A6%9A%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A6%B0"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "art-songit",
+     "title": "সংগীতের ধারণা ও কীর্তনের ধরন",
+     "sub": "বৌদ্ধ ধর্মে গান কেন — আর কত রকম",
+     "about": "বৌদ্ধ অনুষ্ঠানে গানের মূল কাজ দুটি: এক, শোনা-গেয়ে ধর্মের কথা মনে রাখা (বন্দনা, দোঁহা, গাথা); দুই, সমাজকে একসঙ্গে জড়ো করা (কীর্তন, উৎসব)। বাংলাপিডিয়ার ‘Kirtan’ নিবন্ধ বলছে কীর্তনের বাংলা রূপ গড়ে উঠেছে পালি ও প্রাকৃত গানের ধারা, বৈষ্ণব পদাবলি আর বাংলার মরমি সাধনার মিলনে; বাংলাদেশের পাহাড়ি বৌদ্ধ সমাজে চাকমা, মারমা ও রাখাইন গান-নাচের নিজস্ব ধারা আছে, যেখানে ভাষা, সুর ও বাদ্য আলাদা। চর্যাপদের গানগুলো — যেমন লুইপাদের ‘কাআ তরুবর পঞ্চবি ডাল’ — বাংলা গানের সবচেয়ে পুরোনো নমুনা, আর সেগুলোই বৌদ্ধ সাধনার গান ছিল।",
+     "points": [
+      {
+       "k": "বন্দনা",
+       "v": "বুদ্ধ, ধর্ম, সংঘের গুণগান — সকাল-সন্ধ্যায় পালি ভাষায়।"
+      },
+      {
+       "k": "চর্যাগীতি",
+       "v": "৮ম–১২শ শতকের সাধন-গান, বাংলা ভাষার প্রাচীনতম নমুনা।"
+      },
+      {
+       "k": "কীর্তন",
+       "v": "গান+গল্প+সমবেত অংশগ্রহণ; বাংলার ভক্তি-সংগীতের মূল ধারা।"
+      },
+      {
+       "k": "পাহাড়ি বৌদ্ধ গান",
+       "v": "চাকমা, মারমা, রাখাইন — নিজস্ব ভাষা ও সুরের ধারা।"
+      },
+      {
+       "k": "বাজনা",
+       "v": "বিহারে যায় — ঢাক, মন্দিরা, শঙ্খ, ঘণ্টা; পাহাড়ে প্রথম-পাশি/বাঁ শিং।"
+      }
+     ],
+     "media": {
+      "images": [
+       "lib:img-charyapada-ms"
+      ],
+      "video": "lib:vid-charyapada-doc",
+      "audio": "lib:aud-chakma-song",
+      "pdf": "lib:baulsufi"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Kirtan",
+       "u": "https://en.banglapedia.org/index.php?title=Kirtan"
+      },
+      {
+       "t": "Banglapedia — চর্যাপদ",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "art-poshak",
+     "title": "পোশাকের নাম ও স্টাইল — এবং সোংকেত",
+     "sub": "কোন জনগোষ্ঠীর কোন পোশাকের নাম কী",
+     "about": "পোশাকের নাম থেকেই বোঝা যায় কে কোন অঞ্চলের। চাকমা নারীর প্রধান পোশাক ‘পাইনন/পিনোন’ (নিচে) ও ‘হাদি/আঙি’ (উপরে); মারমা নারীর ‘থামি’ (কোমরে জড়ানো) ও ‘ব্লাউজ’; তঞ্চঙ্গ্যা নারীর ‘কেবই’ (লম্বা হাতা জামা); রাখাইন নারীর ‘থামি’ ও ‘কাপট্টা’। পুরুষদের মধ্যে চাকমার ‘ধুতি-সিলুম’, মারমার ‘লুঙ্গিজা’। এসব নাম বাংলাপিডিয়ার জনগোষ্ঠী নিবন্ধ ও পোশাক-বিষয়ক প্রতিবেদনে পাওয়া যায়। ‘সোংকেত’ (songket) কিন্তু বাংলাদেশের পোশাক নয় — এটি মালয়-দ্বীপপুঞ্জের সোনালি-সুতোর বুনন, শ্রীবিজয় যুগের সঙ্গে যুক্ত; ২০২১ সালে ইউনেস্কো এটিকে মালয়েশিয়ার অস্তিত্বহীন-নয় এমন সাংস্কৃতিক ঐতিহ্য হিসেবে তালিকাভুক্ত করে। বাংলার বৌদ্ধ সমাজে তার সমতুল্য খোঁজা যায় চাকমা-মারমার তাঁতের কাজে, তবে দুটোকে এক করে ফেলা ঠিক হবে না।",
+     "points": [
+      {
+       "k": "চাকমা",
+       "v": "পাইনন/পিনোন, হাদি, সিলুম; তাঁতে বোনা নকশা।"
+      },
+      {
+       "k": "মারমা",
+       "v": "থামি, ব্লাউজ, লুঙ্গিজা; রেশমি ও সূক্ষ্ম বুনন।"
+      },
+      {
+       "k": "তঞ্চঙ্গ্যা",
+       "v": "কেবই — লম্বা হাতা জামা, কাঁধে-হাতায় ফুলের নকশা।"
+      },
+      {
+       "k": "রাখাইন",
+       "v": "থামি, কাপট্টা, ওড়না; উজ্জ্বল রং ও আঁকা-বাঁধা কাপড়।"
+      },
+      {
+       "k": "সোংকেত",
+       "v": "মালয় জগতের সোনা-রুপোর সুতোয় বোনা কাপড় — বাংলাদেশের নয়, তুলনামূলক উদাহরণ।"
+      }
+     ],
+     "media": {
+      "images": [
+       "marma-dancer",
+       "marma-museum",
+       "chakma-dancers",
+       "songket",
+       "lib:img-chakma-weaving"
+      ],
+      "video": "lib:vid-bizu",
+      "audio": "lib:aud-chakma-song",
+      "pdf": null
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — চাকমা",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%BE%E0%A6%95%E0%A6%AE%E0%A6%BE"
+      },
+      {
+       "t": "Banglapedia — Tanchangya (কেবই)",
+       "u": "https://en.banglapedia.org/index.php?title=Tanchangya,_The"
+      },
+      {
+       "t": "Songket (ইউনেস্কো ২০২১)",
+       "u": "https://en.wikipedia.org/wiki/Songket"
+      }
+     ],
+     "status": "partial"
+    },
+    {
+     "id": "art-kufu",
+     "title": "কুফু ও মার্শাল আর্ট — যতটা জানা যায়, ততটাই",
+     "sub": "গুরুত্বপূর্ণ সতর্কতা: বাংলাদেশি বৌদ্ধ ‘কুফু’ নিয়ে নির্ভরযোগ্য প্রমাণ নেই",
+     "about": "‘কুফু’ (কুংফু) শব্দটি চীনা, অর্থ ‘দক্ষতা/পরিশ্রম’। ঐতিহ্য অনুযায়ী দক্ষিণ ভারতের পাল্লব রাজবংশের রাজপুত্র, পরে বৌদ্ধ ভিক্ষু বোধিধর্ম (দারুমা) ৫ম-৬ষ্ঠ শতকে চীনের শাওলিন মন্দিরে গিয়ে ধ্যান ও ব্যায়ামের যে পদ্ধতি চালু করেন, সেখান থেকেই কুংফুর জন্ম — এই গল্পটি চীনা ও জাপানি উৎসে বহুল প্রচলিত, তবে ঐতিহাসিকভাবে বিতর্কিত। বাংলাদেশের বৌদ্ধ সমাজে ‘কুফু’ নামে কোনো সংগঠিত মার্শাল আর্ট চর্চার লিখিত প্রমাণ এই গবেষণায় পাওয়া যায়নি। বরং আছে ‘লাঠি খেলা’, ‘বাঁশ খেলা’ — যা গ্রামবাংলার সর্বজনীন, ধর্মনিরপেক্ষ খেলা; চাকমা-মারমা সমাজে ‘বল্লম/বাঁশ নাচ’ উৎসবে দেখা যায়। তাই এই এন্ট্রিতে কুফুকে আন্তর্জাতিক প্রেক্ষাপটে রাখা হয়েছে, বাংলাদেশি দাবি হিসেবে নয়।",
+     "points": [
+      {
+       "k": "কুফু/কুংফু",
+       "v": "চীনা মার্শাল আর্ট; বোধিধর্মের সঙ্গে যোগের গল্প প্রচলিত কিন্তু প্রমাণিত নয়।"
+      },
+      {
+       "k": "বোধিধর্ম",
+       "v": "বৌদ্ধ ঐতিহ্যে ‘প্রথম পিতামহ’; ভারত থেকে চীনে ধ্যানের ধারা নিয়ে যান।"
+      },
+      {
+       "k": "লাঠি/বাঁশ খেলা",
+       "v": "বাংলার নিজস্ব আত্মরক্ষা-খেলা; হিন্দু-মুসলিম-বৌদ্ধ সব সমাজে।"
+      },
+      {
+       "k": "পাহাড়ি নাচ",
+       "v": "বল্লম নাচ, বাঁশ নাচ — কৌশল ও শারীরিক দক্ষতার প্রদর্শন।"
+      },
+      {
+       "k": "সতর্কতা",
+       "v": "বাংলাদেশি বৌদ্ধদের কুফু-চর্চার সূত্র পাওয়া যায়নি — ‘যাচাই বাকি’ হিসেবে চিহ্নিত।"
+      }
+     ],
+     "media": {
+      "images": [
+       "bodhidharma"
+      ],
+      "video": "lib:vid-bizu",
+      "audio": "lib:lib-aud-chakma-song",
+      "pdf": null
+     },
+     "sources": [
+      {
+       "t": "কুংফু (বাংলা উইকিপিডিয়া)",
+       "u": "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A7%81%E0%A6%82%E0%A6%AB%E0%A7%81"
+      },
+      {
+       "t": "Bodhidharma",
+       "u": "https://en.wikipedia.org/wiki/Bodhidharma"
+      }
+     ],
+     "status": "thin"
+    },
+    {
+     "id": "art-prani",
+     "title": "প্রাণী, প্রতীক ও পবিত্র বস্তু",
+     "sub": "শিল্পে কোন প্রাণী কী বোঝায়",
+     "about": "বৌদ্ধ শিল্প প্রতীকেই ভরা। সিংহ = বুদ্ধের ‘শাক্যসিংহ’ পরিচয় ও সাহস; হাতি = ধৈর্য ও বুদ্ধের মাতৃগর্ভে প্রবেশের স্বপ্ন; হরিণ = সারনাথের প্রথম দেশনা; ময়ূর = অমরত্ব ও ময়ূরপঙ্খি নৌকা; পদ্ম = বিশুদ্ধতা; চাকা (ধর্মচক্র) = ধর্মের প্রবর্তন; বোধিবৃক্ষ = বোধিলাভ; স্বস্তিক = মঙ্গল; ত্রিরত্ন = বুদ্ধ-ধর্ম-সংঘ। পবিত্র বস্তুর মধ্যে আছে বজ্র ও ঘণ্টা (তান্ত্রিক অনুষ্ঠান), শঙ্খ (বন্দনার সুর), প্রদীপ (বোধির আলো), জল (পুণ্যদান) আর ভিক্ষাপাত্র। বাংলার বৌদ্ধ সমাজে ‘অষ্টমঙ্গল’ — আটটি মঙ্গল-চিহ্ন — বিবাহ ও গৃহপ্রবেশে দেখা যায়; চিহ্নগুলো হিন্দু-বৌদ্ধ উভয় ঐতিহ্যেই ব্যবহৃত, তাই কোনো নির্দিষ্ট চিহ্নকে কেবল বৌদ্ধ বলা যায় না।",
+     "points": [
+      {
+       "k": "সিংহ",
+       "v": "সাহস, শাক্যসিংহ; সিংহাসনও এ থেকেই।"
+      },
+      {
+       "k": "হাতি",
+       "v": "ধৈর্য, মাতৃগর্ভে বোধিসত্ত্বের প্রবেশ।"
+      },
+      {
+       "k": "পদ্ম",
+       "v": "বিশুদ্ধতা — কাদায় জন্মেও অকলুষিত।"
+      },
+      {
+       "k": "ধর্মচক্র",
+       "v": "ধর্মের প্রবর্তন; আটটি দণ্ডি অষ্টাঙ্গিক মার্গ।"
+      },
+      {
+       "k": "বোধিবৃক্ষ ও পিপুল পাতা",
+       "v": "বোধিলাভের স্মৃতি; শুকনো পাতাও পবিত্র হিসেবে রাখা হয়।"
+      },
+      {
+       "k": "বজ্র-ঘণ্টা",
+       "v": "তান্ত্রিক অনুষ্ঠানের বাদ্য ও প্রতীক; শূন্যতা ও করুণা।"
+      },
+      {
+       "k": "শঙ্খ-প্রদীপ-জল",
+       "v": "বন্দনা, আলো ও পুণ্যদানের উপকরণ।"
+      },
+      {
+       "k": "অষ্টমঙ্গল",
+       "v": "আট মঙ্গল-চিহ্ন — হিন্দু-বৌদ্ধ যৌথ ঐতিহ্য।"
+      }
+     ],
+     "media": {
+      "images": [
+       "dharmachakra-symbol",
+       "vajra-bell",
+       "bodhi-leaf",
+       "incense",
+       "lib:img-terracotta"
+      ],
+      "video": "lib:lib-vid-shalban",
+      "audio": "lib:aud-buddha-kirtan",
+      "pdf": "lib:prasad-archaeology"
+     },
+     "sources": [
+      {
+       "t": "Buddhist symbolism",
+       "u": "https://en.wikipedia.org/wiki/Buddhist_symbolism"
+      },
+      {
+       "t": "Banglapedia — Iconography",
+       "u": "https://en.banglapedia.org/index.php?title=Iconography"
+      }
+     ],
+     "status": "verified"
+    }
+   ],
+   "counts": {
+    "image": 34,
+    "video": 10,
+    "audio": 8,
+    "pdf": 8
+   }
+  },
+  {
+   "id": "samaj-achar",
+   "no": "২",
+   "title": "সমাজ-আচার: জন্ম, মৃত্যু, বিবাহ ও উৎসব",
+   "lead": "বাঙালি বৌদ্ধের জীবনের প্রধান তিনটি ঘর — জন্ম, বিয়ে, মৃত্যু — এবং তার সঙ্গে জড়ানো পূর্ণিমা-পার্বণ। কোনটির লিখিত বিধি কতটা, কোনটি লোকাচার, কোনটির গবেষণা এখনো সরু — সেটুকু আলাদা করে লেখা হয়েছে।",
+   "media": {
+    "image": "purnima",
+    "video": "lib:vid-buddha-purnima-1",
+    "audio": "lib:aud-buddha-kirtan",
+    "pdf": "lib:lib-buddha-golpomala"
+   },
+   "entries": [
+    {
+     "id": "rit-jonmo",
+     "title": "জন্ম-আচার",
+     "sub": "নামকরণ, মুণ্ডন, প্রথম ভাত — কোনটা ধর্মীয়, কোনটা লোকাচার",
+     "about": "বৌদ্ধ পরিবারে সন্তান জন্মের পর প্রথম কাজ তিন শরণ ও পঞ্চশীল গ্রহণ, তারপর বিহারে গিয়ে ভিক্ষু সংঘের আশীর্বাদ। নামকরণে সাধারণত দুই ধরনের রীতি দেখা যায়: পালি/সংস্কৃত নাম (যেমন ‘সুমন’, ‘প্রজ্ঞা’, ‘অনিলা’) এবং বাংলা নাম। পাহাড়ি সমাজে নামকরণের নিজস্ব রীতি আছে — চাকমায় ‘পদবি + নাম’ কাঠামো, মারমায় ‘ম + নাম’। জন্ম-আচারের অনেক অংশই নির্দিষ্ট ধর্মগ্রন্থে লেখা নেই, এটি লোকাচার; তাই এখানে ধর্মীয় ও সামাজিক অংশ আলাদা করে দেখানো হয়েছে। জন্ম-সংক্রান্ত ধর্মীয় আচার নিয়ে বাংলা ভাষায় গবেষণা তুলনামূলক কম — এই সীমাবদ্ধতা স্পষ্ট রাখা হয়েছে।",
+     "points": [
+      {
+       "k": "শরণ ও শীল",
+       "v": "জন্মের পর পরিবার পঞ্চশীল গ্রহণ করে; শিশুর নামে পুণ্যদান দেওয়া হয়।"
+      },
+      {
+       "k": "নামকরণ",
+       "v": "বৌদ্ধ পরিবারে পালি/সংস্কৃত নামের পাশাপাশি বাংলা ডাকনাম; পাহাড়ি সমাজে নিজস্ব কাঠামো।"
+      },
+      {
+       "k": "মুণ্ডন ও কান-ছিদ্র",
+       "v": "শিশুর চুল কাটা ও কান ছিদ্র একটি সামাজিক মাঙ্গলিক অনুষ্ঠান।"
+      },
+      {
+       "k": "প্রথম ভাত / অন্নপ্রাশন",
+       "v": "শিশুকে প্রথমবার ভাত খাওয়ানোর অনুষ্ঠান; আত্মীয়-প্রতিবেশী নিমন্ত্রিত হন।"
+      },
+      {
+       "k": "‘যাচাই বাকি’",
+       "v": "জন্ম-আচারের ধর্মীয় অংশের বিস্তারিত বাংলা গবেষণা সরু — এখানে লোকাচার ও ধর্মীয় অংশ মিশে আছে।"
+      }
+     ],
+     "media": {
+      "images": [
+       "lib:img-chakma-weaving",
+       "incense"
+      ],
+      "video": "lib:lib-vid-buddha-purnima-1",
+      "audio": "lib:aud-buddha-vandana",
+      "pdf": "lib:buddha-golpomala"
+     },
+     "sources": [
+      {
+       "t": "Buddhism — birth rituals (সাধারণ)",
+       "u": "https://en.wikipedia.org/wiki/Buddhism"
+      },
+      {
+       "t": "বাংলাপিডিয়া — বুদ্ধ পূর্ণিমা (লোকজীবন প্রসঙ্গ)",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A7%81%E0%A6%A6%E0%A7%8D%E0%A6%A7_%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A3%E0%A6%BF%E0%A6%AE%E0%A6%BE"
+      }
+     ],
+     "status": "thin"
+    },
+    {
+     "id": "rit-bibaho",
+     "title": "বিবাহের রীতি",
+     "sub": "‘চলন্ত বিয়ে’, ‘টোকেমন্ত’ — বড়ুয়া সমাজের নিজস্ব রীতি",
+     "about": "বাংলাদেশের বৌদ্ধ সমাজে বিবাহের একটি নির্দিষ্ট, সর্বজনীন ধর্মীয় বিধি নেই — এটি প্রধানত সামাজিক অনুষ্ঠান, যেখানে ভিক্ষুকে ডেকে আশীর্বাদ ও পঞ্চশীল দেওয়ানো হয়। ‘বারুয়া (বড়ুয়া) বৌদ্ধদের বিবাহ অনুষ্ঠান’ নিয়ে প্রকাশিত গবেষণাপত্রে ‘চলন্ত বিয়ে’ ও ‘টোকেমন্ত’ নামের রীতির উল্লেখ আছে — অর্থাৎ বর-কনেকে একসঙ্গে হাঁটানো ও নির্দিষ্ট আচার সম্পন্ন করা। পাহাড়ি সমাজে রীতি ভিন্ন: চাকমায় আগে কনের মূল্য (গায়েন/গাহা) দেওয়ার চল ছিল, মারমায় ‘দাফা’-সদৃশ প্রথা বাংলাপিডিয়ার নিবন্ধে উল্লেখ আছে। রীতি অঞ্চলভেদে বদলায়, তাই এখানে ‘এক বিয়ে-বিধি’ দাবি করা হয়নি।",
+     "points": [
+      {
+       "k": "ধর্মীয় অংশ",
+       "v": "ভিক্ষু বরণ, পঞ্চশীল, ত্রিরত্ন বন্দনা, আশীর্বাদ — সংক্ষিপ্ত ও সর্বজনীন।"
+      },
+      {
+       "k": "চলন্ত/টোকেমন্ত",
+       "v": "বড়ুয়া সমাজের নির্দিষ্ট আচার — গবেষণাপত্রে উল্লিখিত।"
+      },
+      {
+       "k": "পাহাড়ি রীতি",
+       "v": "চাকমা, মারমা, রাখাইন — প্রত্যেকের আলাদা আচার ও শব্দাবলি।"
+      },
+      {
+       "k": "গায়েন / কনের মূল্য",
+       "v": "চাকমা সমাজে প্রচলিত ছিল; বর্তমানে অনেকাংশে বিলুপ্ত।"
+      },
+      {
+       "k": "সতর্কতা",
+       "v": "‘বৌদ্ধ বিয়ে’ নামে কোনো একক ধর্মগ্রন্থভিত্তিক বিধি নেই — বাংলাপিডিয়ায়ও আলাদা নিবন্ধ নেই।"
+      }
+     ],
+     "media": {
+      "images": [
+       "lib:img-chakma-weaving",
+       "marma-dancer"
+      ],
+      "video": "lib:vid-bizu",
+      "audio": "lib:aud-buddha-kirtan",
+      "pdf": "lib:bangladesh-reader"
+     },
+     "sources": [
+      {
+       "t": "Marriage Ceremony of Barua Buddhists in Bangladesh (Academia.edu)",
+       "u": "https://www.academia.edu/101529874/Marriage_Ceremony_of_Barua_Buddhists_in_Bangladesh"
+      },
+      {
+       "t": "Banglapedia — Marriage",
+       "u": "https://en.banglapedia.org/index.php?title=Marriage"
+      }
+     ],
+     "status": "partial"
+    },
+    {
+     "id": "rit-mrityu",
+     "title": "মৃত্যু, সৎকার ও শ্রাদ্ধ",
+     "sub": "বিহারে মৃতের জন্য কী করা হয়",
+     "about": "বৌদ্ধ পরিবারে মৃত্যুর পর প্রথমে ‘ভিক্ষু বরণ’ করে মৃতের নামে পঞ্চশীল ও ত্রিরত্ন শ্রবণ করা হয়, তারপর ‘মতক-বন্দনা’ — বিশেষ করে ‘অনিত্যভাবনা’ পাঠ। সৎকারের ধরন অঞ্চলভেদে আলাদা: সমতলে দাহ, পাহাড়ি সমাজে দাহ-ই প্রধান। মৃত্যুর সপ্তম, একাদশ, পঞ্চদশ প্রভৃতি দিনে ‘মতক-শ্রাদ্ধ’ বা ‘পিণ্ডদান’ — ভিক্ষু-সংঘকে ভোজন ও দান দেওয়া হয়; এই দান-অনুষ্ঠানের নাম ‘সঙ্ঘদান’। হিন্দু ধর্মের শ্রাদ্ধের সঙ্গে নাম মিললেও বৌদ্ধ আচারের ভিত্তি আলাদা — এখানে দান ও ভিক্ষু-সংঘের সেবা মূল, পুত্রের কর্তব্যপালন নয়। তাছাড়া বৌদ্ধ দর্শনে মৃত্যু ‘অনিত্যতা’র স্মারক, তাই সৎকারে বিলাপের বদলে ভাবনাকে বেশি গুরুত্ব দেওয়া হয়।",
+     "points": [
+      {
+       "k": "মতক-বন্দনা",
+       "v": "মৃতের নামে পঞ্চশীল ও বন্দনা; ভিক্ষু বা গৃহস্থ মাস্টার পাঠ করেন।"
+      },
+      {
+       "k": "সৎকার",
+       "v": "দাহ প্রধান; পাহাড়ি বৌদ্ধ সমাজে নিজস্ব নিয়মে দাহ ও চিতা-সজ্জা।"
+      },
+      {
+       "k": "শ্রাদ্ধ / পিণ্ডদান",
+       "v": "সপ্তাহ, একাদশ, পঞ্চদশ দিনে ভিক্ষু-সংঘকে ভোজন ও দান।"
+      },
+      {
+       "k": "সঙ্ঘদান",
+       "v": "ভিক্ষু-সংঘকে দেওয়া দান — বেঁচে থাকতেও পুণ্য হিসেবে করা হয়।"
+      },
+      {
+       "k": "পার্থক্য",
+       "v": "হিন্দু শ্রাদ্ধে পিণ্ড ও পুত্রের কর্তব্য; বৌদ্ধ আচারে দান ও অনিত্যভাবনা মূল।"
+      }
+     ],
+     "media": {
+      "images": [
+       "funeral-pyre",
+       "monk-village"
+      ],
+      "video": "lib:vid-paharpur-1",
+      "audio": "lib:aud-dhammapada-pali",
+      "pdf": "lib:banabhante-desana"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — শ্রাদ্ধ",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%A7"
+      },
+      {
+       "t": "Banglapedia — Rituals (childbirth rituals)",
+       "u": "https://en.banglapedia.org/index.php?title=Childbirth_Rituals"
+      }
+     ],
+     "status": "partial"
+    },
+    {
+     "id": "rit-purnima",
+     "title": "পূর্ণিমা-পার্বণ: আষাঢ়ী, বুদ্ধ, প্রবারণা, মাঘী",
+     "sub": "বৌদ্ধ বর্ষপঞ্জির চারটি বড় দিন",
+     "about": "বাংলা বৌদ্ধ সমাজের বছর ঘোরে পূর্ণিমার চারপাশে। আষাঢ়ী পূর্ণিমা — বুদ্ধের গর্ভে প্রতিসন্ধি, গৃহত্যাগ ও প্রথম দেশনার স্মৃতি; ধর্মচক্র প্রবর্তনের দিন। বুদ্ধ পূর্ণিমা (বৈশাখী) — জন্ম, বোধিলাভ ও মহাপরিনির্বাণ একই দিনে; বাংলাদেশে এটি সরকারি ছুটির দিন, দেশজুড়ে শোভাযাত্রা হয়। প্রবারণা পূর্ণিমা (আশ্বিনী) — বর্ষাবাসের শেষে ভিক্ষুরা নিজেদের ভুল স্বীকার করেন; এরপরই কঠিন চীবর দান, আর পাহাড়ে ফানুস ওড়ানোর উৎসব। মাঘী পূর্ণিমা — বুদ্ধ মহাপরিনির্বাণের কথা ঘোষণা করেন এবং ১২৪০ জন ভিক্ষুর সমাবেশ থেকে ‘পাতিমোক্খ’ পাঠের ধারা শুরু হয়।",
+     "points": [
+      {
+       "k": "আষাঢ়ী পূর্ণিমা",
+       "v": "প্রথম ধর্মদেশনা; গৃহত্যাগ; বর্ষাব্রতের নির্দেশ।"
+      },
+      {
+       "k": "বুদ্ধ পূর্ণিমা",
+       "v": "জন্ম-বোধি-পরিনির্বাণ একই তিথি; বাংলাদেশে সরকারি ছুটি ও শোভাযাত্রা।"
+      },
+      {
+       "k": "প্রবারণা পূর্ণিমা",
+       "v": "বর্ষাবাস শেষ; দোষ স্বীকার; ফানুস ওড়ানো — পাহাড়ি সমাজে বড় উৎসব।"
+      },
+      {
+       "k": "মাঘী পূর্ণিমা",
+       "v": "পরিনির্বাণ-ঘোষণা; ১২৪০ ভিক্ষুর সমাবেশ ও ২৫৬ ভিক্ষুর চীবর দান — থাইল্যান্ডে বড় উৎসব।"
+      },
+      {
+       "k": "কঠিন চীবর দান",
+       "v": "প্রবারণার পরের মাসজুড়ে; এক বিহারের ভিক্ষুদের একসঙ্গে চীবর বিতরণ।"
+      }
+     ],
+     "media": {
+      "images": [
+       "purnima",
+       "buddha-dhatu-jadi",
+       "mandala"
+      ],
+      "video": "lib:vid-buddha-purnima-2",
+      "audio": "lib:aud-buddha-vandana",
+      "pdf": "lib:naba-charyapada"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — বুদ্ধ পূর্ণিমা",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A7%81%E0%A6%A6%E0%A7%8D%E0%A6%A7_%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A3%E0%A6%BF%E0%A6%AE%E0%A6%BE"
+      },
+      {
+       "t": "Banglapedia — প্রবারণা পূর্ণিমা",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%AC%E0%A6%BE%E0%A6%B0%E0%A6%A3%E0%A6%BE_%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A3%E0%A6%BF%E0%A6%AE%E0%A6%BE"
+      },
+      {
+       "t": "Banglapedia — মাঘী পূর্ণিমা",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AE%E0%A6%BE%E0%A6%98%E0%A7%80_%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A3%E0%A6%BF%E0%A6%AE%E0%A6%BE"
+      },
+      {
+       "t": "Banglapedia — আষাঢ়ী পূর্ণিমা",
+       "u": "https://bn.banglapedia.org/index.php/%E0%A6%86%E0%A6%B7%E0%A6%BE%E0%A6%A2%E0%A6%BC%E0%A7%80_%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A3%E0%A6%BF%E0%A6%AE%E0%A6%BE"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "rit-noboborsho",
+     "title": "বিজু, সাংগ্রাই ও রাখাইন পানি-উৎসব",
+     "sub": "পাহাড়ি বৌদ্ধ নববর্ষ",
+     "about": "চাকমা, মারমা ও রাখাইন সমাজে নববর্ষ উৎসবের নাম আলাদা, কিন্তু গঠন এক: পুরোনো বছরকে বিদায়, জল-সংক্রান্ত আচার, বুদ্ধপূজা, নাচ-গান। চাকমাদের ‘বিজু’ চৈত্রের শেষ তিন দিনে; মারমাদের ‘সাংগ্রাই’, রাখাইনদের পানি উৎসব (জলকেলি)। বাংলাপিডিয়ার মর্মা/রাখাইন নিবন্ধে রীতি হিসেবে বুদ্ধপূজা, ভিক্ষুদের পিণ্ডদান ও গ্রামবাসীর সমবেত প্রার্থনার উল্লেখ আছে। এই উৎসবগুলো ‘বৌদ্ধ’ ও ‘উपजাティক’ দুই পরিচয়ের মিলিত রূপ, তাই একটিকে অন্যটির অংশ বলে ভাগ করা যায়।",
+     "points": [
+      {
+       "k": "বিজু",
+       "v": "চাকমা; চৈত্র সংক্রান্তিতে, ফুল-বিজু/মূল-বিজু/গোজ্য-বিজু তিন দিন।"
+      },
+      {
+       "k": "সাংগ্রাই",
+       "v": "মারমা; এপ্রিলে, বুদ্ধপূজা ও জলক্রীড়া।"
+      },
+      {
+       "k": "পানি উৎসব",
+       "v": "রাখাইন; কক্সবাজার ও পটুয়াখালী এলাকা; বুদ্ধমূর্তি স্নান করানো হয়।"
+      },
+      {
+       "k": "সাধারণ উপাদান",
+       "v": "বুদ্ধপূজা, পিণ্ডদান, নাচ-গান, মিষ্টি-ভোজ।"
+      }
+     ],
+     "media": {
+      "images": [
+       "rakhine-water",
+       "chakma-dancers",
+       "marma-dancer"
+      ],
+      "video": "lib:vid-bizu",
+      "audio": "lib:aud-chakma-song",
+      "pdf": "lib:chakma-genesis"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Rakhain",
+       "u": "https://en.banglapedia.org/index.php?title=Rakhain,_The"
+      },
+      {
+       "t": "Banglapedia — চাকমা",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%BE%E0%A6%95%E0%A6%AE%E0%A6%BE"
+      },
+      {
+       "t": "Bizu Festival — ভিডিও (লাইব্রেরি)",
+       "u": "https://www.youtube.com/watch?v=QiJgMdykgRY"
+      }
+     ],
+     "status": "partial"
+    },
+    {
+     "id": "rit-mandal",
+     "title": "মণ্ডল-ভোজন ও সমাজ-ভোজ",
+     "sub": "সামাজিক ভোজের ধর্মীয় অর্থ",
+     "about": "‘মণ্ডল’ শব্দটি বাংলায় বহু অর্থে চলে — সমাজের বৃত্ত, গ্রাম্য পরিষদ, আবার একটি মিষ্টির নামও (মণ্ডা)। বৌদ্ধ সমাজে বড় অনুষ্ঠানে যে সমবেত ভোজন হয়, ধর্মীয়ভাবে সেটি ‘সঙ্ঘদান’ বা ‘ভোজ-দান’-এর রূপ: ভিক্ষু-সংঘকে আগে পরিবেশন করা হয়, পরে গৃহস্থরা একসঙ্গে খান। এই সমবেত ভোজের সামাজিক কাজ বড় — গ্রামের সব শ্রেণি এক পঙ্ক্তিতে বসা, আত্মীয়তা তৈরি হওয়া। তবে ‘মণ্ডল খাওয়া’ নামে কোনো স্বতন্ত্র, লিখিত বৌদ্ধ আচার সম্পর্কে নির্ভরযোগ্য গবেষণা পাওয়া যায়নি; তাই এই এন্ট্রি ‘যাচাই বাকি’ হিসেবে চিহ্নিত।",
+     "points": [
+      {
+       "k": "সঙ্ঘদান",
+       "v": "ভিক্ষু-সংঘকে দান — ভোজের আগে ধর্মীয় অংশ।"
+      },
+      {
+       "k": "পঙ্কতি-ভোজন",
+       "v": "সবাই একসঙ্গে বসে খাওয়া; জাতিভেদ ভাঙার সামাজিক কাজ।"
+      },
+      {
+       "k": "উপলক্ষ",
+       "v": "উপসম্পদা, শ্রাদ্ধ, বিয়ে, নতুন বিহার — সবখানে ভোজ।"
+      },
+      {
+       "k": "শব্দের জট",
+       "v": "‘মণ্ডল’ = বৃত্ত/পরিষদ/মিষ্টি — অর্থ আলাদা করে না নিলে বিভ্রান্তি।"
+      },
+      {
+       "k": "‘যাচাই বাকি’",
+       "v": "‘মণ্ডল খাওয়া’ নামের স্বতন্ত্র আচারের লিখিত সূত্র পাওয়া যায়নি।"
+      }
+     ],
+     "media": {
+      "images": [
+       "sandesh",
+       "monk-village"
+      ],
+      "video": "lib:vid-buddha-purnima-3",
+      "audio": "lib:aud-nishita-barua",
+      "pdf": "lib:kalpataru-tripitak"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — বুদ্ধ পূর্ণিমা (পিণ্ডদান প্রসঙ্গ)",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A7%81%E0%A6%A6%E0%A7%8D%E0%A6%A7_%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A3%E0%A6%BF%E0%A6%AE%E0%A6%BE"
+      }
+     ],
+     "status": "thin"
+    }
+   ],
+   "counts": {
+    "image": 14,
+    "video": 6,
+    "audio": 6,
+    "pdf": 6
+   }
+  },
+  {
+   "id": "vikkhu-jibon",
+   "no": "৩",
+   "title": "ভিক্ষু-জীবন",
+   "lead": "একজন ভিক্ষু হন কীভাবে, সারা দিন কী করেন, কী পরেন, কোন নিয়ম মানেন — প্রব্রজ্যা থেকে উপসম্পদা, ভোরের বন্দনা থেকে রাতের ধ্যান পর্যন্ত एकদিনের দিনলিপি।",
+   "media": {
+    "image": "monk-village",
+    "video": "lib:vid-shalban",
+    "audio": "lib:aud-dhammapada-pali",
+    "pdf": "lib:lib-vinayapitaka-pachittiya"
+   },
+   "entries": [
+    {
+     "id": "monk-probrojja",
+     "title": "প্রব্রজ্যা ও উপসম্পদা",
+     "sub": "ভিক্ষু হওয়ার দুই ধাপ",
+     "about": "বাংলাপিডিয়ার ‘প্রব্রজ্যা’ ও ‘Upasampada’ নিবন্ধ অনুযায়ী পথটি দুই ধাপের। প্রথমে ‘প্রব্রজ্যা’ — গৃহত্যাগ, মাথা ন্যাড়া, গৈরিক চীবর ধারণ, তিন শরণ গ্রহণ এবং একজন উপাধ্যায়ের অধীনে দশ শিক্ষাপদের পালন। এ অবস্থায় তাকে বলা হয় ‘শ্রমণ/সামনের’; বয়স সাধারণত ১৫ বছর। এরপর ২০ বছর পূর্ণ হলে ‘উপসম্পদা’ — পূর্ণ ভিক্ষুর স্বীকৃতি, যার জন্য কমপক্ষে পাঁচজন ভিক্ষুর উপস্থিতি ও সংঘের সামনে নির্দিষ্ট কর্মবাচ্য (`vattichatuttha kamma`) প্রয়োজন। বাংলাপিডিয়া উপসম্পদার আটটি প্রকারের কথা বলে।",
+     "points": [
+      {
+       "k": "শ্রমণ",
+       "v": "প্রব্রজ্যার পরের ধাপ; দশ শীল, একজন উপাধ্যায়ের তত্ত্বাবধান।"
+      },
+      {
+       "k": "বয়স",
+       "v": "প্রব্রজ্যায় ১৫, উপসম্পদায় ২০ বছর — ত্রিপিটকের বিনয়-নিয়ম।"
+      },
+      {
+       "k": "উপসম্পদা",
+       "v": "সংঘের সামনে পূর্ণ ভিক্ষুত্ব; অন্তত পাঁচ ভিক্ষুর উপস্থিতি।"
+      },
+      {
+       "k": "আট প্রকার",
+       "v": "বাংলাপিডিয়ায় উপসম্পদার আট প্রকারের উল্লেখ আছে।"
+      },
+      {
+       "k": "বাংলাদেশে",
+       "v": "উপসম্পদা বিহারে হয়; সংঘরাজ বা মহাস্থবিরের নেতৃত্বে অনুষ্ঠান।"
+      }
+     ],
+     "media": {
+      "images": [
+       "monk-village",
+       "lib:img-kutila"
+      ],
+      "video": "lib:vid-shalban",
+      "audio": "lib:aud-dhammapada-pali",
+      "pdf": "lib:vinayapitaka-pachittiya"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — প্রব্রজ্যা",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A6%BE"
+      },
+      {
+       "t": "Banglapedia — Upasampada",
+       "u": "https://en.banglapedia.org/index.php?title=Upasampada"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "monk-dinlipi",
+     "title": "এক দিনের দিনলিপি",
+     "sub": "ভোর থেকে রাত — ভিক্ষুর সময়সূচি",
+     "about": "ভিক্ষুর দিন শুরু হয় খুব ভোরে, সূর্য ওঠার আগে। বাংলাদেশের বিহারে সাধারণত এই ধারাই দেখা যায়: ভোরের বন্দনা ও ধ্যান, ভিক্ষাপাত্র নিয়ে গ্রামে বা ভক্তদের বাড়ি থেকে ভিক্ষা (সমতলে অনেক জায়গায় এখন ভিক্ষুরা ভিক্ষায় যান না, ভক্তরাই বিহারে ভোজন নিয়ে আসেন), সকালের নাস্তা, তারপর পাঠ ও শ্রম; দুপুরের আগেই প্রধান ভোজ — কারণ বিনয় অনুযায়ী দুপুরের পর কঠিন খাবার খাওয়া যায় না; বিকেলে গ্রামের শিষ্যদের শিক্ষা, সন্ধ্যায় বুদ্ধবন্দনা ও দেশনা, রাতে ধ্যান ও বিশ্রাম। উপোসথের দিনে (অমাবস্যা-পূর্ণিমায়) রাত জেগে ধর্মালোচনা হয়।",
+     "points": [
+      {
+       "k": "ভোর",
+       "v": "বন্দনা, ধ্যান, বিহার-পরিষ্কার।"
+      },
+      {
+       "k": "ভিক্ষা / ভক্তের দান",
+       "v": "পাত্রে খাদ্য সংগ্রহ; সমতলে অনেক বিহারে ভক্তরাই নিয়ে আসেন।"
+      },
+      {
+       "k": "দুপুরের আগে ভোজ",
+       "v": "বিনয় অনুযায়ী একবার প্রধান ভোজন; এরপর কঠিন খাবার নয়।"
+      },
+      {
+       "k": "বিকেল-সন্ধ্যা",
+       "v": "শিষ্যদের পাঠদান, বুদ্ধবন্দনা, দেশনা।"
+      },
+      {
+       "k": "উপোসথ",
+       "v": "অমাবস্যা-পূর্ণিমায় রাত জেগে ধর্মালোচনা; মাঝে মাঝে শুধু বাঁশের/কাঠের আস্তরণ।"
+      }
+     ],
+     "media": {
+      "images": [
+       "monk-village",
+       "alms-bowl"
+      ],
+      "video": "lib:vid-paharpur-1",
+      "audio": "lib:aud-buddha-vandana",
+      "pdf": "lib:banabhante-desana"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Upasampada (দৈনন্দিন নিয়ম প্রসঙ্গ)",
+       "u": "https://en.banglapedia.org/index.php?title=Upasampada"
+      },
+      {
+       "t": "Banglapedia — Sangha",
+       "u": "https://en.banglapedia.org/index.php?title=Gananatya_Sangha"
+      }
+     ],
+     "status": "partial"
+    },
+    {
+     "id": "monk-chibor",
+     "title": "চীবর ও ভিক্ষাপাত্র",
+     "sub": "কী পরেন, কী বহন করেন, কেন",
+     "about": "ভিক্ষুর পোশাক ‘চীবর’ — মূলত তিন খণ্ড কাপড় (অন্তর্বাস, উত্তরাসঙ্গ, সংঘাটি), সাধারণত গৈরিক বা কষায় রঙে রাঙানো। থেরবাদ ঐতিহ্যে চীবর ‘পাংশুকূলিক’ — ফেলে দেওয়া কাপড়ের টুকরো থেকে তৈরি; এই ধারণাই ভিক্ষুর অনাসক্তির প্রতীক। ভিক্ষাপাত্র (পাতা/পাত্র) বিনয় অনুযায়ী অনুমোদিত ধাতু বা মাটির পাত্র — সোনা-রুপার পাত্র নিষিদ্ধ। বাংলার ভিক্ষুরা সাধারণত কাঠ বা ধাতুর পাত্র ব্যবহার করেন; পাহাড়ি অঞ্চলে কখনো বাঁশের তৈরি পাত্রও দেখা যায়। বিনয়ে ভিক্ষুর থাকার জায়গা, খাদ্য, ওষুধ — সবকিছুর সীমা নির্ধারিত, যাতে সংযম রক্ষা হয়।",
+     "points": [
+      {
+       "k": "তিন খণ্ড",
+       "v": "অন্তর্বাস, উত্তরাসঙ্গ, সংঘাটি — মূল চীবর।"
+      },
+      {
+       "k": "পাংশুকূলিক",
+       "v": "ফেলে দেওয়া কাপড় থেকে — অনাসক্তির প্রতীক।"
+      },
+      {
+       "k": "ভিক্ষাপাত্র",
+       "v": "ধাতু/মাটি; সোনা-রুপা নিষিদ্ধ।"
+      },
+      {
+       "k": "বিনয়ের সীমা",
+       "v": "খাদ্য, বাসস্থান, ওষুধ — প্রত্যেকটির নির্দিষ্ট নিয়ম।"
+      },
+      {
+       "k": "বাংলাদেশে",
+       "v": "ভিক্ষুরা সাধারণত সাদা/গৈরিক চীবর পরেন; পাহাড়ে ভিন্ন রীতি দেখা যায়।"
+      }
+     ],
+     "media": {
+      "images": [
+       "alms-bowl",
+       "monk-village"
+      ],
+      "video": "lib:vid-shalbon-2",
+      "audio": "lib:aud-dhammapada-pali",
+      "pdf": "lib:vinayapitaka-pachittiya"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Upasampada",
+       "u": "https://en.banglapedia.org/index.php?title=Upasampada"
+      },
+      {
+       "t": "Kasaya (Buddhist robe)",
+       "u": "https://en.wikipedia.org/wiki/Kasaya"
+      }
+     ],
+     "status": "partial"
+    },
+    {
+     "id": "monk-uposoth",
+     "title": "উপোসথ, বর্ষাবাস ও কঠিন চীবর",
+     "sub": "বছরের তিনটি বাঁক",
+     "about": "বিনয় অনুযায়ী ভিক্ষুরা অমাবস্যা ও পূর্ণিমায় ‘উপোসথ’ পালন করেন — সীমা-ঘরে সংঘের সামনে দোষ স্বীকার ও পাতিমোক্খ পাঠ। বর্ষাকালে (আষাঢ়ী পূর্ণিমা থেকে প্রবারণা পর্যন্ত) তিন মাস ‘বর্ষাবাস’ — ভিক্ষুরা এক স্থানে থাকেন, ভ্রমণ করেন না। বাংলাপিডিয়ার ‘কঠিন চীবর দান’ নিবন্ধ অনুযায়ী প্রবারণার পরের এক মাসে ভিক্ষুদের চীবর দান করা হয়; ‘কঠিন’ শব্দের অর্থ ‘কঠিন/অনড়’ — অর্থাৎ নির্দিষ্ট নিয়মে, নির্দিষ্ট সময়ে সম্পন্ন করতে হয় বলে এই নাম।",
+     "points": [
+      {
+       "k": "উপোসথ",
+       "v": "অমাবস্যা-পূর্ণিমায় সীমা-ঘরে দোষ স্বীকার ও পাতিমোক্খ পাঠ।"
+      },
+      {
+       "k": "বর্ষাবাস",
+       "v": "তিন মাস এক স্থানে অবস্থান — ভ্রমণ-নিষেধ।"
+      },
+      {
+       "k": "প্রবারণা",
+       "v": "বর্ষাবাস শেষে সংঘের সামনে দোষ স্বীকার।"
+      },
+      {
+       "k": "কঠিন চীবর",
+       "v": "প্রবারণার পরের মাসে এক বিহারের ভিক্ষুদের একসঙ্গে চীবর দান।"
+      },
+      {
+       "k": "গৃহস্থের ভূমিকা",
+       "v": "এই তিনটি অনুষ্ঠানেই গৃহস্থরা দান-দক্ষিণা ও ভোজের ব্যবস্থা করেন।"
+      }
+     ],
+     "media": {
+      "images": [
+       "monk-village",
+       "mandala"
+      ],
+      "video": "lib:vid-buddha-purnima-3",
+      "audio": "lib:aud-dhammapada-pali",
+      "pdf": "lib:dhammapada-commentary"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — কঠিন চীবর দান",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%95%E0%A6%A0%E0%A6%BF%E0%A6%A8_%E0%A6%9A%E0%A7%80%E0%A6%AC%E0%A6%B0_%E0%A6%A6%E0%A6%BE%E0%A6%A8"
+      },
+      {
+       "t": "Banglapedia — প্রবারণা পূর্ণিমা",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%AC%E0%A6%BE%E0%A6%B0%E0%A6%A3%E0%A6%BE_%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A3%E0%A6%BF%E0%A6%AE%E0%A6%BE"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "monk-bihar",
+     "title": "বিহারে ভিক্ষুর ভূমিকা",
+     "sub": "শুধু পূজা নয় — স্কুল, ন্যায়বিচার, সমাজ",
+     "about": "বাংলাদেশের গ্রামে বিহার শুধু পূজার জায়গা নয়। ভিক্ষুরা শিশুদের বাংলা-পালি পড়ান, বন্দনা শেখান; শোকাহত পরিবারে মৃতের বন্দনা করেন; শুভকর্মে আশীর্বাদ দেন। বিহার আবার গ্রাম্য বিবাদের মীমাংসার জায়গাও — এতে জাত-ধর্ম নির্বিশেষে মানুষ আসে। বাংলাবৌদ্ধ সমাজের ‘সংঘরাজ’ ও ‘মহাস্থবির’ পদবিগুলো এই সমাজ-নেতৃত্বেরই স্বীকৃতি। তবে এই সুবিস্তৃত সামাজিক ভূমিকার লিখিত গবেষণা বাংলাদেশে এখনো সরু — বেশিরভাগ জানা যায় স্থানীয় ভাষ্য ও সংবাদ-প্রতিবেদন থেকে।",
+     "points": [
+      {
+       "k": "শিক্ষা",
+       "v": "শিশুদের বাংলা ও পালি পাঠ, বন্দনা শিক্ষা।"
+      },
+      {
+       "k": "অনুষ্ঠান",
+       "v": "শ্রাদ্ধ, বিয়ে, গৃহপ্রবেশ, বুদ্ধপূর্ণিমা — সার্বক্ষণিক উপস্থিতি।"
+      },
+      {
+       "k": "মীমাংসা",
+       "v": "গ্রাম্য বিরোধে পরামর্শদাতা; জাতি-ধর্ম নির্বিশেষে।"
+      },
+      {
+       "k": "পদবি",
+       "v": "সংঘরাজ, মহাস্থবির, উপাধ্যায় — সংঘের নেতৃত্ব-পদ।"
+      },
+      {
+       "k": "সীমাবদ্ধতা",
+       "v": "এই সামাজিক ভূমিকা নিয়ে লিখিত বাংলা গবেষণা সরু।"
+      }
+     ],
+     "media": {
+      "images": [
+       "monk-village",
+       "monastery-bd",
+       "rajban-bihar"
+      ],
+      "video": "lib:vid-buddha-purnima-2",
+      "audio": "lib:aud-buddha-vandana",
+      "pdf": "lib:banglay-bauddha-dharma"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Sangha",
+       "u": "https://en.banglapedia.org/index.php?title=Gananatya_Sangha"
+      },
+      {
+       "t": "Banglapedia — বাংলায় বৌদ্ধধর্ম (PDF)",
+       "u": "https://archive.org/details/4.3.-by-."
+      }
+     ],
+     "status": "partial"
+    }
+   ],
+   "counts": {
+    "image": 11,
+    "video": 5,
+    "audio": 5,
+    "pdf": 5
+   }
+  },
+  {
+   "id": "itihas",
+   "no": "৪",
+   "title": "বাঙালি বুদ্ধ ও বৌদ্ধধর্মের ইতিহাস",
+   "lead": "বাংলায় বৌদ্ধধর্ম কীভাবে এল, পাল যুগে কোথায় তার কেন্দ্র, আজ কারা বৌদ্ধ, তাদের পদবি কোথা থেকে এল, আর চা-বাগানের সঙ্গে বৌদ্ধ সমাজের সম্পর্ক কী — এই বিভাগে ধাপে ধাপে। যেখানে প্রমাণ সরু, সেখানে ‘যাচাই বাকি’ লেখা আছে।",
+   "media": {
+    "image": "somapura-aerial",
+    "video": "lib:vid-sompur",
+    "audio": "lib:aud-charyapada-song",
+    "pdf": "lib:lib-palas-banerjee"
+   },
+   "entries": [
+    {
+     "id": "his-agomon",
+     "title": "বাংলায় বৌদ্ধধর্মের আগমন — ধারাবাহিক ধাপ",
+     "sub": "মৌর্য থেকে পাল — ছয়টি ধাপ",
+     "about": "প্রত্নতাত্ত্বিক প্রমাণ অনুযায়ী বাংলায় বৌদ্ধধর্মের সবচেয়ে পুরোনো চিহ্ন মৌর্য যুগের (আনুমানিক খ্রিস্টপূর্ব ৩য় শতক) — মহাস্থানগড় ও ওয়ারী-বটেশ্বরে পাওয়া উত্তর-ভারতীয় মসৃণ কালো মাটির পাত্র ও পোড়ামাটির ফলক। এরপর গুপ্ত যুগে (৪র্থ–৬ষ্ঠ শতক) বাংলায় বৌদ্ধ বিহার ও মূর্তি তৈরির বড় সম্প্রসারণ ঘটে। ৭ম শতকে খ্রিস্টান পরিব্রাজক হিউয়েন সাং ও তিব্বতি সূত্র বাংলার বৌদ্ধ পণ্ডিতদের নাম রাখেন; তখনই বাংলা থেকে তিব্বত ও চীনে পণ্ডিত যান। অষ্টম শতকে গোপালের উত্থানের পর পাল বংশ প্রায় চারশো বছর বাংলা-বিহার শাসন করে — এই যুগেই পাহাড়পুর, শালবন বিহার, বিক্রমপুর, ময়নামতির বিহার-নগর গড়ে ওঠে।",
+     "points": [
+      {
+       "k": "১. মৌর্য (খ্রি.পূ. ৩য় শতক)",
+       "v": "মহাস্থানগড় প্রভৃতিতে প্রাচীনতম প্রত্নচিহ্ন।"
+      },
+      {
+       "k": "২. গুপ্ত (৪র্থ–৬ষ্ঠ)",
+       "v": "বিহার ও মূর্তি নির্মাণের বিস্তার; বাগুড়া-দিনাজপুরের নিদর্শন।"
+      },
+      {
+       "k": "৩. ৭ম শতক",
+       "v": "হিউয়েন সাং বাংলা ভ্রমণ; তিব্বতে বাঙালি পণ্ডিতের যাওয়া।"
+      },
+      {
+       "k": "৪. পাল (৮ম–১২শ)",
+       "v": "গোপাল থেকে রামপাল — বাংলার বৌদ্ধ স্বর্ণযুগ।"
+      },
+      {
+       "k": "৫. সেন ও তুর্কি শাসন",
+       "v": "১২শ শতকে সেন রাজবংশের পৃষ্ঠপোষকতা হিন্দুধর্মে; বিহারগুলো ক্ষয় পায়।"
+      },
+      {
+       "k": "৬. আধুনিক",
+       "v": "১৯ শতকে বৌদ্ধ ধর্মাঙ্কুর সভা, বড়ুয়া পণ্ডিতদের পুনর্জাগরণ।"
+      }
+     ],
+     "media": {
+      "images": [
+       "big-buddha",
+       "somapura-aerial",
+       "lib:img-mainamati-museum"
+      ],
+      "video": "lib:vid-sompur",
+      "audio": "lib:aud-atisha-lamp",
+      "pdf": "lib:palas-banerjee"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Buddhism (বাংলায় আগমন)",
+       "u": "https://en.banglapedia.org/index.php?title=Buddhism"
+      },
+      {
+       "t": "Banglapedia — পাল বংশ",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B2_%E0%A6%AC%E0%A6%82%E0%A6%B6"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "his-pal",
+     "title": "পাল যুগ ও মহাবিহারগুলো",
+     "sub": "বাংলার বৌদ্ধ বিশ্ববিদ্যালয়",
+     "about": "পাহাড়পুরের সোমপুর মহাবিহার (নওগাঁ) বাংলার সবচেয়ে বড় বিহার — প্রায় ২৪ মিটার উঁচু ঢিবি, চারদিকে ১৭৭টি কক্ষ, কেন্দ্রে ক্রুশাকৃতি মন্দির। তিব্বতি ইতিহাসে এই বিহার ‘বজ্রযোগিনী’ নামে পরিচিত ছিল এবং এখানেই অতীশ দীপঙ্কর (৯৮২–১০৫৪) দীক্ষা নেন বলে প্রচলিত ধারণা আছে। ময়নামতির শালবন বিহারে ১৫৫টি কক্ষ; একটি মাত্র প্রবেশপথ, দেওয়াল ৫ মিটার পুরু — বাংলাপিডিয়া এটিকে ‘দুর্গের নমুনা’ হিসেবে তুলে ধরেছে। এই বিহারগুলোর মাধ্যমে বাংলা-তিব্বত-দক্ষিণ-পূর্ব এশিয়ার মধ্যে শিক্ষা ও শিল্পের যোগাযোগ তৈরি হয়।",
+     "points": [
+      {
+       "k": "সোমপুর মহাবিহার",
+       "v": "নওগাঁর পাহাড়পুর; চারশো বছরেরও বেশি সময়ের স্তর।"
+      },
+      {
+       "k": "শালবন বিহার",
+       "v": "কুমিল্লার ময়নামতি; ১৫৫ কক্ষ, একটি প্রবেশদ্বার।"
+      },
+      {
+       "k": "অতীশ দীপঙ্কর",
+       "v": "বাংলার পণ্ডিত; ১০১২ সালে তিব্বত যান, ‘বোধিপথপ্রদীপ’ রচনা।"
+      },
+      {
+       "k": "শিক্ষা-যোগাযোগ",
+       "v": "বাংলা ↔ তিব্বত ↔ দক্ষিণ-পূর্ব এশিয়া।"
+      },
+      {
+       "k": "ইউনেস্কো",
+       "v": "সোমপুর মহাবিহার ১৯৮৫ সালে বিশ্ব ঐতিহ্যের তালিকায় যায়।"
+      }
+     ],
+     "media": {
+      "images": [
+       "lib:img-paharpur",
+       "lib:img-kutila",
+       "lib:img-atisha"
+      ],
+      "video": "lib:vid-paharpur-1",
+      "audio": "lib:aud-atisha-lamp",
+      "pdf": "lib:dikshit-paharpur"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — শালবন বিহার",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%AC%E0%A6%A8_%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0"
+      },
+      {
+       "t": "Banglapedia — পাহাড়পুর",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AA%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A1%E0%A6%BC%E0%A6%AA%E0%A7%81%E0%A6%B0"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "his-jonogosthi",
+     "title": "বৌদ্ধ জনগোষ্ঠীর তালিকা",
+     "sub": "কারা কোন অঞ্চলে বাস করেন",
+     "about": "বাংলাদেশে বৌদ্ধ জনসংখ্যার সবচেয়ে বড় অংশ সমতলে — চট্টগ্রাম, কক্সবাজার, ঢাকা, সিলেটে ‘বড়ুয়া’ সম্প্রদায়। পাহাড়ে আছে চাকমা (সবচেয়ে বড়), মারমা, তঞ্চঙ্গ্যা, রাখাইন (মূলত কক্সবাজার-পটুয়াখালী উপকূলে), ম্রো, খ্যাং, চাক, খুমি। প্রত্যেকের ভাষা, পোশাক ও উৎসব আলাদা; ধর্ম এক হলেও সংস্কৃতি এক নয় — এটাই এ বিভাগের মূল কথা। নিচের তালিকা বাংলাপিডিয়ার আলাদা আলাদা জনগোষ্ঠী-নিবন্ধ থেকে সংকলিত।",
+     "points": [
+      {
+       "k": "বড়ুয়া",
+       "v": "চট্টগ্রাম-কক্সবাজার-ঢাকা; সমতলের সবচেয়ে বড় বৌদ্ধ সমাজ।"
+      },
+      {
+       "k": "চাকমা",
+       "v": "রাঙ্গামাটি ও খাগড়াছড়ি; বাংলাদেশের বৃহত্তম আদিবাসী জনগোষ্ঠী, ১৯৯১ গণনায় প্রায় ২.৫৩ লাখ।"
+      },
+      {
+       "k": "মারমা",
+       "v": "বান্দরবান-রাঙ্গামাটি-খাগড়াছড়ি; আরাকানি বর্মী ভাষা, প্রায় সাড়ে তিন লাখ।"
+      },
+      {
+       "k": "রাখাইন",
+       "v": "কক্সবাজার-পটুয়াখালী; ১৮ শতকের শেষে আরাকান থেকে আগমন।"
+      },
+      {
+       "k": "তঞ্চঙ্গ্যা",
+       "v": "রাঙ্গামাটি-খাগড়াছড়ি-বান্দরবান; পোশাক ‘কেবই’, ১২টি গচ/গোত্র।"
+      },
+      {
+       "k": "ম্রো, খ্যাং, চাক, খুমি",
+       "v": "পাহাড়ি ক্ষুদ্র জনগোষ্ঠী; অনেকেই বৌদ্ধ, কেউ খ্রিস্টান।"
+      }
+     ],
+     "media": {
+      "images": [
+       "chakma-dancers",
+       "marma-museum",
+       "rakhine-water",
+       "marma-dancer"
+      ],
+      "video": "lib:vid-bizu",
+      "audio": "lib:aud-chakma-song",
+      "pdf": "lib:chakma-genesis"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — চাকমা",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%BE%E0%A6%95%E0%A6%AE%E0%A6%BE"
+      },
+      {
+       "t": "Banglapedia — Marma",
+       "u": "https://en.banglapedia.org/index.php?title=Marma,_The"
+      },
+      {
+       "t": "Banglapedia — Rakhain",
+       "u": "https://en.banglapedia.org/index.php?title=Rakhain,_The"
+      },
+      {
+       "t": "Banglapedia — Tanchangya",
+       "u": "https://en.banglapedia.org/index.php?title=Tanchangya,_The"
+      },
+      {
+       "t": "Banglapedia — Khyang",
+       "u": "https://en.banglapedia.org/index.php?title=Khyang"
+      }
+     ],
+     "status": "verified"
+    },
+    {
+     "id": "his-podobi",
+     "title": "পদবির ইতিহাস",
+     "sub": "‘তালুকদার’ থেকে ‘বড়ুয়া’ — এক পরিবারের গল্প, আর সামান্য প্রমাণ",
+     "about": "পদবি কীভাবে বদলায়, তার সবচেয়ে নির্ভরযোগ্য উদাহরণ বাংলাপিডিয়ার ‘বেণীমাধব বড়ুয়া’ নিবন্ধেই আছে: ১৮৮৮ সালে চট্টগ্রামের রাউজানের মহামুনি গ্রামে জন্ম নেওয়া বেণীমাধবের পিতার নাম ছিল রাজচন্দ্র তালুকদার, কিন্তু তিনি ‘বাল্যকালেই পারিবারিক তালুকদার পদবী ত্যাগ করে বড়ুয়া পদবী গ্রহণ করেন’। অর্থাৎ পদবি বংশসূত্রে স্থির নয় — সময়, পেশা ও পরিচয়-রাজনীতির সঙ্গে বদলায়। সমতলের বৌদ্ধ সমাজে ‘বড়ুয়া’ ছাড়াও আছে ‘মুৎসুদ্দি’, ‘চৌধুরী’, ‘প্রধান’, ‘তালুকদার’, ‘সেন’, ‘ব্যারিস্টার’ — এদের অনেকগুলোই ভূমি-প্রশাসন বা পেশার সঙ্গে যুক্ত ফারসি/আরবি শব্দ। ‘মুৎসুদ্দি’ শব্দটি ফারসি-আরবি প্রশাসনিক উপাধি থেকে এসেছে বলে অনেকে মনে করেন, কিন্তু বাংলাদেশের বৌদ্ধ পরিবারে এই পদবির ব্যবহার নিয়ে এখনো কোনো নির্ভরযোগ্য গবেষণা প্রকাশিত হয়নি — তাই এটি ‘যাচাই বাকি’।",
+     "points": [
+      {
+       "k": "নথিভুক্ত উদাহরণ",
+       "v": "রাজচন্দ্র তালুকদার → পুত্র বেণীমাধব বড়ুয়া (বাংলাপিডিয়া)।"
+      },
+      {
+       "k": "কেন বদলায়",
+       "v": "শিক্ষা, পেশা, সামাজিক মর্যাদা ও পরিচয়-রাজনীতি।"
+      },
+      {
+       "k": "প্রশাসনিক শব্দ",
+       "v": "তালুকদার, মুৎসুদ্দি, চৌধুরী — ভূমি-রাজস্ব ব্যবস্থার উত্তরাধিকার।"
+      },
+      {
+       "k": "‘বড়ুয়া’ অর্থ",
+       "v": "পালি ‘বর/বরুয়া’ (প্রধান/শ্রেষ্ঠ) থেকে ব্যুৎপত্তি বলে অনেকে মনে করেন — নিশ্চিত নয়।"
+      },
+      {
+       "k": "‘যাচাই বাকি’",
+       "v": "‘মুৎসুদ্দি’ পদবির বৌদ্ধ-ব্যবহার নিয়ে লিখিত গবেষণা পাওয়া যায়নি।"
+      }
+     ],
+     "media": {
+      "images": [
+       "lib:img-mainamati-museum",
+       "chakma-dancers"
+      ],
+      "video": "lib:vid-charyapada-doc",
+      "audio": "lib:aud-nishita-barua",
+      "pdf": "lib:barua-prolegomena"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — বড়ুয়া, বেণীমাধব",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%AC%E0%A6%A1%E0%A6%BC%E0%A7%81%E0%A6%AF%E0%A6%BC%E0%A6%BE,_%E0%A6%AC%E0%A7%87%E0%A6%A3%E0%A7%80%E0%A6%AE%E0%A6%BE%E0%A6%A7%E0%A6%AC"
+      },
+      {
+       "t": "Banglapedia — Barua, Benimadhab",
+       "u": "https://en.banglapedia.org/index.php?title=Barua,_Benimadhab"
+      }
+     ],
+     "status": "partial"
+    },
+    {
+     "id": "his-cha",
+     "title": "চা-বাগান ও বৌদ্ধ সমাজ",
+     "sub": "সিলেটের চা-শ্রমিকদের মধ্যে বৌদ্ধরা কোথা থেকে এল",
+     "about": "বাংলাদেশের চা-শিল্পের কেন্দ্র সিলেট; ১৮৪০-এর দশকে প্রথম বাগান তৈরি হয়, আর ১৮৫৭ সালের পর বড় আকারে শ্রমিক আনা হয় — মূলত চোটানাগপুর, সাঁওতাল পরগনা ও মধ্যভারত থেকে, যাঁদের মধ্যে উল্লেখযোগ্য অংশ ছিল খ্রিস্টান ও আদিবাসী। বাংলার বৌদ্ধদের চা-বাগানের সঙ্গে সরাসরি সংযোগ নিয়ে নিশ্চিত প্রত্নতাত্ত্বিক বা নথিভুক্ত প্রমাণ সরু; যা জানা যায় তা হলো — শ্রীমঙ্গল-মৌলভীবাজার-হবিগঞ্জের চা-অঞ্চলে বৌদ্ধ বিহার ও বৌদ্ধ পাড়া গড়ে উঠেছে, মূলত ১৯-২০ শতকে সিলেট-চট্টগ্রাম থেকে আসা পরিবার ও স্থানীয় রূপান্তরের মাধ্যমে। ‘চা’ শব্দটির সঙ্গে বৌদ্ধ ধর্মের তত্ত্বগত কোনো সম্পর্ক নেই — শব্দটি চীনা ‘ছা’ থেকে। এই বিভ্রান্তি এড়ানো জরুরি।",
+     "points": [
+      {
+       "k": "চা-শিল্পের শুরু",
+       "v": "১৮৪০-এর দশক; সিলেট ও চট্টগ্রামে প্রথম বাগান।"
+      },
+      {
+       "k": "শ্রমিক-আগমন",
+       "v": "১৮৫৭-পরবর্তী সময়ে মূলত মধ্যভারত ও চোটানাগপুর থেকে।"
+      },
+      {
+       "k": "বৌদ্ধ পাড়া",
+       "v": "শ্রীমঙ্গল, মৌলভীবাজার, হবিগঞ্জে বিহার ও বৌদ্ধ পরিবার।"
+      },
+      {
+       "k": "‘চা’ শব্দ",
+       "v": "চীনা ‘ছা’ থেকে; বৌদ্ধ তত্ত্বের সঙ্গে সম্পর্ক নেই।"
+      },
+      {
+       "k": "‘যাচাই বাকি’",
+       "v": "চা-বাগানে বৌদ্ধ শ্রমিকদের আগমনের ধারাবাহিক নথি এখনো তৈরি হয়নি।"
+      }
+     ],
+     "media": {
+      "images": [
+       "tea-garden",
+       "monastery-bd"
+      ],
+      "video": "lib:vid-bizu",
+      "audio": "lib:aud-chakma-song",
+      "pdf": "lib:sreehatta"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — Tea Industry",
+       "u": "https://en.banglapedia.org/index.php?title=Tea_Industry"
+      },
+      {
+       "t": "Banglapedia — চা শিল্প",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%BE_%E0%A6%B6%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%AA"
+      }
+     ],
+     "status": "partial"
+    },
+    {
+     "id": "his-chorjapod",
+     "title": "চর্যাপদ ও মন্ত্রযান",
+     "sub": "বাংলা ভাষার প্রথম নমুনা বৌদ্ধ সাধনার গান",
+     "about": "চর্যাপদ বাংলা ভাষা ও সাহিত্যের আদি নিদর্শন — ৪৭টি পদ, ২৩ জন পদকর্তার রচনা, কাল আনুমানিক ৯ম থেকে ১২শ শতক। ১৯০৭ সালে হরপ্রসাদ শাস্ত্রী নেপালের রাজদরবারের গ্রন্থাগার থেকে পুঁথিটি আবিষ্কার করেন এবং তাঁর সম্পাদনায় ১৯১৬ সালে ‘হাজার বছরের পুরাণ বাঙ্গালা ভাষায় বৌদ্ধগান ও দোহা’ নামে বঙ্গীয় সাহিত্য পরিষৎ থেকে প্রকাশিত হয়। রচয়িতাদের মধ্যে লুইপাদ, কাহ্নপাদ, সরহপাদ প্রমুখ সিদ্ধাচার্য; ভাষা ‘সন্ধ্যাভাষা’ বা ‘আলো-আঁধারি’ ভাষা — ইচ্ছাকৃতভাবে রহস্যময়, যাতে অযোগ্য ব্যক্তি অর্থ না বোঝে। এর ধর্মীয় পটভূমি সহজযান ও তান্ত্রিক যোগসাধনা। বৌদ্ধগান হলেও এর ভাষা ও রূপ বাংলার লোকসংগীতের সঙ্গে গভীরভাবে জড়িত।",
+     "points": [
+      {
+       "k": "আবিষ্কার ও প্রকাশ",
+       "v": "আবিষ্কার ১৯০৭ (হরপ্রসাদ শাস্ত্রী); প্রকাশ ১৯১৬।"
+      },
+      {
+       "k": "সংখ্যা",
+       "v": "৪৭টি পদ, ২৩ জন পদকর্তা (বাংলাপিডিয়া)।"
+      },
+      {
+       "k": "রচয়িতা",
+       "v": "২৩ জন সিদ্ধাচার্য — লুইপাদ, কাহ্নপাদ, সরহপাদ প্রমুখ।"
+      },
+      {
+       "k": "ভাষা",
+       "v": "সন্ধ্যাভাষা — রহস্যময়, সাধকদের জন্য।"
+      },
+      {
+       "k": "ধর্মীয় পটভূমি",
+       "v": "সহজযান, তান্ত্রিক যোগসাধনা — হেঁয়ালিপূর্ণ ভাষায়।"
+      },
+      {
+       "k": "গুরুত্ব",
+       "v": "বাংলা ভাষা ও সাহিত্যের সূচনা-বিন্দু।"
+      }
+     ],
+     "media": {
+      "images": [
+       "lib:img-charyapada-ms",
+       "lib:img-pala-ms",
+       "lib:img-prajna-folio"
+      ],
+      "video": "lib:vid-charyapada-doc",
+      "audio": "lib:aud-charyapada-song",
+      "pdf": "lib:bouddhagan-doha"
+     },
+     "sources": [
+      {
+       "t": "Banglapedia — চর্যাপদ",
+       "u": "https://bn.banglapedia.org/index.php?title=%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6"
+      },
+      {
+       "t": "বৌদ্ধগান ও দোহা — PDF (লাইব্রেরি)",
+       "u": "https://archive.org/details/in.ernet.dli.2015.325963"
+      }
+     ],
+     "status": "verified"
+    }
+   ],
+   "counts": {
+    "image": 17,
+    "video": 6,
+    "audio": 6,
+    "pdf": 6
+   }
+  }
+ ],
+ "stats": {
+  "sections": 4,
+  "entries": 28,
+  "images": 36,
+  "links_video": 31,
+  "links_audio": 29,
+  "links_pdf": 29
+ }
+}
