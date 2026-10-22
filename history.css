@@ -1,0 +1,155 @@
+/* বৌদ্ধ শাসন ও ইতিহাস পাতার নিজস্ব স্টাইল (styles.css-এর ভেরিয়েবলের উপর নির্মিত) */
+.hist-hero { background: radial-gradient(1200px 420px at 15% -10%, #1d5c4f 0%, #123f39 55%, #0d2f2b 100%); color: #fffdf6; padding: 56px 0 64px; }
+.hist-hero .eyebrow { color: var(--gold); letter-spacing: .12em; font-size: 12px; text-transform: uppercase; margin: 0 0 10px; }
+.hist-hero h1 { margin: 0 0 14px; font-size: clamp(30px, 5vw, 50px); line-height: 1.2; letter-spacing: -.01em; }
+.hist-hero h1::after { content: ""; display: block; width: 92px; height: 4px; margin-top: 16px; border-radius: 4px; background: linear-gradient(90deg, var(--gold), #e77921); }
+.hist-lead { max-width: 78ch; font-size: 17px; color: #e7efe9; margin: 0 0 12px; }
+.hist-note { max-width: 78ch; font-size: 14px; color: #b9cdc3; margin: 0 0 22px; }
+.hist-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.hist-btn { display: inline-block; padding: 10px 18px; border-radius: 999px; background: var(--gold); color: #3a1f08; text-decoration: none; font-weight: 700; font-size: 14px; border: 1px solid transparent; }
+.hist-btn.ghost { background: transparent; color: #fff6e2; border-color: rgba(255,210,139,.5); }
+.hist-btn:hover { transform: translateY(-1px); }
+
+.hist-section { padding: 54px 0; }
+.hist-section.alt { background: #f4efe2; border-block: 1px solid var(--line); }
+.hist-section h2 { font-size: clamp(22px, 3vw, 30px); margin: 0 0 8px; }
+.hist-section h2::after { content: ""; display: block; width: 64px; height: 3px; margin-top: 10px; border-radius: 3px; background: var(--forest-mid); }
+.hist-sub { color: var(--muted); max-width: 80ch; margin: 12px 0 26px; }
+
+/* সময়রেখা */
+.timeline-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow); padding: 10px; }
+#timelineSvg { display: block; width: 100%; min-width: 760px; height: auto; }
+#timelineSvg .tl-axis { stroke: #d8d0be; stroke-width: 1; }
+#timelineSvg .tl-tick { stroke: #e6dece; stroke-width: 1; }
+#timelineSvg .tl-tick-label { fill: #8a7767; font-size: 9px; }
+#timelineSvg .tl-bar { cursor: pointer; }
+#timelineSvg .tl-bar rect { rx: 4; transition: filter .15s ease, opacity .15s ease; }
+#timelineSvg .tl-bar:hover rect { filter: brightness(1.08) drop-shadow(0 3px 6px rgba(0,0,0,.18)); }
+#timelineSvg .tl-label { fill: #33221a; font-size: 10px; pointer-events: none; }
+#timelineSvg .tl-era { fill: #6d5a4a; font-size: 10px; letter-spacing: .04em; }
+
+.era-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 18px; }
+.era-card { background: var(--paper); border: 1px solid var(--line); border-left: 5px solid var(--forest-mid); border-radius: 14px; padding: 14px 16px; }
+.era-card strong { display: block; font-size: 15px; }
+.era-card span { display: block; color: var(--maroon); font-size: 12px; margin: 2px 0 6px; }
+.era-card p { margin: 0; font-size: 13px; color: var(--muted); }
+
+/* রাজবংশ-তালিকা */
+.dyn-jump { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
+.dyn-jump a { font-size: 13px; text-decoration: none; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); color: var(--forest-deep); }
+.dyn-jump a:hover { border-color: var(--forest-mid); background: #fff6e6; }
+.dyn-list { display: grid; gap: 26px; }
+.dyn-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; scroll-margin-top: 90px; }
+.dyn-head { padding: 20px 22px 16px; background: linear-gradient(120deg, #fdf5e4, #fffdf7 60%); border-bottom: 1px solid var(--line); }
+.dyn-head h3 { margin: 0 0 4px; font-size: clamp(20px, 2.6vw, 27px); }
+.dyn-head h3 .num { display: inline-grid; place-items: center; width: 30px; height: 30px; margin-right: 8px; border-radius: 50%; background: var(--forest-mid); color: #fff; font-size: 14px; vertical-align: middle; }
+.dyn-period { font-weight: 700; color: var(--maroon); font-size: 14px; }
+.dyn-cap { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.dyn-alt { font-size: 12px; color: #8a7767; margin-top: 4px; }
+.dyn-body { padding: 20px 22px 24px; }
+.dyn-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 20px; }
+.figure { margin: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; }
+.figure .ph { display: block; width: 100%; height: 190px; object-fit: cover; background: linear-gradient(135deg, #efe5d2, #f8f2e6); }
+.figure .ph.map { object-fit: contain; background: #fbf7ee; }
+.figure figcaption { padding: 9px 11px; font-size: 12px; color: #5f5044; line-height: 1.5; }
+.figure figcaption a { color: var(--forest-mid); }
+.figure .kind { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 999px; background: #f2e6cf; color: #7a5320; margin-right: 6px; }
+.fig-missing { display: grid; place-items: center; height: 190px; font-size: 12px; color: #9a8b7c; text-align: center; padding: 12px; }
+
+.fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.field { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; background: #fffdf8; }
+.field h4 { margin: 0 0 6px; font-size: 13px; color: var(--forest-deep); letter-spacing: .01em; }
+.field h4 .ico { margin-right: 6px; }
+.field p { margin: 0; font-size: 13.5px; color: #4c3a2c; }
+.field.wide { grid-column: 1 / -1; }
+
+.ruler-table { width: 100%; border-collapse: collapse; margin: 6px 0 18px; font-size: 13px; }
+.ruler-table caption { text-align: right; font-size: 12px; color: var(--muted); padding-bottom: 6px; }
+.ruler-table th, .ruler-table td { border: 1px solid var(--line); padding: 8px 10px; vertical-align: top; text-align: right; }
+.ruler-table th { background: #f7efdd; font-size: 12.5px; color: var(--forest-deep); }
+.ruler-table tr:nth-child(even) td { background: #fffdf7; }
+
+.sites { margin: 16px 0 0; padding: 14px 16px; background: #f6f1e4; border-radius: 12px; border: 1px dashed #d8cbb2; }
+.sites h4 { margin: 0 0 8px; font-size: 13px; color: var(--forest-deep); }
+.sites ul { margin: 0; padding-inline-start: 20px; font-size: 13px; }
+.sites li { margin-bottom: 6px; }
+.sites li b { color: #5b3b1c; }
+.caution { margin-top: 14px; padding: 10px 13px; border-radius: 10px; background: #fdf1e5; border: 1px solid #edd6bb; font-size: 12.5px; color: #7d4a1c; }
+.dyn-top { margin-top: 14px; font-size: 12px; }
+.dyn-top a { color: var(--forest-mid); text-decoration: none; }
+
+/* প্রত্ননিদর্শন */
+.ruins-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+.ruin { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+.ruin strong { display: block; font-size: 14.5px; }
+.ruin .tag { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 999px; background: #eef3ea; color: #2f5b3d; margin: 5px 0 7px; }
+.ruin p { margin: 0; font-size: 13px; color: var(--muted); }
+
+.source-list { margin: 0; padding-inline-start: 20px; font-size: 14px; }
+.source-list li { margin-bottom: 8px; }
+.source-list a { color: var(--forest-mid); }
+.hist-warn { margin-top: 20px; padding: 12px 14px; border-radius: 12px; background: #fdf3e4; border: 1px solid #edd7bb; font-size: 13px; color: #7a4a1b; }
+
+.hist-footer { background: #123f39; color: #d9e6de; padding: 26px 0; font-size: 13px; }
+.hist-footer a { color: var(--gold); text-decoration: none; }
+.hist-footer code { background: rgba(255,255,255,.1); padding: 1px 6px; border-radius: 5px; }
+
+@media (max-width: 720px) {
+  .hist-hero { padding: 38px 0 44px; }
+  .hist-section { padding: 36px 0; }
+  .dyn-head, .dyn-body { padding-inline: 15px; }
+  .ruler-table { font-size: 12px; }
+  .figure .ph, .fig-missing { height: 160px; }
+}
+@media print {
+  .site-header, .hist-actions, .dyn-jump, .hist-footer { display: none; }
+  .dyn-card { break-inside: avoid; box-shadow: none; }
+}
+
+/* ── রাজাদের প্রোফাইল পাতা ── */
+.king-toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+.king-search { display: flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); min-width: 260px; }
+.king-search input { border: 0; outline: none; background: transparent; width: 100%; font-size: 14px; }
+.dyn-jump a.active { background: var(--forest-mid); color: #fff; border-color: var(--forest-mid); }
+.kings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 14px; }
+.kings-grid.single { grid-template-columns: 1fr; gap: 22px; }
+.king-mini { display: flex; flex-direction: column; gap: 3px; text-decoration: none; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: 0 6px 18px rgba(28,53,44,.05); transition: transform .15s ease, border-color .15s ease; }
+.king-mini:hover { transform: translateY(-2px); border-color: var(--forest-mid); }
+.king-mini-dyn { font-size: 11px; color: #8a7767; letter-spacing: .02em; }
+.king-mini strong { font-size: 16px; color: #33221a; }
+.king-mini-reign { font-size: 12.5px; color: var(--maroon); }
+.king-mini-more { margin-top: 6px; font-size: 12px; color: var(--forest-mid); }
+.king-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; scroll-margin-top: 96px; }
+.king-card.basic { border-left: 4px solid #d9cbb2; }
+.king-head { display: flex; gap: 18px; justify-content: space-between; align-items: flex-start; padding: 20px 22px 16px; background: linear-gradient(120deg, #fdf5e4, #fffdf7 65%); border-bottom: 1px solid var(--line); }
+.king-order { font-size: 11.5px; letter-spacing: .05em; color: #8a7767; text-transform: uppercase; }
+.king-head h3 { margin: 2px 0 4px; font-size: clamp(20px, 2.6vw, 27px); }
+.king-epithet { margin: 0 0 6px; font-size: 13px; color: var(--maroon); font-style: italic; }
+.king-reign { margin: 0; font-size: 13px; color: var(--muted); }
+.king-photo { flex: 0 0 190px; max-width: 200px; }
+.king-photo img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); background: #f5eddd; }
+.king-photo .credit { display: block; margin-top: 5px; font-size: 10.5px; color: #8a7767; line-height: 1.45; }
+.king-body { padding: 18px 22px 22px; }
+.king-summary { margin: 0 0 14px; font-size: 14.5px; color: #4c3a2c; }
+.king-summary.muted { color: #8a7767; font-style: italic; }
+.field.buddha { background: #fff8e9; border-color: #ecd9b6; }
+.king-list { margin: 0; padding-inline-start: 18px; font-size: 13.5px; }
+.king-list li { margin-bottom: 4px; }
+@media (max-width: 640px) {
+  .king-head { flex-direction: column-reverse; }
+  .king-photo { max-width: 100%; flex: none; width: 100%; }
+  .king-photo img { height: 180px; }
+  .kings-grid { grid-template-columns: 1fr; }
+}
+
+/* যাচাই-ব্যাজ ও সূত্র */
+.dyn-badges { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+.verify-badge { font-size: 11.5px; padding: 3px 10px; border-radius: 999px; background: #eaf4ec; color: #235c37; border: 1px solid #cfe5d6; }
+.verify-badge.partial { background: #fdf2e2; color: #7a4a1b; border-color: #ecd7b8; }
+.verify-badge.standard { background: #eef1f7; color: #34456b; border-color: #d3dbea; }
+.king-link { font-size: 12px; text-decoration: none; color: var(--forest-mid); border-bottom: 1px dotted currentColor; }
+.dyn-sources { margin-top: 16px; padding: 13px 16px; border: 1px solid var(--line); border-left: 4px solid #2f5b3d; border-radius: 12px; background: #f7faf6; }
+.dyn-sources h4 { margin: 0 0 7px; font-size: 13px; color: #235c37; }
+.dyn-sources ul { margin: 0 0 6px; padding-inline-start: 18px; font-size: 12.5px; }
+.dyn-sources a { color: #2b6340; }
+.verify-line { margin: 0; font-size: 12px; color: #4f5f52; }

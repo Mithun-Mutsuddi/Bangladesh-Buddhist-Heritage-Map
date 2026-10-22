@@ -6307,7 +6307,7 @@ function renderPlaces(keepVisibleLimit = false) {
     const visited = visitedIds.has(place.id);
     return `<article class="place-card ${activePlaceId === place.id ? 'is-selected' : ''}" data-place-card="${place.id}">
       <div class="place-media">${imageMarkup(place)}<span class="place-badge">${escapeHtml(place.kind)}</span>${place.verificationPending ? '<span class="verification-badge">যাচাইাধীন</span>' : ''}${visited ? '<span class="visited-badge" title="দেখা হয়েছে">✓</span>' : ''}${media ? `<a class="image-credit-link" href="${media.creditUrl}" target="_blank" rel="noopener noreferrer" aria-label="ছবির উৎস">ছবির উৎস ↗</a>` : ''}</div>
-      <div class="place-card-body"><h3>${escapeHtml(place.name)}</h3><p class="place-location"><span>⌖</span>${escapeHtml(place.district)} জেলা · ${escapeHtml(place.division)} বিভাগ</p><p class="place-summary">${escapeHtml(place.summary)}</p>
+      <div class="place-card-body"><h3>${escapeHtml(place.name)}</h3><p class="place-location"><span>⌖</span>${escapeHtml(place.district)} জেলা${place.upazila ? ` · ${escapeHtml(place.upazila)} উপজেলা` : ''}${place.thana && place.thana !== place.upazila ? ` · ${escapeHtml(place.thana)} থানা` : ''} · ${escapeHtml(place.division)} বিভাগ</p><p class="place-summary">${escapeHtml(place.summary)}</p>
         <div class="place-card-actions"><button type="button" class="card-action primary" data-action="details" data-id="${place.id}">বিস্তারিত দেখুন</button><button type="button" class="card-action" data-action="visited" data-id="${place.id}">${visited ? '✓ দেখা হয়েছে' : '□ দেখা হয়েছে'}</button><button type="button" class="card-action" data-action="itinerary" data-id="${place.id}">${itineraryIds.has(place.id) ? '✓ তালিকায় আছে' : '+ তালিকায় যোগ'}</button></div>
       </div></article>`;
   }).join('');
@@ -6364,6 +6364,14 @@ function contactMarkup(place) {
   if (mobiles.length) parts.push(`<strong>মোবাইল:</strong> ${mobiles.join(' · ')}`);
   return `<p class="detail-contact">☎ ${parts.join('<br>')}</p>`;
 }
+function localityMarkup(place) {
+  const parts = [
+    ['উপজেলা', place.upazila], ['থানা', place.thana], ['ইউনিয়ন', place.union],
+    ['গ্রাম / পাড়া', place.village], ['ডাকঘর', place.postOffice]
+  ].filter(([, v]) => v && String(v).trim());
+  if (!parts.length) return '';
+  return `<ul class="locality-list">${parts.map(([k, v]) => `<li><span>${escapeHtml(k)}</span><b>${escapeHtml(v)}</b></li>`).join('')}</ul>`;
+}
 function renderPlaceDetail(place) {
   window.currentPlace = place;
   const media = mediaFor(place);
@@ -6391,7 +6399,8 @@ function renderPlaceDetail(place) {
     : '';
   byId('placeDetail').innerHTML = `<div class="detail-empty-art" aria-hidden="true">${media ? `<img src="${media.image}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;opacity:.72">` : ''}<span style="position:absolute;right:18px;top:4px">☸</span><i>🪷</i></div>
     <p class="section-kicker">SELECTED DESTINATION</p><h3>${escapeHtml(place.name)}</h3>
-    <div class="detail-meta"><span class="detail-chip">${escapeHtml(place.district)} জেলা</span><span class="detail-chip">${escapeHtml(place.division)} বিভাগ</span><span class="detail-chip">${escapeHtml(place.category)}</span></div>${locationNote}${verificationNote}
+    <div class="detail-meta"><span class="detail-chip">${escapeHtml(place.district)} জেলা</span><span class="detail-chip">${escapeHtml(place.division)} বিভাগ</span><span class="detail-chip">${escapeHtml(place.category)}</span></div>
+    ${localityMarkup(place)}${locationNote}${verificationNote}
     <p class="detail-history">${escapeHtml(place.history)}</p>
     ${contactMarkup(place)}
     <p><strong>🧭 যাওয়ার পরিকল্পনা:</strong> ${escapeHtml(place.trip)}</p>
