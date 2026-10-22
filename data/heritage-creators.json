@@ -1,0 +1,4983 @@
+{
+  "schema_version": "2026-10-23.creators.v1",
+  "generated_at": "2026-10-23",
+  "title": "বুদ্ধ ও বৌদ্ধ চরিত্রের নির্মাতা-আর্কাইভ",
+  "subtitle": "বাঙালি, বাংলাদেশি ও বিশ্বের লেখক-শিল্পী-সংগীতশিল্পী-চলচ্চিত্রকার-ভাস্করদের বুদ্ধবিষয়ক কাজ, চরিত্রায়ণ ও উক্তি—ছবি, PDF, অডিও ও ভিডিও লিংকসহ",
+  "intro": [
+    "প্রতিটি কার্ডে ছবি বাধ্যতামূলকভাবে রাখা হয়েছে; ছবির নিচে ক্যাপশন, কৃতিত্ব ও লাইসেন্স দেওয়া থাকে। যেখানে নির্মাতার মুক্ত ছবি পাওয়া যায়নি, সেখানে শিল্পকর্ম বা স্পষ্টভাবে চিহ্নিত প্রেক্ষাপটচিত্র ব্যবহার করা হয়েছে—ভুয়া প্রতিকৃতি বসানো হয়নি।",
+    "সম্পর্কের ধরন আলাদা করে লেবেল দেওয়া হয়েছে: প্রত্যক্ষ বুদ্ধবিষয়ক কাজ, বৌদ্ধ নির্মাতা, চরিত্রায়ণ, যাচাইকৃত উক্তি, প্রভাব, পরোক্ষ উল্লেখ, রাজনৈতিক/পারিবারিক সংযোগ এবং জনপ্রিয় কিন্তু অনিশ্চিত/মিথ্যা আরোপিত উক্তি। যেমন রবীন্দ্রনাথের ক্ষেত্রে তাঁর প্রকৃত বৌদ্ধ-উৎসের কাজ, আইনস্টাইনের ক্ষেত্রে যাচাইকৃত বক্তব্য এবং যোগেন্দ্রনাথ মণ্ডলের ক্ষেত্রে প্রমাণের সীমা আলাদা করে বলা হয়েছে।",
+    "PDF, অডিও ও ভিডিও লিংকগুলো আইনসম্মতভাবে উপলব্ধ উৎস থেকে নেওয়া—Internet Archive, Project Gutenberg, উৎসব-আর্কাইভ, জাদুঘর, প্রকাশক বা অফিসিয়াল স্ট্রিমিং পৃষ্ঠা। কপিরাইটযুক্ত চলচ্চিত্রের ক্ষেত্রে পুরো ছবির লিংক না দিয়ে ট্রেলার/ক্যাটালগ/আইনি স্ট্রিমিং পৃষ্ঠা দেওয়া হয়েছে।"
+  ],
+  "method": [
+    "বাঙালি ও বাংলাদেশি এন্ট্রির জন্য বাংলাপিডিয়া, জাদুঘর, গবেষণা-পত্রিকা, চলচ্চিত্র-আর্কাইভ ও প্রখ্যাত সংবাদমাধ্যম যাচাই করা হয়েছে; সাল নিয়ে মতভেদ থাকলে (যেমন আবনীন্দ্রনাথের Buddha and Sujata) আনুমানিক পরিসর ও সতর্কতা লেখা আছে।",
+    "উক্তির ক্ষেত্রে মূল গ্রন্থ/সাক্ষাৎকার না মিললে “যাচাইকৃত” বলা হয়নি। ভাইরাল Albert Einstein-উক্তিটি ইচ্ছাকৃতভাবে “মিথ্যা আরোপণ-যাচাই” হিসেবে রাখা হয়েছে যাতে ভুলটি আর না ছড়ায়।",
+    "জীবিত শিল্পীদের ধর্মীয় পরিচয় নিয়ে ব্যক্তিগত বিবৃতি না থাকলে শুধু নথিভিত্তিক পারিবারিক/সাংস্কৃতিক পটভূমি বলা হয়েছে (যেমন পার্থ বড়ুয়া)।"
+  ],
+  "taxonomy": {
+    "regions": {
+      "bangladesh": "বাংলাদেশ",
+      "bengali": "বাঙালি / পশ্চিমবঙ্গ",
+      "indian": "ভারতীয়",
+      "ancient-world": "প্রাচীন বিশ্ব",
+      "international": "আন্তর্জাতিক"
+    },
+    "periods": {
+      "ancient": "প্রাচীন",
+      "medieval": "মধ্যযুগ",
+      "modern": "আধুনিক",
+      "contemporary": "সমকালীন"
+    },
+    "categories": {
+      "literature": "সাহিত্য",
+      "poetry-drama": "কবিতা ও নাটক",
+      "art": "চিত্রশিল্প",
+      "sculpture": "ভাস্কর্য",
+      "film": "চলচ্চিত্র",
+      "music": "সংগীত",
+      "person": "ব্যক্তি",
+      "quote-check": "উক্তি / উক্তিযাচাই"
+    },
+    "relationTypes": {
+      "direct": "প্রত্যক্ষ বুদ্ধ/বৌদ্ধবিষয়ক কাজ",
+      "buddhist-creator": "বৌদ্ধ নির্মাতা/সাধক",
+      "portrayal": "চরিত্রায়ণ",
+      "verified-quote": "যাচাইকৃত উক্তি",
+      "influence": "বৌদ্ধ/জেন প্রভাব",
+      "indirect": "পরোক্ষ উল্লেখ",
+      "misattributed": "জনপ্রিয় কিন্তু ভুল আরোপিত উক্তি",
+      "association": "পারিবারিক/রাজনৈতিক সংযোগ"
+    }
+  },
+  "records": [
+    {
+      "id": "atisha-dipankara",
+      "kind": "person",
+      "titleBn": "অতীশ দীপঙ্কর শ্রীজ্ঞান",
+      "titleEn": "Atisha Dipankara Srijnana",
+      "creatorBn": "অতীশ দীপঙ্কর শ্রীজ্ঞান",
+      "creatorEn": "Atiśa Dīpaṃkara Śrījñāna",
+      "roles": [
+        "বৌদ্ধ আচার্য",
+        "লেখক",
+        "অনুবাদক"
+      ],
+      "region": "bangladesh",
+      "period": "medieval",
+      "years": "আনু. ৯৮২–১০৫৪",
+      "yearSort": 982,
+      "language": "সংস্কৃত · তিব্বতি অনুবাদ",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "বোধিপথ, বোধিচিত্ত ও তিব্বতে বৌদ্ধধর্মের পুনরুজ্জীবন",
+      "characters": [
+        "অতীশ দীপঙ্কর"
+      ],
+      "featuredWork": "বোধিপথপ্রদীপ",
+      "relationType": "buddhist-creator",
+      "summary": "বিক্রমপুরের বাঙালি আচার্য অতীশ বিক্রমশীল মহাবিহারের শিক্ষক ছিলেন; পরে তিব্বতে গিয়ে বৌদ্ধ শিক্ষা ও সংঘ-শৃঙ্খলা পুনর্গঠনে কেন্দ্রীয় ভূমিকা নেন। তাঁর “বোধিপথপ্রদীপ” পরবর্তী তিব্বতি লাম-রিম (মার্গক্রম) সাহিত্যের ভিত্তি হয়।",
+      "significance": "বাংলাদেশের বৌদ্ধ ঐতিহ্যের সবচেয়ে আন্তর্জাতিকভাবে প্রভাবশালী ব্যক্তিত্বদের একজন; বাংলা থেকে তিব্বত পর্যন্ত জ্ঞান-সেতুর প্রতীক।",
+      "details": [
+        "তিনি সুমাত্রায় সেরলিংপা/ধর্মকীর্তির কাছে বোধিচিত্ত-শিক্ষা নিয়েছিলেন বলে ঐতিহ্য বলে।",
+        "তাঁর অনেক মূল সংস্কৃত রচনা হারিয়ে গেলেও তিব্বতি অনুবাদে সংরক্ষিত আছে।",
+        "জন্মসাল কোথাও ৯৮০, কোথাও ৯৮২ পাওয়া যায়; তাই “আনু.” লেখা হয়েছে।"
+      ],
+      "works": [
+        {
+          "title": "বোধিপথপ্রদীপ",
+          "year": "একাদশ শতক",
+          "medium": "শাস্ত্র",
+          "note": "বোধির পথের স্তরক্রম"
+        },
+        {
+          "title": "চর্যাসংগ্রহপ্রদীপ",
+          "year": "একাদশ শতক",
+          "medium": "সাধনা-গ্রন্থ",
+          "note": "তিব্বতি অনুবাদে প্রাপ্ত"
+        },
+        {
+          "title": "বোধিসত্ত্বমণ্যাবলী",
+          "year": "একাদশ শতক",
+          "medium": "উপদেশ-গ্রন্থ",
+          "note": "বোধিসত্ত্ব-চর্যা"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "audio",
+          "label": "অতীশের “বোধিপথপ্রদীপ” নিয়ে বক্তৃতা শুনুন",
+          "url": "https://archive.org/details/AtishasLampForThePath-Weeks1-4-November2003",
+          "note": "Internet Archive · ইংরেজি শ্রবণ-বক্তৃতা"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে অতীশের ছবি ও সংশ্লিষ্ট নথি",
+          "url": "library.html#img-atisha",
+          "note": "চর্যাভূমি লাইব্রেরি"
+        }
+      ],
+      "sources": [
+        {
+          "label": "বাংলাপিডিয়া — শ্রীজ্ঞান অতীশ দীপঙ্কর",
+          "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A7%8D%E0%A6%B0%E0%A7%80%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%A8%20%E0%A6%85%E0%A6%A4%E0%A7%80%E0%A6%B6%20%E0%A6%A6%E0%A7%80%E0%A6%AA%E0%A6%99%E0%A7%8D%E0%A6%95%E0%A6%B0"
+        },
+        {
+          "label": "Treasury of Lives — Atisha",
+          "url": "https://treasuryoflives.org/biographies/view/Atisa-Dipamkara/5717"
+        }
+      ],
+      "libraryIds": [
+        "aud-atisha-lamp",
+        "img-atisha"
+      ],
+      "aliases": [
+        "Atisha",
+        "Dipankara",
+        "অতীশ",
+        "দীপঙ্কর",
+        "বিক্রমপুর"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Atisha.jpg/500px-Atisha.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Atisha.jpg",
+        "captionBn": "অতীশ দীপঙ্করের ঐতিহ্যবাহী তিব্বতি চিত্রণ।",
+        "credit": "অজ্ঞাত তিব্বতি শিল্পী",
+        "license": "Public domain",
+        "alt": "অতীশ দীপঙ্করকে দেখানো ঐতিহ্যবাহী রঙিন ধর্মীয় চিত্র",
+        "objectPosition": "50% 22%",
+        "type": "artwork",
+        "file": "Atisha.jpg",
+        "width": 2694,
+        "height": 3722
+      }
+    },
+    {
+      "id": "shilabhadra",
+      "kind": "person",
+      "titleBn": "শীলভদ্র",
+      "titleEn": "Shilabhadra",
+      "creatorBn": "শীলভদ্র",
+      "creatorEn": "Śīlabhadra",
+      "roles": [
+        "নালন্দার আচার্য",
+        "যোগাচার দার্শনিক"
+      ],
+      "region": "bangladesh",
+      "period": "medieval",
+      "years": "আনু. ষষ্ঠ–সপ্তম শতক",
+      "yearSort": 600,
+      "language": "সংস্কৃত",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "যোগাচার দর্শন, নালন্দা মহাবিহার ও হিউয়েন সাঙের শিক্ষা",
+      "characters": [
+        "শীলভদ্র",
+        "হিউয়েন সাঙ (Xuanzang)"
+      ],
+      "featuredWork": "নালন্দায় যোগাচার শিক্ষা",
+      "relationType": "buddhist-creator",
+      "summary": "বাংলাপিডিয়া অনুযায়ী সমতটের রাজব্রাহ্মণ পরিবারে জন্ম নেওয়া শীলভদ্র নালন্দা মহাবিহারের প্রধান আচার্য হন। চীনা পরিব্রাজক হিউয়েন সাঙ তাঁর কাছে যোগাচার অধ্যয়ন করেন।",
+      "significance": "বাংলা/সমতট থেকে নালন্দা হয়ে চীন পর্যন্ত বৌদ্ধ জ্ঞান-প্রবাহের অসাধারণ উদাহরণ।",
+      "details": [
+        "জন্মস্থান বিষয়ে নবদ্বীপ বা বিক্রমপুরের রামপাল—দুই ধরনের মত আছে; নিশ্চিতভাবে বলা যায় না।",
+        "তিনি ধর্মপালের(নালন্দা আচার্য) শিষ্য ছিলেন।",
+        "তাঁর কোনো নির্ভরযোগ্য সমকালীন প্রতিকৃতি নেই; ছবিতে নালন্দার ধ্বংসাবশেষ দেখানো হয়েছে।"
+      ],
+      "works": [
+        {
+          "title": "যোগাচারভূমি-শিক্ষা",
+          "year": "সপ্তম শতক",
+          "medium": "মৌখিক/শাস্ত্রীয় শিক্ষা",
+          "note": "Xuanzang-এর অধ্যয়ন"
+        },
+        {
+          "title": "বোধিসত্ত্বভূমি ব্যাখ্যা-ঐতিহ্য",
+          "year": "সপ্তম শতক",
+          "medium": "দর্শন",
+          "note": "নালন্দা পরম্পরা"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "Xuanzang-এর “Buddhist Records of the Western World” PDF",
+          "url": "https://archive.org/details/siyukibuddhistr00bealgoog",
+          "note": "Internet Archive · নালন্দা ও ভারত-ভ্রমণবৃত্তান্ত"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে হিউয়েন সাঙের বই",
+          "url": "library.html#lib-hiuen-tsiang",
+          "note": "চর্যাভূমি লাইব্রেরি"
+        }
+      ],
+      "sources": [
+        {
+          "label": "বাংলাপিডিয়া — শীলভদ্র",
+          "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%B6%E0%A7%80%E0%A6%B2%E0%A6%AD%E0%A6%A6%E0%A7%8D%E0%A6%B0"
+        },
+        {
+          "label": "Encyclopedia of Religion — Śīlabhadra",
+          "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/silabhadra"
+        }
+      ],
+      "libraryIds": [
+        "lib-hiuen-tsiang"
+      ],
+      "aliases": [
+        "Silabhadra",
+        "Nalanda",
+        "Xuanzang",
+        "হিউয়েন সাঙ",
+        "যোগাচার"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Temple_3_-_Sariputta_Stupa_-_Nalanda_Mahavihara_%2810%29.jpg/500px-Temple_3_-_Sariputta_Stupa_-_Nalanda_Mahavihara_%2810%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Temple_3_-_Sariputta_Stupa_-_Nalanda_Mahavihara_(10).jpg",
+        "captionBn": "নালন্দা মহাবিহারের ধ্বংসাবশেষ—প্রেক্ষাপটচিত্র; শীলভদ্রের প্রতিকৃতি নয়।",
+        "credit": "Sumitsurai",
+        "license": "CC BY-SA 4.0",
+        "alt": "নালন্দা মহাবিহারের ইটের স্তূপ ও প্রাচীন ধ্বংসাবশেষ",
+        "objectPosition": "50% 45%",
+        "type": "context",
+        "file": "Temple 3 - Sariputta Stupa - Nalanda Mahavihara (10).jpg",
+        "width": 6000,
+        "height": 4000
+      }
+    },
+    {
+      "id": "charyapada-poets",
+      "kind": "work",
+      "titleBn": "চর্যাপদ-রচয়িতা বৌদ্ধ সিদ্ধকবিগণ",
+      "titleEn": "The Buddhist Poets of the Charyapada",
+      "creatorBn": "লুইপাদ, কাহ্নপাদ, সরহপা, শবরপাদ প্রমুখ",
+      "creatorEn": "Luipada, Kanhapa, Sarahapa, Shabarapa and others",
+      "roles": [
+        "কবি",
+        "গীতিকার",
+        "বৌদ্ধ সিদ্ধাচার্য"
+      ],
+      "region": "bangladesh",
+      "period": "medieval",
+      "years": "আনু. নবম–একাদশ শতক",
+      "yearSort": 900,
+      "language": "প্রাচীন বাংলা/সন্ধ্যা-ভাষা",
+      "categories": [
+        "literature",
+        "poetry-drama",
+        "music"
+      ],
+      "buddhistSubject": "সহজযান/বজ্রযান সাধনা, গুরু, দেহতত্ত্ব ও মুক্তির গীতিকবিতা",
+      "characters": [
+        "লুইপাদ",
+        "কাহ্নপাদ",
+        "সরহপা",
+        "ভুসুকুপাদ",
+        "শবরপাদ"
+      ],
+      "featuredWork": "চর্যাপদ / চর্যাগীতিকা",
+      "relationType": "buddhist-creator",
+      "summary": "চর্যাপদ বাংলা ভাষার প্রাচীনতম সংরক্ষিত কাব্য-গীতি সংকলনগুলোর অন্যতম এবং মূলত বৌদ্ধ সিদ্ধাচার্যদের রচনা। প্রাপ্ত পুঁথিতে ২৩ জন কবির ৪৭টি পদ আছে; গোপন সাধনতত্ত্ব রূপক ও দৈনন্দিন জীবনের ছবিতে বলা হয়েছে।",
+      "significance": "বাংলা ভাষা, গান ও বৌদ্ধ সাধনা—তিনটিরই উৎসভূমিতে চর্যাপদ; বাংলাদেশি সাংস্কৃতিক ইতিহাসের কেন্দ্রীয় নথি।",
+      "details": [
+        "হরপ্রসাদ শাস্ত্রী ১৯০৭ সালে নেপালের রাজদরবার গ্রন্থাগারে পুঁথিটি আবিষ্কার করেন এবং ১৯১৬ সালে প্রকাশ করেন।",
+        "কালনির্ণয়ে মতভেদ আছে; নিরাপদ বর্ণনা: কমপক্ষে নবম শতক, অধিকাংশ পদ নবম–একাদশ শতকের ঐতিহ্যে।",
+        "চর্যাগান শুধু পড়ার কবিতা ছিল না—রাগ-তালে গাওয়ার নির্দেশনাও পুঁথিতে আছে।"
+      ],
+      "works": [
+        {
+          "title": "“কাআ তরুবর পঞ্চবি ডাল” (লুইপাদ)",
+          "year": "মধ্যযুগ",
+          "medium": "চর্যাগীতি",
+          "note": "দেহকে গাছের রূপকে সাধনা"
+        },
+        {
+          "title": "“নগর বাহিরে ডোম্বি” (কাহ্নপাদ)",
+          "year": "মধ্যযুগ",
+          "medium": "চর্যাগীতি",
+          "note": "জাত-সীমা অতিক্রমের রূপক"
+        },
+        {
+          "title": "চর্যাগীতিকা",
+          "year": "পুঁথি-সংকলন",
+          "medium": "কাব্য/গান",
+          "note": "৪৭টি প্রাপ্ত পদ"
+        }
+      ],
+      "quote": {
+        "textBn": "কাআ তরুবর পঞ্চবি ডাল।",
+        "textOriginal": "কাআ তরুবর পঞ্চবি ডাল",
+        "attribution": "লুইপাদ, চর্যাপদ ১",
+        "status": "textual",
+        "caution": "এটি মূল চর্যাপদের পঙ্‌ক্তি; আধুনিক বাংলা অর্থ ব্যাখ্যাভেদে পৃথক হতে পারে।"
+      },
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "“বৌদ্ধগান ও দোহা” — হরপ্রসাদ শাস্ত্রী সম্পাদিত PDF",
+          "url": "https://archive.org/download/BouddhaGanODoha/Bouddha%20Gan%20O%20Doha.pdf",
+          "note": "Internet Archive"
+        },
+        {
+          "kind": "audio",
+          "label": "লুইপাদের চর্যাগীতি শুনুন",
+          "url": "https://www.youtube.com/watch?v=Ka39I-A3Kbk",
+          "note": "YouTube পরিবেশনা"
+        },
+        {
+          "kind": "video",
+          "label": "চর্যাপদ নিয়ে ব্যাখ্যামূলক ভিডিও",
+          "url": "https://www.youtube.com/watch?v=Yx7M7dmkwyo",
+          "note": "YouTube"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Banglapedia — Charyapada",
+          "url": "https://en.banglapedia.org/index.php/Charyapada"
+        },
+        {
+          "label": "Internet Archive — বৌদ্ধগান ও দোহা",
+          "url": "https://archive.org/details/BouddhaGanODoha"
+        }
+      ],
+      "libraryIds": [
+        "lib-bouddhagan-doha",
+        "lib-naba-charyapada",
+        "aud-charyapada-song",
+        "vid-charyapada-doc",
+        "img-charyapada-ms"
+      ],
+      "aliases": [
+        "Charyapada",
+        "চর্যাগীতি",
+        "Luipada",
+        "Kanhapa",
+        "Sarahapa",
+        "লুইপা",
+        "কাহ্নপা"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%3B_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript%2C_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg/500px-thumbnail.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:%E0%A6%9A%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%A6-%E0%A6%8F%E0%A6%B0_%E0%A7%A9%E0%A7%AF_%E0%A6%A8%E0%A6%82_%E0%A6%AA%E0%A7%83%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE;_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%9A%E0%A7%80%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%A8%E0%A6%BF%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%B6%E0%A6%A8_-_Page-39_of_the_Charyapad_manuscript,_a_sign_of_the_Bengali_or_Old_Bengali_language.jpg",
+        "captionBn": "চর্যাপদ পুঁথির ৩৯ নং পৃষ্ঠা।",
+        "credit": "Mohmoni",
+        "license": "CC BY-SA 4.0",
+        "alt": "হাতে লেখা প্রাচীন বাংলা চর্যাপদ পুঁথির একটি পৃষ্ঠা",
+        "objectPosition": "50% 45%",
+        "type": "manuscript",
+        "file": "চর্যাপদ পাণ্ডুলিপি পৃষ্ঠা"
+      }
+    },
+    {
+      "id": "pala-mahavihara-master",
+      "kind": "person",
+      "titleBn": "“মহাবিহার মাস্টার” — পালযুগের অজ্ঞাত পুঁথিচিত্রশিল্পী",
+      "titleEn": "Mahavihara Master",
+      "creatorBn": "অজ্ঞাতনামা বঙ্গীয় বৌদ্ধ পুঁথিচিত্রশিল্পী",
+      "creatorEn": "Anonymous Bengal monastic manuscript painter",
+      "roles": [
+        "পুঁথিচিত্রশিল্পী",
+        "মিনিয়েচার শিল্পী"
+      ],
+      "region": "bangladesh",
+      "period": "medieval",
+      "years": "দ্বাদশ শতকের গোড়া",
+      "yearSort": 1110,
+      "language": "সংস্কৃত পাণ্ডুলিপি-পরিবেশ",
+      "categories": [
+        "art",
+        "person"
+      ],
+      "buddhistSubject": "অষ্টসাহস্রিকা প্রজ্ঞাপারমিতা পাণ্ডুলিপির মিনিয়েচার চিত্র",
+      "characters": [
+        "অবলোকিতেশ্বর",
+        "মৈত্রেয়",
+        "প্রজ্ঞাপারমিতা"
+      ],
+      "featuredWork": "অষ্টসাহস্রিকা প্রজ্ঞাপারমিতা পাণ্ডুলিপিচিত্র",
+      "relationType": "buddhist-creator",
+      "summary": "“মহাবিহার মাস্টার” কোনো ব্যক্তির আসল নাম নয়—আধুনিক শিল্প-ইতিহাসে দেওয়া একটি কর্মনাম। পূর্ব ভারত/বঙ্গের এই অজ্ঞাত বৌদ্ধ শিল্পীর অত্যন্ত সূক্ষ্ম প্রজ্ঞাপারমিতা পাণ্ডুলিপিচিত্র পাল-শিল্পের সর্বোচ্চ নমুনাগুলোর মধ্যে ধরা হয়।",
+      "significance": "বাংলাদেশ/বঙ্গের প্রাচীনতম চিত্রকলার ইতিহাস বৌদ্ধ পুঁথিচিত্র দিয়েই শুরু—এই অজ্ঞাত শিল্পী সেই ধারার শিখর।",
+      "details": [
+        "বাংলাপিডিয়া মহীপাল প্রথমের আমলের একটি প্রজ্ঞাপারমিতা পুঁথিচিত্রকে বাংলার প্রাচীনতম চিত্রনিদর্শনের মধ্যে রাখে।",
+        "মেট মিউজিয়ামের নমুনা “Bengal, eastern India or Bangladesh” হিসেবে চিহ্নিত।",
+        "পাল শিল্পীরা সাধারণত নাম রেখে যাননি; তাই বিখ্যাত শিল্পীকেও আজ notname দিয়ে চিনতে হয়।"
+      ],
+      "works": [
+        {
+          "title": "অষ্টসাহস্রিকা প্রজ্ঞাপারমিতা ফোলিও",
+          "year": "দ্বাদশ শতক",
+          "medium": "তালপাতায় মিনিয়েচার",
+          "note": "Met Museum সংগ্রহ"
+        },
+        {
+          "title": "অবলোকিতেশ্বর-চিত্রিত ফোলিও",
+          "year": "দ্বাদশ শতক",
+          "medium": "পাণ্ডুলিপিচিত্র",
+          "note": "বোধিসত্ত্ব মূর্তি"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "artwork",
+          "label": "Wikimedia Commons-এ উচ্চ রেজোলিউশনের ফোলিও দেখুন",
+          "url": "https://commons.wikimedia.org/wiki/File:MET_DP238214.jpg",
+          "note": "CC0 · The Met"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে পাল পাণ্ডুলিপির পাতা",
+          "url": "library.html#img-pala-ms",
+          "note": "চর্যাভূমি লাইব্রেরি"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Banglapedia — Pala Painting",
+          "url": "https://en.banglapedia.org/index.php/Pala_Painting"
+        },
+        {
+          "label": "Wikimedia Commons — MET DP238214",
+          "url": "https://commons.wikimedia.org/wiki/File:MET_DP238214.jpg"
+        }
+      ],
+      "libraryIds": [
+        "img-pala-ms",
+        "img-pancaraksa",
+        "img-prajna-folio"
+      ],
+      "aliases": [
+        "Mahavihara Master",
+        "Pala painting",
+        "Prajnaparamita",
+        "পাল চিত্রকলা"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/MET_DP238214.jpg/500px-MET_DP238214.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:MET_DP238214.jpg",
+        "captionBn": "মহাবিহার মাস্টারের প্রজ্ঞাপারমিতা পাণ্ডুলিপির ফোলিও।",
+        "credit": "Mahavihara Master",
+        "license": "CC0",
+        "alt": "পাল যুগের রঙিন বৌদ্ধ পাণ্ডুলিপি ফোলিও",
+        "objectPosition": "50% 45%",
+        "type": "manuscript",
+        "file": "MET DP238214.jpg",
+        "width": 4000,
+        "height": 2340
+      }
+    },
+    {
+      "id": "girish-chandra-ghosh",
+      "kind": "person",
+      "titleBn": "গিরিশচন্দ্র ঘোষ",
+      "titleEn": "Girish Chandra Ghosh",
+      "creatorBn": "গিরিশচন্দ্র ঘোষ",
+      "creatorEn": "Girish Chandra Ghosh",
+      "roles": [
+        "নাট্যকার",
+        "অভিনেতা",
+        "মঞ্চ-পরিচালক"
+      ],
+      "region": "bengali",
+      "period": "modern",
+      "years": "১৮৪৪–১৯১২; নাটক ১৮৮৫",
+      "yearSort": 1885,
+      "language": "বাংলা",
+      "categories": [
+        "poetry-drama",
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "বুদ্ধের জীবন; Edwin Arnold-এর The Light of Asia অবলম্বনে বাংলা মঞ্চনাটক",
+      "characters": [
+        "সিদ্ধার্থ/বুদ্ধ",
+        "গোপা (যশোধরা)"
+      ],
+      "featuredWork": "বুদ্ধদেব-চরিত",
+      "relationType": "direct",
+      "summary": "বাংলা পেশাদার থিয়েটারের প্রাণপুরুষ গিরিশচন্দ্র ঘোষ ১৮৮৫ সালে কলকাতার স্টার থিয়েটারে “বুদ্ধদেব-চরিত” মঞ্চস্থ করেন—Edwin Arnold-এর The Light of Asia-র বাংলা রূপান্তর। গোপা চরিত্রে অভিনয় করেছিলেন কিংবদন্তি অভিনেত্রী বিনোদিনী দাসী।",
+      "significance": "বুদ্ধের জীবন বাংলা জনপ্রিয় মঞ্চে পৌঁছানোর প্রথম বড় ঘটনাগুলোর একটি; বইটির ডিজিটাল সংস্করণ আজও পড়া যায়।",
+      "details": [
+        "নাটকটি ধর্মীয় প্রচার নয়—ভিক্টোরীয় ইংরেজি কবিতার রোমান্টিক বুদ্ধ-জীবনকে বাংলা নাট্যরসে রূপ দেওয়া হয়।",
+        "বিনোদিনী দাসীর গোপা চরিত্র বাংলা অভিনয়-ইতিহাসের উল্লেখযোগ্য নারী-চরিত্রায়ণ।",
+        "১৮৮৭ সালের মুদ্রিত পাঠ Internet Archive-এ সংরক্ষিত।"
+      ],
+      "works": [
+        {
+          "title": "বুদ্ধদেব-চরিত",
+          "year": "১৮৮৫ মঞ্চ; ১৮৮৭ মুদ্রণ",
+          "medium": "নাটক",
+          "note": "The Light of Asia অবলম্বনে"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "“বুদ্ধদেব-চরিত” মূল বাংলা নাটক PDF",
+          "url": "https://archive.org/details/dli.bengal.10689.2278",
+          "note": "Internet Archive · ১৮৮৭ সংস্করণ"
+        },
+        {
+          "kind": "article",
+          "label": "The Light of Asia থেকে বাংলা মঞ্চে বুদ্ধ — গবেষণা প্রবন্ধ",
+          "url": "https://www.mdpi.com/2076-0787/10/1/3",
+          "note": "MDPI Religions"
+        }
+      ],
+      "sources": [
+        {
+          "label": "MDPI — Translating the Buddha",
+          "url": "https://www.mdpi.com/2076-0787/10/1/3"
+        },
+        {
+          "label": "Internet Archive — Buddhadeb-Charit",
+          "url": "https://archive.org/details/dli.bengal.10689.2278"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Girish Ghosh",
+        "বুদ্ধদেব চরিত",
+        "বিনোদিনী দাসী",
+        "Star Theatre"
+      ],
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Girish_Chandra_Ghosh_with_sig.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Girish_Chandra_Ghosh_with_sig.jpg",
+        "captionBn": "স্বাক্ষরসহ গিরিশচন্দ্র ঘোষের প্রতিকৃতি।",
+        "credit": "Girish Chandra Ghosh",
+        "license": "Public domain",
+        "alt": "গিরিশচন্দ্র ঘোষের সাদা-কালো প্রতিকৃতি",
+        "objectPosition": "50% 20%",
+        "type": "portrait",
+        "file": "Girish Chandra Ghosh with sig.jpg",
+        "width": 484,
+        "height": 779
+      }
+    },
+    {
+      "id": "rabindranath-tagore-buddhist-works",
+      "kind": "person",
+      "titleBn": "রবীন্দ্রনাথ ঠাকুর",
+      "titleEn": "Rabindranath Tagore",
+      "creatorBn": "রবীন্দ্রনাথ ঠাকুর",
+      "creatorEn": "Rabindranath Tagore",
+      "roles": [
+        "কবি",
+        "নাট্যকার",
+        "নৃত্যনাট্যকার",
+        "চলচ্চিত্র-পরিচালক",
+        "অভিনেতা"
+      ],
+      "region": "bengali",
+      "period": "modern",
+      "years": "১৮৬১–১৯৪১; বৌদ্ধ-উৎসের রচনা ১৮৯৬–১৯৩৮",
+      "yearSort": 1896,
+      "language": "বাংলা · ইংরেজি",
+      "categories": [
+        "literature",
+        "poetry-drama",
+        "film",
+        "music",
+        "person"
+      ],
+      "buddhistSubject": "বৌদ্ধ অবদান-কাহিনি থেকে জাতপাত, নারীর মর্যাদা, ধর্ম-সহিংসতা ও ভক্তির নাট্যরূপ",
+      "characters": [
+        "প্রকৃতি",
+        "আনন্দ",
+        "শ্রীমতী",
+        "উপালি",
+        "মালিনী"
+      ],
+      "featuredWork": "চণ্ডালিকা",
+      "relationType": "direct",
+      "summary": "রবীন্দ্রনাথ বৌদ্ধ অবদান-সাহিত্য থেকে বারবার কাহিনি নিয়েছেন: “মালিনী” মহাবস্তু-অবদান থেকে, “পূজারিণী” অবদান-শতক থেকে, আর “চণ্ডালিকা” শার্দূলকর্ণাবদান থেকে—যেখানে ভিক্ষু আনন্দ অস্পৃশ্য কন্যা প্রকৃতির হাতে জল পান করেন। “নটীর পূজা” চলচ্চিত্রে তিনি নিজে উপালি চরিত্রে অভিনয় ও পরিচালনা করেন।",
+      "significance": "বাংলা আধুনিক সাহিত্যে বৌদ্ধ কাহিনিকে মানবিক মর্যাদা ও জাত-প্রশ্নের কেন্দ্রে আনায় রবীন্দ্রনাথের ভূমিকা সবচেয়ে বড়।",
+      "details": [
+        "চণ্ডালিকা প্রথমে গদ্য-নাটক (১৯৩৩), পরে নৃত্যনাট্য (১৯৩৮)।",
+        "“নটীর পূজা” (১৯৩২) রবীন্দ্রনাথের একমাত্র চলচ্চিত্র-পরিচালনার কৃতিত্ব; ছবিটির সারভাইভ করা প্রিন্ট আগুনে নষ্ট হয়েছিল বলে জানা যায়।",
+        "এই রচনাগুলো ধর্মগ্রন্থের আক্ষরিক পুনরাবৃত্তি নয়—কবির মানবতাবাদী পুনঃসৃষ্টি।"
+      ],
+      "works": [
+        {
+          "title": "মালিনী",
+          "year": "১৮৯৬",
+          "medium": "নাটক",
+          "note": "মহাবস্তু-অবদান-উৎস"
+        },
+        {
+          "title": "পূজারিণী",
+          "year": "১৮৯৯",
+          "medium": "কবিতা/কাব্যনাট্য",
+          "note": "অবদান-শতকের শ্রীমতী-কাহিনি"
+        },
+        {
+          "title": "নটীর পূজা",
+          "year": "১৯২৬ নাটক; ১৯৩২ চলচ্চিত্র",
+          "medium": "নাটক/চলচ্চিত্র",
+          "note": "শ্রীমতী ও উপালি"
+        },
+        {
+          "title": "চণ্ডালিকা",
+          "year": "১৯৩৩; নৃত্যনাট্য ১৯৩৮",
+          "medium": "নাটক/নৃত্যনাট্য",
+          "note": "প্রকৃতি ও আনন্দ"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "“নটীর পূজা” মূল পাঠ (Internet Archive)",
+          "url": "https://archive.org/details/in.ernet.dli.2015.339838",
+          "note": "১৯২৬ সংস্করণ"
+        },
+        {
+          "kind": "pdf",
+          "label": "“মালিনী” মূল পাঠ",
+          "url": "https://archive.org/details/in.ernet.dli.2015.298452",
+          "note": "Internet Archive"
+        },
+        {
+          "kind": "audio",
+          "label": "চণ্ডালিকা — ১৯৬২ সালের LP রেকর্ডিং শুনুন",
+          "url": "https://archive.org/details/lp_chandalika_rabindranath-tagore",
+          "note": "Internet Archive অডিও"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Internet Archive — Natir Puja",
+          "url": "https://archive.org/details/in.ernet.dli.2015.339838"
+        },
+        {
+          "label": "Poetry Foundation — Rabindranath Tagore",
+          "url": "https://www.poetryfoundation.org/poets/rabindranath-tagore"
+        },
+        {
+          "label": "Internet Archive — Chandalika LP",
+          "url": "https://archive.org/details/lp_chandalika_rabindranath-tagore"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Rabindranath Tagore",
+        "Chandalika",
+        "Natir Puja",
+        "Malini",
+        "Pujarini",
+        "প্রকৃতি",
+        "আনন্দ"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/1926_Rabindrath_Tagore.jpg/500px-1926_Rabindrath_Tagore.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:1926_Rabindrath_Tagore.jpg",
+        "captionBn": "রবীন্দ্রনাথ ঠাকুর, ১৯২৬।",
+        "credit": "Georges Chevalier",
+        "license": "CC BY 4.0",
+        "alt": "রবীন্দ্রনাথ ঠাকুরের রঙিন অটোক্রোম প্রতিকৃতি",
+        "objectPosition": "50% 18%",
+        "type": "portrait",
+        "file": "1926 Rabindrath Tagore.jpg",
+        "width": 1184,
+        "height": 1545
+      }
+    },
+    {
+      "id": "abanindranath-tagore",
+      "kind": "person",
+      "titleBn": "অবনীন্দ্রনাথ ঠাকুর",
+      "titleEn": "Abanindranath Tagore",
+      "creatorBn": "অবনীন্দ্রনাথ ঠাকুর",
+      "creatorEn": "Abanindranath Tagore",
+      "roles": [
+        "চিত্রশিল্পী",
+        "লেখক",
+        "বঙ্গীয় শিল্প-আন্দোলনের প্রতিষ্ঠাতা"
+      ],
+      "region": "bengali",
+      "period": "modern",
+      "years": "১৮৭১–১৯৫১; Buddha and Sujata আনু. ১৯০১–১৯০৩",
+      "yearSort": 1901,
+      "language": "বাংলা · চিত্রভাষা",
+      "categories": [
+        "art",
+        "person"
+      ],
+      "buddhistSubject": "সুজাতার পায়েস-দান, বুদ্ধের বিজয় ও বৌদ্ধ আখ্যানের চিত্ররূপ",
+      "characters": [
+        "বুদ্ধ",
+        "সুজাতা"
+      ],
+      "featuredWork": "Buddha and Sujata",
+      "relationType": "direct",
+      "summary": "অবনীন্দ্রনাথের “Buddha and Sujata” Edwin Arnold-এর The Light of Asia-র ষষ্ঠ সর্গ থেকে অনুপ্রাণিত। পরে Myths of the Hindus & Buddhists গ্রন্থের সম্মুখচিত্র “The Victory of Buddha”-তে বুদ্ধ-আখ্যান বঙ্গীয় ধোঁয়া-রঙ (wash) শৈলীর প্রতীক হয়ে ওঠে।",
+      "significance": "ভারতীয় আধুনিক চিত্রকলার “ভারতীয়ত্ব” খোঁজার আন্দোলনে বুদ্ধ-জীবনের দৃশ্য ছিল কেন্দ্রীয় থিমগুলোর একটি।",
+      "details": [
+        "Buddha and Sujata-র তারিখ সূত্রভেদে ১৯০১/০২/০৩—তাই আনুমানিক পরিসর ব্যবহার করা হয়েছে।",
+        "“The Victory of Buddha” ১৯১৪ সালের Myths of the Hindus & Buddhists-এ ছাপা হয়।",
+        "বঙ্গীয় স্কুলের এই ধারা থেকেই নন্দলাল বসু প্রমুখ শিক্ষা নেন।"
+      ],
+      "works": [
+        {
+          "title": "Buddha and Sujata",
+          "year": "আনু. ১৯০১–১৯০৩",
+          "medium": "জলরং",
+          "note": "সুজাতার নিবেদন"
+        },
+        {
+          "title": "The Victory of Buddha",
+          "year": "১৯১৪ মুদ্রণ",
+          "medium": "গ্রন্থচিত্র",
+          "note": "মার-বিজয়/বোধি"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "artwork",
+          "label": "ছবিটি বড় করে দেখুন (Wikimedia Commons)",
+          "url": "https://commons.wikimedia.org/wiki/File:Abanindranath_Tagore_-_The_Victory_of_Buddha,_1914.jpg",
+          "note": "Public domain"
+        },
+        {
+          "kind": "book",
+          "label": "Myths of the Hindus & Buddhists — Internet Archive",
+          "url": "https://archive.org/details/mythsofhindusbud00nive",
+          "note": "১৯১৪ গ্রন্থ; ছবি ও পাঠ"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Google Arts & Culture — The Victory of Buddha",
+          "url": "https://artsandculture.google.com/asset/the-victory-of-buddha-by-abanindranath-tagore-early-20th-century-abanindranath-tagore/KAHztJQ8GQrnVw?hl=en"
+        },
+        {
+          "label": "Wikimedia Commons — শিল্পকর্ম ফাইল",
+          "url": "https://commons.wikimedia.org/wiki/File:Abanindranath_Tagore_-_The_Victory_of_Buddha,_1914.jpg"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Abanindranath Tagore",
+        "Buddha and Sujata",
+        "সুজাতা",
+        "Victory of Buddha"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Abanindranath_Tagore_-_The_Victory_of_Buddha,_1914.jpg/500px-Abanindranath_Tagore_-_The_Victory_of_Buddha,_1914.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Abanindranath_Tagore_-_The_Victory_of_Buddha,_1914.jpg",
+        "captionBn": "অবনীন্দ্রনাথ ঠাকুরের “The Victory of Buddha”।",
+        "credit": "Abanindranath Tagore",
+        "license": "Public domain",
+        "alt": "বুদ্ধকে কেন্দ্র করে অবনীন্দ্রনাথ ঠাকুরের ওয়াশ-শৈলীর ছবি",
+        "objectPosition": "50% 30%",
+        "type": "artwork",
+        "file": "Abanindranath Tagore - The Victory of Buddha, 1914.jpg",
+        "width": 4501,
+        "height": 6553
+      }
+    },
+    {
+      "id": "nandalal-bose",
+      "kind": "person",
+      "titleBn": "নন্দলাল বসু",
+      "titleEn": "Nandalal Bose",
+      "creatorBn": "নন্দলাল বসু",
+      "creatorEn": "Nandalal Bose",
+      "roles": [
+        "চিত্রশিল্পী",
+        "শিল্পশিক্ষক"
+      ],
+      "region": "bengali",
+      "period": "modern",
+      "years": "১৮৮২–১৯৬৬; Pictures from the Life of Buddha আনু. ১৯৪১",
+      "yearSort": 1941,
+      "language": "বাংলা · ইংরেজি",
+      "categories": [
+        "art",
+        "person"
+      ],
+      "buddhistSubject": "বুদ্ধের জীবনের ছবি-ধারাবাহিক; অজন্তা গুহাচিত্রের অনুলিপি",
+      "characters": [
+        "সিদ্ধার্থ",
+        "বুদ্ধ"
+      ],
+      "featuredWork": "Pictures from the Life of Buddha",
+      "relationType": "direct",
+      "summary": "শান্তিনিকেতন কলা-ভবনের প্রাণপুরুষ নন্দলাল বসু “Pictures from the Life of Buddha” নামের ছয়-প্লেটের পোর্টফোলিওতে বুদ্ধ-জীবনের পর্বগুলো আঁকেন। যৌবনে তিনি লেডি হেরিংহ্যামের দলের সঙ্গে অজন্তার বৌদ্ধ গুহাচিত্রের অনুলিপি তৈরি করেছিলেন—ভারতীয় শিল্পে বৌদ্ধ প্রাচীরচিত্রের ধারাবাহিকতা সেখান থেকেই তাঁর শৈলীতে আসে।",
+      "significance": "অজন্তা থেকে শান্তিনিকেতন—বৌদ্ধ চিত্রকলার হাজার বছরের ধারা আধুনিক বাংলা শিল্পশিক্ষায় পৌঁছে দেন নন্দলাল।",
+      "details": [
+        "ছবিতে তাঁর ১৯৬৭ সালের ভারতীয় স্মারক ডাকটিকিটের প্রতিকৃতি দেখানো হয়েছে; নন্দলালের মূল বুদ্ধ-ছবিগুলো কপিরাইটের আওতায় থাকতে পারে, তাই প্রতিকৃতি ব্যবহার করা হলো।",
+        "তিনি ভারতীয় সংবিধান পাণ্ডুলিপির অলংকরণের জন্যও বিখ্যাত, তবে এই এন্ট্রির কেন্দ্র তাঁর বুদ্ধ-বিষয়ক ছবি।"
+      ],
+      "works": [
+        {
+          "title": "Pictures from the Life of Buddha",
+          "year": "আনু. ১৯৪১",
+          "medium": "ছয় প্লেটের পোর্টফোলিও",
+          "note": "বুদ্ধ-জীবনচিত্র"
+        },
+        {
+          "title": "অজন্তা অনুলিপি",
+          "year": "১৯১০ দশক",
+          "medium": "প্রাচীরচিত্র অনুলিপি",
+          "note": "লেডি হেরিংহ্যাম দল"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "artwork",
+          "label": "নন্দলাল বসু — NGMA ভার্চুয়াল ট্যুর ও সংগ্রহ",
+          "url": "https://www.ngmaindia.gov.in/virtual-tour-of-nandalal-bose.asp",
+          "note": "National Gallery of Modern Art"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে অজন্তা ও বৌদ্ধ চিত্রের প্রেক্ষাপট",
+          "url": "library.html#img-pala-ms",
+          "note": "প্রাচীন পুঁথিচিত্রের ধারাবাহিকতা"
+        }
+      ],
+      "sources": [
+        {
+          "label": "National Gallery of Modern Art — Nandalal Bose ভার্চুয়াল ট্যুর",
+          "url": "https://www.ngmaindia.gov.in/virtual-tour-of-nandalal-bose.asp"
+        },
+        {
+          "label": "Wikimedia Commons — নন্দলাল বসু ডাকটিকিট",
+          "url": "https://commons.wikimedia.org/wiki/File:Nandalal_Bose_1967_stamp_of_India.jpg"
+        }
+      ],
+      "libraryIds": [
+        "img-pala-ms"
+      ],
+      "aliases": [
+        "Nandalal Bose",
+        "Pictures from the Life of Buddha",
+        "Ajanta copy",
+        "কলা ভবন"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Nandalal_Bose_1967_stamp_of_India.jpg/500px-Nandalal_Bose_1967_stamp_of_India.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Nandalal_Bose_1967_stamp_of_India.jpg",
+        "captionBn": "নন্দলাল বসু — ভারতের ১৯৬৭ সালের স্মারক ডাকটিকিট থেকে।",
+        "credit": "India Post, Government of India",
+        "license": "GODL-India",
+        "alt": "নন্দলাল বসুর মুখের প্রতিকৃতি সংবলিত ডাকটিকিট",
+        "objectPosition": "50% 35%",
+        "type": "portrait",
+        "file": "Nandalal_Bose_1967_stamp_of_India.jpg",
+        "width": 803,
+        "height": 696
+      }
+    },
+    {
+      "id": "ramkinkar-baij",
+      "kind": "person",
+      "titleBn": "রামকিঙ্কর বাইজ",
+      "titleEn": "Ramkinkar Baij",
+      "creatorBn": "রামকিঙ্কর বাইজ",
+      "creatorEn": "Ramkinkar Baij",
+      "roles": [
+        "ভাস্কর",
+        "চিত্রশিল্পী"
+      ],
+      "region": "bengali",
+      "period": "modern",
+      "years": "১৯০৬–১৯৮০; “সুজাতা” ১৯৩৫",
+      "yearSort": 1935,
+      "language": "বাংলা · ভাস্কর্য",
+      "categories": [
+        "sculpture",
+        "art",
+        "person"
+      ],
+      "buddhistSubject": "বুদ্ধকে পায়েস নিবেদনকারী সুজাতা; শান্তিনিকেতনে উপবিষ্ট বুদ্ধমূর্তি",
+      "characters": [
+        "সুজাতা",
+        "বুদ্ধ"
+      ],
+      "featuredWork": "সুজাতা (১৯৩৫)",
+      "relationType": "direct",
+      "summary": "ভারতের আধুনিক ভাস্কর্যের অগ্রদূত রামকিঙ্কর বাইজ শান্তিনিকেতনে মাটির নারীমূর্তি “সুজাতা” (১৯৩৫) তৈরি করেন—বুদ্ধের কঠোর তপস্যা শেষে পায়েস খাওয়ানো গ্রামকন্যা। পরে কলা-ভবন প্রাঙ্গণে তাঁর তৈরি উপবিষ্ট বুদ্ধমূর্তি বসানো হয়।",
+      "significance": "বৌদ্ধ আখ্যানের সবচেয়ে মানবিক মুহূর্তটিকে আধুনিক ভাস্কর্যের মুক্ত আকাশের নিচে মানুষের দৈনন্দিন জীবনের পাশে দাঁড় করান রামকিঙ্কর।",
+      "details": [
+        "“সুজাতা” বাস্তব আদিবাসী নারীর শরীরী ছন্দে গড়া—ঐতিহ্য ও আধুনিকতার সংমিশ্রণ।",
+        "শান্তিনিকেতনের পুরনো বুদ্ধমূর্তি ভেঙে গেলে রামকিঙ্করের নতুন মূর্তি বসানো হয়েছিল বলে Kala Bhavana-সংক্রান্ত স্মৃতিকথায় উল্লেখ আছে।"
+      ],
+      "works": [
+        {
+          "title": "সুজাতা",
+          "year": "১৯৩৫",
+          "medium": "মৃত্তিকা/সিমেন্ট ভাস্কর্য",
+          "note": "শান্তিনিকেতন"
+        },
+        {
+          "title": "উপবিষ্ট বুদ্ধ",
+          "year": "মধ্য-বিংশ শতক",
+          "medium": "ভাস্কর্য",
+          "note": "কলাভবন প্রাঙ্গণ"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "artwork",
+          "label": "“সুজাতা” ভাস্কর্যটি বড় করে দেখুন",
+          "url": "https://commons.wikimedia.org/wiki/File:Sujata_-_1935_CE_-_Ramkinkar_Baij_-_Santiniketan_2014-06-29_5395.JPG",
+          "note": "Wikimedia Commons"
+        },
+        {
+          "kind": "video",
+          "label": "শান্তিনিকেতন ও রামকিঙ্করের ভাস্কর্য নিয়ে অনুসন্ধান",
+          "url": "https://www.youtube.com/results?search_query=Ramkinkar+Baij+Sujata+Santiniketan",
+          "note": "YouTube অনুসন্ধান"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Wikimedia Commons — Sujata (1935)",
+          "url": "https://commons.wikimedia.org/wiki/File:Sujata_-_1935_CE_-_Ramkinkar_Baij_-_Santiniketan_2014-06-29_5395.JPG"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Ramkinkar Baij",
+        "Sujata sculpture",
+        "সুজাতা ভাস্কর্য",
+        "শান্তিনিকেতন"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Sujata_-_1935_CE_-_Ramkinkar_Baij_-_Santiniketan_2014-06-29_5395.JPG/1280px-Sujata_-_1935_CE_-_Ramkinkar_Baij_-_Santiniketan_2014-06-29_5395.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Sujata_-_1935_CE_-_Ramkinkar_Baij_-_Santiniketan_2014-06-29_5395.JPG",
+        "captionBn": "শান্তিনিকেতনে রামকিঙ্কর বাইজের “সুজাতা” (১৯৩৫)।",
+        "credit": "Biswarup Ganguly",
+        "license": "CC BY 3.0",
+        "alt": "গাছের ছায়ায় দাঁড়ানো সুজাতার দীর্ঘ মৃৎ-ভাস্কর্য",
+        "objectPosition": "50% 35%",
+        "type": "sculpture",
+        "file": "Sujata - 1935 CE - Ramkinkar Baij - Santiniketan 2014-06-29 5395.JPG",
+        "width": 4288,
+        "height": 2848,
+        "transform": "scale(1.7)",
+        "transformOrigin": "62% 42%"
+      }
+    },
+    {
+      "id": "haraprasad-shastri",
+      "kind": "person",
+      "titleBn": "হরপ্রসাদ শাস্ত্রী",
+      "titleEn": "Haraprasad Shastri",
+      "creatorBn": "মহামহোপাধ্যায় হরপ্রসাদ শাস্ত্রী",
+      "creatorEn": "Hara Prasad Shastri",
+      "roles": [
+        "পণ্ডিত",
+        "পাণ্ডুলিপি-অনুসন্ধানী",
+        "সম্পাদক"
+      ],
+      "region": "bengali",
+      "period": "modern",
+      "years": "১৮৫৩–১৯৩১; চর্যাপদ আবিষ্কার ১৯০৭, প্রকাশ ১৯১৬",
+      "yearSort": 1907,
+      "language": "বাংলা · সংস্কৃত · ইংরেজি",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "বৌদ্ধ চর্যাপদ পুঁথির আবিষ্কার ও সম্পাদনা; বৌদ্ধ সংস্কৃত পাণ্ডুলিপি অনুসন্ধান",
+      "characters": [
+        "লুইপাদসহ চর্যাকবিগণ"
+      ],
+      "featuredWork": "হাজার বছরের পুরাণ বাঙ্গালা ভাষায় বৌদ্ধগান ও দোহা",
+      "relationType": "direct",
+      "summary": "নেপালের রাজদরবার গ্রন্থাগারে অনুসন্ধান চালিয়ে হরপ্রসাদ শাস্ত্রী ১৯০৭ সালে চর্যাপদের তালপাতার পুঁথি আবিষ্কার করেন এবং ১৯১৬ সালে “হাজার বছরের পুরাণ বাঙ্গালা ভাষায় বৌদ্ধগান ও দোহা” নামে প্রকাশ করেন। এই একটি প্রকাশনাই বাংলা ভাষার ইতিহাস পাল্টে দেয়।",
+      "significance": "বাঙালি বৌদ্ধ সাহিত্যের প্রাচীনতম প্রমাণ উদ্ধার এবং নেপাল-দরবারের ধুলোমাখা তাক থেকে বিশ্বসাহিত্যে পৌঁছে দেওয়ার কারিগর।",
+      "details": [
+        "তিনি এশিয়াটিক সোসাইটির জন্য ধারাবাহিকভাবে সংস্কৃত বৌদ্ধ পাণ্ডুলিপির সন্ধান চালিয়েছিলেন।",
+        "তাঁর “বেণের মেয়ে” উপন্যাসও পাল-যুগের বৌদ্ধ বাংলার পটভূমিতে লেখা।"
+      ],
+      "works": [
+        {
+          "title": "বৌদ্ধগান ও দোহা (সম্পাদনা)",
+          "year": "১৯১৬",
+          "medium": "সম্পাদিত গ্রন্থ",
+          "note": "চর্যাপদ প্রথম প্রকাশ"
+        },
+        {
+          "title": "বেণের মেয়ে",
+          "year": "১৯১৯",
+          "medium": "উপন্যাস",
+          "note": "বৌদ্ধ-যুগের বাংলা"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "“বৌদ্ধগান ও দোহা” (১৯১৬) PDF",
+          "url": "https://archive.org/download/BouddhaGanODoha/Bouddha%20Gan%20O%20Doha.pdf",
+          "note": "Internet Archive"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে চর্যাপদ-সংগ্রহ",
+          "url": "library.html#lib-bouddhagan-doha",
+          "note": "চর্যাভূমি লাইব্রেরি"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Banglapedia — Charyapada",
+          "url": "https://en.banglapedia.org/index.php/Charyapada"
+        },
+        {
+          "label": "Internet Archive — Bouddha Gan O Doha",
+          "url": "https://archive.org/details/BouddhaGanODoha"
+        }
+      ],
+      "libraryIds": [
+        "lib-bouddhagan-doha",
+        "lib-charyagitika"
+      ],
+      "aliases": [
+        "Hara Prasad Shastri",
+        "চর্যাপদ আবিষ্কার",
+        "বৌদ্ধগান ও দোহা"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Haraprasad_Shastri_-_Presidency_College.jpg/500px-Haraprasad_Shastri_-_Presidency_College.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Haraprasad_Shastri_-_Presidency_College.jpg",
+        "captionBn": "প্রেসিডেন্সি কলেজ প্রাঙ্গণে হরপ্রসাদ শাস্ত্রীর ছবি।",
+        "credit": "Presidency College",
+        "license": "Public domain",
+        "alt": "হরপ্রসাদ শাস্ত্রীর সাদা-কালো প্রতিকৃতি",
+        "objectPosition": "50% 20%",
+        "type": "portrait",
+        "file": "Haraprasad Shastri - Presidency College.jpg",
+        "width": 679,
+        "height": 997
+      }
+    },
+    {
+      "id": "benimadhab-barua",
+      "kind": "person",
+      "titleBn": "বেনীমাধব বড়ুয়া",
+      "titleEn": "Benimadhab Barua",
+      "creatorBn": "ড. বেনীমাধব বড়ুয়া",
+      "creatorEn": "Benimadhab Barua",
+      "roles": [
+        "পালি পণ্ডিত",
+        "বৌদ্ধ দর্শন-ঐতিহাসিক",
+        "লেখক",
+        "অনুবাদক"
+      ],
+      "region": "bangladesh",
+      "period": "modern",
+      "years": "১৮৮৮–১৯৪৮",
+      "yearSort": 1888,
+      "language": "বাংলা · পালি · ইংরেজি",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "প্রাক-বৌদ্ধ ও প্রাচীন বৌদ্ধ দর্শন, আজীবিক, গয়া ও বুদ্ধগয়ার ইতিহাস",
+      "characters": [
+        "বুদ্ধ",
+        "মক্খলি গোসাল (গবেষণা-বিষয়)"
+      ],
+      "featuredWork": "A History of Pre-Buddhistic Indian Philosophy",
+      "relationType": "buddhist-creator",
+      "summary": "চট্টগ্রামের রাউজান উপজেলার মহামুনি গ্রামে জন্ম নেওয়া বেনীমাধব বড়ুয়া লন্ডন বিশ্ববিদ্যালয় থেকে ডিলিট পাওয়া প্রথম এশীয়দের অন্যতম। বৌদ্ধ দর্শনের ইতিহাস, আজীবিক ধর্ম ও গয়ার প্রাচীন ইতিহাস নিয়ে তাঁর গবেষণা আজও প্রামাণ্য।",
+      "significance": "বাংলাদেশি বৌদ্ধ পণ্ডিতদের মধ্যে আন্তর্জাতিক একাডেমিক জগতে তিনিই প্রথম বড় নাম; বাংলা ও পালি অধ্যয়নের সেতু।",
+      "details": [
+        "তিনি কলকাতা বিশ্ববিদ্যালয়ের পালি বিভাগের প্রধান ছিলেন।",
+        "বাংলায় পালি গ্রন্থের অনুবাদেও তিনি অগ্রণী ভূমিকা রাখেন।"
+      ],
+      "works": [
+        {
+          "title": "A Prolegomena to the History of Buddhist Philosophy",
+          "year": "১৯১৮",
+          "medium": "গবেষণা-গ্রন্থ",
+          "note": ""
+        },
+        {
+          "title": "A History of Pre-Buddhistic Indian Philosophy",
+          "year": "১৯২১",
+          "medium": "গবেষণা-গ্রন্থ",
+          "note": ""
+        },
+        {
+          "title": "Gaya and Buddha-Gaya",
+          "year": "১৯৩১/৩৪",
+          "medium": "ইতিহাস",
+          "note": "খনন ও শিলালিপি-ভিত্তিক"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "Prolegomena to a History of Buddhist Philosophy — PDF",
+          "url": "https://archive.org/download/prolegomenatohis00barurich/prolegomenatohis00barurich.pdf",
+          "note": "Internet Archive"
+        },
+        {
+          "kind": "pdf",
+          "label": "Gaya and Buddha-Gaya, খণ্ড ১ — PDF",
+          "url": "https://archive.org/details/benimadhab-barua-gaya-and-buddha-gaya-early-history-of-the-holy-land-volume-1-satis-chandra-1934",
+          "note": "Internet Archive"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে বেণীমাধবের গ্রন্থ",
+          "url": "library.html#lib-barua-prolegomena",
+          "note": "চর্যাভূমি লাইব্রেরি"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Banglapedia — Barua, Benimadhab",
+          "url": "https://en.banglapedia.org/index.php?title=Barua%2C%20Benimadhab"
+        },
+        {
+          "label": "Internet Archive — Prolegomena",
+          "url": "https://archive.org/details/prolegomenatohis00barurich"
+        }
+      ],
+      "libraryIds": [
+        "lib-barua-prolegomena",
+        "lib-barua-gaya"
+      ],
+      "aliases": [
+        "B. M. Barua",
+        "বেনীমাধব",
+        "বড়ুয়া",
+        "রাউজান",
+        "মহামুনি"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/B.M.Barua.jpg/500px-B.M.Barua.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:B.M.Barua.jpg",
+        "captionBn": "বেনীমাধব বড়ুয়ার প্রতিকৃতি।",
+        "credit": "Swomitra",
+        "license": "Public domain",
+        "alt": "বেনীমাধব বড়ুয়ার সাদা-কালো প্রতিকৃতি",
+        "objectPosition": "50% 18%",
+        "type": "portrait",
+        "file": "B.M.Barua.jpg",
+        "width": 1081,
+        "height": 1576
+      }
+    },
+    {
+      "id": "bimala-charan-laha",
+      "kind": "person",
+      "titleBn": "বিমলাচরণ লাহা (বি. সি. লাহা / Law)",
+      "titleEn": "Bimala Charan Laha / B. C. Law",
+      "creatorBn": "ড. বিমলাচরণ লাহা",
+      "creatorEn": "Bimala Churn Law",
+      "roles": [
+        "পালি-বৌদ্ধ গবেষক",
+        "লেখক"
+      ],
+      "region": "bengali",
+      "period": "modern",
+      "years": "১৮৯২–১৯৬৯; “গৌতম বুদ্ধ” ১৯৩৮",
+      "yearSort": 1938,
+      "language": "বাংলা · ইংরেজি",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "বাংলায় গৌতম বুদ্ধের জীবনী; পালি সাহিত্য ও বৌদ্ধ ভূগোল-ইতিহাস",
+      "characters": [
+        "গৌতম বুদ্ধ"
+      ],
+      "featuredWork": "গৌতম বুদ্ধ (১৯৩৮)",
+      "relationType": "direct",
+      "summary": "ইংরেজিতে “B. C. Law” নামে তিন শতাধিক গবেষণাকর্মের লেখক বিমলাচরণ লাহা ১৯৩৮ সালে বাংলায় “গৌতম বুদ্ধ” প্রকাশ করেন—সাধারণ বাংলা পাঠকের জন্য পণ্ডিতি অথচ পাঠযোগ্য বুদ্ধজীবনী। তাঁর A History of Pali Literature পালি অধ্যয়নের ধ্রুপদী সহায়ক গ্রন্থ।",
+      "significance": "বাংলা ভাষায় আধুনিক প্রামাণিক বুদ্ধজীবনীর প্রথম দিককার সার্থক প্রচেষ্টার রচয়িতা।",
+      "details": [
+        "তাঁর নামের উচ্চারণ-রূপভেদ (LAHA/Law) গ্রন্থপঞ্জিতে দ্বৈত এন্ট্রির কারণ হয়—এই আর্কাইভে দুটোই রাখা হয়েছে।",
+        "মুক্ত কোনো প্রতিকৃতি পাওয়া যায়নি; তাই তাঁর গবেষণা-জগৎ—প্রাচীন বৌদ্ধ পুঁথির ফোলিও—প্রেক্ষাপটচিত্র হিসেবে দেওয়া হলো।"
+      ],
+      "works": [
+        {
+          "title": "গৌতম বুদ্ধ",
+          "year": "১৯৩৮",
+          "medium": "জীবনী (বাংলা)",
+          "note": ""
+        },
+        {
+          "title": "A History of Pali Literature",
+          "year": "১৯৩৩",
+          "medium": "গবেষণা",
+          "note": "দুই খণ্ড"
+        },
+        {
+          "title": "Geography of Early Buddhism",
+          "year": "১৯৩২",
+          "medium": "গবেষণা",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "“গৌতম বুদ্ধ” (১৯৩৮) — মূল বাংলা বই",
+          "url": "https://archive.org/details/in.ernet.dli.2015.352796",
+          "note": "Internet Archive"
+        },
+        {
+          "kind": "pdf",
+          "label": "Geography of Early Buddhism — PDF",
+          "url": "https://archive.org/details/in.ernet.dli.2015.128385",
+          "note": "Internet Archive"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Internet Archive — গৌতম বুদ্ধ",
+          "url": "https://archive.org/details/dli.bengal.10689.19028"
+        },
+        {
+          "label": "Royal Asiatic Society — Bimala Churn Law portrait record",
+          "url": "https://royalasiaticcollections.org/ras-01-009-bimala-churn-law-1892-1969-indologist/"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Bimala Charan Laha",
+        "B C Law",
+        "Goutam Buddha",
+        "বিমলাচরণ"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Folio_from_a_Buddhist_Manuscript_of_Pancavimsatisahasrika_Prajnaparamita_%28IA_mma_folio_from_a_buddhist_manuscript_of_pancavimsatisahasrika_prajnaparamita_74851%29.jpg/500px-thumbnail.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Folio_from_a_Buddhist_Manuscript_of_Pancavimsatisahasrika_Prajnaparamita_(IA_mma_folio_from_a_buddhist_manuscript_of_pancavimsatisahasrika_prajnaparamita_74851).jpg",
+        "captionBn": "প্রজ্ঞাপারমিতা পুঁথির ফোলিও—প্রেক্ষাপটচিত্র; বিমলাচরণ লাহার নির্ভরযোগ্য মুক্ত প্রতিকৃতি পাওয়া যায়নি।",
+        "credit": "The Metropolitan Museum of Art / Internet Archive",
+        "license": "Public domain",
+        "alt": "প্রাচীন বৌদ্ধ পাণ্ডুলিপির রঙিন ফোলিও",
+        "objectPosition": "50% 45%",
+        "type": "context",
+        "file": "Folio from a Buddhist Manuscript of Pancavimsatisahasrika Prajnaparamita.jpg",
+        "width": 3072,
+        "height": 1386
+      }
+    },
+    {
+      "id": "jibanananda-das-banalata-sen",
+      "kind": "person",
+      "titleBn": "জীবনানন্দ দাশ",
+      "titleEn": "Jibanananda Das",
+      "creatorBn": "জীবনানন্দ দাশ",
+      "creatorEn": "Jibanananda Das",
+      "roles": [
+        "কবি"
+      ],
+      "region": "bangladesh",
+      "period": "modern",
+      "years": "১৮৯৯–১৯৫৪; “বনলতা সেন” রচনা ১৯৩৪",
+      "yearSort": 1934,
+      "language": "বাংলা",
+      "categories": [
+        "poetry-drama",
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "বিম্বিসার-অশোকের যুগ ও শ্রাবস্তীর স্মৃতিচারণ—পরোক্ষ বৌদ্ধযুগ-উল্লেখ",
+      "characters": [
+        "বিম্বিসার (উল্লেখ)",
+        "অশোক (উল্লেখ)"
+      ],
+      "featuredWork": "বনলতা সেন",
+      "relationType": "indirect",
+      "summary": "“বনলতা সেন” বুদ্ধ-কেন্দ্রিক কবিতা নয়—কিন্তু বাংলা কবিতার সবচেয়ে বিখ্যাত ভ্রমণ-রেখায় কবি “বিম্বিসার অশোকের ধূসর জগতে” ও শ্রাবস্তীর পথ পেরিয়ে আসেন। বৌদ্ধযুগের ভারতীয় ভূগোল এখানে প্রেম ও সময়-চেতনার মানচিত্র হয়ে ওঠে।",
+      "significance": "বৌদ্ধ যুগ কীভাবে আধুনিক বাঙালি কল্পনায় “সুদূর অতীতের” প্রতীক হয়ে ঢুকে গেছে, তার সবচেয়ে পরিচিত সাহিত্যিক প্রমাণ।",
+      "details": [
+        "কবিতাটি ১৯৩৪ সালে রচিত, ১৯৩৫ সালের ডিসেম্বরে “কবিতা” পত্রিকায় প্রকাশিত।",
+        "এই এন্ট্রিকে সচেতনভাবে “পরোক্ষ উল্লেখ” হিসেবে শ্রেণিবদ্ধ করা হয়েছে—সরাসরি বৌদ্ধ রচনা বলে দাবি করা হচ্ছে না।"
+      ],
+      "works": [
+        {
+          "title": "বনলতা সেন",
+          "year": "১৯৩৪",
+          "medium": "কবিতা",
+          "note": "বিম্বিসার-অশোক-শ্রাবস্তীর উল্লেখ"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে বৌদ্ধযুগের ভূগোল-ইতিহাসের বই",
+          "url": "library.html#lib-ashok-anushasan",
+          "note": "অশোক অনুশাসন"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Internet Archive — বৌদ্ধযুগের ভারতীয় ভূগোল (প্রেক্ষাপট)",
+          "url": "https://archive.org/details/in.ernet.dli.2015.128385"
+        }
+      ],
+      "libraryIds": [
+        "lib-ashok-anushasan"
+      ],
+      "aliases": [
+        "Jibanananda Das",
+        "Banalata Sen",
+        "বনলতা সেন",
+        "শ্রাবস্তী",
+        "বিম্বিসার"
+      ],
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Jibanananda_Das_%281899%E2%80%931954%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Jibanananda_Das_(1899%E2%80%931954).jpg",
+        "captionBn": "জীবনানন্দ দাশের প্রতিকৃতি।",
+        "credit": "অজ্ঞাত শিল্পী",
+        "license": "Public domain",
+        "alt": "জীবনানন্দ দাশের সাদা-কালো ছবি",
+        "objectPosition": "50% 20%",
+        "type": "portrait",
+        "file": "Jibanananda_Das_(1899–1954).jpg",
+        "width": 259,
+        "height": 325
+      }
+    },
+    {
+      "id": "kazi-nazrul-islam-manush",
+      "kind": "person",
+      "titleBn": "কাজী নজরুল ইসলাম",
+      "titleEn": "Kazi Nazrul Islam",
+      "creatorBn": "কাজী নজরুল ইসলাম",
+      "creatorEn": "Kazi Nazrul Islam",
+      "roles": [
+        "কবি",
+        "গীতিকার",
+        "সুরকার"
+      ],
+      "region": "bangladesh",
+      "period": "modern",
+      "years": "১৮৯৯–১৯৭৬",
+      "yearSort": 1925,
+      "language": "বাংলা",
+      "categories": [
+        "poetry-drama",
+        "music",
+        "person"
+      ],
+      "buddhistSubject": "“মানুষ” কবিতায় বুদ্ধসহ বিশ্বমানবতার প্রবক্তাদের নাম; সাম্যের বাণী",
+      "characters": [
+        "বুদ্ধ (উল্লেখ)"
+      ],
+      "featuredWork": "মানুষ",
+      "relationType": "indirect",
+      "summary": "নজরুলের “মানুষ” কবিতায় যুগে যুগে মানবতার পক্ষাবলম্বনকারীদের সারিতে বুদ্ধের নাম আসে। এটি বুদ্ধ-কেন্দ্রিক রচনা নয়—সাম্য ও মানবমর্যাদার বৈশ্বিক ঘোষণায় বুদ্ধ একজন নৈতিক প্রতীক।",
+      "significance": "বাংলাদেশের জাতীয় কবির মানবতাবাদী কল্পনায় বুদ্ধের স্থান দেখায় যে বুদ্ধ এখানে সম্প্রদায়-সীমা পেরিয়ে সার্বজনীন প্রতীক।",
+      "details": [
+        "এই এন্ট্রিকে “পরোক্ষ/সার্বজনীন উল্লেখ” হিসেবে চিহ্নিত করা হয়েছে।",
+        "নজরুলের বিস্তর গান-কবিতায় সাম্য, অহিংসা ও জাত-বিদ্বেষের বিরোধিতা বৌদ্ধ নৈতিক চেতনার সঙ্গে অনুরণিত, তবে তা প্রভাব-আলোচনা, সরাসরি বৌদ্ধ রচনা নয়।"
+      ],
+      "works": [
+        {
+          "title": "মানুষ",
+          "year": "সাম্যবাদী (১৯২৫)",
+          "medium": "কবিতা",
+          "note": "বুদ্ধের নামোল্লেখ"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে বুদ্ধ-কীর্তন ও বাংলা বৌদ্ধ গীতিধারা",
+          "url": "library.html#aud-buddha-kirtan",
+          "note": "সমকালীন বৌদ্ধ গানের নমুনা"
+        }
+      ],
+      "sources": [
+        {
+          "label": "বাংলাপিডিয়া — নজরুল ইসলাম, কাজী",
+          "url": "https://bn.banglapedia.org/index.php?title=%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE%2C_%E0%A6%95%E0%A6%BE%E0%A6%9C%E0%A7%80_%E0%A6%A8%E0%A6%9C%E0%A6%B0%E0%A7%81%E0%A6%B2"
+        }
+      ],
+      "libraryIds": [
+        "aud-buddha-kirtan"
+      ],
+      "aliases": [
+        "Kazi Nazrul Islam",
+        "Nazrul",
+        "মানুষ কবিতা",
+        "সাম্যবাদী"
+      ],
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Nazrul.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Nazrul.jpg",
+        "captionBn": "কাজী নজরুল ইসলামের প্রতিকৃতি।",
+        "credit": "অজ্ঞাত আলোকচিত্রী",
+        "license": "Public domain",
+        "alt": "কাজী নজরুল ইসলামের ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Nazrul.jpg",
+        "width": 333,
+        "height": 448
+      }
+    },
+    {
+      "id": "sharadindu-bandyopadhyay-maru-o-sangha",
+      "kind": "person",
+      "titleBn": "শরদিন্দু বন্দ্যোপাধ্যায়",
+      "titleEn": "Sharadindu Bandyopadhyay",
+      "creatorBn": "শরদিন্দু বন্দ্যোপাধ্যায়",
+      "creatorEn": "Sharadindu Bandyopadhyay",
+      "roles": [
+        "ঔপন্যাসিক",
+        "গল্পকার",
+        "চিত্রনাট্যকার"
+      ],
+      "region": "bengali",
+      "period": "modern",
+      "years": "১৮৯৯–১৯৭০",
+      "yearSort": 1950,
+      "language": "বাংলা",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "মধ্য-এশিয়ার বালুঝড়ে ধ্বংস বৌদ্ধ বিহার-নগরী; বুদ্ধের অগ্নিসূত্র (আদিত্তপরিয়ায় সুত্ত) থেকে অনুপ্রেরণা",
+      "characters": [
+        "থের পিথুমিত্ত",
+        "উচণ্ড",
+        "নির্বাণ",
+        "ইতি"
+      ],
+      "featuredWork": "মরু ও সংঘ",
+      "relationType": "direct",
+      "summary": "ব্যোমকেশের স্রষ্টা শরদিন্দুর ঐতিহাসিক গল্প “মরু ও সংঘ”-এ খ্রিস্টপূর্ব যুগের মধ্য-এশীয় বৌদ্ধ নগরী বালুঝড়ে ধ্বংসের পর এক বিহারে বেঁচে থাকে দুই ভিক্ষু ও দুই শিশু। প্রবৃত্তি বনাম সংযমের টানাপোড়েনে বুদ্ধের “সবকিছু জ্বলছে” অগ্নি-উপদেশ গল্পের দার্শনিক মেরুদণ্ড।",
+      "significance": "বাংলা জনপ্রিয় ঐতিহাসিক কথাসাহিত্যে বৌদ্ধ ভিক্ষুজীবনের অন্তর্দ্বন্দ্বের সবচেয়ে স্মরণীয় চিত্রণ।",
+      "details": [
+        "গল্পটি থেকেই পরে নবেন্দু ঘোষ “তৃষাগ্নি” চলচ্চিত্র নির্মাণ করেন।",
+        "মুক্ত প্রতিকৃতি নিশ্চিত করা যায়নি; ছবিতে গল্পের জগতের মতো প্রাচীন বৌদ্ধ বিহার-ধ্বংসাবশেষ দেখানো হয়েছে।"
+      ],
+      "works": [
+        {
+          "title": "মরু ও সংঘ",
+          "year": "বিংশ শতক",
+          "medium": "ঐতিহাসিক গল্প",
+          "note": "তৃষাগ্নি চলচ্চিত্রের উৎস"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "video",
+          "label": "গল্পের চলচ্চিত্র-রূপ “তৃষাগ্নি” সম্পর্কে জানুন",
+          "url": "culture.html#creator-nabendu-ghosh-trishagni",
+          "note": "এই আর্কাইভে নবেন্দু ঘোষের এন্ট্রি"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে অগ্নিসূত্রের প্রেক্ষাপট — ধম্মপদ",
+          "url": "library.html#lib-dhammapada-shilbhadra",
+          "note": "চর্যাভূমি লাইব্রেরি"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Penguin Random House India — Sharadindu",
+          "url": "https://www.penguin.co.in/book_author/bandyopadhyay-saradindu/"
+        }
+      ],
+      "libraryIds": [
+        "lib-dhammapada-shilbhadra"
+      ],
+      "aliases": [
+        "Sharadindu",
+        "Maru O Sangha",
+        "মরু ও সংঘ",
+        "তৃষাগ্নি",
+        "Byomkesh"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/A_view_inside_the_monk_chambers_at_Takht_Bhai.jpg/500px-A_view_inside_the_monk_chambers_at_Takht_Bhai.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:A_view_inside_the_monk_chambers_at_Takht_Bhai.jpg",
+        "captionBn": "প্রেক্ষাপটচিত্র: প্রাচীন বৌদ্ধ বিহারের ভিক্ষু-কক্ষের ধ্বংসাবশেষ, তখত-ই-বাহি।",
+        "credit": "Omar Usman Khan",
+        "license": "CC BY-SA 3.0",
+        "alt": "পাথরের প্রাচীন বিহার কক্ষের ধ্বংসাবশেষ",
+        "objectPosition": "50% 45%",
+        "type": "context",
+        "file": "A view inside the monk chambers at Takht Bhai.jpg",
+        "width": 1600,
+        "height": 1200,
+        "filter": "brightness(1.5) contrast(1.04)"
+      }
+    },
+    {
+      "id": "nabendu-ghosh-trishagni",
+      "kind": "person",
+      "titleBn": "নবেন্দু ঘোষ",
+      "titleEn": "Nabendu Ghosh",
+      "creatorBn": "নবেন্দু ঘোষ",
+      "creatorEn": "Nabendu Ghosh",
+      "roles": [
+        "চলচ্চিত্র-পরিচালক",
+        "চিত্রনাট্যকার",
+        "লেখক"
+      ],
+      "region": "bangladesh",
+      "period": "contemporary",
+      "years": "১৯১৭ (ঢাকা)–২০০৭; “তৃষাগ্নি” ১৯৮৮",
+      "yearSort": 1988,
+      "language": "হিন্দি চলচ্চিত্র · বাংলা সাহিত্য",
+      "categories": [
+        "film",
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "বৌদ্ধ বিহারের ধ্বংসস্তূপে তৃষ্ণা ও বিরাগের সংঘাত; অগ্নিসূত্রের ছায়া",
+      "characters": [
+        "উচণ্ড (নানা পটেকর)",
+        "থের (আলোক নাথ)",
+        "নির্বাণ",
+        "ইতি"
+      ],
+      "featuredWork": "তৃষাগ্নি (Trishagni)",
+      "relationType": "direct",
+      "summary": "ঢাকায় জন্ম নেওয়া কিংবদন্তি চিত্রনাট্যকার নবেন্দু ঘোষের পরিচালনায় অভিষেক “তৃষাগ্নি” (১৯৮৮) শরদিন্দুর “মরু ও সংঘ” অবলম্বনে তৈরি। সলিল চৌধুরীর সংগীতে ছবিটি জাতীয় চলচ্চিত্র পুরস্কারে শ্রেষ্ঠ প্রথম চলচ্চিত্র/পরিচালক বিভাগে সম্মানিত হয়।",
+      "significance": "বাংলাদেশে জন্ম নেওয়া নির্মাতার হাতে বৌদ্ধ দার্শনিক থিমের সবচেয়ে প্রশংসিত ভারতীয় চলচ্চিত্রগুলোর একটি।",
+      "details": [
+        "ছবিতে ব্যবহৃত ছবিটি পরিচালকের নয়—ভিক্ষু উচণ্ড চরিত্রের অভিনেতা নানা পটেকরের; ক্যাপশনে স্পষ্ট লেখা আছে।",
+        "নবেন্দু ঘোষ ছিলেন “সুজাতা” (নামটিই বৌদ্ধ-আখ্যানমূলক)সহ বহু ধ্রুপদী ছবির চিত্রনাট্যকার, যদিও সেই ছবির বিষয় জাতপাত।"
+      ],
+      "works": [
+        {
+          "title": "তৃষাগ্নি",
+          "year": "১৯৮৮",
+          "medium": "চলচ্চিত্র",
+          "note": "পরিচালনা ও চিত্রনাট্য; সংগীত: সলিল চৌধুরী"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "video",
+          "label": "Trishagni — চলচ্চিত্রের তথ্য ও দেখার সুযোগ খুঁজুন",
+          "url": "https://www.imdb.com/title/tt0300575/",
+          "note": "IMDb পৃষ্ঠা; স্ট্রিমিং প্রাপ্যতা এলাকাভেদে পাল্টায়"
+        },
+        {
+          "kind": "article",
+          "label": "MUBI-তে Trishagni প্রোফাইল",
+          "url": "https://mubi.com/en/us/films/trishagni-the-sand-storm",
+          "note": "MUBI"
+        }
+      ],
+      "sources": [
+        {
+          "label": "IMDb — Trishagni (1988)",
+          "url": "https://www.imdb.com/title/tt0300575/"
+        },
+        {
+          "label": "MUBI — Trishagni",
+          "url": "https://mubi.com/en/us/films/trishagni-the-sand-storm"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Nabendu Ghosh",
+        "Trishagni",
+        "তৃষাগ্নি",
+        "Nana Patekar",
+        "ঢাকায় জন্ম"
+      ],
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Nana_Patekar_2025.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Nana_Patekar_2025.jpg",
+        "captionBn": "নানা পটেকর—“তৃষাগ্নি”-তে ভিক্ষু উচণ্ড চরিত্রের অভিনেতা (পরিচালক নন)।",
+        "credit": "Bollywood Hungama",
+        "license": "CC BY 3.0",
+        "alt": "নানা পটেকরের ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Nana_Patekar_2025.jpg",
+        "width": 393,
+        "height": 491
+      }
+    },
+    {
+      "id": "gotoma-the-buddha-1957",
+      "kind": "work",
+      "titleBn": "“Gotoma the Buddha” — রাজবংশ খান্না ও বিমল রায়",
+      "titleEn": "Gotoma the Buddha (1957)",
+      "creatorBn": "রাজবংশ খান্না (পরিচালক) · বিমল রায় (প্রযোজক) · সলিল চৌধুরী (সংগীত)",
+      "creatorEn": "Rajbans Khanna · Bimal Roy · Salil Chowdhury",
+      "roles": [
+        "পরিচালক",
+        "প্রযোজক",
+        "সংগীত-পরিচালক",
+        "সম্পাদক (হৃষীকেশ মুখোপাধ্যায়)"
+      ],
+      "region": "bengali",
+      "period": "modern",
+      "years": "১৯৫৭",
+      "yearSort": 1957,
+      "language": "ইংরেজি ধারাভাষ্য",
+      "categories": [
+        "film",
+        "music"
+      ],
+      "buddhistSubject": "ভারতের ভূ-দৃশ্য, প্রত্নস্থান ও শিল্পনিদর্শনের ছবিতে বুদ্ধের জীবন ও শিক্ষা",
+      "characters": [
+        "গৌতম বুদ্ধ"
+      ],
+      "featuredWork": "Gotoma the Buddha",
+      "relationType": "direct",
+      "summary": "বুদ্ধের আড়াই হাজার বছর পূর্তি উপলক্ষে নির্মিত প্রামাণ্যচিত্র “Gotoma the Buddha” ১৯৫৭ সালের কান চলচ্চিত্র উৎসবে বিশেষ উল্লেখ (Mention exceptionnelle) পায়। পরিচালক রাজবংশ খান্না, প্রযোজক বাংলাদেশি-বংশোদ্ভূত কিংবদন্তি বিমল রায়, সংগীত সলিল চৌধুরী, সম্পাদনা হৃষীকেশ মুখোপাধ্যায়।",
+      "significance": "আন্তর্জাতিক উৎসবে সম্মান পাওয়া প্রথম উল্লেখযোগ্য বুদ্ধ-প্রামাণ্যচিত্রগুলোর মধ্যে অন্যতম—পুরো নির্মাতা-দলেই বাঙালি উপস্থিতি।",
+      "details": [
+        "ছবিটি বুদ্ধের ভূমিকায় অভিনয় নয়—আখ্যান চলে ধারাভাষ্য ও ঐতিহাসিক স্থানের চিত্রে।",
+        "ছবিতে বিমল রায়ের স্মারক ডাকটিকিট দেখানো হয়েছে।"
+      ],
+      "works": [
+        {
+          "title": "Gotoma the Buddha",
+          "year": "১৯৫৭",
+          "medium": "প্রামাণ্যচিত্র",
+          "note": "কান উৎসবে বিশেষ উল্লেখ"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "video",
+          "label": "কান চলচ্চিত্র উৎসবের অফিসিয়াল নথিতে ছবিটি",
+          "url": "https://www.festival-cannes.com/en/f/gotoma-the-buddha/",
+          "note": "Festival de Cannes"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Festival de Cannes — Gotoma the Buddha",
+          "url": "https://www.festival-cannes.com/en/f/gotoma-the-buddha/"
+        },
+        {
+          "label": "Letterboxd — Gotama the Buddha",
+          "url": "https://letterboxd.com/film/gotama-the-buddha/"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Gotoma the Buddha",
+        "Rajbans Khanna",
+        "Bimal Roy",
+        "বিমল রায়",
+        "সলিল চৌধুরী",
+        "Cannes 1957"
+      ],
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Bimal_Roy_2007_stamp_of_India.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Bimal_Roy_2007_stamp_of_India.jpg",
+        "captionBn": "বিমল রায় — ভারতের স্মারক ডাকটিকিটে (“Gotoma the Buddha”-র প্রযোজক)।",
+        "credit": "India Post, Government of India",
+        "license": "GODL-India",
+        "alt": "বিমল রায়ের ছবি সংবলিত ডাকটিকিট",
+        "objectPosition": "50% 30%",
+        "type": "portrait",
+        "file": "Bimal_Roy_2007_stamp_of_India.jpg",
+        "width": 384,
+        "height": 470
+      }
+    },
+    {
+      "id": "satyajit-ray-sikkim",
+      "kind": "person",
+      "titleBn": "সত্যজিৎ রায়",
+      "titleEn": "Satyajit Ray",
+      "creatorBn": "সত্যজিৎ রায়",
+      "creatorEn": "Satyajit Ray",
+      "roles": [
+        "চলচ্চিত্র-নির্মাতা",
+        "লেখক",
+        "চিত্রশিল্পী"
+      ],
+      "region": "bengali",
+      "period": "modern",
+      "years": "১৯২১–১৯৯২; “Sikkim” ১৯৭১",
+      "yearSort": 1971,
+      "language": "ইংরেজি প্রামাণ্যচিত্র · বাংলা সাহিত্য",
+      "categories": [
+        "film",
+        "person"
+      ],
+      "buddhistSubject": "সিকিমের বৌদ্ধ বিহার, শিক্ষানবিশ ভিক্ষু ও ধর্মীয় সংস্কৃতির প্রামাণ্য রেকর্ড",
+      "characters": [
+        "সিকিমি বৌদ্ধ ভিক্ষুগণ (প্রামাণ্য চরিত্র)"
+      ],
+      "featuredWork": "Sikkim (প্রামাণ্যচিত্র)",
+      "relationType": "influence",
+      "summary": "সত্যজিৎ রায় বুদ্ধের জীবনীভিত্তিক কোনো চলচ্চিত্র বানাননি—এমন দাবি পাওয়া গেলেও তা যাচাইযোগ্য নয়। তবে তাঁর “Sikkim” (১৯৭১) প্রামাণ্যচিত্রে হিমালয়ের বৌদ্ধ বিহার, বালক ভিক্ষু ও আচার-সংস্কৃতি সযত্নে ধরা পড়েছে, আর শান্তিনিকেতনে নন্দলাল বসুর ছাত্র হিসেবে তাঁর শিল্পশিক্ষায় বৌদ্ধ চিত্রঐতিহ্যের পরোক্ষ ছাপ রয়েছে।",
+      "significance": "কিংবদন্তি নির্মাতার নামে ছড়ানো ভিত্তিহীন “বুদ্ধ-উক্তি”র বদলে যাচাইযোগ্য প্রকৃত সংযোগটি দেখানোর জন্যই এই এন্ট্রি।",
+      "details": [
+        "“সত্যজিৎ রায় বুদ্ধকে নিয়ে ছবি বানাতে চেয়েছিলেন” বলে প্রচারিত কিছু দাবির প্রাথমিক সূত্র মেলেনি; আর্কাইভে তা রাখা হয়নি।",
+        "সিকিম ছবিটি দীর্ঘদিন বিতর্ক ও নিষেধাজ্ঞার কারণে দুর্লভ ছিল; পরে পুনরুদ্ধার হয়ে প্রদর্শিত হয়।"
+      ],
+      "works": [
+        {
+          "title": "Sikkim",
+          "year": "১৯৭১",
+          "medium": "প্রামাণ্যচিত্র",
+          "note": "বৌদ্ধ বিহার ও ভিক্ষু-জীবনের দৃশ্য"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "video",
+          "label": "“Sikkim” (১৯৭১) — KLiKK-এর ভিডিও উপস্থাপনা",
+          "url": "https://www.youtube.com/watch?v=t5T9Hc0Ssu8",
+          "note": "KLiKK · YouTube"
+        },
+        {
+          "kind": "article",
+          "label": "Film at Lincoln Center-এ Sikkim প্রোফাইল",
+          "url": "https://www.filmlinc.org/films/Sikkim/",
+          "note": "FLC"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Film at Lincoln Center — Sikkim",
+          "url": "https://www.filmlinc.org/films/Sikkim/"
+        },
+        {
+          "label": "Scroll — Sikkim প্রামাণ্যচিত্রের ইতিহাস",
+          "url": "https://scroll.in/reel/842906/watch-satyajit-rays-sikkim-made-before-india-annexed-the-kingdom"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Satyajit Ray",
+        "Sikkim documentary",
+        "সত্যজিৎ",
+        "শান্তিনিকেতন"
+      ],
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Satyajit_Ray_in_New_York_%28cropped%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Satyajit_Ray_in_New_York_(cropped).jpg",
+        "captionBn": "সত্যজিৎ রায়, নিউইয়র্কে।",
+        "credit": "Dinu Alam Newyork",
+        "license": "CC BY-SA 4.0",
+        "alt": "সত্যজিৎ রায়ের সাদা-কালো প্রতিকৃতি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Satyajit_Ray_in_New_York_(cropped).jpg",
+        "width": 398,
+        "height": 531
+      }
+    },
+    {
+      "id": "bani-basu-maitreya-jataka",
+      "kind": "person",
+      "titleBn": "বাণী বসু",
+      "titleEn": "Bani Basu",
+      "creatorBn": "বাণী বসু",
+      "creatorEn": "Bani Basu",
+      "roles": [
+        "ঔপন্যাসিক",
+        "কবি",
+        "অধ্যাপক"
+      ],
+      "region": "bengali",
+      "period": "contemporary",
+      "years": "জন্ম ১৯৩৯; “মৈত্রেয় জাতক” প্রথম প্রকাশ ১৯৯৬",
+      "yearSort": 1996,
+      "language": "বাংলা · ইংরেজি অনুবাদ",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "মৈত্রেয়-জাতক আখ্যানকে আধুনিক বাংলা উপন্যাসে পুনঃসৃষ্টি",
+      "characters": [
+        "মৈত্রেয়",
+        "জাতক-চরিত্রসমূহ"
+      ],
+      "featuredWork": "মৈত্রেয় জাতক",
+      "relationType": "direct",
+      "summary": "সাহিত্য আকাদেমি পুরস্কারপ্রাপ্ত ঔপন্যাসিক বাণী বসুর “মৈত্রেয় জাতক” বৌদ্ধ জাতক-আখ্যানের কাঠামোয় ক্ষমতা, করুণা ও ভবিষ্যৎ-বুদ্ধের অপেক্ষাকে আধুনিক রাজনৈতিক রূপকে বুনেছে। উপন্যাসটির ইংরেজি অনুবাদ The Birth of the Maitreya নামে প্রকাশিত।",
+      "significance": "সমকালীন বাংলা উপন্যাসে জাতক-ঐতিহ্যের সবচেয়ে আলোচিত পুনঃসৃষ্টিগুলোর একটি।",
+      "details": [
+        "গ্রন্থের বছর সংস্করণভেদে ১৯৯৬/১৯৯৯/২০১৪ দেখা যায়; প্রথম প্রকাশ হিসেবে ১৯৯৬ ব্যবহৃত হয়েছে।",
+        "জাতকের আধ্যাত্মিক কাঠামো বজায় রেখে ইতিহাস-রাজনীতি পড়ার এই পদ্ধতি বাংলা উপন্যাসে বিরল।"
+      ],
+      "works": [
+        {
+          "title": "মৈত্রেয় জাতক",
+          "year": "১৯৯৬",
+          "medium": "উপন্যাস",
+          "note": "ইংরেজি অনুবাদ: The Birth of the Maitreya"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "Library of Congress ক্যাটালগে “মৈত্রেয় জাতক”",
+          "url": "https://www.loc.gov/search/?q=Maitreya+Jataka+Bani+Basu",
+          "note": "গ্রন্থপঞ্জি তথ্য"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Wikimedia Commons — Bani Basu",
+          "url": "https://commons.wikimedia.org/wiki/Category:Bani_Basu"
+        },
+        {
+          "label": "Library of Congress — অনুসন্ধান",
+          "url": "https://www.loc.gov/search/?q=Maitreya+Jataka+Bani+Basu"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Bani Basu",
+        "Maitreya Jataka",
+        "মৈত্রেয় জাতক",
+        "জাতক"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Bani_Basu_Discusses_-_Pathaker_Jannye_Likhi_Na_Moner_Tagide_Likhi_-_Apeejay_Bangla_Sahitya_Utsav_-_Kolkata_2015-10-10_5258.JPG/500px-Bani_Basu_Discusses_-_Pathaker_Jannye_Likhi_Na_Moner_Tagide_Likhi_-_Apeejay_Bangla_Sahitya_Utsav_-_Kolkata_2015-10-10_5258.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Bani_Basu_Discusses_-_Pathaker_Jannye_Likhi_Na_Moner_Tagide_Likhi_-_Apeejay_Bangla_Sahitya_Utsav_-_Kolkata_2015-10-10_5258.JPG",
+        "captionBn": "কলকাতায় বাংলা সাহিত্য উৎসবে বাণী বসু (২০১৫)।",
+        "credit": "Biswarup Ganguly",
+        "license": "CC BY 3.0",
+        "alt": "বক্তব্যরত বাণী বসুর ছবি",
+        "objectPosition": "50% 25%",
+        "type": "portrait",
+        "file": "Bani Basu Discusses - Pathaker Jannye Likhi Na Moner Tagide Likhi - Apeejay Bangla Sahitya Utsav - Kolkata 2015-10-10 5258.JPG",
+        "width": 4000,
+        "height": 6016
+      }
+    },
+    {
+      "id": "bipradash-barua-shraman-gautam",
+      "kind": "person",
+      "titleBn": "বিপ্রদাশ বড়ুয়া",
+      "titleEn": "Bipradash Barua",
+      "creatorBn": "বিপ্রদাশ বড়ুয়া",
+      "creatorEn": "Bipradash Barua",
+      "roles": [
+        "ঔপন্যাসিক",
+        "গল্পকার",
+        "শিশুসাহিত্যিক"
+      ],
+      "region": "bangladesh",
+      "period": "contemporary",
+      "years": "জন্ম ১৯৪০; “শ্রমণ গৌতম” ১৯৯৬",
+      "yearSort": 1996,
+      "language": "বাংলা",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "বুদ্ধের শ্রমণজীবনের উপন্যাসায়ন; বৌদ্ধগ্রাম-জীবনের কথাসাহিত্য",
+      "characters": [
+        "গৌতম বুদ্ধ (শ্রমণ রূপে)"
+      ],
+      "featuredWork": "শ্রমণ গৌতম",
+      "relationType": "buddhist-creator",
+      "summary": "একুশে পদক ও বাংলা একাডেমি পুরস্কারপ্রাপ্ত চট্টগ্রামের বৌদ্ধ ঔপন্যাসিক বিপ্রদাশ বড়ুয়া “শ্রমণ গৌতম” উপন্যাসে বুদ্ধের ত্যাগ ও অনুসন্ধানকে কথাসাহিত্যের ভাষা দিয়েছেন। ১৪০টির বেশি গ্রন্থে তিনি বড়ুয়া বৌদ্ধগ্রামের জীবন, নদী ও মানুষকে ধরে রেখেছেন।",
+      "significance": "স্বাধীন বাংলাদেশের বৌদ্ধ কথাসাহিত্যের সবচেয়ে পরিচিত নাম; বুদ্ধকে কোনো বাঙালি বৌদ্ধ লেখকের উপন্যাসের কেন্দ্রে আনার বিরল নমুনা।",
+      "details": [
+        "তিনি দীর্ঘদিন বাংলাদেশ শিশু একাডেমিতে কর্মরত ছিলেন।",
+        "মুক্ত লাইসেন্সের প্রতিকৃতি পাওয়া যায়নি; ছবিতে প্রাচীন বঙ্গের উপবিষ্ট বুদ্ধমূর্তি প্রেক্ষাপট হিসেবে দেওয়া হয়েছে।"
+      ],
+      "works": [
+        {
+          "title": "শ্রমণ গৌতম",
+          "year": "১৯৯৬",
+          "medium": "উপন্যাস",
+          "note": "গৌতম বুদ্ধের জীবন"
+        },
+        {
+          "title": "সাদা কফিন, নদীর নাম গণতন্ত্রসহ গল্পগ্রন্থ",
+          "year": "—",
+          "medium": "ছোটগল্প",
+          "note": "বৌদ্ধগ্রামজীবন"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে বুদ্ধকাহিনির বাংলা বই",
+          "url": "library.html#lib-buddha-golpomala",
+          "note": "“বুদ্ধ গল্পমালা”"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Comma Press — Bipradash Barua",
+          "url": "https://commapress.co.uk/authors/bipradash-barua"
+        }
+      ],
+      "libraryIds": [
+        "lib-buddha-golpomala"
+      ],
+      "aliases": [
+        "Bipradash Barua",
+        "শ্রমণ গৌতম",
+        "Shraman Gautam",
+        "চট্টগ্রাম"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg/500px-Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Bangladeshi_-_Enthroned_Seated_Buddha_-_Walters_542713.jpg",
+        "captionBn": "প্রাচীন বঙ্গ/বাংলাদেশের উপবিষ্ট বুদ্ধমূর্তি—প্রেক্ষাপটচিত্র, লেখকের প্রতিকৃতি নয়।",
+        "credit": "Bangladeshi Base: Thai",
+        "license": "Public domain",
+        "alt": "পাথরে খোদাই করা উপবিষ্ট বুদ্ধমূর্তি",
+        "objectPosition": "50% 25%",
+        "type": "context",
+        "file": "Bangladeshi - Enthroned Seated Buddha - Walters 542713.jpg",
+        "width": 1393,
+        "height": 1799
+      }
+    },
+    {
+      "id": "novera-ahmed-peace-buddha",
+      "kind": "person",
+      "titleBn": "নভেরা আহমেদ",
+      "titleEn": "Novera Ahmed",
+      "creatorBn": "নভেরা আহমেদ",
+      "creatorEn": "Novera Ahmed",
+      "roles": [
+        "ভাস্কর"
+      ],
+      "region": "bangladesh",
+      "period": "contemporary",
+      "years": "১৯৩৯–২০১৫; “Peace (Buddha)” তারিখ অজ্ঞাত",
+      "yearSort": 1960,
+      "language": "ভাস্কর্য",
+      "categories": [
+        "sculpture",
+        "person"
+      ],
+      "buddhistSubject": "সিমেন্টের “শান্তি (বুদ্ধ)” ভাস্কর্য",
+      "characters": [
+        "বুদ্ধ"
+      ],
+      "featuredWork": "Peace (Buddha) / শান্তি",
+      "relationType": "direct",
+      "summary": "বাংলাদেশের আধুনিক ভাস্কর্যের পথিকৃৎ নভেরা আহমেদের সিমেন্ট-ভাস্কর্য “Peace (Buddha)” (শান্তি) বুদ্ধের প্রশান্ত আকৃতিকে সংক্ষিপ্ত আধুনিক আকারে ধরে—কাজটি বাংলাদেশ জাতীয় জাদুঘরের নথিতে রয়েছে।",
+      "significance": "বাংলাদেশের সবচেয়ে গুরুত্বপূর্ণ আধুনিক ভাস্করের হাতে বুদ্ধমূর্তি: আঞ্চলিক বৌদ্ধ মূর্তিকলা থেকে আধুনিক বিমূর্ততার যাত্রার প্রমাণ।",
+      "details": [
+        "ভাস্কর্যটির নির্মিত সাল ক্যাটালগে অনিশ্চিত/অজ্ঞাত—তাই কোনো সাল দেওয়া হয়নি।",
+        "ছবিতে জাতীয় জাদুঘরে রক্ষিত তাঁর একটি সিমেন্ট-রচনা দেখানো হয়েছে; Buddha-ভাস্কর্যের মুক্ত ছবি পাওয়া যায়নি বলে ক্যাপশনে উল্লেখ রয়েছে।"
+      ],
+      "works": [
+        {
+          "title": "Peace (Buddha)",
+          "year": "সাল অজ্ঞাত",
+          "medium": "সিমেন্ট",
+          "note": "বাংলাদেশ জাতীয় জাদুঘর তালিকাভুক্ত"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "artwork",
+          "label": "ভাস্কর্যটি দেখুন (Wikimedia Commons)",
+          "url": "https://commons.wikimedia.org/wiki/File:Composition_by_Novera_Ahmed.jpg",
+          "note": "CC BY-SA 4.0 · Mashkawat.ahsan"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে বাংলাদেশি বৌদ্ধ ব্রোঞ্জ গবেষণা",
+          "url": "library.html#lib-mitra-bronzes",
+          "note": "Bronzes from Bangladesh (PDF)"
+        }
+      ],
+      "sources": [
+        {
+          "label": "AWARE — Novera Ahmed",
+          "url": "https://awarewomenartists.com/en/artiste/novera-ahmed/"
+        },
+        {
+          "label": "Wikimedia Commons — Composition by Novera Ahmed",
+          "url": "https://commons.wikimedia.org/wiki/File:Composition_by_Novera_Ahmed.jpg"
+        }
+      ],
+      "libraryIds": [
+        "lib-mitra-bronzes"
+      ],
+      "aliases": [
+        "Novera Ahmed",
+        "Peace Buddha",
+        "শান্তি ভাস্কর্য",
+        "বাংলাদেশ ভাস্কর্য"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Composition_by_Novera_Ahmed.jpg/500px-Composition_by_Novera_Ahmed.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Composition_by_Novera_Ahmed.jpg",
+        "captionBn": "জাতীয় জাদুঘরে নভেরা আহমেদের সিমেন্ট-রচনা “Composition”—তাঁর Buddha-ভাস্কর্যের মুক্ত ছবি পাওয়া যায়নি।",
+        "credit": "Mashkawat.ahsan",
+        "license": "CC BY-SA 4.0",
+        "alt": "নভেরা আহমেদের বিমূর্ত সিমেন্ট ভাস্কর্য",
+        "objectPosition": "50% 40%",
+        "type": "sculpture",
+        "file": "Composition by Novera Ahmed.jpg",
+        "width": 600,
+        "height": 800
+      }
+    },
+    {
+      "id": "kanak-chanpa-chakma",
+      "kind": "person",
+      "titleBn": "কনকচাঁপা চাকমা",
+      "titleEn": "Kanak Chanpa Chakma",
+      "creatorBn": "কনকচাঁপা চাকমা",
+      "creatorEn": "Kanak Chanpa Chakma",
+      "roles": [
+        "চিত্রশিল্পী"
+      ],
+      "region": "bangladesh",
+      "period": "contemporary",
+      "years": "জন্ম ১৯৬৩; “Philosophy of the Buddha” প্রদর্শনী ১৯৮৭ ও ১৯৮৯",
+      "yearSort": 1987,
+      "language": "বাংলা · চাকমা সংস্কৃতি",
+      "categories": [
+        "art",
+        "person"
+      ],
+      "buddhistSubject": "বুদ্ধের দর্শন-ভিত্তিক প্রদর্শনী; চাকমা বৌদ্ধ জীবন ও নারীর চিত্রণ",
+      "characters": [
+        "বুদ্ধ (দর্শন-থিম)",
+        "চাকমা নারী চরিত্র"
+      ],
+      "featuredWork": "Philosophy of the Buddha (প্রদর্শনী)",
+      "relationType": "buddhist-creator",
+      "summary": "চাকমা বৌদ্ধ চিত্রশিল্পী কনকচাঁপা চাকমা জীবনের শুরুতেই ভুটানে (১৯৮৭) ও ঢাকার ধর্মরাজিক বৌদ্ধ বিহারে (১৯৮৯) “Philosophy of the Buddha” শিরোনামে প্রদর্শনী করেন। তাঁর পূর্ণ শিল্পজীবন জুড়ে পার্বত্য বৌদ্ধ সমাজ, বিশেষত নারীদের দৈনন্দিন জীবন কেন্দ্রীয় থিম; ২০২৩ সালে তিনি একুশে পদক পান।",
+      "significance": "সমকালীন বাংলাদেশের সবচেয়ে আন্তর্জাতিকভাবে পরিচিত বৌদ্ধ চিত্রশিল্পী।",
+      "details": [
+        "ছবিটি ২০২৩ সালে একুশে পদক প্রদান অনুষ্ঠানের সরকারি ছবি।",
+        "রাঙামাটির তাবলছড়িতে জন্ম; ঢাকা বিশ্ববিদ্যালয়ের চারুকলা থেকে এমএফএ (১৯৮৬)।"
+      ],
+      "works": [
+        {
+          "title": "Philosophy of the Buddha",
+          "year": "১৯৮৭ ভুটান; ১৯৮৯ ঢাকা",
+          "medium": "প্রদর্শনী",
+          "note": ""
+        },
+        {
+          "title": "Life is Here",
+          "year": "২০১৪",
+          "medium": "প্রদর্শনী",
+          "note": "চাকমা জীবনের ৮০টি চিত্র"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "artwork",
+          "label": "U.S. Department of State শিল্প-পৃষ্ঠায় তাঁর কাজ",
+          "url": "https://www.art.state.gov/personnel/kanak_chakma/",
+          "note": "Art in Embassies"
+        },
+        {
+          "kind": "audio",
+          "label": "লাইব্রেরিতে চাকমা বৌদ্ধ ধর্মগীতি শুনুন",
+          "url": "library.html#aud-chakma-song",
+          "note": "চাকমা ভাষায় গান"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে চাকমা তাঁতের ছবি ও নথি",
+          "url": "library.html#img-chakma-weaving",
+          "note": "চাকমা কারুশিল্প"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Bengal Foundation — Kanak Chanpa Chakma",
+          "url": "https://bengalfoundation.org/featured_artist/kanak-chanpa-chakma/"
+        },
+        {
+          "label": "U.S. Art in Embassies — Kanak Chakma",
+          "url": "https://www.art.state.gov/personnel/kanak_chakma/"
+        },
+        {
+          "label": "UNB — Ekushey Padak profile",
+          "url": "https://www.unb.com.bd/category/Special/there-exists-a-profound-undercurrent-of-suffering-in-our-lives-that-needed-to-be-brought-to-the-forefront-kanak-chanpa-chakma/124161"
+        }
+      ],
+      "libraryIds": [
+        "aud-chakma-song",
+        "img-chakma-weaving"
+      ],
+      "aliases": [
+        "Kanak Chanpa Chakma",
+        "কনকচাঁপা",
+        "চাকমা শিল্পী",
+        "Philosophy of the Buddha"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Prime_Minister_Sheikh_Hasina_presents_Ekushey_Padak_2023_at_Osmani_Memorial_Auditorium_Dhaka_2023-02-20_%28PID-0017869%29.jpg/500px-Prime_Minister_Sheikh_Hasina_presents_Ekushey_Padak_2023_at_Osmani_Memorial_Auditorium_Dhaka_2023-02-20_(PID-0017869).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Prime_Minister_Sheikh_Hasina_presents_Ekushey_Padak_2023_at_Osmani_Memorial_Auditorium_Dhaka_2023-02-20_(PID-0017869).jpg",
+        "captionBn": "২০২৩ সালের একুশে পদক প্রদান অনুষ্ঠানে কনকচাঁপা চাকমা।",
+        "credit": "Press Information Department",
+        "license": "Public domain",
+        "alt": "মঞ্চে পদকপ্রদান অনুষ্ঠানের প্রশস্ত ছবি",
+        "objectPosition": "50% 40%",
+        "type": "portrait",
+        "file": "Prime_Minister_Sheikh_Hasina_presents_Ekushey_Padak_2023_at_Osmani_Memorial_Auditorium_Dhaka_2023-02-20_(PID-0017869).jpg",
+        "width": 1890,
+        "height": 1482
+      }
+    },
+    {
+      "id": "partha-barua",
+      "kind": "person",
+      "titleBn": "পার্থ বড়ুয়া",
+      "titleEn": "Partha Barua",
+      "creatorBn": "পার্থ বড়ুয়া",
+      "creatorEn": "Partha Barua",
+      "roles": [
+        "সংগীতশিল্পী",
+        "গায়ক",
+        "অভিনেতা"
+      ],
+      "region": "bangladesh",
+      "period": "contemporary",
+      "years": "জন্ম ১৯৬৫; Souls-এ সক্রিয় ১৯৮৯–বর্তমান",
+      "yearSort": 1989,
+      "language": "বাংলা",
+      "categories": [
+        "music",
+        "person"
+      ],
+      "buddhistSubject": "বাংলাদেশের বড়ুয়া বৌদ্ধ পরিবার-পরিচয়; মূলধারার পপ-সংগীতে বৌদ্ধ পারিবারিক পটভূমি",
+      "characters": [
+        "—"
+      ],
+      "featuredWork": "Souls-এর কণ্ঠ ও গিটার",
+      "relationType": "association",
+      "summary": "Souls ব্যান্ডের কণ্ঠশিল্পী পার্থ বড়ুয়া চট্টগ্রামের বড়ুয়া বৌদ্ধ পরিবারের সন্তান; সংবাদসূত্রে তাঁর পিতার বাংলাদেশ বৌদ্ধ ফাউন্ডেশনের সঙ্গে যুক্ততা ও বৌদ্ধ মতে অন্ত্যেষ্টির উল্লেখ আছে। তবে তাঁর পরিচিত গানগুলো সরাসরি বৌদ্ধ বিষয়ভিত্তিক নয়—তাই এই এন্ট্রি “বৌদ্ধ পরিবারের বিখ্যাত শিল্পী” হিসেবে সতর্কভাবে চিহ্নিত।",
+      "significance": "ব্যবহারকারীর নাম-উল্লিখিত ব্যক্তি; জীবিত বাংলাদেশি জনপ্রিয় সংস্কৃতিতে বড়ুয়া বৌদ্ধ পরিচয়ের সবচেয়ে পরিচিত মুখ।",
+      "details": [
+        "তাঁর ব্যক্তিগত ধর্মীয় আত্মপরিচয় নিয়ে প্রত্যক্ষ বিবৃতি না থাকায় শুধু যাচাইযোগ্য পারিবারিক পটভূমিই বলা হয়েছে।",
+        "তাঁর গানগুলোকে বৌদ্ধ সংগীত বলা ঠিক হবে না; প্রকৃত বৌদ্ধ গানের নমুনার জন্য লাইব্রেরির অডিও লিংক দেওয়া হলো।"
+      ],
+      "works": [
+        {
+          "title": "Souls-এর প্রধান কণ্ঠ",
+          "year": "১৯৮৯–",
+          "medium": "ব্যান্ড",
+          "note": "বাংলা পপ-সংগীত"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "audio",
+          "label": "বাংলাদেশি বুদ্ধ কীর্তন শুনুন (তাঁর গান নয়—সম্পর্কিত বৌদ্ধ সংগীত)",
+          "url": "library.html#aud-buddha-kirtan",
+          "note": "লাইব্রেরি অডিও"
+        },
+        {
+          "kind": "audio",
+          "label": "নিশিতা বড়ুয়ার বুদ্ধ ধর্মীয় গান",
+          "url": "library.html#aud-nishita-barua",
+          "note": "লাইব্রেরি অডিও"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Wikimedia Commons — Category:Partha Barua",
+          "url": "https://commons.wikimedia.org/wiki/Category:Partha_Barua"
+        }
+      ],
+      "libraryIds": [
+        "aud-buddha-kirtan",
+        "aud-nishita-barua"
+      ],
+      "aliases": [
+        "Partha Barua",
+        "পার্থ বড়ুয়া",
+        "Souls",
+        "বাংলাদেশি গায়ক"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Masum_hasan_-_Souls_Concert_%28cropped%29.jpg/500px-Masum_hasan_-_Souls_Concert_(cropped).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Masum_hasan_-_Souls_Concert_(cropped).jpg",
+        "captionBn": "মঞ্চে পার্থ বড়ুয়া।",
+        "credit": "Worldofmasum",
+        "license": "CC BY-SA 4.0",
+        "alt": "কনসার্টে গান গাইছেন পার্থ বড়ুয়া",
+        "objectPosition": "50% 18%",
+        "type": "performance",
+        "file": "Masum_hasan_-_Souls_Concert_(cropped).jpg",
+        "width": 968,
+        "height": 1290
+      }
+    },
+    {
+      "id": "jogendra-nath-mandal",
+      "kind": "person",
+      "titleBn": "যোগেন্দ্রনাথ মণ্ডল",
+      "titleEn": "Jogendra Nath Mandal",
+      "creatorBn": "যোগেন্দ্রনাথ মণ্ডল",
+      "creatorEn": "Jogendra Nath Mandal",
+      "roles": [
+        "আইনজীবী",
+        "রাজনীতিক",
+        "পাকিস্তানের প্রথম আইনমন্ত্রী"
+      ],
+      "region": "bangladesh",
+      "period": "modern",
+      "years": "১৯০৪ (বরিশাল)–১৯৬৮",
+      "yearSort": 1946,
+      "language": "বাংলা · ইংরেজি",
+      "categories": [
+        "person"
+      ],
+      "buddhistSubject": "অম্বেডকরের ১৯৪৬ সালের বাংলা থেকে গণপরিষদে নির্বাচনে সাংগঠনিক ভূমিকা—বৌদ্ধ নবযানের রাজনৈতিক পূর্বপ্রসঙ্গ",
+      "characters": [
+        "বি. আর. অম্বেডকর (সহযোগিতা)"
+      ],
+      "featuredWork": "তফসিলি জাতি ফেডারেশনের বঙ্গীয় নেতৃত্ব",
+      "relationType": "association",
+      "summary": "বরিশালের সন্তান যোগেন্দ্রনাথ মণ্ডল তফসিলি জাতি ফেডারেশনের বঙ্গীয় নেতা হিসেবে ১৯৪৬ সালে বোম্বাই থেকে ব্যর্থ অম্বেডকরকে বাংলার আসন থেকে গণপরিষদে নির্বাচিত করতে মুখ্য ভূমিকা রাখেন। তবে তিনি নিজে বৌদ্ধধর্ম গ্রহণ করেছিলেন—এমন যাচাইযোগ্য প্রমাণ নেই; তাঁকে বৌদ্ধ বলে দাবি করা ভুল হবে।",
+      "significance": "ব্যবহারকারীর জিজ্ঞাসিত নাম; বাংলাদেশের রাজনৈতিক ইতিহাসে প্রান্তিক জনগোষ্ঠীর অধিকার-আন্দোলনের নায়ক, কিন্তু বৌদ্ধ পরিচয়ের দাবি এখানে সংশোধনসহ রাখা হয়েছে।",
+      "details": [
+        "তিনি পাকিস্তানের প্রথম আইন ও শ্রমমন্ত্রী ছিলেন; ১৯৫০ সালে পদত্যাগপত্রে সাম্প্রদায়িক হিংসার তীব্র বিবরণ দেন।",
+        "অম্বেডকরের ১৯৫৬ সালের বৌদ্ধধর্ম গ্রহণের দশক আগের এই রাজনৈতিক সহযোগিতাই তাঁর সঙ্গে বৌদ্ধ ইতিহাসের যাচাইযোগ্য সংযোগ।"
+      ],
+      "works": [
+        {
+          "title": "গণপরিষদে অম্বেডকরের বঙ্গীয় নির্বাচন-সংগঠন",
+          "year": "১৯৪৬",
+          "medium": "রাজনীতি",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "অম্বেডকরের “The Buddha and His Dhamma” পড়ুন",
+          "url": "https://archive.org/details/in.gov.ignca.15980",
+          "note": "Internet Archive"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Wikimedia Commons — যোগেন্দ্রনাথ মণ্ডল",
+          "url": "https://commons.wikimedia.org/wiki/File:Jogendra_Nath_Mandal.jpg"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Jogendra Nath Mandal",
+        "যোগেন্দ্রনাথ মণ্ডল",
+        "অম্বেডকর বাংলা নির্বাচন",
+        "বরিশাল"
+      ],
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Jogendra_Nath_Mandal.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Jogendra_Nath_Mandal.jpg",
+        "captionBn": "যোগেন্দ্রনাথ মণ্ডলের প্রতিকৃতি।",
+        "credit": "অজ্ঞাত",
+        "license": "Public domain",
+        "alt": "যোগেন্দ্রনাথ মণ্ডলের সাদা-কালো ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Jogendra_Nath_Mandal.jpg",
+        "width": 461,
+        "height": 615
+      }
+    },
+    {
+      "id": "srijoni-tania-charyapada-revival",
+      "kind": "person",
+      "titleBn": "সাধিকা সৃজনী তানিয়া ও বাংলাদেশের বুদ্ধ-কীর্তন ধারা",
+      "titleEn": "Sadhika Srijoni Tania and the Buddha-kirtan Tradition",
+      "creatorBn": "সৃজনী তানিয়া (চর্যাগান পুনরুজ্জীবন) · বাংলাদেশের বুদ্ধসংকীর্তন শিল্পীসমাজ",
+      "creatorEn": "Srijoni Tania · Bangladeshi Buddha-sankirtan performers",
+      "roles": [
+        "গায়িকা",
+        "বাউল সাধিকা",
+        "পরিবেশনশিল্পী",
+        "কীর্তনিয়া সমাজ"
+      ],
+      "region": "bangladesh",
+      "period": "contemporary",
+      "years": "২০২২–২০২৬ সক্রিয় পুনরুজ্জীবন; কীর্তনধারা জীবিত ঐতিহ্য",
+      "yearSort": 2022,
+      "language": "প্রাচীন বাংলা · আধুনিক বাংলা",
+      "categories": [
+        "music",
+        "person"
+      ],
+      "buddhistSubject": "চর্যাপদের বৌদ্ধ রহস্যগীতির সুরারোপিত পরিবেশনা; সিদ্ধার্থ-অশোক-অঙ্গুলিমালের বুদ্ধকীর্তন",
+      "characters": [
+        "লুইপাদসহ চর্যাকবি",
+        "সিদ্ধার্থ",
+        "অশোক",
+        "অঙ্গুলিমালা"
+      ],
+      "featuredWork": "Charyapada Revival পরিবেশনা",
+      "relationType": "buddhist-creator",
+      "summary": "বাংলাদেশি শিল্পী সৃজনী তানিয়া একতারা, ডুগি ও ঘুঙুর নিয়ে হাজার বছর আগের চর্যাগীতিকে মঞ্চে ফেরাচ্ছেন—শিকাগো বিশ্ববিদ্যালয়ে পড়ানো থেকে হাঙ্গেরি-প্যারিস সফর পর্যন্ত। একই সঙ্গে গ্রামবাংলায় সিদ্ধার্থ, অশোক ও অঙ্গুলিমালের কাহিনি নিয়ে বুদ্ধ-সংকীর্তনের জীবিত লোকধারা চলমান।",
+      "significance": "প্রাচীনতম বাংলা বৌদ্ধ গান আজও কারো কণ্ঠে গভীরভাবে বেঁচে আছে—ধারাবাহিকতার সবচেয়ে জীবন্ত প্রমাণ বাংলাদেশেই।",
+      "details": [
+        "২০২৫ সালে মধ্য-বাংলা পাঠ-কর্মশালা ও প্যারিসের “Charyapada Revival” আয়োজনে পরিবেশনা হয়; নৃত্য-সহযোগী গবেষক-শিল্পী Simon Zakaria।",
+        "ছবিতে সৃজনী তানিয়া ডুগি ও একতারা হাতে গাইছেন।"
+      ],
+      "works": [
+        {
+          "title": "Charyapada Revival",
+          "year": "২০২২-",
+          "medium": "পরিবেশনা ধারাবাহিক",
+          "note": "ইউরোপ-আমেরিকা সফর"
+        },
+        {
+          "title": "বুদ্ধ-সংকীর্তন",
+          "year": "জীবিত ঐতিহ্য",
+          "medium": "লোককীর্তন",
+          "note": "বড়ুয়া/বৌদ্ধগ্রাম"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "audio",
+          "label": "কাহ্নপাদের চর্যা ১০ — সৃজনী তানিয়ার কণ্ঠে",
+          "url": "https://www.youtube.com/watch?v=Vbuc85q1CgI",
+          "note": "YouTube"
+        },
+        {
+          "kind": "audio",
+          "label": "লুইপাদের গান — লাইব্রেরি অডিও",
+          "url": "library.html#aud-charyapada-song",
+          "note": "চর্যাভূমি লাইব্রেরি"
+        },
+        {
+          "kind": "video",
+          "label": "বুদ্ধ কীর্তন — বাংলাদেশি বড়ুয়া পরিবারের পরিবেশনা",
+          "url": "library.html#aud-buddha-kirtan",
+          "note": "লাইব্রেরিতে (YouTube)"
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Daily Star — Srijoni Tania takes Charyapada on Europe tour",
+          "url": "https://www.thedailystar.net/entertainment/theatre-arts/news/srijoni-tania-takes-charyapada-europe-tour-3976721"
+        },
+        {
+          "label": "South Asia Institute Chicago — Caryapadera punarjagarana",
+          "url": "https://www.saichicago.org/calendar/renaissance-carypadra-punarjgaraa"
+        }
+      ],
+      "libraryIds": [
+        "aud-charyapada-song",
+        "aud-buddha-kirtan"
+      ],
+      "aliases": [
+        "Srijoni Tania",
+        "সৃজনী তানিয়া",
+        "Charyapada Revival",
+        "বুদ্ধ কীর্তন",
+        "চর্যাগান"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Sadhika_Srijoni_Tania.jpg/1280px-Sadhika_Srijoni_Tania.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Sadhika_Srijoni_Tania.jpg",
+        "captionBn": "সাধিকা সৃজনী তানিয়া ডুগি ও একতারা বাজিয়ে গাইছেন, বাংলাদেশ।",
+        "credit": "Bhabangara Foundation",
+        "license": "CC BY-SA 4.0",
+        "alt": "একতারা হাতে গাইছেন এক নারী লোকশিল্পী",
+        "objectPosition": "50% 35%",
+        "type": "performance",
+        "file": "Sadhika Srijoni Tania.jpg",
+        "width": 3027,
+        "height": 2249,
+        "transform": "scale(1.85)",
+        "transformOrigin": "24% 68%"
+      }
+    },
+    {
+      "id": "rahul-sankrityayan",
+      "kind": "person",
+      "titleBn": "রাহুল সাংকৃত্যায়ন",
+      "titleEn": "Rahul Sankrityayan",
+      "creatorBn": "রাহুল সাংকৃত্যায়ন (কেদারনাথ পাণ্ডে)",
+      "creatorEn": "Rahul Sankrityayan",
+      "roles": [
+        "পণ্ডিত",
+        "ভ্রমণকারী",
+        "লেখক",
+        "সংস্কৃত পাণ্ডুলিপি উদ্ধারকারী"
+      ],
+      "region": "indian",
+      "period": "modern",
+      "years": "১৮৯৩–১৯৬৩; তিব্বত অভিযান ১৯২৯–১৯৩৮",
+      "yearSort": 1929,
+      "language": "হিন্দি · সংস্কৃত · তিব্বতি · পালি",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "তিব্বতের মঠ থেকে হৃত সংস্কৃত বৌদ্ধ পাণ্ডুলিপির ছবি তুলে উদ্ধার; বৌদ্ধ সংস্কৃতি রচনা",
+      "characters": [
+        "ধর্মকীর্তি প্রমুখ ভারতীয় বৌদ্ধাচার্য (গ্রন্থ-বিষয়)"
+      ],
+      "featuredWork": "তিব্বত পাণ্ডুলিপি অভিযান ও “বৌদ্ধ সংস্কৃতি”",
+      "relationType": "buddhist-creator",
+      "summary": "ভোজপুরী সন্ন্যাসী থেকে বৌদ্ধ ভিক্ষু হয়ে সবশেষে মার্কসবাদী পণ্ডিত—রাহুল সাংকৃত্যায়ন চারবার তিব্বতি মঠে অভিযান চালিয়ে ভারতে হারিয়ে যাওয়া সংস্কৃত বৌদ্ধ গ্রন্থের হাজার হাজার পৃষ্ঠার ছবি ভারতে এনেছিলেন। তাঁর ধর্মকীর্তি-সম্পাদনা পৃথিবীর বৌদ্ধ যুক্তিবিদ্যা-চর্চা পাল্টে দেয়।",
+      "significance": "না থাকলে ভারতীয় বৌদ্ধ দর্শনের বড় অংশ আর কখনো পড়াই যেত না; আধুনিক বৌদ্ধগ্রন্থ উদ্ধারের সবচেয়ে বীরত্বপূর্ণ অধ্যায়।",
+      "details": [
+        "তিনি সিলোনে (শ্রীলঙ্কা) ভিক্ষু-দীক্ষা নিয়ে “রাহুল” নাম গ্রহণ করেন।",
+        "ছবিতে দার্জিলিংয়ে তাঁর আবক্ষ মূর্তি দেখানো হয়েছে।"
+      ],
+      "works": [
+        {
+          "title": "বৌদ্ধ সংস্কৃতি",
+          "year": "১৯৫০-এর দশক",
+          "medium": "রচনা-সংকলন",
+          "note": "হিন্দি"
+        },
+        {
+          "title": "প্রমাণবার্ত্তিক-ভাষ্য সম্পাদনা",
+          "year": "১৯৪০-এর দশক",
+          "medium": "সম্পাদনা",
+          "note": "ধর্মকীর্তি"
+        },
+        {
+          "title": "\"ভলগা থেকে গঙ্গা\"",
+          "year": "১৯৪৪",
+          "medium": " ঐতিহাসিক গল্পগ্রন্থ",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "“বৌদ্ধ সংস্কৃতি” — PDF",
+          "url": "https://archive.org/download/in.gov.ignca.4745/4745_text.pdf",
+          "note": "Internet Archive"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে তাঁর বই",
+          "url": "library.html#lib-sankrityayan-sanskriti",
+          "note": "চর্যাভূমি লাইব্রেরি"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Internet Archive — Bauddha Sanskriti",
+          "url": "https://archive.org/details/in.gov.ignca.4745"
+        }
+      ],
+      "libraryIds": [
+        "lib-sankrityayan-sanskriti",
+        "lib-bauddha-tantra-hindi"
+      ],
+      "aliases": [
+        "Rahul Sankrityayan",
+        "রাহুল",
+        "তিব্বত পাণ্ডুলিপি",
+        "বৌদ্ধ সংস্কৃতি"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Rahul_Sankrityayan_bust_Darjeeling.JPG/500px-Rahul_Sankrityayan_bust_Darjeeling.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Rahul_Sankrityayan_bust_Darjeeling.JPG",
+        "captionBn": "দার্জিলিংয়ে রাহুল সাংকৃত্যায়নের আবক্ষ মূর্তি।",
+        "credit": "Bodhisattwa",
+        "license": "CC BY-SA 3.0",
+        "alt": "রাহুল সাংকৃত্যায়নের মূর্তির ছবি",
+        "objectPosition": "50% 35%",
+        "type": "sculpture",
+        "file": "Rahul_Sankrityayan_bust_Darjeeling.JPG",
+        "width": 2441,
+        "height": 2265
+      }
+    },
+    {
+      "id": "br-ambedkar-buddha-dhamma",
+      "kind": "person",
+      "titleBn": "ড. বি. আর. অম্বেডকর",
+      "titleEn": "B. R. Ambedkar",
+      "creatorBn": "ড. ভীমরাও রামজি অম্বেডকর",
+      "creatorEn": "B. R. Ambedkar",
+      "roles": [
+        "সংবিধান প্রণেতা",
+        "লেখক",
+        "নবযান বৌদ্ধ আন্দোলনের প্রবক্তা"
+      ],
+      "region": "indian",
+      "period": "modern",
+      "years": "১৮৯১–১৯৫৬; ধর্মান্তর ১৪ অক্টোবর ১৯৫৬",
+      "yearSort": 1956,
+      "language": "ইংরেজি · মারাঠি · হিন্দি",
+      "categories": [
+        "literature",
+        "person",
+        "quote-check"
+      ],
+      "buddhistSubject": "“The Buddha and His Dhamma”; লাখো দলিতের বৌদ্ধধর্ম গ্রহণ",
+      "characters": [
+        "গৌতম বুদ্ধ"
+      ],
+      "featuredWork": "The Buddha and His Dhamma",
+      "relationType": "buddhist-creator",
+      "summary": "ভারতীয় সংবিধানের প্রধান স্থপতি অম্বেডকর দীর্ঘ বিচার-বিবেচনা করে ১৯৫৬ সালের ১৪ অক্টোবর নাগপুরে লাখো অনুসারীসহ বৌদ্ধধর্ম গ্রহণ করেন। মৃত্যুর পর প্রকাশিত “The Buddha and His Dhamma” নবযান বৌদ্ধধর্মের ভিত্তিগ্রন্থ।",
+      "significance": "আধুনিক যুগে বৌদ্ধধর্মের সবচেয়ে বড় সামাজিক-মুক্তির আন্দোলনের নেতা—বুদ্ধকে তিনি দেখেছিলেন প্রজ্ঞা, করুণা ও সাম্যের শিক্ষক হিসেবে।",
+      "details": [
+        "১৯৫৬ সালে BBC-কে দেওয়া বক্তৃতায় তিনি বৌদ্ধধর্ম বেছে নেওয়ার কারণ হিসেবে প্রজ্ঞা, করুণা ও সমতার সমন্বয়ের কথা বলেন।",
+        "বাংলার সঙ্গে তাঁর সংযোগ: ১৯৪৬ সালে যোগেন্দ্রনাথ মণ্ডলের উদ্যোগে তিনি বাংলা থেকে গণপরিষদে নির্বাচিত হন।"
+      ],
+      "works": [
+        {
+          "title": "The Buddha and His Dhamma",
+          "year": "১৯৫৭ (মরণোত্তর)",
+          "medium": "গ্রন্থ",
+          "note": ""
+        },
+        {
+          "title": "Why I like Buddhism (BBC talk)",
+          "year": "১৯৫৬",
+          "medium": "বেতার-বক্তৃতা",
+          "note": ""
+        }
+      ],
+      "quote": {
+        "textBn": "আমি বুদ্ধের ধম্মকে সর্বোত্তম মনে করি।",
+        "textOriginal": "I regard the Buddha’s Dhamma to be the best.",
+        "attribution": "The Buddha and His Dhamma, ভূমিকা",
+        "status": "verified",
+        "caution": "মূল গ্রন্থের ভূমিকা থেকে যাচাইকৃত।"
+      },
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "The Buddha and His Dhamma — সম্পূর্ণ পাঠ",
+          "url": "https://archive.org/details/in.gov.ignca.15980",
+          "note": "Internet Archive (IGNCA)"
+        },
+        {
+          "kind": "pdf",
+          "label": "Dr. Babasaheb Ambedkar: Writings and Speeches, খণ্ড ১১",
+          "url": "https://archive.org/details/PARI.dr-babasaheb-ambedkar-vol-11-the-buddha-and-his-dhamma",
+          "note": "Internet Archive (PARI)"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Internet Archive — The Buddha and His Dhamma",
+          "url": "https://archive.org/details/in.gov.ignca.15980"
+        },
+        {
+          "label": "Internet Archive — Writings and Speeches Vol. 11",
+          "url": "https://archive.org/details/PARI.dr-babasaheb-ambedkar-vol-11-the-buddha-and-his-dhamma"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "B. R. Ambedkar",
+        "Ambedkar",
+        "অম্বেডকর",
+        "Buddha and His Dhamma",
+        "নবযান"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Dr._Bhimrao_Ambedkar.jpg/500px-Dr._Bhimrao_Ambedkar.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Dr._Bhimrao_Ambedkar.jpg",
+        "captionBn": "ড. বি. আর. অম্বেডকরের প্রতিকৃতি।",
+        "credit": "অজ্ঞাত",
+        "license": "Public domain",
+        "alt": "অম্বেডকরের ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Dr._Bhimrao_Ambedkar.jpg",
+        "width": 1229,
+        "height": 1600
+      }
+    },
+    {
+      "id": "ashvaghosha-buddhacharita",
+      "kind": "person",
+      "titleBn": "অশ্বঘোষ",
+      "titleEn": "Ashvaghosha",
+      "creatorBn": "অশ্বঘোষ",
+      "creatorEn": "Aśvaghoṣa",
+      "roles": [
+        "মহাকবি",
+        "নাট্যকার",
+        "বৌদ্ধাচার্য"
+      ],
+      "region": "ancient-world",
+      "period": "ancient",
+      "years": "আনু. প্রথম–দ্বিতীয় শতক খ্রি.",
+      "yearSort": 100,
+      "language": "সংস্কৃত",
+      "categories": [
+        "literature",
+        "poetry-drama",
+        "person"
+      ],
+      "buddhistSubject": "বুদ্ধের জীবন নিয়ে সংস্কৃত মহাকাব্য “বুদ্ধচরিত”",
+      "characters": [
+        "সিদ্ধার্থ",
+        "যশোধরা",
+        "শুদ্ধোদন"
+      ],
+      "featuredWork": "বুদ্ধচরিত",
+      "relationType": "buddhist-creator",
+      "summary": "ভারতীয় সাহিত্যের ভোরের মহাকবি অশ্বঘোষের “বুদ্ধচরিত” সিদ্ধার্থের জন্ম থেকে বুদ্ধত্বলাভ পর্যন্ত জীবনের সবচেয়ে পুরনো পূর্ণাঙ্গ কাব্যরূপ। সংস্কৃতে আংশিক পাওয়া গেলেও তিব্বতি ও চীনা অনুবাদে পুরো গ্রন্থ বেঁচে আছে।",
+      "significance": "বিশ্বসাহিত্যে বুদ্ধজীবনীর আদি মহাকাব্য—এডউইন আর্নল্ড থেকে বাংলার মঞ্চ পর্যন্ত সবার উৎসধারার একটা শাখা এখানে।",
+      "details": [
+        "তাঁর “সৌন্দরনন্দ” বুদ্ধের সৎভাই নন্দের দীক্ষা নিয়ে আরেকটি বিখ্যাত কাব্য।",
+        "ছবিতে ভিয়েতনামের আঠারো শতকের অশ্বঘোষ মূর্তি; সমকালীন কোনো চিত্র নেই।"
+      ],
+      "works": [
+        {
+          "title": "বুদ্ধচরিত",
+          "year": "১-২য় শতক",
+          "medium": "মহাকাব্য",
+          "note": "বুদ্ধজীবন"
+        },
+        {
+          "title": "সৌন্দরনন্দ",
+          "year": "১-২য় শতক",
+          "medium": "কাব্য",
+          "note": "নন্দের কাহিনি"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "বুদ্ধচরিত — সংস্কৃত পাঠ (সর্গ ১–৫)",
+          "url": "https://archive.org/download/in.ernet.dli.2015.312642/2015.312642.Buddha-Charita_text.pdf",
+          "note": "Internet Archive"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে বুদ্ধচরিত",
+          "url": "library.html#lib-buddha-charita-sanskrit",
+          "note": "চর্যাভূমি লাইব্রেরি"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Clay Sanskrit Library — Buddhacharita",
+          "url": "https://claysanskritlibrary.org/volumes/life-of-the-buddha/"
+        },
+        {
+          "label": "Internet Archive — Buddha Charita",
+          "url": "https://archive.org/details/in.ernet.dli.2015.312642"
+        }
+      ],
+      "libraryIds": [
+        "lib-buddha-charita-sanskrit"
+      ],
+      "aliases": [
+        "Ashvaghosha",
+        "Aśvaghoṣa",
+        "Buddhacharita",
+        "বুদ্ধচরিত"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Asvaghesa,_Tay_Phuong_pagoda,_Ha_Tay_province,_1794_AD,_lacquered_wood_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi,_Vietnam_-_DSC05064.JPG/500px-Asvaghesa,_Tay_Phuong_pagoda,_Ha_Tay_province,_1794_AD,_lacquered_wood_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi,_Vietnam_-_DSC05064.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Asvaghesa,_Tay_Phuong_pagoda,_Ha_Tay_province,_1794_AD,_lacquered_wood_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi,_Vietnam_-_DSC05064.JPG",
+        "captionBn": "ভিয়েতনামের ১৭৯৪ সালের অশ্বঘোষ মূর্তি (কাঠ)—প্রেক্ষাপটচিত্র।",
+        "credit": "Daderot",
+        "license": "CC0",
+        "alt": "কাঠের খোদাই করা অশ্বঘোষ মূর্তি",
+        "objectPosition": "50% 0%",
+        "type": "sculpture",
+        "file": "Asvaghesa, Tay Phuong pagoda, Ha Tay province, 1794 AD, lacquered wood - Vietnam National Museum of Fine Arts - Hanoi, Vietnam - DSC05064.JPG",
+        "width": 3648,
+        "height": 5472
+      }
+    },
+    {
+      "id": "shantideva",
+      "kind": "person",
+      "titleBn": "শান্তিদেব",
+      "titleEn": "Shantideva",
+      "creatorBn": "শান্তিদেব",
+      "creatorEn": "Śāntideva",
+      "roles": [
+        "কবি",
+        "মাধ্যমিক আচার্য"
+      ],
+      "region": "ancient-world",
+      "period": "medieval",
+      "years": "আনু. সপ্তম–অষ্টম শতক",
+      "yearSort": 700,
+      "language": "সংস্কৃত",
+      "categories": [
+        "poetry-drama",
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "বোধিসত্ত্ব-জীবনচর্যার কাব্য “বোধিচর্যাবতার”",
+      "characters": [
+        "বোধিসত্ত্ব (আদর্শ চরিত্র)"
+      ],
+      "featuredWork": "বোধিচর্যাবতার",
+      "relationType": "buddhist-creator",
+      "summary": "নালন্দার আচার্য শান্তিদেবের “বোধিচর্যাবতার” সংস্কৃত সাহিত্যের সবচেয়ে ভালোবাসা পাওয়া ধর্মীয় কাব্য—অপরের সুখে নিজেকে বিলিয়ে দেওয়ার বোধিসত্ত্ব-ব্রতের দশ অধ্যায়। দালাই লামা বারংবার এটিকে তাঁর প্রিয় গ্রন্থ বলেছেন।",
+      "significance": "বাঙালি পণ্ডিতদের অনেকে তাঁকে চর্যাপদের ভুসুকুপাদের সঙ্গে অভিন্ন মনে করেন (বিতর্কিত)—বাংলা বৌদ্ধ ঐতিহ্যের সঙ্গে সম্ভাব্য সরাসরি সুতো।",
+      "details": [
+        "ভুসুকুপা = শান্তিদেব সমীকরণটি মুহম্মদ শহীদুল্লাহসহ অনেকে সমর্থন করেছেন, তবে নিশ্চিত প্রমাণ নেই—তাই “সম্ভাব্য/বিতর্কিত” বলা হয়েছে।",
+        "“যতদিন আকাশ থাকবে, যতদিন জীবজগৎ থাকবে, ততদিন আমি থাকি জগতের দুঃখ মোচনে”—শেষ অধ্যায়ের বিখ্যাত প্রতিজ্ঞার ভাবানুবাদ।"
+      ],
+      "works": [
+        {
+          "title": "বোধিচর্যাবতার",
+          "year": "৮ম শতক",
+          "medium": "কাব্য-শাস্ত্র",
+          "note": "দশ অধ্যায়"
+        },
+        {
+          "title": "শিক্ষাসমুচ্চয়",
+          "year": "৮ম শতক",
+          "medium": "সংকলন",
+          "note": "বোধিসত্ত্ব-শিক্ষা"
+        }
+      ],
+      "quote": {
+        "textBn": "যতদিন আকাশ রহিবে, যতদিন জীবজগৎ রহিবে, ততদিন যেন আমিও রহি জগতের দুঃখ মোচন করিতে।",
+        "textOriginal": "ākāśasya sthitiḥ yāvad yāvat sattvāḥ sthitāḥ… (Bodhicaryāvatāra 10.55, ভাবানুবাদ)",
+        "attribution": "বোধিচর্যাবতার, দশম অধ্যায়",
+        "status": "textual",
+        "caution": "সংস্কৃত মূল থেকে ভাবানুবাদ; আক্ষরিক অনুবাদ নয়।"
+      },
+      "media": [
+        {
+          "kind": "audio",
+          "label": "বোধিচর্যাবতার নিয়ে আলোচনা শুনুন",
+          "url": "https://archive.org/details/ATalkOnTheBodhicaryavatara",
+          "note": "Internet Archive"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে সাধনামালা",
+          "url": "library.html#lib-sadhana-mala",
+          "note": "একই যুগের সাধনা-পরম্পরা"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Internet Archive — A talk on the Bodhicaryavatara",
+          "url": "https://archive.org/details/ATalkOnTheBodhicaryavatara"
+        },
+        {
+          "label": "Wikimedia Commons — Shantideva",
+          "url": "https://commons.wikimedia.org/wiki/File:Shantideva.jpg"
+        }
+      ],
+      "libraryIds": [
+        "lib-sadhana-mala"
+      ],
+      "aliases": [
+        "Shantideva",
+        "বোধিচর্যাবতার",
+        "Bodhicaryavatara",
+        "ভুসুকুপা"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Shantideva.jpg/500px-Shantideva.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Shantideva.jpg",
+        "captionBn": "শান্তিদেবের ঐতিহ্যবাহী তিব্বতি চিত্রণ।",
+        "credit": "অজ্ঞাত",
+        "license": "Public domain",
+        "alt": "শান্তিদেবকে ভিক্ষু রূপে দেখানো থাংকা-শৈলীর ছবি",
+        "objectPosition": "50% 20%",
+        "type": "artwork",
+        "file": "Shantideva.jpg",
+        "width": 584,
+        "height": 651
+      }
+    },
+    {
+      "id": "milarepa",
+      "kind": "person",
+      "titleBn": "জেৎসুন মিলারেপা",
+      "titleEn": "Jetsun Milarepa",
+      "creatorBn": "মিলারেপা",
+      "creatorEn": "Milarepa",
+      "roles": [
+        "কবি",
+        "যোগী",
+        "গীতিকার"
+      ],
+      "region": "ancient-world",
+      "period": "medieval",
+      "years": "আনু. ১০৪০/৫২–১১২৩/৩৫",
+      "yearSort": 1040,
+      "language": "তিব্বতি",
+      "categories": [
+        "poetry-drama",
+        "music",
+        "person"
+      ],
+      "buddhistSubject": "“মিলারেপার লক্ষ গান”—গুহাজীবনের স্বকীয় আধ্যাত্মিক গীতিকা",
+      "characters": [
+        "মিলারেপা",
+        "মারপা (গুরু)"
+      ],
+      "featuredWork": "মিলারেপার গীতিসংগ্রহ (মগুর)",
+      "relationType": "buddhist-creator",
+      "summary": "হত্যাকারী থেকে হিমালয়ের গুহায় সাধকে রূপ নেওয়া তিব্বতের সবচেয়ে প্রিয় সন্ত-কবি মিলারেপার আত্মজৈবনিক গানগুলো তিব্বতি সাহিত্যের প্রাণ। গাওয়ার জন্য রচিত এই দোহা-গীতি চর্যাপদের সহজিয়া গীতিধারার সমান্তরাল আন্তর্জাতিক নমুনা।",
+      "significance": "দোহা-গানের ধারা বাংলা থেকে তিব্বত পর্যন্ত কতটা বিস্তৃত ছিল, মিলারেপা তার জ্বলন্ত উদাহরণ।",
+      "details": [
+        "জন্মসাল ঐতিহ্যভেদে ১০৪০ বা ১০৫২; তাই পরিসর দেওয়া হয়েছে।",
+        "কান ঢেকে গান শোনার ভঙ্গিমায় তাঁর চিত্রণ তিব্বতি শিল্পে আইকনিক।"
+      ],
+      "works": [
+        {
+          "title": "মিলারেপার লক্ষ গান (মিলেই মগুর)",
+          "year": "১১–১২শ শতক ঐতিহ্য",
+          "medium": "গীতিসংগ্রহ",
+          "note": ""
+        },
+        {
+          "title": "জেৎসুনের জীবনী",
+          "year": "পঞ্চদশ শতক সংকলন",
+          "medium": "জীবনী-সাহিত্য",
+          "note": "চাং ন্যোন হেরুকা"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "audio",
+          "label": "লাইব্রেরিতে চর্যাগীতির ধারাবাহিকতা শুনুন",
+          "url": "library.html#aud-charyapada-song",
+          "note": "সমানধর্মী দোহা-গীতি"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Wikimedia Commons — Milarepa থাংকা",
+          "url": "https://commons.wikimedia.org/wiki/File:Bhutanese_painted_thanka_of_Milarepa_(1052-1135),_Late_19th-early_20th_Century,_Dhodeydrag_Gonpa,_Thimphu,_Bhutan.jpg"
+        }
+      ],
+      "libraryIds": [
+        "aud-charyapada-song"
+      ],
+      "aliases": [
+        "Milarepa",
+        "মিলারেপা",
+        "তিব্বতি কবি",
+        "দোহা"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Bhutanese_painted_thanka_of_Milarepa_%281052-1135%29%2C_Late_19th-early_20th_Century%2C_Dhodeydrag_Gonpa%2C_Thimphu%2C_Bhutan.jpg/500px-Bhutanese_painted_thanka_of_Milarepa_(1052-1135),_Late_19th-early_20th_Century,_Dhodeydrag_Gonpa,_Thimphu,_Bhutan.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Bhutanese_painted_thanka_of_Milarepa_(1052-1135),_Late_19th-early_20th_Century,_Dhodeydrag_Gonpa,_Thimphu,_Bhutan.jpg",
+        "captionBn": "উনিশ শতকের শেষভাগের ভুটানি থাংকায় মিলারেপা।",
+        "credit": "অজ্ঞাত",
+        "license": "Public domain",
+        "alt": "রঙিন থাংকা চিত্রে মিলারেপা",
+        "objectPosition": "50% 30%",
+        "type": "artwork",
+        "file": "Bhutanese_painted_thanka_of_Milarepa_(1052-1135),_Late_19th-early_20th_Century,_Dhodeydrag_Gonpa,_Thimphu,_Bhutan.jpg",
+        "width": 1616,
+        "height": 2330
+      }
+    },
+    {
+      "id": "matsuo-basho",
+      "kind": "person",
+      "titleBn": "মাতসুও বাসো",
+      "titleEn": "Matsuo Basho",
+      "creatorBn": "মাতসুও বাসো",
+      "creatorEn": "Matsuo Bashō",
+      "roles": [
+        "হাইকু কবি",
+        "ভ্রমণ-লেখক"
+      ],
+      "region": "international",
+      "period": "medieval",
+      "years": "১৬৪৪–১৬৯৪",
+      "yearSort": 1644,
+      "language": "জাপানি",
+      "categories": [
+        "poetry-drama",
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "জেন অনিত্যতাবোধে গড়া হাইকু; তীর্থপথের ভ্রমণকাব্য",
+      "characters": [
+        "কবি-তীর্থযাত্রী"
+      ],
+      "featuredWork": "ওকু নো হোসোমিচি (সংকীর্ণ উত্তরপথ)",
+      "relationType": "influence",
+      "summary": "হাইকুর সর্বকালের সেরা গুরু বাসোর কবিতায় জেন বৌদ্ধ দর্শনের অনিত্যতা, নীরবতা ও প্রকৃতির ক্ষণিক সৌন্দর্য গভীরভাবে মিশে আছে। “পুরনো পুকুর / ব্যাঙ লাফিয়ে পড়ে / জলধ্বনি” হাইকুটি জেন-মুহূর্তের ধ্রুপদী উদাহরণ।",
+      "significance": "বৌদ্ধ চিন্তা বিশ্বকবিতার ক্ষুদ্রতম রূপকেও কীভাবে গড়ে দিয়েছে, তার সেরা নমুনা।",
+      "details": [
+        "বাসো জেন সাধু বুতচোর কাছে অধ্যয়ন করেছিলেন; তবে নিজেকে ধর্মপ্রচারক নয়, কবি-ভবঘুরে হিসেবেই উপস্থাপন করেছেন।",
+        "তাঁর ভ্রমণকাব্যে মন্দির-তীর্থের পথ ধর্ম ও কাব্য এক হয়ে যায়।"
+      ],
+      "works": [
+        {
+          "title": "ওকু নো হোসোমিচি",
+          "year": "১৭০২ (মরণোত্তর)",
+          "medium": "ভ্রমণকাব্য",
+          "note": ""
+        },
+        {
+          "title": "ফুরুইকে (ব্যাঙ হাইকু)",
+          "year": "১৬৮৬",
+          "medium": "হাইকু",
+          "note": ""
+        }
+      ],
+      "quote": {
+        "textBn": "পুরনো পুকুর—ব্যাঙ লাফিয়ে পড়ে, জলধ্বনি।",
+        "textOriginal": "古池や 蛙飛び込む 水の音",
+        "attribution": "মাতসুও বাসো",
+        "status": "textual",
+        "caution": "জাপানি মূল থেকে বাংলা ভাবানুবাদ।"
+      },
+      "media": [
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে চর্যাপদ — সহজিয়া কবিতার এশীয় পরম্পরা",
+          "url": "library.html#lib-charyagiti-parichay",
+          "note": "তুলনামূলক পাঠ"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Poetry Foundation — Matsuo Basho",
+          "url": "https://www.poetryfoundation.org/poets/basho"
+        }
+      ],
+      "libraryIds": [
+        "lib-charyagiti-parichay"
+      ],
+      "aliases": [
+        "Basho",
+        "হাইকু",
+        "জেন কবিতা",
+        "Matsuo"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Basho_by_Morikawa_Kyoriku_%281656-1715%29.jpg/500px-Basho_by_Morikawa_Kyoriku_(1656-1715).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Basho_by_Morikawa_Kyoriku_(1656-1715).jpg",
+        "captionBn": "মোরিকাওয়া কিয়োরিকুর আঁকা বাসোর প্রতিকৃতি।",
+        "credit": "Morikawa Kyoriku (1656-1715)",
+        "license": "Public domain",
+        "alt": "বসে থাকা জাপানি কবির ঐতিহ্যবাহী অঙ্কন",
+        "objectPosition": "50% 25%",
+        "type": "artwork",
+        "file": "Basho_by_Morikawa_Kyoriku_(1656-1715).jpg",
+        "width": 512,
+        "height": 854
+      }
+    },
+    {
+      "id": "edwin-arnold-light-of-asia",
+      "kind": "person",
+      "titleBn": "এডউইন আর্নল্ড",
+      "titleEn": "Edwin Arnold",
+      "creatorBn": "স্যার এডউইন আর্নল্ড",
+      "creatorEn": "Edwin Arnold",
+      "roles": [
+        "কবি",
+        "সাংবাদিক",
+        "সংস্কৃতজ্ঞ"
+      ],
+      "region": "international",
+      "period": "modern",
+      "years": "১৮৩২–১৯০৪; The Light of Asia ১৮৭৯",
+      "yearSort": 1879,
+      "language": "ইংরেজি",
+      "categories": [
+        "poetry-drama",
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "বুদ্ধের জীবনের আখ্যানকাব্য “The Light of Asia”",
+      "characters": [
+        "সিদ্ধার্থ",
+        "যশোধরা",
+        "সুজাতা"
+      ],
+      "featuredWork": "The Light of Asia",
+      "relationType": "direct",
+      "summary": "ইংরেজ কবি Edwin Arnold-এর “The Light of Asia” (১৮৭৯) ভিক্টোরীয় যুগের পাঠকের কাছে বুদ্ধকে পৌঁছে দেওয়ার সবচেয়ে প্রভাবশালী মাধ্যম। কলকাতায় গিরিশচন্দ্রের “বুদ্ধদেব-চরিত” ও হিমাংশু রায়ের চলচ্চিত্র “Prem Sanyas”—দুটোই এই বই থেকে।",
+      "significance": "একটি ইংরেজি কবিতা কীভাবে বাংলা মঞ্চ ও ভারতীয় চলচ্চিত্রে বুদ্ধ-আখ্যানের ঢেউ তুলল, তা বোঝার চাবি এই বই।",
+      "details": [
+        "প্রকাশের কয়েক দশকে বইটি বিশ্বজুড়ে লাখ লাখ কপি বিক্রি ও বহু ভাষায় অনূদিত হয়।",
+        "পাঠটি পাবলিক ডোমেইনে—সম্পূর্ণ বিনামূল্যে পড়া ও শোনা যায়।"
+      ],
+      "works": [
+        {
+          "title": "The Light of Asia",
+          "year": "১৮৭৯",
+          "medium": "আখ্যানকাব্য",
+          "note": "বুদ্ধজীবন; আট সর্গ"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "pdf",
+          "label": "The Light of Asia — Project Gutenberg (সম্পূর্ণ পাঠ)",
+          "url": "https://www.gutenberg.org/ebooks/8920",
+          "note": "পাবলিক ডোমেইন"
+        },
+        {
+          "kind": "audio",
+          "label": "The Light of Asia — সম্পূর্ণ অডিও পাঠ শুনুন",
+          "url": "https://archive.org/details/The-Light-of-Asia",
+          "note": "Internet Archive · আনন্দজ্যোতি ভিক্ষুর পাঠ"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Project Gutenberg — The Light of Asia",
+          "url": "https://www.gutenberg.org/ebooks/8920"
+        },
+        {
+          "label": "Internet Archive — The Light of Asia অডিও",
+          "url": "https://archive.org/details/The-Light-of-Asia"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Edwin Arnold",
+        "Light of Asia",
+        "বুদ্ধদেব চরিত উৎস"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Picture_of_Edwin_Arnold.jpg/500px-Picture_of_Edwin_Arnold.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Picture_of_Edwin_Arnold.jpg",
+        "captionBn": "এডউইন আর্নল্ডের প্রতিকৃতি।",
+        "credit": "Stereoscopic Co.",
+        "license": "Public domain",
+        "alt": "এডউইন আর্নল্ডের সাদা-কালো ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Picture_of_Edwin_Arnold.jpg",
+        "width": 1117,
+        "height": 1469
+      }
+    },
+    {
+      "id": "hermann-hesse-siddhartha",
+      "kind": "person",
+      "titleBn": "হেরমান হেসে",
+      "titleEn": "Hermann Hesse",
+      "creatorBn": "হেরমান হেসে",
+      "creatorEn": "Hermann Hesse",
+      "roles": [
+        "ঔপন্যাসিক",
+        "কবি",
+        "নোবেল বিজয়ী (১৯৪৬)"
+      ],
+      "region": "international",
+      "period": "modern",
+      "years": "১৮৭৭–১৯৬২; “Siddhartha” ১৯২২",
+      "yearSort": 1922,
+      "language": "জার্মান",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "বুদ্ধের সমকালীন এক ব্রাহ্মণযুবকের বোধি-অন্বেষণ; উপন্যাসে গোতম বুদ্ধ স্বয়ং চরিত্র",
+      "characters": [
+        "সিদ্ধার্থ (কাল্পনিক)",
+        "গোতম বুদ্ধ",
+        "গোবিন্দ"
+      ],
+      "featuredWork": "Siddhartha (সিদ্ধার্থ)",
+      "relationType": "influence",
+      "summary": "হেসের “Siddhartha” বুদ্ধের জীবনী নয়—নায়ক এক কাল্পনিক অনুসন্ধানী, যিনি গোতম বুদ্ধের সঙ্গে সাক্ষাৎ করেও নিজের পথ বেছে নেন। উপন্যাসটি বিংশ শতকের পাশ্চাত্যে বৌদ্ধ ধারণায় ঢোকার সবচেয়ে জনপ্রিয় দরজা।",
+      "significance": "বিশ্বসাহিত্যে বৌদ্ধভাবনার সবচেয়ে বহুলপঠিত উপন্যাস; পড়ার সময় জীবনী-ভেবে ভুল করার বিষয়ে সতর্কতা জরুরি বলে এন্ট্রিতে স্পষ্ট করা হয়েছে।",
+      "details": [
+        "হেসের মা জন্মেছিলেন ভারতে মিশনারি পরিবারে; তাঁর দাদু ছিলেন ভারততত্ত্ববিদ।",
+        "উপন্যাসটির দর্শন বৌদ্ধ, হিন্দু ও আধুনিক মনোবিশ্লেষণের মিশেল—ইতিহাস-গ্রন্থ হিসেবে পড়া ঠিক নয়।"
+      ],
+      "works": [
+        {
+          "title": "Siddhartha",
+          "year": "১৯২২",
+          "medium": "উপন্যাস",
+          "note": "গোতম বুদ্ধ চরিত্ররূপে উপস্থিত"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "Internet Archive-এ Siddhartha ধার নিন",
+          "url": "https://archive.org/details/siddharthaparton0000herm",
+          "note": "কপিরাইটযুক্ত—কন্ট্রোলড লেন্ডিং"
+        },
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে প্রকৃত বুদ্ধজীবনী-পাঠের বই",
+          "url": "library.html#lib-buddha-charita-sanskrit",
+          "note": "বুদ্ধচরিত"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nobel Prize — Hermann Hesse",
+          "url": "https://www.nobelprize.org/prizes/literature/1946/Hesse/facts/"
+        }
+      ],
+      "libraryIds": [
+        "lib-buddha-charita-sanskrit"
+      ],
+      "aliases": [
+        "Hermann Hesse",
+        "Siddhartha novel",
+        "সিদ্ধার্থ উপন্যাস",
+        "জার্মান"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Hermann_Hesse_2.jpg/500px-Hermann_Hesse_2.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Hermann_Hesse_2.jpg",
+        "captionBn": "হেরমান হেসে বই পড়ছেন।",
+        "credit": "অজ্ঞাত আলোকচিত্রী · Dutch National Archives / ANEFO",
+        "license": "CC BY-SA 3.0 nl",
+        "alt": "হেরমান হেসের সাদা-কালো ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Hermann_Hesse_2.jpg",
+        "width": 2530,
+        "height": 3024
+      }
+    },
+    {
+      "id": "anagarika-dharmapala",
+      "kind": "person",
+      "titleBn": "অনাগারিক ধর্মপাল",
+      "titleEn": "Anagarika Dharmapala",
+      "creatorBn": "অনাগারিক ধর্মপাল (Don David Hewavitharana)",
+      "creatorEn": "Anagarika Dharmapala",
+      "roles": [
+        "বৌদ্ধ নবজাগরণের নেতা",
+        "লেখক",
+        "বক্তা"
+      ],
+      "region": "international",
+      "period": "modern",
+      "years": "১৮৬৪–১৯৩৩",
+      "yearSort": 1891,
+      "language": "সিংহলি · ইংরেজি",
+      "categories": [
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "মহাবোধি সোসাইটি প্রতিষ্ঠা; বুদ্ধগয়া পুনরুদ্ধার আন্দোলন; বিশ্বধর্ম সংসদে বৌদ্ধ প্রতিনিধিত্ব",
+      "characters": [
+        "বুদ্ধ (ঐতিহ্য-নায়ক)"
+      ],
+      "featuredWork": "মহাবোধি সোসাইটি (১৮৯১)",
+      "relationType": "buddhist-creator",
+      "summary": "শ্রীলঙ্কান বৌদ্ধ নবজাগরণের “সিংহ” ধর্মপাল কলকাতায় মহাবোধি সোসাইটি প্রতিষ্ঠা করে বুদ্ধগয়ার মহাবোধি মন্দির বৌদ্ধদের ব্যবস্থাপনায় ফেরানোর আন্দোলন শুরু করেন। ১৮৯৩ সালের শিকাগো বিশ্বধর্ম সংসদে তিনি বৌদ্ধধর্মের মুখপাত্র ছিলেন।",
+      "significance": "আধুনিক বিশ্বে বৌদ্ধধর্মের জনসম্মুখ পুনরুত্থানের নির্মাতা; তাঁর কলকাতা-কেন্দ্রিক কাজ বাংলার বৌদ্ধ সমাজকেও জাগিয়ে তোলে।",
+      "details": [
+        "তাঁর প্রতিষ্ঠিত মহাবোধি সোসাইটির কলকাতা কেন্দ্র ও জার্নাল বাঙালি বৌদ্ধদের সংগঠিত হতে সাহায্য করে।",
+        "“অনাগারিক” অর্থ গৃহত্যাগী গৃহী—ভিক্ষু নন, তবু ব্রহ্মচর্যে জীবন কাটান; শেষ বয়সে ভিক্ষু-দীক্ষা নেন।"
+      ],
+      "works": [
+        {
+          "title": "মহাবোধি সোসাইটি",
+          "year": "১৮৯১",
+          "medium": "প্রতিষ্ঠান",
+          "note": "কলকাতা সদর"
+        },
+        {
+          "title": "The Mahā Bodhi পত্রিকা",
+          "year": "১৯২০-",
+          "medium": "সাময়িকী",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "লাইব্রেরিতে গয়া ও বুদ্ধগয়ার ইতিহাস",
+          "url": "library.html#lib-barua-gaya",
+          "note": "Benimadhab Barua (PDF)"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Wikimedia Commons — Anagarika Dharmapala",
+          "url": "https://commons.wikimedia.org/wiki/File:Anagarika_Dharmapala.jpg"
+        }
+      ],
+      "libraryIds": [
+        "lib-barua-gaya"
+      ],
+      "aliases": [
+        "Dharmapala",
+        "অনাগারিক",
+        "মহাবোধি সোসাইটি",
+        "বুদ্ধগয়া আন্দোলন"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Dharmapala_color.jpg/500px-Dharmapala_color.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Dharmapala_color.jpg",
+        "captionBn": "অনাগারিক ধর্মপালের প্রতিকৃতি।",
+        "credit": "Mahabodhi Society",
+        "license": "Public domain",
+        "alt": "সাদা পোশাকে ধর্মপালের রঙিন প্রতিকৃতি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Dharmapala_color.jpg",
+        "width": 1480,
+        "height": 2098
+      }
+    },
+    {
+      "id": "albert-einstein-quote-check",
+      "kind": "quotation-check",
+      "titleBn": "আলবার্ট আইনস্টাইন — উক্তিযাচাই",
+      "titleEn": "Albert Einstein — The Buddhism Quotation Check",
+      "creatorBn": "আলবার্ট আইনস্টাইন",
+      "creatorEn": "Albert Einstein",
+      "roles": [
+        "পদার্থবিজ্ঞানী"
+      ],
+      "region": "international",
+      "period": "modern",
+      "years": "১৮৭৯–১৯৫৫; প্রবন্ধ ১৯৩০",
+      "yearSort": 1930,
+      "language": "জার্মান · ইংরেজি",
+      "categories": [
+        "quote-check",
+        "person"
+      ],
+      "buddhistSubject": "“আধুনিক বিজ্ঞানের প্রয়োজন মেটাতে পারে এমন ধর্ম হলে তা বৌদ্ধধর্মই হবে”—ভাইরাল উক্তির সত্যতা যাচাই",
+      "characters": [
+        "—"
+      ],
+      "featuredWork": "Religion and Science (১৯৩০)",
+      "relationType": "misattributed",
+      "summary": "ইন্টারনেটে ছড়ানো “আধুনিক বিজ্ঞানের সঙ্গে তাল মেলাতে পারে এমন একমাত্র ধর্ম বৌদ্ধধর্ম”—এই উক্তি আইনস্টাইনের নামে চললেও তাঁর কোনো রচনায় এই বাক্য নেই। প্রকৃত যাচাইযোগ্য লেখা: ১৯৩০ সালের “Religion and Science” প্রবন্ধে তিনি লিখেছেন, মহাজাগতিক ধর্মীয় অনুভূতি (cosmic religious feeling) “বৌদ্ধধর্মে অনেক প্রবলতর” রূপে প্রকাশিত হয়েছে।",
+      "significance": "ব্যবহারকারীর নাম-উল্লিখিত ব্যক্তি—এই এন্ট্রি বিখ্যাত ভুয়া উক্তিটি ঠিক করে প্রকৃত বক্তব্যটি দেখায়; ভুল তথ্য না ছড়ানোর জন্যই আর্কাইভে অন্তর্ভুক্ত।",
+      "details": [
+        "ভাইরাল বাক্যটি সম্ভবত ধর্মপাল-আলোচনার পরবর্তী পরিভাষা থেকে ধীরে ধীরে তৈরি হওয়া পরিভাষিত রূপ; প্রাথমিক উৎস মেলেনি।",
+        "আইনস্টাইন কোনো নির্দিষ্ট ধর্মের অনুসারী ছিলেন না—তাঁর ধর্মচিন্তা ছিল স্পিনোজীয় “মহাজাগতিক ধর্মবোধ”।"
+      ],
+      "works": [
+        {
+          "title": "Religion and Science",
+          "year": "১৯৩০",
+          "medium": "প্রবন্ধ",
+          "note": "নিউইয়র্ক টাইমস ম্যাগাজিন"
+        }
+      ],
+      "quote": {
+        "textBn": "ভাইরাল রূপ: “আধুনিক বিজ্ঞানীয় প্রয়োজন মেটাতে সক্ষম কোনো ধর্ম থাকলে তা হবে বৌদ্ধধর্ম।” — এই বাক্য আইনস্টাইনের নয়।",
+        "textOriginal": "Verified (1930): the cosmic religious feeling appears “much stronger in Buddhism” than in the monotheistic religions.",
+        "attribution": "Albert Einstein, “Religion and Science”, 1930",
+        "status": "misattributed",
+        "caution": "আসল যাচাইকৃত বক্তব্যটি ওপরে ইংরেজিতে দেওয়া হলো; বাংলায় ছড়ানো সংস্করণটি মিথ্যা আরোপণ।"
+      },
+      "media": [
+        {
+          "kind": "book",
+          "label": "“Religion and Science” (১৯৩০) — মূল পাঠ পড়ুন",
+          "url": "https://sacred-texts.com/aor/einstein/einsci.htm",
+          "note": "Internet Sacred Text Archive · সম্পূর্ণ ইংরেজি পাঠ"
+        }
+      ],
+      "sources": [
+        {
+          "label": "The New York Times — Religion and Science (9 Nov 1930)",
+          "url": "https://www.nytimes.com/1930/11/09/archives/religion-and-science.html"
+        },
+        {
+          "label": "University of Chicago Press — Buddhism and Science: ছয়টি বিষয়",
+          "url": "https://pressblog.uchicago.edu/2008/11/25/six-things-you-may-not-know-about-buddhism-and-science.html"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Albert Einstein",
+        "Albert Einstein Buddhism quote",
+        "আইনস্টাইন উক্তি",
+        "মিথ্যা আরোপ"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Albert_Einstein_Head_cleaned.jpg/500px-Albert_Einstein_Head_cleaned.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_Head_cleaned.jpg",
+        "captionBn": "আলবার্ট আইনস্টাইনের প্রতিকৃতি।",
+        "credit": "Oren Jack Turner",
+        "license": "Public domain",
+        "alt": "আইনস্টাইনের বিখ্যাত মুখের ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Albert_Einstein_Head_cleaned.jpg",
+        "width": 4530,
+        "height": 5607
+      }
+    },
+    {
+      "id": "prem-sanyas-1925",
+      "kind": "work",
+      "titleBn": "“প্রেম সন্ন্যাস” — হিমাংশু রায় ও ফ্রানৎস অস্টেন",
+      "titleEn": "Prem Sanyas / The Light of Asia (1925)",
+      "creatorBn": "ফ্রানৎস অস্টেন (পরিচালক) · হিমাংশু রায় (বুদ্ধের ভূমিকায়) · সীতা দেবী",
+      "creatorEn": "Franz Osten · Himanshu Rai · Seeta Devi",
+      "roles": [
+        "পরিচালক",
+        "অভিনেতা",
+        "অভিনেত্রী"
+      ],
+      "region": "indian",
+      "period": "modern",
+      "years": "১৯২৫",
+      "yearSort": 1925,
+      "language": "নির্বাক চলচ্চিত্র",
+      "categories": [
+        "film"
+      ],
+      "buddhistSubject": "Edwin Arnold-এর বই অবলম্বনে সিদ্ধার্থের জীবন; ভারতীয় অভিনেতার বুদ্ধ-চরিত্রায়ণ",
+      "characters": [
+        "সিদ্ধার্থ (হিমাংশু রায়)",
+        "গোপা (সীতা দেবী)"
+      ],
+      "featuredWork": "Prem Sanyas",
+      "relationType": "portrayal",
+      "summary": "ভারত-জার্মান যৌথ প্রযোজনার নির্বাক ছবি “প্রেম সন্ন্যাস” (The Light of Asia, ১৯২৫) বুদ্ধজীবনের অন্যতম প্রাচীন চলচ্চিত্ররূপ। বুদ্ধের ভূমিকায় বাঙালি নির্মাতা-অভিনেতা হিমাংশু রায় ছবিটিকে ইউরোপে সমাদর এনে দেয়; এটি এখন ইন্টারনেট আর্কাইভে দেখা যায়।",
+      "significance": "বুদ্ধের ভূমিকায় অভিনয় করা প্রথম প্রজন্মের তারকা একজন বাঙালি—চলচ্চিত্র ইতিহাসে গর্বের অধ্যায়।",
+      "details": [
+        "ছবিটি পরবর্তীতে “হিমাংশু রায়ের বুদ্ধলীলা” ঐতিহ্যের অংশ হিসেবে সংরক্ষিত।"
+      ],
+      "works": [
+        {
+          "title": "Prem Sanyas",
+          "year": "১৯২৫",
+          "medium": "নির্বাক চলচ্চিত্র",
+          "note": "The Light of Asia অবলম্বনে"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "video",
+          "label": "“প্রেম সন্ন্যাস” — পুরো ছবি দেখুন",
+          "url": "https://archive.org/details/prem-sanyas_1928",
+          "note": "Internet Archive · পাবলিক-আর্কাইভ অনুলিপি"
+        }
+      ],
+      "sources": [
+        {
+          "label": "BFI — The Light of Asia/Prem Sanyas",
+          "url": "https://www.bfi.org.uk/film/3973b9b3-0384-5987-830a-15c16a7c4906/prem-sanyas"
+        },
+        {
+          "label": "Internet Archive — Prem Sanyas",
+          "url": "https://archive.org/details/prem-sanyas_1928"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Prem Sanyas",
+        "প্রেম সন্ন্যাস",
+        "Himanshu Rai",
+        "Seeta Devi",
+        "Light of Asia film"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Seeta_Devi_and_Himansu_Rai_in_Prem_Sanyas_%282%29.jpg/500px-Seeta_Devi_and_Himansu_Rai_in_Prem_Sanyas_(2).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Seeta_Devi_and_Himansu_Rai_in_Prem_Sanyas_(2).jpg",
+        "captionBn": "“প্রেম সন্ন্যাস” (১৯২৫) ছবিতে সীতা দেবী ও হিমাংশু রায়।",
+        "credit": "অজ্ঞাত",
+        "license": "Public domain",
+        "alt": "সাদা-কালো নির্বাক চলচ্চিত্রের স্থিরচিত্রে রাজকীয় পোশাকে দুই চরিত্র",
+        "objectPosition": "50% 25%",
+        "type": "film-still",
+        "file": "Seeta_Devi_and_Himansu_Rai_in_Prem_Sanyas_(2).jpg",
+        "width": 687,
+        "height": 1071
+      }
+    },
+    {
+      "id": "nicholas-roerich",
+      "kind": "person",
+      "titleBn": "নিকোলাই রেরিখ",
+      "titleEn": "Nicholas Roerich",
+      "creatorBn": "নিকোলাই রেরিখ",
+      "creatorEn": "Nicholas Roerich",
+      "roles": [
+        "চিত্রশিল্পী",
+        "লেখক",
+        "অভিযাত্রী"
+      ],
+      "region": "international",
+      "period": "modern",
+      "years": "১৮৭৪–১৯৪৭; “Buddha the Conqueror” ১৯২৫",
+      "yearSort": 1925,
+      "language": "রুশ · ইংরেজি",
+      "categories": [
+        "art",
+        "person"
+      ],
+      "buddhistSubject": "হিমালয়-অভিযানের পথে বুদ্ধ, মৈত্রেয় ও তিব্বতি বৌদ্ধ জগতের চিত্রমালা",
+      "characters": [
+        "বুদ্ধ",
+        "মৈত্রেয়"
+      ],
+      "featuredWork": "Buddha the Conqueror",
+      "relationType": "direct",
+      "summary": "রাশিয়ান শিল্পী Nicholas Roerich মধ্য-এশিয়া অভিযানের পথে “Banners of the East” ধারাবাহিকে বুদ্ধকে “বিজয়ী” রূপে আঁকেন—পাহাড়ের গুহায় ধ্যানমগ্ন বুদ্ধ, ব্যাকগ্রাউন্ডে যুদ্ধক্ষেত্র। হিমালয়ের বৌদ্ধ সংস্কৃতি তাঁর শিল্পজীবনের কেন্দ্রীয় অভিজ্ঞতা।",
+      "significance": "পাশ্চাত্য আধুনিক চিত্রকলায় বুদ্ধের সবচেয়ে পরিচিত বৃহৎ চিত্রগুলোর শিল্পী, যার জীবনের শেষদশক কেটেছে ভারতের কুলু উপত্যকায়।",
+      "details": [
+        "তিনি পরবর্তীতে শান্তি ও সাংস্কৃতিক উত্তরাধিকার রক্ষায় রেরিখ চুক্তি (Roerich Pact)-এর প্রবক্তা হন।"
+      ],
+      "works": [
+        {
+          "title": "Buddha the Conqueror",
+          "year": "১৯২৫",
+          "medium": "তৈল/টেম্পারা",
+          "note": "Banners of the East ধারাবাহিক"
+        },
+        {
+          "title": "Buddha the Tester",
+          "year": "১৯২৭",
+          "medium": "চিত্র",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "artwork",
+          "label": "ছবিটি বড় করে দেখুন",
+          "url": "https://commons.wikimedia.org/wiki/File:Buddha_the_Conqueror.jpg",
+          "note": "Wikimedia Commons · পাবলিক ডোমেইন"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Wikimedia Commons — Buddha the Conqueror",
+          "url": "https://commons.wikimedia.org/wiki/File:Buddha_the_Conqueror.jpg"
+        },
+        {
+          "label": "Nicholas Roerich Museum, New York",
+          "url": "https://www.Roerich.org/"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Nicholas Roerich",
+        "কেরিখ",
+        "Buddha the Conqueror",
+        "Banners of the East"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Buddha_the_Conqueror.jpg/500px-Buddha_the_Conqueror.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Buddha_the_Conqueror.jpg",
+        "captionBn": "নিকোলাই রেরিখের “Buddha the Conqueror” (১৯২৫)।",
+        "credit": "Nicholas Roerich",
+        "license": "Public domain",
+        "alt": "গুহায় ধ্যানরত বুদ্ধের তৈলচিত্র",
+        "objectPosition": "50% 45%",
+        "type": "artwork",
+        "file": "Buddha the Conqueror.jpg",
+        "width": 1200,
+        "height": 745
+      }
+    },
+    {
+      "id": "odilon-redon-buddha",
+      "kind": "person",
+      "titleBn": "ওদিলোঁ রদোঁ",
+      "titleEn": "Odilon Redon",
+      "creatorBn": "ওদিলোঁ রদোঁ",
+      "creatorEn": "Odilon Redon",
+      "roles": [
+        "চিত্রশিল্পী",
+        "ছাপচিত্রশিল্পী"
+      ],
+      "region": "international",
+      "period": "modern",
+      "years": "১৮৪০–১৯১৬; “The Buddha” ১৯০৪",
+      "yearSort": 1904,
+      "language": "ফরাসি · চিত্রভাষা",
+      "categories": [
+        "art",
+        "person"
+      ],
+      "buddhistSubject": "স্বপ্নলোকীয় রঙে বুদ্ধের মূর্তি ও বুদ্ধের মৃত্যুর চিত্রণ",
+      "characters": [
+        "বুদ্ধ"
+      ],
+      "featuredWork": "The Buddha (১৯০৪)",
+      "relationType": "direct",
+      "summary": "ফরাসি প্রতীকবাদী শিল্পী ওদিলোঁ রদোঁ জীবনের শেষভাগে বুদ্ধকে বারবার এঁকেছেন—“The Buddha” (১৯০৪) ও “La Mort de Bouddha”তে বুদ্ধ স্বপ্ন-আলোয় ভাসমান ধ্যানী মূর্তি। ইউরোপে বৌদ্ধ ধারণা ঢোকার যুগে তাঁর ছবি প্রকৃত আধ্যাত্মিক কৌতূহলের সাক্ষী।",
+      "significance": "ইউরোপের আধুনিক চিত্রকলায় বুদ্ধ প্রথম একজন “অভ্যন্তরীণ আলোর” প্রতীক হয়ে ওঠেন রদোঁর তুলিতে।",
+      "details": [
+        "তাঁর ছবির বুদ্ধ ভারতীয় মূর্তিশাস্ত্র অনুসরণ করে না—ফরাসি কল্পলোকের বুদ্ধ।"
+      ],
+      "works": [
+        {
+          "title": "The Buddha",
+          "year": "১৯০৪",
+          "medium": "প্যাস্টেল",
+          "note": "Van Gogh Museum"
+        },
+        {
+          "title": "Le Bouddha",
+          "year": "১৯০৬–০৭",
+          "medium": "প্যাস্টেল",
+          "note": "Musée d’Orsay"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "artwork",
+          "label": "Van Gogh Museum-এর “The Buddha” দেখুন",
+          "url": "https://commons.wikimedia.org/wiki/File:Odilon_Redon_-_The_Buddha_-_Google_Art_Project.jpg",
+          "note": "Wikimedia Commons"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Wikimedia Commons — Le Bouddha",
+          "url": "https://commons.wikimedia.org/wiki/File:Odilon_Redon_-_Buddha_-_Google_Art_Project.jpg"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Odilon Redon",
+        "রদোঁ",
+        "Le Bouddha",
+        "French painting Buddha"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Odilon_Redon_-_Buddha_-_Google_Art_Project.jpg/500px-Odilon_Redon_-_Buddha_-_Google_Art_Project.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Odilon_Redon_-_Buddha_-_Google_Art_Project.jpg",
+        "captionBn": "ওদিলোঁ রদোঁর “Le Bouddha” (১৯০৬–০৭), প্যাস্টেল।",
+        "credit": "Odilon Redon",
+        "license": "Public domain",
+        "alt": "নীল-সোনালি প্যাস্টেল রঙে বুদ্ধের উল্লম্ব চিত্র",
+        "objectPosition": "50% 28%",
+        "type": "artwork",
+        "file": "Odilon Redon - Buddha - Google Art Project.jpg",
+        "width": 3472,
+        "height": 4430
+      }
+    },
+    {
+      "id": "constantin-brancusi",
+      "kind": "person",
+      "titleBn": "কনস্তানতিন ব্রানকুশি",
+      "titleEn": "Constantin Brăncuși",
+      "creatorBn": "কনস্তানতিন ব্রানকুশি",
+      "creatorEn": "Constantin Brâncuși",
+      "roles": [
+        "ভাস্কর",
+        "আলোকচিত্রী"
+      ],
+      "region": "international",
+      "period": "modern",
+      "years": "১৮৭৬–১৯৫৭",
+      "yearSort": 1920,
+      "language": "রোমানিয়ান · ফরাসি · ভাস্কর্য",
+      "categories": [
+        "sculpture",
+        "person"
+      ],
+      "buddhistSubject": "মিলারেপার জীবনপাঠ ও প্রাচ্য চিন্তার প্রভাবে পরিমার্জিত বিমূর্ত ভাস্কর্য",
+      "characters": [
+        "মিলারেপা (পাঠ-প্রভাব)"
+      ],
+      "featuredWork": "শুদ্ধ আকৃতির ভাস্কর্যধারা",
+      "relationType": "influence",
+      "summary": "রোমানিয়ান আধুনিক ভাস্কর্যের জনক ব্রানকুশি পালিশ করা সরল আকারে “সারবস্তু” খুঁজেছেন; জীবনীকারদের মতে মিলারেপার জীবনপাঠ ও প্রাচ্য ধ্যান-চিন্তা তাঁর নির্জনতামুখী শিল্পদর্শনকে প্রভাবিত করে। সতর্কতা: তাঁর কোনো সরাসরি “বুদ্ধ” শিরোনামের নিশ্চিত কাজ নেই—এটি প্রভাবভিত্তিক এন্ট্রি।",
+      "significance": "বৌদ্ধ প্রাচ্য যেভাবে আধুনিক বিমূর্ত শিল্পের সরলতা ও নীরবতার নান্দনিকতাকে গড়েছে, তার বড় উদাহরণ।",
+      "details": [
+        "এই এন্ট্রিকে ইচ্ছাকৃতভাবে “প্রভাবভিত্তিক” হিসেবে চিহ্নিত করা হয়েছে; মিলারেপা-পাঠের প্রভাব বিষয়ে মতভেদ থাকতে পারে।"
+      ],
+      "works": [
+        {
+          "title": "Bird in Space",
+          "year": "১৯২৩-",
+          "medium": "ভাস্কর্য-ধারাবাহিক",
+          "note": "নীরব সারবস্তুর অনুসন্ধান"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "artwork",
+          "label": "MoMA সংগ্রহে ব্রানকুশির কাজ",
+          "url": "https://www.moma.org/artists/738",
+          "note": "The Museum of Modern Art"
+        }
+      ],
+      "sources": [
+        {
+          "label": "MoMA — Constantin Brancusi",
+          "url": "https://www.moma.org/artists/738"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Brancusi",
+        "ব্রানকুশি",
+        "বিমূর্ত ভাস্কর্য",
+        "Milarepa প্রভাব"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Edward_Steichen_-_Brancusi.jpg/500px-Edward_Steichen_-_Brancusi.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Edward_Steichen_-_Brancusi.jpg",
+        "captionBn": "এডওয়ার্ড স্টাইখেনের তোলা ছবিতে ব্রানকুশি।",
+        "credit": "Edward Steichen",
+        "license": "Public domain",
+        "alt": "ব্রানকুশির সাদা-কালো প্রতিকৃতি",
+        "objectPosition": "50% 18%",
+        "type": "portrait",
+        "file": "Edward_Steichen_-_Brancusi.jpg",
+        "width": 1012,
+        "height": 1256
+      }
+    },
+    {
+      "id": "jack-kerouac",
+      "kind": "person",
+      "titleBn": "Jack Kerouac",
+      "titleEn": "Jack Kerouac",
+      "creatorBn": "Jack Kerouac",
+      "creatorEn": "Jack Kerouac",
+      "roles": [
+        "ঔপন্যাসিক",
+        "কবি"
+      ],
+      "region": "international",
+      "period": "modern",
+      "years": "১৯২২–১৯৬৯; The Dharma Bums ১৯৫৮",
+      "yearSort": 1958,
+      "language": "ইংরেজি",
+      "categories": [
+        "literature",
+        "poetry-drama",
+        "person"
+      ],
+      "buddhistSubject": "বিট প্রজন্মের জেন-অনুসন্ধান; পাহাড়ে ধ্যান ও বৌদ্ধ গ্রন্থ পাঠের উপন্যাস",
+      "characters": [
+        "রায় স্মিথ (Kerouac)",
+        "জ্যাফি রাইডার (Gary Snyder চরিত্র)"
+      ],
+      "featuredWork": "The Dharma Bums",
+      "relationType": "influence",
+      "summary": "“On the Road” খ্যাত Kerouac ১৯৫৩ থেকে গুরুত্ব দিয়ে বৌদ্ধ গ্রন্থ পড়েন; “The Dharma Bums” (১৯৫৮) আমেরিকান কাউন্টার-কালচারে জেন বৌদ্ধধর্ম ছড়ানোর প্রধান মাধ্যম ছিল। তাঁর “Wake Up” বুদ্ধের জীবন নিয়ে অপ্রকাশিত পাণ্ডুলিপি মরণোত্তর ছাপা হয়।",
+      "significance": "পশ্চিমা তরুণ প্রজন্মের কাছে বৌদ্ধধর্মকে “স্বাধীনতার দর্শন” হিসেবে পৌঁছে দেওয়ার সবচেয়ে প্রভাবশালী সাহিত্য-কণ্ঠ।",
+      "details": [
+        "উপন্যাসের জ্যাফি রাইডার চরিত্রটি বাস্তবের কবি Gary Snyder।"
+      ],
+      "works": [
+        {
+          "title": "The Dharma Bums",
+          "year": "১৯৫৮",
+          "medium": "উপন্যাস",
+          "note": ""
+        },
+        {
+          "title": "Wake Up: A Life of the Buddha",
+          "year": "1950s লিখিত, 2008 প্রকাশিত",
+          "medium": "জীবনী",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "Poetry Foundation-এ Kerouac-এর কবিতা",
+          "url": "https://www.poetryfoundation.org/poets/jack-kerouac",
+          "note": "ইংরেজি পাঠ"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Poetry Foundation — Jack Kerouac",
+          "url": "https://www.poetryfoundation.org/poets/jack-kerouac"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Jack Kerouac",
+        "কেরুয়াক",
+        "Dharma Bums",
+        "Beat Buddhism"
+      ],
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Kerouac_by_Palumbo_2_%28cropped%29.png",
+        "page": "https://commons.wikimedia.org/wiki/File:Kerouac_by_Palumbo_2_(cropped).png",
+        "captionBn": "Jack Kerouac-এর প্রতিকৃতি।",
+        "credit": "Tom Palumbo (derivative crop: Sir Richardson)",
+        "license": "CC BY-SA 2.0",
+        "alt": "Kerouac-এর সাদা-কালো ছবি",
+        "objectPosition": "50% 18%",
+        "type": "portrait",
+        "file": "Kerouac_by_Palumbo_2_(cropped).png",
+        "width": 388,
+        "height": 518
+      }
+    },
+    {
+      "id": "gary-snyder",
+      "kind": "person",
+      "titleBn": "গ্যারি স্নাইডার",
+      "titleEn": "Gary Snyder",
+      "creatorBn": "গ্যারি স্নাইডার",
+      "creatorEn": "Gary Snyder",
+      "roles": [
+        "কবি",
+        "জেন অনুশীলনী",
+        "পরিবেশচিন্তক"
+      ],
+      "region": "international",
+      "period": "contemporary",
+      "years": "জন্ম ১৯৩০; জাপানে জেন প্রশিক্ষণ ১৯৫৬–৬৮",
+      "yearSort": 1959,
+      "language": "ইংরেজি · জাপানি",
+      "categories": [
+        "poetry-drama",
+        "person"
+      ],
+      "buddhistSubject": "দশকব্যাপী জাপানি জেন মঠজীবন; প্রকৃতি ও ধ্যানের কবিতা",
+      "characters": [
+        "জ্যাফি রাইডার (অন্যের উপন্যাসে তাঁর রূপ)"
+      ],
+      "featuredWork": "Riprap; Turtle Island",
+      "relationType": "buddhist-creator",
+      "summary": "পুলিৎজারজয়ী কবি Gary Snyder জাপানের জেন মঠে এক দশকের বেশি অনুশীলন করে পাহাড়, কর্ম ও ধ্যানকে একসূত্রে বাঁধা কবিতা লিখেছেন। Kerouac-এর “The Dharma Bums”-এর জ্যাফি তাঁরাই।",
+      "significance": "বিট-কবিদের মধ্যে তিনিই সবচেয়ে গভীর ও প্রামাণিক বৌদ্ধ অনুরাগী-অভ্যাসী; বাংলার চর্যা-কবিদের সহজিয়া ধারার আধুনিক পশ্চিমা প্রতিস্ব।",
+      "details": [
+        "তাঁর পরিবেশ-নৈতিকতা বৌদ্ধ অন্তর্দৃষ্টি ও আমেরিকান আদিবাসী জ্ঞানতন্ত্রের সংলাপ থেকে আসে।"
+      ],
+      "works": [
+        {
+          "title": "Riprap",
+          "year": "১৯৫৯",
+          "medium": "কবিতা ",
+          "note": "পাহাড়ি কাজ ও জেন"
+        },
+        {
+          "title": "Turtle Island",
+          "year": "১৯৭৪",
+          "medium": "কবিতা/প্রবন্ধ",
+          "note": "পুলিৎজার পুরস্কার"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "Poetry Foundation-এ স্নাইডারের কবিতা",
+          "url": "https://www.poetryfoundation.org/poets/gary-snyder",
+          "note": "ইংরেজি পাঠ"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Poetry Foundation — Gary Snyder",
+          "url": "https://www.poetryfoundation.org/poets/gary-snyder"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Gary Snyder",
+        "স্নাইডার",
+        "Zen poet",
+        "জ্যাফি"
+      ],
+      "image": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Gary_Snyder%2C_2007_%28cropped%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Gary_Snyder,_2007_(cropped).jpg",
+        "captionBn": "Gary Snyder, ২০০৭।",
+        "credit": "Fett",
+        "license": "CC BY 2.0",
+        "alt": "Gary Snyder ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Gary_Snyder,_2007_(cropped).jpg",
+        "width": 327,
+        "height": 463
+      }
+    },
+    {
+      "id": "osamu-tezuka-buddha-manga",
+      "kind": "person",
+      "titleBn": "ওসামু তেজ্‌সুকা",
+      "titleEn": "Osamu Tezuka",
+      "creatorBn": "ওসামু তেজ্‌সুকা",
+      "creatorEn": "Osamu Tezuka",
+      "roles": [
+        "মাঙ্গা শিল্পী",
+        "লেখক",
+        "অ্যানিমে-পথিকৃৎ"
+      ],
+      "region": "international",
+      "period": "contemporary",
+      "years": "১৯২৮–১৯৮৯; “Buddha” মাঙ্গা ১৯৭২–১৯৮৩",
+      "yearSort": 1972,
+      "language": "জাপানি · ইংরেজি অনুবাদ",
+      "categories": [
+        "art",
+        "literature",
+        "person"
+      ],
+      "buddhistSubject": "আট খণ্ডের মহাকাব্যিক মাঙ্গায় বুদ্ধের জীবন",
+      "characters": [
+        "সিদ্ধার্থ",
+        "দেবদত্ত",
+        "অসিতা",
+        "তত্ত (কাল্পনিক)"
+      ],
+      "featuredWork": "Buddha (মাঙ্গা)",
+      "relationType": "direct",
+      "summary": "“মাঙ্গার ঈশ্বর” তেজ্‌সুকা দশ বছরের বেশি সময় ধরে “Buddha” সিরিজে সিদ্ধার্থের জীবনকে বিশাল প্রামাণ্য আবহে বলেছেন—জাতপাত, যুদ্ধ ও প্রকৃতির গল্প বুদ্ধজীবনীর পাশাপাশি চলেছে। কাজটি Eisner পুরস্কারপ্রাপ্ত আন্তর্জাতিক ধ্রুপদী।",
+      "significance": "পৃথিবীর জনপ্রিয়তম কমিক্স মাধ্যমে বুদ্ধের জীবন কোটি পাঠকের কাছে পৌঁছানোর সবচেয়ে বড় উদ্যোগ।",
+      "details": [
+        "ধারাবাহিকে ঐতিহাসিক বুদ্ধজীবনীর পাশাপাশি লেখকের উদ্ভাবিত চরিত্র ও হাস্যরসও রয়েছে।",
+        "২০১১ সালে মাঙ্গা অবলম্বনে অ্যানিমে চলচ্চিত্রও তৈরি হয়।"
+      ],
+      "works": [
+        {
+          "title": "Buddha",
+          "year": "১৯৭২–১৯৮৩",
+          "medium": "মাঙ্গা (৮ খণ্ড)",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "তেজ্‌সুকা অফিসিয়াল ওয়েবসাইটে Buddha পৃষ্ঠা",
+          "url": "https://tezukaosamu.net/en/manga/434.html",
+          "note": "Tezuka Osamu Official"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Tezuka Osamu Official — Buddha",
+          "url": "https://tezukaosamu.net/en/manga/434.html"
+        },
+        {
+          "label": "Wikimedia Commons — Osamu Tezuka 1951",
+          "url": "https://commons.wikimedia.org/wiki/File:Osamu_Tezuka_1951_Scan10008-2.JPG"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Osamu Tezuka",
+        "তেজ্‌সুকা",
+        "Buddha manga",
+        "মাঙ্গা বুদ্ধ"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Osamu_Tezuka_1951_Scan10008-2.JPG/500px-Osamu_Tezuka_1951_Scan10008-2.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Osamu_Tezuka_1951_Scan10008-2.JPG",
+        "captionBn": "তরুণ ওসামু তেজ্‌সুকা, ১৯৫১।",
+        "credit": "অজ্ঞাত",
+        "license": "Public domain",
+        "alt": "তেজ্‌সুকা সাদা-কালো ছবি",
+        "objectPosition": "50% 25%",
+        "type": "portrait",
+        "file": "Osamu_Tezuka_1951_Scan10008-2.JPG",
+        "width": 595,
+        "height": 508
+      }
+    },
+    {
+      "id": "thich-nhat-hanh-old-path",
+      "kind": "person",
+      "titleBn": "থিচ নাত হান",
+      "titleEn": "Thich Nhat Hanh",
+      "creatorBn": "থিচ নাত হান",
+      "creatorEn": "Thích Nhất Hạnh",
+      "roles": [
+        "জেন আচার্য",
+        "লেখক",
+        "কবি",
+        "শান্তিকর্মী"
+      ],
+      "region": "international",
+      "period": "contemporary",
+      "years": "১৯২৬–২০২২; “Old Path White Clouds” ১৯৯১",
+      "yearSort": 1991,
+      "language": "ভিয়েতনামি · ইংরেজি",
+      "categories": [
+        "literature",
+        "poetry-drama",
+        "person"
+      ],
+      "buddhistSubject": "সূত্রসাহিত্যের ভিত্তিতে বুদ্ধের জীবনের বিখ্যাত আখ্যান “পুরনো পথ, সাদা মেঘ”",
+      "characters": [
+        "বুদ্ধ",
+        "স্বাস্তি (মহিষপালক বালক)",
+        "আনন্দ"
+      ],
+      "featuredWork": "Old Path White Clouds",
+      "relationType": "buddhist-creator",
+      "summary": "ভিয়েতনামি জেন আচার্য থিচ নাত হানের “Old Path White Clouds” পালি, সংস্কৃত ও চীনা সূত্র মিলিয়ে বুদ্ধের জীবনকে মহিষপালক স্বাস্তির চোখে গল্পের আকারে বলেছে—সারা বিশ্বের পাঠকের কাছে সবচেয়ে প্রিয় আধুনিক বুদ্ধজীবনী আখ্যানগুলোর একটি।",
+      "significance": "আধুনিক মননশীল (mindfulness) আন্দোলনের প্রতিষ্ঠাতার সাহিত্যিক সেরা কাজ, যা বুদ্ধজীবন পাঠের শ্রেষ্ঠ প্রবেশদ্বারগুলোর একটি।",
+      "details": [
+        "বইটি গবেষণামূলক জীবনী নয়—শাস্ত্রীয় কাহিনি ও লেখকের ধ্যান-অভিজ্ঞতায় গড়া আখ্যান।"
+      ],
+      "works": [
+        {
+          "title": "Old Path White Clouds",
+          "year": "১৯৯১",
+          "medium": "জীবনী-আখ্যান",
+          "note": ""
+        },
+        {
+          "title": "The Heart of the Buddha’s Teaching",
+          "year": "১৯৯৮",
+          "medium": "শিক্ষাগ্রন্থ",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "book",
+          "label": "Parallax Press-এ Old Path White Clouds",
+          "url": "https://www.parallax.org/product/old-path-white-clouds/",
+          "note": "প্রকাশকের পৃষ্ঠা"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Parallax Press — Old Path White Clouds",
+          "url": "https://www.parallax.org/product/old-path-white-clouds/"
+        },
+        {
+          "label": "Plum Village — Thich Nhat Hanh",
+          "url": "https://plumvillage.org/thich-nhat-hanh/"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Thich Nhat Hanh",
+        "থিচ নাত হান",
+        "Old Path White Clouds",
+        "মাইন্ডফুলনেস"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Thich_Nhat_Hanh_12_%28cropped%29.jpg/500px-Thich_Nhat_Hanh_12_(cropped).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Thich_Nhat_Hanh_12_(cropped).jpg",
+        "captionBn": "থিচ নাত হান।",
+        "credit": "Duc (pixiduc) from Paris, France.",
+        "license": "CC BY-SA 2.0",
+        "alt": "বাদামি চীবর পরা থিচ নাত হানের ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Thich_Nhat_Hanh_12_(cropped).jpg",
+        "width": 1941,
+        "height": 2229
+      }
+    },
+    {
+      "id": "little-buddha-1993",
+      "kind": "work",
+      "titleBn": "“Little Buddha” — বের্তোলুচ্চি, কিয়ানু রিভস ও রিউইচি সাকামোতো",
+      "titleEn": "Little Buddha (1993)",
+      "creatorBn": "বের্নার্ডো বের্তোলুচ্চি (পরিচালক) · কিয়ানু রিভস (সিদ্ধার্থ) · রিউইচি সাকামোতো (সংগীত)",
+      "creatorEn": "Bernardo Bertolucci · Keanu Reeves · Ryuichi Sakamoto",
+      "roles": [
+        "পরিচালক",
+        "অভিনেতা",
+        "সুরকার"
+      ],
+      "region": "international",
+      "period": "contemporary",
+      "years": "১৯৯৩",
+      "yearSort": 1993,
+      "language": "ইংরেজি",
+      "categories": [
+        "film",
+        "music"
+      ],
+      "buddhistSubject": "তিব্বতি লামার পুনর্জন্ম খোঁজার সমসাময়িক আখ্যানের ভেতরে সিদ্ধার্থের জীবনকাহিনি",
+      "characters": [
+        "সিদ্ধার্থ (কিয়ানু রিভস)",
+        "জেসি কনরাড",
+        "লামা নোর্বু"
+      ],
+      "featuredWork": "Little Buddha",
+      "relationType": "portrayal",
+      "summary": "অস্কারজয়ী নির্মাতা বের্তোলুচ্চির “Little Buddha”-তে সিটলের এক বালককে লামার পুনর্জন্ম মনে করা হয়, আর সমান্তরালে বলা হয় সিদ্ধার্থের কাহিনি—চরিত্রে তরুণ কিয়ানু রিভস। রিউইচি সাকামোতোর আবহসংগীত ছবিটির আলাদা খ্যাতি এনেছে; ২০২৫ সালে 4K পুনরুদ্ধারে ছবিটি আবার মুক্তি পায়।",
+      "significance": "হলিউড-ইউরোপের মূলধারায় বুদ্ধ-চরিত্রায়ণের সবচেয়ে বড় বাজেটের নমুনা।",
+      "details": [
+        "ছবিতে কিয়ানু রিভসের সাম্প্রতিক ছবি ব্যবহার করা হয়েছে; তিনি ছবিতে সিদ্ধার্থের ভূমিকায় অভিনয় করেন।"
+      ],
+      "works": [
+        {
+          "title": "Little Buddha",
+          "year": "১৯৯৩",
+          "medium": "চলচ্চিত্র",
+          "note": "সংগীত: রিউইচি সাকামোতো"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "video",
+          "label": "Kino Lorber-এ ছবি ও ট্রেলারের অফিসিয়াল পৃষ্ঠা",
+          "url": "https://kinolorber.com/film/little-buddha",
+          "note": "4K পুনরুদ্ধার সংস্করণ"
+        },
+        {
+          "kind": "video",
+          "label": "অফিসিয়াল ট্রেলার (YouTube)",
+          "url": "https://www.youtube.com/watch?v=6rgM1hE8ZEA",
+          "note": "Kino Lorber"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kino Lorber — Little Buddha",
+          "url": "https://kinolorber.com/film/little-buddha"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Little Buddha",
+        "Keanu Reeves Siddhartha",
+        "Bernardo Bertolucci",
+        "রিউইচি সাকামোতো"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Keanu_Reeves_at_TIFF_2025_02_%28Cropped%29.jpg/500px-Keanu_Reeves_at_TIFF_2025_02_(Cropped).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Keanu_Reeves_at_TIFF_2025_02_(Cropped).jpg",
+        "captionBn": "কিয়ানু রিভস—“Little Buddha”-তে সিদ্ধার্থের ভূমিকায় অভিনেতা।",
+        "credit": "Gabriel Hutchinson",
+        "license": "CC BY-SA 4.0",
+        "alt": "কিয়ানু রিভসের ছবি",
+        "objectPosition": "50% 18%",
+        "type": "portrait",
+        "file": "Keanu_Reeves_at_TIFF_2025_02_(Cropped).jpg",
+        "width": 2259,
+        "height": 3010
+      }
+    },
+    {
+      "id": "kundun-1997",
+      "kind": "work",
+      "titleBn": "“Kundun” — Martin Scorsese ও Philip Glass",
+      "titleEn": "Kundun (1997)",
+      "creatorBn": "Martin Scorsese (পরিচালক) · ফিলিপ গ্লাস (সংগীত)",
+      "creatorEn": "Martin Scorsese · Philip Glass",
+      "roles": [
+        "পরিচালক",
+        "সুরকার"
+      ],
+      "region": "international",
+      "period": "contemporary",
+      "years": "১৯৯৭",
+      "yearSort": 1997,
+      "language": "ইংরেজি · তিব্বতি",
+      "categories": [
+        "film",
+        "music"
+      ],
+      "buddhistSubject": "চতুর্দশ দালাই লামার শৈশব, মঠশিক্ষা ও নির্বাসনের আখ্যান",
+      "characters": [
+        "দালাই লামা (বিভিন্ন বয়সে তিব্বতি অ-পেশাদার অভিনেতা)"
+      ],
+      "featuredWork": "Kundun",
+      "relationType": "direct",
+      "summary": "হলিউডের অন্যতম সেরা পরিচালক Martin Scorsese-এর “Kundun” তিব্বতি বৌদ্ধ মঠজীবন, বালু-মণ্ডল ও দালাই লামার নির্বাসনকে ধ্যানগভীর চিত্রভাষায় বলেছে। বৌদ্ধ সুরকার ফিলিপ গ্লাসের তিব্বতি যন্ত্রমিশ্র আবহসংগীত অস্কার মনোনয়ন পায়।",
+      "significance": "পাশ্চাত্য ধ্রুপদী সিনেমায় বৌদ্ধ মঠজীবনের সবচেয়ে নৈসর্গিক ও শ্রদ্ধেয় উপস্থাপনগুলোর একটি।",
+      "details": [
+        "অভিনেতারা প্রায় সবাই তিব্বতি অ-পেশাদার; প্রাপ্তবয়স্ক দালাই লামার ভূমিকায় তাঁর নিজের প্রপৌত্রভাগনে।",
+        "ছবিতে পরিচালক Martin Scorsese ছবি দেখানো হয়েছে।"
+      ],
+      "works": [
+        {
+          "title": "Kundun",
+          "year": "১৯৯৭",
+          "medium": "চলচ্চিত্র",
+          "note": "সংগীত: Philip Glass"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "audio",
+          "label": "Kundun সাউন্ডট্র্যাক — Nonesuch Records",
+          "url": "https://www.nonesuch.com/albums/kundun-soundtrack",
+          "note": "ফিলিপ গ্লাসের সংগীত"
+        },
+        {
+          "kind": "article",
+          "label": "ছবিটি সম্পর্কে প্রকাশক/ক্যাটালগ তথ্য (IMDb)",
+          "url": "https://www.imdb.com/title/tt0119485/",
+          "note": "IMDb"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Nonesuch — Kundun Soundtrack",
+          "url": "https://www.nonesuch.com/albums/kundun-soundtrack"
+        },
+        {
+          "label": "IMDb — Kundun",
+          "url": "https://www.imdb.com/title/tt0119485/"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Kundun",
+        "Martin Scorsese",
+        "Philip Glass",
+        "দালাই লামা চলচ্চিত্র"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Martin_Scorsese-68749.jpg/500px-Martin_Scorsese-68749.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Martin_Scorsese-68749.jpg",
+        "captionBn": "Martin Scorsese।",
+        "credit": "Harald Krichel",
+        "license": "CC BY-SA 4.0",
+        "alt": "Martin Scorsese ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Martin_Scorsese-68749.jpg",
+        "width": 2736,
+        "height": 3648
+      }
+    },
+    {
+      "id": "kim-ki-duk-spring",
+      "kind": "work",
+      "titleBn": "Kim Ki-duk — “Spring, Summer, Fall, Winter… and Spring”",
+      "titleEn": "Kim Ki-duk",
+      "creatorBn": "Kim Ki-duk (পরিচালক, অভিনেতাও)",
+      "creatorEn": "Kim Ki-duk",
+      "roles": [
+        "পরিচালক",
+        "লেখক",
+        "অভিনেতা"
+      ],
+      "region": "international",
+      "period": "contemporary",
+      "years": "২০০৩",
+      "yearSort": 2003,
+      "language": "কোরীয়",
+      "categories": [
+        "film"
+      ],
+      "buddhistSubject": "ভাসমান বৌদ্ধ বিহারে এক ভিক্ষুর ঋতুচক্রে জীবন: পাপ, তৃষ্ণা, প্রায়শ্চিত্ত, করুণা",
+      "characters": [
+        "বৃদ্ধ ভিক্ষু",
+        "বালক/যুবক ভিক্ষু (একই চরিত্রের বয়সভেদ)"
+      ],
+      "featuredWork": "Spring, Summer, Fall, Winter… and Spring",
+      "relationType": "direct",
+      "summary": "কোরিয়ান নির্মাতা Kim Ki-duk বিখ্যাত ধ্যানগভীর ছবিতে হ্রদের ওপর ভাসা ছোট্ট বৌদ্ধ বিহারে এক ভিক্ষুর জীবন পাঁচ ঋতুতে ভাগ করেছেন—সামান্য সংলাপে অনিত্য ও কর্মফলের বৌদ্ধ গল্প। জীবনের শেষ পর্বে অভিনয় করেছেন পরিচালক নিজেই।",
+      "significance": "বিশ্ব চলচ্চিত্রে “বৌদ্ধ দর্শনের চলচ্চিত্র” বলতে সবার আগে যে ছবির নাম আসে।",
+      "details": [
+        "শুটিং হয়েছে কোরিয়ার জুসানজি হ্রদে, বিশেষভাবে তৈরি ভাসমান মঠসেটে।"
+      ],
+      "works": [
+        {
+          "title": "Spring, Summer, Fall, Winter… and Spring",
+          "year": "২০০৩",
+          "medium": "চলচ্চিত্র",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "video",
+          "label": "Apple TV-তে ছবিটির স্ট্রিমিং/ট্রেলার পৃষ্ঠা",
+          "url": "https://tv.apple.com/us/movie/spring-summer-fall-winter-and-spring/umc.cmc.4g2e15j9x0ryeo9cq7gu6jtcs",
+          "note": "এলাকাভেদে প্রাপ্যতা পাল্টায়"
+        },
+        {
+          "kind": "article",
+          "label": "IFFR চলচ্চিত্র পৃষ্ঠা",
+          "url": "https://iffr.com/en/iffr/2004/films/spring-summer-fall-winter-and-spring",
+          "note": "রটারডাম উৎসব"
+        }
+      ],
+      "sources": [
+        {
+          "label": "IFFR — Spring, Summer, Fall, Winter… and Spring",
+          "url": "https://iffr.com/en/iffr/2004/films/spring-summer-fall-winter-and-spring"
+        },
+        {
+          "label": "Apple TV — চলচ্চিত্র পৃষ্ঠা",
+          "url": "https://tv.apple.com/us/movie/spring-summer-fall-winter-and-spring/umc.cmc.4g2e15j9x0ryeo9cq7gu6jtcs"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Kim Ki-duk",
+        "Spring Summer Fall Winter",
+        "কিম কি দুক",
+        "বৌদ্ধ চলচ্চিত্র"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Kim_Ki-duk_at_the_69th_Venice_International_Film_Festival_%28cropped%29.jpg/500px-Kim_Ki-duk_at_the_69th_Venice_International_Film_Festival_(cropped).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Kim_Ki-duk_at_the_69th_Venice_International_Film_Festival_(cropped).jpg",
+        "captionBn": "Kim Ki-duk, ভেনিস চলচ্চিত্র উৎসবে।",
+        "credit": "Photo by Tania Volobueva (tanka v) Cropped by RanZag",
+        "license": "CC BY-SA 2.0",
+        "alt": "কিম কি-দুকের ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Kim_Ki-duk_at_the_69th_Venice_International_Film_Festival_(cropped).jpg",
+        "width": 1920,
+        "height": 2585
+      }
+    },
+    {
+      "id": "john-cage",
+      "kind": "person",
+      "titleBn": "জন কেজ",
+      "titleEn": "John Cage",
+      "creatorBn": "জন কেজ",
+      "creatorEn": "John Cage",
+      "roles": [
+        "সুরকার",
+        "শিল্পী",
+        "লেখক"
+      ],
+      "region": "international",
+      "period": "modern",
+      "years": "১৯১২–১৯৯২; ৪′৩৩″ ১৯৫২",
+      "yearSort": 1952,
+      "language": "ইংরেজি · ধ্বনি",
+      "categories": [
+        "music",
+        "person"
+      ],
+      "buddhistSubject": "D. T. Suzuki জেন বক্তৃতায় প্রভাবিত নীরবতা ও সম্ভাবনা-সংগীত (chance music)",
+      "characters": [
+        "—"
+      ],
+      "featuredWork": "4′33″",
+      "relationType": "influence",
+      "summary": "আমেরিকান অভাঁ-গার্দ সুরকার জন কেজ কলম্বিয়া বিশ্ববিদ্যালয়ে দাইসেৎস সুজুকির জেন বক্তৃতা শুনে নীরবতাকে সংগীত ভাবতে শেখেন; ফল তাঁর “নীরব” রচনা ৪′৩৩″—শিল্পী বাজান না, শ্রোতা শোনেন চারপাশের ধ্বনি।",
+      "significance": "জেন বৌদ্ধদর্শন আধুনিক পশ্চিমা সংগীতের সংজ্ঞাই যেভাবে পাল্টি দিয়েছে, তার সবচেয়ে বিখ্যাত উদাহরণ।",
+      "details": [
+        "কেজ নিজে বলতেন, তাঁর সংগীতই তাঁর ধ্যান-সাধনা—আসন ধ্যানের বদলে সুযোগ-পদ্ধতিতে রচনা।"
+      ],
+      "works": [
+        {
+          "title": "4′33″",
+          "year": "১৯৫২",
+          "medium": "পরীক্ষামূলক রচনা",
+          "note": "তিন পর্বের নীরবতা"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "audio",
+          "label": "MoMA সংগ্রহে 4′33″ পাণ্ডুলিপি ও ব্যাখ্যা",
+          "url": "https://www.moma.org/collection/works/163616",
+          "note": "The Museum of Modern Art"
+        },
+        {
+          "kind": "audio",
+          "label": "4′33″ লাইভ রেকর্ডিং শুনুন",
+          "url": "https://www.youtube.com/watch?v=NpsSk_P75iY",
+          "note": "YouTube (Naxos)"
+        }
+      ],
+      "sources": [
+        {
+          "label": "MoMA — John Cage, 4’33”",
+          "url": "https://www.moma.org/collection/works/163616"
+        },
+        {
+          "label": "Tricycle — 4’33’’: The “Silent Piece”",
+          "url": "https://tricycle.org/magazine/john-cage-silent-piece/"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "John Cage",
+        "জন কেজ",
+        "4 33",
+        "জেন সংগীত"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/John_Cage_%281988%29.jpg/500px-John_Cage_(1988).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:John_Cage_(1988).jpg",
+        "captionBn": "জন কেজ, ১৯৮৮।",
+        "credit": "Rob Bogaerts for Anefo",
+        "license": "CC0",
+        "alt": "জন কেজের ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "John_Cage_(1988).jpg",
+        "width": 1811,
+        "height": 2415
+      }
+    },
+    {
+      "id": "tina-turner",
+      "kind": "person",
+      "titleBn": "টিনা টার্নার",
+      "titleEn": "Tina Turner",
+      "creatorBn": "টিনা টার্নার",
+      "creatorEn": "Tina Turner",
+      "roles": [
+        "গায়িকা",
+        "লেখক"
+      ],
+      "region": "international",
+      "period": "contemporary",
+      "years": "১৯৩৯–২০২৩; বৌদ্ধ জপ-অনুশীলন ১৯৭৩–",
+      "yearSort": 2009,
+      "language": "ইংরেজি · জাপানি মন্ত্রজপ",
+      "categories": [
+        "music",
+        "person"
+      ],
+      "buddhistSubject": "সোকা গাক্কাই নিচিরেন বৌদ্ধ অনুশীলন; “নাম-মিয়োহো-রেঙ্গে-কিও” জপ ও Beyond অ্যালবাম",
+      "characters": [
+        "—"
+      ],
+      "featuredWork": "Beyond: Buddhist and Christian Prayers",
+      "relationType": "buddhist-creator",
+      "summary": "“রক অ্যান্ড রোলের রানি” টিনা টার্নার ১৯৭৩ সাল থেকে নিচিরেন বৌদ্ধ মন্ত্র “নাম-মিয়োহো-রেঙ্গে-কিও” জপ করতেন, যা তাঁর জীবনের সংকটে মুক্তির শক্তি বলে তিনি বর্ণনা করেছেন। পরে ডেচেন শাক-দাগসে ও রেগুলা কুর্তির সঙ্গে “Beyond” অ্যালবামে বৌদ্ধ প্রার্থনা গেয়েছেন।",
+      "significance": "বিশ্বের সবচেয়ে জনপ্রিয় সংগীততারকাদের মধ্যে বৌদ্ধ অনুশীলনকে জনসমক্ষে স্বাভাবিক করে তোলার সবচেয়ে বড় নাম।",
+      "details": [
+        "তিনি নিজেকে “বৌদ্ধ-ব্যাপ্টিস্ট” পটভূমিসহ অনুশীলনী হিসেবে বর্ণনা করতেন—পরিচয়ের এ জটিলতা উল্লেখ করা জরুরি।"
+      ],
+      "works": [
+        {
+          "title": "Beyond: Buddhist and Christian Prayers",
+          "year": "২০০৯",
+          "medium": "অ্যালবাম",
+          "note": ""
+        },
+        {
+          "title": "Happiness Becomes You",
+          "year": "২০২০",
+          "medium": "আত্মসহায়ক গ্রন্থ",
+          "note": ""
+        }
+      ],
+      "quote": {
+        "textBn": "“নাম-মিয়োহো-রেঙ্গে-কিও” একটি গানের মতো—এটি একটি ধ্বনি ও ছন্দ, যা ভেতরের গভীরতম জায়গাটিকে ছোঁয়।",
+        "textOriginal": "Nam-myoho-renge-kyo is a song… It is a sound and a rhythm and it touches a place inside you.",
+        "attribution": "Tina Turner (Lion’s Roar সাক্ষাৎকার, সংক্ষেপিত)",
+        "status": "verified",
+        "caution": "সাক্ষাৎকারের বাক্য সংক্ষেপে অনুবাদ করা হয়েছে।"
+      },
+      "media": [
+        {
+          "kind": "audio",
+          "label": "Stanford Ho Center-এর Tina Turner পৃষ্ঠা ও জপের রেকর্ডিং",
+          "url": "https://buddhiststudies.stanford.edu/tina-turner",
+          "note": "Stanford Buddhist Studies"
+        },
+        {
+          "kind": "audio",
+          "label": "নাম-মিয়োহো-রেঙ্গে-কিও জপ শুনুন",
+          "url": "https://www.youtube.com/watch?v=Yf1YfZefBrk",
+          "note": "YouTube"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Stanford Ho Center — Tina Turner",
+          "url": "https://buddhiststudies.stanford.edu/tina-turner"
+        },
+        {
+          "label": "Beyond Foundation — Beyond অ্যালবাম",
+          "url": "https://beyond-foundation.org/en/music-production/beyond"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Tina Turner",
+        "টিনা টার্নার",
+        "Nam Myoho Renge Kyo",
+        "Beyond"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Tina_Turner_Breaks_All_the_Rules.png/500px-Tina_Turner_Breaks_All_the_Rules.png",
+        "page": "https://commons.wikimedia.org/wiki/File:Tina_Turner_Breaks_All_the_Rules.png",
+        "captionBn": "টিনা টার্নার।",
+        "credit": "HBO",
+        "license": "Public domain",
+        "alt": "টিনা টার্নারের ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Tina_Turner_Breaks_All_the_Rules.png",
+        "width": 1338,
+        "height": 2033
+      }
+    },
+    {
+      "id": "adam-yauch",
+      "kind": "person",
+      "titleBn": "অ্যাডাম ইয়াউক (MCA)",
+      "titleEn": "Adam Yauch",
+      "creatorBn": "অ্যাডাম ইয়াউক",
+      "creatorEn": "Adam “MCA” Yauch",
+      "roles": [
+        "র‌্যাপার",
+        "বেসবাদক",
+        "চলচ্চিত্র-নির্মাতা",
+        "সক্রিয়কর্মী"
+      ],
+      "region": "international",
+      "period": "contemporary",
+      "years": "১৯৬৪–২০১২; “Bodhisattva Vow” ১৯৯৪",
+      "yearSort": 1994,
+      "language": "ইংরেজি",
+      "categories": [
+        "music",
+        "person"
+      ],
+      "buddhistSubject": "তিব্বতি বৌদ্ধ ব্রত গানে; বিস্টি বয়েজের হিপহপে ভিক্ষু-জপের নমুনা",
+      "characters": [
+        "বোধিসত্ত্ব (ব্রতের আদর্শ)"
+      ],
+      "featuredWork": "Bodhisattva Vow",
+      "relationType": "buddhist-creator",
+      "summary": "Beastie Boys-এর প্রতিষ্ঠাতা Adam Yauch দালাই লামার শিক্ষা শুনে “Bodhisattva Vow” লেখেন—তিব্বতি ভিক্ষুদের জপের ওপর হিপহপ ছন্দে সকল জীবের কল্যাণের প্রতিজ্ঞা। ১৯৯৬ সালে তিনি আনুষ্ঠানিকভাবে বৌদ্ধধর্ম গ্রহণ করেন এবং তিব্বত স্বাধীনতা কনসার্ট আয়োজন করেন।",
+      "significance": "জনপ্রিয় গণসংগীতে সরাসরি বৌদ্ধ ব্রতকে বিশ্বচার্টে নিয়ে যাওয়া অগ্রদূত।",
+      "details": [
+        "গানটি ১৯৯৪ সালের Ill Communication অ্যালবামে প্রকাশিত।"
+      ],
+      "works": [
+        {
+          "title": "Bodhisattva Vow",
+          "year": "১৯৯৪",
+          "medium": "গান",
+          "note": "Beastie Boys"
+        },
+        {
+          "title": "Shambala",
+          "year": "১৯৯৪",
+          "medium": "গান",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "audio",
+          "label": "“Bodhisattva Vow” — অফিসিয়াল অডিও শুনুন",
+          "url": "https://www.youtube.com/watch?v=ggAiQtyfqvE",
+          "note": "Universal Music / YouTube"
+        },
+        {
+          "kind": "article",
+          "label": "NPR — Yauch-এর বৌদ্ধ যাত্রা",
+          "url": "https://www.npr.org/sections/therecord/2012/05/04/152053809/how-adam-yauch-grew-into-his-voice",
+          "note": "NPR"
+        }
+      ],
+      "sources": [
+        {
+          "label": "NPR — How Adam Yauch Grew Into His Voice",
+          "url": "https://www.npr.org/sections/therecord/2012/05/04/152053809/how-adam-yauch-grew-into-his-voice"
+        },
+        {
+          "label": "Beastie Boys — অফিসিয়াল ডিস্কোগ্রাফি",
+          "url": "https://beastieboys.com/discography/"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Adam Yauch",
+        "ইয়াউক",
+        "MCA",
+        "Bodhisattva Vow",
+        "Beastie Boys"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Mca_1992_%287152517067%29_%28cropped%29_%28cropped%29.jpg/500px-Mca_1992_(7152517067)_(cropped)_(cropped).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mca_1992_(7152517067)_(cropped)_(cropped).jpg",
+        "captionBn": "Adam Yauch।",
+        "credit": "Masao Nakagami",
+        "license": "CC BY-SA 2.0",
+        "alt": "Adam Yauch ছবি",
+        "objectPosition": "50% 18%",
+        "type": "portrait",
+        "file": "Mca_1992_(7152517067)_(cropped)_(cropped).jpg",
+        "width": 518,
+        "height": 673
+      }
+    },
+    {
+      "id": "leonard-cohen",
+      "kind": "person",
+      "titleBn": "লেওনার্দ কোহেন",
+      "titleEn": "Leonard Cohen",
+      "creatorBn": "লেওনার্দ কোহেন",
+      "creatorEn": "Leonard Cohen",
+      "roles": [
+        "গায়ক-গীতিকার",
+        "কবি",
+        "জেন ভিক্ষু (জিকান)"
+      ],
+      "region": "international",
+      "period": "contemporary",
+      "years": "১৯৩৪–২০১৬; জেন দীক্ষা ১৯৯৬",
+      "yearSort": 1996,
+      "language": "ইংরেজি",
+      "categories": [
+        "music",
+        "poetry-drama",
+        "person"
+      ],
+      "buddhistSubject": "মাউন্ট ব্যালডি জেন কেন্দ্রে পাঁচ বছর; ভিক্ষু নাম “জিকান” (নীরবতা)",
+      "characters": [
+        "—"
+      ],
+      "featuredWork": "মাউন্ট বালডি-পরবর্তী “Ten New Songs” (২০০১)",
+      "relationType": "buddhist-creator",
+      "summary": "কিংবদন্তি গীতিকার লেওনার্দ কোহেন ১৯৯৪ থেকে পাঁচ বছর লস অ্যাঞ্জেলেসের মাউন্ট ব্যালডি জেন কেন্দ্রে কাটান এবং ১৯৯৬ সালে রিনজাই জেন ভিক্ষু হিসেবে দীক্ষা নেন—ধর্মনাম “জিকান”। তবে তিনি নিজেকে ইহুদি পরিচয় ছাড়েননি—বৌদ্ধ সাধনা ছিল সেই পরিচয়ের ওপরের স্তর।",
+      "significance": "পাশ্চাত্য পপ-কবিতায় ধ্যান ও নীরবতার সবচেয়ে গভীর কণ্ঠ; দ্বৈত ধর্মীয় পরিচয়ের সৎ উদাহরণ হিসেবেও পড়ার মতো।",
+      "details": [
+        "কোহেন বলতেন তিনি নতুন ধর্ম খুঁজছেন না—জেন তাঁর কাছে শৃঙ্খলা ও নীরবতার শিক্ষা।",
+        "মরণোত্তর “Happens to the Heart” ভিডিওটি তাঁর জেন জীবনকে চিত্রিত করে বলে সমালোচকরা লিখেছেন।"
+      ],
+      "works": [
+        {
+          "title": "Ten New Songs",
+          "year": "২০০১",
+          "medium": "অ্যালবাম",
+          "note": "জেন মঠ থেকে ফেরার পর"
+        },
+        {
+          "title": "Book of Longing",
+          "year": "২০০৬",
+          "medium": "কবিতা-গ্রন্থ",
+          "note": "মঠজীবনের লেখা ও আঁকা"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "audio",
+          "label": "ABC Radio National — “Leonard Cohen, rock star monk” শুনুন",
+          "url": "https://www.abc.net.au/listen/radionational/archived/rhythmdivine/5076662",
+          "note": "অডিও প্রামাণ্যধ্বনি"
+        },
+        {
+          "kind": "article",
+          "label": "Buddhistdoor — The Silent One",
+          "url": "https://www.buddhistdoor.net/features/the-silent-one-leonard-cohens-pursuit-of-spirituality/",
+          "note": "বিশেষ নিবন্ধ"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Buddhistdoor Global — The Silent One",
+          "url": "https://www.buddhistdoor.net/features/the-silent-one-leonard-cohens-pursuit-of-spirituality/"
+        },
+        {
+          "label": "PBS NewsHour — স্মৃতিচারণ",
+          "url": "https://www.pbs.org/newshour/arts/leonard-cohen-poetic-singer-songwriter-dies-82"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Leonard Cohen",
+        "কোহেন",
+        "জিকান",
+        "Zen monk"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Leonard_Cohen%2C_1988_01.jpg/500px-Leonard_Cohen,_1988_01.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Leonard_Cohen,_1988_01.jpg",
+        "captionBn": "লেওনার্দ কোহেন, ১৯৮৮।",
+        "credit": "Gorupdebesanez",
+        "license": "CC BY-SA 3.0",
+        "alt": "Leonard Cohen ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Leonard_Cohen,_1988_01.jpg",
+        "width": 2425,
+        "height": 3583
+      }
+    },
+    {
+      "id": "dadasaheb-phalke-buddhadev",
+      "kind": "person",
+      "titleBn": "দাদাসাহেব ফালকে",
+      "titleEn": "Dadasaheb Phalke",
+      "creatorBn": "দুন্ডিরাজ গোবিন্দ ফালকে",
+      "creatorEn": "Dhundiraj Govind Phalke",
+      "roles": [
+        "চলচ্চিত্র-পরিচালক",
+        "ভারতীয় চলচ্চিত্রের পিতা"
+      ],
+      "region": "indian",
+      "period": "modern",
+      "years": "১৮৭০–১৯৪৪; “বুদ্ধদেব” ১৯২৩",
+      "yearSort": 1923,
+      "language": "নির্বাক চলচ্চিত্র",
+      "categories": [
+        "film",
+        "person"
+      ],
+      "buddhistSubject": "বুদ্ধের জীবন নিয়ে জানা প্রথম চলচ্চিত্র “বুদ্ধদেব (Lord Buddha)”",
+      "characters": [
+        "বুদ্ধ"
+      ],
+      "featuredWork": "বুদ্ধদেব (১৯২৩)",
+      "relationType": "direct",
+      "summary": "ভারতীয় চলচ্চিত্রের জনক দাদাসাহেব ফালকের “বুদ্ধদেব” (১৯২৩) বুদ্ধের জীবন নিয়ে নথিভুক্ত প্রথম পূর্ণদৈর্ঘ্য চলচ্চিত্র—ছয় রিলের নির্বাক জীবনীচিত্র, যার সেন্সর-নথি সিনেমা-আর্কাইভে সংরক্ষিত।",
+      "significance": "বিশ্ব চলচ্চিত্রে বুদ্ধের উপস্থিতির একদম শুরুর মাইলফলক।",
+      "details": [
+        "ছবিটির সম্পূর্ণ প্রিন্টের অস্তিত্ব সম্পর্কে নিশ্চিত তথ্য নেই; নথিভুক্ত বিবরণ সেন্সর রেকর্ডে।"
+      ],
+      "works": [
+        {
+          "title": "বুদ্ধদেব (Lord Buddha)",
+          "year": "১৯২৩",
+          "medium": "নির্বাক চলচ্চিত্র",
+          "note": "৬ রিল"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "article",
+          "label": "Cinemaazi আর্কাইভে “বুদ্ধদেব” নথি",
+          "url": "https://www.cinemaazi.com/film/buddha-dev",
+          "note": "সেন্সর তথ্যসহ"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cinemaazi — Buddh Dev (Lord Buddha)",
+          "url": "https://www.cinemaazi.com/film/buddha-dev"
+        },
+        {
+          "label": "Britannica — Dadasaheb Phalke",
+          "url": "https://www.britannica.com/biography/Dadasaheb-Phalke"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Dadasaheb Phalke",
+        "ফালকে",
+        "বুদ্ধদেব ১৯২৩"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Phalke.jpg/500px-Phalke.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Phalke.jpg",
+        "captionBn": "দাদাসাহেব ফালকের ছবি।",
+        "credit": "Palaviprabhu at English Wikipedia",
+        "license": "Public domain",
+        "alt": "ফালকের সাদা-কালো ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Phalke.jpg",
+        "width": 681,
+        "height": 1211
+      }
+    },
+    {
+      "id": "amrapali-1966",
+      "kind": "work",
+      "titleBn": "“আম্রপালি” — Lekh Tandon ও বৈজয়ন্তীমালা",
+      "titleEn": "Amrapali (1966)",
+      "creatorBn": "লেখ ট্যান্ডন (পরিচালক) · বৈজয়ন্তীমালা (আম্রপালি) · Sunil Dutt (আজাতশত্রু)",
+      "creatorEn": "Lekh Tandon · Vyjayanthimala · Sunil Dutt",
+      "roles": [
+        "পরিচালক",
+        "অভিনেত্রী",
+        "অভিনেতা"
+      ],
+      "region": "indian",
+      "period": "modern",
+      "years": "১৯৬৬",
+      "yearSort": 1966,
+      "language": "হিন্দি",
+      "categories": [
+        "film"
+      ],
+      "buddhistSubject": "বৈশালীর নগরবধূ আম্রপালির বৌদ্ধ ভিক্ষুণীতে রূপান্তর",
+      "characters": [
+        "আম্রপালি/অম্বপালী",
+        "আজাতশত্রু",
+        "বুদ্ধ (পটভূমি)"
+      ],
+      "featuredWork": "আম্রপালি",
+      "relationType": "portrayal",
+      "summary": "১৯৬৬ সালের বর্ণাঢ্য ঐতিহাসিক ছবি “আম্রপালি”তে বৈজয়ন্তীমালা যুদ্ধের ভয়াবহতায় জাগ্রত হয়ে বৌদ্ধ ভিক্ষুণী হওয়ার পথ বেছে নেওয়া নর্তকীর চরিত্রে অভিনয় করেন। শঙ্কর-জয়কিষাণের সংগীত এবং অজন্তা-অনুপ্রাণিত পোশাক-নকশা (ভানু অথাইয়া) ছবিটিকে ক্লাসিক মর্যাদা দেয়।",
+      "significance": "বৌদ্ধ নারী চরিত্রকে ভারতীয় মূলধারার সিনেমার কেন্দ্রে আনার সবচেয়ে সুপরিচিত উদাহরণ।",
+      "details": [
+        "ছবিতে পরিচালক Lekh Tandon ছবি দেখানো হয়েছে।",
+        "ভানু অথাইয়ার পোশাক-গবেষণায় অজন্তার বৌদ্ধ ফ্রেস্কো ছিল সরাসরি অনুপ্রেরণা।"
+      ],
+      "works": [
+        {
+          "title": "আম্রপালি",
+          "year": "১৯৬৬",
+          "medium": "চলচ্চিত্র",
+          "note": "সংগীত: শঙ্কর-জয়কিষাণ"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "video",
+          "label": "India Video (সরকারি) পোর্টালে ছবিটির পৃষ্ঠা",
+          "url": "https://www.indiavideo.org/cinema/amrapali-1966-hindi-film-8472.php",
+          "note": "ক্লিপ ও তথ্যসহ"
+        },
+        {
+          "kind": "article",
+          "label": "The Print — আম্রপালি ছবি নিয়ে নিবন্ধ",
+          "url": "https://theprint.in/feature/reel-take/a-courtesan-without-shame-or-guilt-1966-film-amrapali-gave-us-a-proud-powerful-heroine/2141896/",
+          "note": "বিশ্লেষণ"
+        }
+      ],
+      "sources": [
+        {
+          "label": "India Video — Amrapali 1966",
+          "url": "https://www.indiavideo.org/cinema/amrapali-1966-hindi-film-8472.php"
+        },
+        {
+          "label": "ThePrint — Reel Take on Amrapali",
+          "url": "https://theprint.in/feature/reel-take/a-courtesan-without-shame-or-guilt-1966-film-amrapali-gave-us-a-proud-powerful-heroine/2141896/"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Amrapali 1966",
+        "আম্রপালি চলচ্চিত্র",
+        "Vyjayanthimala",
+        "Lekh Tandon"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Lekh_Tandon.jpg/500px-Lekh_Tandon.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Lekh_Tandon.jpg",
+        "captionBn": "Lekh Tandon—“আম্রপালি” ছবির পরিচালক।",
+        "credit": "Camaal",
+        "license": "Public domain",
+        "alt": "Lekh Tandon ছবি",
+        "objectPosition": "50% 25%",
+        "type": "portrait",
+        "file": "Lekh_Tandon.jpg",
+        "width": 1000,
+        "height": 750
+      }
+    },
+    {
+      "id": "angulimala-1960",
+      "kind": "work",
+      "titleBn": "“অঙ্গুলিমাল” — বিজয় ভট্ট",
+      "titleEn": "Angulimaal (1960)",
+      "creatorBn": "বিজয় ভট্ট (পরিচালক) · Bharat Bhushan · Nimmi · অনিল বিশ্বাস (সংগীত)",
+      "creatorEn": "Vijay Bhatt · Bharat Bhushan · Anil Biswas",
+      "roles": [
+        "পরিচালক",
+        "অভিনেতা",
+        "সংগীত-পরিচালক"
+      ],
+      "region": "indian",
+      "period": "modern",
+      "years": "১৯৬০",
+      "yearSort": 1960,
+      "language": "হিন্দি",
+      "categories": [
+        "film",
+        "music"
+      ],
+      "buddhistSubject": "খুনি ডাকাত অঙ্গুলিমালা ও বুদ্ধের করুণায় তার রূপান্তর (অঙ্গুলিমালা সূত্র থেকে)",
+      "characters": [
+        "অঙ্গুলিমালা",
+        "বুদ্ধ"
+      ],
+      "featuredWork": "অঙ্গুলিমাল",
+      "relationType": "portrayal",
+      "summary": "থাই সরকারের অর্থায়নে বুদ্ধের ২,৫০০ বছর পূর্তি উপলক্ষে বানানো “অঙ্গুলিমাল” (১৯৬০) অঙ্গুলিমালা সূত্রের বিখ্যাত দৃশ্য—দৌড়ে তাড়া করেও ধীরে হাঁটা বুদ্ধকে ধরতে না পারা—জনপ্রিয় সিনেমায় নিয়ে আসে। সংগীতে কিংবদন্তি অনিল বিশ্বাস।",
+      "significance": "দক্ষিণ-পূর্ব এশিয়া ও ভারতের আন্তর্জাতিক বৌদ্ধ সহযোগিতার চলচ্চিত্র; বাংলাদেশের বুদ্ধ-কীর্তনেও অঙ্গুলিমালা অন্যতম প্রিয় পালা।",
+      "details": [
+        "বাংলাদেশের কীর্তনধারায় অঙ্গুলিমালার কাহিনি পরিবেশনের কথা এই আর্কাইভের “বুদ্ধ-কীর্তন ধারা” এন্ট্রিতেও পাবেন।"
+      ],
+      "works": [
+        {
+          "title": "অঙ্গুলিমাল",
+          "year": "১৯৬০",
+          "medium": "চলচ্চিত্র",
+          "note": "সংগীত: অনিল বিশ্বাস"
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "video",
+          "label": "ছবিটির আর্কাইভ-আপলোড (YouTube অনুসন্ধান)",
+          "url": "https://www.youtube.com/results?search_query=Angulimaal+1960+Vijay+Bhatt",
+          "note": "প্রাপ্যতা যাচাই করে দেখুন"
+        },
+        {
+          "kind": "artwork",
+          "label": "অঙ্গুলিমালার প্রাচীন ভাস্কর্যচিত্র দেখুন",
+          "url": "https://commons.wikimedia.org/wiki/File:Angulimala.jpg",
+          "note": "শ্রাবস্তীর মন্দিরচিত্র"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cinemaazi — Angulimaal",
+          "url": "https://www.cinemaazi.com/film/angulimaal"
+        },
+        {
+          "label": "Rotten Tomatoes — Angulimaal",
+          "url": "https://www.rottentomatoes.com/m/angulimaal"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Angulimaal 1960",
+        "অঙ্গুলিমাল",
+        "Vijay Bhatt",
+        "অঙ্গুলিমালা সূত্র"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Director_Vijay_Bhatt.jpg/500px-Director_Vijay_Bhatt.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Director_Vijay_Bhatt.jpg",
+        "captionBn": "বিজয় ভট্ট—“অঙ্গুলিমাল” ছবির পরিচালক।",
+        "credit": "FilmIndia magazine, March 1942",
+        "license": "Public domain",
+        "alt": "বিজয় ভট্টের ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Director_Vijay_Bhatt.jpg",
+        "width": 520,
+        "height": 733
+      }
+    },
+    {
+      "id": "khyentse-norbu-the-cup",
+      "kind": "person",
+      "titleBn": "খেন্তসে নোর্বু (জোংসার খেন্তসে রিনপোছে)",
+      "titleEn": "Khyentse Norbu",
+      "creatorBn": "জোংসার জামিয়াং খেন্তসে রিনপোছে",
+      "creatorEn": "Dzongsar Jamyang Khyentse Rinpoche",
+      "roles": [
+        "বৌদ্ধ লামা",
+        "চলচ্চিত্র-পরিচালক",
+        "লেখক"
+      ],
+      "region": "international",
+      "period": "contemporary",
+      "years": "জন্ম ১৯৬১; “The Cup” ১৯৯৯",
+      "yearSort": 1999,
+      "language": "তিব্বতি · হিন্দি · ইংরেজি",
+      "categories": [
+        "film",
+        "person"
+      ],
+      "buddhistSubject": "বিশ্বকাপ ফুটবলপাগল বালক-ভিক্ষুদের বিহারজীবন",
+      "characters": [
+        "অর্গিয়েন (জামিয়াং লোদ্রো)সহ প্রকৃত ভিক্ষু-অভিনেতা"
+      ],
+      "featuredWork": "The Cup (ফোর্বা)",
+      "relationType": "buddhist-creator",
+      "summary": "ভুটানি লামা ও বের্তোলুচ্চির “Little Buddha”-র সহকারী খেন্তসে নোর্বু প্রথম ভুটানি পূর্ণদৈর্ঘ্য ছবি “The Cup” (১৯৯৯) বানান সত্যিকারের ভিক্ষুদের দিয়ে—বিশ্বকাপ ফাইনাল দেখতে টিভি জোগাড়ের মিষ্টি লড়াইয়ে মঠজীবন ও বিশ্বজগতের মিলন।",
+      "significance": "একজন প্রকৃত বৌদ্ধ আচার্যের নিজের হাতে বানানো আন্তর্জাতিক চলচ্চিত্র—ভেতর থেকে দেখা ভিক্ষুজীবনের আনন্দময় দলিল।",
+      "details": [
+        "অভিনেতারা অধিকাংশই ছিলেন ছবির প্রেক্ষাগৃহ মঠেরই ভিক্ষু ছাত্র।"
+      ],
+      "works": [
+        {
+          "title": "The Cup",
+          "year": "১৯৯৯",
+          "medium": "চলচ্চিত্র",
+          "note": " কান উৎসবে প্রদর্শিত"
+        },
+        {
+          "title": "Travellers and Magicians",
+          "year": "২০০৩",
+          "medium": "চলচ্চিত্র",
+          "note": ""
+        }
+      ],
+      "quote": null,
+      "media": [
+        {
+          "kind": "article",
+          "label": "Tricycle পত্রিকায় The Cup-পরিচিতি",
+          "url": "https://tricycle.org/magazine/cup/",
+          "note": "বৌদ্ধ চলচ্চিত্র-আলোচনা"
+        },
+        {
+          "kind": "article",
+          "label": "রজার ইবার্টের সমালোচনা",
+          "url": "https://www.rogerebert.com/reviews/the-cup-2000",
+          "note": "RogerEbert.com"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Tricycle — The Cup",
+          "url": "https://tricycle.org/magazine/cup/"
+        },
+        {
+          "label": "RogerEbert.com — The Cup review",
+          "url": "https://www.rogerebert.com/reviews/the-cup-2000"
+        }
+      ],
+      "libraryIds": [],
+      "aliases": [
+        "Khyentse Norbu",
+        "The Cup film",
+        "খেন্তসে নোর্বু",
+        "ভুটান চলচ্চিত্র"
+      ],
+      "image": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Dzongsar_Jamyang_Khyentse_Rinpoche.jpg/500px-Dzongsar_Jamyang_Khyentse_Rinpoche.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Dzongsar_Jamyang_Khyentse_Rinpoche.jpg",
+        "captionBn": "জোংসার জামিয়াং খেন্তসে রিনপোছে।",
+        "credit": "Pedro Rocha",
+        "license": "CC BY 2.0",
+        "alt": "মেরুন চীবরে খেন্তসে রিনপোছের ছবি",
+        "objectPosition": "50% 15%",
+        "type": "portrait",
+        "file": "Dzongsar_Jamyang_Khyentse_Rinpoche.jpg",
+        "width": 825,
+        "height": 1024
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
-  "schema_version": "2026-10-22.practice.v1",
-  "updated": "২২ অক্টোবর ২০২৬",
-  "disclaimer": "এই অধ্যায়গুলোতে ত্রিপিটকের ক্যানোনিক্যাল সূত্রের ক্ষেত্রে রেফারেন্স (যেমন DN 31, AN 8.54), যাচাই করা পালি মূল-পদ ও বাংলায় ভাবানুবাদ-সার দেওয়া হয়েছে — পূর্ণাঙ্গ অনুবাদের বদলে নয়। অট্ঠকথার কাহিনি ও পরবর্তী পরিত্ত-গাথাকে সেভাবেই চিহ্নিত করা হয়েছে। বন্দনা ও উৎসর্গের গাথা বিহার, অঞ্চল ও ছাপা বন্দনা-বই ভেদে বদলায়; যেখানে হুবহু পাঠ নিশ্চিত করা যায়নি সেখানে পদ না বসিয়ে প্রচলিত ধারাটি বর্ণনা করা হয়েছে। নিজের বিহারের ভান্তের পড়ানো পাঠই আনুষ্ঠানিক কাজে অনুসরণ করুন।",
+  "schema_version": "2026-10-22.practice.v2",
+  "updated": "2026-10-22",
+  "disclaimer": "দাবি: এই পাতা শিক্ষামূলক সারসংক্ষেপ। ক্যানোনিক্যাল পদ, বিনয়ভিত্তিক বাক্য ও আঞ্চলিক বন্দনা-বইয়ের পাঠ আলাদা করে চিহ্নিত। যেখানে অভিন্ন পালি পাঠ যাচাই করা যায়নি, সেখানে গাথা বানানো হয়নি—নিজের বিহার/আচার্যের প্রচলিত পাঠ অনুসরণ করুন। ভাষা অন্য কোথাও না থাকলে ইংরেজি ভাবার্থ দেওয়া হয়েছে; অন্য ভাষা/লিপি শুধু নির্ভরযোগ্যভাবে মিললেই যোগ করা হয়েছে।",
   "grihi": {
     "title": "গৃহী নীতি ও নৈতিকতা",
     "leads": "ত্রিপিটকে ভিক্ষুর পাশাপাশি গৃহীর জন্যও পরিপূর্ণ নৈতিক জীবনের কথা আছে — শীল, দান, ভাবনা, ন্যায্য জীবিকা ও পারিবারিক সম্পর্ক। নিচের প্রতিটি অনুচ্ছেদে মূল উৎস, মূল পদ ও আজকের জীবনে প্রয়োগ দেওয়া হলো।",
@@ -20,7 +20,10 @@
         ],
         "practice": "প্রতিদিন সকালে ত্রিশরণ ও পঞ্চশীল স্মরণ, সামর্থ্য অনুযায়ী নিয়মিত দান, সপ্তাহে অন্তত কিছুক্ষণ মৈত্রীভাবনা — এই তিনটি মিলেই গৃহী-সাধনার ন্যূনতম কাঠামো।",
         "sources": [
-          {"t": "SuttaCentral — AN 5.177 Vaṇijjā Sutta", "u": "https://suttacentral.net/an5.177/en/sujato"}
+          {
+            "t": "SuttaCentral — AN 5.177 Vaṇijjā Sutta",
+            "u": "https://suttacentral.net/an5.177/en/sujato"
+          }
         ]
       },
       {
@@ -39,7 +42,10 @@
         ],
         "practice": "বিহারে ভিক্ষুর কাছ থেকে বা গৃহে বুদ্ধাসনের সামনে ত্রিশরণ-সহ পঞ্চশীল নেওয়া যায়। কোনো শীল ভাঙলে অনুতাপ, ক্ষমা-প্রার্থনা ও পুনরায় গ্রহণ প্রচলিত রীতি।",
         "sources": [
-          {"t": "SuttaCentral — Khuddakapāṭha (শরণাগমন ও শিক্ষাপদ)", "u": "https://suttacentral.net/khp/en/sujato"}
+          {
+            "t": "SuttaCentral — Khuddakapāṭha (শরণাগমন ও শিক্ষাপদ)",
+            "u": "https://suttacentral.net/khp/en/sujato"
+          }
         ]
       },
       {
@@ -59,8 +65,14 @@
         ],
         "practice": "উপোসথের তারিখ সাইটের পঞ্জিকা পাতায় দেখা যায়। অসুস্থ, গর্ভবতী বা ওষুধ-নির্ভর ব্যক্তিরা শীল গ্রহণের আগে চিকিৎসক ও ভান্তের পরামর্শ নেবেন — শীল শরীরের ক্ষতির জন্য নয়।",
         "sources": [
-          {"t": "SuttaCentral — AN 3.70 Uposatha Sutta", "u": "https://suttacentral.net/an3.70/en/sujato"},
-          {"t": "চর্যাভূমি — আজকের পঞ্জিকা ও উপোসথ", "u": "calendar.html"}
+          {
+            "t": "SuttaCentral — AN 3.70 Uposatha Sutta",
+            "u": "https://suttacentral.net/an3.70/en/sujato"
+          },
+          {
+            "t": "চর্যাভূমি — আজকের পঞ্জিকা ও উপোসথ",
+            "u": "calendar.html"
+          }
         ]
       },
       {
@@ -81,8 +93,14 @@
         ],
         "practice": "পরিবারের প্রতিটি সম্পর্ক ধরে নিজের পালনীয় পাঁচটি কর্তব্য পূর্ণ তালিকা থেকে মিলিয়ে দেখুন — নিচে পূর্ণ পাঠের লিংক দেওয়া হলো।",
         "sources": [
-          {"t": "SuttaCentral — DN 31 Sigālovāda (ইংরেজি অনুবাদসহ পালি)", "u": "https://suttacentral.net/dn31/en/sujato"},
-          {"t": "Access to Insight — DN 31 (Narada Thera)", "u": "https://accesstoinsight.org/tipitaka/dn/dn.31.0.nara.html"}
+          {
+            "t": "SuttaCentral — DN 31 Sigālovāda (ইংরেজি অনুবাদসহ পালি)",
+            "u": "https://suttacentral.net/dn31/en/sujato"
+          },
+          {
+            "t": "Access to Insight — DN 31 (Narada Thera)",
+            "u": "https://accesstoinsight.org/tipitaka/dn/dn.31.0.nara.html"
+          }
         ]
       },
       {
@@ -101,7 +119,10 @@
         ],
         "practice": "মাসিক হিসাব রাখা, জরুরি সঞ্চয় গড়া, ঋণের ফাঁদ এড়ানো ও দানের বাজেট রাখা — এই সুত্তের সরাসরি আধুনিক প্রয়োগ।",
         "sources": [
-          {"t": "SuttaCentral — AN 8.54 Dīghajāṇu", "u": "https://suttacentral.net/an8.54/en/sujato"}
+          {
+            "t": "SuttaCentral — AN 8.54 Dīghajāṇu",
+            "u": "https://suttacentral.net/an8.54/en/sujato"
+          }
         ]
       },
       {
@@ -118,7 +139,10 @@
         ],
         "practice": "ঋণ শোধকে দান-বিলাসের আগে অগ্রাধিকার দিন; সম্পদ বাড়ানোর প্রতিযোগিতায় অনবজ্জ-সুখ নষ্ট হয় এমন কাজ থেকে বিরত থাকুন।",
         "sources": [
-          {"t": "SuttaCentral — AN 4.62 Anaṇa Sutta", "u": "https://suttacentral.net/an4.62/en/sujato"}
+          {
+            "t": "SuttaCentral — AN 4.62 Anaṇa Sutta",
+            "u": "https://suttacentral.net/an4.62/en/sujato"
+          }
         ]
       },
       {
@@ -138,8 +162,14 @@
         ],
         "practice": "বিহার বা সংগঠন চালাতে: নিয়মিত সভা, মিনিটসহ সিদ্ধান্ত, বিধি বদলের আগে আলোচনা, প্রবীণ ও নারীদের কণ্ঠের জায়গা — সুত্তের নীতিগুলোর আধুনিক প্রশাসনিক রূপ।",
         "sources": [
-          {"t": "SuttaCentral — DN 16 Mahāparinibbāna", "u": "https://suttacentral.net/dn16/en/sujato"},
-          {"t": "SuttaCentral — AN 7.21 Sārandada (বজ্জী-নীতির অন্য পাঠ)", "u": "https://suttacentral.net/an7.21/en/sujato"}
+          {
+            "t": "SuttaCentral — DN 16 Mahāparinibbāna",
+            "u": "https://suttacentral.net/dn16/en/sujato"
+          },
+          {
+            "t": "SuttaCentral — AN 7.21 Sārandada (বজ্জী-নীতির অন্য পাঠ)",
+            "u": "https://suttacentral.net/an7.21/en/sujato"
+          }
         ]
       },
       {
@@ -162,8 +192,14 @@
         ],
         "practice": "আজকের পাঠে এর সার দুটি: পরিবারের ভেতরের কথা বাইরে নয় ও বাইরের নিন্দা ভেতরে নয় (গোপনীয়তা ও পরনিন্দা-ত্যাগ), আর বড়দের প্রতি শ্রদ্ধা। উপদেশগুলো একপাক্ষিক মনে হলে সিগালোবাদ সুত্তের পারস্পরিক কর্তব্যের সঙ্গে মিলিয়ে পড়ুন — সেখানে স্বামীরও পাঁচটি কর্তব্য স্পষ্ট আছে।",
         "sources": [
-          {"t": "Dictionary of Pali Proper Names — Visākhā (দশ উপদেশের উল্লেখসহ)", "u": "https://www.palikanon.com/english/pali_names/vy/visaakhaa.htm"},
-          {"t": "Buddhism in Translations — The Story of Visākhā (অর্থ-ব্যাখ্যাসহ)", "u": "https://obo.genaud.net/dhamma-vinaya/bit/bit-101.htm"}
+          {
+            "t": "Dictionary of Pali Proper Names — Visākhā (দশ উপদেশের উল্লেখসহ)",
+            "u": "https://www.palikanon.com/english/pali_names/vy/visaakhaa.htm"
+          },
+          {
+            "t": "Buddhism in Translations — The Story of Visākhā (অর্থ-ব্যাখ্যাসহ)",
+            "u": "https://obo.genaud.net/dhamma-vinaya/bit/bit-101.htm"
+          }
         ]
       }
     ]
@@ -190,7 +226,10 @@
         ],
         "practice": "বিবাহ, গৃহপ্রবেশ, জন্মদিন, নতুন কাজের শুরুতে বাংলাদেশের বিহারে এই সুত্ত পরিত্রাণ হিসেবে পাঠ হয়।",
         "sources": [
-          {"t": "SuttaCentral — Snp 2.4 Mahāmaṅgala", "u": "https://suttacentral.net/snp2.4/en/sujato"}
+          {
+            "t": "SuttaCentral — Snp 2.4 Mahāmaṅgala",
+            "u": "https://suttacentral.net/snp2.4/en/sujato"
+          }
         ]
       },
       {
@@ -208,7 +247,10 @@
         ],
         "practice": "রাতে ঘুমের আগে বা ভয়-অশান্তিতে পাঠের রীতি প্রচলিত। ভাবনা হিসেবে চর্চা করতে বিহারের ভাবনা-অনুষ্ঠানে অংশ নিন।",
         "sources": [
-          {"t": "SuttaCentral — Snp 1.8 Metta Sutta", "u": "https://suttacentral.net/snp1.8/en/sujato"}
+          {
+            "t": "SuttaCentral — Snp 1.8 Metta Sutta",
+            "u": "https://suttacentral.net/snp1.8/en/sujato"
+          }
         ]
       },
       {
@@ -226,7 +268,10 @@
         ],
         "practice": "অসুস্থতা, বিপদ বা নতুন উদ্যোগে পরিত্রাণের সময় পাঠ হয়; পাঠের পাশাপাশি চিকিৎসা ও বাস্তব সতর্কতা আবশ্যক — পরিত্রাণ তার বিকল্প নয়।",
         "sources": [
-          {"t": "SuttaCentral — Snp 2.1 Ratana Sutta", "u": "https://suttacentral.net/snp2.1/en/sujato"}
+          {
+            "t": "SuttaCentral — Snp 2.1 Ratana Sutta",
+            "u": "https://suttacentral.net/snp2.1/en/sujato"
+          }
         ]
       },
       {
@@ -248,7 +293,10 @@
         ],
         "practice": "বাংলাদেশে বিবাহের আশীর্বাদে এই গাথা প্রায় অনিবার্য। প্রতিটি বিজয়ের পেছনের কাহিনি ধম্মপদ-অট্ঠকথা ও জাতকে পাওয়া যায়।",
         "sources": [
-          {"t": "Jayamaṅgala Gāthā — পূর্ণ পাঠ ও অনুবাদ (PDF)", "u": "https://www.mahamevnawa.ca/uploads/1/0/7/1/107195823/jayamangala_gatha_v1.pdf"}
+          {
+            "t": "Jayamaṅgala Gāthā — পূর্ণ পাঠ ও অনুবাদ (PDF)",
+            "u": "https://www.mahamevnawa.ca/uploads/1/0/7/1/107195823/jayamangala_gatha_v1.pdf"
+          }
         ]
       },
       {
@@ -265,8 +313,14 @@
           "এটি কোনো “মন্ত্র-সিদ্ধি”র দাবি নয় — ঐতিহ্যগতভাবে একে স্মরণ (anussati) ও পরিত্ত হিসেবেই পাঠ করা হয়।"
         ],
         "sources": [
-          {"t": "DhammaTalks — Chanting Guide: Jinapañjara Gāthā (পালি ও অনুবাদ)", "u": "https://www.dhammatalks.org/books/ChantingGuide/Section0093.html"},
-          {"t": "Wikipedia — Jinapañjara (ইতিহাস ও সোমদেজ তো)", "u": "https://en.wikipedia.org/wiki/Jinapa%C3%B1jara"}
+          {
+            "t": "DhammaTalks — Chanting Guide: Jinapañjara Gāthā (পালি ও অনুবাদ)",
+            "u": "https://www.dhammatalks.org/books/ChantingGuide/Section0093.html"
+          },
+          {
+            "t": "Wikipedia — Jinapañjara (ইতিহাস ও সোমদেজ তো)",
+            "u": "https://en.wikipedia.org/wiki/Jinapa%C3%B1jara"
+          }
         ]
       },
       {
@@ -284,198 +338,1127 @@
         ],
         "practice": "বাংলাদেশের ভাবনাকেন্দ্রগুলোতে ১০-দিনের কোর্সে এই কাঠামোই ধাপে ধাপে পড়ানো হয়; ঠিকানা সাইটের প্রতিষ্ঠান ও স্থান-খুঁজুন অংশে পাবেন।",
         "sources": [
-          {"t": "SuttaCentral — DN 22 Mahāsatipaṭṭhāna", "u": "https://suttacentral.net/dn22/en/sujato"},
-          {"t": "SuttaCentral — MN 10 Satipaṭṭhāna (সংক্ষিপ্ত)", "u": "https://suttacentral.net/mn10/en/sujato"}
+          {
+            "t": "SuttaCentral — DN 22 Mahāsatipaṭṭhāna",
+            "u": "https://suttacentral.net/dn22/en/sujato"
+          },
+          {
+            "t": "SuttaCentral — MN 10 Satipaṭṭhāna (সংক্ষিপ্ত)",
+            "u": "https://suttacentral.net/mn10/en/sujato"
+          }
         ]
       }
     ]
   },
   "bandana": {
     "title": "বন্দনা, উৎসর্গ, প্রতীক ও জীবনাচার",
-    "leads": "গৃহে ও বিহারে প্রতিদিনের বন্দনা ও উৎসর্গের প্রচলিত রূপ, বৌদ্ধ প্রতীক ও রঙের ব্যাখ্যা এবং বিবাহ ও সৎকারের ক্ষেত্রে ধর্মীয় অংশটুকু। মনে রাখুন: উৎসর্গের গাথা বই ও অঞ্চলভেদে বদলায় — এখানে কাঠামো ও সর্বজনীন পদগুলোই দেওয়া হয়েছে।",
+    "leads": "৪০টি অদ্বিতীয় বিষয়: বন্দনা, আহ্বান, পরিত্ত, উৎসর্গ, প্রতীক এবং বিবাহ-সৎকার।",
+    "language_note": "ভাষা: যাচাইকৃত পালি মূল, বাংলা ভাবার্থ ও English meaning দেওয়া হয়েছে। সংস্কৃত, চীনা, তিব্বতি বা থাই/বার্মিজ/সিংহলি লিপি শুধু সেখানেই যেখানে নির্ভরযোগ্য রূপ আছে। পালি অন্য লিপিতে লেখা হলে তা অনুবাদ নয়, একই ভাষা।",
+    "dedup_note": "ডবল এন্ট্রি নেই: ত্রিরত্নকে বুদ্ধ/ধর্ম/সংঘ তিনটি এন্ট্রিতে ভাগ করা হয়েছে; জল উৎসর্গ ও জল ঢেলে পুণ্যদান আলাদা; ধ্বজা উৎসর্গ ও পতাকার রং-ব্যাখ্যা আলাদা; সাধারণ চীবর ও কঠিন আলাদা; ধূপের দুই সংস্করণ একই এন্ট্রিতে একত্র; বুদ্ধমূর্তি উৎসর্গ, অভিষেক/জীবন্যাস ও বিহারদান তিনটি আলাদা ধাপ হিসেবে রাখা হয়েছে।",
     "groups": [
       {
-        "title": "ক. বন্দনা",
-        "intro": "সাধারণ ক্রম: বুদ্ধাসন/বিহারে সাজানো → ত্রিরত্ন বন্দনা → ত্রিশরণ → পঞ্চশীল → উৎসর্গ ও পরিত্ত → পুণ্যদান (জল ঢেলে)। বিহারভেদে ক্রমে সামান্য হেরফের হয়।",
+        "id": "vandana-recollection",
+        "title": "ক. বন্দনা ও স্মরণ",
+        "intro": "সাধারণ ক্রম: আসন সাজানো → নমো তস্স → বুদ্ধ, ধর্ম ও সংঘ গুণস্মরণ → ত্রিশরণ → শীল → উৎসর্গ/পরিত্ত → পুণ্যদান। বিহারভেদে ক্রমে সামান্য পরিবর্তন হয়।",
         "items": [
           {
-            "title": "বুদ্ধ, ধর্ম ও সংঘ বন্দনা (ত্রিরত্ন বন্দনা)",
-            "pali": "Buddha-vandanā · Dhamma-vandanā · Saṅgha-vandanā",
-            "ref": "ত্রিপিটকে বারবার আসা অনুস্মৃতি-পদ",
-            "status": "ক্যানোনিক্যাল পদ",
-            "intro": "প্রতিদিনের বন্দনার মূল হলো ত্রিরত্নের গুণানুস্মৃতি; এই তিন পদই সবচেয়ে বেশি প্রচলিত।",
-            "pali_text": "Iti pi so Bhagavā Arahaṁ Sammāsambuddho…\nSvākkhāto Bhagavatā Dhammo…\nSupaṭipanno Bhagavato Sāvakasaṅgho…",
-            "points": [
-              "বুদ্ধ বন্দনা: Iti pi so… দিয়ে শুরু নব বুদ্ধগুণ (অরহং, সম্মাসম্বুদ্ধো ইত্যাদি)।",
-              "ধর্ম বন্দনা: Svākkhāto… দিয়ে ছয় ধর্মগুণ (সন্দিট্ঠিকো, অকালিকো…)।",
-              "সংঘ বন্দনা: Supaṭipanno… দিয়ে সংঘের গুণ ও “পুণ্যক্ষেত্র” রূপ।",
-              "এর আগে সাধারণত “Namo tassa Bhagavato Arahato Sammāsambuddhassa” তিনবার পাঠ হয়।"
+            "id": "namo-tassa",
+            "title": "নমো তস্স — প্রারম্ভিক প্রণাম",
+            "title_en": "Preliminary Homage",
+            "pali": "Namaskāra",
+            "ref": "প্রায় সব থেরবাদী পাঠের শুরু",
+            "status": "প্রচলিত প্রারম্ভিক পদ",
+            "intro": "বন্দনা, শীলগ্রহণ, পরিত্ত বা দেশনা শুরুর আগে সাধারণত এই পদটি তিনবার বলা হয়। এটি বুদ্ধের প্রতি প্রণাম; পরে ত্রিশরণ ও শীলের দিকে মনকে নিয়ে যাওয়ার দরজা।",
+            "pali_text": "Namo tassa bhagavato arahato sammāsambuddhassa. (×3)",
+            "bn_meaning": "সেই ভগবান, অর্হৎ ও সম্যকসম্বুদ্ধকে আমার নমস্কার।",
+            "en_meaning": "Homage to the Blessed One, the Worthy One, the perfectly self-awakened One.",
+            "other_langs": [
+              {
+                "lang": "পালি · থাই লিপি",
+                "text": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ",
+                "note": "থাই উচ্চারণভিত্তিক সাধারণ লেখা; ভাষা পালি।"
+              },
+              {
+                "lang": "পালি · বার্মিজ লিপি",
+                "text": "နမော တဿ ဘဂဝတော အရဟတော သမ္မာသမ္ဗုဒ္ဓဿ",
+                "note": "বার্মিজ লিপিতে একই পালি বাক্য।"
+              },
+              {
+                "lang": "পালি · সিংহলি লিপি",
+                "text": "නමෝ තස්ස භගවතෝ අරහතෝ සම්මා සම්බුද්ධස්ස",
+                "note": "সিংহলি লিপিতে একই পালি বাক্য।"
+              }
             ],
-            "sources": [
-              {"t": "চর্যাভূমি লাইব্রেরি — বুদ্ধ বন্দনার অডিও ও পাঠ", "u": "library.html"}
-            ]
-          },
-          {
-            "title": "ত্রিশরণ ও অরহট বন্দনা",
-            "pali": "Tisaraṇa · Arahant-vandanā",
-            "ref": "প্রতিটি ধর্মীয় কাজের সূচনা",
-            "status": "ক্যানোনিক্যাল পদ ও প্রচলিত পাঠ",
-            "pali_text": "Buddhaṁ saraṇaṁ gacchāmi.\nDhammaṁ saraṇaṁ gacchāmi.\nSaṅghaṁ saraṇaṁ gacchāmi.\n(দুতিযম্পি…, ততিযম্পি… — দ্বিতীয় ও তৃতীয়বার একইভাবে)",
             "points": [
-              "ত্রিশরণ তিনবার করে পাঠের রীতি প্রচলিত; এরপর পঞ্চশীল বা অষ্টশীল গ্রহণ।",
-              "“অরহট বন্দনা” বলতে অর্হৎত্বগুণ স্মরণ করে পাঠিত পদ (বুদ্ধগুণের “Arahaṁ” ধারা) বইভেদে ভিন্নভাবে সাজানো থাকে — নিজের বন্দনা-বইয়ের পাঠ অনুসরণ করুন।"
-            ]
+              "“Namo” মানে নমস্কার/প্রণাম; এটি কোনো সৃষ্টিকর্তার কাছে প্রার্থনা নয়, বুদ্ধগুণের স্মরণ।",
+              "একই পালি পদটি দেশভেদে বাংলা, বার্মিজ, থাই, সিংহলি প্রভৃতি লিপিতে লেখা হয়—লিপি বদলালেও ভাষা পালি থাকে।"
+            ],
+            "practice": "তিনবার বলার সময় তাড়া না দিয়ে বুদ্ধের অর্হত্ত্ব ও সম্বোধির অর্থ একবার মনে করুন।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              },
+              {
+                "t": "ChantPali — Homage chanting",
+                "u": "https://chantpali.org/homage.html"
+              },
+              {
+                "t": "Wiktionary — “Namo tassa” বার্মিজ/থাই/সিংহলি লিপির রূপ",
+                "u": "https://en.wiktionary.org/wiki/%E1%80%94%E1%80%99%E1%80%B1%E1%80%AC%E1%80%90%E1%80%BF_%E1%80%98%E1%80%82%E1%80%9D%E1%80%90%E1%80%B1%E1%80%AC_%E1%80%A1%E1%80%9B%E1%80%9F%E1%80%90%E1%80%B1%E1%80%AC_%E1%80%9E%E1%80%99%E1%80%B9%E1%80%99%E1%80%AC%E1%80%9E%E1%80%99%E1%80%B9%E1%80%97%E1%80%AF%E1%80%92%E1%80%B9%E1%80%93%E1%80%BF"
+              }
+            ],
+            "aliases": "নমো তস্স নমস্কার প্রণাম Namo tassa homage"
           },
           {
+            "id": "buddha-vandana",
+            "title": "বুদ্ধ বন্দনা",
+            "title_en": "Homage to the Buddha",
+            "pali": "Buddha-vandanā · Buddhānussati",
+            "ref": "নিকায়ে বারবার পাওয়া বুদ্ধগুণ-অনুস্মৃতি",
+            "status": "ক্যানোনিক্যাল গুণপদ + স্থানীয় বন্দনা গাথা",
+            "intro": "ত্রিরত্নের প্রথম রত্ন বুদ্ধের নয়টি গুণ স্মরণ করাই বুদ্ধ বন্দনার কেন্দ্র। নিচে প্রথমে ক্যানোনিক্যাল গুণপদ, তারপর বাংলাদেশের পাঠ্যবই ও বন্দনা-বইয়ে বহুল প্রচলিত মারবিজয়-গাথাটি দেওয়া হলো; দুটিকে একই পাঠ বলে গুলিয়ে ফেলবেন না।",
+            "pali_text": "Iti pi so bhagavā arahaṁ, sammāsambuddho, vijjācaraṇasampanno, sugato, lokavidū, anuttaro purisadammasārathi, satthā devamanussānaṁ, buddho, bhagavā’ti.\n\nYo sannisinno varabodhimūle,\nmāraṁ sasenaṁ mahatiṁ vijetvā;\nSambodhim āgacchi anantañāṇo,\nlokuttamo taṁ paṇamāmi buddhaṁ.",
+            "bn_meaning": "তিনিই ভগবান—অর্হৎ, সম্যকসম্বুদ্ধ, বিদ্যা ও আচরণে সম্পূর্ণ, সুগত, লোকবিদ, দমনীয় মানুষের অনুপম সারথি, দেবতা ও মানুষের শিক্ষক, বুদ্ধ ও ভগবান। শ্রেষ্ঠ বোধিবৃক্ষমূলে বসে সসৈন্য বিশাল মারকে জয় করে সম্বোধি লাভ করা অনন্তজ্ঞানী ও লোকোত্তম সেই বুদ্ধকে প্রণাম করি।",
+            "en_meaning": "Such is the Blessed One: worthy, perfectly awakened, accomplished in knowledge and conduct, well-gone, knower of the world, incomparable trainer of those to be tamed, teacher of gods and humans, awakened and blessed. I salute the world-transcending Buddha of boundless knowledge who sat at the foot of the noble Bodhi tree, conquered Māra with his army, and attained perfect awakening.",
+            "other_langs": [],
+            "points": [
+              "নয় গুণ: অরহং, সম্মাসম্বুদ্ধো, বিজ্জাচরণসম্পন্নো, সুগতো, লোকবিদূ, অনুত্তরো পুরিসদম্মসারথি, সত্থা দেবমনুস্সানং, বুদ্ধো, ভগবা।",
+              "“ত্রিরত্ন বন্দনা” আলাদা তিনটি পদে বিভক্ত রাখা হয়েছে—এই বুদ্ধ, পরের ধর্ম ও সংঘ বন্দনা মিলেই পূর্ণ ত্রিরত্ন বন্দনা; চতুর্থবার একই লেখা পুনরাবৃত্তি করা হয়নি।"
+            ],
+            "practice": "প্রতিদিন অন্তত একটি গুণ বেছে তার অর্থ অনুযায়ী নিজের আচরণ মিলিয়ে দেখুন—যেমন আজ “সুগতো” স্মরণ করে সৎপথে চলার संकल्प।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              },
+              {
+                "t": "NCTB-ভিত্তিক বাংলা পাঠ — ত্রিরত্ন বন্দনা",
+                "u": "https://sattacademy.com/guide/%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%A8%E0%A6%BE-%E0%A6%93-%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE"
+              },
+              {
+                "t": "চর্যাভূমি লাইব্রেরি — বন্দনার পাঠ ও অডিও",
+                "u": "library.html"
+              }
+            ],
+            "aliases": "ত্রিরত্ন বন্দনা Tiratana Ratanattaya Buddha vandana Iti pi so"
+          },
+          {
+            "id": "dhamma-vandana",
+            "title": "ধর্ম বন্দনা",
+            "title_en": "Homage to the Dhamma",
+            "pali": "Dhamma-vandanā · Dhammānussati",
+            "ref": "নিকায়ে বারবার পাওয়া ধর্মগুণ-অনুস্মৃতি",
+            "status": "ক্যানোনিক্যাল গুণপদ + স্থানীয় বন্দনা গাথা",
+            "intro": "ধর্ম বন্দনা মানে কোনো বই বা প্রতীকের পূজা নয়; দুঃখমুক্তির পথ ও সত্যধর্মের ছয়টি গুণ স্মরণ করে তা নিজের অভিজ্ঞতায় যাচাই করার সঙ্কল্প।",
+            "pali_text": "Svākkhāto bhagavatā dhammo, sandiṭṭhiko, akāliko, ehipassiko, opanayiko, paccattaṁ veditabbo viññūhi’ti.\n\nAṭṭhaṅgiko ariyapatho janānaṁ,\nmokkhappavesāya ujuko va maggo;\nDhammo ayaṁ santikaro paṇīto,\nniyyāniko taṁ paṇamāmi dhammaṁ.",
+            "bn_meaning": "ভগবান ধর্ম উত্তমরূপে ব্যাখ্যা করেছেন—এটি এখানেই দেখা যায়, কালবিলম্বের অপেক্ষা রাখে না, “এসে দেখ” বলে আবাহন করে, অন্তর্মুখে নিয়ে যায় এবং জ্ঞানীদের দ্বারা প্রত্যেকে নিজে অনুভবযোগ্য। জনগণের জন্য মুক্তিপ্রবেশের সোজা পথ এই আর্যঅষ্টাঙ্গিক মার্গ; শান্তিকর, উত্তম ও মোক্ষগামী সেই ধর্মকে প্রণাম করি।",
+            "en_meaning": "The Dhamma is well expounded by the Blessed One: visible here and now, timeless, inviting inspection, onward-leading, and to be experienced individually by the wise. I salute the peaceful, excellent Dhamma—the Noble Eightfold Path, the straight way for people to enter liberation.",
+            "other_langs": [],
+            "points": [
+              "ছয় গুণ: স্‌বাক্খাতো, সন্দিট্ঠিকো, অকালিকো, এহিপস্সিকো, ওপনয়িকো, পচ্চত্তং বেদিতব্বো বিঞ্‌ঞূহি।",
+              "“এহিপস্সিকো” অংশটি অন্ধবিশ্বাস নয়—নিজের চর্চা ও অভিজ্ঞতায় পরীক্ষা করার আহ্বান বহন করে।"
+            ],
+            "practice": "বন্দনার পর অষ্টাঙ্গিক মার্গের একটি অঙ্গ—যেমন সম্মা বাচা—সেদিন বাস্তবে প্রয়োগের লক্ষ্য নিন।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              },
+              {
+                "t": "NCTB-ভিত্তিক বাংলা পাঠ — ত্রিরত্ন বন্দনা",
+                "u": "https://sattacademy.com/guide/%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%A8%E0%A6%BE-%E0%A6%93-%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE"
+              }
+            ],
+            "aliases": "ত্রিরত্ন বন্দনা Dhamma vandana Svakkhato"
+          },
+          {
+            "id": "sangha-vandana",
+            "title": "সংঘ বন্দনা",
+            "title_en": "Homage to the Sangha",
+            "pali": "Saṅgha-vandanā · Saṅghānussati",
+            "ref": "নিকায়ে বারবার পাওয়া সংঘগুণ-অনুস্মৃতি",
+            "status": "ক্যানোনিক্যাল গুণপদ + স্থানীয় বন্দনা গাথা",
+            "intro": "এখানে সংঘের মূল অর্থ আর্যশ্রাবকসংঘ—যাঁরা মার্গ ও ফল লাভের পথে সুপ্রতিপন্ন। প্রতিদিনের বন্দনায় তাঁদের গুণ স্মরণ করে ভিক্ষুসংঘের প্রতি শ্রদ্ধা প্রকাশ করা হয়।",
+            "pali_text": "Supaṭipanno bhagavato sāvakasaṅgho,\nujupaṭipanno bhagavato sāvakasaṅgho,\nñāyapaṭipanno bhagavato sāvakasaṅgho,\nsāmīcipaṭipanno bhagavato sāvakasaṅgho,\nyadidaṁ cattāri purisayugāni, aṭṭha purisapuggalā;\nesa bhagavato sāvakasaṅgho,\nāhuneyyo, pāhuneyyo, dakkhiṇeyyo, añjalikaraṇīyo,\nanuttaraṁ puññakkhettaṁ lokassā’ti.\n\nSaṅgho visuddho varadakkhiṇeyyo,\nsantindriyo sabbamalappahīno;\nGuṇehi nekehi samiddhipatto,\nanāsavo taṁ paṇamāmi saṅghaṁ.",
+            "bn_meaning": "ভগবানের শ্রাবকসংঘ সুপথে, ঋজুপথে, ন্যায়পথে ও যথাযোগ্য পথে প্রতিপন্ন। অর্থাৎ চার যুগল ও আট ব্যক্তি; এই সংঘ আহ্বানযোগ্য, আতিথ্যযোগ্য, দক্ষিণাযোগ্য, প্রণামযোগ্য এবং জগতের অনুত্তর পুণ্যক্ষেত্র। বিশুদ্ধ, দানের শ্রেষ্ঠ পাত্র, শান্তেন্দ্রিয়, সর্বমলমুক্ত ও বহুগুণসম্পন্ন সেই অনাস্রব সংঘকে প্রণাম করি।",
+            "en_meaning": "The Blessed One’s community of disciples practices well, uprightly, wisely, and properly: the four pairs, the eight persons. That Sangha is worthy of gifts, hospitality, offerings, and reverential salutation—an incomparable field of merit for the world. I salute the purified, peaceful, stain-free, taintless Sangha accomplished in many qualities.",
+            "other_langs": [],
+            "points": [
+              "চার যুগল: স্রোতাপত্তি, সকৃদাগামী, অনাগামী ও অর্হত্ত্বের মার্গ-ফল জোড়া; ব্যক্তি হিসেবে আট।",
+              "প্রাতিষ্ঠানিক ভিক্ষুসংঘকে সম্মান করা এবং আর্যসংঘের গুণস্মরণ—এর পার্থক্য বুঝলে কোনো ব্যক্তিকে নিয়ে অন্ধ দাবি কমে।"
+            ],
+            "practice": "সংঘকে শুধু দান নয়; তাদের বিশ্রাম, বিহারের নিয়ম ও সময়কে সম্মান করাও বন্দনার অংশ।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              },
+              {
+                "t": "NCTB-ভিত্তিক বাংলা পাঠ — ত্রিরত্ন বন্দনা",
+                "u": "https://sattacademy.com/guide/%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%A8%E0%A6%BE-%E0%A6%93-%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%AE"
+              }
+            ],
+            "aliases": "ত্রিরত্ন বন্দনা Sangha vandana Supatipanno"
+          },
+          {
+            "id": "tisarana",
+            "title": "ত্রিশরণ",
+            "title_en": "The Three Refuges",
+            "pali": "Tisaraṇa / Saraṇāgamana",
+            "ref": "সব ধর্মীয় কাজের সূচনা; প্রাচীন বৌদ্ধ সূত্র",
+            "status": "ক্যানোনিক্যাল সূত্র",
+            "intro": "ত্রিশরণে বুদ্ধকে পথপ্রদর্শক, ধর্মকে পথ এবং সংঘকে অনুশীলনকারী সম্প্রদায় হিসেবে আশ্রয় গ্রহণ করা হয়। সাধারণত প্রতিটি লাইন তিনবার পাঠ করা হয়; তারপর পঞ্চশীল বা অষ্টশীল নেওয়া হয়।",
+            "pali_text": "Buddhaṁ saraṇaṁ gacchāmi.\nDhammaṁ saraṇaṁ gacchāmi.\nSaṅghaṁ saraṇaṁ gacchāmi.\n\nDutiyampi buddhaṁ saraṇaṁ gacchāmi.\nDutiyampi dhammaṁ saraṇaṁ gacchāmi.\nDutiyampi saṅghaṁ saraṇaṁ gacchāmi.\n\nTatiyampi buddhaṁ saraṇaṁ gacchāmi.\nTatiyampi dhammaṁ saraṇaṁ gacchāmi.\nTatiyampi saṅghaṁ saraṇaṁ gacchāmi.",
+            "bn_meaning": "আমি বুদ্ধের শরণ গ্রহণ করি। আমি ধর্মের শরণ গ্রহণ করি। আমি সংঘের শরণ গ্রহণ করি। দ্বিতীয়বার ও তৃতীয়বারও একইভাবে।",
+            "en_meaning": "I go to the Buddha for refuge. I go to the Dhamma for refuge. I go to the Sangha for refuge—for a second and a third time likewise.",
+            "other_langs": [
+              {
+                "lang": "সংস্কৃত",
+                "text": "Buddhaṃ śaraṇaṃ gacchāmi.\nDharmaṃ śaraṇaṃ gacchāmi.\nSaṃghaṃ śaraṇaṃ gacchāmi.",
+                "note": "পালির ধর্ম/শরণ পদের সংস্কৃত রূপ।"
+              },
+              {
+                "lang": "চীনা · মহাযানী বর্ধিত রূপ",
+                "text": "自皈依佛，當願眾生，體解大道，發無上心。\n自皈依法，當願眾生，深入經藏，智慧如海。\n自皈依僧，當願眾生，統理大眾，一切無礙。",
+                "note": "অনুবাদ-ভাব: বুদ্ধের শরণ নিয়ে কামনা—সব প্রাণী মহাপথ বুঝুক; ধর্মের শরণে শাস্ত্রে গভীর প্রবেশ ও সাগরসম জ্ঞান; সংঘের শরণে সম্প্রদায়ের সামঞ্জস্য। এটি হুবহু পালির শব্দে শব্দে অনুরূপ নয়।"
+              },
+              {
+                "lang": "তিব্বতি",
+                "text": "སངས་རྒྱས་ཆོས་དང་ཚོགས་ཀྱི་མཆོག་རྣམས་ལ།\nབྱང་ཆུབ་བར་དུ་བདག་ནི་སྐྱབས་སུ་མཆི།",
+                "note": "ভাব: বোধি লাভ না হওয়া পর্যন্ত বুদ্ধ, ধর্ম ও শ্রেষ্ঠ সংঘ-সমাবেশে শরণ নিই। তিব্বতি চর্চায় এটি প্রায়ই বোধিচিত্ত-প্রতিজ্ঞার সঙ্গে যুক্ত থাকে।"
+              }
+            ],
+            "points": [
+              "“শরণ” মানে অন্য কেউ আমার মুক্তি করবে এমন দাবি নয়; সঠিক পথে নিজেকে যুক্ত করার প্রতিশ্রুতি।",
+              "বুদ্ধ-ধর্ম-সংঘ বন্দনা হলো গুণস্মরণ, আর ত্রিশরণ হলো আশ্রয়-ঘোষণা—তাই দুটি আলাদা কাজ, একই পদ নয়।"
+            ],
+            "practice": "শরণ নেওয়ার সঙ্গে পঞ্চশীল রক্ষার সঙ্কল্প থাকলে পাঠটি দৈনন্দিন আচরণে পরিণত হয়।",
+            "sources": [
+              {
+                "t": "Access to Insight — The Threefold Refuge",
+                "u": "https://accesstoinsight.org/ptf/tisarana.html"
+              },
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              }
+            ],
+            "aliases": "ত্রিশরণ ত্রিরত্ন শরণ Tisaraṇa Three Refuges"
+          },
+          {
+            "id": "arahant-vandana",
+            "title": "অরহৎ / অর্হৎ বন্দনা ও স্মরণ",
+            "title_en": "Recollection and Homage to the Arahants",
+            "pali": "Arahant-vandanā",
+            "ref": "রতন সুত্ত, সংঘগুণ ও স্থানীয় বন্দনা-বই",
+            "status": "ক্যানোনিক্যাল ভিত্তি + স্থানীয় প্রচলিত রূপ",
+            "intro": "“অরহৎ বন্দনা” নামে সব দেশে অভিন্ন একটি ক্যানোনিক্যাল গাথা পাওয়া যায় না। স্থানীয় বইয়ে সাজানো পদ ভিন্ন হতে পারে। থেরবাদী ভিত্তিতে অর্হৎদের স্মরণ সবচেয়ে নিরাপদভাবে সংঘগুণ এবং রতন সুত্তের অর্হৎ-বর্ণনার মধ্য দিয়ে করা যায়; নিচের পদটি সেই ক্যানোনিক্যাল ভিত্তি।",
+            "pali_text": "Khīṇaṁ purāṇaṁ, navaṁ natthi sambhavaṁ,\nvirattacittā āyatike bhavasmiṁ;\nTe khīṇabījā avirūḷhichandā,\nnibbanti dhīrā yathāyaṁ padīpo.\n\nIdampi saṅghe ratanaṁ paṇītaṁ;\netena saccena suvatthi hotu.",
+            "bn_meaning": "তাঁদের পুরোনো কর্ম ক্ষীণ, নতুন জন্মের বীজ নেই; ভবিষ্যৎ ভবের প্রতি চিত্ত বিরক্ত। কামনা-বীজ ক্ষয় পেয়ে সেই ধীরজনেরা এই প্রদীপের মতো নির্বাপিত হন। সংঘের এই উত্তম রত্ন—এই সত্যের শক্তিতে মঙ্গল হোক।",
+            "en_meaning": "Their old kamma is exhausted and no new becoming arises; their minds are dispassionate toward future existence. With the seed of craving destroyed and no wish for renewed growth, those steadfast ones are extinguished like this lamp. This is an excellent jewel in the Sangha; by this truth may there be well-being.",
+            "other_langs": [
+              {
+                "lang": "অন্য ভাষায় “অর্হৎ” পদ",
+                "text": "সংস্কৃত: Arhat (अर्हत्)\nচীনা: 阿羅漢 / 羅漢 (āluóhàn / luóhàn)\nতিব্বতি: དགྲ་བཅོམ་པ (dgra bcom pa)\nবার্মিজ: ရဟန္တာ (ra.han.ta)\nথাই: พระอรหันต์ (phra arahan)",
+                "note": "এগুলো পদের নাম; প্রতিটি ভাষায় অভিন্ন পূর্ণ বন্দনা-গাথা বোঝায় না।"
+              }
+            ],
+            "points": [
+              "বুদ্ধ নিজেও “অরহং”; তাই বুদ্ধ বন্দনার প্রথম গুণেই অর্হত্ত্ব স্মরিত হয়। পৃথক অরহৎ বন্দনায় সকল আর্যশ্রাবকের ক্লেশক্ষয় স্মরণ করা যায়।",
+              "কোনো জীবিত ব্যক্তির অর্হত্ত্ব-অর্জন নিয়ে প্রমাণ ছাড়া দাবি না করে তাঁদের শিক্ষা, শীল ও আচরণ দিয়ে যাচাই করা সঙ্গত।"
+            ],
+            "practice": "অর্হৎ স্মরণের ব্যবহারিক ফল হলো লোভ, দ্বেষ ও মোহ কমানোর চর্চা—শুধু কোনো নামের জপ নয়।",
+            "sources": [
+              {
+                "t": "SuttaCentral — Ratana Sutta (Snp 2.1)",
+                "u": "https://suttacentral.net/snp2.1/en/sujato"
+              }
+            ],
+            "aliases": "অরহৎ অর্হৎ Arahant Arhat"
+          },
+          {
+            "id": "atthavisati-28",
             "title": "আটাশ (২৮) বুদ্ধ বন্দনা",
+            "title_en": "Homage to the Twenty-Eight Buddhas",
             "pali": "Aṭṭhavīsati-Buddha-vandanā",
-            "ref": "বুদ্ধবংস ও পরবর্তী ঐতিহ্য",
-            "status": "ক্যানোনিক্যাল ভিত্তি + ঐতিহ্য",
-            "intro": "বুদ্ধবংসে গোতম বুদ্ধের আগের ২৪ বুদ্ধের (দীপঙ্কর থেকে কস্সপ) কথা আছে; তারও আগের তিন বুদ্ধ (তণ্হংকর, মেধংকর, শরণংকর) যোগ করে ঐতিহ্যে মোট অতীত বুদ্ধ ২৭ + গোতম = ২৮ বলা হয়। জিনপাঞ্জর গাথায়ও “তণ্হংকরাদি ২৮ নায়ক” বলা হয়েছে।",
+            "ref": "বুদ্ধবংস, আট্ঠবীসতি পরিত্ত ও পরবর্তী ঐতিহ্য",
+            "status": "ঐতিহ্যগত পরিত্ত/বন্দনা; ক্যানোনিক্যাল ভিত্তিসহ",
+            "intro": "বুদ্ধবংসে দীপঙ্কর থেকে কস্সপ পর্যন্ত গোতমের আগের ২৪ বুদ্ধের বর্ণনা আছে। তাঁদের আগের তণ্হংকর, মেধংকর ও সরণংকরকে যোগ করে আগের বুদ্ধ ২৭; গোতম মিলিয়ে মোট ২৮। আট্ঠবীসতি পরিত্তে নামগুলো ছন্দে গাঁথা; নিচে পূর্ণ নামাংশ ও শেষ আশীর্বাদ দেওয়া হলো।",
+            "pali_text": "Taṇhaṅkaro mahāvīro, Medhaṅkaro mahāyaso,\nSaraṇaṅkaro lokahito, Dīpaṅkaro jutindharo;\nKondañño janapāmokkho, Maṅgalo purisāsabho,\nSumano sumano dhīro, Revato rativaddhano;\nSobhito guṇasampanno, Anomadassī januttamo,\nPadumo lokapajjoto, Nārado varasārathī;\nPadumuttaro sattasāro, Sumedho aggapuggalo,\nSujāto sabbalokaggo, Piyadassī narāsabho;\nAtthadassī kāruṇiko, Dhammadassī tamonudo,\nSiddhattho asamo loke, Tisso varadasaṁvaro;\nPhusso varadasambuddho, Vipassī ca anūpamo,\nSikhī sabbahito satthā, Vessabhū sukhadāyako;\nKakusandho satthavāho, Koṇāgamano raṇañjaho,\nKassapo sirisampanno, Gotamo Sakyapuṅgavo.\n\nTesaṁ saccena sīlena, khantimettabalena ca,\nTepi tvaṁ anurakkhantu ārogyena sukhena ca.",
+            "bn_meaning": "মহাবীর তণ্হংকর, মহাযশা মেধংকর, লোকহিতৈষী সরণংকর ও জ্যোতির্ময় দীপঙ্কর; এভাবে আটাশজন বুদ্ধের নাম ও গুণ স্মরণ করা হয়। তাঁদের সত্য, শীল, ক্ষান্তি ও মৈত্রীর বলের দ্বারা সুস্থতা ও সুখসহ রক্ষা লাভ হোক—এটি গাথার শেষ প্রার্থনা।",
+            "en_meaning": "The chant names all twenty-eight Buddhas with an epithet—from Taṇhaṅkara, Medhaṅkara, Saraṇaṅkara, and Dīpaṅkara through Kakusandha, Koṇāgamana, Kassapa, and Gotama—and ends by asking that, through their truth, virtue, patience, and loving-kindness, one be protected in health and happiness.",
+            "other_langs": [],
             "points": [
-              "তণ্হংকর · মেধংকর · শরণংকর · দীপঙ্কর · কোণ্ডঞ্ঞ · মঙ্গল · সুমন · রেবত · সোভিত · অনোমদস্সী।",
-              "পদুম · নারদ · পদুমুত্তর · সুমেধ · সুজাত · পিয়দস্সী · অত্থদস্সী · ধম্মদস্সী · সিদ্ধত্থ · তিস্স।",
-              "ফুস্স · বিপস্সী · সিখী · বেস্সভূ · ককুসন্ধ · কোণাগমন · কস্সপ · গোতম (আমাদের বুদ্ধ)।",
-              "বন্দনায় প্রতিটি নাম ধরে নমস্কারের পদ বইভেদে আলাদা ছন্দে ছাপা থাকে।"
+              "নাম (১–১০): তণ্হংকর, মেধংকর, সরণংকর, দীপঙ্কর, কোণ্ডঞ্ঞ, মঙ্গল, সুমন, রেবত, সোভিত, অনোমদস্সী।",
+              "নাম (১১–২০): পদুম, নারদ, পদুমুত্তর, সুমেধ, সুজাত, পিয়দস্সী, অত্থদস্সী, ধম্মদস্সী, সিদ্ধত্থ, তিস্স।",
+              "নাম (২১–২৮): ফুস্স, বিপস্সী, সিখী, বেস্সভূ, ককুসন্ধ, কোণাগমন, কস্সপ, গোতম।",
+              "আট্ঠবীসতি পরিত্ত ও আটাশ বুদ্ধ বন্দনা অনেক বইয়ে কাছাকাছি পাঠে আসে; নামের ক্রম এক হলেও শুরু-শেষের লাইনে ভিন্নতা থাকতে পারে।"
             ],
+            "practice": "নামস্মরণকে পারমী-চর্চার স্মারক হিসেবে নিন—বিশেষত দান, শীল, ক্ষান্তি ও মৈত্রী।",
             "sources": [
-              {"t": "SuttaCentral — Buddhavaṁsa (বুদ্ধবংশ)", "u": "https://suttacentral.net/bv/en/sujato"}
-            ]
-          },
-          {
-            "title": "বোধি ও বোধিবৃক্ষ বন্দনা",
-            "pali": "Bodhi-vandanā",
-            "ref": "বুদ্ধগয়ার বোধিবৃক্ষের স্মরণে",
-            "status": "প্রচলিত পাঠ",
-            "points": [
-              "বোধিবৃক্ষ বুদ্ধের বোধিলাভের সাক্ষী — বৃক্ষটি নিজে উপাস্য নয়, স্মরণের মাধ্যম।",
-              "বিহারের বোধিবৃক্ষে জল ঢালা, প্রদীপ দেওয়া ও পরিক্রমা প্রচলিত; বোধিরোপণে ভিক্ষুসংঘ পরিত্ত পাঠ করেন।",
-              "চারা রোপণের সময় গয়া বা অনুরাধাপুরার শাখা-বংশের কথা উল্লেখের রীতি থাকলেও তা বাধ্যতামূলক নয়।"
-            ]
-          },
-          {
-            "title": "ভান্তে (আচার্য) ও শ্রমণ বন্দনা",
-            "pali": "Ācariya-vandanā · Sāmaṇera-vandanā",
-            "ref": "বিহারে ভিক্ষুসংঘের প্রতি শিষ্টাচার",
-            "status": "প্রচলিত পাঠ",
-            "intro": "ভিক্ষুর সামনে প্রণামের সময় ক্ষমা-প্রার্থনার পদ “Okāsa vandāmi bhante, dvārattayena kataṁ sabbaṁ accayaṁ khamatha me bhante” বহুল ব্যবহৃত (আমার কায়-বাক-মনের অপরাধ ক্ষমা করুন)। শ্রমণ (সামণের)-দের ক্ষেত্রে বন্দনার পদ সামান্য বদলে যায় ও উপসম্পন্ন ভিক্ষুই অভিবাদনের মুখ্য পাত্র — বিহারের প্রচলিত রীতি জেনে নিন।",
-            "points": [
-              "আসন ছেড়ে দাঁড়ানো, জুতা বিহার-প্রাঙ্গণের বাইরে রাখা, উঁচু আসনে না বসা — ভান্তে বন্দনার ব্যবহারিক দিক।",
-              "ভান্তেকে কিছু দিতে হলে হাতে দেওয়ার সময় সম্মানজনকভাবে দুই হাতে দেওয়া প্রচলিত; নারীদের ক্ষেত্রে স্পর্শ এড়াতে দ্রব্য নির্দিষ্ট স্থানে রেখে দেওয়ার রীতি বিহারভেদে আছে।"
-            ]
-          },
-          {
-            "title": "সীবলী ও উপগুপ্ত বন্দনা",
-            "pali": "Sīvali Thera · Upagupta",
-            "ref": "স্থানীয় থেরবাদী ঐতিহ্য",
-            "status": "ঐতিহ্য-ভিত্তিক",
-            "points": [
-              "সীবলী থের: লাভ-সৎকারে শ্রেষ্ঠ (etadagga) শিষ্য হিসেবে ক্যানোনে উল্লেখ (AN 1)। ভ্রমণ ও জীবিকার ক্ষেত্রে তাঁর স্মরণ বাংলাদেশ-মিয়ানমার-থাইল্যান্ডে জনপ্রিয়।",
-              "উপগুপ্ত: মথুরার অর্হৎ উপগুপ্তের কাহিনি অশোকাবদান প্রভৃতি উত্তর-ঐতিহ্যের; মারমা-রাখাইন-বার্মিজ ঐতিহ্যে তিনি মার-দমন ও বৃষ্টি-রক্ষার সঙ্গে জড়িত, উৎসবে তাঁকে নদী-জলে আমন্ত্রণের রীতি আছে।",
-              "দুটো ক্ষেত্রেই বন্দনা মানে গুণস্মরণ; কোনো থেরকে বুদ্ধের সমমর্যাদা দেওয়া হয় না।"
+              {
+                "t": "Ancient Buddhist Texts — Aṭṭhavīsati Paritta",
+                "u": "https://ancient-buddhist-texts.net/Texts-and-Translations/Blessing-Chants/05-Atthavisati.htm"
+              },
+              {
+                "t": "SuttaCentral — Buddhavaṁsa",
+                "u": "https://suttacentral.net/bv/en/sujato"
+              }
             ],
-            "sources": [
-              {"t": "SuttaCentral — AN 1 (সীবলীর এতদগ্গ উল্লেখ)", "u": "https://suttacentral.net/an1/en/sujato"}
-            ]
+            "aliases": "২৮ বুদ্ধ আটাশ আট্ঠবীসতি Atthavisati 28 Buddhas"
           },
           {
-            "title": "দেবতাদের আহ্বান ও পরিত্রাণ প্রার্থনা",
-            "pali": "Devatā-uyyojana / Samantā-pāsāda",
-            "ref": "পরিত্ত-অনুষ্ঠানের শুরু ও শেষ",
-            "status": "প্রচলিত পাঠ",
-            "pali_text": "Samantā cakkavāḷesu, atr’āgacchantu devatā;\nSaddhammaṁ munirājassa, suṇantu sagga-mokkha-daṁ.\n(সব দিকের দেবগণ এখানে আসুন, স্বর্গ-মোক্ষদায়ী সদ্ধর্ম শুনুন — পরিত্ত-শুরুর আহ্বান-পদ)",
+            "id": "cetiya-dhatu",
+            "title": "চৈত্য, ধাতু ও বুদ্ধরূপ বন্দনা",
+            "title_en": "Homage to Cetiyas, Relics, and Buddha Images",
+            "pali": "Cetiya-vandanā",
+            "ref": "DN 16-এর স্তূপ-প্রসঙ্গ + প্রচলিত বন্দনা-বই",
+            "status": "প্রচলিত গাথা; ক্যানোনিক্যাল পটভূমি",
+            "intro": "চৈত্য/স্তূপ, শারীরিক ধাতু, মহাবোধি ও বুদ্ধমূর্তির সামনে বুদ্ধের স্মরণ ঘনীভূত করতে এই পদটি বহু বন্দনা-বইয়ে আছে। গাথাটি পালি ক্যাননের সরাসরি উদ্ধৃতি নয়; তবে মহাপরিনিব্বান সুত্তে তথাগতের স্তূপে ফুল, সুগন্ধি ও প্রণামের প্রসঙ্গ আছে।",
+            "pali_text": "Vandāmi cetiyaṁ sabbaṁ,\nsabbaṭṭhānesu patiṭṭhitaṁ;\nSārīrika-dhātu mahābodhiṁ,\nbuddha-rupaṁ sakalaṁ sadā.",
+            "bn_meaning": "সর্বস্থানে প্রতিষ্ঠিত সব চৈত্য, বুদ্ধের শারীরিক ধাতু, মহাবোধি এবং সব বুদ্ধরূপকে সর্বদা বন্দনা করি।",
+            "en_meaning": "I always pay homage to every cetiya established in every place, to the bodily relics, the great Bodhi, and all Buddha images.",
+            "other_langs": [],
             "points": [
-              "পরিত্ত শুরুতে দেবতাদের ধর্মশ্রবণে আহ্বান, শেষে তাঁদের নিজ নিজ স্থানে ফেরার অনুরোধ (উয্যোজন) পাঠ হয়।",
-              "বুদ্ধ ও ভিক্ষুসংঘকে “আহ্বান” বলতে অনুষ্ঠানে ভিক্ষুদের আনুষ্ঠানিক নিমন্ত্রণ (পবারণা/আরাধনা) ও বুদ্ধাসন সাজিয়ে স্মরণ বোঝায়।",
-              "পরিত্রাণ প্রার্থনায় রতন, মেত্ত, মঙ্গল, ধজগ্গ প্রভৃতি সুত্ত থেকে নির্বাচিত পাঠ বিহারভেদে সাজানো থাকে।"
-            ]
+              "বিহারে সাধারণ ক্রম হিসেবে অনেক জায়গায় স্তূপ/চৈত্য, বোধিবৃক্ষ, তারপর বিহারের বুদ্ধমূর্তির দিকে বন্দনা এগোয়; ক্রম স্থানীয় রীতিনির্ভর।",
+              "চৈত্য পরিক্রমা করলে সাধারণত চৈত্যকে ডান দিকে রেখে ঘড়ির কাঁটার দিকে হাঁটা হয়।",
+              "মূর্তি বা ধাতু এখানে ঈশ্বর হিসেবে পূজিত নয়; বুদ্ধগুণ স্মরণের উদ্দেশ্যিক প্রতীক।"
+            ],
+            "practice": "প্রত্নস্থলে ছবি তোলা বা স্তূপ স্পর্শ করার আগে সংরক্ষণ-নিয়ম মানুন।",
+            "sources": [
+              {
+                "t": "ChantPali — Offering chanting ও উৎস-টীকা",
+                "u": "https://chantpali.org/offerings.html"
+              },
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              }
+            ],
+            "aliases": "চৈত্য স্তূপ ধাতু জাদী Cetiya stupa relic"
+          },
+          {
+            "id": "sambodhi",
+            "title": "বোধি / সম্বোধি স্মরণ — মারবিজয় ও জাগরণ",
+            "title_en": "Recollection of the Awakening",
+            "pali": "Sambodhi-udāna",
+            "ref": "ধম্মপদ ১৫৩–১৫৪ ও বুদ্ধের বোধিলাভ-স্মরণ",
+            "status": "ক্যানোনিক্যাল জাগরণ-গাথা",
+            "intro": "বাংলাদেশের অনেক বইয়ে “বোধি বন্দনা” বলতে পরের বোধিবৃক্ষ-গাথাটিকেই বোঝানো হয়। ডবল এন্ট্রি এড়াতে এখানে বোধি অর্থাৎ জাগরণের ঘটনাটি আলাদা রাখা হলো: ধম্মপদের দুটি গাথাকে বুদ্ধের বোধিলাভের পর উচ্চারিত বিজয়-উদান বলে অট্ঠকথা-ঐতিহ্য ব্যাখ্যা করে।",
+            "pali_text": "Anekajātisaṁsāraṁ, sandhāvissaṁ anibbisaṁ;\nGahakāraṁ gavesanto, dukkhā jāti punappunaṁ.\n\nGahakāraka, diṭṭho’si, puna gehaṁ na kāhasi;\nSabbā te phāsukā bhaggā, gahakūṭaṁ visaṅkhataṁ;\nVisaṅkhāragataṁ cittaṁ, taṇhānaṁ khayam ajjhagā.",
+            "bn_meaning": "গৃহকারকে খুঁজতে খুঁজতে অনেক জন্ম সংসারে ঘুরেছি; বারবার জন্ম দুঃখজনক। হে গৃহকার, তোমাকে দেখেছি—তুমি আর ঘর বানাতে পারবে না। তোমার সব কাঠ ভেঙেছে, ঘরের চূড়া ভস্মীভূত; চিত্ত বিসংস্কার-অবস্থায় পৌঁছেছে, তৃষ্ণার ক্ষয় ঘটেছে।",
+            "en_meaning": "Through many births in saṁsāra I wandered, seeking but not finding the builder of this house; repeated birth is suffering. House-builder, you are seen: you will build no house again. Your rafters are broken and ridgepole shattered; the mind has reached the unconditioned and attained the destruction of craving.",
+            "other_langs": [],
+            "points": [
+              "এখানে “ঘর” জন্মের ধারা, “গৃহকার” তৃষ্ণা, “কাঠ/চূড়া” ক্লেশ ও অজ্ঞান—অট্ঠকথার পরিচিত ব্যাখ্যা এমন।",
+              "বার্মার বুদ্ধমূর্তি-অভিষেকে প্রথম গাথাটি বিশেষভাবে পাঠ হয়; সেই প্রসঙ্গ মূর্তি-অভিষেক এন্ট্রিতে ক্রস-রেফারেন্স দেওয়া আছে, পাঠটি আবার নকল করা হয়নি।"
+            ],
+            "practice": "বুদ্ধ পূর্ণিমা বা ধ্যানের আগে এই গাথা পড়ে তৃষ্ণা কীভাবে “ঘর” বানায় তা পর্যবেক্ষণ করুন।",
+            "sources": [
+              {
+                "t": "Access to Insight — Dhammapada 153–154",
+                "u": "https://accesstoinsight.org/tipitaka/kn/dhp/dhp.11.budd.html"
+              }
+            ],
+            "aliases": "বোধি সম্বোধি মারবিজয় Dhammapada 153 154 Anekajati"
+          },
+          {
+            "id": "bodhi-tree",
+            "title": "বোধিবৃক্ষ বন্দনা",
+            "title_en": "Homage to the Bodhi Tree",
+            "pali": "Bodhi-vandanā · Bodhipādapa",
+            "ref": "বুদ্ধগয়ার বোধিবৃক্ষের স্মরণে প্রচলিত পাঠ",
+            "status": "প্রচলিত থেরবাদী গাথা",
+            "intro": "বোধিবৃক্ষ নিজে উপাস্য দেবতা নয়; এটি বুদ্ধের বোধিলাভের সাক্ষী ও স্মারক। বিহারের বোধিবৃক্ষে জলসিঞ্চন, প্রদীপ, পরিক্রমা ও বৃক্ষরোপণ অনুষ্ঠানে নিচের গাথাগুলো প্রচলিত।",
+            "pali_text": "Yassa mūle nisinno va, sabbāri vijayaṁ akā;\nPatto sabbaññutaṁ satthā, vande taṁ bodhipādapaṁ.\n\nIme ete mahābodhi, lokanāthena pūjitā;\nAhaṁ pi te namassāmi, bodhirājā namatthu te.",
+            "bn_meaning": "যেই বৃক্ষমূলে বসে শিক্ষক সকল শত্রু জয় করে সর্বজ্ঞতা লাভ করেছিলেন, সেই বোধিবৃক্ষকে বন্দনা করি। লোকনাথের দ্বারা পূজিত হে মহাবোধি, আমিও তোমাকে নমস্কার করি—বোধিরাজ, তোমাকে বন্দনা।",
+            "en_meaning": "I venerate that Bodhi tree at whose foot the Teacher sat, conquered all foes, and attained omniscience. O great Bodhi honored by the Lord of the world, I too salute you: homage to you, king of Bodhi trees.",
+            "other_langs": [],
+            "points": [
+              "বোধিবৃক্ষে জল দেওয়া একসঙ্গে কৃতজ্ঞতা, গাছের পরিচর্যা ও মৈত্রীর ব্যবহারিক প্রকাশ।",
+              "চারা রোপণের ক্ষেত্রে মাটি, পানি, বেড়া ও দীর্ঘমেয়াদি যত্ন ছাড়া শুধু অনুষ্ঠান যথেষ্ট নয়।",
+              "বুদ্ধগয়া বা অনুরাধাপুরার শাখা-বংশের দাবি থাকলে তা স্থানীয় নথি দিয়ে যাচাই করা উচিত; দাবি ছাড়াও একটি সুস্থ বোধিচারা সম্মানযোগ্য স্মারক হতে পারে।"
+            ],
+            "practice": "বোধিচারায় জল দিলে এক মিনিট নীরব থেকে বোধিলাভের অনিত্য-দুঃখ-অনাত্ম উপলব্ধি স্মরণ করুন।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              },
+              {
+                "t": "ChantPali — Offering chanting ও উৎস-টীকা",
+                "u": "https://chantpali.org/offerings.html"
+              }
+            ],
+            "aliases": "বোধিবৃক্ষ Bodhi tree Bodhirukkha Yassa mule"
+          },
+          {
+            "id": "bhante-vandana",
+            "title": "ভান্তে / আচার্য বন্দনা",
+            "title_en": "Homage to a Bhante or Teacher",
+            "pali": "Ācariya-vandanā",
+            "ref": "বিহারের শিষ্টাচার ও ক্ষমা প্রার্থনা",
+            "status": "প্রচলিত পাঠ; বইভেদে বাক্য বদলায়",
+            "intro": "ভিক্ষু বা আচার্যের সামনে আসন ছেড়ে দাঁড়ানো, পঞ্চাঙ্গ/যথারীতি প্রণাম এবং কায়-বাক-মনে ঘটে থাকা অপরাধের ক্ষমা চাওয়া এই বন্দনার প্রচলিত অংশ। নিচের বাক্যটি বাংলাদেশসহ অনেক থেরবাদী পরিমণ্ডলে শোনা যায়।",
+            "pali_text": "Okāsa, vandāmi bhante.\nDvārattayena kataṁ sabbaṁ accayaṁ khamatha me bhante.",
+            "bn_meaning": "অবকাশ দিন; ভান্তে, আপনাকে বন্দনা করি। কায়, বাক্য ও মন—তিন দ্বারে আমার দ্বারা করা সব অপরাধ ক্ষমা করুন, ভান্তে।",
+            "en_meaning": "With your permission, Venerable Sir, I pay homage to you. Please forgive every offence I may have committed by body, speech, or mind.",
+            "other_langs": [
+              {
+                "lang": "বার্মিজ সম্বোধন",
+                "text": "ဘန္တေ (bhante)",
+                "note": "পালি ভদন্ত/ভান্তে ধারার সম্মানসূচক সম্বোধন।"
+              }
+            ],
+            "points": [
+              "বিহারের নির্ধারিত স্থানে জুতা রাখা, উঁচু আসনে না বসা, ভান্তের বিশ্রামে ব্যাঘাত না ঘটানো এই সম্মানের ব্যবহারিক রূপ।",
+              "কোনো দ্রব্য দিলে দুই হাতে সম্মানের সঙ্গে দিন; নারীদের স্পর্শ এড়ানোর ক্ষেত্রে নির্দিষ্ট স্থান/কাপড়ের ওপর রেখে দেওয়ার রীতি বিহারভেদে থাকতে পারে—স্থানীয় নীতি জেনে নিন।",
+              "“ভান্তে” শব্দটি পালি সম্মানসূচক সম্বোধন; বার্মিজে ဘန္တေ রূপে লেখা হয়।"
+            ],
+            "practice": "ক্ষমা চাওয়ার পর আচরণে একই ভুল কমানোর চেষ্টা না থাকলে এটি কেবল মুখের বাক্য থেকে যায়।",
+            "sources": [
+              {
+                "t": "চর্যাভূমি লাইব্রেরি — বন্দনার পাঠ ও অডিও",
+                "u": "library.html"
+              }
+            ],
+            "aliases": "ভান্তে আচার্য গুরু বন্দনা Okasa vandami bhante"
+          },
+          {
+            "id": "samanera-vandana",
+            "title": "শ্রমণ / সামণের বন্দনা",
+            "title_en": "Respect for a Novice (Sāmaṇera)",
+            "pali": "Sāmaṇera-vandanā",
+            "ref": "দশ শিক্ষাপদধারী শ্রমণের প্রতি বিহার্য শিষ্টাচার",
+            "status": "স্থানীয় রীতি; অভিন্ন পালি গাথা যাচাইকৃত নয়",
+            "intro": "সামণের হলেন দশ শিক্ষাপদ গ্রহণ করে প্রব্রজিত নবিস; পূর্ণ উপসম্পদাপ্রাপ্ত ভিক্ষু নন। তাঁদের প্রতি সম্মান দেখানো হয়, তবে প্রণামের মাত্রা ও সম্বোধন বিহারভেদে ভিন্ন। এই বিষয়ে সর্বজনীন একটি পালি “শ্রমণ বন্দনা” গাথা বানিয়ে দেওয়া ঠিক হবে না।",
+            "pali_text": "",
+            "bn_meaning": "অর্থের সার: সামণেরকে গৃহত্যাগী শিক্ষার্থী হিসেবে মর্যাদা দেওয়া হয়; তবু অনুষ্ঠানের ক্রমে উপসম্পন্ন ভিক্ষুসংঘই প্রধান অভিবাদন ও দান গ্রহণের কেন্দ্র।",
+            "en_meaning": "A sāmaṇera is a novice observing the ten precepts, not yet a fully ordained bhikkhu. Laypeople show respect, but the fully ordained Sangha remains the principal object of formal salutation and communal offerings.",
+            "other_langs": [
+              {
+                "lang": "অন্য ভাষায় নাম",
+                "text": "সংস্কৃত: Śrāmaṇera\nচীনা: 沙彌 (পুরুষ নবিস), 沙彌尼 (নারী নবিস)\nতিব্বতি: དགེ་ཚུལ (dge tshul)",
+                "note": "নামগুলো পদের অনুরূপ, অভিন্ন প্রণাম-গাথা নয়।"
+              }
+            ],
+            "points": [
+              "সামণেরদের হাতে সরাসরি টাকা দেওয়ার বদলে বিহারের নির্ধারিত কপ্পিয়/ব্যবস্থাপনা জানুন।",
+              "নবিসের বয়স ছোট হলেও ছবি তোলা, খাবার দেওয়া বা ব্যক্তিগত উপহারে আচার্যের অনুমতি ও বিহারের শিশু-সুরক্ষা নীতি মানুন।",
+              "স্ত্রী নবিসের পালি নাম সামণেরী (sāmaṇerī)।"
+            ],
+            "practice": "সন্দেহ থাকলে আগেই বিহারের অধ্যক্ষকে জিজ্ঞেস করে নিন—এটাই সবচেয়ে সম্মানজনক পথ।",
+            "sources": [
+              {
+                "t": "চর্যাভূমি লাইব্রেরি — বন্দনার পাঠ ও অডিও",
+                "u": "library.html"
+              }
+            ],
+            "aliases": "শ্রমণ সামণের নবিস Samanera novice"
+          },
+          {
+            "id": "sivali-vandana",
+            "title": "সীবলী থের বন্দনা",
+            "title_en": "Homage to Venerable Sīvalī",
+            "pali": "Sīvalī-vandanā · Sīvali Paritta",
+            "ref": "AN 1-এর এতদগ্গ ভিত্তি + থেরবাদী দেশীয় ঐতিহ্য",
+            "status": "ঐতিহ্যগত পরিত্ত/বন্দনা",
+            "intro": "সীবলী থেরকে ক্যানোনে আবশ্যিক দ্রব্য পাওয়ার ক্ষেত্রে শ্রেষ্ঠ শিষ্য বলা হয়েছে (AN 1.208; “Etadaggaṁ, bhikkhave, mama sāvakānaṁ bhikkhūnaṁ lābhīnaṁ yadidaṁ Sīvali”)। পরে বিভিন্ন থেরবাদী দেশে ভ্রমণ, জীবিকা ও অভাবকালে সহায়তার স্মরণ হিসেবে তাঁর বন্দনা জনপ্রিয় হয়।",
+            "pali_text": "Sīvalī ca mahāthero, so’raho paccayādinaṁ;\nPiyo devamanussānaṁ, piyo brahmānamuttamo;\nPiyo nāga-supaṇṇānaṁ, pīṇindriyaṁ namām’ahaṁ.",
+            "bn_meaning": "মহাথের সীবলী প্রত্যয়/আবশ্যিক দ্রব্য লাভে যোগ্য; তিনি দেবতা, মানুষ, ব্রহ্মাগণ, নাগ ও সুপর্ণদের প্রিয়। সেই পরিপুষ্ট/বিকশিত ইন্দ্রিয়সম্পন্ন মহানকে আমি নমস্কার করি।",
+            "en_meaning": "The great Elder Sīvalī is worthy with regard to requisites; he is dear to gods and humans, dear among Brahmās, nāgas, and supaṇṇas. I pay homage to him whose faculties are fully developed.",
+            "other_langs": [
+              {
+                "lang": "আঞ্চলিক নাম",
+                "text": "বার্মিজ: ရှင်သီဝလိ (Shin Thiwali)\nথাই: พระสีวลี (Phra Siwali)\nসিংহলি: සීවලී (Sīvalī)\nচীনা: 屍婆羅",
+                "note": "নাম ও আঞ্চলিক ভক্তির রূপ দেশভেদে ভিন্ন।"
+              }
+            ],
+            "points": [
+              "থাইল্যান্ডে “Sīvalī ca mahāthero…” দিয়ে শুরু হওয়া সংক্ষিপ্ত পদের একাধিক রূপ প্রচলিত—একটিকে সব দেশের একমাত্র পাঠ বলা যাবে না।",
+              "সীবলী স্মরণের শিক্ষা প্রচলিত “অর্থের গ্যারান্টি” নয়; ঐতিহ্যের ব্যাখ্যায় অতীত দান, ধৈর্য ও পুণ্যই লাভের কারণ। তাই জীবিকার সমস্যায় প্রার্থনার পাশাপাশি ন্যায্য পরিশ্রম, সঞ্চয় ও দানশীলতাই বৌদ্ধ পথ।"
+            ],
+            "practice": "ভ্রমণ বা কাজের শুরুতে সীবলী স্মরণ করলে নিজের প্রস্তুতি ও অন্যকে সাহায্য করার সুযোগও দেখুন।",
+            "sources": [
+              {
+                "t": "Dictionary of Pali Proper Names — Sīvalī",
+                "u": "https://www.aimwell.org/DPPN/sivali.html"
+              },
+              {
+                "t": "Sīvali Paritta — Pali ও English পাঠ",
+                "u": "https://sivali.sutta.mysticlotus.org/"
+              }
+            ],
+            "aliases": "সীবলী Sivali Sīvalī লাভ ভ্রমণ"
+          },
+          {
+            "id": "upagupta-vandana",
+            "title": "উপগুপ্ত বন্দনা",
+            "title_en": "Veneration of Upagupta",
+            "pali": "Upagupta / Pali: Upagutta",
+            "ref": "সংস্কৃত অশোকাবদান ধারা, লোকপঞ্ঞত্তি ও দক্ষিণ-পূর্ব এশীয় ঐতিহ্য",
+            "status": "ক্যানোনের বাইরের আঞ্চলিক কাল্ট",
+            "intro": "উপগুপ্ত পালি ত্রিপিটকে নেই। তাঁর কাহিনি উত্তর-ভারতীয় সংস্কৃত বৌদ্ধ ঐতিহ্য থেকে এসেছে এবং পরে বার্মার লোকপঞ্ঞত্তি হয়ে মিয়ানমার, থাইল্যান্ড, লাওস, কম্বোডিয়া ও পার্শ্ববর্তী অঞ্চলে রক্ষাকর্তা অর্হৎ হিসেবে বন্দিত হন।",
+            "pali_text": "",
+            "bn_meaning": "অর্থের সার: মারকে বশীভূত করে বিঘ্ন, ঝড়, জল ও আচারিক বাধা থেকে রক্ষা করেন—লোকঐতিহ্যে এই বিশ্বাসে তাঁকে জলসংলগ্ন স্থানে আমন্ত্রণ জানানো হয়।",
+            "en_meaning": "In regional folk tradition Upagupta is invoked as the arahant who subdued Māra and protects ceremonies and communities from storms, water dangers, and disruptive obstacles.",
+            "other_langs": [
+              {
+                "lang": "আঞ্চলিক নাম",
+                "text": "সংস্কৃত: Upagupta\nবার্মিজ: ရှင်ဥပဂုတ္တ (Shin Upagutta)\nথাই: พระอุปคุต (Phra Upakhut)\nকম্বোডিয়ায়: Preah Uppakut",
+                "note": "নামগুলোর পেছনের কিংবদন্তি ও আচার একই ধারার হলেও বিবরণে আঞ্চলিক পার্থক্য আছে।"
+              }
+            ],
+            "points": [
+              "মিয়ানমারে তিনি “শিন উপগুক্ত”; উত্তর থাইল্যান্ড ও লাওসে “উপখুত/ফ্রা উপখুত”, কম্বোডিয়ায় “প্রেহ উপ্পকুত” নামে পরিচিত।",
+              "অনেক জায়গায় তাঁকে মোগ্গল্লিপুত্ত তিস্সের সঙ্গে মিলিয়ে ফেলা হয়, তবে গবেষণায় এই সমীকরণ স্থির নয়।",
+              "ঝড়-বৃষ্টি থামানোর দাবিকে আবহাওয়া-পূর্বাভাস বা নিরাপত্তাব্যবস্থার বিকল্প ধরবেন না।"
+            ],
+            "practice": "বাংলাদেশের কোনো বিহারে উপগুপ্ত-রীতি থাকলে তা স্থানীয় সংঘের পদ্ধতি অনুসরণ করুন; অভিন্ন পালি গাথা দাবি করা যাবে না।",
+            "sources": [
+              {
+                "t": "John Strong, The Legend and Cult of Upagupta (JSTOR)",
+                "u": "https://www.jstor.org/stable/j.ctv3hh47b"
+              }
+            ],
+            "aliases": "উপগুপ্ত Upagupta Upagutta Shin Upagutta Upakhut"
           }
         ]
       },
       {
-        "title": "খ. উৎসর্গ ও দান",
-        "intro": "যেকোনো উৎসর্গের সাধারণ ছক: ত্রিরত্ন বন্দনা → পঞ্চশীল → দ্রব্যটির উৎসর্গ-বাক্য (যে উদ্দেশ্যে দান তা মনে বলা) → ভিক্ষুর পরিত্ত বা অনুমোদনা → জল ঢেলে পুণ্যদান। নিচে প্রতিটি দ্রব্যের তাৎপর্য দেওয়া হলো।",
+        "id": "invitation-merit",
+        "title": "খ. আহ্বান, প্রার্থনা ও পুণ্যদান",
+        "intro": "দেবতাদের ধর্মশ্রবণে আহ্বান, সংঘকে পরিত্ত/দেশনার অনুরোধ, আশীর্বাদ এবং দানশেষে জল ঢেলে পুণ্য বিতরণ—এই চারটি কাজকে এখানে আলাদা করা হয়েছে।",
         "items": [
           {
-            "title": "পুষ্প উৎসর্গ",
-            "pali": "Puppha-pūjā",
-            "status": "প্রচলিত পাঠ",
-            "pali_text": "Vaṇṇagandhaguṇopetaṁ, etaṁ kusumasantatiṁ;\nPūjayāmi munindassa, siripādāsaroruhe.\nPūjemi Buddhaṁ kusumena tena, puññena metena ca hotu mokkhaṁ;\nPupphaṁ milāyāti yathā idaṁ me, kāyo tath’eva yati bhāva-vinasaṁ.\n(বর্ণ-গন্ধযুক্ত এই ফুল…ফুল যেমন মলিন হয়, দেহও তেমনি ক্ষয়ের দিকে — অনিত্য-ভাবনাই পুষ্পপূজার ভাবার্থ)",
-            "points": ["তাজা, পরিষ্কার ফুল; বাসি ফুল সরিয়ে ফেলা ও আসন পরিষ্কার রাখা শিষ্টাচারের অংশ।"]
-          },
-          {
-            "title": "প্রদীপ, ধূপ ও সুগন্ধি উৎসর্গ",
-            "pali": "Dīpa-pūjā · Dhūpa-pūjā",
-            "status": "প্রচলিত পাঠ",
+            "id": "Mangala-aradhana",
+            "title": "দেবতাদের আহ্বান",
+            "title_en": "Inviting the Devas to Listen",
+            "pali": "Devārādhanā",
+            "ref": "পরিত্ত ও দেশনার শুরুতে প্রচলিত আহ্বান",
+            "status": "প্রচলিত থেরবাদী পাঠ",
+            "intro": "পরিত্ত বা ধর্মশ্রবণ শুরুর আগে জগতের দেবতাদের উপস্থিত হয়ে সদ্ধর্ম শুনতে আমন্ত্রণ জানানো হয়। পাঠ শেষে অনেক রীতিতে তাঁদের নিজ স্থানে ফিরে যাওয়ার অনুরোধ থাকে।",
+            "pali_text": "Samantā cakkavāḷesu, atrāgacchantu devatā;\nSaddhammaṁ munirājassa, suṇantu sagga-mokkhadaṁ.\n\nParittassavanakālo ayaṁ bhadantā. (×3)",
+            "bn_meaning": "সব দিকের চক্রবাল থেকে দেবগণ এখানে আসুন এবং মুনিরাজের স্বর্গ ও মোক্ষদায়ী সদ্ধর্ম শুনুন। মান্যবরদের জন্য এখন পরিত্ত শোনার সময়।",
+            "en_meaning": "Let the deities from all the surrounding world-systems come here and listen to the true Dhamma of the King of Sages, which leads to heaven and liberation. Venerable ones, this is the time to listen to the protective discourses.",
+            "other_langs": [],
             "points": [
-              "প্রদীপ: অজ্ঞান-অন্ধকার দূর করে প্রজ্ঞার আলোর প্রতীক। আগুনের নিরাপত্তা বিহারের নির্দেশনা মেনে চলুন।",
-              "ধূপ/সুগন্ধি: শীলের সুগন্ধের প্রতীক — “শীল-সুগন্ধই সর্বশ্রেষ্ঠ” ভাব ধম্মপদে (গাথা ৫৪–৫৬) আছে।"
-            ]
-          },
-          {
-            "title": "জল ঢালা (পুণ্যদান)",
-            "pali": "Udaka-patta · pattidāna",
-            "status": "ক্যানোনিক্যাল ভিত্তি + প্রচলিত পাঠ",
-            "pali_text": "Yathā vārivahā pūrā, paripūrenti sāgaraṁ;\nEvameva ito dinnaṁ, petānaṁ upakappati.\nIdaṁ me ñātīnaṁ hotu, sukhitā hontu ñātayo.\n(নদী যেমন সাগর ভরে, এখানকার দান তেমনি (পরলোকগত) আত্মীয়দের কাজে লাগুক — তিরোকুড্ড সুত্তধারার পদ)",
-            "points": [
-              "জল ধীরে ধীরে ঢালতে ঢালতে দানের পুণ্য আত্মীয়, সকল প্রাণী ও দেবতাদের উদ্দেশে বিতরণ করা হয়।",
-              "সব আনুষ্ঠানিক দানের শেষ ধাপ এটি; জল মাটিতে/গাছের গোড়ায় দেওয়া হয়।"
-            ]
-          },
-          {
-            "title": "ফল, খাবার ও পানীয় উৎসর্গ",
-            "pali": "Bhojana-dāna · pānaka",
-            "status": "বিনয়-ভিত্তিক রীতি",
-            "points": [
-              "বুদ্ধাসনে খাবার উৎসর্গের পর সেই খাবার সাধারণত উপস্থিত সবাই ভাগ করে খান (বুদ্ধপূজার প্রসাদ-রীতি অঞ্চলভেদে)।",
-              "ভিক্ষুদের দান: কঠিন খাবার দুপুরের (সূর্য মধ্যগগনের) আগেই দিতে হয়; বিকেলে অনুমোদিত আট পানীয় (ফলের রস প্রভৃতি) দেওয়ার রীতি বিনয়ভিত্তিক — বিস্তারিত বিহারে জিজ্ঞাসা করুন।",
-              "ফল দানের ক্ষেত্রে খোসা/বিচিসহ ফল ব্যবহারযোগ্য করে (কপ্পিয়) দেওয়ার রীতির কথা অনেক বিহারে মানা হয়।"
-            ]
-          },
-          {
-            "title": "চীবর দান ও কঠিন চীবর",
-            "pali": "Cīvara-dāna · Kaṭhina",
-            "status": "বিনয়-ভিত্তিক রীতি",
-            "points": [
-              "ভিক্ষুর পরিধেয় বস্ত্র (চীবর) দান সারা বছরই যায়; বর্ষাবাস শেষে প্রবারণার পর এক মাসের মধ্যে “কঠিন চীবর দান” বিশেষ বিধিতে হয় — বাংলাদেশের বৌদ্ধদের অন্যতম বড় অনুষ্ঠান।",
-              "বস্ত্রের রঙ ও সেলাইয়ের ধরন বিহারের পরামর্শে কেনা ভালো; অতিরিক্ত চীবর সংঘের কাজে বণ্টিত হয়।"
+              "“বুদ্ধকে আহ্বান” বলতে ঐতিহাসিক বুদ্ধকে দেবতার মতো ডেকে উপস্থিত করা বোঝায় না; বুদ্ধকে স্মরণ করা হয়, ভিক্ষুসংঘকে আনুষ্ঠানিকভাবে আমন্ত্রণ করা হয়, আর দেবতাদের ধর্মশ্রবণে আহ্বান করা হয়।",
+              "অনুষ্ঠানে ভিক্ষুসংঘ বরণের অংশে পথ পরিষ্কার, আসন, জল, আলো ও শৃঙ্খলাই প্রধান ব্যবহারিক প্রস্তুতি।"
             ],
-            "sources": [{"t": "চর্যাভূমি — উৎসব ও পূর্ণিমা (পুরোনো ড্যাশবোর্ড)", "u": "index-old.html#festival-tracker"}]
+            "practice": "আহ্বানের পর মোবাইল নীরব রেখে পাঠ শোনার পরিবেশ বজায় রাখুন।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              },
+              {
+                "t": "Bhikkhu Manual — Paritta Chants",
+                "u": "https://bhikkhu-manual.github.io/chants/parittas.html"
+              }
+            ],
+            "aliases": "দেবতা আহ্বান আমন্ত্রণ Devata Samanta cakkavalesu"
           },
           {
-            "title": "অষ্টপরিষ্কার দান",
-            "pali": "Aṭṭha-parikkhāra",
-            "status": "বিনয়-ভিত্তিক তালিকা",
-            "intro": "ভিক্ষুর নিত্য প্রয়োজনীয় আটটি উপকরণ একত্রে দান করাকে অষ্টপরিষ্কার দান বলা হয়; প্রব্রজ্যা/উপসম্পদা ও বিশেষ পুণ্যকাজে এই দান প্রচলিত।",
+            "id": "paritta-request",
+            "title": "ভিক্ষুসংঘকে পরিত্ত পাঠের অনুরোধ",
+            "title_en": "Requesting Paritta Chanting",
+            "pali": "Parittārādhanā",
+            "ref": "পরিত্ত-অনুষ্ঠানের আবেদনপদ",
+            "status": "প্রচলিত থেরবাদী চ্যান্টিং-বইয়ের পাঠ",
+            "intro": "গৃহীগণ তিনবার প্রণাম করে হাত জোড় করে সংঘকে পরিত্ত পাঠ শুরুর অনুরোধ করেন। তিন শ্লোকে পর্যায়ক্রমে দুঃখ, ভয় ও রোগ দূরীকরণের কথা বলা হয়।",
+            "pali_text": "Vipatti-paṭibāhāya, sabba-sampatti-siddhiyā;\nSabba-dukkha-vināsāya, parittaṁ brūtha maṅgalaṁ.\n\nVipatti-paṭibāhāya, sabba-sampatti-siddhiyā;\nSabba-bhaya-vināsāya, parittaṁ brūtha maṅgalaṁ.\n\nVipatti-paṭibāhāya, sabba-sampatti-siddhiyā;\nSabba-roga-vināsāya, parittaṁ brūtha maṅgalaṁ.",
+            "bn_meaning": "বিপদ প্রতিরোধ ও সর্ব সম্পত্তি/মঙ্গল সিদ্ধির জন্য, সর্ব দুঃখ বিনাশের উদ্দেশে মঙ্গলময় পরিত্ত পাঠ করুন। দ্বিতীয় ও তৃতীয়বারে যথাক্রমে ভয় ও রোগ বিনাশের কথা।",
+            "en_meaning": "For warding off misfortune and accomplishing every good fortune, for dispelling all suffering, please chant the auspicious protection. In the second and third verses, “suffering” is replaced by fear and disease.",
+            "other_langs": [],
             "points": [
-              "সংঘাটি (দ্বিগুণ ঊর্ধ্ববস্ত্র) · উত্তরাসঙ্গ (ঊর্ধ্ববস্ত্র) · অন্তরবাসক (অধোবস্ত্র)।",
-              "পাত্র (ভিক্ষাপাত্র) · ক্ষুর (বাসি) · সূচ (সুই-সুতো) · কায়বন্ধন (কোমরের বাঁধনি) · পরিস্সবন (জল ছাঁকার কাপড়)।",
-              "অনেক জায়গায় এর সঙ্গে ছাতা, জুতা, টর্চ, ওষুধ প্রভৃতি “অতিরিক্ত পরিষ্কার” যোগ করা হয় — সেটি স্থানীয় রীতি।"
-            ]
+              "অনুরোধপদ বললেই সংঘের সময়সূচি বদলে যায় না—অনুষ্ঠানের তারিখ, রোগীর অবস্থা, যাতায়াত ও ভিক্ষুদের সংখ্যা আগে থেকেই সমন্বয় করা ভদ্রতা।",
+              "রোগ বা জরুরি বিপদে পরিত্তকে চিকিৎসা ও জরুরি সেবার বিকল্প হিসেবে ব্যবহার করবেন না।"
+            ],
+            "practice": "অনুরোধের সময় উদ্দেশ্য সংক্ষেপে ও সত্য করে বলুন—যেমন রোগীর আরাম, পরিবারের মঙ্গল বা প্রয়াতজনের স্মরণ।",
+            "sources": [
+              {
+                "t": "Bhikkhu Manual — Paritta Chants",
+                "u": "https://bhikkhu-manual.github.io/chants/parittas.html"
+              },
+              {
+                "t": "Dhamma Talks — Requesting a Blessing / Paritta",
+                "u": "https://www.dhammatalks.org/books/ChantingGuide/Section0068.html"
+              }
+            ],
+            "aliases": "পরিত্ত অনুরোধ সংঘ আমন্ত্রণ আরাধনা Vipatti patibahaya"
           },
           {
-            "title": "বুদ্ধমূর্তি উৎসর্গ ও “জীবন্যাস”, বিহার/মন্দির দান",
-            "pali": "Buddhapaṭimā-dāna · vihāra-dāna",
-            "status": "ঐতিহ্য-ভিত্তিক",
+            "id": "dhamma-talk-request",
+            "title": "ধর্মদেশনা প্রার্থনা",
+            "title_en": "Requesting a Dhamma Talk",
+            "pali": "Dhammadesanārādhanā",
+            "ref": "Brahma Sahampati-র অনুরোধ থেকে অনুপ্রাণিত আনুষ্ঠানিক পাঠ",
+            "status": "ক্যানোনিক্যাল প্রসঙ্গভিত্তিক প্রচলিত আবেদন",
+            "intro": "ভিক্ষুর কাছে দেশনা চাওয়ার সময় অনেক থেরবাদী চ্যান্টিং-বইয়ে ব্রহ্মা সহম্পতির অনুরোধের ছোট গাথাটি ব্যবহৃত হয়। মূল কাহিনিতে তিনি বোধিলাভের পর বুদ্ধকে ধর্ম দেশনার অনুরোধ করেছিলেন।",
+            "pali_text": "Brahmā ca lokādhipatī Sahampatī,\nkatañjalī andhivaraṁ ayācatha:\n“Santīdha sattāpparajakkha-jātikā;\ndesetu dhammaṁ anukamp’imaṁ pajaṁ.”",
+            "bn_meaning": "লোকাধিপতি ব্রহ্মা সহম্পতি করজোড়ে অনুপমজনের কাছে প্রার্থনা করেছিলেন: “এখানে এমন প্রাণী আছে, যাদের চোখে সামান্য ধুলো; এই প্রজাদের প্রতি অনুকম্পা করে ধর্ম দেশনা করুন।”",
+            "en_meaning": "Brahmā Sahampati, lord of the world, with palms joined requested the Unexcelled One: “There are beings here with little dust in their eyes; please teach the Dhamma out of compassion for these people.”",
+            "other_langs": [],
             "points": [
-              "বুদ্ধমূর্তি প্রতিষ্ঠার অনুষ্ঠানে ভিক্ষুসংঘ পরিত্ত পাঠ ও “বুদ্ধাভিষেক” জাতীয় আশীর্বাদ পাঠ করেন; বাংলাদেশে একে অনেক জায়গায় জীবন্যাস বলা হয় — অর্থ মূর্তিতে প্রাণ প্রতিষ্ঠা নয়, দাতার চেতনায় শ্রদ্ধা-প্রতিষ্ঠা ও জনকল্যাণে উৎসর্গ। বুদ্ধমূর্তি বুদ্ধগুণের স্মারক, ঈশ্বরপ্রতিমা নয়।",
-              "বিহার/কুটির দান: সংঘের আবাস দান ক্যানোনে বারবার প্রশংসিত; দাতার নামফলক বসানো সামাজিক রীতি, ধর্মীয় শর্ত নয়।",
-              "নির্মাণের আগে জমির দলিল, স্থানীয় সংঘ ও কমিটির সম্মতি এবং পরবর্তী রক্ষণাবেক্ষণের ব্যবস্থা নিশ্চিত করা বাস্তব কর্তব্য।"
-            ]
+              "আধুনিক অনুষ্ঠানে এই পাঠ বলার পাশাপাশি দেশনার বিষয়, শ্রোতার বয়স/প্রয়োজন এবং সময়সীমা আগেই জানালে আচার্য প্রস্তুতি নিতে পারেন।",
+              "দেশনাশেষে বাংলাদেশসহ অনেক জায়গায় জল ঢেলে পুণ্যদান হয়—সেটি আলাদা ধাপ।"
+            ],
+            "practice": "দেশনা চলাকালে প্রশ্ন থাকলে শেষে বিনীতভাবে জিজ্ঞেস করুন; বিতর্কের আসর বানাবেন না।",
+            "sources": [
+              {
+                "t": "Dhamma Talks — Requesting a Discourse",
+                "u": "https://www.dhammatalks.org/books/ChantingGuide/Section0067.html"
+              }
+            ],
+            "aliases": "ধর্ম দেশনা প্রার্থনা আরাধনা Brahma Sahampati Desetu dhammam"
           },
           {
-            "title": "ধ্বজা/পতাকা ও প্রবারণার ফানুস",
-            "pali": "Dhaja-dāna · ākāsa-padīpa (লোকরীতি)",
-            "status": "ঐতিহ্য-ভিত্তিক",
+            "id": "paritta-blessing",
+            "title": "পরিত্রাণ প্রার্থনা ও আশীর্বাদ",
+            "title_en": "Protection and Blessing after Paritta",
+            "pali": "Paritta · Anumodanā",
+            "ref": "পরিত্তের শেষাংশে মঙ্গলকামনা",
+            "status": "প্রচলিত আশীর্বাদ-পদ",
+            "intro": "রতন, মেত্ত, মঙ্গল, ধজগ্গ প্রভৃতি পরিত্ত পাঠের পর সংঘ দাতা ও উপস্থিত সবার কল্যাণ কামনা করেন। পাঠ করা সুত্তের তালিকা বিহার ও প্রয়োজনভেদে বদলায়; নিচের ত্রিরত্নভিত্তিক আশীর্বাদ ব্যাপকভাবে প্রচলিত।",
+            "pali_text": "Bhavatu sabba-maṅgalaṁ, rakkhantu sabba-devatā;\nSabba-buddhānubhāvena, sadā sotthi bhavantu te.\n\nBhavatu sabba-maṅgalaṁ, rakkhantu sabba-devatā;\nSabba-dhammānubhāvena, sadā sotthi bhavantu te.\n\nBhavatu sabba-maṅgalaṁ, rakkhantu sabba-devatā;\nSabba-saṅghānubhāvena, sadā sotthi bhavantu te.",
+            "bn_meaning": "সর্ব মঙ্গল হোক, সব দেবতা রক্ষা করুন। সব বুদ্ধের শক্তিতে তোমার সদা সুখ ও কল্যাণ হোক। এরপর যথাক্রমে ধর্ম ও সংঘের শক্তিতে একই আশীর্বাদ।",
+            "en_meaning": "May every blessing be yours; may all the deities protect you. By the power of all the Buddhas may you always be well and happy. The next two verses repeat the blessing through the power of the Dhamma and the Sangha.",
+            "other_langs": [],
             "points": [
-              "বৌদ্ধ পতাকা (ছয় রঙা) উত্তোলন দিয়ে অনুষ্ঠান শুরু করা বাংলাদেশে প্রচলিত; পতাকার রঙের ব্যাখ্যা নিচের প্রতীক-অংশে আছে।",
-              "প্রবারণা পূর্ণিমায় ফানুস (আকাশপ্রদীপ) ওড়ানো চট্টগ্রাম-পার্বত্য অঞ্চলের প্রিয় রীতি — বুদ্ধের চুলধাতুর উদ্দেশে স্বর্গে প্রদীপ পাঠানোর লোকবিশ্বাস এর ভিত্তি। আগুনের ঝুঁকির কারণে অনেক জায়গায় নির্দেশনা/নিষেধাজ্ঞা থাকে — স্থানীয় নির্দেশ মেনে চলুন, সম্ভব হলে পরিবেশবান্ধব বিকল্প নিন।"
-            ]
+              "“te” একবচন (তোমার); দলগত আশীর্বাদে “vo” (তোমাদের) ব্যবহৃত হতে পারে—স্থানীয় পাঠ অনুসরণ করুন।",
+              "আশীর্বাদের মূল নৈতিক ভিত্তি শীল, মৈত্রী ও সৎকর্ম; বিপদের বাস্তব প্রতিকার অবহেলা করার অনুমতি নয়।"
+            ],
+            "practice": "আশীর্বাদ গ্রহণের পর এক মুহূর্ত সবার কল্যাণে মৈত্রী ছড়িয়ে দিন।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              },
+              {
+                "t": "Bhikkhu Manual — Paritta Chants",
+                "u": "https://bhikkhu-manual.github.io/chants/parittas.html"
+              }
+            ],
+            "aliases": "পরিত্রাণ পরিত্ত আশীর্বাদ Bhavatu sabba mangalam"
+          },
+          {
+            "id": "water-pouring",
+            "title": "জল ঢালা — পুণ্যদান",
+            "title_en": "Pouring Water to Dedicate Merit",
+            "pali": "Udaka-patta · Pattidāna",
+            "ref": "তিরোকুড্ড সুত্তের দান-ধারণা ও সব দানের শেষ ধাপ",
+            "status": "ক্যানোনিক্যাল গাথাভিত্তিক প্রচলিত আচার",
+            "intro": "ভান্তেগণ অনুমোদনা-গাথা পাঠ করার সময় দাতা ধীরে ধীরে পাত্রে/মাটিতে জল ঢালেন এবং পুণ্য প্রয়াত আত্মীয়, দেবতা ও সর্বপ্রাণীর উদ্দেশে অর্পণের চেতনা করেন।",
+            "pali_text": "Yathā vārivahā pūrā, paripūrenti sāgaraṁ;\nEvameva ito dinnaṁ, petānaṁ upakappati.\n\nIdaṁ me ñātīnaṁ hotu, sukhitā hontu ñātayo. (×3)",
+            "bn_meaning": "পূর্ণ নদীপ্রবাহ যেমন সাগরকে ভরে তোলে, তেমনি এখান থেকে প্রদত্ত দান প্রয়াত/পেত জগতের আত্মীয়দের উপকারে আসুক। এই পুণ্য আমার আত্মীয়দের হোক; আমার আত্মীয়েরা সুখী হোক।",
+            "en_meaning": "Just as full rivers fill the ocean, so what is given here benefits the departed. May this merit be for my relatives; may my relatives be happy.",
+            "other_langs": [],
+            "points": [
+              "জল পুণ্যকে ভৌতভাবে “বয়ে নিয়ে যায়” এমন দাবি করা উচিত নয়; এটি দাতার উৎসর্গ-চেতনার দৃশ্যমান প্রতীক ও কর্মের ফল ভাগের ঘোষণা।",
+              "জল সাধারণত মাটিতে বা গাছের গোড়ায় দেওয়া হয়। বুদ্ধমূর্তির সামনে পাত্রে জল সাজিয়ে রাখা আলাদা—সেটি পানীয়জল উৎসর্গ এন্ট্রিতে আছে।"
+            ],
+            "practice": "জল ফুরিয়ে এলে পাত্র উল্টে রাখার স্থানীয় রীতি থাকতে পারে; বিহারের নির্দেশ অনুসরণ করুন।",
+            "sources": [
+              {
+                "t": "SuttaCentral — Tirokuḍḍa Sutta (Khp 7)",
+                "u": "https://suttacentral.net/khp7/en/sujato"
+              },
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              }
+            ],
+            "aliases": "জল ঢালা পুণ্য দান pattidana water pouring Yatha varivaha"
+          },
+          {
+            "id": "merit-aspiration",
+            "title": "পুণ্য বিতরণ ও নির্বাণ অধিষ্ঠান",
+            "title_en": "Sharing Merit and Aspiration for Nibbāna",
+            "pali": "Pattidāna · Patthanā",
+            "ref": "দান/পরিত্তের সমাপ্তিতে প্রচলিত সূত্র",
+            "status": "প্রচলিত চ্যান্টিং-বইয়ের পাঠ",
+            "intro": "জল ঢালার আচার শেষে বা সঙ্গে সঞ্চিত পুণ্য দেবতা ও সব প্রাণীর সঙ্গে ভাগ করা এবং তা আসবক্ষয়/নির্বাণের প্রত্যয় হোক—এমন অধিষ্ঠান করা হয়। বইভেদে গাথার ক্রম বা গ্রহীতা (দেব/ভূত/সব প্রাণী/আত্মীয়) বদলায়।",
+            "pali_text": "Ettāvatā ca amhehi, sambhataṁ puññasampadaṁ;\nSabbe devā anumodantu, sabba-sampatti-siddhiyā.\n\nĀkāsaṭṭhā ca bhummaṭṭhā, devā nāgā mahiddhikā;\nPuññaṁ taṁ anumoditvā, ciraṁ rakkhantu sāsanaṁ.\n\nIdaṁ me puññaṁ āsavakkhayā vahaṁ hotu.\nIdaṁ me puññaṁ nibbānassa paccayo hotu.",
+            "bn_meaning": "আমাদের দ্বারা এ পর্যন্ত সঞ্চিত পুণ্যসম্পদ সব দেবতা সর্ব সম্পত্তি-সিদ্ধির জন্য অনুমোদন করুন। আকাশে ও পৃথিবীতে অবস্থিত দেবতা ও মহাশক্তিসম্পন্ন নাগগণ এই পুণ্য অনুমোদন করে দীর্ঘকাল শাসন রক্ষা করুন। আমার এই পুণ্য আসবক্ষয়ের দিকে বহমান হোক; এই পুণ্য নির্বাণের প্রত্যয় হোক।",
+            "en_meaning": "May all deities rejoice in the store of merit thus accumulated by us, for the accomplishment of every good fortune. May the powerful deities and nāgas dwelling in the sky and on earth rejoice in this merit and long protect the dispensation. May this merit of mine lead to the destruction of the taints; may it be a condition for Nibbāna.",
+            "other_langs": [],
+            "points": [
+              "Ettāvatā-পদে স্থানভেদে devā (দেবতা), bhūtā (ভূতপ্রাণী) বা sattā (সব প্রাণী)—তিন সংস্করণই বলা হতে পারে।",
+              "পুণ্যদান মানে নিজের পুণ্য কমে যাওয়া নয়; অনুমোদনের মধ্য দিয়ে উদারতা ও সংযোগের চেতনা বাড়ানোই এর অনুশীলনগত অর্থ।"
+            ],
+            "practice": "নির্বাণ-অধিষ্ঠানের সঙ্গে প্রতিদিনের শীল ও ভাবনার একটি বাস্তব ছোট পদক্ষেপ যুক্ত করুন।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              }
+            ],
+            "aliases": "পুণ্যদান অনুমোদনা নির্বাণ অধিষ্ঠান Ettavata Akasattha Idam me punnam"
           }
         ]
       },
       {
-        "title": "গ. প্রতীক, রং ও ব্যাখ্যা",
+        "id": "offerings-dana",
+        "title": "গ. উৎসর্গ ও দান",
+        "intro": "বুদ্ধাসনের প্রতীকী পূজা এবং ভিক্ষুসংঘকে সরাসরি দান—দুটির বাক্য ও বিনয় এক নয়। জ্বলন্ত বস্তু ও খাদ্যের ক্ষেত্রে নিরাপত্তা এবং স্থানীয় বিহারের নির্দেশ আগে।",
+        "items": [
+          {
+            "id": "flower-offering",
+            "title": "পুষ্প উৎসর্গ",
+            "title_en": "Offering Flowers",
+            "pali": "Puppha-pūjā",
+            "ref": "বন্দনা-বইয়ের উৎসর্গাংশ",
+            "status": "প্রচলিত পাঠ; ক্যাননের সরাসরি গাথা নয়",
+            "intro": "তাজা ফুল বুদ্ধগুণের সামনে সৌন্দর্য, শ্রদ্ধা এবং সব সংস্কার্য বস্তুর ক্ষণস্থায়িত্ব মনে করিয়ে দেয়। দ্বিতীয় গাথাটিতে ফুলের মলিন হওয়া দেহের অনিত্যতার সঙ্গে তুলনা করা হয়েছে।",
+            "pali_text": "Vaṇṇa-gandha-guṇopetaṁ, etaṁ kusuma-santatiṁ;\nPūjayāmi munindassa, siripāda-saroruhe.\n\nPūjemi buddhaṁ kusumena tena,\npuññena metena ca hotu mokkhaṁ;\nPupphaṁ milāyāti yathā idaṁ me,\nkāyo tathā yāti vināsa-bhāvaṁ.",
+            "bn_meaning": "বর্ণ, গন্ধ ও গুণযুক্ত এই পুষ্পরাশি মুনীন্দ্রের পদ্মসদৃশ শ্রীপদে পূজা করি। এই ফুল দিয়ে বুদ্ধকে পূজা করছি; এই পুণ্যে মোক্ষ লাভ হোক। এই ফুল যেমন মলিন হয়, আমার দেহও তেমনি বিনাশের দিকে যায়।",
+            "en_meaning": "I offer this mass of colorful, fragrant, excellent flowers at the lotus-like feet of the Lord of Sages. I worship the Buddha with these flowers; by this merit may there be release. Just as this flower fades, so too will my body go to decay.",
+            "other_langs": [],
+            "points": [
+              "তাজা ও পরিষ্কার ফুল দিন; বাসি ফুল সরানো ও আসন পরিষ্কার রাখা শ্রদ্ধারই অংশ।",
+              "প্লাস্টিক ফুলে অনিত্যতার পাঠ দুর্বল হয়; তবে সাজসজ্জা হিসেবে থাকলে একে প্রধান উৎসর্গ ভাববেন না।"
+            ],
+            "practice": "ফুল রাখার সময় একটি ফোটা ফুলের দিকে তাকিয়ে “এটিও বদলাবে” ভাবনাটি মনে করুন।",
+            "sources": [
+              {
+                "t": "ChantPali — Offering chanting ও উৎস-টীকা",
+                "u": "https://chantpali.org/offerings.html"
+              },
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              }
+            ],
+            "aliases": "পুষ্প ফুল Puppha puja Vanna gandha"
+          },
+          {
+            "id": "lamp-offering",
+            "title": "প্রদীপ উৎসর্গ",
+            "title_en": "Offering Light",
+            "pali": "Dīpa-pūjā / Padīpa-pūjā",
+            "ref": "বন্দনা-বইয়ের উৎসর্গাংশ",
+            "status": "প্রচলিত পাঠ; ক্যাননের সরাসরি গাথা নয়",
+            "intro": "আলো অজ্ঞান-অন্ধকার দূর করা প্রজ্ঞার প্রতীক। মোম, তেলের প্রদীপ বা বৈদ্যুতিক বাতি—যেটিই হোক, বুদ্ধকে “ত্রিলোকের প্রদীপ” হিসেবে স্মরণ করা হয়।",
+            "pali_text": "Ghanasārappadittena, dīpena tamadhaṁsinā;\nTilokadīpaṁ sambuddhaṁ, pūjayāmi tamonudaṁ.",
+            "bn_meaning": "অন্ধকার বিনাশকারী উজ্জ্বল প্রদীপ দিয়ে ত্রিলোকের প্রদীপ ও অন্ধকারদূরকারী সম্বুদ্ধকে পূজা করি।",
+            "en_meaning": "With a brightly shining lamp that dispels darkness, I venerate the Fully Awakened One, the lamp of the three worlds, who dispels darkness.",
+            "other_langs": [],
+            "points": [
+              "খোলা আগুনের ক্ষেত্রে থালা/বালি ব্যবহার, পর্দা ও কাগজ দূরে রাখা এবং বিহারের অগ্নিনিরাপত্তা নির্দেশ মানা জরুরি।",
+              "আকাশে জ্বলন্ত ফানুস ওঠানো এই এন্ট্রির অন্তর্ভুক্ত নয়; ফানুস আলাদা স্থানীয় প্রবারণা-রীতি।"
+            ],
+            "practice": "প্রদীপ জ্বালিয়ে আজ একটি বিভ্রান্তি দূর করার জন্য নির্ভরযোগ্য তথ্য যাচাই করার संकल्प নিন।",
+            "sources": [
+              {
+                "t": "ChantPali — Offering chanting ও উৎস-টীকা",
+                "u": "https://chantpali.org/offerings.html"
+              },
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              }
+            ],
+            "aliases": "প্রদীপ দীপ আলো মোমবাতি Dipa puja Ghanasarappadittena"
+          },
+          {
+            "id": "incense-offering",
+            "title": "ধূপ ও সুগন্ধি উৎসর্গ",
+            "title_en": "Offering Incense and Fragrance",
+            "pali": "Dhūpa-pūjā · Sugandha-pūjā",
+            "ref": "বন্দনা-বইয়ের দুটি প্রচলিত সংস্করণ",
+            "status": "প্রচলিত পাঠ; একই বিষয়ের দুটি ভিন্ন গাথা একত্র",
+            "intro": "সুগন্ধি এখানে শীলের সৌরভের প্রতীক। ধম্মপদের ৫৪–৫৬ গাথায় ফুল বা চন্দনের গন্ধের চেয়ে শীলের গন্ধকে উত্তম বলা হয়েছে। ধূপের দুটি পরিচিত গাথা ভিন্ন বইয়ে ব্যবহৃত হয়—এখানে ডবল এন্ট্রি না করে দুটি সংস্করণ চিহ্নিত করা হলো।",
+            "pali_text": "(সংস্করণ ক)\nGandha-sambhāra-yuttena, dhūpenāhaṁ sugandhinā;\nPūjaye pūjaneyyaṁ taṁ, pūjā-bhājanam uttamaṁ.\n\n(সংস্করণ খ)\nSugandhikāya-vadanaṁ, ananta-guṇa-gandhinā;\nSugandhināhaṁ gandhena, pūjayāmi tathāgataṁ.",
+            "bn_meaning": "সুগন্ধি উপকরণে প্রস্তুত সুবাসিত ধূপ দিয়ে পূজনীয় ও সর্বোত্তম পূজাপাত্র তাঁকে পূজা করি। অন্য সংস্করণে: অনন্তগুণের গন্ধে সুবাসিত শরীর ও মুখবিশিষ্ট তথাগতকে সুগন্ধি দিয়ে পূজা করি।",
+            "en_meaning": "With incense prepared from fragrant substances, I honor the One worthy of the highest reverence. In the alternate verse: with fragrance I honor the Tathāgata, whose body and speech are fragrant with immeasurable virtues.",
+            "other_langs": [],
+            "points": [
+              "ধোঁয়ায় অ্যাজমা/অ্যালার্জি থাকলে আগরবাতি কম বা ধোঁয়াহীন বিকল্প ব্যবহার করুন; অন্যকে কষ্ট দেওয়া শ্রদ্ধার লক্ষ্য নয়।",
+              "স্থানীয় বন্দনা-বইয়ে কোন সংস্করণ আছে তা অনুসরণ করুন—দুটো একসঙ্গে বলা আবশ্যিক নয়।"
+            ],
+            "practice": "ধূপ জ্বালানোর সময় আজ একটি শীলগুণ—যেমন সত্যকথন—এর “সুগন্ধ” ধরে রাখার চেষ্টা করুন।",
+            "sources": [
+              {
+                "t": "ChantPali — Offering chanting ও উৎস-টীকা",
+                "u": "https://chantpali.org/offerings.html"
+              },
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              }
+            ],
+            "aliases": "ধূপ আগরবাতি সুগন্ধি Dhupa Sugandha incense Gandha sambhara Sugandhikaya"
+          },
+          {
+            "id": "water-offering",
+            "title": "পানীয় জল উৎসর্গ",
+            "title_en": "Offering Drinking Water",
+            "pali": "Udaka-pūjā · Pānīya",
+            "ref": "বুদ্ধাসনে জলের পাত্র দেওয়ার প্রচলিত গাথা",
+            "status": "প্রচলিত পাঠ",
+            "intro": "বুদ্ধাসনে পরিষ্কার পানির গ্লাস/পাত্র সাজানো করুণা, স্বচ্ছতা ও অতিথিপরায়ণতার প্রতীক। এটি দানের শেষে পুণ্য বিতরণের জন্য মাটিতে জল ঢালা থেকে আলাদা অনুশীলন।",
+            "pali_text": "Adhivāsetu no bhante, pānīyaṁ parikappitaṁ;\nAnukampaṁ upādāya, paṭiggaṇhātu muttamaṁ.",
+            "bn_meaning": "ভান্তে, অনুগ্রহ করে আমাদের প্রতি অনুকম্পা করে প্রস্তুত এই উত্তম পানীয় জল গ্রহণ/স্বীকার করুন।",
+            "en_meaning": "Venerable Sir, out of compassion for us, may you accept this excellent drinking water that has been prepared.",
+            "other_langs": [],
+            "points": [
+              "পানি প্রতিদিন বদলে পরিষ্কার রাখুন; পুরোনো পানি গাছে বা মাটিতে দেওয়া যায়, নোংরা জায়গায় ফেলেবেন না।",
+              "ব্যক্তিগত ভাষায়: বুদ্ধ শারীরিকভাবে পানি পান করেন এমন দাবি নয়; এটি কৃতজ্ঞতা ও স্মরণের উৎসর্গ।"
+            ],
+            "practice": "পাত্রটি রাখার সময় মনকেও জলের মতো স্বচ্ছ ও শান্ত রাখার কথা স্মরণ করুন।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              }
+            ],
+            "aliases": "পানীয় জল পানি উৎসর্গ Udaka puja paniya"
+          },
+          {
+            "id": "fruit-offering",
+            "title": "ফল উৎসর্গ ও দান",
+            "title_en": "Offering Fruit",
+            "pali": "Phala-dāna",
+            "ref": "বুদ্ধাসন ও সংঘদানের সাধারণ অংশ",
+            "status": "বিনয়সতর্ক প্রচলিত রীতি; পৃথক অভিন্ন গাথা যাচাইকৃত নয়",
+            "intro": "ফল বুদ্ধাসনে সাজানো বা ভিক্ষুসংঘকে খাদ্যদানের অংশ হিসেবে দেওয়া হয়। ফলের জন্য সব থেরবাদী দেশে অভিন্ন আলাদা পালি গাথা যাচাই করা যায়নি; সাধারণত আহার/সর্বপূজার কাঠামোর মধ্যেই এটি থাকে, তাই এখানে কাল্পনিক গাথা যোগ করা হয়নি।",
+            "pali_text": "",
+            "bn_meaning": "ভাবার্থ: পাকা ও পরিষ্কার ফল শ্রদ্ধা ও সুস্বাস্থ্যের বস্তুগত দান; ভিক্ষুকে দিলে সময়, কপ্পিয়করণ ও খাদ্য গ্রহণের বিনয় মানা হয়।",
+            "en_meaning": "Fruit is offered as a wholesome, tangible gift. When offered to monastics it follows the Vinaya rules on time, formal acceptance, and making certain fruits allowable.",
+            "other_langs": [],
+            "points": [
+              "ভিক্ষুদের দান: অনেক বিহারে বীজযুক্ত ফলকে ছুরি/নখ/আগুনের স্পর্শে চিহ্নিত বা বীজ সরিয়ে “কপ্পিয়” করার রীতি মানা হয়—ফলের ধরনভেদে নিয়ম বদলায়, তাই বিহারে জিজ্ঞেস করুন।",
+              "কঠিন খাদ্য সাধারণত সূর্য মধ্যগগনের আগে দান করতে হয়; দুপুরের পর ফলচিবানো খাদ্য হিসেবে গ্রহণের নিয়ম ভিন্ন।",
+              "বুদ্ধাসনে দেওয়া ফল পরে উপস্থিতদের মধ্যে বণ্টনের রীতি স্থানভেদে থাকে।"
+            ],
+            "practice": "নষ্ট/অতিপাকা ফল না দিয়ে নিজে যে মানের ফল খেতে স্বাচ্ছন্দ্যবোধ করেন, তেমন ফল দিন।",
+            "sources": [
+              {
+                "t": "Dhamma Talks — Formal Offerings",
+                "u": "https://www.dhammatalks.org/books/ChantingGuide/Section0070.html"
+              }
+            ],
+            "aliases": "ফল ফলদান Phala dana fruit"
+          },
+          {
+            "id": "food-offering",
+            "title": "খাবার উৎসর্গ ও সংঘভোজন দান",
+            "title_en": "Offering Food",
+            "pali": "Āhāra-pūjā · Bhatta-dāna",
+            "ref": "বুদ্ধাসন ও আনুষ্ঠানিক সংঘদান",
+            "status": "প্রচলিত বুদ্ধপূজা গাথা + থাই/শ্রীলঙ্কান আনুষ্ঠানিক দানবাক্য",
+            "intro": "বুদ্ধাসনে খাবার সাজানো এবং ভিক্ষুসংঘকে ভোজনদান একই নয়। প্রথমটি বুদ্ধগুণস্মরণের প্রতীকী উৎসর্গ; দ্বিতীয়টি নির্ধারিত সময়ে সরাসরি সংঘকে অনুষ্ঠানিকভাবে অর্পণ।",
+            "pali_text": "(বুদ্ধাসনে)\nAdhivāsetu no bhante, bhojanaṁ parikappitaṁ;\nAnukampaṁ upādāya, paṭiggaṇhātu muttamaṁ.\n\n(সংঘকে)\nImāni mayaṁ bhante, bhattāni, saparivārāni, bhikkhusaṅghassa, oṇojayāma.\nSādhu no bhante, bhikkhusaṅgho, imāni bhattāni, saparivārāni, paṭiggaṇhātu, amhākaṁ dīgha-rattaṁ hitāya sukhāya.",
+            "bn_meaning": "বুদ্ধাসনের গাথা: অনুকম্পাপূর্বক আমাদের প্রস্তুত উত্তম আহার স্বীকার করুন। সংঘদানের বাক্য: ভান্তে, আমরা আনুষঙ্গিকসহ এই খাবার ভিক্ষুসংঘকে অর্পণ করছি। ভিক্ষুসংঘ আমাদের দীর্ঘকালীন হিত ও সুখের জন্য তা গ্রহণ করুন।",
+            "en_meaning": "At the shrine: “Out of compassion, may you accept this excellent food prepared by us.” To the Sangha: “Venerable Sirs, we present this food and its accompaniments to the Bhikkhu Sangha; may the Sangha accept it for our long-term welfare and happiness.”",
+            "other_langs": [],
+            "points": [
+              "ভিক্ষুকে আনুষ্ঠানিক খাদ্যদান সাধারণত দুপুরের আগে; দাতাকে খাবারটি অনুমোদিত দূরত্বে উপস্থাপন ও গ্রহণ করানোর স্থানীয় নিয়ম মানতে হয়।",
+              "খাবারের অ্যালার্জি, ডায়াবেটিস বা পরিপাক-সীমাবদ্ধতা জানা থাকলে দাতা হিসেবে তা বিবেচনা করুন—অতিরিক্ত ঝাল/তেল শ্রদ্ধার প্রমাণ নয়।",
+              "বুদ্ধাসনের খাবার পরে কী হবে, তা বিহারের রীতি অনুযায়ী করুন; খাদ্য নষ্ট না করা গুরুত্বপূর্ণ।"
+            ],
+            "practice": "খাবার তুলে দেওয়ার সময় শুধু মেনু নয়, পরিমিত খাওয়ার স্মৃতিও অনুশীলন করুন।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              },
+              {
+                "t": "Dhamma Talks — Formal Offerings",
+                "u": "https://www.dhammatalks.org/books/ChantingGuide/Section0070.html"
+              }
+            ],
+            "aliases": "খাবার আহার ভোজন দান Bhatta dana food offering"
+          },
+          {
+            "id": "drinks-medicine-offering",
+            "title": "পানীয় ও গিলানপচ্চয় উৎসর্গ",
+            "title_en": "Offering Drinks and Medicinal Allowances",
+            "pali": "Pānīya · Gilāna-paccaya",
+            "ref": "বুদ্ধপূজা, বিকেলের পানীয় ও অসুস্থ ভিক্ষুর প্রয়োজন",
+            "status": "প্রচলিত গাথা + বিনয়ভিত্তিক সতর্কতা",
+            "intro": "ফলের পরিষ্কার রস, চিনি/মধুজাতীয় দ্রব্য, ওষুধ প্রভৃতিকে প্রয়োজনভেদে পানীয় বা গিলানপচ্চয় (রোগীর আবশ্যিক) হিসেবে ধরা হয়। বিনয়ে আট ধরনের ফলরসের প্রসঙ্গ আছে; আধুনিক পানীয়ের শ্রেণি বিহারভেদে নির্ধারিত হয়।",
+            "pali_text": "(বুদ্ধাসনে)\nAdhivāsetu no bhante, gilāna-paccayaṁ imaṁ;\nAnukampaṁ upādāya, paṭiggaṇhātu muttamaṁ.\n\n(সংঘকে পানীয়)\nImāni mayaṁ bhante, pānāni, saparivārāni, bhikkhusaṅghassa, oṇojayāma.\nSādhu no bhante, bhikkhusaṅgho, imāni pānāni, saparivārāni, paṭiggaṇhātu, amhākaṁ dīgha-rattaṁ hitāya sukhāya.",
+            "bn_meaning": "অনুকম্পা করে এই গিলানপচ্চয় গ্রহণ করুন। সংঘকে: আমরা আনুষঙ্গিকসহ এই পানীয় ভিক্ষুসংঘকে অর্পণ করছি; আমাদের দীর্ঘকালীন হিত ও সুখের জন্য সংঘ তা গ্রহণ করুন।",
+            "en_meaning": "“Out of compassion, may you accept this medicinal requisite.” To the Sangha: “We present these drinks and accompaniments to the Bhikkhu Sangha; may the Sangha accept them for our long-term welfare and happiness.”",
+            "other_langs": [],
+            "points": [
+              "সব “জুস” এক নয়: পাল্প, দুধ, শস্যগুঁড়া বা খাদ্য হিসেবে গণ্য উপাদান থাকলে বিকেলে অনুমোদন নাও থাকতে পারে।",
+              "ওষুধ দান করলে প্রেসক্রিপশন, মেয়াদ ও ভান্তের প্রকৃত প্রয়োজন যাচাই করুন; অচেনা ওষুধ খেতে চাপ দেবেন না।",
+              "মদ ও নেশাদ্রব্য কখনোই পানীয় দান নয়।"
+            ],
+            "practice": "দানের আগে উপাদান ও মেয়াদ দেখে নেওয়া করুণারই অংশ।",
+            "sources": [
+              {
+                "t": "Dhamma USA — Buddha Vandanā: Pali ও English",
+                "u": "https://www.dhammausa.org/index.php/2025/03/08/buddha-vandana-pali-english-translation/"
+              },
+              {
+                "t": "Dhamma Talks — Formal Offerings",
+                "u": "https://www.dhammatalks.org/books/ChantingGuide/Section0070.html"
+              }
+            ],
+            "aliases": "পানীয় গিলানপচ্চয় ওষুধ রস gilana paccaya paniya"
+          },
+          {
+            "id": "robe-offering",
+            "title": "চীবর দান",
+            "title_en": "Offering Robes",
+            "pali": "Cīvara-dāna",
+            "ref": "সারা বছর দেওয়া যায়; সংঘ/ব্যক্তি অনুযায়ী বাক্য বদলায়",
+            "status": "আনুষ্ঠানিক দানবাক্য (থাই চ্যান্টিং-ঐতিহ্যে স্পষ্ট রূপ)",
+            "intro": "চীবর ভিক্ষুর চার আবশ্যিক দ্রব্যের একটি। সাধারণ চীবর দান বছরের যেকোনো সময় করা যায়; কঠিন চীবর তার বিশেষ বিনয়সম্মত ধরন, তাই কঠিন আলাদা এন্ট্রিতে আছে।",
+            "pali_text": "Imāni mayaṁ bhante, ticīvarāni, saparivārāni, bhikkhusaṅghassa, oṇojayāma.\nSādhu no bhante, bhikkhusaṅgho, imāni ticīvarāni, saparivārāni, paṭiggaṇhātu, amhākaṁ dīgha-rattaṁ hitāya sukhāya.",
+            "bn_meaning": "ভান্তে, আমরা আনুষঙ্গিকসহ এই তিন চীবর ভিক্ষুসংঘকে অর্পণ করছি। ভিক্ষুসংঘ আমাদের দীর্ঘকালীন হিত ও সুখের জন্য এগুলো গ্রহণ করুন।",
+            "en_meaning": "Venerable Sirs, we present these three Robes, together with their accompaniments, to the Bhikkhu Sangha. May the Sangha accept them for our long-term welfare and happiness.",
+            "other_langs": [
+              {
+                "lang": "থাই বাক্যরূপের লিপি",
+                "text": "อิมานิ มะยัง ภันเต, ติจีวะรานิ, สะปะริวารานิ, ภิกขุสังฆัสสะ, โอโณชะยามะ",
+                "note": "এটি থাই অনুবাদ নয়; একই পালি বাক্যের থাই উচ্চারণভিত্তিক লেখা।"
+              }
+            ],
+            "points": [
+              "একটি বা একাধিক চীবর, নির্দিষ্ট ভিক্ষু বা সংঘ—গ্রহীতা অনুযায়ী পালি বাক্যের সংখ্যা ও সম্বোধন বদলাতে পারে; নিজে বদল না করে ভান্তের সাহায্য নিন।",
+              "ব্যবহারযোগ্য মান, মাপ, সেলাই ও রঙ বিহারের প্রচলিত ধরন অনুযায়ী কেনা ভালো। অতিরিক্ত/অপ্রয়োজনে জমে থাকা চীবর সংঘের বিবেচনায় বণ্টিত হতে পারে।"
+            ],
+            "practice": "চীবর দানের সঙ্গে নিজের পোশাক অপচয় কমানোর সংকল্প করলে দানটি আরও অর্থবহ হয়।",
+            "sources": [
+              {
+                "t": "Thai-English chanting — Offering of Three Robes",
+                "u": "https://www.interhq.org/ceremony/?p=140"
+              },
+              {
+                "t": "Dhamma Talks — Formal Offerings",
+                "u": "https://www.dhammatalks.org/books/ChantingGuide/Section0070.html"
+              }
+            ],
+            "aliases": "চীবর দান বস্ত্র ticivara robe offering"
+          },
+          {
+            "id": "kathina-offering",
+            "title": "কঠিন চীবর দান",
+            "title_en": "Kathina Robe Offering",
+            "pali": "Kaṭhina-cīvara-dāna",
+            "ref": "বর্ষাবাস শেষের পর নির্ধারিত এক মাসের বিশেষ সংঘকর্ম",
+            "status": "বিনয়ভিত্তিক আনুষ্ঠানিক বাক্য",
+            "intro": "কঠিন সাধারণ চীবর দানের চেয়ে আলাদা: বর্ষাবাস সফলভাবে শেষ করা যোগ্য ভিক্ষুসংঘকে নির্ধারিত সময়ে কাপড়/চীবর দেওয়া হয় এবং সংঘ তা আনুষ্ঠানিক প্রক্রিয়ায় বণ্টন ও কঠিন বিস্তার করে। বাংলাদেশে এটি অন্যতম বড় বৌদ্ধ অনুষ্ঠান।",
+            "pali_text": "Imaṁ mayaṁ bhante, saparivāraṁ, kaṭhinacīvara-dussaṁ, saṅghassa, oṇojayāma.\nSādhu no bhante, saṅgho, imaṁ saparivāraṁ, kaṭhinacīvara-dussaṁ, paṭiggaṇhātu, amhākaṁ dīgha-rattaṁ hitāya sukhāya.",
+            "bn_meaning": "ভান্তে, আমরা আনুষঙ্গিকসহ এই কঠিনচীবরের কাপড় সংঘকে অর্পণ করছি। আমাদের দীর্ঘকালীন হিত ও সুখের জন্য সংঘ তা গ্রহণ করুন।",
+            "en_meaning": "Venerable Sirs, we present this Kathina robe-cloth, together with its accompaniments, to the Sangha. May the Sangha accept it for our long-term welfare and happiness.",
+            "other_langs": [
+              {
+                "lang": "আঞ্চলিক নাম",
+                "text": "থাই: ผ้ากฐิน (pha kathin)\nবার্মিজ: ကထိန် (Kathina)\nচীনা অনুষ্ঠানবর্ণনায়: 功德衣 (“merit robe”)",
+                "note": "নাম এক হলেও স্থানীয় আয়োজনের বিবরণ ভিন্ন হতে পারে।"
+              }
+            ],
+            "points": [
+              "এক বিহারে বছরে মূলত একটি কঠিন অনুষ্ঠান হয়; যোগ্যতা, সীমা, ভিক্ষুসংখ্যা, কাপড় কাটা-সেলাই ও রঙের বিনয়গত ধাপ স্থানীয় ভিক্ষুসংঘ নির্ধারণ করেন।",
+              "আধুনিক অনুষ্ঠানে সারারাত বুনন/সেলাইয়ের প্রতিযোগিতা, মাইক বা জাঁক ধর্মীয় শর্ত নয়; ঐতিহ্য ও সুবিধার ভিত্তিতে হয়।",
+              "দাতা হিসেবে শুধু কাপড় নয়, বিহারের দীর্ঘমেয়াদি প্রয়োজন ও শ্রমিকের ন্যায্য পারিশ্রমিকও পুণ্যকাজের অংশ ভাবা যায়।"
+            ],
+            "practice": "তারিখ নিশ্চিত করতে পঞ্জিকা ও সংশ্লিষ্ট বিহারের ঘোষণা মিলিয়ে নিন।",
+            "sources": [
+              {
+                "t": "Buddhist Monastic Code — Kathina cloth offering",
+                "u": "https://www.dhammatalks.org/vinaya/bmc/Section0068.html"
+              },
+              {
+                "t": "চর্যাভূমি পঞ্জিকা — প্রবারণা, পূর্ণিমা ও কঠিনের সময়",
+                "u": "calendar.html"
+              }
+            ],
+            "aliases": "কঠিন চীবর Kathina civara robe cloth"
+          },
+          {
+            "id": "eight-requisites",
+            "title": "অষ্টপরিষ্কার দান",
+            "title_en": "Offering the Eight Requisites",
+            "pali": "Aṭṭha-parikkhāra-dāna",
+            "ref": "প্রব্রজ্যা/উপসম্পদা ও বিশেষ দানে প্রচলিত",
+            "status": "ঐতিহ্যগত তালিকা ও আনুষ্ঠানিক সংঘদান",
+            "intro": "ভিক্ষুর ব্যক্তিগত ব্যবহারের আটটি মৌল উপকরণকে অষ্টপরিষ্কার বলা হয়। দাতারা প্রায়ই এগুলো এক সেটে প্রস্তুত করে দেন; অতিরিক্ত ছাতা, ব্যাগ, টর্চ ইত্যাদি আলাদা উপকারী দান হতে পারে, কিন্তু মূল আটে গণনা বদলায় না।",
+            "pali_text": "Ticīvaraṁ, patto, vāsi, sūci,\nkāya-bandhanaṁ, parissāvanaṁ.",
+            "bn_meaning": "তিন চীবর, ভিক্ষাপাত্র, ক্ষুর/বাসি, সুচ, কায়বন্ধন ও জল ছাঁকার কাপড়।",
+            "en_meaning": "The triple robe, alms bowl, razor, needle, waistband/girdle, and water strainer.",
+            "other_langs": [],
+            "points": [
+              "তিন চীবর: সংঘাটি (দ্বিগুণ/বাইরের বস্ত্র), উত্তরাসঙ্গ (ঊর্ধ্ববস্ত্র), অন্তরবাসক (অধোবস্ত্র)।",
+              "বাকি পাঁচ: ভিক্ষাপাত্র, ক্ষুর, সুচ ও সেলাইয়ের উপকরণ, কোমরের বাঁধনি, পরিস্সাবন/জল ছাঁকার কাপড়।",
+              "উপকরণের মান খুবই গুরুত্বপূর্ণ—ভাঙা পাত্র, ধারহীন ক্ষুর বা অব্যবহারযোগ্য সস্তা সেট সম্মানজনক দান নয়।"
+            ],
+            "practice": "উৎসর্গের পালি বাক্যে এই তালিকায় বহুবচন রূপ বসানোর আগে অভিজ্ঞ ভান্তের সাহায্য নিন; কাঠামোগত বাক্য চীবরদানের মতো হলেও অভিন্ন করে নিন।",
+            "sources": [
+              {
+                "t": "British Library — Eight requisites of a Theravada monastic",
+                "u": "https://www.bl.uk/stories/blogs/posts/monastic-ordination-in-theravada-buddhism"
+              }
+            ],
+            "aliases": "অষ্টপরিষ্কার অষ্ট পরিষ্কার Attha parikkhara eight requisites"
+          },
+          {
+            "id": "buddha-image-offering",
+            "title": "বুদ্ধমূর্তি উৎসর্গ",
+            "title_en": "Dedicating a Buddha Image",
+            "pali": "Buddhapaṭimā-dāna",
+            "ref": "বিহার/গৃহাসনে মূর্তি দান ও প্রতিষ্ঠা",
+            "status": "স্থানীয় ঐতিহ্য; অভিন্ন পালি উৎসর্গগাথা যাচাইকৃত নয়",
+            "intro": "বুদ্ধমূর্তি দান মানে মূর্তিটিকে জনসম্মুখ স্মরণ, ধ্যান ও শ্রদ্ধার উদ্দেশ্যে উৎসর্গ করা। থেরবাদী দেশে এর আনুষঙ্গিক পরিত্ত ও আশীর্বাদ থাকলেও সর্বজনীন একটিমাত্র পালি উৎসর্গগাথা নেই; দাতার বক্তব্য স্থানীয় ভাষায় বা বিহারের পদ্ধতিতে বলা হয়।",
+            "pali_text": "",
+            "bn_meaning": "ভাবার্থ: দাতা শিল্পবস্তুটিকে নিজের সম্পত্তি হিসেবে না রেখে বুদ্ধের গুণস্মরণ ও সবার কল্যাণের জন্য অর্পণ করেন।",
+            "en_meaning": "The donor gives the image not as a private possession or decoration but as a shared support for recollecting the Buddha’s qualities and for communal practice.",
+            "other_langs": [],
+            "points": [
+              "মূর্তির আসনের উচ্চতা, স্থিতি, পরিবহনের নিরাপত্তা, শিল্পীর পারিশ্রমিক ও রক্ষণাবেক্ষণ আগে ঠিক করুন।",
+              "দাতার নামফলক সামাজিক রীতি হতে পারে, ধর্মীয় শর্ত নয়।",
+              "চৈত্য-বন্দনা গাথা মূর্তির সামনেও পড়া যায়, কিন্তু সেই গাথাটি এই বিভাগে একবারই দেওয়া হয়েছে—“চৈত্য, ধাতু ও বুদ্ধরূপ বন্দনা” দেখুন।"
+            ],
+            "practice": "পুরোনো/ভাঙা মূর্তি অবহেলায় ফেলবেন না; মেরামত বা সম্মানজনক স্থানান্তর নিয়ে বিহারের পরামর্শ নিন।",
+            "sources": [
+              {
+                "t": "ChantPali — Offering chanting ও উৎস-টীকা",
+                "u": "https://chantpali.org/offerings.html"
+              }
+            ],
+            "aliases": "বুদ্ধমূর্তি উৎসর্গ মূর্তি দান Buddha image offering"
+          },
+          {
+            "id": "buddha-image-consecration",
+            "title": "বুদ্ধমূর্তি অভিষেক ও জীবন্যাস",
+            "title_en": "Consecration / Eye-Opening of a Buddha Image",
+            "pali": "Buddhābhiseka",
+            "ref": "শ্রীলঙ্কা, মিয়ানমার, থাইল্যান্ড প্রভৃতি দেশে ভিন্ন ভিন্ন রীতি",
+            "status": "আঞ্চলিক ঐতিহ্য; ক্যানোনিক্যাল অভিন্ন বিধি নয়",
+            "intro": "বাংলাদেশে অনেক জায়গায় “জীবন্যাস” বলা হলেও এটি আক্ষরিক প্রাণ ঢোকানোর থেরবাদী শিক্ষা নয়। বুদ্ধমূর্তি প্রতিষ্ঠার সময় পরিত্ত, বুদ্ধজীবনের স্মরণ, দেশনা ও কোথাও চোখ আঁকা/খোলার চূড়ান্ত আনুষ্ঠানিকতার মাধ্যমে মূর্তিটিকে বন্দনার উপযোগী করে তোলা হয়।",
+            "pali_text": "",
+            "bn_meaning": "ভাবার্থ: মূর্তি দাতা ও সবার চেতনায় বুদ্ধগুণের জীবন্ত স্মারক হয়ে ওঠে; পাথর/ধাতু নিজে বুদ্ধ বা ঈশ্বর হয়ে যায় না।",
+            "en_meaning": "Consecration ritually “brings the Buddha to presence” in communal memory. It should not be confused with literally inserting a soul into matter; Buddhist teaching rejects a permanent soul.",
+            "other_langs": [
+              {
+                "lang": "আঞ্চলিক নাম",
+                "text": "বার্মিজ: အနေကဇာတင်ခြင်း (anegaza tin)\nশ্রীলঙ্কা: Netra-pinkama (চোখ আঁকার অনুষ্ঠান)\nথাই: เบิกพระเนตร (boek phranet, “চোখ খোলা”)\nচীনা: 開光 (kāiguāng)\nজাপানি: 開眼供養 (kaigen kuyō)",
+                "note": "একই ছাতার নিচে থাকলেও ধর্মতত্ত্ব ও রীতি দেশভেদে আলাদা।"
+              }
+            ],
+            "points": [
+              "মিয়ানমারের “অনেকজা টিন” (anegaza tin) অনুষ্ঠানে ধম্মপদ ১৫৩–১৫৪-এর জাগরণগাথা পাঠ হয়—এই পাঠ “বোধি/সম্বোধি স্মরণ” এন্ট্রিতে আছে।",
+              "শ্রীলঙ্কায় শেষ ধাপে চোখ আঁকার নেত্র-পিংকম; উত্তর থাইল্যান্ডে “চোখ খোলা” ও বুদ্ধাভিষেক-চ্যান্ট প্রচলিত। প্রতিটির প্রক্রিয়া ও ব্যাখ্যা আলাদা।",
+              "গোপন কুঠুরিতে ধাতু/পাঠ রাখা, সিন্ধুক বা বিশেষ মন্ত্রের দাবি থাকলে সেই বিহারের ঐতিহ্য আলাদা করে জানুন; সর্বত্র বাধ্যতামূলক মনে করবেন না।"
+            ],
+            "practice": "স্থানীয় ভান্তে অভিষেক না করলে গৃহে মূর্তি রাখা নিষিদ্ধ—এমন সার্বজনীন থেরবাদী বিধি নেই; শ্রদ্ধা ও পরিচ্ছন্নতাই প্রাথমিক।",
+            "sources": [
+              {
+                "t": "Access to Insight — Buddhist Ceremonies and Rituals of Sri Lanka",
+                "u": "https://accesstoinsight.org/lib/authors/kariyawasam/wheel402.html"
+              },
+              {
+                "t": "Princeton University Press — Becoming the Buddha",
+                "u": "https://press.princeton.edu/books/hardcover/9780691114354/becoming-the-buddha"
+              }
+            ],
+            "aliases": "জীবন্যাস বুদ্ধাভিষেক মূর্তি অভিষেক Buddhābhiṣeka eye opening"
+          },
+          {
+            "id": "vihara-offering",
+            "title": "বিহার / মন্দির দান",
+            "title_en": "Offering a Monastery or Lodgings",
+            "pali": "Vihāra-dāna · Senāsana-dāna",
+            "ref": "সংঘের আবাস, কুটি, সীমা বা ধ্যানকক্ষ দান",
+            "status": "বিনয়সম্মত আনুষ্ঠানিক অর্পণবাক্য",
+            "intro": "বিহারদান শুধু ভবনের হস্তান্তর নয়; চতুর্দিক থেকে আগত ও ভবিষ্যতে আগমনকারী সংঘ যাতে বসবাস, অধ্যয়ন ও ভাবনা করতে পারেন, সেই উদ্দেশ্যে স্থানটি অর্পণ করা হয়।",
+            "pali_text": "Imāni mayaṁ bhante, senāsanāni, āgatānāgatassa, cātuddisassa, bhikkhusaṅghassa, oṇojayāma.\nSādhu no bhante, bhikkhusaṅgho, imāni senāsanāni, paṭiggaṇhātu, amhākaṁ dīgha-rattaṁ hitāya sukhāya.",
+            "bn_meaning": "ভান্তে, আমরা এই আবাসগুলো চতুর্দিকের—আগত ও অনাগত—ভিক্ষুসংঘকে অর্পণ করছি। ভিক্ষুসংঘ আমাদের দীর্ঘকালীন হিত ও সুখের জন্য এগুলো গ্রহণ করুন।",
+            "en_meaning": "Venerable Sirs, we present these lodgings to the Bhikkhu Sangha of the four directions, both those who have come and those yet to come. May the Sangha accept them for our long-term welfare and happiness.",
+            "other_langs": [],
+            "points": [
+              "“Vihāradānaṁ saṅghassa aggaṁ buddhena vaṇṇitaṁ”—সংঘকে বিহার দানকে বুদ্ধ প্রশংসিত শ্রেষ্ঠ দান বলা হয়েছে, এমন বাণী ঐতিহ্যে উদ্ধৃত হয়; তবে আনুষ্ঠানিক অর্পণে ওপরের senāsana-বাক্য ব্যবহৃত হয়।",
+              "জমির দলিল, সংঘ/কমিটির সম্মতি, বন্যা-অগ্নি নিরাপত্তা, পানি-বিদ্যুৎ, প্রতিবন্ধী-প্রবেশগম্যতা ও ভবিষ্যৎ রক্ষণাবেক্ষণকে দান প্রকল্পের অংশ ধরুন।",
+              "বিহার মানে বসবাসের স্থান; “মন্দির” বলতে অনেক সময় উপাসনালয় বোঝায়—স্থানীয় নাম যাই হোক, আসল ব্যবহার স্পষ্ট করুন।"
+            ],
+            "practice": "নামফলকের চেয়ে দীর্ঘমেয়াদে পরিষ্কার টয়লেট, নিরাপদ পানি ও রক্ষণাবেক্ষণ তহবিল সংঘ ও দর্শনার্থীর বেশি কাজে আসে।",
+            "sources": [
+              {
+                "t": "Dhamma Talks — Formal Offerings",
+                "u": "https://www.dhammatalks.org/books/ChantingGuide/Section0070.html"
+              }
+            ],
+            "aliases": "বিহার দান মন্দির দান আবাস Senasana Vihara dana"
+          },
+          {
+            "id": "banner-offering",
+            "title": "ধ্বজা / পতাকা উৎসর্গ",
+            "title_en": "Offering a Victory Banner or Buddhist Flag",
+            "pali": "Dhaja-dāna",
+            "ref": "অনুষ্ঠানশুরুতে পতাকা উত্তোলন ও মারবিজয় প্রতীক",
+            "status": "ঐতিহ্য ও প্রতীক; অভিন্ন থেরবাদী পালি গাথা যাচাইকৃত নয়",
+            "intro": "ধ্বজা প্রাচীন ভারতীয় বিজয়-নিশান থেকে আসা প্রতীক; বৌদ্ধ ব্যাখ্যায় এটি বুদ্ধের মার ও ক্লেশের ওপর জয়ের স্মারক। বাংলাদেশে অনুষ্ঠান শুরুতে ছয়রঙা বৌদ্ধ পতাকা উত্তোলন প্রচলিত।",
+            "pali_text": "",
+            "bn_meaning": "ভাবার্থ: পতাকা জাদুকরী বস্তু নয়—ধর্মের বিজয়গাথা ও সম্প্রদায়ের স্মরণচিহ্ন। ছয় রঙের ব্যাখ্যা “বৌদ্ধ পতাকার ছয় রঙ” এন্ট্রিতে আছে।",
+            "en_meaning": "The banner symbolizes the Buddha’s victory over Māra and the defilements. A hoisted Buddhist flag marks communal remembrance; it is not treated as a magical object.",
+            "other_langs": [
+              {
+                "lang": "অন্য ভাষায় ধ্বজা",
+                "text": "সংস্কৃত: ध्वज (dhvaja)\nতিব্বতি: རྒྱལ་མཚན (rgyal mtshan, “বিজয়চিহ্ন”)",
+                "note": "তিব্বতি ধারায় ধ্বজা অষ্টমঙ্গল প্রতীকের একটি; থেরবাদী পতাকার অর্থের সঙ্গে মিল রেখেই রূপ বদলায়।"
+              }
+            ],
+            "points": [
+              "নতুন পতাকা দান করলে তা কার সম্পত্তি, কে ধোয়া/সংরক্ষণ করবে এবং জীর্ণ পতাকা কীভাবে সম্মানের সঙ্গে সরানো হবে—তা আগে ঠিক করুন।",
+              "বৌদ্ধ পতাকাকে জাতীয় পতাকার সঙ্গে একই দণ্ডে বা সংশ্লিষ্ট রাষ্ট্রীয় বিধির বিরুদ্ধে ব্যবহার করবেন না।",
+              "ধ্বজা উৎসর্গের নির্দিষ্ট গাথা দাবি না করে সাধারণ ত্রিরত্ন বন্দনা ও জাতীয়/ধর্মীয় শিষ্টাচার অনুসরণ করুন।"
+            ],
+            "practice": "বিদ্যুতের তার, ঝড়ো বাতাস ও ভেজা খুঁটির নিরাপত্তা আগে দেখুন।",
+            "sources": [
+              {
+                "t": "Asia Society — Victory Banner প্রতীক-ব্যাখ্যা",
+                "u": "https://asiasociety.org/new-york/guide-decoding-buddhist-symbolism-tibetan-art"
+              }
+            ],
+            "aliases": "ধ্বজা পতাকা Dhaja banner flag"
+          },
+          {
+            "id": "fanush-offering",
+            "title": "ফানুস ওড়ানো — প্রবারণার আকাশপ্রদীপ",
+            "title_en": "Releasing a Fanush Sky Lantern at Pavāraṇā",
+            "pali": "ফানুস / Fanush (local sky lantern)",
+            "ref": "বাংলাদেশের প্রবারণা পূর্ণিমা ও পার্বত্য অঞ্চলের জনপ্রিয় রীতি",
+            "status": "লোকঐতিহ্য; পালি ক্যানোনিক্যাল বিধি নয়",
+            "intro": "বর্ষাবাস শেষে প্রবারণা পূর্ণিমার সন্ধ্যায় স্মরণ করা হয়। লোকব্যখ্যায় বুদ্ধের কেশধাতু/চূলামণি চৈত্যের দিকে আকাশে প্রদীপ পাঠানো বা অন্ধকারে আলোর জয়ের প্রতীক বলা হয়; বিবরণ অঞ্চলভেদে বদলায়।",
+            "pali_text": "",
+            "bn_meaning": "ভাবার্থ: আলো আকাশে উঠতে দেখলে অজ্ঞান থেকে প্রজ্ঞার দিকে উত্তরণ স্মরণ করা যায়; এটি প্রতীকী লোকরীতি, আবশ্যিক ধর্মবিধি নয়।",
+            "en_meaning": "The rising light is locally explained as an offering toward the Cūḷāmaṇi shrine and as a symbol of wisdom overcoming darkness at the end of the rains retreat.",
+            "other_langs": [
+              {
+                "lang": "পার্শ্ববর্তী নাম",
+                "text": "থাই: โคมลอย (khom loi) / โคมไฟ (khom fai)\nচীনা: 天灯 (tiāndēng)",
+                "note": "নাম কাছাকাছি হলেও উৎসব ও নিয়ম দেশভেদে আলাদা।"
+              }
+            ],
+            "points": [
+              "খোলা আগুনের কাগজের বেলুন বাড়ি, বাজার, বিমানপথ, বন ও বিদ্যুৎলাইনের কাছে আগুন ও পরিবেশঝুঁকি তৈরি করতে পারে। স্থানীয় প্রশাসন/পুলিশের অনুমতি ও বিধিনিষেধ মানা বাধ্যতামূলক।",
+              "বাতাস প্রবল হলে, কাছাকাছি দাহ্য বস্তু থাকলে বা অনুমোদিত খোলা জায়গা না থাকলে ফানুস না উড়িয়ে বিহার প্রাঙ্গণে প্রদীপ জ্বালানো নিরাপদ বিকল্প।",
+              "তার/ধাতব ফ্রেম পশুর জন্য ঝুঁকি হতে পারে; বায়োডিগ্রেডেবল কাঠামো ও পরে পড়ে থাকা অংশ তুলে নেওয়ার ব্যবস্থা রাখুন।"
+            ],
+            "practice": "ধর্মীয় আবেগ যা-ই থাকুক, একটি দুর্ঘটনা পুরো উৎসবকে কলঙ্কিত করে—নিরাপত্তাই এখানে করুণার ব্যবহারিক রূপ।",
+            "sources": [
+              {
+                "t": "Buddhistdoor — বাংলাদেশের প্রবারণা ও ফানুস",
+                "u": "https://www.buddhistdoor.net/features/skybound-lights-the-buddhist-festival-of-prabara%E1%B9%87a-purnima-in-bangladesh/"
+              },
+              {
+                "t": "চর্যাভূমি পঞ্জিকা — প্রবারণা, পূর্ণিমা ও কঠিনের সময়",
+                "u": "calendar.html"
+              }
+            ],
+            "aliases": "ফানুস প্রবারণা আকাশ প্রদীপ Fanush lantern Pavarana"
+          }
+        ]
+      },
+      {
+        "title": "ঘ. প্রতীক, রং ও ব্যাখ্যা",
         "intro": "প্রতীক বোঝায় স্মরণ — কোনো বস্তু নিজে ক্ষমতাধর নয়। নিচে প্রধান প্রতীকগুলোর সর্বজনীন ব্যাখ্যা দেওয়া হলো; ধারা (থেরবাদ/মহাযান/বজ্রযান) ভেদে বিস্তারিত বদলায়।",
         "items": [
           {
@@ -492,8 +1475,17 @@
               "মিশ্র রঙ (pabbhassara) — পাঁচ রঙের মিলিত আভা · বুদ্ধবাণীর সার্বজনীন সত্য।"
             ],
             "sources": [
-              {"t": "Wikipedia — Buddhist flag (১৮৮৫, কলম্বো কমিটি)", "u": "https://en.wikipedia.org/wiki/Buddhist_flag"}
-            ]
+              {
+                "t": "Wikipedia — Buddhist flag (১৮৮৫, কলম্বো কমিটি)",
+                "u": "https://en.wikipedia.org/wiki/Buddhist_flag"
+              }
+            ],
+            "id": "buddhist-flag-colours",
+            "title_en": "The Six Colours of the Buddhist Flag",
+            "bn_meaning": "নীল, হলুদ, লাল, সাদা, কমলা ও মিশ্র রঙ বুদ্ধের আভা এবং মৈত্রী, মধ্যপথ, পুণ্য, পবিত্রতা, প্রজ্ঞা ও সার্বজনীন সত্যের প্রতীক হিসেবে ব্যাখ্যা করা হয়।",
+            "en_meaning": "The blue, yellow, red, white, orange, and combined colours are explained through the Buddha’s aura and values such as loving-kindness, the middle way, merit, purity, wisdom, and universal truth.",
+            "other_langs": [],
+            "aliases": "বৌদ্ধ পতাকা ছয় রঙ Buddhist flag colours chabbanna ramsi"
           },
           {
             "title": "প্রধান প্রতীকসমূহ",
@@ -508,6 +1500,22 @@
               "বুদ্ধপদ: বুদ্ধের উপস্থিতি ও পথের প্রাচীন প্রতীক (মূর্তি-পূর্ব যুগে)।",
               "স্বস্তিক (卍): ভারতীয় ঐতিহ্যে প্রাচীন শুভচিহ্ন; বৌদ্ধ শিল্পে বুদ্ধের বুকে/পদে দেখা যায়। বিংশ শতকের নাৎসি “হাকেনক্রয়ৎস” থেকে এটি আলাদা ইতিহাসের — ব্যবহারের ক্ষেত্রে প্রসঙ্গ বুঝিয়ে বলা ভদ্রতা।",
               "অষ্টমঙ্গল (বজ্রযান/তিব্বতি ধারায় প্রচলিত তালিকা): ছাতা, যুগল মাছ, ধনকলস, পদ্ম, শঙ্খ, অনন্ত গ্রন্থি, বিজয় ধ্বজা, ধর্মচক্র — তালিকার ক্রম ধারা ভেদে বদলায়; বাংলাদেশের থেরবাদী বিহারে এগুলোর ব্যবহার তুলনামূলক কম।"
+            ],
+            "id": "buddhist-symbols",
+            "title_en": "Principal Buddhist Symbols",
+            "bn_meaning": "ধর্মচক্র, পদ্ম, বোধিবৃক্ষ, স্তূপ, ত্রিরত্ন, বুদ্ধপদ প্রভৃতি প্রতীক পথ ও জাগরণের স্মারক; বস্তুগুলো নিজে ক্ষমতাধর নয়।",
+            "en_meaning": "The wheel, lotus, Bodhi tree, stupa, Triple Gem, and footprint are reminders of the path and awakening, not independently powerful objects.",
+            "other_langs": [],
+            "aliases": "প্রতীক ধর্মচক্র পদ্ম Buddhist symbols",
+            "sources": [
+              {
+                "t": "The Met — Buddhism and Buddhist Art (প্রতীক ও মূর্তিতত্ত্বের পরিচিতি)",
+                "u": "https://www.metmuseum.org/toah/hd/budd/hd_budd.htm"
+              },
+              {
+                "t": "Asia Society — Decoding Buddhist Symbolism in Tibetan Art (অষ্টমঙ্গল প্রসঙ্গ)",
+                "u": "https://asiasociety.org/new-york/guide-decoding-buddhist-symbolism-tibetan-art"
+              }
             ]
           },
           {
@@ -517,12 +1525,28 @@
             "points": [
               "কাষায় বস্ত্রের গেরুয়া-হলুদ রঙটি ত্যাগ ও অনাড়ম্বরের প্রতীক; ধারা ও দেশভেদে রঙের গাঢ়ত্ব বদলায় (বাংলাদেশে সাধারণত গেরুয়া/কমলা, ধূতঙ্গধারীদের ক্ষেত্রে গাঢ় বাদামি)।",
               "তিন চীবর (অন্তরবাসক, উত্তরাসঙ্গ, সংঘাটি) ভিক্ষুর মূল পরিধেয় — অতিরিক্ত পরিচ্ছদ বিনয়ে সীমাবদ্ধ।"
+            ],
+            "id": "bhikkhu-Robes-colour",
+            "title_en": "Monastic Robes and Their Colours",
+            "bn_meaning": "কাষায় বস্ত্রের গেরুয়া, কমলা বা বাদামি রঙ ত্যাগ ও অনাড়ম্বরের প্রতীক; দেশ, ধারা ও রঞ্জকের কারণে রঙের গাঢ়ত্ব বদলায়।",
+            "en_meaning": "Ochre, orange, or brown Robes symbolize renunciation and simplicity; the precise shade varies by country, tradition, and dye.",
+            "other_langs": [],
+            "aliases": "ভিক্ষু বস্ত্র রঙ কাষায় Robes colour kasaya",
+            "sources": [
+              {
+                "t": "British Library — Monastic Ordination in Theravada Buddhism (বস্ত্র ও আবশ্যকীয় বস্তু)",
+                "u": "https://www.bl.uk/stories/blogs/posts/monastic-ordination-in-theravada-buddhism"
+              },
+              {
+                "t": "BuddhaNet — The Monastic Robes (তিন চীবর)",
+                "u": "https://www.buddhanet.net/e-learning/buddhistworld/robe_txt/"
+              }
             ]
           }
         ]
       },
       {
-        "title": "ঘ. জীবনাচার — বিবাহ ও সৎকার",
+        "title": "ঙ. জীবনাচার — বিবাহ ও সৎকার",
         "intro": "ত্রিপিটকে বিবাহ বা সৎকারের কোনো “সংস্কার-মন্ত্র” নির্ধারিত নেই; এগুলো সামাজিক অনুষ্ঠান, যার মধ্যে ধর্মীয় অংশ হলো শীল, বন্দনা, পরিত্ত ও দান। এই সত্য জানলে অযথা দাবি নিয়ে বিভ্রান্তি হয় না।",
         "items": [
           {
@@ -530,10 +1554,22 @@
             "ref": "সিগালোবাদ সুত্তের দাম্পত্য-কর্তব্য + স্থানীয় রীতি",
             "status": "ক্যানোনিক্যাল নীতি + ঐতিহ্য",
             "points": [
-              "ক্যানোনিক্যাল বিধি নেই: কোরবানি-মন্ত্র বা ভিক্ষুর সম্মুখে বৈবাহিক প্রতিজ্ঞা বৌদ্ধ বিধান নয়; বিয়ের বৈধতা আসে সামাজিক ও রাষ্ট্রীয় আইন থেকে — নিবন্ধনের বিষয়টি স্থানীয়ভাবে নিশ্চিত করুন।",
+              "ক্যানোনিক্যাল বিধি নেই: কোনো নির্দিষ্ট বিবাহ-মন্ত্র বা ভিক্ষুর সম্মুখে বৈবাহিক প্রতিজ্ঞা ক্যানোনিক্যাল আবশ্যিক বিধান নয়; বিয়ের বৈধতা আসে সামাজিক ও রাষ্ট্রীয় আইন থেকে — নিবন্ধনের বিষয়টি স্থানীয়ভাবে নিশ্চিত করুন।",
               "বাংলাদেশে প্রচলিত ধর্মীয় অংশ: ভিক্ষু বরণ, ত্রিশরণ-পঞ্চশীল, মহামঙ্গল ও জয়মঙ্গল গাথা পাঠ, বর-কনের উদ্দেশে দেশনা, পুণ্যদান। অনেক জায়গায় “পিরিতের সুতা” হাতে বাঁধা হয়।",
               "সিগালোবাদ সুত্ত অনুযায়ী দাম্পত্য পারস্পরিক: স্বামীর কর্তব্য — সম্মান, অবমাননা না করা, বিশ্বস্ততা, ঘরের কর্তৃত্বে অংশ দেওয়া, সামর্থ্যে উপহার; স্ত্রীর কর্তব্য — গৃহকর্মের যত্ন, আত্মীয়-পরিজনের সেবা, বিশ্বস্ততা, উপার্জন রক্ষা, দক্ষতা ও উদ্যম।",
               "ধনঞ্জয়-বিশাখা কাহিনির দশ উপদেশ (ওপরের অধ্যায়ে) অনেক পরিবারে বিদায়বেলায় বলা হয়।"
+            ],
+            "id": "buddhist-marriage-customs",
+            "title_en": "Buddhist Marriage Customs",
+            "bn_meaning": "ত্রিপিটকে বিবাহের বাধ্যতামূলক সংস্কার-মন্ত্র নেই; শীল, পরিত্ত ও দাম্পত্য কর্তব্যের দেশনাই ধর্মীয় অংশ, বৈধতা সামাজিক ও রাষ্ট্রীয় আইন থেকে আসে।",
+            "en_meaning": "The Pali Canon prescribes no mandatory wedding sacrament. Traditional religious elements are precepts, blessing chants, and teaching on mutual marital duties; legal validity comes from civil/social law.",
+            "other_langs": [],
+            "aliases": "বিবাহ Buddhist wedding marriage",
+            "sources": [
+              {
+                "t": "SuttaCentral — DN 31 Sigālovāda Sutta (স্বামী-স্ত্রীর পারস্পরিক কর্তব্য)",
+                "u": "https://suttacentral.net/dn31/en/sujato"
+              }
             ]
           },
           {
@@ -548,8 +1584,17 @@
               "মৃত্যুবার্ষিকীতে বাৎসরিক দান অনেক পরিবারের রীতি; অতিরিক্ত খরচের চাপ ধর্মীয় বাধ্যবাধকতা নয় — সামর্থ্য অনুযায়ী দানই বিধিসম্মত।"
             ],
             "sources": [
-              {"t": "SuttaCentral — Khp 7 Tirokuḍḍa (মৃত আত্মীয়দের উদ্দেশে দান)", "u": "https://suttacentral.net/khp7/en/sujato"}
-            ]
+              {
+                "t": "SuttaCentral — Khp 7 Tirokuḍḍa (মৃত আত্মীয়দের উদ্দেশে দান)",
+                "u": "https://suttacentral.net/khp7/en/sujato"
+              }
+            ],
+            "id": "buddhist-funeral-customs",
+            "title_en": "Buddhist Funeral Customs",
+            "bn_meaning": "অনিত্যতার স্মরণ, পরিত্ত, দেশনা ও প্রয়াতের উদ্দেশে পুণ্যদানই বৌদ্ধ সৎকারের কেন্দ্র।",
+            "en_meaning": "Reflection on impermanence, protective chanting, a Dhamma talk, and dedication of merit are central to a traditional Buddhist funeral.",
+            "other_langs": [],
+            "aliases": "সৎকার অন্ত্যেষ্টিক্রিয়া funeral Anicca vata sankhara"
           }
         ]
       }

@@ -8,7 +8,7 @@
   {
    "id": "somapura",
    "name": "পাহাড়পুর সোমপুর মহাবিহার",
-   "name_en": null,
+   "name_en": "Somapura Mahavihara, Paharpur",
    "category": "বিহার",
    "type": "প্রত্নস্থল",
    "division": "রাজশাহী",
@@ -21,8 +21,8 @@
     "longitude": 88.977
    },
    "historical_era": "পাল যুগ; সাধারণভাবে ৮ম শতক থেকে ১২শ শতক পর্যন্ত বিকাশের সঙ্গে যুক্ত",
-   "history": "World Buddhist Directory-তে Bangladesh Bouddha Samiti/ Bangladesh Buddhist Association-এর ঠিকানা হিসেবে No. 1 Buddhist Temple Road, Nandan Kanan, Chittagong উল্লেখ আছে। স্থানীয়ভাবে পরিচিত নন্দনকানন বৌদ্ধ বিহারের বর্তমান সময়সূচি ও প্রবেশপথ যাওয়ার আগে যাচাই করুন।",
-   "summary": "চট্টগ্রাম শহরের নন্দনকাননে অবস্থিত চট্টগ্রাম বৌদ্ধ বিহার; World Buddhist Directory-তে Buddhist Temple Road-এর ঠিকানা দেওয়া আছে। পিনটি আনুমানিক।",
+   "history": "UNESCO-র বিবরণ অনুযায়ী সোমপুর মহাবিহার পালসম্রাট ধর্মপাল দেবের আমলে প্রতিষ্ঠিত হয়ে দ্বাদশ শতক পর্যন্ত বৌদ্ধ ধর্মীয় ও বৌদ্ধিক কেন্দ্র হিসেবে সমৃদ্ধ ছিল। ১৯৮৫ সালে এটি UNESCO বিশ্বঐতিহ্য তালিকায় অন্তর্ভুক্ত হয়; কেন্দ্রীয় মন্দিরঘেরা পরিকল্পনা পরবর্তী দক্ষিণ-পূর্ব এশীয় বৌদ্ধ স্থাপত্যেও প্রভাব ফেলেছিল বলে UNESCO উল্লেখ করেছে। টিকিট, জাদুঘর ও খোলার সময় যাত্রার আগে সরকারি সূত্রে যাচাই করুন।",
+   "summary": "নওগাঁর পাহাড়পুরে অবস্থিত পাল-যুগের সোমপুর মহাবিহার—UNESCO বিশ্বঐতিহ্য। ক্রুশাকার কেন্দ্রীয় মন্দির ও চারপাশের ভিক্ষু-কক্ষের সারি মধ্যযুগীয় বাংলার বৌদ্ধ শিক্ষা ও স্থাপত্যের প্রধান নিদর্শন।",
    "archaeology_findings": null,
    "architectural_significance": null,
    "best_time_to_visit": "সাধারণত নভেম্বর–ফেব্রুয়ারির তুলনামূলক শুষ্ক ও আরামদায়ক সময় ভ্রমণের জন্য সুবিধাজনক হতে পারে; সাইটের খোলার সময়, বর্ষা/উৎসবের ভিড় এবং স্থানীয় প্রবেশ-নিয়ম আগে যাচাই করুন।",
@@ -34,13 +34,13 @@
      "credit_url": "https://commons.wikimedia.org/wiki/File:Paharpur_Buddhist_Bihar.jpg"
     }
    ],
-   "source_url": "https://www.buddhanet.info/wbd/country.php?country_id=40",
-   "source_label": "World Buddhist Directory · Chittagong Buddhist Monastery, Nandan Kanan",
+   "source_url": "https://whc.unesco.org/en/list/322/",
+   "source_label": "UNESCO World Heritage Centre · Ruins of the Buddhist Vihara at Paharpur",
    "visitor_advice": "কোনো স্থানে যাওয়ার আগে তার ইতিহাস, সংরক্ষণবিধি ও স্থানীয় মানুষের জীবনকে সম্মান করুন।",
    "travel_note": "ঢাকা থেকে নওগাঁ/জয়পুরহাট হয়ে স্থানীয় বাস বা সিএনজিতে পাহাড়পুরে যাওয়ার রুট খুঁজুন। যাত্রার সময়সূচি ও ভাড়া আগে যাচাই করুন।",
    "pin_approximate": false,
-   "verification_status": "source-listed",
-   "verification_note": "যাত্রার আগে সুনির্দিষ্ট প্রবেশপথ যাচাই করুন।",
+   "verification_status": "UNESCO-listed",
+   "verification_note": "বর্তমান খোলার সময় ও প্রবেশপথ সরকারি সূত্রে যাচাই করুন।",
    "village": "",
    "post_office": ""
   },

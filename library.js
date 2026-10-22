@@ -177,6 +177,16 @@
       chips('libTopicFilters', 'topic');
       bind();
       render();
+      if (window.location.hash) {
+        var target = document.getElementById(window.location.hash.slice(1));
+        if (target) {
+          window.setTimeout(function () {
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            target.style.outline = '3px solid #185d4d';
+            target.style.outlineOffset = '4px';
+          }, 80);
+        }
+      }
     })
     .catch(function (err) {
       list.innerHTML = '<p class="hist-sub">ডেটা লোড করা যায়নি (' + esc(err.message) + ')।</p>';

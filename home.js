@@ -1,13 +1,12 @@
 /* চর্যাভূমি — হোমপেজ রেন্ডার (data/site-info.json + data/quiz-bank.json) */
 (function () {
   'use strict';
-  var INFO = 'data/site-info.json?v=20261022d1';
+  var INFO = 'data/site-info.json?v=20261022m1';
   var QUIZ = 'data/quiz-bank.json?v=20261022a';
   var QUIZ2 = 'data/quiz-extra14.json?v=20261022b';   /* রাউন্ড ১৫ সংযোজন */
-  var SITES = 'data/heritage-sites.json?v=20261022a';
-  var ADD = 'data/heritage-sites-additions.json?v=20261022a';
-  var DIST = 'data/district-famous.json?v=20261022a';
-  var LIB = 'data/heritage-library.json?v=20261022a';
+  var DIST = 'data/district-famous.json?v=20261022m1';
+  // হিরো-সংখ্যার জন্য মেগাবাইট-খানেক স্থান/কুইজ/লাইব্রেরি ডেটা আর লোড করা হয় না;
+  // site-info.coverage ও district-famous-এর প্রস্তুত হিসাবই যথেষ্ট। এতে হোমপেজ দ্রুত খোলে।
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -17,26 +16,27 @@
   function bn(n) { return Number(n).toLocaleString('bn-BD'); }
   function $(id) { return document.getElementById(id); }
 
-  function heroStats(info, sites, bulk, recs, lib, quiz) {
+  function heroStats(info, districtData, quizTotal) {
     var box = $('cbHeroStats');
     if (!box) return;
-    function normDistrict(d) { return String(d || '').replace('মুন্সিগঞ্জ', 'মুন্সীগঞ্জ').trim(); }
-    var districts = {};
-    [].concat(sites, bulk, recs).forEach(function (s) { if (s && s.district) districts[normDistrict(s.district)] = 1; });
-    var nDist = Object.keys(districts).length;
-    var total = sites.length + bulk.length + recs.length;
+    var coverage = info.coverage || {};
+    var nDist = (districtData && districtData.districts_in_data) || coverage.districts_with_data || 30;
+    var totalDist = (districtData && districtData.districts_total) || coverage.districts_total || 64;
+    var total = (districtData && districtData.total_records) || coverage.sites_total || 3218;
+    var quiz = quizTotal || coverage.quiz_questions || 662;
+    var lib = coverage.library_items || 82;
     var rows = [
-      [bn(nDist) + ' / ' + bn(64), 'জেলার বিহার-তালিকা'],
+      [bn(nDist) + ' / ' + bn(totalDist), 'জেলার বিহার-তালিকা'],
       [bn(total) + '+', 'বিহার ও প্রত্নস্থান'],
       [bn(quiz) + '+', 'কুইজ প্রশ্ন'],
       [bn(lib) + 'টি', 'বই · ভিডিও · অডিও']
     ];
-    box.innerHTML = rows.map(function (r) {
-      return '<div><b>' + r[0] + '</b><span>' + r[1] + '</span></div>';
+    box.innerHTML = rows.map(function (r, i) {
+      return '<div><b' + (i === 2 ? ' id="cbHeroQuizCount"' : '') + '>' + r[0] + '</b><span>' + r[1] + '</span></div>';
     }).join('');
     var note = $('cbCoverage');
-    if (note && info.coverage) {
-      note.innerHTML = '📍 ' + esc(info.coverage.note) + ' <a href="index-old.html#explore">দেখুন কোন জেলাগুলো আছে →</a>';
+    if (note && coverage.note) {
+      note.innerHTML = '📍 ' + esc(coverage.note) + ' <a href="#explore">স্থান খুঁজুন →</a>';
       note.hidden = false;
     }
   }
@@ -175,7 +175,7 @@
           (d.specialty ? '<p class="star">⭐ <b>বিশেষত্ব:</b> ' + esc(d.specialty.text) +
             (d.specialty.url ? ' <a href="' + esc(d.specialty.url) + '" target="_blank" rel="noopener">সূত্র</a>' : '') + '</p>' : '') +
           (eg ? '<p class="eg"><b>উদাহরণ:</b> ' + esc(eg) + '</p>' : '') +
-          '<a class="cb-feat-link" href="index-old.html#explore" style="font-size:13px;font-weight:700;color:var(--cb-bark);text-decoration:none">পুরো তালিকা দেখুন →</a>' +
+          '<a class="cb-feat-link" href="#explore" data-dash-district="' + esc(d.district) + '" style="font-size:13px;font-weight:700;color:var(--cb-bark);text-decoration:none">এই জেলার সব স্থান দেখুন →</a>' +
         '</article>';
       }).join('');
     }
@@ -213,11 +213,9 @@
     var get = function (u, fb) {
       return fetch(u).then(function (r) { return r.ok ? r.json() : fb; }).catch(function () { return fb; });
     };
-    Promise.all([
-      get(INFO, null), get(QUIZ, { bank_size: 500 }), get(SITES, { records: [] }),
-      get(ADD, { bulk: [], records: [] }), get(LIB, { items: [] }), get(DIST, null),
-      get(QUIZ2, { questions: [] })
-    ]).then(function (res) {
+    // শুধু ছোট দুই ফাইল প্রথমে: সাইট-তথ্য ও জেলা-সারাংশ।
+    // আগে heritage-sites/additions/quiz/library মিলিয়ে প্রায় ৩ MB না এলে হোমের মূল অংশ আটকে থাকত।
+    Promise.all([get(INFO, null), get(DIST, null)]).then(function (res) {
       var info = res[0];
       if (!info) return;
       brandText(info);
@@ -226,17 +224,22 @@
       promises(info);
       founder(info);
       contact(info);
-      var quizTotal = (res[1].bank_size || 0) + ((res[6] && res[6].questions || []).length);
-      quizFacts(info, quizTotal);
-      // bulk তালিকাগুলো array-আকারে আসে; bulk_fields দিয়ে object বানাই
-      var flds = res[3].bulk_fields || [];
-      var di = flds.indexOf('district');
-      var bulkObjs = (res[3].bulk || []).map(function (row) {
-        return Array.isArray(row) ? { district: row[di] } : row;
-      });
-      heroStats(info, res[2].records || [], bulkObjs, res[3].records || [],
-                (res[4].items || []).length, quizTotal);
-      if (res[5]) { districtSection(res[5]); bindDistrict(); }
+      var baseQuiz = (info.coverage && info.coverage.quiz_questions) || 515;
+      quizFacts(info, baseQuiz + 147);
+      heroStats(info, res[1], baseQuiz + 147);
+      if (res[1]) { districtSection(res[1]); bindDistrict(); }
+
+      // কুইজের অতিরিক্ত প্রশ্নসংখ্যা নিশ্চিত করতে ছোট ফাইলটি idle সময়ে পড়া হয়।
+      var verifyQuizCount = function () {
+        get(QUIZ2, { questions: [] }).then(function (extra) {
+          var total = baseQuiz + ((extra && extra.questions) || []).length;
+          var heroQuiz = $('cbHeroQuizCount');
+          if (heroQuiz) heroQuiz.textContent = bn(total) + '+';
+          quizFacts(info, total);
+        });
+      };
+      if ('requestIdleCallback' in window) requestIdleCallback(verifyQuizCount, { timeout: 3000 });
+      else setTimeout(verifyQuizCount, 1800);
     });
   }
 
