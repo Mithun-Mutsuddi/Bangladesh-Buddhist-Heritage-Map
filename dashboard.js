@@ -4,8 +4,9 @@
 (function () {
   'use strict';
 
-  var CORE = 'data/dashboard-core.json?v=20261023d';
-  var DIRECTORY = 'data/dashboard-directory.json?v=20261023d';
+  var CORE = 'data/dashboard-core.json?v=20261024b';
+  var DIRECTORY = 'data/dashboard-directory.json?v=20261024b';
+  var GEO = 'data/bd-geo.json?v=20261024b';
   var PAGE = 24;
   var LS_TRIP = 'buddhistHeritageItinerary';
   var LS_VISITED = 'buddhistHeritageVisited';
@@ -18,7 +19,7 @@
 
   var els = {
     status: $('dashStatus'), search: $('placeSearch'), division: $('divisionFilter'),
-    district: $('districtFilter'), category: $('categoryFilter'), coordsOnly: $('coordsOnly'),
+    district: $('districtFilter'), upazila: $('upazilaFilter'), category: $('categoryFilter'), coordsOnly: $('coordsOnly'),
     clear: $('clearFilters'), results: $('resultsCount'), shown: $('shownCount'),
     grid: $('placeGrid'), empty: $('emptyState'), more: $('loadMorePlaces'),
     detail: $('placeDetail'), dialog: $('placeDialog'), dialogBody: $('placeDialogBody'),
@@ -31,6 +32,8 @@
   };
 
   var places = [];
+  var geo = [];
+  var geoReady = false;
   var byId = new Map();
   var filtered = [];
   var visible = PAGE;
@@ -87,8 +90,13 @@
       .replace(/[^\p{L}\p{M}\p{N}\s-]/gu, ' ')
       .replace(/\s+/g, ' ').trim()
       .replace(/মুন্সিগঞ্জ/g, 'মুন্সীগঞ্জ')
+      .replace(/রাঙ্গামাটি/g, 'রাঙামাটি')
       .replace(/রে ায়াংছড়ি/g, 'রেয়াংছড়ি')
       .replace(/লক্ষীছড়ি/g, 'লক্ষ্মীছড়ি')
+      .replace(/দিঘীনালা/g, 'দীঘিনালা')
+      .replace(/সীতাকুণ্ড/g, 'সীতাকুন্ড')
+      .replace(/তালতলী/g, 'তালতলি')
+      .replace(/সোনাইমুড়ি/g, 'সোনাইমুড়ী')
       .replace(/সূর্তাপুর/g, 'সূত্রাপুর');
   }
   function hasCoords(p) {
@@ -270,21 +278,65 @@
     var canonical = values.filter(Boolean).map(function (v) { return clean(v).normalize('NFC'); }).filter(Boolean);
     return Array.from(new Set(canonical)).sort(function (a, b) { return a.localeCompare(b, 'bn'); });
   }
-  function fillSelect(select, values, allLabel, keep) {
+  function fillSelect(select, values, allLabel, extraOptions) {
     if (!select) return;
-    var current = keep ? select.value : 'all';
+    var current = select.value || 'all';
+    var extras = extraOptions || [];
     select.innerHTML = '<option value="all">' + esc(allLabel) + '</option>' + values.map(function (v) {
-      return '<option value="' + esc(v) + '">' + esc(v) + '</option>';
+      var value = typeof v === 'object' ? v.value : v;
+      var label = typeof v === 'object' ? v.label : v;
+      return '<option value="' + esc(value) + '">' + esc(label) + '</option>';
+    }).join('') + extras.map(function (x) {
+      return '<option value="' + esc(x.value) + '">' + esc(x.label) + '</option>';
     }).join('');
-    select.value = values.indexOf(current) > -1 ? current : 'all';
+    select.value = values.some(function (v) { return (typeof v === 'object' ? v.value : v) === current; }) || extras.some(function (x) { return x.value === current; }) ? current : 'all';
   }
-  function refreshFilters(keep) {
-    fillSelect(els.division, uniqueSorted(places.map(function (p) { return p.division; })), 'সব বিভাগ', keep);
+  function geoDivisions() { return geo.map(function (x) { return x.n; }); }
+  function geoDistricts(division) {
+    return uniqueSorted(geo.filter(function (x) { return division === 'all' || x.n === division; })
+      .reduce(function (out, x) { return out.concat((x.d || []).map(function (d) { return d.n; })); }, []));
+  }
+  function geoUpazilas(division, district) {
+    var rows = [];
+    geo.filter(function (x) { return division === 'all' || x.n === division; })
+      .forEach(function (x) {
+        (x.d || []).filter(function (d) { return district === 'all' || d.n === district; })
+          .forEach(function (d) {
+            (d.u || []).forEach(function (u) {
+              // A name such as “সদর” can occur in several districts. Keep
+              // every one of the 495 gazetteer entries, scoped by district
+              // until a single district has been selected.
+              rows.push(district === 'all'
+                ? { value: d.n + '::' + u.n, label: u.n + ' — ' + d.n }
+                : { value: u.n, label: u.n });
+            });
+          });
+      });
+    return rows.sort(function (a, b) { return a.label.localeCompare(b.label, 'bn'); });
+  }
+  function refreshFilters() {
+    // Preserve a valid selection while options are being cascaded. The old
+    // implementation reset the division to “all” during its own change event.
     var div = els.division ? els.division.value : 'all';
-    var districtPool = div === 'all' ? places : places.filter(function (p) { return p.division === div; });
-    fillSelect(els.district, uniqueSorted(districtPool.map(function (p) { return p.district; })), 'সব জেলা', keep);
-    // category হলো একমাত্র ক্যানোনিকাল ফিল্টার; type-এর উপধরন আলাদা অপশন হিসেবে দ্বৈত দেখানো হয় না।
-    fillSelect(els.category, uniqueSorted(places.map(function (p) { return p.category; })), 'সব ধরন', keep);
+    var dist = els.district ? els.district.value : 'all';
+    var up = els.upazila ? els.upazila.value : 'all';
+    var cat = els.category ? els.category.value : 'all';
+    var divisions = geoReady ? geoDivisions() : uniqueSorted(places.map(function (p) { return p.division; }));
+    fillSelect(els.division, divisions, 'সব বিভাগ');
+    if (els.division && div !== 'all' && divisions.indexOf(div) > -1) els.division.value = div;
+    div = els.division ? els.division.value : 'all';
+    var districts = geoReady ? geoDistricts(div) : uniqueSorted(places.filter(function (p) { return div === 'all' || p.division === div; }).map(function (p) { return p.district; }));
+    fillSelect(els.district, districts, 'সব জেলা');
+    if (els.district && dist !== 'all' && districts.indexOf(dist) > -1) els.district.value = dist;
+    dist = els.district ? els.district.value : 'all';
+    var upazilas = geoReady ? geoUpazilas(div, dist) : uniqueSorted(places.filter(function (p) {
+      return (div === 'all' || p.division === div) && (dist === 'all' || p.district === dist);
+    }).map(function (p) { return p.upazila; }));
+    fillSelect(els.upazila, upazilas, 'সব উপজেলা', [{ value: '__unknown__', label: 'উপজেলা অজানা / যাচাইাধীন' }]);
+    if (els.upazila && up !== 'all' && (upazilas.some(function (v) { return (typeof v === 'object' ? v.value : v) === up; }) || up === '__unknown__')) els.upazila.value = up;
+    // category is the only broad taxonomy; type remains a detailed subtype.
+    fillSelect(els.category, uniqueSorted(places.map(function (p) { return p.category; })), 'সব ধরন');
+    if (els.category && cat !== 'all' && Array.from(els.category.options).some(function (option) { return option.value === cat; })) els.category.value = cat;
   }
   function refreshStats() {
     if (els.totalStat) els.totalStat.textContent = bn(places.length) + 'টি';
@@ -327,12 +379,20 @@
     var tokens = q ? q.split(' ').filter(Boolean) : [];
     var div = els.division ? els.division.value : 'all';
     var dist = els.district ? els.district.value : 'all';
+    var up = els.upazila ? els.upazila.value : 'all';
     var cat = els.category ? els.category.value : 'all';
     var coordsOnly = !!(els.coordsOnly && els.coordsOnly.checked);
 
     filtered = places.filter(function (p) {
       if (div !== 'all' && p.division !== div) return false;
       if (dist !== 'all' && p.district !== dist) return false;
+      if (up === '__unknown__' && clean(p.upazila)) return false;
+      if (up !== 'all' && up !== '__unknown__') {
+        var upParts = up.split('::');
+        if (upParts.length === 2) {
+          if (p.district !== upParts[0] || p.upazila !== upParts[1]) return false;
+        } else if (p.upazila !== up) return false;
+      }
       if (cat !== 'all' && p.category !== cat) return false;
       if (coordsOnly && !hasCoords(p)) return false;
       if (!tokens.length) return true;
@@ -743,7 +803,7 @@
         i += 500;
         if (i < expanded.length) { setTimeout(chunk, 0); return; }
         directoryLoaded = true; directoryLoading = false;
-        refreshFilters(true); refreshStats(); applyFilters(false, false); renderItinerary();
+        refreshFilters(); applyUrlParams(); refreshStats(); applyFilters(false, false); renderItinerary();
         setStatus(bn(places.length) + 'টি রেকর্ড প্রস্তুত—সব বিহার-ডিরেক্টরিসহ।');
       }
       chunk();
@@ -763,10 +823,20 @@
       var query = q.get('q') || q.get('search');
       var district = q.get('district');
       var division = q.get('division');
+      var upazila = q.get('upazila');
       var category = q.get('category') || q.get('type');
       if (query && els.search) els.search.value = query;
-      if (division && els.division) { els.division.value = division; refreshFilters(true); }
-      if (district && els.district) els.district.value = district;
+      if (division && els.division) { els.division.value = division; refreshFilters(); }
+      if (district && els.district) { els.district.value = district; refreshFilters(); }
+      if (upazila && els.upazila) {
+        var upOptions = Array.from(els.upazila.options);
+        var upMatch = upOptions.find(function (option) { return option.value === upazila; });
+        if (!upMatch) {
+          var scoped = upOptions.filter(function (option) { return option.value.endsWith('::' + upazila); });
+          if (scoped.length === 1) upMatch = scoped[0];
+        }
+        if (upMatch) els.upazila.value = upMatch.value;
+      }
       if (category && els.category) {
         var match = Array.from(els.category.options).find(function (option) { return option.value === category; });
         if (match) els.category.value = category;
@@ -779,14 +849,26 @@
       clearTimeout(searchTimer);
       searchTimer = setTimeout(function () { applyFilters(true, true); }, 160);
     });
-    if (els.division) els.division.addEventListener('change', function () { refreshFilters(false); if (els.district) els.district.value = 'all'; applyFilters(true, false); });
-    if (els.district) els.district.addEventListener('change', function () { applyFilters(true, false); });
+    if (els.division) els.division.addEventListener('change', function () {
+      if (els.district) els.district.value = 'all';
+      if (els.upazila) els.upazila.value = 'all';
+      refreshFilters(); applyFilters(true, false);
+    });
+    if (els.district) els.district.addEventListener('change', function () {
+      if (els.upazila) els.upazila.value = 'all';
+      refreshFilters(); applyFilters(true, false);
+    });
+    if (els.upazila) els.upazila.addEventListener('change', function () { applyFilters(true, false); });
     if (els.category) els.category.addEventListener('change', function () { applyFilters(true, false); });
     if (els.coordsOnly) els.coordsOnly.addEventListener('change', function () { applyFilters(true, false); });
     if (els.clear) els.clear.addEventListener('click', function () {
       if (els.search) els.search.value = '';
       if (els.coordsOnly) els.coordsOnly.checked = false;
-      refreshFilters(false); applyFilters(true, false);
+      if (els.division) els.division.value = 'all';
+      if (els.district) els.district.value = 'all';
+      if (els.upazila) els.upazila.value = 'all';
+      if (els.category) els.category.value = 'all';
+      refreshFilters(); applyFilters(true, false);
       if (els.search) els.search.focus();
     });
     if (els.more) els.more.addEventListener('click', function () { visible += PAGE; renderCards(); });
@@ -824,8 +906,11 @@
       var district = link.getAttribute('data-dash-district');
       if (!district || !els.district) return;
       if (!directoryLoaded) loadDirectory();
-      refreshFilters(true);
+      if (els.division) els.division.value = 'all';
+      if (els.upazila) els.upazila.value = 'all';
+      refreshFilters();
       els.district.value = district;
+      refreshFilters();
       applyFilters(true, false);
     });
     var mapSection = $('map-section');
@@ -844,12 +929,25 @@
     bind();
     renderItinerary();
     setStatus('স্থানের মূল তালিকা লোড হচ্ছে…');
-    fetch(CORE, { cache: 'force-cache' }).then(function (r) {
-      if (!r.ok) throw new Error('core ' + r.status);
-      return r.json();
-    }).then(function (data) {
+    Promise.all([
+      fetch(CORE, { cache: 'force-cache' }).then(function (r) {
+        if (!r.ok) throw new Error('core ' + r.status);
+        return r.json();
+      }),
+      fetch(GEO, { cache: 'force-cache' }).then(function (r) {
+        if (!r.ok) throw new Error('geo ' + r.status);
+        return r.json();
+      }).catch(function (err) {
+        console.warn('[dashboard gazetteer]', err);
+        return [];
+      })
+    ]).then(function (results) {
+      var data = results[0];
+      geo = Array.isArray(results[1]) ? results[1] : [];
+      geoReady = geo.length > 0;
       addPlaces(data.places || []);
-      refreshFilters(false); refreshStats(); applyUrlParams(); applyFilters(true, false); renderItinerary();
+      refreshFilters(); refreshStats(); applyUrlParams(); applyFilters(true, false); renderItinerary();
+      if (!geoReady) setStatus('স্থানের তালিকা এসেছে, কিন্তু পূর্ণ উপজেলা gazetteer লোড হয়নি।');
       if (location.hash === '#map-section' || location.hash === '#map') ensureMap();
       scheduleDirectory();
     }).catch(function (err) {
@@ -863,7 +961,8 @@
     applyFilters: applyFilters,
     ensureMap: ensureMap,
     getPlaces: function () { return places; },
-    getFiltered: function () { return filtered; }
+    getFiltered: function () { return filtered; },
+    getGeo: function () { return geo; }
   };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true });

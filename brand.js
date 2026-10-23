@@ -7,22 +7,23 @@
 
   // প্রতিটি পাতার মূল কনটেন্ট নিজে লিখে রাখে; এখানে শুধু হেডার-ফুটার বসে।
   var NAV = [
-    { href: 'index.html', label: 'হোম' },
-    { href: 'index.html#explore', label: 'স্থান খুঁজুন' },
-    { href: 'tracker.html', label: 'আমার ট্রাভেল ট্র্যাকার' },
-    { href: 'index.html#planner', label: 'ভ্রমণ প্ল্যানার' },
-    { href: 'maps.html', label: 'মানচিত্র' },
-    { href: 'history.html', label: 'ইতিহাস' },
-    { href: 'purna-chandra-tarai.html', label: 'প্রত্নতত্ত্ব-নিবন্ধ' },
-    { href: 'philosophy.html', label: 'বৌদ্ধধর্ম' },
-    { href: 'culture.html', label: 'শিল্প ও সংস্কৃতি' },
-    { href: 'kings.html', label: 'রাজাদের প্রোফাইল' },
-    { href: 'library.html', label: 'লাইব্রেরি' },
-    { href: 'contribution.html', label: 'অবদান' },
-    { href: 'institutions.html', label: 'সামাজিক প্রতিষ্ঠান' },
-    { href: 'calendar.html', label: 'পঞ্জিকা' },
-    { href: 'quiz.html', label: 'কুইজ', cta: true },
-    { href: 'about.html', label: 'আমাদের কথা' }
+    { href: 'index.html', label: 'হোম', key: 'nav.home' },
+    { href: 'index.html#explore', label: 'স্থান খুঁজুন', key: 'nav.explore' },
+    { href: 'tracker.html', label: 'আমার ট্রাভেল ট্র্যাকার', key: 'nav.tracker' },
+    { href: 'index.html#planner', label: 'ভ্রমণ প্ল্যানার', key: 'nav.planner' },
+    { href: 'maps.html', label: 'মানচিত্র', key: 'nav.maps' },
+    { href: 'history.html', label: 'ইতিহাস', key: 'nav.history' },
+    { href: 'purna-chandra-tarai.html', label: 'প্রত্নতত্ত্ব-নিবন্ধ', key: 'nav.archaeology' },
+    { href: 'philosophy.html', label: 'বৌদ্ধধর্ম', key: 'nav.philosophy' },
+    { href: 'culture.html', label: 'শিল্প ও সংস্কৃতি', key: 'nav.culture' },
+    { href: 'kings.html', label: 'রাজাদের প্রোফাইল', key: 'nav.kings' },
+    { href: 'library.html', label: 'লাইব্রেরি', key: 'nav.library' },
+    { href: 'historical-archive.html', label: 'ঐতিহাসিক সংরক্ষণাগার', key: 'nav.archive' },
+    { href: 'contribution.html', label: 'অবদান', key: 'nav.contribution' },
+    { href: 'institutions.html', label: 'সামাজিক প্রতিষ্ঠান', key: 'nav.institutions' },
+    { href: 'calendar.html', label: 'পঞ্জিকা', key: 'nav.calendar' },
+    { href: 'quiz.html', label: 'কুইজ', key: 'nav.quiz', cta: true },
+    { href: 'about.html', label: 'আমাদের কথা', key: 'nav.about' }
   ];
 
   function esc(s) {
@@ -44,9 +45,15 @@
       var base = n.href.split('#')[0];
       var isCur = (base === cur) && (!n.href.split('#')[1]);
       return '<a href="' + esc(n.href) + '"' + (isCur ? ' aria-current="page"' : '') +
-        (n.cta ? ' class="cb-nav-cta"' : '') + '>' + esc(n.label) + '</a>';
+        (n.cta ? ' class="cb-nav-cta"' : '') + (n.key ? ' data-i18n="' + esc(n.key) + '"' : '') + '>' + esc(n.label) + '</a>';
     }).join('');
     bar.innerHTML =
+      '<div class="cb-language-bar"><div class="cb-wrap cb-language-in">' +
+        '<span class="cb-language-mark" aria-hidden="true">☸</span>' +
+        '<label for="cbLanguageSelect" data-i18n="language.label">ভাষা / Language</label>' +
+        '<select id="cbLanguageSelect" data-language-select aria-describedby="cbLanguageSupport"></select>' +
+        '<span id="cbLanguageSupport" class="cb-language-support" role="status"></span>' +
+      '</div></div>' +
       '<div class="cb-header-in cb-wrap">' +
         '<a class="cb-brand" href="index.html" aria-label="' + esc(b.name_bn || 'চর্যাভূমি') + ' — হোম">' +
           '<img src="assets/brand/logo.svg" alt="" width="40" height="40">' +
@@ -97,6 +104,7 @@
             '<a href="culture.html">শিল্প ও সংস্কৃতি</a>' +
             '<a href="kings.html">রাজাদের প্রোফাইল</a>' +
             '<a href="library.html">লাইব্রেরি</a>' +
+            '<a href="historical-archive.html">ঐতিহাসিক সংরক্ষণাগার</a>' +
             '<a href="quiz.html">কুইজ ও লিডারবোর্ড</a>' +
           '</div>' +
           '<div><h4>যোগাযোগ</h4>' +

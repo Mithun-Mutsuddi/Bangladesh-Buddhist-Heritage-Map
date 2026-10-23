@@ -13,8 +13,8 @@
   <meta property="og:image" content="assets/brand/buddha-hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="charyabhumi.css?v=20261023d">
-  <link rel="stylesheet" href="welcome.css?v=20261023d">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
+  <link rel="stylesheet" href="welcome.css?v=20261024b">
 </head>
 <body class="cb">
   <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
@@ -54,6 +54,7 @@
       </svg>
     </div>
     <div class="cb-welcome-body">
+      <div class="cb-welcome-language"><label for="welcomeLanguageSelect" data-i18n="language.label">ভাষা / Language</label><select id="welcomeLanguageSelect" data-language-select></select></div>
       <p class="cb-welcome-time" id="welcomeTime">শুভ সকাল</p>
       <h2 id="welcomeTitle">প্রিয় অতিথি, চর্যাভূমিতে স্বাগতম</h2>
       <p id="welcomeText">হাজার বছরের পথ ধরে—বাংলাদেশের বৌদ্ধ ঐতিহ্য, ইতিহাস ও ভ্রমণের আপনার বাংলা নির্দেশিকায় আপনাকে স্বাগতম।</p>
@@ -125,11 +126,15 @@
           <label>জেলা
             <select id="districtFilter"><option value="all">সব জেলা</option></select>
           </label>
+          <label>উপজেলা
+            <select id="upazilaFilter"><option value="all">সব উপজেলা</option></select>
+          </label>
           <label>স্থানের ধরন
             <select id="categoryFilter"><option value="all">সব ধরন</option></select>
           </label>
           <label class="cb-checkline"><input id="coordsOnly" type="checkbox"> শুধু ম্যাপ-পিন আছে</label>
         </form>
+        <p class="cb-filter-note" id="geoCoverage">৮ বিভাগ · ৬৪ জেলা · ৪৯৫ উপজেলা · ৪,৫৪০ ইউনিয়নের স্থানীয় gazetteer থেকে ছাঁকনি। উপজেলা না থাকলে “উপজেলা অজানা/যাচাইাধীন” বেছে নিন।</p>
         <div class="cb-dash-meta" aria-live="polite">
           <b id="resultsCount">স্থান লোড হচ্ছে…</b>
           <span id="shownCount"></span>
@@ -262,6 +267,7 @@
             <a href="culture.html">শিল্প ও সংস্কৃতি</a>
             <a href="kings.html">রাজাদের প্রোফাইল</a>
             <a href="library.html">লাইব্রেরি <small>৮২টি বই-অডিও-ভিডিও</small></a>
+            <a href="historical-archive.html">ঐতিহাসিক সংরক্ষণাগার <small>সূত্র·অধিকার·মিডিয়া</small></a>
             <a href="institutions.html">বৌদ্ধ সামাজিক প্রতিষ্ঠান <small>একীভূত ফিল্টার</small></a>
             <a href="contribution.html">বাঙালি বৌদ্ধদের অবদান</a>
             <a href="philosophy.html#sources">আরও জানুন ও যাচাই করুন</a>
@@ -334,6 +340,10 @@
           <a class="cb-card" href="library.html">
             <span class="ico">📚</span><b>বৌদ্ধ সাহিত্য</b>
             <small>ত্রিপিটক, জাতক, ধম্মপদ — পড়ার সূত্র ও সংক্ষিপ্ত পরিচয়।</small>
+          </a>
+          <a class="cb-card cb-archive-card" href="historical-archive.html">
+            <span class="ico">🗄️</span><b data-i18n="home.archiveTitle">ঐতিহাসিক সংরক্ষণাগার</b>
+            <small data-i18n="home.archiveText">বুদ্ধ, বৌদ্ধধর্ম ও বাংলার বৌদ্ধ ঐতিহ্যের উৎস, যাচাই-অবস্থা ও অধিকারসহ—বই, PDF, ছবি, গবেষণা, অডিও, ভিডিও ও জীবন্ত সংস্কৃতি।</small>
           </a>
           <a class="cb-card" href="#travel-help">
             <span class="ico">🚌</span><b>যাতায়াতের আগে যাচাই</b>
@@ -472,11 +482,12 @@
 
   <footer class="cb-footer" id="cbFooter"></footer>
 
-  <script src="brand.js?v=20261023d" defer></script>
+  <script src="language.js?v=20261024b" defer></script>
+  <script src="brand.js?v=20261024a" defer></script>
   <script src="home.js?v=20261023d" defer></script>
   <script src="calendar.js?v=20261023d" defer></script>
   <script src="welcome.js?v=20261023d" defer></script>
-  <script src="dashboard.js?v=20261023d" defer></script>
+  <script src="dashboard.js?v=20261024b" defer></script>
   <script src="sanghamitra.js?v=20261023d" defer></script>
 </body>
 </html>

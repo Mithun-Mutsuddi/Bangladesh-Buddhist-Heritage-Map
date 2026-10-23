@@ -13,9 +13,17 @@
 
 [বাংলায় শুরু করুন](START-HERE-bn.md) · [Deployment & MCP](docs/tracker-deployment.md) · [Tests](docs/tracker-validation.md) · [Attributions](docs/tracker-attributions.md)
 
+## ২০২৬-১০-২৪: Public archive, upazila ও language phase
+
+- **Public Historical Archive:** `historical-archive.html` + `data/historical-archive.json` — Buddha, Buddhism, Bengali/Bangladeshi Buddhist heritage-এর **৩৫টি source gateway**, media/topic/source-state filters, animated inline SVG, existing ৮২-item library ও ৫৪-entry creator archive-এর cross-link। প্রতিটি item-এ verification scope ও rights boundary আছে; এটি পুরো internet archive করার দাবি নয়।
+- **সম্পূর্ণ upazila filter:** `index.html`-এর জেলা filter-এর পাশে উপজেলা; `data/bd-geo.json`-এর ৮ বিভাগ / ৬৪ জেলা / ৪৯৫ উপজেলা / ৪,৫৪০ ইউনিয়ন। একই নামের উপজেলা district-scoped value-তে রাখা হয়েছে।
+- **Data cleanup:** ৩৫৯ core + ২,৮৫৯ directory = **৩,২১৮ records** অক্ষত; canonical spelling/category/geography, reviewed exceptions এবং tracker synchronization। বিস্তারিত audit: `docs/data-curation-2026-10-24.json`।
+- **ভাষা:** ওয়েবসাইটের শুরুতে persistent language selector; বাংলা/English-এর পাশে Chakma (`ccp`) ও Marma (`rmz`) community-support option এবং স্পষ্টভাবে চিহ্নিত automatic-translation route। পূর্ণ মানব-সম্পাদিত অনুবাদের দাবি নয়।
+- **নতুন phase report:** `docs/update-2026-10-24-public-archive-bn.md`। পুরোনো private browser-local draft archive (`archive.js`) public source registry থেকে আলাদা।
+
 - **হোমপেজ:** `index.html`; নাম, Dhaka time, উৎসব ও ঐচ্ছিক এলাকা অনুযায়ী session-once graphical welcome
 - **নতুন গবেষণা-পাতা:** `purna-chandra-tarai.html` (পূর্ণচন্দ্র মুখার্জি) ও `maps.html` (BD MAPS এবং ডালিঝরা)
-- **এই হালনাগাদের বিস্তারিত প্রতিবেদন:** `docs/update-2026-10-23-bn.md`
+- **পূর্ববর্তী হালনাগাদের বিস্তারিত প্রতিবেদন:** `docs/update-2026-10-23-bn.md`; নতুন phase: `docs/update-2026-10-24-public-archive-bn.md`
 - **পুরোনো ড্যাশবোর্ড** (৩০ জেলার বিহার-তালিকা, ম্যাপ, ভ্রমণ-তালিকা, উৎসব, সাহিত্য): `index-old.html`
 - **কুইজ ও লিডারবোর্ড:** `quiz.html` (৫১৫ প্রশ্ন, প্রতি রাউন্ডে ১০টি)
 - **আমাদের কথা, জরুরি নম্বর, ট্রেনের তথ্য:** `about.html`
@@ -41,7 +49,7 @@
 - **৩৪৪টি স্বতন্ত্র স্থান/প্রতিষ্ঠান/ঐতিহ্য রেকর্ড** — প্রতিটি নাম ও লিংক দিয়ে আবার খোঁজা যায়।
 - বিভাগ, জেলা, উপজেলা, থানা (যেখানে রেকর্ড আছে), ইউনিয়ন ও ক্যাটাগরি ফিল্টার; প্রশাসনিক তালিকা প্রথম ব্যবহারে lazy-load হয়।
 - Leaflet marker cache, clustered batch-loading ও loading-overlay fix সহ দ্রুততর ম্যাপ।
-- Historical Archive: ছবি/ভিডিও/অডিও/PDF/লিখিত স্মৃতি, ঐতিহাসিক ও ধারণ-তারিখ, আলোকচিত্রী, সংগ্রহকারী, আপলোডকারী, ইতিহাস-বিবরণ এবং ZIP/JSON export.
+- Private draft Historical Archive (`archive.js`): ছবি/ভিডিও/অডিও/PDF/লিখিত স্মৃতি, ঐতিহাসিক ও ধারণ-তারিখ, আলোকচিত্রী, সংগ্রহকারী, আপলোডকারী, ইতিহাস-বিবরণ এবং ZIP/JSON export; এটি public source registry নয়।
 - স্থান-তালিকায় একবারে ৪৮টি কার্ড দেখিয়ে ধাপে ধাপে লোড করা হয়; community content fetch ম্যাপের প্রাথমিক boot আটকে রাখে না।
 - ৭২টি অতিরিক্ত রেকর্ডে মোট ৩২০টির পর, আরও ৩টি উৎস-সমর্থিত শিক্ষা/শিশু-সেবা রেকর্ড যোগ করে মোট ৩২৩টি স্থান/প্রতিষ্ঠান/ঐতিহ্য রেকর্ড: আবুরখীল, রাউজান, রামু/মহেশখালী, বান্দরবান, খাগড়াছড়ি/মহালছড়ি, কুয়াকাটা-পটুয়াখালীসহ বিভিন্ন অঞ্চলের বিহার, প্রত্নস্থান, পালি শিক্ষা ও শিশু-সেবা সংস্থা।
 - বৌদ্ধ ক্যানন, জাতক, ধম্মপদ, বুদ্ধবংশ, থেরগাথা/থেরীগাথা, বিমানবত্থু, পেতবত্থু, অট্ঠকথা, দীপবংশ/মহাবংশ, লোককথা ও আধুনিক ফ্যান্টাসি আলাদা করে পরিচয় করানো সাহিত্য বিভাগ।
@@ -164,6 +172,11 @@ From the repository root:
 
 ```bash
 python tools/validate_heritage_data.py
+python tools/curate_heritage_data.py --dry-run
+python tools/build_tracker_data.py
+python tools/validate_public_phase.py
+npm test
+npx playwright test
 ```
 
-This is a structural check, not a guarantee that each historical claim, GPS coordinate, current opening time, event date, travel route or fee is factually verified. Check the source URL and the relevant site/host authority before publishing.
+The public-phase validator checks ৩,২১৮ records, 495 upazilas, tracker synchronization, archive metadata and language hooks. Browser tests cover the homepage, tracker, upazila deep links, archive filters, language states and reduced motion. This is a structural check, not a guarantee that each historical claim, GPS coordinate, current opening time, event date, travel route or fee is factually verified. Check the source URL and the relevant site/host authority before publishing.

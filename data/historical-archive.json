@@ -1,0 +1,909 @@
+{
+  "schema_version": "2026-10-24.archive.v1",
+  "generated_at": "2026-10-24",
+  "title": "Buddhist Historical Archive / বৌদ্ধ ঐতিহাসিক সংরক্ষণাগার",
+  "intro": "A curated gateway, not a claim to archive the whole internet. Every external item retains its source, verification scope and rights boundary.",
+  "stats": {
+    "gateways": 35,
+    "libraryItems": 82,
+    "creatorEntries": 54,
+    "checkedOn": "2026-10-24"
+  },
+  "types": [
+    {
+      "key": "all",
+      "labelBn": "সব মিডিয়া",
+      "labelEn": "All media"
+    },
+    {
+      "key": "pdf",
+      "labelBn": "বই / PDF",
+      "labelEn": "Books / PDF"
+    },
+    {
+      "key": "image",
+      "labelBn": "ছবি·ভাস্কর্য·চিত্র",
+      "labelEn": "Images & art"
+    },
+    {
+      "key": "audio",
+      "labelBn": "অডিও·সংগীত",
+      "labelEn": "Audio & music"
+    },
+    {
+      "key": "video",
+      "labelBn": "ভিডিও",
+      "labelEn": "Video"
+    },
+    {
+      "key": "article",
+      "labelBn": "নিবন্ধ·সংবাদ",
+      "labelEn": "Articles & news"
+    },
+    {
+      "key": "research",
+      "labelBn": "গবেষণা·পাঠ",
+      "labelEn": "Research & texts"
+    },
+    {
+      "key": "map",
+      "labelBn": "মানচিত্র",
+      "labelEn": "Maps"
+    },
+    {
+      "key": "collection",
+      "labelBn": "সংগ্রহ",
+      "labelEn": "Collections"
+    }
+  ],
+  "topics": [
+    {
+      "key": "all",
+      "labelBn": "সব বিষয়",
+      "labelEn": "All topics"
+    },
+    {
+      "key": "buddha",
+      "labelBn": "বুদ্ধ",
+      "labelEn": "Buddha"
+    },
+    {
+      "key": "buddhism",
+      "labelBn": "বৌদ্ধধর্ম",
+      "labelEn": "Buddhism"
+    },
+    {
+      "key": "bengali",
+      "labelBn": "বাংলার বৌদ্ধ",
+      "labelEn": "Bengali Buddhists"
+    },
+    {
+      "key": "bangladesh",
+      "labelBn": "বাংলাদেশের বৌদ্ধ",
+      "labelEn": "Bangladeshi Buddhists"
+    },
+    {
+      "key": "archaeology",
+      "labelBn": "প্রত্নতত্ত্ব",
+      "labelEn": "Archaeology"
+    },
+    {
+      "key": "art",
+      "labelBn": "শিল্প·ভাস্কর্য·প্রতীক",
+      "labelEn": "Art, sculpture & iconography"
+    },
+    {
+      "key": "texts",
+      "labelBn": "গ্রন্থ·পুঁথি",
+      "labelEn": "Texts & manuscripts"
+    },
+    {
+      "key": "culture",
+      "labelBn": "সংস্কৃতি·সংগীত",
+      "labelEn": "Culture & music"
+    },
+    {
+      "key": "news",
+      "labelBn": "সংবাদ·সংরক্ষণ",
+      "labelEn": "News & preservation"
+    },
+    {
+      "key": "maps",
+      "labelBn": "ঐতিহাসিক মানচিত্র",
+      "labelEn": "Historical maps"
+    }
+  ],
+  "verificationLabels": {
+    "primary": {
+      "bn": "মূলনথি / প্রাথমিক উৎস",
+      "en": "Primary source"
+    },
+    "official": {
+      "bn": "সরকারি / প্রাতিষ্ঠানিক উৎস",
+      "en": "Official / institutional source"
+    },
+    "reference": {
+      "bn": "পর্যালোচিত শিক্ষা·সহায়িকা উৎস",
+      "en": "Reviewed reference / educational source"
+    },
+    "tertiary": {
+      "bn": "তৃতীয়-স্তরের তথ্য; citation দেখুন",
+      "en": "Tertiary reference; inspect citations"
+    },
+    "discovery": {
+      "bn": "আবিষ্কার-লিংক; প্রতিটি ফল আলাদা যাচাই",
+      "en": "Discovery link; verify each result"
+    },
+    "community": {
+      "bn": "Community lead; স্বাধীন প্রমাণ দরকার",
+      "en": "Community lead; independent corroboration needed"
+    },
+    "internal": {
+      "bn": "এই সাইটের বিদ্যমান curated সংগ্রহ",
+      "en": "Existing curated collection on this site"
+    }
+  },
+  "rightsLabels": {
+    "public-domain": {
+      "bn": "পাবলিক ডোমেইন মুদ্রণ/স্ক্যান; এখনও উৎসের শর্ত দেখুন",
+      "en": "Public-domain print/scan; check the source terms"
+    },
+    "source-link": {
+      "bn": "উৎসে পড়া/দেখা; স্থানীয় কপি নয়",
+      "en": "Read/watch at source; no local copy"
+    },
+    "per-item-license": {
+      "bn": "প্রতিটি ফাইল/বস্তুর আলাদা লাইসেন্স প্রযোজ্য",
+      "en": "Each file/object has its own licence"
+    },
+    "discovery": {
+      "bn": "শুধু আবিষ্কার-লিংক; কোনো পুনঃব্যবহারের অনুমতি নয়",
+      "en": "Discovery link only; no reuse permission implied"
+    },
+    "community": {
+      "bn": "শুধু public post-এর লিংক; private access নয়",
+      "en": "Public-post links only; no private access"
+    },
+    "internal": {
+      "bn": "এই সংগ্রহের বিদ্যমান attribution ও rights label প্রযোজ্য",
+      "en": "Existing attribution and rights labels remain applicable"
+    }
+  },
+  "items": [
+    {
+      "id": "archive-charyapada-1916",
+      "type": "pdf",
+      "topics": [
+        "bengali",
+        "texts",
+        "culture"
+      ],
+      "titleBn": "বৌদ্ধগান ও দোহা (চর্যাপদ), ১৯১৬",
+      "titleEn": "Bouddha Gan O Doha (Charyapada), 1916",
+      "summaryBn": "হরপ্রসাদ শাস্ত্রী সম্পাদিত চর্যাপদের প্রথম প্রকাশিত সংস্করণের Internet Archive scan; বাংলার বৌদ্ধ সাহিত্য ও পুঁথি-ঐতিহ্যের মূল নথি।",
+      "summaryEn": "An Internet Archive scan of Haraprasad Shastri’s landmark 1916 edition of the Charyapada, a foundational Bengali Buddhist textual record.",
+      "creator": "হরপ্রসাদ শাস্ত্রী (সম্পা.)",
+      "year": "1916",
+      "language": "বাংলা / সংস্কৃত-উপাদান",
+      "source": "Internet Archive",
+      "sourceUrl": "https://archive.org/details/BouddhaGanODoha",
+      "relatedUrl": "library.html",
+      "rights": "public-domain",
+      "verification": "primary"
+    },
+    {
+      "id": "archive-mukherji-1901",
+      "type": "pdf",
+      "topics": [
+        "buddha",
+        "archaeology",
+        "texts"
+      ],
+      "titleBn": "পূর্ণচন্দ্র মুখোপাধ্যায়ের ১৯০১ প্রতিবেদন",
+      "titleEn": "Purna Chandra Mukherji’s 1901 report",
+      "summaryBn": "নেপাল-তরাই ও লুম্বিনি অঞ্চলের খনন-প্রসঙ্গে পূর্ণচন্দ্র মুখোপাধ্যায়ের historical report-এর public-domain scan; আধুনিক নিবন্ধের সঙ্গে পড়ার মূলনথি।",
+      "summaryEn": "A public-domain scan of Purna Chandra Mukherji’s 1901 report on explorations in the Nepal Tarai, paired with the site’s contextual article.",
+      "creator": "Purna Chandra Mukherji",
+      "year": "1901",
+      "language": "English",
+      "source": "Internet Archive",
+      "sourceUrl": "https://archive.org/details/bub_gb_5iYXAAAAYAAJ/page/n9",
+      "relatedUrl": "purna-chandra-tarai.html",
+      "rights": "public-domain",
+      "verification": "primary"
+    },
+    {
+      "id": "archive-unesco-lumbini-report",
+      "type": "research",
+      "topics": [
+        "buddha",
+        "archaeology"
+      ],
+      "titleBn": "UNESCO-এর লুম্বিনি প্রতিবেদন ও নথি",
+      "titleEn": "UNESCO Lumbini report and documentation",
+      "summaryBn": "লুম্বিনির সংরক্ষণ, খনন ও ঐতিহ্য-ব্যাখ্যার প্রাতিষ্ঠানিক নথির লিংক; প্রতিবেদনের নির্দিষ্ট অধ্যায় ও তারিখ আলাদা করে পড়তে হবে।",
+      "summaryEn": "An institutional UNESCO document gateway for Lumbini’s conservation and archaeological history; consult the report’s exact chapter and date.",
+      "creator": "UNESCO",
+      "year": "নথিভুক্ত",
+      "language": "English",
+      "source": "UNESDOC",
+      "sourceUrl": "https://unesdoc.unesco.org/ark:/48223/pf0000223986",
+      "relatedUrl": "purna-chandra-tarai.html",
+      "rights": "source-link",
+      "verification": "official"
+    },
+    {
+      "id": "archive-unesco-lumbini",
+      "type": "article",
+      "topics": [
+        "buddha",
+        "archaeology"
+      ],
+      "titleBn": "Lumbini — বুদ্ধের জন্মস্থান",
+      "titleEn": "Lumbini, the Birthplace of the Lord Buddha",
+      "summaryBn": "UNESCO World Heritage Centre-এর Lumbini property page; ঐতিহ্য-তাত্পর্য, সংরক্ষণ ও প্রাতিষ্ঠানিক বর্ণনার সূত্র।",
+      "summaryEn": "The UNESCO World Heritage Centre’s institutional property record for Lumbini, its significance and conservation context.",
+      "creator": "UNESCO World Heritage Centre",
+      "year": "চলমান পাতা",
+      "language": "English",
+      "source": "UNESCO",
+      "sourceUrl": "https://whc.unesco.org/en/list/666/",
+      "relatedUrl": "purna-chandra-tarai.html",
+      "rights": "source-link",
+      "verification": "official"
+    },
+    {
+      "id": "archive-unesco-paharpur",
+      "type": "article",
+      "topics": [
+        "bangladesh",
+        "archaeology",
+        "art"
+      ],
+      "titleBn": "পাহাড়পুরের বৌদ্ধ বিহার",
+      "titleEn": "Ruins of the Buddhist Vihara at Paharpur",
+      "summaryBn": "বাংলাদেশের সোমপুর মহাবিহারের UNESCO World Heritage record; স্থাপত্য, ঐতিহ্য ও সংরক্ষণের প্রাতিষ্ঠানিক ভিত্তি।",
+      "summaryEn": "The UNESCO World Heritage record for Paharpur / Somapura Mahavihara, including its architectural and conservation significance.",
+      "creator": "UNESCO World Heritage Centre",
+      "year": "চলমান পাতা",
+      "language": "English",
+      "source": "UNESCO",
+      "sourceUrl": "https://whc.unesco.org/en/list/322/",
+      "relatedUrl": "index.html#explore",
+      "rights": "source-link",
+      "verification": "official"
+    },
+    {
+      "id": "archive-dalijhara-unesco",
+      "type": "article",
+      "topics": [
+        "bangladesh",
+        "archaeology"
+      ],
+      "titleBn": "দালিঝরা — UNESCO tentative-list নথি",
+      "titleEn": "Dalijhara — UNESCO tentative-list record",
+      "summaryBn": "যশোরের দালিঝরা প্রত্নস্থলের UNESCO tentative-list entry; অবস্থান, কালনির্ধারণ ও serial-property প্রসঙ্গ আলাদা করে পড়ুন।",
+      "summaryEn": "The UNESCO tentative-list entry for Dalijhara in Jashore; read its location and dating notes separately from serial-property header data.",
+      "creator": "UNESCO World Heritage Centre",
+      "year": "তালিকাভুক্ত",
+      "language": "English",
+      "source": "UNESCO",
+      "sourceUrl": "https://whc.unesco.org/en/tentativelists/6669/",
+      "relatedUrl": "index.html#explore",
+      "rights": "source-link",
+      "verification": "official"
+    },
+    {
+      "id": "archive-buddhanet-history",
+      "type": "collection",
+      "topics": [
+        "buddha",
+        "buddhism",
+        "texts",
+        "art"
+      ],
+      "titleBn": "BuddhaNet Buddhist History & Culture",
+      "titleEn": "BuddhaNet Buddhist History & Culture",
+      "summaryBn": "বুদ্ধের জীবন, নিকায়, বিস্তার, চরিত্র, নারী, স্থান, শাস্ত্র, উৎসব, শিল্প-স্থাপত্য, প্রতীক ও পাঠতালিকার শিক্ষা-সূচিপত্র।",
+      "summaryEn": "A topic index covering the Buddha, schools, spread, figures, women, sites, scriptures, festivals, art, architecture, symbols and reading lists.",
+      "creator": "Buddha Dharma Education Association / BuddhaNet",
+      "year": "চলমান পাতা",
+      "language": "English",
+      "source": "BuddhaNet",
+      "sourceUrl": "https://www.buddhanet.net/e-learning/history/",
+      "relatedUrl": "philosophy.html",
+      "rights": "source-link",
+      "verification": "reference"
+    },
+    {
+      "id": "archive-buddhanet-art",
+      "type": "image",
+      "topics": [
+        "buddhism",
+        "art"
+      ],
+      "titleBn": "BuddhaNet — Buddhist art ও architecture",
+      "titleEn": "BuddhaNet — Buddhist art and architecture",
+      "summaryBn": "বৌদ্ধ শিল্প, স্থাপত্য, মূর্তি ও প্রতীক-ঐতিহ্যের educational entry point; পুনঃব্যবহারের আগে প্রতিটি ছবির attribution দেখুন।",
+      "summaryEn": "An educational gateway to Buddhist art, architecture, images and iconography; check attribution for each image before reuse.",
+      "creator": "BuddhaNet",
+      "year": "চলমান পাতা",
+      "language": "English",
+      "source": "BuddhaNet",
+      "sourceUrl": "https://www.buddhanet.net/e-learning/history/buddhist-art/",
+      "relatedUrl": "culture.html",
+      "rights": "per-item-license",
+      "verification": "reference"
+    },
+    {
+      "id": "archive-buddhanet-symbols",
+      "type": "image",
+      "topics": [
+        "buddhism",
+        "art",
+        "culture"
+      ],
+      "titleBn": "BuddhaNet — Buddhist symbols",
+      "titleEn": "BuddhaNet — Buddhist symbols",
+      "summaryBn": "বৌদ্ধ প্রতীক ও তাদের ব্যাখ্যার শিক্ষা-সূচিপত্র; প্রতীককে স্থানীয় tradition থেকে আলাদা universal claim হিসেবে লেখা হয়নি।",
+      "summaryEn": "An educational index of Buddhist symbols and explanations, without treating one tradition’s interpretation as universal.",
+      "creator": "BuddhaNet",
+      "year": "চলমান পাতা",
+      "language": "English",
+      "source": "BuddhaNet",
+      "sourceUrl": "https://www.buddhanet.net/e-learning/history/symbols/",
+      "relatedUrl": "philosophy.html",
+      "rights": "source-link",
+      "verification": "reference"
+    },
+    {
+      "id": "archive-buddhanet-chanting",
+      "type": "audio",
+      "topics": [
+        "buddhism",
+        "culture"
+      ],
+      "titleBn": "BuddhaNet — Pali ও অন্যান্য chanting",
+      "titleEn": "BuddhaNet — Buddhist chanting",
+      "summaryBn": "Pali devotional chanting, refuge/precept recitation ও অন্যান্য tradition-এর audio সংগ্রহের লিংক; কোনো track ডাউনলোড/পুনঃপ্রকাশের আগে source terms পড়ুন।",
+      "summaryEn": "A gateway to Pali devotional chanting and recordings from multiple traditions; consult the source terms before downloading or reusing any track.",
+      "creator": "BuddhaNet / named contributors on source pages",
+      "year": "চলমান পাতা",
+      "language": "Pali / English / others",
+      "source": "BuddhaNet Audio",
+      "sourceUrl": "https://www.buddhanet.net/audio-chant/",
+      "relatedUrl": "library.html",
+      "rights": "per-item-license",
+      "verification": "reference"
+    },
+    {
+      "id": "archive-buddhistchannel",
+      "type": "article",
+      "topics": [
+        "buddhism",
+        "bangladesh",
+        "news"
+      ],
+      "titleBn": "Buddhist Channel — সংবাদ ও archive index",
+      "titleEn": "Buddhist Channel — news and archive index",
+      "summaryBn": "Buddhist Channel-এর public news/category entry point; নির্দিষ্ট সংবাদ বা historical claim ব্যবহারের আগে মূল প্রতিবেদন ও তারিখ যাচাই করুন।",
+      "summaryEn": "The Buddhist Channel’s public news and category gateway; verify the underlying report and date before using a specific historical claim.",
+      "creator": "Buddhist Channel",
+      "year": "চলমান পাতা",
+      "language": "English",
+      "source": "Buddhist Channel",
+      "sourceUrl": "https://www.buddhistchannel.tv/index.php",
+      "relatedUrl": "historical-archive.html#policy",
+      "rights": "source-link",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-bbc-mukherji",
+      "type": "article",
+      "topics": [
+        "buddha",
+        "bengali",
+        "archaeology",
+        "news"
+      ],
+      "titleBn": "BBC Bangla — পূর্ণচন্দ্র মুখোপাধ্যায় ও নেপাল-তরাই",
+      "titleEn": "BBC Bangla — Mukherji and the Nepal Tarai",
+      "summaryBn": "২৫ সেপ্টেম্বর ২০২৩-এর BBC Bangla প্রতিবেদন; মূল প্রতিবেদন, UNESCO নথি ও স্থানীয় নিবন্ধের সঙ্গে cross-read করার জন্য সংবাদ-উৎস।",
+      "summaryEn": "A 25 September 2023 BBC Bangla report to cross-read alongside the primary report, UNESCO documentation and the site’s contextual article.",
+      "creator": "BBC Bangla",
+      "year": "2023-09-25",
+      "language": "বাংলা",
+      "source": "BBC Bangla",
+      "sourceUrl": "https://www.bbc.com/bengali/articles/cm5xm7y3km4o",
+      "relatedUrl": "purna-chandra-tarai.html",
+      "rights": "source-link",
+      "verification": "reference"
+    },
+    {
+      "id": "archive-internetarchive-bangladesh",
+      "type": "collection",
+      "topics": [
+        "buddhism",
+        "bangladesh",
+        "texts"
+      ],
+      "titleBn": "Internet Archive — Buddhism / Bangladesh search",
+      "titleEn": "Internet Archive — Buddhism and Bangladesh search",
+      "summaryBn": "বই, পুঁথি, অডিও, ভিডিও ও scanned ephemera খোঁজার discovery link; search result নিজে ঐতিহাসিক প্রমাণ নয়—প্রতিটি item-এর metadata ও copyright আলাদা করে দেখুন।",
+      "summaryEn": "A discovery search for books, manuscripts, audio, video and scanned ephemera; each item’s metadata and copyright must be checked separately.",
+      "creator": "Internet Archive contributors",
+      "year": "চলমান সংগ্রহ",
+      "language": "বহুভাষিক",
+      "source": "Internet Archive",
+      "sourceUrl": "https://archive.org/search?query=Buddhism+Bangladesh",
+      "relatedUrl": "library.html",
+      "rights": "discovery",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-commons-bangladesh",
+      "type": "image",
+      "topics": [
+        "bangladesh",
+        "art",
+        "culture"
+      ],
+      "titleBn": "Wikimedia Commons — Buddhism in Bangladesh",
+      "titleEn": "Wikimedia Commons — Buddhism in Bangladesh",
+      "summaryBn": "বাংলাদেশের বিহার, মূর্তি, উৎসব ও সাংস্কৃতিক দৃশ্যের category; প্রতিটি file page-এ creator, source ও licence যাচাই করে ব্যবহার করুন।",
+      "summaryEn": "A category of vihara, sculpture, festival and cultural images from Bangladesh; inspect each file’s creator, source and licence before reuse.",
+      "creator": "Wikimedia Commons contributors",
+      "year": "চলমান সংগ্রহ",
+      "language": "বহুভাষিক",
+      "source": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/Category:Buddhism_in_Bangladesh",
+      "relatedUrl": "culture.html",
+      "rights": "per-item-license",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-commons-somapura",
+      "type": "image",
+      "topics": [
+        "bangladesh",
+        "archaeology",
+        "art"
+      ],
+      "titleBn": "Wikimedia Commons — Somapura Mahavihara",
+      "titleEn": "Wikimedia Commons — Somapura Mahavihara",
+      "summaryBn": "পাহাড়পুর/সোমপুর মহাবিহারের ছবি, স্থাপত্য ও ভাস্কর্য-নথির category; কোনো ছবি অন্য স্থানের বলে ধরে নেওয়া যাবে না।",
+      "summaryEn": "A category of photographs and architectural/sculptural documentation for Somapura Mahavihara; captions and file provenance still matter.",
+      "creator": "Wikimedia Commons contributors",
+      "year": "চলমান সংগ্রহ",
+      "language": "বহুভাষিক",
+      "source": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/Category:Somapura_Mahavihara",
+      "relatedUrl": "index.html#explore",
+      "rights": "per-item-license",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-commons-charyapada",
+      "type": "image",
+      "topics": [
+        "bengali",
+        "texts",
+        "art"
+      ],
+      "titleBn": "Wikimedia Commons — Charyapada",
+      "titleEn": "Wikimedia Commons — Charyapada",
+      "summaryBn": "চর্যাপদ-সংক্রান্ত manuscript, illustration ও সংশ্লিষ্ট visual material-এর category; পুঁথির তারিখ ও উৎস file description থেকে যাচাই করুন।",
+      "summaryEn": "A category for Charyapada manuscripts, illustrations and related visual material; verify date and provenance in each file description.",
+      "creator": "Wikimedia Commons contributors",
+      "year": "চলমান সংগ্রহ",
+      "language": "বহুভাষিক",
+      "source": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/Category:Charyapada",
+      "relatedUrl": "library.html",
+      "rights": "per-item-license",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-met-buddha",
+      "type": "image",
+      "topics": [
+        "buddha",
+        "art"
+      ],
+      "titleBn": "The Met — Buddha ও বৌদ্ধ শিল্প সংগ্রহ",
+      "titleEn": "The Met — Buddha and Buddhist art collection",
+      "summaryBn": "জাদুঘরের object records-এ Buddha ও বৌদ্ধ শিল্প খোঁজার লিংক; Open Access চিহ্ন থাকলেই পুনঃব্যবহারের শর্ত সহজ হয়, সব ছবি একই লাইসেন্সের নয়।",
+      "summaryEn": "A museum collection search for Buddha and Buddhist art; reuse terms vary by object and Open Access status.",
+      "creator": "The Metropolitan Museum of Art",
+      "year": "চলমান সংগ্রহ",
+      "language": "English",
+      "source": "The Met",
+      "sourceUrl": "https://www.metmuseum.org/art/collection/search?q=Buddha",
+      "relatedUrl": "culture.html",
+      "rights": "per-item-license",
+      "verification": "official"
+    },
+    {
+      "id": "archive-britishmuseum-buddha",
+      "type": "image",
+      "topics": [
+        "buddha",
+        "art"
+      ],
+      "titleBn": "British Museum — Buddha collection search",
+      "titleEn": "British Museum — Buddha collection search",
+      "summaryBn": "জাদুঘরের object catalogue-এ বৌদ্ধ শিল্প ও ভাস্কর্য খোঁজার লিংক; object record-এর provenance, dating ও photography rights আলাদা করে দেখুন।",
+      "summaryEn": "A museum catalogue gateway for Buddhist art and sculpture; inspect provenance, dating and photography rights on each object record.",
+      "creator": "The British Museum",
+      "year": "চলমান সংগ্রহ",
+      "language": "English",
+      "source": "British Museum",
+      "sourceUrl": "https://www.britishmuseum.org/collection/search?keyword=Buddha",
+      "relatedUrl": "culture.html",
+      "rights": "per-item-license",
+      "verification": "official"
+    },
+    {
+      "id": "archive-suttacentral",
+      "type": "research",
+      "topics": [
+        "buddha",
+        "buddhism",
+        "texts"
+      ],
+      "titleBn": "SuttaCentral — প্রাথমিক বৌদ্ধ গ্রন্থ",
+      "titleEn": "SuttaCentral — early Buddhist texts",
+      "summaryBn": "সূত্র, সমান্তর পাঠ ও অনুবাদের পাঠ-সংগ্রহ; মূল ভাষা, অনুবাদক, সংস্করণ ও licensing আলাদা করে উল্লেখ করুন।",
+      "summaryEn": "A textual collection of suttas, parallels and translations; identify language, translator, edition and licence for each text.",
+      "creator": "SuttaCentral",
+      "year": "চলমান পাতা",
+      "language": "Pali / বহুভাষিক",
+      "source": "SuttaCentral",
+      "sourceUrl": "https://suttacentral.net/",
+      "relatedUrl": "philosophy.html",
+      "rights": "per-item-license",
+      "verification": "primary"
+    },
+    {
+      "id": "archive-accesstoinsight",
+      "type": "research",
+      "topics": [
+        "buddhism",
+        "texts"
+      ],
+      "titleBn": "Access to Insight — Theravada text library",
+      "titleEn": "Access to Insight — Theravada text library",
+      "summaryBn": "Theravada পাঠ, অনুবাদ ও ধর্ম-পাঠের reference library; পুরোনো অনুবাদের ভাষা ও ব্যাখ্যা প্রসঙ্গসহ পড়ুন।",
+      "summaryEn": "A reference library of Theravada texts, translations and teachings; read older translations with their historical context.",
+      "creator": "Access to Insight / named translators",
+      "year": "সংগ্রহ",
+      "language": "English / Pali",
+      "source": "Access to Insight",
+      "sourceUrl": "https://www.accesstoinsight.org/",
+      "relatedUrl": "philosophy.html",
+      "rights": "per-item-license",
+      "verification": "reference"
+    },
+    {
+      "id": "archive-bdrc",
+      "type": "research",
+      "topics": [
+        "buddhism",
+        "texts"
+      ],
+      "titleBn": "Buddhist Digital Resource Center",
+      "titleEn": "Buddhist Digital Resource Center",
+      "summaryBn": "বৌদ্ধ গ্রন্থ, পুঁথি ও textual heritage-এর digital catalogue; access ও reuse শর্ত title-ভিত্তিক।",
+      "summaryEn": "A digital catalogue of Buddhist texts and manuscript heritage; access and reuse conditions are title-specific.",
+      "creator": "Buddhist Digital Resource Center",
+      "year": "চলমান সংগ্রহ",
+      "language": "বহুভাষিক",
+      "source": "BDRC",
+      "sourceUrl": "https://www.bdrc.io/",
+      "relatedUrl": "library.html",
+      "rights": "per-item-license",
+      "verification": "official"
+    },
+    {
+      "id": "archive-gutenberg-buddhism",
+      "type": "pdf",
+      "topics": [
+        "buddhism",
+        "texts"
+      ],
+      "titleBn": "Project Gutenberg — Buddhism books",
+      "titleEn": "Project Gutenberg — Buddhism books",
+      "summaryBn": "পুরোনো মুদ্রণ ও public-domain বই খোঁজার লিংক; প্রতিটি ebook-এর মুদ্রণ-তারিখ, অনুবাদক ও কপিরাইট নোট পড়ুন।",
+      "summaryEn": "A search for older and public-domain books on Buddhism; inspect each ebook’s publication date, translator and copyright note.",
+      "creator": "Project Gutenberg contributors",
+      "year": "চলমান সংগ্রহ",
+      "language": "বহুভাষিক",
+      "source": "Project Gutenberg",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/search/?query=Buddhism",
+      "relatedUrl": "library.html",
+      "rights": "public-domain",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-scholar-bangladesh",
+      "type": "research",
+      "topics": [
+        "buddhism",
+        "bengali",
+        "bangladesh",
+        "archaeology"
+      ],
+      "titleBn": "Google Scholar — Buddhism in Bangladesh",
+      "titleEn": "Google Scholar — Buddhism in Bangladesh",
+      "summaryBn": "গবেষণাপত্র, অধ্যায় ও citation খোঁজার discovery link; Scholar ফলাফলকে peer-reviewed বা যাচাইকৃত বলে ধরে নেওয়া যাবে না।",
+      "summaryEn": "A discovery search for papers, chapters and citations; a Scholar result is not automatically peer-reviewed or verified.",
+      "creator": "Google Scholar / indexed authors",
+      "year": "চলমান",
+      "language": "বহুভাষিক",
+      "source": "Google Scholar",
+      "sourceUrl": "https://scholar.google.com/scholar?q=Buddhism+Bangladesh+history",
+      "relatedUrl": "historical-archive.html#policy",
+      "rights": "discovery",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-academia-bangladesh",
+      "type": "research",
+      "topics": [
+        "buddhism",
+        "bengali",
+        "bangladesh"
+      ],
+      "titleBn": "Academia.edu — Bangladesh Buddhism research",
+      "titleEn": "Academia.edu — Bangladesh Buddhism research",
+      "summaryBn": "লেখক-আপলোডকৃত গবেষণা খোঁজার discovery link; লেখক, journal, DOI, peer-review ও upload version যাচাই ছাড়া চূড়ান্ত সূত্র হিসেবে নয়।",
+      "summaryEn": "A discovery link for author-uploaded research; verify author, journal, DOI, peer review and version before citing it as authoritative.",
+      "creator": "Academia.edu contributors",
+      "year": "চলমান",
+      "language": "বহুভাষিক",
+      "source": "Academia.edu",
+      "sourceUrl": "https://www.academia.edu/search?q=Buddhism%20Bangladesh",
+      "relatedUrl": "historical-archive.html#policy",
+      "rights": "discovery",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-researchgate-bangladesh",
+      "type": "research",
+      "topics": [
+        "buddhism",
+        "bangladesh",
+        "archaeology"
+      ],
+      "titleBn": "ResearchGate — Buddhism in Bangladesh",
+      "titleEn": "ResearchGate — Buddhism in Bangladesh",
+      "summaryBn": "গবেষক ও publication খোঁজার discovery link; platform-এর presence-ই authenticity নয়—মূল journal/publisher record মিলিয়ে নিন।",
+      "summaryEn": "A discovery link for researchers and publications; platform presence is not authentication—match the original journal or publisher record.",
+      "creator": "ResearchGate contributors",
+      "year": "চলমান",
+      "language": "বহুভাষিক",
+      "source": "ResearchGate",
+      "sourceUrl": "https://www.researchgate.net/search/publication?q=Buddhism%20Bangladesh",
+      "relatedUrl": "historical-archive.html#policy",
+      "rights": "discovery",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-jstor-bangladesh",
+      "type": "research",
+      "topics": [
+        "buddhism",
+        "bengali",
+        "bangladesh"
+      ],
+      "titleBn": "JSTOR — Buddhism and Bangladesh",
+      "titleEn": "JSTOR — Buddhism and Bangladesh",
+      "summaryBn": "academic journal ও book chapter খোঁজার catalogue link; institutional access, DOI ও publication details আলাদা করে পরীক্ষা করুন।",
+      "summaryEn": "A catalogue search for academic journals and book chapters; check access, DOI and publication details independently.",
+      "creator": "JSTOR / participating publishers",
+      "year": "চলমান",
+      "language": "বহুভাষিক",
+      "source": "JSTOR",
+      "sourceUrl": "https://www.jstor.org/action/doBasicSearch?Query=Buddhism+Bangladesh",
+      "relatedUrl": "historical-archive.html#policy",
+      "rights": "discovery",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-youtube-unesco",
+      "type": "video",
+      "topics": [
+        "buddhism",
+        "bangladesh",
+        "archaeology",
+        "culture"
+      ],
+      "titleBn": "YouTube — UNESCO / Buddhist heritage video search",
+      "titleEn": "YouTube — UNESCO and Buddhist heritage video search",
+      "summaryBn": "প্রত্নস্থল, উৎসব ও সংরক্ষণ-ভিডিওর discovery link; uploader, তারিখ, মূল footage ও বিজ্ঞাপন/সম্পাদনা যাচাই করুন। কোনো ভিডিও স্থানীয়ভাবে কপি করা হয়নি।",
+      "summaryEn": "A discovery search for heritage, festival and conservation videos; verify uploader, date, original footage and editing. No video is copied locally.",
+      "creator": "YouTube uploaders / institutional channels",
+      "year": "চলমান",
+      "language": "বহুভাষিক",
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/results?search_query=UNESCO+Buddhist+heritage+Bangladesh",
+      "relatedUrl": "library.html",
+      "rights": "discovery",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-youtube-bangladesh",
+      "type": "video",
+      "topics": [
+        "bangladesh",
+        "culture",
+        "news"
+      ],
+      "titleBn": "YouTube — Bangladesh Buddhist heritage",
+      "titleEn": "YouTube — Bangladesh Buddhist heritage",
+      "summaryBn": "বাংলাদেশের বৌদ্ধ ঐতিহ্য, বিহার, সংগীত ও উৎসবের ভিডিও খোঁজার লিংক; বিশেষ করে জেলা/স্থানের caption ও তারিখ মিলিয়ে নিন।",
+      "summaryEn": "A discovery search for Bangladeshi Buddhist heritage, vihara, music and festival videos; cross-check location captions and dates.",
+      "creator": "YouTube uploaders",
+      "year": "চলমান",
+      "language": "বহুভাষিক",
+      "source": "YouTube",
+      "sourceUrl": "https://www.youtube.com/results?search_query=Buddhist+heritage+Bangladesh",
+      "relatedUrl": "culture.html#creator-archive",
+      "rights": "discovery",
+      "verification": "discovery"
+    },
+    {
+      "id": "archive-banglapedia-buddhism",
+      "type": "article",
+      "topics": [
+        "buddhism",
+        "bengali",
+        "bangladesh"
+      ],
+      "titleBn": "বাংলাপিডিয়া — বৌদ্ধধর্ম",
+      "titleEn": "Banglapedia — Buddhism",
+      "summaryBn": "বাংলাদেশ-কেন্দ্রিক encyclopedic background পড়ার সূত্র; নির্দিষ্ট ঐতিহাসিক বিতর্কে নিবন্ধের references ও নতুন গবেষণা দেখুন।",
+      "summaryEn": "An encyclopedic background source for Bangladesh; consult its references and newer scholarship for contested historical points.",
+      "creator": "Asiatic Society of Bangladesh",
+      "year": "নিবন্ধভুক্ত",
+      "language": "বাংলা",
+      "source": "Banglapedia",
+      "sourceUrl": "https://bn.banglapedia.org/index.php/%E0%A6%AC%E0%A7%8C%E0%A6%A6%E0%A7%8D%E0%A6%A7%E0%A6%A7%E0%A6%B0%E0%A7%8D%E0%A6%AE",
+      "relatedUrl": "history.html",
+      "rights": "source-link",
+      "verification": "reference"
+    },
+    {
+      "id": "archive-wikipedia-bangladesh",
+      "type": "article",
+      "topics": [
+        "buddhism",
+        "bangladesh",
+        "bengali"
+      ],
+      "titleBn": "Wikipedia — Buddhism in Bangladesh",
+      "titleEn": "Wikipedia — Buddhism in Bangladesh",
+      "summaryBn": "পরিচিতি ও citation-discovery-এর tertiary page; কোনো গুরুত্বপূর্ণ claim সরাসরি Wikipedia থেকে চূড়ান্ত প্রমাণ হিসেবে নেওয়া হয়নি।",
+      "summaryEn": "A tertiary overview and citation-discovery page; important claims should be checked against the cited primary or scholarly sources.",
+      "creator": "Wikipedia contributors",
+      "year": "চলমান পাতা",
+      "language": "English",
+      "source": "Wikipedia",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Buddhism_in_Bangladesh",
+      "relatedUrl": "history.html",
+      "rights": "per-item-license",
+      "verification": "tertiary"
+    },
+    {
+      "id": "archive-bd-maps",
+      "type": "map",
+      "topics": [
+        "bangladesh",
+        "maps",
+        "archaeology"
+      ],
+      "titleBn": "BD MAPS — historical Buddhist vihara map",
+      "titleEn": "BD MAPS — historical Buddhist vihara map",
+      "summaryBn": "ঐতিহাসিক বৌদ্ধ বিহার-মানচিত্র ও সংশ্লিষ্ট map pages-এর উৎস; মানচিত্রের প্রকাশক ও চিত্রের attribution সংরক্ষণ করে সাইটের maps page-এ যুক্ত আছে।",
+      "summaryEn": "The source for historical Buddhist-vihara maps and related map pages; the site’s maps page preserves publisher and image attribution.",
+      "creator": "BD MAPS",
+      "year": "2015 / map archive",
+      "language": "বাংলা / English",
+      "source": "BD MAPS",
+      "sourceUrl": "https://map-of-bangladesh.blogspot.com/2015/12/historical-buddho-bihar-map-bangladesh.html",
+      "relatedUrl": "maps.html",
+      "rights": "source-link",
+      "verification": "reference"
+    },
+    {
+      "id": "archive-library-collection",
+      "type": "collection",
+      "topics": [
+        "buddhism",
+        "bengali",
+        "bangladesh",
+        "texts",
+        "culture",
+        "art"
+      ],
+      "titleBn": "চর্যাভূমি Public Library — ৮২টি item",
+      "titleEn": "Charyabhumi Public Library — 82 items",
+      "summaryBn": "PDF/বই, অডিও, ভিডিও, ছবি ও নিবন্ধের বিদ্যমান public library; creator, language, topic, source ও rights label দিয়ে browse করুন।",
+      "summaryEn": "The existing 82-item public library of PDFs/books, audio, video, images and articles, with creator, language, topic, source and rights filters.",
+      "creator": "চর্যাভূমি editorial collection",
+      "year": "চলমান",
+      "language": "বাংলা / English / Pali",
+      "source": "Charyabhumi",
+      "sourceUrl": "library.html",
+      "relatedUrl": "library.html",
+      "rights": "internal",
+      "verification": "internal"
+    },
+    {
+      "id": "archive-creator-collection",
+      "type": "collection",
+      "topics": [
+        "bengali",
+        "bangladesh",
+        "art",
+        "culture"
+      ],
+      "titleBn": "Creator & Living Culture Archive — ৫৪টি entry",
+      "titleEn": "Creator and Living Culture Archive — 54 entries",
+      "summaryBn": "শিল্পী, লেখক, সঙ্গীতশিল্পী ও সংস্কৃতি-চর্চাকারীদের বিদ্যমান archive; ছবি, উদ্ধৃতি, media, source, licence ও verification state সংরক্ষিত।",
+      "summaryEn": "The existing 54-entry archive of artists, writers, musicians and cultural practitioners, preserving images, quotations, media, sources, licences and verification states.",
+      "creator": "চর্যাভূমি editorial collection",
+      "year": "চলমান",
+      "language": "বাংলা / English / community languages",
+      "source": "Charyabhumi",
+      "sourceUrl": "culture.html#creator-archive",
+      "relatedUrl": "culture.html#creator-archive",
+      "rights": "internal",
+      "verification": "internal"
+    },
+    {
+      "id": "archive-history-culture",
+      "type": "collection",
+      "topics": [
+        "bengali",
+        "bangladesh",
+        "culture",
+        "archaeology"
+      ],
+      "titleBn": "ইতিহাস ও সংস্কৃতি — cross-linked local collections",
+      "titleEn": "History and culture — cross-linked local collections",
+      "summaryBn": "পাঁচটি historical era, ২২টি timeline entry, ২৪টি dynasty এবং চারটি culture section-এর বিদ্যমান তথ্য; archive card থেকে সরাসরি পড়া যায়।",
+      "summaryEn": "Existing local collections of five eras, 22 timeline entries, 24 dynasties and four culture sections, cross-linked rather than duplicated.",
+      "creator": "চর্যাভূমি editorial collection",
+      "year": "চলমান",
+      "language": "বাংলা",
+      "source": "Charyabhumi",
+      "sourceUrl": "history.html",
+      "relatedUrl": "culture.html",
+      "rights": "internal",
+      "verification": "internal"
+    },
+    {
+      "id": "archive-facebook-community",
+      "type": "collection",
+      "topics": [
+        "buddhism",
+        "bangladesh",
+        "news",
+        "culture"
+      ],
+      "titleBn": "Buddhist Historical Archive — Facebook community",
+      "titleEn": "Buddhist Historical Archive — Facebook community",
+      "summaryBn": "ব্যবহারকারীর দেওয়া Buddhist Historical Archive (বৌদ্ধ ঐতিহাসিক সংরক্ষণাগার) নামে public group খোঁজার lead; সরাসরি URL নিশ্চিত নয়, তাই কোনো post ঐতিহাসিক প্রমাণ হিসেবে ধরা হয়নি।",
+      "summaryEn": "A public-search lead for the user-supplied Buddhist Historical Archive group name; the direct URL is not confirmed and no post is treated as historical proof automatically.",
+      "creator": "Buddhist Historical Archive community",
+      "year": "চলমান",
+      "language": "বাংলা / English",
+      "source": "Facebook · public search",
+      "sourceUrl": "https://www.facebook.com/search/groups/?q=Buddhist%20Historical%20Archive",
+      "relatedUrl": "historical-archive.html#policy",
+      "rights": "community",
+      "verification": "community"
+    }
+  ]
+}
