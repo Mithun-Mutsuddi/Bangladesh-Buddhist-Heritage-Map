@@ -3,7 +3,9 @@
 **তারিখ:** ২০২৬-১০-২৪
 **কাজের scope:** `Mithun-Mutsuddi/Bangladesh-Buddhist-Heritage-Map`
 **creator attribution:** **মিথুন মুৎসুদ্দী**
-**অবস্থা:** working-tree implementation ও local verification; এই নথি লেখার সময় নতুন commit/deploy নয়।
+**অবস্থা:** প্রকাশিত। মূল implementation commit: `b3301ecb001f66077afc5c03deef3ae8ad95c50b` (`b3301ec`)।
+**Deployment:** GitHub Pages run `40014701929` সফল; Heritage data validation run `40014702526` সফল। Pages API-তে status `built` এবং exact commit `b3301ec` নিশ্চিত হয়েছে।
+**Live smoke check:** homepage-এ ৩,২১৮ records, ৪৯৭ upazila options, ৩৯ language options ও Noto Sans Bengali loaded; archive-এ ৩৫ items; কোনো JavaScript page error নেই। Live deep link `চট্টগ্রাম → কুমিল্লা → লাকসাম` থেকে ১৮টি স্থান এসেছে।
 
 ## ১. ডেটা ও বানান
 
