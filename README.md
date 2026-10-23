@@ -5,6 +5,14 @@
 
 ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই
 
+## নতুন: Charjavumi Travel Tracker
+
+`tracker.html` — ৬৪ জেলার ইন্টারঅ্যাকটিভ ম্যাপ, বিদ্যমান ৩,২১৮টি ডিরেক্টরি রেকর্ডের ভিজিট-চেকলিস্ট, ব্যক্তিগত ছবি/ভিডিও জার্নাল, অনুমতিভিত্তিক foreground GPS রুট, PNG/JPG progress card এবং backup/restore। মূল সাইট অক্ষত; হোমপেজ ও নেভিগেশনে ট্র্যাকার লিংক যোগ করা হয়েছে।
+
+ডেটা এই ব্রাউজারেই থাকে। Cloud sign-in/live buddies চালু নয়। স্থানীয় সংঘমিত্র উৎসভিত্তিক গাইড; optional online AI ও scoped-token STDIO MCP server আলাদা করে configure করতে হবে। MCP imported snapshot ব্যবহার করে, browser sync নয়।
+
+[বাংলায় শুরু করুন](START-HERE-bn.md) · [Deployment & MCP](docs/tracker-deployment.md) · [Tests](docs/tracker-validation.md) · [Attributions](docs/tracker-attributions.md)
+
 - **নতুন হোমপেজ:** `index.html` (রাউন্ড ১৩ ব্র্যান্ডিং)
 - **পুরোনো ড্যাশবোর্ড** (৩০ জেলার বিহার-তালিকা, ম্যাপ, ভ্রমণ-তালিকা, উৎসব, সাহিত্য): `index-old.html`
 - **কুইজ ও লিডারবোর্ড:** `quiz.html` (৫১৫ প্রশ্ন, প্রতি রাউন্ডে ১০টি)

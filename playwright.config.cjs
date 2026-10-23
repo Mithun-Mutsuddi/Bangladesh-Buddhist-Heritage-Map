@@ -1,0 +1,2 @@
+const {defineConfig}=require('@playwright/test');
+module.exports=defineConfig({testDir:'./tests',testMatch:'**/*.spec.cjs',fullyParallel:false,workers:1,timeout:30000,use:{baseURL:'http://127.0.0.1:3000',viewport:{width:1440,height:1000},headless:true,trace:'retain-on-failure'},webServer:{command:'python tools/tracker_dev_server.py',url:'http://127.0.0.1:3000/tracker.html',reuseExistingServer:true}});

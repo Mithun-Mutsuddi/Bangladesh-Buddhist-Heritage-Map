@@ -9,6 +9,7 @@
   var NAV = [
     { href: 'index.html', label: 'হোম' },
     { href: 'index.html#explore', label: 'স্থান খুঁজুন' },
+    { href: 'tracker.html', label: 'আমার ট্রাভেল ট্র্যাকার' },
     { href: 'index.html#planner', label: 'ভ্রমণ প্ল্যানার' },
     { href: 'history.html', label: 'ইতিহাস' },
     { href: 'philosophy.html', label: 'বৌদ্ধধর্ম' },

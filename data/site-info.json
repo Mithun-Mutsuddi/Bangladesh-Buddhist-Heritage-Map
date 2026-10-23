@@ -85,13 +85,13 @@
   {
    "id": "my-map",
    "icon": "🗺️",
-   "title": "আমার ম্যাপ",
-   "title_en": "My map",
-   "desc": "ঘোরা জেলা বেছে নিজের বাংলাদেশ-বৌদ্ধস্থান ভ্রমণ-ম্যাপ বানান, ছবি-সহ ডাউনলোড করুন।",
-   "desc_en": "Pick the districts you have visited and build your own Buddhist-sites travel map, downloadable.",
+   "title": "আমার ট্রাভেল ট্র্যাকার",
+   "title_en": "My travel tracker",
+   "desc": "৬৪ জেলা ও ঐতিহ্যস্থান চিহ্নিত করুন, ব্যক্তিগত ছবি-ভিডিও জার্নাল রাখুন, অনুমতি দিয়ে GPS রুট রেকর্ড করুন এবং PNG/JPG কার্ড শেয়ার করুন।",
+   "desc_en": "Track districts and heritage places, save a private media journal, record foreground GPS routes with consent, and download a progress card. Local storage only; cloud sync is not connected.",
    "status": "partial",
-   "link": "index.html#planner",
-   "linkText": "ভ্রমণ তালিকা"
+   "link": "tracker.html",
+   "linkText": "আমার ট্র্যাকার খুলুন"
   },
   {
    "id": "world-map",
