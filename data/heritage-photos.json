@@ -1,6 +1,6 @@
 {
  "schema_version": "2026-10-21.heritage-photos.v1",
- "license_note": "উইকিমিডিয়া কমন্স থেকে CC/পাবলিক ডোমেইন লাইসেন্সের ছবি; প্রতিটি ছবির উৎস ও ফটোগ্রাফারের নাম দেওয়া আছে।",
+ "license_note": "উইকিমিডিয়া কমন্স থেকে CC/পাবলিক ডোমেইন লাইসেন্সের ছবি; প্রতিটি ছবির উৎস ও ফটোগ্রাফারের নাম দেওয়া আছে। এটি ছাড়াও প্রতিষ্ঠান-কর্তৃপক্ষের অনুমতিক্রমে দেওয়া নিজস্ব ছবিও (assets/photos/) ব্যবহার করা হয়েছে; সেগুলোর স্বত্ব প্রতিষ্ঠানের।",
  "photos": {
   "somapura": {
    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/First_level_plinth_at_Somapura_Mahavihara.jpg/960px-First_level_plinth_at_Somapura_Mahavihara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -55,6 +55,18 @@
    "credit": "Mohammad Mahmodul ha… · CC BY 3.0",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Halud_Vihara,_Archaeological_site_of_8th_-_9th_century_-_panoramio.jpg",
    "title": "File:Halud Vihara, Archaeological site of 8th - 9th century - panoramio.jpg"
+  },
+  "dhaka-lakshmibazar-bihar": {
+   "image": "assets/photos/dhaka-lakshmibazar-sarbajanin-vihar-1.jpg",
+   "credit": "প্রতিষ্ঠান-প্রদত্ত ছবি (২০২৫)",
+   "creditUrl": "",
+   "title": "বিহারের বুদ্ধবেদি ও ফুলের সাজ — ভিক্ষুকে অর্ঘ্য/উপহার প্রদানের মুহূর্ত",
+   "extra": [
+    {
+     "image": "assets/photos/dhaka-lakshmibazar-sarbajanin-vihar-2.jpg",
+     "caption": "অস্থায়ী বিহারকক্ষে বুদ্ধচিত্র ও পূজার ব্যবস্থা"
+    }
+   ]
   }
  }
 }

@@ -4,8 +4,8 @@
 (function () {
   'use strict';
 
-  var CORE = 'data/dashboard-core.json?v=20261022m1';
-  var DIRECTORY = 'data/dashboard-directory.json?v=20261022m1';
+  var CORE = 'data/dashboard-core.json?v=20261023c';
+  var DIRECTORY = 'data/dashboard-directory.json?v=20261023c';
   var PAGE = 24;
   var LS_TRIP = 'buddhistHeritageItinerary';
   var LS_VISITED = 'buddhistHeritageVisited';
@@ -105,10 +105,47 @@
     return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
   }
   function googleDir(p) {
-    if (hasCoords(p) && !p.approx && !p.directory) {
+    // সুনির্দিষ্ট GPS, অথবা রেকর্ডে ঠিকানা-ভিত্তিক পিন থাকলে কোঅর্ডিনেটেই দিক দেখানো হয়;
+    // অন্য আনুমানিক পিনে নাম-ভিত্তিক সার্চই নিরাপদ।
+    if (hasCoords(p) && !p.directory && (!p.approx || p.address)) {
       return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(p.coords.join(','));
     }
     return googleSearch(p);
+  }
+  function telHref(num) { return 'tel:' + clean(num).replace(/[^+\d]/g, ''); }
+  function waHref(num) { return 'https://wa.me/' + clean(num).replace(/\D/g, ''); }
+  function photoBlock(p) {
+    var list = (Array.isArray(p.photos) ? p.photos : []).filter(function (x) { return x && x.image; });
+    if (!list.length) {
+      if (!p.photo) return '';
+      list = [{ image: p.photo, caption: '', credit: p.photoCredit }];
+    }
+    return '<div class="cb-gallery">' + list.map(function (x, i) {
+      var cap = [x.caption, x.credit].filter(Boolean).join(' · ');
+      return '<figure><img src="' + esc(photoUrl(x.image, i === 0 ? 960 : 640)) + '" alt="' +
+        esc(p.name + (x.caption ? ' — ' + x.caption : '') + '-এর ছবি') + '" loading="lazy" decoding="async" ' +
+        'referrerpolicy="no-referrer" onerror="this.parentElement.remove()">' +
+        (cap ? '<figcaption>' + esc(cap) + '</figcaption>' : '') + '</figure>';
+    }).join('') + '</div>';
+  }
+  function contactBlock(p) {
+    var buttons = [];
+    if (p.mobile) {
+      buttons.push('<a class="cb-mini-btn link" href="' + esc(telHref(p.mobile)) + '">📞 ফোন ' + esc(p.mobile) + '</a>');
+    }
+    if (p.whatsapp) {
+      buttons.push('<a class="cb-mini-btn link" href="' + esc(waHref(p.whatsapp)) + '" target="_blank" rel="noopener">💬 হোয়াটসঅ্যাপ</a>');
+    }
+    if (p.bkash) {
+      buttons.push('<button type="button" class="cb-mini-btn" data-copy="' + esc(p.bkash) + '">💳 বিকাশ নম্বর কপি করুন</button>');
+    }
+    if (!buttons.length) return '';
+    return '<div class="cb-contact-block">' +
+      (p.bkash ? '<p class="cb-donate-note"><strong>দান ও সহায়তা — বিকাশ (ব্যক্তিগত):</strong> ' + esc(p.bkash) +
+        '<br><small>টাকা পাঠানোর পর হোয়াটসঅ্যাপে ট্রানজেকশন আইডি জানিয়ে দিলে প্রতিষ্ঠান স্বীকৃতি দিতে পারে। ' +
+        'বড় অঙ্কের সহায়তা বা ভবন নির্মাণে অংশ নিতে চাইলে আগে অধ্যক্ষের সঙ্গে কথা বলুন।</small></p>' : '') +
+      '<div class="cb-place-actions">' + buttons.join('') + '</div>' +
+    '</div>';
   }
   function photoUrl(url, width) {
     var raw = clean(url);
@@ -316,12 +353,13 @@
     var rows = [
       ['বিভাগ', p.division], ['জেলা', p.district], ['উপজেলা', p.upazila], ['থানা', p.thana],
       ['ইউনিয়ন', p.union], ['গ্রাম/এলাকা', p.village], ['পোস্ট অফিস', p.post],
+      ['ঠিকানা', p.address], ['প্রতিষ্ঠাকাল', p.established],
       ['ধরন', p.category], ['যোগাযোগ', p.contact], ['মোবাইল', p.mobile],
+      ['হোয়াটসঅ্যাপ', p.whatsapp], ['বিকাশ (দান)', p.bkash], ['ম্যাপে ঠিকানা', p.mapLabel],
       ['যাচাই', p.verify], ['স্থানাঙ্ক', hasCoords(p) ? p.coords.join(', ') + (p.approx ? ' (আনুমানিক)' : '') : 'নির্ভরযোগ্য পিন নেই']
     ].filter(function (r) { return clean(r[1]); });
     return '<article class="cb-place-detail">' +
-      (p.photo ? '<figure><img src="' + esc(photoUrl(p.photo, 960)) + '" alt="' + esc(p.name) + '-এর ছবি" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentElement.remove()">' +
-        (p.photoCredit ? '<figcaption>' + esc(p.photoCredit) + '</figcaption>' : '') + '</figure>' : '') +
+      photoBlock(p) +
       '<p class="cb-eyebrow">' + esc(p.category || p.type || 'বৌদ্ধ ঐতিহ্য') + '</p>' +
       '<h3>' + esc(p.name) + '</h3>' + (p.en ? '<p class="cb-place-en">' + esc(p.en) + '</p>' : '') +
       '<p class="cb-place-loc">⌖ ' + esc(locationLine(p)) + '</p>' +
@@ -329,6 +367,7 @@
       (p.history && p.history !== p.summary ? '<h4>ইতিহাস ও প্রসঙ্গ</h4><p>' + esc(p.history) + '</p>' : '') +
       (p.trip ? '<h4>যাওয়ার আগে</h4><p>' + esc(p.trip) + '</p>' : '') +
       '<dl class="cb-detail-list">' + rows.map(function (r) { return '<div><dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd></div>'; }).join('') + '</dl>' +
+      contactBlock(p) +
       '<div class="cb-place-actions">' +
         '<button type="button" class="cb-mini-btn primary" data-action="itinerary" data-id="' + esc(p.id) + '">' + (inTrip ? '✓ তালিকা থেকে সরান' : '+ ভ্রমণ তালিকায় যোগ করুন') + '</button>' +
         '<button type="button" class="cb-mini-btn" data-action="visited" data-id="' + esc(p.id) + '">' + (seen ? '✓ দেখা হয়েছে' : 'দেখা হয়েছে বলে চিহ্নিত করুন') + '</button>' +
@@ -337,7 +376,8 @@
         (p.source ? '<a class="cb-mini-btn link" href="' + esc(p.source) + '" target="_blank" rel="noopener">তথ্যসূত্র ↗</a>' : '') +
       '</div>' +
       (p.sourceLabel ? '<p class="cb-source-note">সূত্র: ' + esc(p.sourceLabel) + '</p>' : '') +
-      '<p class="cb-source-note">সক্রিয় বিহারে প্রবেশের আগে পোশাক, ছবি তোলা ও দর্শনার্থী-নীতি সম্পর্কে স্থানীয় নির্দেশনা জেনে নিন। আনুমানিক পিনকে প্রবেশদ্বারের GPS ধরে নেবেন না।</p>' +
+      '<p class="cb-source-note">সক্রিয় বিহারে প্রবেশের আগে পোশাক, ছবি তোলা ও দর্শনার্থী-নীতি সম্পর্কে স্থানীয় নির্দেশনা জেনে নিন।' +
+        (p.approx ? ' আনুমানিক পিনকে প্রবেশদ্বারের GPS ধরে নেবেন না।' : '') + '</p>' +
     '</article>';
   }
   function showDetail(p) {
@@ -568,7 +608,31 @@
     }, { enableHighAccuracy: false, timeout: 15000, maximumAge: 60000 });
   }
 
+  function copyText(text) {
+    var value = clean(text);
+    if (!value) return;
+    function done() { setStatus('কপি হয়েছে: ' + value); }
+    function fail() { setStatus('কপি করা যায়নি — নম্বরটি হাতে লিখে নিন: ' + value); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(value).then(done, function () { legacyCopy(); });
+      return;
+    }
+    legacyCopy();
+    function legacyCopy() {
+      var area = document.createElement('textarea');
+      area.value = value;
+      area.setAttribute('readonly', '');
+      area.style.position = 'fixed';
+      area.style.top = '-1000px';
+      document.body.appendChild(area);
+      area.select();
+      try { document.execCommand('copy') ? done() : fail(); } catch (_) { fail(); }
+      document.body.removeChild(area);
+    }
+  }
   function onAction(event) {
+    var copyEl = event.target.closest('[data-copy]');
+    if (copyEl) { copyText(copyEl.getAttribute('data-copy')); return; }
     var el = event.target.closest('[data-action]');
     if (!el) return;
     var id = el.getAttribute('data-id');

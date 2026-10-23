@@ -2,7 +2,7 @@
  "schema_version": "2026-10-21.bihar-additions.v3",
  "generated_from": "বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্ট (ধর্ম বিষয়ক মন্ত্রণালয়) জেলা-ভিত্তিক ১১টি PDF তালিকা + নির্দেশিত অতিরিক্ত সাইট",
  "generated_at": "2026-10-22T04:41:50Z",
- "addition_count": 2859,
+ "addition_count": 2897,
  "bulk_fields": [
   "id",
   "name",
@@ -52701,5 +52701,6 @@
    "in_base": true
   }
  ],
- "notes": []
+ "notes": [],
+ "addition_count_note": "bulk + records মিলিয়ে মোট এন্ট্রি; আগের মান শুধু bulk গুনেছিল, তাই ভ্যালিডেটর ব্যর্থ হচ্ছিল।"
 }

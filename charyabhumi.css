@@ -1209,6 +1209,13 @@ body.cb {
 .cb-detail-list div { padding:9px 11px; border-radius:11px; background:var(--cb-sand); }
 .cb-detail-list dt { font-size:11px; font-weight:800; color:var(--cb-muted); }
 .cb-detail-list dd { margin:2px 0 0; font-size:13px; overflow-wrap:anywhere; }
+.cb-gallery { display:grid; gap:10px; margin:0 0 16px; }
+.cb-gallery figure { margin:0; }
+.cb-contact-block { margin:14px 0 6px; padding:12px 14px; border:1px solid var(--cb-line); border-radius:14px; background:#fffdf6; }
+.cb-donate-note { margin:0 0 10px; font-size:13.5px !important; line-height:1.65; color:var(--cb-ink-soft) !important; }
+.cb-donate-note strong { color:var(--cb-forest); }
+.cb-donate-note small { display:block; margin-top:5px; font-size:12px; color:var(--cb-muted); }
+.cb-contact-block .cb-place-actions { margin:0; }
 .cb-source-note { font-size:12.5px !important; color:var(--cb-muted) !important; }
 .cb-leaflet-pin-wrap, .cb-cluster-wrap { background:transparent; border:0; }
 .cb-leaflet-pin { display:grid; place-items:center; width:32px; height:32px; border:2px solid #fff6e0; border-radius:50%; background:var(--cb-bark); color:#fff6d8; box-shadow:0 4px 14px rgba(0,0,0,.35); font-size:19px; line-height:1; }
