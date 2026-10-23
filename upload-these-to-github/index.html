@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>চর্যাভূমি — বাংলাদেশের বৌদ্ধ ঐতিহ্য, ইতিহাস ও ভ্রমণ (ফ্রি)</title>
+  <meta name="description" content="চর্যাভূমি (Charyabhumi) — বাংলাদেশের ৬৪ জেলার দর্শনীয় বৌদ্ধ স্থান, যাতায়াত, খরচ ও থাকার তথ্য; নিজের ভ্রমণ-ম্যাপ, ট্রিপ প্ল্যানার, ইতিহাস-শিল্পরীতি, কুইজ ও জরুরি নম্বর। ফ্রি, সাইন-আপ নেই, বিজ্ঞাপন নেই।">
+  <meta name="keywords" content="বাংলাদেশ বৌদ্ধ বিহার, বৌদ্ধ ঐতিহ্য, বৌদ্ধ ভ্রমণ, Charyabhumi, Buddhist heritage Bangladesh, Buddhist travel Bangladesh">
+  <meta property="og:title" content="চর্যাভূমি — বাংলাদেশের বৌদ্ধ ঐতিহ্য, ইতিহাস ও ভ্রমণ">
+  <meta property="og:description" content="৬৪ জেলার বৌদ্ধ স্থান, ভ্রমণ-ম্যাপ, ট্রিপ প্ল্যানার, ইতিহাস ও কুইজ — সব এক জায়গায়, বিনামূল্যে।">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/brand/buddha-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261023c">
+</head>
+<body class="cb">
+  <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
+  <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
+
+  <header class="cb-header" id="cbHeader"></header>
+
+  <main id="main">
+    <!-- ================= হিরো =================
+         হিরো-অদলবদল: বুদ্ধের ছবি + পুরোনো ড্যাশবোর্ডের গেরুয়া-সোনালি থিম
+         (cb-hero-buddha, charyabhumi.css) এখন হোমে। আগের hero.svg থিম
+         গেছে index-old.html-এ (.hero-forest, styles.css)। -->
+    <section class="cb-hero cb-hero-photo cb-hero-buddha" id="top">
+      <div class="cb-hero-bg"><img src="assets/brand/buddha-hero.jpg" alt="" width="1600" height="900"></div>
+      <div class="cb-wrap cb-hero-in">
+        <p class="cb-kicker">☸ ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই</p>
+        <h1>বাংলাদেশের <span class="accent">বৌদ্ধ ঐতিহ্য</span>,<br>এক জায়গায়</h1>
+        <p class="cb-lead" id="cbHeroLead">৬৪ জেলার দর্শনীয় বৌদ্ধ স্থান, যাতায়াত, খরচ ও থাকার তথ্য; নিজের ঘোরা জেলা বেছে ভ্রমণ-ম্যাপ; ইতিহাস, শিল্পরীতি আর মানুষের গল্প — সব বাংলায়, বিনামূল্যে।</p>
+        <p class="cb-motto" id="cbMotto">মূলমন্ত্র: <b>হাজার বছরের পথ ধরে</b></p>
+        <p class="cb-slogan" id="cbSlogan">বাংলার বৌদ্ধ স্থানগুলো নিজে ঘুরে দেখুন — ইতিহাস, পথ আর মানুষের সঙ্গে।</p>
+        <div class="cb-actions">
+          <a class="cb-btn" href="#explore">🧭 কোথায় ঘুরবেন</a>
+          <a class="cb-btn ghost" href="quiz.html">🎮 কুইজ খেলুন</a>
+          <a class="cb-btn ghost" href="about.html">আমাদের কথা</a>
+        </div>
+        <div class="cb-hero-stats" id="cbHeroStats"></div>
+        <p class="cb-coverage" id="cbCoverage" hidden></p>
+      </div>
+    </section>
+
+    <!-- ================= একীভূত ড্যাশবোর্ড =================
+         নতুন হোম + পুরোনো ড্যাশবোর্ড এখন একটাই: স্থান-খোঁজা, ম্যাপ ও ভ্রমণ-তালিকা এখানেই।
+         হালকা ডেটা প্রথমে, পুরো বিহার-ডিরেক্টরি পেছনে, Leaflet ম্যাপ কাছে এলে লোড হয়। -->
+    <section class="cb-section cb-dashboard" id="explore" aria-labelledby="exploreTitle">
+      <div class="cb-wrap">
+        <div class="cb-dash-head">
+          <div>
+            <p class="cb-eyebrow">🧭 স্থান খুঁজুন · ম্যাপ · ভ্রমণ তালিকা</p>
+            <h2 id="exploreTitle">আপনার পরবর্তী গন্তব্য খুঁজুন</h2>
+            <p class="cb-sub">বিহার, প্রত্নস্থল, স্তূপ ও বৌদ্ধ প্রতিষ্ঠান—বাংলা বা ইংরেজি নাম, জেলা, উপজেলা কিংবা ধরন ধরে খুঁজুন। কার্ড থেকে বিস্তারিত দেখুন, ম্যাপে যান, অথবা নিজের ভ্রমণ-তালিকায় যোগ করুন।</p>
+          </div>
+          <div class="cb-dash-stats" aria-label="ড্যাশবোর্ডের হিসাব">
+            <div><b id="dashTotalStat">…</b><span>মোট রেকর্ড</span></div>
+            <div><b id="dashPinStat">…</b><span>ম্যাপ-পিন</span></div>
+            <div><b id="itineraryCount">০</b><span>ভ্রমণ তালিকায়</span></div>
+          </div>
+        </div>
+
+        <form class="cb-dash-toolbar" id="placeFilters" onsubmit="return false" aria-label="স্থান খোঁজার ছাঁকনি">
+          <label>🔎 স্থান খুঁজুন
+            <input id="placeSearch" type="search" placeholder="পাহাড়পুর, শালবন, কুমিল্লা, Bandarban…" autocomplete="off">
+          </label>
+          <label>বিভাগ
+            <select id="divisionFilter"><option value="all">সব বিভাগ</option></select>
+          </label>
+          <label>জেলা
+            <select id="districtFilter"><option value="all">সব জেলা</option></select>
+          </label>
+          <label>স্থানের ধরন
+            <select id="categoryFilter"><option value="all">সব ধরন</option></select>
+          </label>
+          <label class="cb-checkline"><input id="coordsOnly" type="checkbox"> শুধু ম্যাপ-পিন আছে</label>
+        </form>
+        <div class="cb-dash-meta" aria-live="polite">
+          <b id="resultsCount">স্থান লোড হচ্ছে…</b>
+          <span id="shownCount"></span>
+          <span id="dashStatus"></span>
+          <button type="button" class="cb-mini-btn" id="clearFilters">ছাঁকনি মুছুন</button>
+        </div>
+
+        <div class="cb-dash-layout">
+          <div>
+            <div class="cb-map-shell" id="map-section">
+              <div class="cb-map-top">
+                <h3>🗺️ বৌদ্ধ ঐতিহ্যের ম্যাপ</h3>
+                <p>ম্যাপ লাইব্রেরি এই অংশের কাছে এলেই লোড হয়—তাই পেজের শুরু আটকে থাকে না। পিন আনুমানিক হলে তা আলাদা করে লেখা থাকে।</p>
+                <button type="button" class="cb-btn solid sm" id="loadMapBtn">ম্যাপ চালু করুন</button>
+              </div>
+              <div id="map" role="application" aria-label="বাংলাদেশের বৌদ্ধ ঐতিহ্যস্থানের ইন্টার‌্যাকটিভ ম্যাপ">
+                <div class="cb-map-placeholder"><span aria-hidden="true">☸</span><strong>ম্যাপ প্রস্তুত হচ্ছে</strong><p>“ম্যাপ চালু করুন” চাপ দিন, অথবা এই অংশে স্ক্রল করলেই Leaflet ম্যাপ লোড হবে।</p></div>
+              </div>
+              <div class="cb-map-actions">
+                <p class="cb-map-status" id="mapActionStatus" aria-live="polite">ম্যাপ চালু করলে ছাঁকনি অনুযায়ী পিন দেখা যাবে।</p>
+                <button type="button" class="cb-mini-btn" id="locateMe">◎ আমার অবস্থান</button>
+                <button type="button" class="cb-mini-btn" id="refreshMap">↻ ম্যাপ রিফ্রেশ</button>
+                <a class="cb-mini-btn link" href="https://www.google.com/maps/search/?api=1&amp;query=Buddhist%20temples%20Bangladesh" target="_blank" rel="noopener">Google Maps ↗</a>
+              </div>
+            </div>
+
+            <div id="placeDetail" hidden></div>
+            <div class="cb-place-grid" id="placeGrid" aria-live="polite">
+              <div class="cb-skeleton" aria-hidden="true"><span></span><span></span><span></span></div>
+            </div>
+            <div class="cb-empty" id="emptyState" hidden>
+              <strong>কোনো স্থান মেলেনি</strong>
+              <p>বানান বদলে, জেলার নাম দিয়ে, অথবা ছাঁকনি মুছে আবার খুঁজুন।</p>
+            </div>
+            <button type="button" class="cb-btn solid cb-load-more" id="loadMorePlaces" hidden>আরও স্থান দেখুন</button>
+          </div>
+
+          <aside class="cb-dash-side">
+            <div class="cb-trip-panel" id="planner" aria-labelledby="plannerTitle">
+              <p class="cb-eyebrow">🎒 ভ্রমণ তালিকা</p>
+              <h3 id="plannerTitle">নিজের তীর্থভ্রমণ তালিকা</h3>
+              <p class="cb-sub" style="margin-bottom:0">পছন্দের স্থান যোগ করুন। এই ব্রাউজারেই সংরক্ষিত থাকে—সাইন-আপ লাগে না।</p>
+              <div class="cb-trip-stats">
+                <div><b id="visitedStat">০</b><span>দেখা হয়েছে</span></div>
+                <div><b id="progressPercent">০%</b><span>অগ্রগতি</span></div>
+                <div><b>ফ্রি</b><span>অ্যাকাউন্ট ছাড়াই</span></div>
+              </div>
+              <div class="cb-progress" aria-hidden="true"><i id="progressBar"></i></div>
+              <div class="cb-trip-list" id="itineraryList"></div>
+              <div class="cb-trip-actions">
+                <button type="button" class="cb-btn sm" id="exportItinerary">⬇ তালিকা ডাউনলোড</button>
+                <button type="button" class="cb-btn ghost sm" id="clearItinerary" style="color:var(--cb-bark);background:#fff">সব মুছুন</button>
+              </div>
+            </div>
+            <div class="cb-dash-help" id="travel-help">
+              <h3>যাত্রার আগে যাচাই করুন</h3>
+              <ul>
+                <li>আনুমানিক পিনে সরাসরি রুট না ধরে নাম ধরে Google Maps-এ খুঁজুন।</li>
+                <li>সক্রিয় বিহারে সময়, পোশাক ও ছবি তোলার নিয়ম আগে জেনে নিন।</li>
+                <li><a href="calendar.html">উৎসব ও পূর্ণিমার তারিখ</a> এবং <a href="about.html#emergency">জরুরি নম্বর</a> সঙ্গে রাখুন।</li>
+                <li>প্রত্নস্থলে দেয়াল/নিদর্শন স্পর্শ বা ওঠা থেকে বিরত থাকুন।</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <dialog class="cb-place-dialog" id="placeDialog" aria-label="নির্বাচিত স্থানের বিস্তারিত">
+      <button type="button" class="cb-dialog-close" id="closePlaceDialog" aria-label="বন্ধ করুন">×</button>
+      <div id="placeDialogBody"></div>
+    </dialog>
+
+    <!-- ================= স্তূপের ছবি + নতুন দুই পাতা =================
+         বুদ্ধের ছবিটি এখন হোমের সবার ওপরের হিরোতে, তাই এখানে বসেছে
+         হোমের আগেকার হিরো-ইলাস্ট্রেশন (hero.svg) — একই ছবি পরপর দুবার নয়। -->
+    <section class="cb-buddha" aria-labelledby="buddhaTitle">
+      <div class="cb-wrap cb-buddha-in">
+        <figure class="cb-buddha-fig">
+          <img src="assets/brand/hero.svg" alt="সূর্যাস্তে স্তূপ ও বৌদ্ধ স্থাপত্যের আলংকারিক দৃশ্য" width="1200" height="620" loading="lazy">
+          <figcaption>সূর্যাস্তে স্তূপ — হোমপেজের আগেকার হিরো-ইলাস্ট্রেশন, এখন এই অংশে। ধ্যানমগ্ন বুদ্ধমূর্তির ছবিটি এখন হোমের সবার ওপরে।</figcaption>
+        </figure>
+        <div class="cb-buddha-text">
+          <p class="cb-eyebrow">☸ নতুন দুই পাতা</p>
+          <h2 id="buddhaTitle">বুদ্ধের পথ, আর বাংলার পঞ্জিকা</h2>
+          <p>বৌদ্ধধর্ম কী শেখায়, বাংলায় সেটি এলো কীভাবে — অশোক থেকে পাল, চর্যাপদ থেকে নবযান; আর আজকের বাংলা তারিখ, তিথি-নক্ষত্র আর ঢাকার ঘড়ি — দুটোই এখন সাইটে।</p>
+          <div class="cb-actions">
+            <a class="cb-btn" href="philosophy.html">☸ বৌদ্ধধর্ম ও দর্শন</a>
+            <a class="cb-btn ghost" href="calendar.html">📅 আজকের পঞ্জিকা</a>
+          </div>
+          <ul class="cb-buddha-points">
+            <li>বুদ্ধের জীবন, চতুরার্য সত্য ও অষ্টাঙ্গিক মার্গ</li>
+            <li>থেরবাদ · মহাযান · বজ্রযান · নবযান — চার ধারার তুলনা</li>
+            <li>ত্রিপিটক, শব্দকোষ ও সূত্রের তালিকা</li>
+            <li>বঙ্গাব্দ · বুদ্ধাব্দ · ইংরেজি তারিখ, তিথি ও আসন্ন পূর্ণিমা</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= সূচিপত্র (রাউন্ড ১৬) ================= -->
+    <section class="cb-section" id="toc" aria-labelledby="tocTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">🧭 সূচিপত্র</p>
+        <h2 id="tocTitle">সাইটের সব কিছু — এক জায়গায়</h2>
+        <p class="cb-sub">নতুন হোম আর পুরোনো ড্যাশবোর্ড এখন একটাই—স্থান-খোঁজা, ম্যাপ ও ভ্রমণ-তালিকা হোমপেজের ওপরের অংশেই। নিচের যেকোনো নামে ক্লিক করলেই সেখানে পৌঁছে যাবেন।</p>
+        <div class="cb-sitemap">
+          <div class="cb-sitemap-col">
+            <h3>🗺️ ভ্রমণ ও খোঁজা</h3>
+            <a href="#explore">স্থান খুঁজুন <small>৩,২০০+ রেকর্ড, সার্চ ও ছাঁকনি</small></a>
+            <a href="#map-section">ম্যাপ ও নির্বাচিত স্থান</a>
+            <a href="#map-section">ঐতিহাসিক বিহার-মানচিত্র</a>
+            <a href="#districts">কোন জেলায় কী বিখ্যাত <small>৩০ জেলা</small></a>
+            <a href="calendar.html">উৎসব ও পূর্ণিমা <small>পঞ্জিকা</small></a>
+            <a href="#travel-help">যাতায়াতের আগে যাচাই</a>
+            <a href="#planner">ভ্রমণ তালিকা ও অগ্রগতি</a>
+          </div>
+          <div class="cb-sitemap-col">
+            <h3>📖 পড়া ও জানা</h3>
+            <a href="philosophy.html">বৌদ্ধধর্ম ও দর্শন <small>নতুন</small></a>
+            <a href="philosophy.html#darshan">দর্শন চিত্রে ও চার্টে <small>ভবচক্র · ৩১ লোকভূমি · ধ্যান</small></a>
+            <a href="philosophy.html#grihi">গৃহী নীতি ও নৈতিকতা <small>পঞ্চশীল · সিগালোবাদ · নতুন</small></a>
+            <a href="philosophy.html#sutta">সূত্র ও গাথা <small>মহামঙ্গল · রতন · জিনপাঞ্জর</small></a>
+            <a href="philosophy.html#bandana">বন্দনা, উৎসর্গ ও জীবনাচার <small>বিবাহ · সৎকার</small></a>
+            <a href="#sanghamitra">সংঘমিত্রকে জিজ্ঞাসা করুন <small>শিশুর নাম · প্রতিষ্ঠানের নাম</small></a>
+            <a href="calendar.html">পঞ্জিকা, ক্যালেন্ডার ও ঘড়ি <small>নতুন</small></a>
+            <a href="history.html">ইতিহাস</a>
+            <a href="culture.html">শিল্প ও সংস্কৃতি</a>
+            <a href="kings.html">রাজাদের প্রোফাইল</a>
+            <a href="library.html">লাইব্রেরি <small>৮২টি বই-অডিও-ভিডিও</small></a>
+            <a href="institutions.html">প্রতিষ্ঠান</a>
+            <a href="contribution.html">বাঙালি বৌদ্ধদের অবদান</a>
+            <a href="philosophy.html#sutta">বুদ্ধের বাণী · সূত্রসহ</a>
+            <a href="library.html">সাহিত্য, জাতক ও অট্ঠকথা</a>
+            <a href="philosophy.html#sources">আরও জানুন ও যাচাই করুন</a>
+          </div>
+          <div class="cb-sitemap-col">
+            <h3>✍️ নিজে যোগ করুন</h3>
+            <a href="quiz.html">কুইজ <small>৬৬২ প্রশ্ন, ১১ বিষয়</small></a>
+            <a href="about.html#contact">ভ্রমণ অভিজ্ঞতা পাঠান</a>
+            <a href="about.html#contact">নতুন তথ্য বা সংশোধন পাঠান</a>
+            <a href="history.html">ঐতিহাসিক আর্কাইভ</a>
+            <a href="about.html">আমাদের কথা</a>
+            <a href="about.html#emergency">জরুরি নম্বর</a>
+            <a href="about.html#rail">ট্রেনের তথ্য</a>
+            <a href="about.html#contact">যোগাযোগ</a>
+          </div>
+        </div>
+        <p class="cb-note">☸ এখন দুটি আলাদা ড্যাশবোর্ড নয়। পুরোনো <code>index-old.html</code> ঠিকানায় এলেও স্বয়ংক্রিয়ভাবে এই একীভূত হোম ড্যাশবোর্ডে পৌঁছে যাবেন।</p>
+      </div>
+    </section>
+
+    <!-- ================= কী কী আছে ================= -->
+    <section class="cb-section" id="features" aria-labelledby="featTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">সাইটে যা যা আছে</p>
+        <h2 id="featTitle">১৪টি সেবা — এক সাইটে</h2>
+        <p class="cb-sub">প্রতিটি কার্ডে লেখা আছে সেটি এখন <b>চালু</b>, <b>আংশিক চালু</b>, নাকি <b>পরিকল্পিত</b> — যাতে প্রতিশ্রুতি আর বাস্তবের ফারাক স্পষ্ট থাকে। কোনো কাজ শেষ না হলে আমরা “চালু” লিখি না।</p>
+        <div class="cb-features" id="cbFeatures"></div>
+      </div>
+    </section>
+
+
+    <!-- ================= কোন জেলায় কী বিখ্যাত ================= -->
+    <section class="cb-section" id="districts" aria-labelledby="distTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">🍲 জেলা-প্রোফাইল</p>
+        <h2 id="distTitle">কোন জেলায় কী বিখ্যাত</h2>
+        <p class="cb-sub">৩০টি জেলার বৌদ্ধ ঐতিহ্য — কতটি স্থান আমাদের তালিকায় আছে, কোন ধরনের, আর ⭐ চিহ্ন দেওয়া জেলাগুলোতে সূত্রসহ বিশেষত্ব। কোন জেলার নাম লিখে খুঁজুন, বা বিভাগ ধরে ছেঁকে নিন।</p>
+        <div class="lib-toolbar" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px">
+          <label class="king-search" style="display:flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--cb-line);border-radius:999px;background:var(--cb-white);min-width:250px">🔎
+            <input id="distSearch" type="search" placeholder="জেলার নাম লিখুন (যেমন কুমিল্লা)…" autocomplete="off" style="border:0;outline:0;font:inherit;background:transparent;width:100%">
+          </label>
+          <button type="button" class="cb-chip" id="distReset" style="cursor:pointer">ছাঁকনি মুছুন</button>
+          <span class="cb-score" id="distCount"></span>
+        </div>
+        <div class="cb-toc" id="distDivChips" style="margin-bottom:20px"></div>
+        <div class="cb-dist" id="distGrid"></div>
+        <p class="cb-note" id="distNote"></p>
+      </div>
+    </section>
+
+    <!-- ================= এখনই ব্যবহার করুন ================= -->
+    <section class="cb-section alt" id="sections" aria-labelledby="secTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">এখনই ব্যবহার করুন</p>
+        <h2 id="secTitle">যেখানে শুরু করবেন</h2>
+        <p class="cb-sub">যে অংশগুলো এখনই কাজ করছে, সেগুলো এখান থেকে সরাসরি খুলে নিন।</p>
+        <div class="cb-cards">
+          <a class="cb-card" href="#explore">
+            <span class="ico">🧭</span><b>স্থান খুঁজুন ও ম্যাপ</b>
+            <small>দেশের বৌদ্ধ বিহার, প্রত্নস্থল ও প্রতিষ্ঠানের তালিকা, মানচিত্র ও যোগাযোগ।</small>
+          </a>
+          <a class="cb-card" href="#planner">
+            <span class="ico">🧳</span><b>আমার ভ্রমণ তালিকা</b>
+            <small>পছন্দের স্থান বেছে নিজের ভ্রমণ-তালিকা তৈরি করুন — ব্রাউজারেই সেভ থাকে।</small>
+          </a>
+          <a class="cb-card" href="calendar.html">
+            <span class="ico">🌕</span><b>বৌদ্ধ উৎসব</b>
+            <small>পূর্ণিমা-পার্বণ, কঠিন চীবর দান ও স্থানীয় উৎসবের তারিখ দেখতে পঞ্জিকা খুলুন।</small>
+          </a>
+          <a class="cb-card" href="library.html">
+            <span class="ico">📚</span><b>বৌদ্ধ সাহিত্য</b>
+            <small>ত্রিপিটক, জাতক, ধম্মপদ — পড়ার সূত্র ও সংক্ষিপ্ত পরিচয়।</small>
+          </a>
+          <a class="cb-card" href="#travel-help">
+            <span class="ico">🚌</span><b>যাতায়াতের আগে যাচাই</b>
+            <small>আনুমানিক পিন, বিহারের নিয়ম, উৎসবের তারিখ ও জরুরি তথ্য যাচাইয়ের চেকলিস্ট।</small>
+          </a>
+          <a class="cb-card" href="institutions.html">
+            <span class="ico">🏛️</span><b>প্রতিষ্ঠান</b>
+            <small>বৌদ্ধ প্রতিষ্ঠান, বিহার-তালিকা ও যোগাযোগের ঠিকানা।</small>
+          </a>
+        </div>
+        <p class="cb-note">“স্থান খুঁজুন”, ম্যাপ ও “ভ্রমণ তালিকা” এখন এই হোমপেজেরই একীভূত ড্যাশবোর্ডে—আলাদা পুরোনো ড্যাশবোর্ড আর নেই।</p>
+      </div>
+    </section>
+
+    <!-- ================= আমাদের কথা (সারসংক্ষেপ) ================= -->
+    <section class="cb-section" id="about" aria-labelledby="aboutTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">আমাদের কথা</p>
+        <h2 id="aboutTitle">এই সাইট কাদের জন্য</h2>
+        <div class="cb-about-grid">
+          <div class="cb-about-text">
+            <p>চর্যাভূমি একটি ফ্রি বাংলাদেশি বৌদ্ধ-ঐতিহ্য, ইতিহাস ও ভ্রমণ-ওয়েবসাইট। এখানে নিজের ঘোরা জেলাগুলো বেছে ভ্রমণ-ম্যাপ বানানো যায়, আর ৬৪ জেলার দর্শনীয় বৌদ্ধ স্থান, যাতায়াত, খরচ ও থাকার তথ্য পাওয়া যায়। <b>কোনো সাইন-আপ নেই, কোনো বিজ্ঞাপন নেই।</b></p>
+            <p>নামটা এসেছে <b>চর্যাপদ</b> থেকে — বাংলা ভাষার সবচেয়ে পুরোনো নিদর্শন, যেটি আসলে বৌদ্ধ সিদ্ধাচার্যদের সাধন-গান। আমাদের যাত্রা শুরু হয় সেই জায়গা থেকেই, যেখানে বাংলা ভাষা লিখিত রূপ পায়।</p>
+            <div class="cb-audience" id="cbAudience"></div>
+            <p style="margin-top:18px"><a class="cb-btn solid" href="about.html">পুরো “আমাদের কথা” পড়ুন →</a></p>
+          </div>
+          <div class="cb-about-art">
+            <img src="assets/brand/about.svg" alt="পথ, স্তূপ ও তালপাতার পুঁথির আলংকারিক ছবি" width="800" height="520">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= প্রতিশ্রুতি ================= -->
+    <section class="cb-section alt" id="promises" aria-labelledby="promiseTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">আমাদের নীতি</p>
+        <h2 id="promiseTitle">ছয়টি প্রতিশ্রুতি</h2>
+        <div class="cb-promises" id="cbPromises"></div>
+      </div>
+    </section>
+
+    <!-- ================= কুইজ ================= -->
+    <section class="cb-section" id="quiz-teaser" aria-labelledby="quizTitle">
+      <div class="cb-wrap">
+        <div class="cb-about-grid">
+          <div>
+            <p class="cb-eyebrow">কুইজ · সাধারণ জ্ঞান</p>
+            <h2 id="quizTitle">বৌদ্ধ ধর্ম, দর্শন, ইতিহাস ও সংস্কৃতি — কতটা জানেন?</h2>
+            <p class="cb-sub" id="cbQuizLead">১০টি প্রশ্ন, ছবি ও ম্যাপসহ। প্রতিবার নতুন সেট।</p>
+            <div class="cb-actions">
+              <a class="cb-btn" href="quiz.html">🎮 কুইজ শুরু করুন →</a>
+              <a class="cb-btn ghost" href="quiz.html#leaderboard">🏆 লিডারবোর্ড</a>
+            </div>
+          </div>
+          <div class="cb-promises" id="cbQuizFacts"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ফাউন্ডার ================= -->
+    <section class="cb-section alt" id="founder" aria-labelledby="founderTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">কে বানাচ্ছেন</p>
+        <h2 id="founderTitle">প্রতিষ্ঠাতা</h2>
+        <div class="cb-founder" id="cbFounder"></div>
+        <p class="cb-note">ছবিটি আপাতত ব্র্যান্ড-মনোগ্রাম — প্রতিষ্ঠাতার আসল ছবি দিলে এটি বদলে দেওয়া হবে।</p>
+      </div>
+    </section>
+
+    <!-- ================= সংঘমিত্র (পুরোনো ড্যাশবোর্ড থেকে সরানো) =================
+         উইজেটটি আগে index-old.html-এ ছিল (heritage-enhancements.js);
+         এখন হোমেরই স্বতন্ত্র সেকশন। স্ক্রিপ্ট: sanghamitra.js
+         স্থানীয় নিয়মভিত্তিক সহায়ক; window.SANGHAMITRA_API_URL বসালে লাইভ API। -->
+    <section class="cb-section" id="sanghamitra" aria-labelledby="sanghamitraTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">☸ সহায়ক</p>
+        <h2 id="sanghamitraTitle">সংঘমিত্রকে জিজ্ঞাসা করুন</h2>
+        <p class="cb-sub">ঐতিহ্য ও ইতিহাস, বিহারে যাওয়ার রুট, আচরণবিধি, উৎসবের পঞ্জিকা, গৃহী নীতি ও বন্দনা — আর নতুন করে <b>শিশুর ধর্মীয় নাম</b> এবং <b>প্রতিষ্ঠান ও স্থানের নামের সাজেশন</b>। নিচের যেকোনো বোতামে চাপ দিন, বা নিজের প্রশ্ন লিখুন।</p>
+        <div class="cb-sangha-grid">
+          <div>
+            <div class="cb-sangha-feats">
+              <div class="cb-promise"><i aria-hidden="true">👶</i><b>শিশুর ধর্মীয় নাম</b><p>পালি-মূলের অর্থসহ নাম; জন্মবার লিখলে ওই রীতির প্রথম বর্ণ অনুযায়ী। যেমন: “শনিবারে জন্ম নেওয়া মেয়ের নাম”।</p></div>
+              <div class="cb-promise"><i aria-hidden="true">🏛️</i><b>প্রতিষ্ঠান ও স্থানের নাম</b><p>বিহার, ভাবনাকেন্দ্র, স্কুল, লাইব্রেরি বা সেবা-সংগঠনের জন্য নামের খসড়া ধরন ও মূলশব্দের ভাণ্ডার।</p></div>
+              <div class="cb-promise"><i aria-hidden="true">🧭</i><b>ভ্রমণ ও আচরণবিধি</b><p>কোথায় যাবেন, কাছাকাছি কী সেবা, বিহারে কী মেনে চলবেন — সাইটেরই সংশ্লিষ্ট অংশের লিংকসহ।</p></div>
+              <div class="cb-promise"><i aria-hidden="true">📖</i><b>গৃহী নীতি ও সূত্র</b><p>পঞ্চশীল, সিগালোবাদ, মহামঙ্গল, বন্দনা — নতুন অধ্যায়ে সূত্র-রেফারেন্সসহ পথ দেখিয়ে দেবে।</p></div>
+            </div>
+            <p class="cb-note" style="margin-top:18px">ℹ️ এটি সাইটের স্থানীয় নিয়মভিত্তিক সহায়ক (ডেমো) — লাইভ AI/API, রিয়েল-টাইম তারিখ বা জরুরি সেবা ডাকার ব্যবস্থা যুক্ত নয়। লাইভ সংস্করণের জন্য <code>server/sanghamitra_api.py</code> রিপোতে প্রস্তুত আছে। জরুরি প্রয়োজনে <a href="about.html#emergency">জরুরি নম্বর</a> দেখুন।</p>
+          </div>
+          <div class="cb-sangha-panel">
+            <div class="cb-sangha-topbar">
+              <div><strong>সংঘমিত্র</strong><small>SanghaMitra · ঐতিহ্য, ভ্রমণ ও গৃহী সহায়ক</small></div>
+              <span class="wheel" aria-hidden="true">☸</span>
+            </div>
+            <div class="cb-sangha-messages" id="sanghaHomeMessages" aria-live="polite">
+              <div class="cb-sangha-msg bot"><p>নমস্কার! আমি সংঘমিত্র — আগে ছিলাম পুরোনো ড্যাশবোর্ডে, এখন হোমপেজেই। বিহারের ইতিহাস, ভ্রমণ রুট, উৎসব, আচরণবিধি কিংবা গৃহী নীতি জানতে চান?</p><p>নতুন করে <b>শিশুর ধর্মীয় নাম</b> এবং <b>বিহার/প্রতিষ্ঠানের নাম</b>-ও সাজেস্ট করতে পারি — নিচের বোতামে চাপ দিন।</p></div>
+            </div>
+            <div class="cb-sangha-quick">
+              <button type="button" data-sangha-home-quick="babyname">👶 শিশুর নাম</button>
+              <button type="button" data-sangha-home-quick="babygirl">🎀 মেয়ের নাম</button>
+              <button type="button" data-sangha-home-quick="weekday">📅 জন্মবারে নাম</button>
+              <button type="button" data-sangha-home-quick="placename">🏛️ বিহারের নাম</button>
+              <button type="button" data-sangha-home-quick="grihi">📖 গৃহী নীতি</button>
+              <button type="button" data-sangha-home-quick="route">🧭 ভ্রমণ রুট</button>
+              <button type="button" data-sangha-home-quick="etiquette">🙏 আচরণবিধি</button>
+              <button type="button" data-sangha-home-quick="festival">🌕 উৎসব</button>
+            </div>
+            <form class="cb-sangha-form" id="sanghaHomeForm">
+              <input id="sanghaHomeInput" type="text" autocomplete="off" maxlength="500" placeholder="প্রশ্ন লিখুন… যেমন: শুক্রবারে জন্ম নেওয়া ছেলের নাম" aria-label="সংঘমিত্রকে প্রশ্ন লিখুন" required>
+              <button type="submit" aria-label="প্রশ্ন পাঠান">➤</button>
+            </form>
+            <p class="cb-sangha-disclaimer">উত্তর সাজেশনের জন্য মাত্র — ধর্মীয় সিদ্ধান্তে নিজের বিহারের ভান্তের পরামর্শ নিন।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= যোগাযোগ ================= -->
+    <section class="cb-section dark" id="contact" aria-labelledby="contactTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">যোগাযোগ</p>
+        <h2 id="contactTitle">মতামত, ভুল সংশোধন বা যেকোনো প্রয়োজন</h2>
+        <p class="cb-sub" id="cbContactText">মেসেজ দিন — কোনো বিহার বা স্থানের তথ্য ভুল থাকলে জানান, সূত্রসহ সংশোধন করা হবে।</p>
+        <div class="cb-contact" id="cbContact"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer" id="cbFooter"></footer>
+
+  <script src="brand.js?v=20261022b" defer></script>
+  <script src="home.js?v=20261022m1" defer></script>
+  <script src="dashboard.js?v=20261023c" defer></script>
+  <script src="sanghamitra.js?v=20261022m1" defer></script>
+</body>
+</html>
