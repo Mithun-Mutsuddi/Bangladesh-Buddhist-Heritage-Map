@@ -4,8 +4,8 @@
 (function () {
   'use strict';
 
-  var CORE = 'data/dashboard-core.json?v=20261023c';
-  var DIRECTORY = 'data/dashboard-directory.json?v=20261023c';
+  var CORE = 'data/dashboard-core.json?v=20261023d';
+  var DIRECTORY = 'data/dashboard-directory.json?v=20261023d';
   var PAGE = 24;
   var LS_TRIP = 'buddhistHeritageItinerary';
   var LS_VISITED = 'buddhistHeritageVisited';
@@ -85,7 +85,11 @@
       .replace(/[০-৯]/g, function (d) { return String('০১২৩৪৫৬৭৮৯'.indexOf(d)); })
       .replace(/[\u200c\u200d\ufeff]/g, '')
       .replace(/[^\p{L}\p{M}\p{N}\s-]/gu, ' ')
-      .replace(/\s+/g, ' ').trim();
+      .replace(/\s+/g, ' ').trim()
+      .replace(/মুন্সিগঞ্জ/g, 'মুন্সীগঞ্জ')
+      .replace(/রে ায়াংছড়ি/g, 'রেয়াংছড়ি')
+      .replace(/লক্ষীছড়ি/g, 'লক্ষ্মীছড়ি')
+      .replace(/সূর্তাপুর/g, 'সূত্রাপুর');
   }
   function hasCoords(p) {
     return !!(p && Array.isArray(p.coords) && p.coords.length === 2 && p.coords.every(Number.isFinite));
@@ -112,12 +116,47 @@
     }
     return googleSearch(p);
   }
-  function telHref(num) { return 'tel:' + clean(num).replace(/[^+\d]/g, ''); }
-  function waHref(num) { return 'https://wa.me/' + clean(num).replace(/\D/g, ''); }
+  function digitString(value) {
+    return clean(value).replace(/[০-৯]/g, function (d) { return String('০১২৩৪৫৬৭৮৯'.indexOf(d)); }).replace(/\D/g, '');
+  }
+  function phoneParts(value) {
+    return clean(value).split(/[,;|/]+|\s+এবং\s+|\s+অথবা\s+/).map(clean).filter(Boolean);
+  }
+  function phoneInfo(value) {
+    // PDF-এর এক ঘরে থাকা একাধিক নম্বর আলাদা করা হয়। অসম্পূর্ণ নম্বরে কল-লিংক বসানো হয় না।
+    var digits = digitString(clean(value).replace(/\([^)]*\)|（[^）]*）/g, ''));
+    var mobile = /^(?:01[3-9]\d{8}|8801[3-9]\d{8})$/.test(digits);
+    var landline = /^(?:0[2-9]\d{6,10}|880[2-9]\d{6,10})$/.test(digits);
+    return {
+      display: clean(value), digits: digits, mobile: mobile,
+      valid: mobile || landline,
+      tel: digits ? (digits.indexOf('880') === 0 ? '+' + digits : (digits.indexOf('0') === 0 ? '+880' + digits.slice(1) : digits)) : '',
+      wa: mobile ? (digits.indexOf('01') === 0 ? '880' + digits.slice(1) : digits) : ''
+    };
+  }
+  function telHref(num) {
+    var info = phoneInfo(num);
+    return info.valid ? 'tel:' + info.tel : '';
+  }
+  function waHref(num) {
+    var info = phoneInfo(num);
+    return info.wa ? 'https://wa.me/' + info.wa : '';
+  }
+  function phoneButtons(value, label) {
+    return phoneParts(value).map(function (part) {
+      var info = phoneInfo(part);
+      if (!info.valid) {
+        return '<span class="cb-mini-btn cb-phone-unverified" title="সূত্রের নম্বরটি অসম্পূর্ণ বা অকেজো; কল-লিংক দেওয়া হয়নি">⚠ ' + esc(info.display) + ' — নম্বর যাচাই প্রয়োজন</span>';
+      }
+      return '<a class="cb-mini-btn link" href="' + esc(telHref(part)) + '">' + (info.mobile ? '📞' : '☎') + ' ' + esc(label || 'ফোন') + ': ' + esc(info.display) + '</a>';
+    });
+  }
   function photoBlock(p) {
     var list = (Array.isArray(p.photos) ? p.photos : []).filter(function (x) { return x && x.image; });
     if (!list.length) {
-      if (!p.photo) return '';
+      if (!p.photo) {
+        return '<div class="cb-no-photo"><strong>যাচাইকৃত ছবি এখনো নেই</strong><p>প্রকাশ্য সূত্রে নির্ভরযোগ্য ছবি না পেলে অন্য স্থানের ছবি বসানো হয় না। <a href="about.html#contact">নিজের ছবি বা সূত্র পাঠাতে পারেন</a>।</p></div>';
+      }
       list = [{ image: p.photo, caption: '', credit: p.photoCredit }];
     }
     return '<div class="cb-gallery">' + list.map(function (x, i) {
@@ -129,12 +168,13 @@
     }).join('') + '</div>';
   }
   function contactBlock(p) {
-    var buttons = [];
-    if (p.mobile) {
-      buttons.push('<a class="cb-mini-btn link" href="' + esc(telHref(p.mobile)) + '">📞 ফোন ' + esc(p.mobile) + '</a>');
-    }
+    var buttons = phoneButtons(p.mobile, 'মোবাইল').concat(phoneButtons(p.officePhone, 'অফিস'));
     if (p.whatsapp) {
-      buttons.push('<a class="cb-mini-btn link" href="' + esc(waHref(p.whatsapp)) + '" target="_blank" rel="noopener">💬 হোয়াটসঅ্যাপ</a>');
+      var wa = waHref(p.whatsapp);
+      if (wa) buttons.push('<a class="cb-mini-btn link" href="' + esc(wa) + '" target="_blank" rel="noopener">💬 হোয়াটসঅ্যাপ</a>');
+    }
+    if (p.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean(p.email))) {
+      buttons.push('<a class="cb-mini-btn link" href="mailto:' + esc(p.email) + '">✉ ইমেইল</a>');
     }
     if (p.bkash) {
       buttons.push('<button type="button" class="cb-mini-btn" data-copy="' + esc(p.bkash) + '">💳 বিকাশ নম্বর কপি করুন</button>');
@@ -189,10 +229,15 @@
     (list || []).forEach(function (p) {
       if (!p || !p.id || !p.name || byId.has(String(p.id))) return;
       p.id = String(p.id);
-      if (p.district === 'মুন্সিগঞ্জ') {
-        p.district = 'মুন্সীগঞ্জ';
-        p.aliases = (p.aliases || []).concat(['মুন্সিগঞ্জ', 'Munshiganj']);
-      }
+      var oldSpellings = {
+        'মুন্সীগঞ্জ': ['মুন্সিগঞ্জ', 'Munshiganj'],
+        'রেয়াংছড়ি': ['রে ায়াংছড়ি'],
+        'লক্ষ্মীছড়ি': ['লক্ষীছড়ি'],
+        'সূত্রাপুর': ['সূর্তাপুর']
+      };
+      [p.district, p.upazila, p.thana].forEach(function (value) {
+        if (oldSpellings[value]) p.aliases = (p.aliases || []).concat(oldSpellings[value]);
+      });
       places.push(indexPlace(p));
       byId.set(p.id, p);
       added++;
@@ -222,7 +267,8 @@
   }
 
   function uniqueSorted(values) {
-    return Array.from(new Set(values.filter(Boolean))).sort(function (a, b) { return a.localeCompare(b, 'bn'); });
+    var canonical = values.filter(Boolean).map(function (v) { return clean(v).normalize('NFC'); }).filter(Boolean);
+    return Array.from(new Set(canonical)).sort(function (a, b) { return a.localeCompare(b, 'bn'); });
   }
   function fillSelect(select, values, allLabel, keep) {
     if (!select) return;
@@ -237,7 +283,8 @@
     var div = els.division ? els.division.value : 'all';
     var districtPool = div === 'all' ? places : places.filter(function (p) { return p.division === div; });
     fillSelect(els.district, uniqueSorted(districtPool.map(function (p) { return p.district; })), 'সব জেলা', keep);
-    fillSelect(els.category, uniqueSorted(places.map(function (p) { return p.category; }).concat(places.map(function (p) { return p.type; }))), 'সব ধরন', keep);
+    // category হলো একমাত্র ক্যানোনিকাল ফিল্টার; type-এর উপধরন আলাদা অপশন হিসেবে দ্বৈত দেখানো হয় না।
+    fillSelect(els.category, uniqueSorted(places.map(function (p) { return p.category; })), 'সব ধরন', keep);
   }
   function refreshStats() {
     if (els.totalStat) els.totalStat.textContent = bn(places.length) + 'টি';
@@ -286,7 +333,7 @@
     filtered = places.filter(function (p) {
       if (div !== 'all' && p.division !== div) return false;
       if (dist !== 'all' && p.district !== dist) return false;
-      if (cat !== 'all' && p.category !== cat && p.type !== cat) return false;
+      if (cat !== 'all' && p.category !== cat) return false;
       if (coordsOnly && !hasCoords(p)) return false;
       if (!tokens.length) return true;
       return tokens.every(function (t) { return p._q.indexOf(t) > -1; });
@@ -309,11 +356,15 @@
   function cardHtml(p) {
     var inTrip = itinerary.has(p.id);
     var seen = visited.has(p.id);
+    var firstPhoto = Array.isArray(p.photos) && p.photos.length ? p.photos[0] : null;
+    var photoCaption = firstPhoto ? clean(firstPhoto.caption) : '';
+    var eventPhoto = /অনুষ্ঠান|সম্মেলন/.test(photoCaption) && /নয়/.test(photoCaption);
     var media = p.photo
-      ? '<img src="' + esc(photoUrl(p.photo, 480)) + '" alt="' + esc(p.name) + '-এর ছবি" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">'
+      ? '<img src="' + esc(photoUrl(p.photo, 480)) + '" alt="' + esc(p.name + (photoCaption ? ' — ' + photoCaption : '-এর ছবি')) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">'
       : '<div class="cb-place-art" aria-hidden="true"><span>☸</span></div>';
     return '<article class="cb-place-card' + (selectedId === p.id ? ' is-selected' : '') + '" data-card="' + esc(p.id) + '">' +
-      '<div class="cb-place-media">' + media + '<span class="cb-place-badge">' + esc(p.type || p.category || 'স্থান') + '</span>' +
+      '<div class="cb-place-media">' + media + '<span class="cb-place-badge" title="' + esc(p.type || p.category || 'স্থান') + '">' + esc(p.type || p.category || 'স্থান') + '</span>' +
+      (eventPhoto ? '<span class="cb-place-photo-kind">অনুষ্ঠানের ছবি</span>' : '') +
       (p.approx ? '<span class="cb-place-approx">পিন আনুমানিক</span>' : '') + '</div>' +
       '<div class="cb-place-body">' +
         '<h3>' + esc(p.name) + '</h3>' +
@@ -347,24 +398,57 @@
     }
   }
 
+  function sourceList(p) {
+    var list = (Array.isArray(p.sources) ? p.sources : []).filter(function (x) { return x && clean(x.url); });
+    if (p.source && !list.some(function (x) { return x.url === p.source; })) {
+      list.unshift({ url: p.source, label: p.sourceLabel || 'মূল তথ্যসূত্র' });
+    }
+    return list;
+  }
+  function sourceBlock(p) {
+    var list = sourceList(p);
+    if (!list.length) return '';
+    return '<section class="cb-sources"><h4>তথ্যসূত্র ও যাচাই</h4><ol>' + list.map(function (x) {
+      return '<li><a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.label || x.url) + ' ↗</a></li>';
+    }).join('') + '</ol></section>';
+  }
+  function unavailableNote(p) {
+    if (p.dataNote) return p.dataNote;
+    var hasPhotos = !!(p.photo || (Array.isArray(p.photos) && p.photos.length));
+    var missing = [];
+    if (!hasPhotos) missing.push('ছবি');
+    if (!p.established) missing.push('সুনির্দিষ্ট প্রতিষ্ঠা/নির্মাণ-তারিখ');
+    if (!p.contact) missing.push('দায়িত্বপ্রাপ্ত ব্যক্তি');
+    if (!p.mobile) missing.push('মোবাইল');
+    if (!missing.length) return '';
+    if (p.directory) {
+      return 'সরকারি জেলা-তালিকার প্রতিটি সারিতে ছবি, তারিখ, ব্যক্তি ও ফোনের আলাদা ঘর নেই। এই রেকর্ডে যা প্রকাশিত ছিল তাই এসেছে; ' + missing.join(', ') + ' অনুমান করে যোগ করা হয়নি।';
+    }
+    return 'প্রকাশিত উৎসে ' + missing.join(', ') + ' নিশ্চিতভাবে পাওয়া যায়নি। ভুল তথ্য এড়াতে ঘরগুলো অনুমান করে পূরণ করা হয়নি।';
+  }
   function detailHtml(p) {
     var inTrip = itinerary.has(p.id);
     var seen = visited.has(p.id);
+    var note = unavailableNote(p);
     var rows = [
       ['বিভাগ', p.division], ['জেলা', p.district], ['উপজেলা', p.upazila], ['থানা', p.thana],
       ['ইউনিয়ন', p.union], ['গ্রাম/এলাকা', p.village], ['পোস্ট অফিস', p.post],
-      ['ঠিকানা', p.address], ['প্রতিষ্ঠাকাল', p.established],
-      ['ধরন', p.category], ['যোগাযোগ', p.contact], ['মোবাইল', p.mobile],
+      ['ঠিকানা', p.address], ['প্রতিষ্ঠা/নির্মাণ', p.established || 'সূত্রে উল্লেখ নেই'],
+      ['ধরন', p.category], ['উপধরন', p.type],
+      ['দায়িত্বপ্রাপ্ত ব্যক্তি/কার্যালয়', p.contact || 'প্রকাশিত নয়'],
+      ['মোবাইল', p.mobile || 'প্রকাশিত নয়'], ['অফিস ফোন', p.officePhone], ['ইমেইল', p.email],
       ['হোয়াটসঅ্যাপ', p.whatsapp], ['বিকাশ (দান)', p.bkash], ['ম্যাপে ঠিকানা', p.mapLabel],
-      ['যাচাই', p.verify], ['স্থানাঙ্ক', hasCoords(p) ? p.coords.join(', ') + (p.approx ? ' (আনুমানিক)' : '') : 'নির্ভরযোগ্য পিন নেই']
+      ['যাচাই', p.verify], ['স্থানাঙ্ক', hasCoords(p) ? p.coords.join(', ') + (p.approx ? ' (আনুমানিক/প্রবেশদ্বার নয়)' : '') : 'নির্ভরযোগ্য পিন নেই']
     ].filter(function (r) { return clean(r[1]); });
     return '<article class="cb-place-detail">' +
-      photoBlock(p) +
       '<p class="cb-eyebrow">' + esc(p.category || p.type || 'বৌদ্ধ ঐতিহ্য') + '</p>' +
       '<h3>' + esc(p.name) + '</h3>' + (p.en ? '<p class="cb-place-en">' + esc(p.en) + '</p>' : '') +
       '<p class="cb-place-loc">⌖ ' + esc(locationLine(p)) + '</p>' +
-      '<p>' + esc(p.summary) + '</p>' +
+      (p.summary ? '<p>' + esc(p.summary) + '</p>' : '') +
+      photoBlock(p) +
       (p.history && p.history !== p.summary ? '<h4>ইতিহাস ও প্রসঙ্গ</h4><p>' + esc(p.history) + '</p>' : '') +
+      (p.architecture ? '<h4>স্থাপত্য</h4><p>' + esc(p.architecture) + '</p>' : '') +
+      (p.archaeology ? '<h4>প্রত্নতাত্ত্বিক আবিষ্কার</h4><p>' + esc(p.archaeology) + '</p>' : '') +
       (p.trip ? '<h4>যাওয়ার আগে</h4><p>' + esc(p.trip) + '</p>' : '') +
       '<dl class="cb-detail-list">' + rows.map(function (r) { return '<div><dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd></div>'; }).join('') + '</dl>' +
       contactBlock(p) +
@@ -373,9 +457,9 @@
         '<button type="button" class="cb-mini-btn" data-action="visited" data-id="' + esc(p.id) + '">' + (seen ? '✓ দেখা হয়েছে' : 'দেখা হয়েছে বলে চিহ্নিত করুন') + '</button>' +
         '<button type="button" class="cb-mini-btn" data-action="map" data-id="' + esc(p.id) + '">ম্যাপে দেখুন</button>' +
         '<a class="cb-mini-btn link" href="' + esc(googleDir(p)) + '" target="_blank" rel="noopener">Google Maps ↗</a>' +
-        (p.source ? '<a class="cb-mini-btn link" href="' + esc(p.source) + '" target="_blank" rel="noopener">তথ্যসূত্র ↗</a>' : '') +
       '</div>' +
-      (p.sourceLabel ? '<p class="cb-source-note">সূত্র: ' + esc(p.sourceLabel) + '</p>' : '') +
+      sourceBlock(p) +
+      (note ? '<details class="cb-data-note"><summary>তথ্য কেন আগে পাওয়া যায়নি</summary><p>' + esc(note) + '</p></details>' : '') +
       '<p class="cb-source-note">সক্রিয় বিহারে প্রবেশের আগে পোশাক, ছবি তোলা ও দর্শনার্থী-নীতি সম্পর্কে স্থানীয় নির্দেশনা জেনে নিন।' +
         (p.approx ? ' আনুমানিক পিনকে প্রবেশদ্বারের GPS ধরে নেবেন না।' : '') + '</p>' +
     '</article>';
@@ -679,9 +763,14 @@
       var query = q.get('q') || q.get('search');
       var district = q.get('district');
       var division = q.get('division');
+      var category = q.get('category') || q.get('type');
       if (query && els.search) els.search.value = query;
       if (division && els.division) { els.division.value = division; refreshFilters(true); }
       if (district && els.district) els.district.value = district;
+      if (category && els.category) {
+        var match = Array.from(els.category.options).find(function (option) { return option.value === category; });
+        if (match) els.category.value = category;
+      }
     } catch (_) {}
   }
 

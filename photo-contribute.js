@@ -71,7 +71,7 @@
       '<p class="cp-note">আপনার তোলা ছবি এই ব্রাউজারে সংরক্ষিত থাকে (সার্ভারে আপলোড হয় না)। ছবির মালিক আপনি না হলে বা অনুমতি না থাকলে যোগ করবেন না।</p>' +
       wall +
       '<form class="cp-form">' +
-      '<label>আপনার নাম <input type="text" name="author" required maxlength="60" placeholder="যেমন: মিথুন বড়ুয়া"></label>' +
+      '<label>আপনার নাম <input type="text" name="author" required maxlength="60" placeholder="যেমন: মিথুন মুৎসুদ্দী"></label>' +
       '<label>ছবি (JPG/PNG, সর্বোচ্চ ৫ MB) <input type="file" name="photo" accept="image/*" required></label>' +
       '<label>লাইসেন্স <select name="license"><option value="CC BY-SA 4.0">CC BY-SA 4.0 (অন্যরা ব্যবহার করতে পারবে, নামসহ)</option>' +
       '<option value="CC BY 4.0">CC BY 4.0</option><option value="সর্বস্বত্ব সংরক্ষিত">সর্বস্বত্ব সংরক্ষিত (শুধু এই সাইটে)</option></select></label>' +

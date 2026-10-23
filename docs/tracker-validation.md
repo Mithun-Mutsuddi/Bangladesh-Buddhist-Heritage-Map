@@ -2,10 +2,10 @@
 
 ## Automated checks completed
 
-**34 tests passed** in the workspace:
+**41 tests passed** in the workspace after the 23 October homepage/content update:
 
 - `npm test`: **12/12** Node unit tests. Catalog uniqueness, district derivation, spelling aliases, safe restore validation, GPS accuracy/jitter/outlier filtering, polygon holes, full-country projection bounds, GeoJSON coordinate order, Unicode share snapshots, privacy exclusions and unsafe URL/HTML handling.
-- `npm run test:e2e`: **11/11** Chromium Playwright tests. District toggles and reload persistence; Bengali/profile UI; sourced site details and visit removal; IndexedDB journal with image, reload/edit/delete; PNG/JPG downloads; assistant statistics consent; simulated GPS start/stop and automatic district; mobile navigation/overflow; backup visit-state restoration; cancellation of linked-district removal; shared-snapshot isolation; visible failure when online AI is not configured.
+- `npm run test:e2e`: **18/18** Chromium Playwright tests. Seven new homepage/content tests cover the graphical session-once welcome, personalization persistence, Dhaka-time festivals, reduced motion, click-only geolocation denial/success, merged social-institution redirect and unique filters, Dalijhara search/gallery/sources/separate phone links, multiple mobiles, creator spelling, and mobile article/map rendering. Eleven tracker tests cover district toggles and reload persistence; Bengali/profile UI; sourced site details and visit removal; IndexedDB journal with image, reload/edit/delete; PNG/JPG downloads; assistant statistics consent; simulated GPS start/stop and automatic district; mobile navigation/overflow; backup visit-state restoration; cancellation of linked-district removal; shared-snapshot isolation; visible failure when online AI is not configured.
 - `npm run test:backend`: **11/11** Python tests. Private DB blocked inside web root; token scope/isolation/expiry/revocation; required write confirmation and optimistic revisions; no route/media snapshot import; API health/unconfigured-provider response; hidden/private path denial; cross-origin rejection; invalid input and rate limiting; public MCP tools and denial without a private token.
 
 Additional checks:
@@ -13,7 +13,7 @@ Additional checks:
 - `python tools/validate_heritage_data.py`: structural **PASS**, with inherited missing-source warnings. No historical fact-checking or field GPS verification is implied.
 - `node --check tracker.js`, `node --check tracker-core.mjs`, and Python compilation: pass.
 - `git diff --check`: pass.
-- Desktop (1440 px) and mobile (390 px) screenshots inspected; no horizontal overflow in the tested tracker views.
+- Desktop (1440 px) and mobile (390 px) screenshots inspected; no horizontal overflow in the tested tracker, article/map or welcome views. The updated Dalijhara crops and detail-gallery order were also visually reviewed.
 
 ## Important boundaries of these tests
 

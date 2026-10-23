@@ -2,7 +2,7 @@
    site-info.json থেকে ব্র্যান্ড নাম, মূলমন্ত্র ও যোগাযোগ পড়ে রেন্ডার করে। */
 (function () {
   'use strict';
-  var INFO = 'data/site-info.json?v=20261022a';
+  var INFO = 'data/site-info.json?v=20261023d';
   var state = { info: null };
 
   // প্রতিটি পাতার মূল কনটেন্ট নিজে লিখে রাখে; এখানে শুধু হেডার-ফুটার বসে।
@@ -11,13 +11,15 @@
     { href: 'index.html#explore', label: 'স্থান খুঁজুন' },
     { href: 'tracker.html', label: 'আমার ট্রাভেল ট্র্যাকার' },
     { href: 'index.html#planner', label: 'ভ্রমণ প্ল্যানার' },
+    { href: 'maps.html', label: 'মানচিত্র' },
     { href: 'history.html', label: 'ইতিহাস' },
+    { href: 'purna-chandra-tarai.html', label: 'প্রত্নতত্ত্ব-নিবন্ধ' },
     { href: 'philosophy.html', label: 'বৌদ্ধধর্ম' },
     { href: 'culture.html', label: 'শিল্প ও সংস্কৃতি' },
     { href: 'kings.html', label: 'রাজাদের প্রোফাইল' },
     { href: 'library.html', label: 'লাইব্রেরি' },
     { href: 'contribution.html', label: 'অবদান' },
-    { href: 'institutions.html', label: 'প্রতিষ্ঠান' },
+    { href: 'institutions.html', label: 'সামাজিক প্রতিষ্ঠান' },
     { href: 'calendar.html', label: 'পঞ্জিকা' },
     { href: 'quiz.html', label: 'কুইজ', cta: true },
     { href: 'about.html', label: 'আমাদের কথা' }
@@ -79,8 +81,8 @@
             '</div>' +
             '<p>' + esc(b.tagline || '') + '</p>' +
             (b.slogan ? '<p style="color:#e6d3ab">' + esc(b.slogan) + '</p>' : '') +
-            '<p><b>' + esc(fo.role || '') + ':</b> ' + esc(fo.name || '') + '<br>' +
-              'শুরু: ' + esc(fo.since || '') + '</p>' +
+            '<p><b>' + esc(fo.role || '') + ':</b> ' + esc(fo.bn_name || fo.name || '') + '<br>' +
+              esc(fo.since || '') + '</p>' +
           '</div>' +
           '<div><h4>ঘুরে দেখুন</h4>' +
             '<a href="index.html#explore">স্থান খুঁজুন</a>' +
@@ -90,6 +92,8 @@
           '</div>' +
           '<div><h4>জানুন</h4>' +
             '<a href="history.html">ইতিহাস</a>' +
+            '<a href="purna-chandra-tarai.html">প্রত্নতত্ত্ব-নিবন্ধ</a>' +
+            '<a href="maps.html">ঐতিহাসিক মানচিত্র</a>' +
             '<a href="culture.html">শিল্প ও সংস্কৃতি</a>' +
             '<a href="kings.html">রাজাদের প্রোফাইল</a>' +
             '<a href="library.html">লাইব্রেরি</a>' +

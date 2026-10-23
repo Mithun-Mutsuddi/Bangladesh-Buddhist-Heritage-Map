@@ -1,3 +1,9 @@
+/* Local Bengali fonts: no external font-service dependency. */
+@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 400; font-display: swap; src: url('assets/tracker/fonts/font-4.ttf') format('truetype'); }
+@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 500; font-display: swap; src: url('assets/tracker/fonts/font-5.ttf') format('truetype'); }
+@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 600; font-display: swap; src: url('assets/tracker/fonts/font-6.ttf') format('truetype'); }
+@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 700; font-display: swap; src: url('assets/tracker/fonts/font-6.ttf') format('truetype'); }
+
 :root {
   --forest: #8f3d08;
   --forest-deep: #4b1f07;

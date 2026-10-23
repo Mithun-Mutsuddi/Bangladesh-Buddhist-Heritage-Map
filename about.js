@@ -1,7 +1,7 @@
 /* চর্যাভূমি — “আমাদের কথা” পাতা (data/site-info.json থেকে) */
 (function () {
   'use strict';
-  var INFO = 'data/site-info.json?v=20261022a';
+  var INFO = 'data/site-info.json?v=20261023d';
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];

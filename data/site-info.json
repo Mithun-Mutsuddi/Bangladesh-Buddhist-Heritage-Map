@@ -1,6 +1,6 @@
 {
  "schema_version": "2026-10-22.site-info.v3",
- "generated_at": "2026-10-22",
+ "generated_at": "2026-10-23",
  "brand": {
   "name_bn": "চর্যাভূমি",
   "name_en": "Charyabhumi",
@@ -350,7 +350,7 @@
  "rail_note": "ট্রেনের সময় সচরাচর বদলায় — যাত্রার আগে অফিসিয়াল সাইট বা স্টেশন থেকে যাচাই করুন। এই সাইটে কোনো ট্রেনের সময় নিজে থেকে লেখা হয় না।",
  "founder": {
   "name": "Mithun Mutsuddi",
-  "bn_name": "মিঠুন মুৎসুদ্দি",
+  "bn_name": "মিথুন মুৎসুদ্দী",
   "role": "প্রতিষ্ঠাতা ও পরিচালক",
   "photo": "assets/brand/founder.jpg",
   "site": "https://mithun-mutsuddi.github.io",

@@ -13,13 +13,65 @@
   <meta property="og:image" content="assets/brand/buddha-hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="charyabhumi.css?v=20261023c">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261023d">
+  <link rel="stylesheet" href="welcome.css?v=20261023d">
 </head>
 <body class="cb">
   <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
   <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
 
   <header class="cb-header" id="cbHeader"></header>
+
+  <dialog class="cb-welcome" id="welcomeDialog" aria-labelledby="welcomeTitle" aria-describedby="welcomeText">
+    <button type="button" class="cb-welcome-close" id="welcomeClose" aria-label="স্বাগত-বার্তা বন্ধ করুন">×</button>
+    <div class="cb-welcome-art" aria-hidden="true">
+      <svg viewBox="0 0 640 250" role="img">
+        <defs>
+          <linearGradient id="welcomeSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#174f52"/><stop offset="1" stop-color="#d8924a"/></linearGradient>
+          <linearGradient id="welcomeStupa" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff4ce"/><stop offset="1" stop-color="#dba648"/></linearGradient>
+          <filter id="welcomeGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <rect width="640" height="250" rx="22" fill="url(#welcomeSky)" class="cb-welcome-sky"/>
+        <g class="cb-welcome-stars" fill="#fff7cf"><circle cx="55" cy="45" r="1.8"/><circle cx="112" cy="28" r="1.4"/><circle cx="196" cy="52" r="1.8"/><circle cx="423" cy="31" r="1.5"/><circle cx="541" cy="55" r="2"/><circle cx="596" cy="25" r="1.3"/></g>
+        <circle class="cb-welcome-sun" cx="505" cy="62" r="31" fill="#ffd77e" filter="url(#welcomeGlow)"/>
+        <g class="cb-welcome-moon" filter="url(#welcomeGlow)"><circle cx="505" cy="62" r="28" fill="#fff4ce"/><circle cx="515" cy="53" r="4" fill="#e8d9ad" opacity=".45"/><circle cx="493" cy="70" r="3" fill="#e8d9ad" opacity=".35"/></g>
+        <g class="cb-welcome-cloud" fill="#fff" opacity=".2"><path d="M35 80c8-17 34-16 41 0 16-8 33 1 34 14H22c0-8 5-12 13-14z"/><path d="M390 100c7-14 28-13 34 0 14-7 29 1 30 12h-76c0-7 5-11 12-12z"/></g>
+        <path d="M0 190 Q95 135 185 187 T365 177 T640 170 V250 H0Z" fill="#173f38" opacity=".75"/>
+        <path d="M0 211 Q130 168 255 213 T510 199 T640 205 V250 H0Z" fill="#0d2d29"/>
+        <g class="cb-welcome-stupa" transform="translate(270 57)">
+          <path d="M50 19 55 0 60 19Z" fill="#f5c76a"/><path d="M45 25h20M42 32h26M38 39h34" stroke="#f5c76a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 91v-9c0-28 58-28 58 0v9" fill="url(#welcomeStupa)"/><path d="M31 61h48M24 91h62v13H24zM16 107h78v13H16zM6 123h98v14H6z" fill="url(#welcomeStupa)"/>
+          <path d="M48 49h14v8H48z" fill="#8f3d08" opacity=".7"/>
+        </g>
+        <g class="cb-welcome-wheel" transform="translate(142 128)" stroke="#f5c76a" stroke-width="3" fill="none">
+          <circle r="39"/><circle r="30"/><circle r="5" fill="#f5c76a"/>
+          <path d="M0-30V30M-30 0H30M-21-21 21 21M21-21-21 21"/>
+        </g>
+        <g class="cb-welcome-lotus" transform="translate(448 171)">
+          <path d="M0 24C-30 16-37-4-34-12-14-10-2 4 0 24Z" fill="#ee9c8c"/><path d="M0 24C30 16 37-4 34-12 14-10 2 4 0 24Z" fill="#f2b09e"/><path d="M0 24C-14 4-12-20 0-29 12-20 14 4 0 24Z" fill="#ffd0b7"/><path d="M-42 25Q0 36 42 25" stroke="#f5c76a" stroke-width="3" fill="none"/>
+        </g>
+        <g class="cb-welcome-lanterns" stroke="#f5c76a" fill="#d86f46"><path d="M77 0v50M570 0v50" fill="none"/><path d="M64 48h26l-3 28H67zM557 48h26l-3 28h-26z"/><path d="M77 76v13M570 76v13"/></g>
+      </svg>
+    </div>
+    <div class="cb-welcome-body">
+      <p class="cb-welcome-time" id="welcomeTime">শুভ সকাল</p>
+      <h2 id="welcomeTitle">প্রিয় অতিথি, চর্যাভূমিতে স্বাগতম</h2>
+      <p id="welcomeText">হাজার বছরের পথ ধরে—বাংলাদেশের বৌদ্ধ ঐতিহ্য, ইতিহাস ও ভ্রমণের আপনার বাংলা নির্দেশিকায় আপনাকে স্বাগতম।</p>
+      <div class="cb-welcome-festival" id="welcomeFestival"><span id="welcomeFestivalTitle"></span><small id="welcomeFestivalDetail"></small><a href="calendar.html">পঞ্জিকা দেখুন</a></div>
+      <p class="cb-welcome-date" id="welcomeDate"></p>
+      <form class="cb-welcome-form" id="welcomeForm">
+        <label>আপনার নাম<input id="welcomeName" name="name" type="text" maxlength="60" autocomplete="name" placeholder="যেমন: মিথুন মুৎসুদ্দী"></label>
+        <label>এলাকা / শহর<input id="welcomeLocation" name="location" type="text" maxlength="80" autocomplete="address-level2" placeholder="যেমন: কেশবপুর, যশোর"></label>
+        <div class="cb-welcome-form-actions">
+          <button type="submit" class="cb-btn solid sm">নামসহ শুভেচ্ছা</button>
+          <button type="button" class="cb-mini-btn" id="welcomeLocate">◎ আমার অবস্থান</button>
+        </div>
+        <p class="cb-welcome-locate-status" id="welcomeLocateStatus" role="status"></p>
+      </form>
+      <div class="cb-welcome-actions"><button type="button" class="cb-btn solid" id="welcomeExplore">ঘুরে দেখা শুরু করুন</button><button type="button" class="cb-welcome-dismiss" id="welcomeDismiss">পরে দেখব</button></div>
+      <small class="cb-welcome-privacy">নাম ও এলাকা শুধু এই ব্রাউজারে থাকে; কোনো সার্ভারে পাঠানো হয় না। GPS চাওয়া হয় শুধু “আমার অবস্থান” চাপলে। এই সেশনে বার্তাটি একবার দেখানো হয়।</small>
+    </div>
+  </dialog>
 
   <main id="main">
     <!-- ================= হিরো =================
@@ -100,6 +152,7 @@
                 <p class="cb-map-status" id="mapActionStatus" aria-live="polite">ম্যাপ চালু করলে ছাঁকনি অনুযায়ী পিন দেখা যাবে।</p>
                 <button type="button" class="cb-mini-btn" id="locateMe">◎ আমার অবস্থান</button>
                 <button type="button" class="cb-mini-btn" id="refreshMap">↻ ম্যাপ রিফ্রেশ</button>
+                <a class="cb-mini-btn link" href="maps.html">ঐতিহাসিক ম্যাপ</a>
                 <a class="cb-mini-btn link" href="https://www.google.com/maps/search/?api=1&amp;query=Buddhist%20temples%20Bangladesh" target="_blank" rel="noopener">Google Maps ↗</a>
               </div>
             </div>
@@ -161,7 +214,7 @@
           <figcaption>সূর্যাস্তে স্তূপ — হোমপেজের আগেকার হিরো-ইলাস্ট্রেশন, এখন এই অংশে। ধ্যানমগ্ন বুদ্ধমূর্তির ছবিটি এখন হোমের সবার ওপরে।</figcaption>
         </figure>
         <div class="cb-buddha-text">
-          <p class="cb-eyebrow">☸ নতুন দুই পাতা</p>
+          <p class="cb-eyebrow">☸ জ্ঞান ও পঞ্জিকা</p>
           <h2 id="buddhaTitle">বুদ্ধের পথ, আর বাংলার পঞ্জিকা</h2>
           <p>বৌদ্ধধর্ম কী শেখায়, বাংলায় সেটি এলো কীভাবে — অশোক থেকে পাল, চর্যাপদ থেকে নবযান; আর আজকের বাংলা তারিখ, তিথি-নক্ষত্র আর ঢাকার ঘড়ি — দুটোই এখন সাইটে।</p>
           <div class="cb-actions">
@@ -189,7 +242,7 @@
             <h3>🗺️ ভ্রমণ ও খোঁজা</h3>
             <a href="#explore">স্থান খুঁজুন <small>৩,২০০+ রেকর্ড, সার্চ ও ছাঁকনি</small></a>
             <a href="#map-section">ম্যাপ ও নির্বাচিত স্থান</a>
-            <a href="#map-section">ঐতিহাসিক বিহার-মানচিত্র</a>
+            <a href="maps.html">ঐতিহাসিক বিহার-মানচিত্র <small>BD MAPS</small></a>
             <a href="#districts">কোন জেলায় কী বিখ্যাত <small>৩০ জেলা</small></a>
             <a href="calendar.html">উৎসব ও পূর্ণিমা <small>পঞ্জিকা</small></a>
             <a href="#travel-help">যাতায়াতের আগে যাচাই</a>
@@ -205,13 +258,12 @@
             <a href="#sanghamitra">সংঘমিত্রকে জিজ্ঞাসা করুন <small>শিশুর নাম · প্রতিষ্ঠানের নাম</small></a>
             <a href="calendar.html">পঞ্জিকা, ক্যালেন্ডার ও ঘড়ি <small>নতুন</small></a>
             <a href="history.html">ইতিহাস</a>
+            <a href="purna-chandra-tarai.html">পূর্ণচন্দ্র ও নেপাল-তরাই <small>নতুন নিবন্ধ</small></a>
             <a href="culture.html">শিল্প ও সংস্কৃতি</a>
             <a href="kings.html">রাজাদের প্রোফাইল</a>
             <a href="library.html">লাইব্রেরি <small>৮২টি বই-অডিও-ভিডিও</small></a>
-            <a href="institutions.html">প্রতিষ্ঠান</a>
+            <a href="institutions.html">বৌদ্ধ সামাজিক প্রতিষ্ঠান <small>একীভূত ফিল্টার</small></a>
             <a href="contribution.html">বাঙালি বৌদ্ধদের অবদান</a>
-            <a href="philosophy.html#sutta">বুদ্ধের বাণী · সূত্রসহ</a>
-            <a href="library.html">সাহিত্য, জাতক ও অট্ঠকথা</a>
             <a href="philosophy.html#sources">আরও জানুন ও যাচাই করুন</a>
           </div>
           <div class="cb-sitemap-col">
@@ -219,7 +271,7 @@
             <a href="quiz.html">কুইজ <small>৬৬২ প্রশ্ন, ১১ বিষয়</small></a>
             <a href="about.html#contact">ভ্রমণ অভিজ্ঞতা পাঠান</a>
             <a href="about.html#contact">নতুন তথ্য বা সংশোধন পাঠান</a>
-            <a href="history.html">ঐতিহাসিক আর্কাইভ</a>
+            <a href="purna-chandra-tarai.html">প্রত্নতত্ত্ব-নিবন্ধ ও মূল সূত্র</a>
             <a href="about.html">আমাদের কথা</a>
             <a href="about.html#emergency">জরুরি নম্বর</a>
             <a href="about.html#rail">ট্রেনের তথ্য</a>
@@ -288,8 +340,16 @@
             <small>আনুমানিক পিন, বিহারের নিয়ম, উৎসবের তারিখ ও জরুরি তথ্য যাচাইয়ের চেকলিস্ট।</small>
           </a>
           <a class="cb-card" href="institutions.html">
-            <span class="ico">🏛️</span><b>প্রতিষ্ঠান</b>
-            <small>বৌদ্ধ প্রতিষ্ঠান, বিহার-তালিকা ও যোগাযোগের ঠিকানা।</small>
+            <span class="ico">🏛️</span><b>বৌদ্ধ সামাজিক প্রতিষ্ঠান</b>
+            <small>নয়টি সংগঠন একীভূত ফিল্টারে—তারিখসহ কমিটি, উপধরন, অনুষ্ঠান-ছবি ও সূত্র।</small>
+          </a>
+          <a class="cb-card" href="maps.html">
+            <span class="ico">🗺️</span><b>ঐতিহাসিক মানচিত্র</b>
+            <small>BD MAPS-এর বৌদ্ধ বিহার, ময়নামতি ও মহাস্থানগড়ের ম্যাপ; ডালিঝরার অবস্থানসহ।</small>
+          </a>
+          <a class="cb-card" href="purna-chandra-tarai.html">
+            <span class="ico">📜</span><b>পূর্ণচন্দ্রের তরাই অনুসন্ধান</b>
+            <small>লুম্বিনি–কপিলবস্তু, ১৮৯৯ সালের খনন ও ১৯০১ সালের মূল প্রতিবেদন—নতুন নিবন্ধ।</small>
           </a>
         </div>
         <p class="cb-note">“স্থান খুঁজুন”, ম্যাপ ও “ভ্রমণ তালিকা” এখন এই হোমপেজেরই একীভূত ড্যাশবোর্ডে—আলাদা পুরোনো ড্যাশবোর্ড আর নেই।</p>
@@ -412,9 +472,11 @@
 
   <footer class="cb-footer" id="cbFooter"></footer>
 
-  <script src="brand.js?v=20261023-tracker" defer></script>
-  <script src="home.js?v=20261023-tracker" defer></script>
-  <script src="dashboard.js?v=20261023c" defer></script>
-  <script src="sanghamitra.js?v=20261022m1" defer></script>
+  <script src="brand.js?v=20261023d" defer></script>
+  <script src="home.js?v=20261023d" defer></script>
+  <script src="calendar.js?v=20261023d" defer></script>
+  <script src="welcome.js?v=20261023d" defer></script>
+  <script src="dashboard.js?v=20261023d" defer></script>
+  <script src="sanghamitra.js?v=20261023d" defer></script>
 </body>
 </html>

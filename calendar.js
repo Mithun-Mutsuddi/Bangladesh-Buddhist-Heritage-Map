@@ -197,8 +197,8 @@
   }
 
   /* ---------- রেন্ডার: আসন্ন পূর্ণিমা, অমাবস্যা, উপোসথ ---------- */
-  function upcoming(days) {
-    var n = dhakaNow(), out = [];
+  function upcoming(days, ts) {
+    var n = dhakaNow(ts), out = [];
     for (var i = 0; i < days; i++) {
       var t = new Date(Date.UTC(n.y, n.m - 1, n.d) + i * 86400000);
       var y = t.getUTCFullYear(), m = t.getUTCMonth() + 1, d = t.getUTCDate();
@@ -315,8 +315,15 @@
       (isLeap(bd.year + 594) ? 'এই বঙ্গাব্দের ফাল্গুন ৩০ দিনের (ইংরেজি ' + bn(bd.year + 594) + ' অধিবর্ষ)।' : 'এই বঙ্গাব্দের ফাল্গুন ২৯ দিনের।');
   }
 
+  /* অন্য পাতায় একই পঞ্জিকা-হিসাব ব্যবহারের জন্য পঠনযোগ্য API; রেন্ডার শুধু calendar.html-এ। */
+  window.CharyabhumiPanjika = {
+    bn: bn, dhakaNow: dhakaNow, banglaDate: banglaDate,
+    dayInfo: dayInfo, upcoming: upcoming, fmtDate: fmtDate
+  };
+
   /* ---------- চালু ---------- */
   function boot() {
+    if (!document.getElementById('todayClock') || !document.getElementById('calGrid')) return;
     renderToday();
     renderUpcoming();
     renderCal();

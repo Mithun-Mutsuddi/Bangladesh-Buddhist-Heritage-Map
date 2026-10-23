@@ -13,7 +13,9 @@
 
 [বাংলায় শুরু করুন](START-HERE-bn.md) · [Deployment & MCP](docs/tracker-deployment.md) · [Tests](docs/tracker-validation.md) · [Attributions](docs/tracker-attributions.md)
 
-- **নতুন হোমপেজ:** `index.html` (রাউন্ড ১৩ ব্র্যান্ডিং)
+- **হোমপেজ:** `index.html`; নাম, Dhaka time, উৎসব ও ঐচ্ছিক এলাকা অনুযায়ী session-once graphical welcome
+- **নতুন গবেষণা-পাতা:** `purna-chandra-tarai.html` (পূর্ণচন্দ্র মুখার্জি) ও `maps.html` (BD MAPS এবং ডালিঝরা)
+- **এই হালনাগাদের বিস্তারিত প্রতিবেদন:** `docs/update-2026-10-23-bn.md`
 - **পুরোনো ড্যাশবোর্ড** (৩০ জেলার বিহার-তালিকা, ম্যাপ, ভ্রমণ-তালিকা, উৎসব, সাহিত্য): `index-old.html`
 - **কুইজ ও লিডারবোর্ড:** `quiz.html` (৫১৫ প্রশ্ন, প্রতি রাউন্ডে ১০টি)
 - **আমাদের কথা, জরুরি নম্বর, ট্রেনের তথ্য:** `about.html`
@@ -31,6 +33,8 @@
 বাংলাদেশের বৌদ্ধ প্রত্নস্থল, বিহার/প্যাগোডা, তীর্থস্থান, বনবিহার, পালি-শিক্ষা প্রতিষ্ঠান, সামাজিক সেবা, লোকঐতিহ্য এবং বৌদ্ধ সাহিত্যের জন্য বাংলা-ভিত্তিক responsive GitHub Pages site।
 
 ## বর্তমান ডিরেক্টরি
+
+> ২৩ অক্টোবর ২০২৬-এর সক্রিয় হোমপেজ ও ট্র্যাকার ডেটা: **৩,২১৮টি আলাদা ID (৩৫৯ core + ২,৮৫৯ directory)**। নিচের ছোট সংখ্যাগুলো পুরোনো development log-এর তৎকালীন হিসাব; বর্তমান মোট নয়।
 
 - বুদ্ধ স্মৃতিচিহ্ন/জাদী/স্তূপের আলাদা ফিল্টার; আশরফপুর, গোকুল মেধ, মের্হ টিলা বিহার, ঘিলাতলী সার্বজনীন বৌদ্ধ বিহার, শীলছড়ি শান্তি নিকেতন, সিলেট আখালিয়া বিহার ও সংশ্লিষ্ট শ্মশানসহ ৭টি নতুন রেকর্ড যোগ হয়েছে; অনিশ্চিত GPS/পরিচয়/যোগাযোগ যাচাইাধীন চিহ্নিত; অতীশ দীপঙ্কর স্মৃতি কমপ্লেক্স, দমদম পীরস্থান ঢিবি, দলিজহারা বৌদ্ধ বিহার-চৈত্য কমপ্লেক্স ও ঝুড়িঝাড়া ঢিবি যুক্ত। ভরত ভায়নার placeholder-কে উৎস-সমর্থিত রেকর্ডে উন্নীত করা হয়েছে; তার pin-এ আনুমানিকতার সতর্কতা আছে।
 
@@ -65,7 +69,7 @@ GitHub Pages static hosting। আলাদা authenticated backend ছাড�
 ## গবেষণা ও সূত্র
 
 - [বাংলাদেশের বৌদ্ধ বিহার/প্যাগোডার তালিকা — বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্ট](https://brwt.gov.bd/pages/static-pages/6922dbb0933eb65569e0bdb6)
-- [ঐতিহাসিক বৌদ্ধ বিহার মানচিত্র, বাংলাদেশ — BD MAPS](https://map-of-bangladesh.blogspot.com/2015/12/historical-buddho-bihar-map-bangladesh.html) (তুলনামূলক গবেষণা সূত্র; ছবিটি তৃতীয় পক্ষের, তাই কপি না করে উৎস-লিংক দেওয়া হয়েছে)
+- [ঐতিহাসিক বৌদ্ধ বিহার মানচিত্র, বাংলাদেশ — BD MAPS](https://map-of-bangladesh.blogspot.com/2015/12/historical-buddho-bihar-map-bangladesh.html) (`maps.html`-এ মূল পাতা ও ক্রেডিটসহ local reference copy; বর্তমান navigation map নয়)
 - [চট্টগ্রাম বিভাগ — বৌদ্ধ বিহার/প্যাগোডা তালিকা](https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d998)
 - [কুমিল্লা জেলা প্রশাসন — প্যাগোডা/বিহার তালিকা](https://www.comilla.gov.bd/bn/site/page/0fCN-%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%97%E0%A7%8B%E0%A6%A1%E0%A6%BE)
 - [খাগড়াছড়ি জেলা প্রশাসন — বৌদ্ধ বিহার](https://www.khagrachhari.gov.bd/bn/site/page/1xX7-%E0%A6%AC%E0%A7%8C%E0%A6%A6%E0%A7%8D%E0%A6%A7-%E0%A6%AC%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%B0)
