@@ -11,7 +11,7 @@
     { href: 'index.html#explore', label: 'স্থান খুঁজুন', key: 'nav.explore' },
     { href: 'tracker.html', label: 'আমার ট্রাভেল ট্র্যাকার', key: 'nav.tracker' },
     { href: 'index.html#planner', label: 'ভ্রমণ প্ল্যানার', key: 'nav.planner' },
-    { href: 'maps.html', label: 'মানচিত্র', key: 'nav.maps' },
+    { href: 'maps.html', label: 'ঐতিহাসিক মানচিত্র', key: 'nav.maps' },
     { href: 'history.html', label: 'ইতিহাস', key: 'nav.history' },
     { href: 'purna-chandra-tarai.html', label: 'প্রত্নতত্ত্ব-নিবন্ধ', key: 'nav.archaeology' },
     { href: 'philosophy.html', label: 'বৌদ্ধধর্ম', key: 'nav.philosophy' },

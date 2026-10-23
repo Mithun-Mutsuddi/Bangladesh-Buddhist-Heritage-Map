@@ -192,5 +192,9 @@
     }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 });
   });
 
-  if (forced || !seen()) setTimeout(openWelcome, 450);
+  // A direct map/directory link should reveal its destination, not cover it
+  // with a full-screen first-visit dialog on a small screen. Explicit ?welcome=1
+  // remains available for the welcome experience and its regression tests.
+  var mapDeepLink = /^#(?:explore|map-section|map)$/.test(location.hash);
+  if (forced || (!seen() && !mapDeepLink)) setTimeout(openWelcome, 450);
 })();

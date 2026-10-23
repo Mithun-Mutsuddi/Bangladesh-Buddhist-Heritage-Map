@@ -69,6 +69,28 @@ test('early language control names Chakma and Marma honestly and works on librar
   await expect(page.locator('a[href="historical-archive.html"]')).toHaveCount(1);
 });
 
+test('direct mobile map links are not covered by the welcome dialog', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  for (const hash of ['explore', 'map-section', 'map']) {
+    await page.goto(`/index.html#${hash}`);
+    await expect(page.locator('#welcomeDialog')).not.toBeVisible();
+    await expect(page.locator('#map-section')).toBeVisible();
+    await expect(page.locator('#loadMapBtn')).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  }
+});
+
+test('historical map gallery is visible and its local image loads on mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/maps.html');
+  await expect(page.locator('#bd-historical-map')).toBeVisible();
+  const image = page.locator('.cb-map-figure img');
+  await image.scrollIntoViewIfNeeded();
+  await expect(image).toBeVisible();
+  await expect.poll(() => image.evaluate(img => img.naturalWidth)).toBeGreaterThan(0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
 test('archive and homepage remain within a mobile viewport', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/historical-archive.html');

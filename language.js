@@ -51,7 +51,7 @@
   var EN = {
     'language.label': 'Language / ভাষা',
     'nav.home': 'Home', 'nav.explore': 'Explore places', 'nav.tracker': 'My travel tracker',
-    'nav.planner': 'Trip planner', 'nav.maps': 'Maps', 'nav.history': 'History',
+    'nav.planner': 'Trip planner', 'nav.maps': 'Historical maps', 'nav.history': 'History',
     'nav.archaeology': 'Archaeology article', 'nav.philosophy': 'Buddhism',
     'nav.culture': 'Art & culture', 'nav.kings': 'Royal profiles', 'nav.library': 'Library',
     'nav.archive': 'Historical archive', 'nav.contribution': 'Contribute',
