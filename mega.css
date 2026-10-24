@@ -107,3 +107,31 @@ select{max-width:100%}
 /* ফ্লেক্স সারিতে লম্বা লেখার ফর্ম যেন মোবাইলে পাতা চওড়া না করে */
 .mx-rowgap label{min-width:0;flex:1 1 200px}
 .mx-rowgap label select,.mx-rowgap label input{width:100%;max-width:100%}
+/* ===== ২০২৬-১০-২৪ পর্যায় ৩: ভরত ভায়না + শিশু গেম + reveal ===== */
+.mx-memgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0}
+.mx-memcard{aspect-ratio:1;font-size:clamp(22px,6vw,34px);border-radius:12px;border:2px solid var(--cb-line,#e5d9c5);background:linear-gradient(150deg,#fff7e6,#fdeeda);cursor:pointer;transition:transform .18s ease,background .2s}
+.mx-memcard.open{background:#fff;transform:scale(1.04)}
+.mx-memcard.done{background:#e7f6e9;border-color:#5da86e;cursor:default}
+.mx-palette{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0}
+.mx-palbtn{width:34px;height:34px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.25);cursor:pointer}
+.mx-palbtn.active{outline:3px solid #7a4a21;outline-offset:2px}
+@media (prefers-reduced-motion: no-preference){
+  .mx-reveal{opacity:0;transform:translateY(14px)}
+  .mx-reveal.mx-in{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
+}
+@media (prefers-reduced-motion: reduce){.mx-reveal{opacity:1;transform:none}}
+/* ===== ২০২৬-১০-২৪ পর্যায় ৪: জ্ঞানকোষ+ বিশ্ব পরিসংখ্যান বার ও আইকন ===== */
+.mx-beingicon{display:inline-block;font-size:1.25em;line-height:1}
+.mx-styleface{width:96px;height:auto}
+.mx-poprow{display:flex;align-items:center;gap:10px;margin:8px 0;flex-wrap:wrap}
+.mx-popname{flex:0 0 150px;font-weight:700}
+.mx-popbar{flex:1 1 180px;height:18px;background:#f3e7cd;border:1px solid var(--cb-line,#e5d9c5);border-radius:9px;overflow:hidden}
+.mx-popbar i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,#d99b2b,#b5571f);border-radius:9px}
+.mx-popval{flex:0 0 auto;font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion: no-preference){
+  .mx-popbar i{animation:mxgrow 1.1s ease both}
+  @keyframes mxgrow{from{width:0}to{width:var(--w)}}
+  .mx-beingicon{animation:mxbob 3.2s ease-in-out infinite}
+  @keyframes mxbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+}
+@media (max-width:560px){.mx-popname{flex-basis:110px}}

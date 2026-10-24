@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  var CORE = 'data/dashboard-core.json?v=20261024b';
+  var CORE = 'data/dashboard-core.json?v=20261024h';
   var DIRECTORY = 'data/dashboard-directory.json?v=20261024b';
   var GEO = 'data/bd-geo.json?v=20261024b';
   var PAGE = 24;
@@ -611,7 +611,8 @@
     if (tileLayer) { try { map.removeLayer(tileLayer); } catch (_) {} }
     var providers = [
       { name: 'OpenStreetMap', url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', options: { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' } },
-      { name: 'Esri', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', options: { maxZoom: 19, attribution: '&copy; Esri' } }
+      { name: 'Esri', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', options: { maxZoom: 19, attribution: '&copy; Esri' } },
+      { name: 'CARTO', url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', options: { maxZoom: 20, subdomains: 'abcd', attribution: '&copy; OpenStreetMap contributors &copy; CARTO' } }
     ];
     var idx = 0, loaded = 0, errors = 0, timer = null;
     function mount() {
@@ -623,7 +624,7 @@
       tileLayer.on('tileload', function () { loaded++; if (loaded === 1) setMapStatus('ম্যাপ তৈরি। পিনে চাপ দিলে স্থানের নাম ও Google Maps লিংক পাবেন।'); });
       tileLayer.on('tileerror', function () { errors++; if (errors >= 4 && loaded < 2) { idx++; mount(); } });
       tileLayer.addTo(map);
-      timer = setTimeout(function () { if (loaded < 2 && idx < providers.length - 1) { idx++; mount(); } }, 6500);
+      timer = setTimeout(function () { if (loaded < 2 && idx < providers.length - 1) { idx++; mount(); } }, 4500);
     }
     mount();
   }
@@ -676,12 +677,13 @@
     if (mapPromise) return mapPromise;
     setMapStatus('ম্যাপ লোড হচ্ছে…');
     if (els.loadMap) { els.loadMap.disabled = true; els.loadMap.textContent = 'ম্যাপ লোড হচ্ছে…'; }
-    loadCss('https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css', 'cbLeafletCss');
-    loadCss('https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css', 'cbClusterCss');
-    loadCss('https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css', 'cbClusterDefaultCss');
-    mapPromise = loadScript('https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js')
+    loadCss('assets/vendor/leaflet/leaflet.css', 'cbLeafletCss');
+    loadCss('assets/vendor/leaflet/MarkerCluster.css', 'cbClusterCss');
+    loadCss('assets/vendor/leaflet/MarkerCluster.Default.css', 'cbClusterDefaultCss');
+    mapPromise = loadScript('assets/vendor/leaflet/leaflet.js')
+      .catch(function () { return loadScript('https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js'); })
       .catch(function () { return loadScript('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js'); })
-      .then(function () { return loadScript('https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js').catch(function () { return null; }); })
+      .then(function () { return loadScript('assets/vendor/leaflet/leaflet.markercluster.js').catch(function () { return loadScript('https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js'); }).catch(function () { return null; }); })
       .then(function () {
         if (!window.L || typeof L.map !== 'function' || !els.mapBox) throw new Error('Leaflet unavailable');
         els.mapBox.innerHTML = '';

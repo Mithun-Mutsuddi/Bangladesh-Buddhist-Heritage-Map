@@ -12,7 +12,7 @@
     if (history.replaceState) history.replaceState(null, '', '#' + id);
   }
   tabBtns.forEach(function (b) { b.addEventListener('click', function () { openTab(b.dataset.tab); }); });
-  var hashMap = { epigraphy: 'epigraphy', charya: 'charya', iconography: 'iconography', cosmology: 'cosmology', architecture: 'archlife', coins: 'coins', pilgrims: 'pilgrims', society: 'society', paper: 'paper' };
+  var hashMap = { epigraphy: 'epigraphy', charya: 'charya', iconography: 'iconography', cosmology: 'cosmology', architecture: 'archlife', coins: 'coins', pilgrims: 'pilgrims', society: 'society', paper: 'paper', schools: 'schools', yana: 'schools', dana: 'schools', disciples: 'schools', beings: 'beings', creatures: 'beings', world: 'world' };
   if (hashMap[location.hash.slice(1)]) openTab(hashMap[location.hash.slice(1)]);
 
   /* ---------- ব্রাহ্মী খেলনা রূপান্তরক ---------- */
@@ -194,6 +194,127 @@
     }).join('') + '</ul><p class="mx-mini">আপডেট: ' + MX.esc(K.generated_at) + ' · ' + MX.esc(K.note_bn) + '</p>';
   }).catch(function () {
     MX.$('epiIntro').innerHTML = '<p class="mx-meta">জ্ঞানকোষের ডেটা লোড হয়নি।</p>';
+  });
+
+  /* ---------- পর্যায় ৪: ধর্ম-ধারা/শিষ্য/দান, প্রাণী-কাহিনী, বিশ্ব ম্যাপ ---------- */
+  function faceSvg(kind) {
+    var extra = '';
+    if (kind === 'flame') extra = '<path d="M50 4 q7 12 0 20 q-7 -8 0 -20" fill="#d99b2b"/>';
+    else if (kind === 'wave') extra = '<path d="M28 30 q11 -13 22 0 q11 -13 22 0" stroke="#8f3d08" fill="none" stroke-width="3.5" stroke-linecap="round"/>';
+    else if (kind === 'tall') extra = '<ellipse cx="50" cy="17" rx="7" ry="12" fill="#b5571f"/>';
+    else if (kind === 'crown') extra = '<path d="M30 26 l7 -13 6 8 7 -13 7 13 6 -8 7 13 z" fill="#d99b2b"/>';
+    else extra = '<g fill="#8f3d08"><circle cx="36" cy="26" r="3.4"/><circle cx="46" cy="21" r="3.4"/><circle cx="56" cy="21" r="3.4"/><circle cx="65" cy="26" r="3.4"/><ellipse cx="50" cy="14" rx="6" ry="7"/></g>';
+    return '<svg viewBox="0 0 100 102" role="img" aria-label="বুদ্ধমূর্তির শৈলীর প্রতীকী রেখাচিত্র" class="mx-styleface">' +
+      '<ellipse cx="22" cy="58" rx="5" ry="13" fill="#e8b36a" stroke="#8f3d08" stroke-width="1.6"/>' +
+      '<ellipse cx="78" cy="58" rx="5" ry="13" fill="#e8b36a" stroke="#8f3d08" stroke-width="1.6"/>' +
+      '<ellipse cx="50" cy="57" rx="27" ry="33" fill="#f3dfa0" stroke="#8f3d08" stroke-width="2"/>' +
+      '<path d="M35 54 q5 4 10 0 M55 54 q5 4 10 0" stroke="#5b3a1a" stroke-width="2" fill="none" stroke-linecap="round"/>' +
+      '<path d="M50 56 q3 8 -1 12" stroke="#5b3a1a" stroke-width="1.6" fill="none"/>' +
+      '<path d="M41 74 q9 6 18 0" stroke="#5b3a1a" stroke-width="2" fill="none" stroke-linecap="round"/>' + extra + '</svg>';
+  }
+  function yanaDiagramSvg() {
+    return '<div class="mx-card" style="margin:16px 0"><h3>একই পাহাড়, তিনটি পথ (পরিকল্পনামূলক চিত্র)</h3>' +
+      '<svg viewBox="0 0 680 250" role="img" aria-label="তিন যানের পরিকল্পনামূলক চিত্র" style="width:100%;height:auto">' +
+      '<rect width="680" height="250" fill="#fdf6df"/><path d="M140 225 L340 35 L540 225 Z" fill="#e8e0c8" stroke="#b5571f" stroke-width="2"/>' +
+      '<circle cx="340" cy="35" r="13" fill="#d99b2b"/><text x="340" y="22" text-anchor="middle" font-size="15" font-weight="700">বোধি / নির্বাণ</text>' +
+      '<path d="M170 225 C 230 170, 280 110, 332 48" fill="none" stroke="#1d5c4f" stroke-width="4"/>' +
+      '<path d="M340 225 C 340 170, 340 110, 340 52" fill="none" stroke="#b5571f" stroke-width="4" stroke-dasharray="8 5"/>' +
+      '<path d="M510 225 C 450 170, 400 110, 348 48" fill="none" stroke="#7a4a9e" stroke-width="4"/>' +
+      '<text x="120" y="243" font-size="14" fill="#1d5c4f" font-weight="700">থেরবাদ</text>' +
+      '<text x="303" y="243" font-size="14" fill="#b5571f" font-weight="700">মহাযান</text>' +
+      '<text x="478" y="243" font-size="14" fill="#7a4a9e" font-weight="700">বজ্রযান</text>' +
+      '<text x="20" y="120" font-size="12.5">অরহন্ত-আদর্শ</text><text x="545" y="120" font-size="12.5">মন্ত্র·মণ্ডল·গুরু</text>' +
+      '<text x="350" y="150" font-size="12.5">বোধিসত্ত্ব-প্রতিজ্ঞা</text></svg>' +
+      '<p class="mx-mini">চিত্রটি ধারণা বোঝাতে; বাস্তবে প্রতিটি ধারার ভেতরেও বহু মঠ-সম্প্রদায় আছে, আর অনেক সাধক একাধিক ধারার শিক্ষা একসঙ্গে অনুসরণ করেন।</p></div>';
+  }
+  function personRows(list) {
+    return list.map(function (x) {
+      return ['<b>' + MX.esc(x.name) + '</b>', MX.esc(x.epithet || x.period || ''), MX.esc(x.note)];
+    });
+  }
+  function renderPlus(P) {
+    if (!P) return;
+    var Y = P.yanas, PE = P.people, D = P.dana, B = P.beings, W = P.world;
+
+    MX.$('yanaIntro').innerHTML = '<p class="cb-sub">' + MX.esc(Y.intro) + '</p>';
+    MX.$('yanaDiagram').innerHTML = yanaDiagramSvg();
+    MX.$('yanaGrid').innerHTML = Y.items.map(function (x) {
+      indexAdd(x.name, 'schools', x.text);
+      return '<article class="mx-card"><h3><span class="mx-beingicon">' + x.icon + '</span> ' + MX.esc(x.name) + '</h3>' +
+        '<p class="mx-meta">' + MX.esc(x.goal) + ' · ' + MX.esc(x.region) + '</p><p>' + MX.esc(x.text) + '</p></article>';
+    }).join('') + '<article class="mx-card"><h3>⚠️ ‘হীনযান’ শব্দটি</h3><p>' + MX.esc(Y.hinayana_note) + '</p></article>';
+
+    MX.$('peopleMain').innerHTML = '<p class="cb-sub">' + MX.esc(PE.intro) + '</p>' +
+      '<div class="mx-grid">' + PE.concepts.map(function (x) {
+        indexAdd(x.term, 'schools', x.def);
+        return '<article class="mx-card"><h3>' + MX.esc(x.term) + '</h3><p>' + MX.esc(x.def) + '</p></article>';
+      }).join('') + '</div>' +
+      '<h3>প্রধান ভিক্ষু শিষ্য (অগ্র/এতদগ্গ তালিকা থেকে)</h3>' +
+      table(['নাম', 'বিশেষত্ব (এতদগ্গ উপাধি)', 'পরিচিতি'], PE.male_disciples.map(function (x) { indexAdd('শিষ্য: ' + x.name, 'schools', x.note); return ['<b>' + MX.esc(x.name) + '</b>', MX.esc(x.epithet), MX.esc(x.note)]; })) +
+      '<h3>প্রধান ভিক্ষুণী ও উপাসিকা</h3>' +
+      table(['নাম', 'বিশেষত্ব', 'পরিচিতি'], PE.female_disciples.map(function (x) { indexAdd('শিষ্যা: ' + x.name, 'schools', x.note); return ['<b>' + MX.esc(x.name) + '</b>', MX.esc(x.epithet), MX.esc(x.note)]; })) +
+      '<h3>পরবর্তী যুগের প্রসিদ্ধ নাম</h3>' +
+      table(['নাম', 'কাল', 'পরিচিতি'], PE.later_figures.map(function (x) { indexAdd(x.name, 'schools', x.note); return ['<b>' + MX.esc(x.name) + '</b>', MX.esc(x.period), MX.esc(x.note)]; }));
+
+    MX.$('danaMain').innerHTML = '<p class="cb-sub">' + MX.esc(D.intro) + '</p>' +
+      '<div class="mx-grid wide">' + D.types.map(function (x) {
+        indexAdd('দান: ' + x.name, 'schools', x.def);
+        return '<article class="mx-card"><h3><span class="mx-beingicon">' + x.icon + '</span> ' + MX.esc(x.name) + '</h3><p>' + MX.esc(x.def) + '</p></article>';
+      }).join('') + '</div>' +
+      '<h3>কোন দানে কী ফল বর্ণিত?</h3>' +
+      table(['দান', 'পরম্পরাগত ফলবর্ণনা'], D.fruits.map(function (x) { return ['<b>' + MX.esc(x.dana) + '</b>', MX.esc(x.fruit)]; })) +
+      '<div class="mx-note" style="margin-top:14px">' + MX.esc(D.factors) + ' <a href="support.html#donate">শ্রদ্ধাদানের নিরাপদ নির্দেশনা →</a></div>';
+
+    MX.$('faqGrid').innerHTML = P.faq.map(function (x) {
+      indexAdd('জিজ্ঞাসা: ' + x.q, 'schools', x.a);
+      return '<article class="mx-card"><h3>❓ ' + MX.esc(x.q) + '</h3><p>' + MX.esc(x.a) + '</p></article>';
+    }).join('');
+
+    MX.$('beingsIntro').innerHTML = '<p class="cb-sub">' + MX.esc(B.intro) + '</p>';
+    MX.$('beingsGrid').innerHTML = B.items.map(function (x) {
+      indexAdd(x.name, 'beings', x.text + ' ' + (x.story || ''));
+      return '<article class="mx-card"><h3><span class="mx-beingicon">' + x.icon + '</span> ' + MX.esc(x.name) + '</h3>' +
+        '<span class="mx-badge gold">' + MX.esc(x.kind) + '</span><p>' + MX.esc(x.text) + '</p>' +
+        (x.story ? '<p class="mx-meta">📖 ' + MX.esc(x.story) + '</p>' : '') + '</article>';
+    }).join('');
+
+    var maxM = Math.max.apply(null, W.top_countries.map(function (c) { return c.millions; }));
+    var bars = W.top_countries.map(function (c) {
+      indexAdd('বিশ্ব বৌদ্ধ: ' + c.country, 'world', c.tradition + ' ' + c.millions);
+      return '<div class="mx-poprow"><span class="mx-popname">' + c.flag + ' ' + MX.esc(c.country) + '</span>' +
+        '<span class="mx-popbar"><i style="--w:' + Math.max(3, Math.round(c.millions / maxM * 100)) + '%"></i></span>' +
+        '<span class="mx-popval">' + MX.bn(c.millions) + ' মিলিয়ন · দেশে ' + MX.bn(c.pct_country) + '%</span></div>';
+    }).join('');
+    MX.$('worldMain').innerHTML =
+      '<div class="mx-grid"><article class="mx-card" style="text-align:center"><h3>🌏 বিশ্বে বৌদ্ধ জনসংখ্যা</h3>' +
+      '<p style="font-size:34px;font-weight:800;margin:6px 0">' + MX.bn(W.global.total_million) + ' মিলিয়ন</p>' +
+      '<p class="mx-meta">বিশ্ব জনসংখ্যার প্রায় ' + MX.bn(W.global.share_pct) + '% (' + MX.bn(W.global.year) + ')</p><p>' + MX.esc(W.global.note) + '</p></article>' +
+      '<article class="mx-card" style="text-align:center"><h3>🇧🇩 বাংলাদেশে</h3><p>' + MX.esc(W.bangladesh_note) + '</p>' +
+      '<div class="mx-btns" style="justify-content:center"><a class="cb-btn sm" href="index.html#explore">বাংলাদেশের স্থান-ম্যাপে যান</a></div></article></div>' +
+      '<h3>জনসংখ্যায় শীর্ষ ১০ দেশ (Pew, ২০২০)</h3><div class="mx-card">' + bars +
+      '<p class="mx-mini">' + MX.esc(W.source_note) + '</p></div>' +
+      '<h3>বৌদ্ধ সংখ্যাগরিষ্ঠ ৭টি দেশ</h3><div class="mx-grid">' + W.majority.map(function (c) {
+        return '<article class="mx-card" style="text-align:center"><p style="font-size:40px;margin:2px">' + c.flag + '</p><h3>' + MX.esc(c.country) + '</h3><p>জনসংখ্যার প্রায় <b>' + MX.bn(c.pct) + '%</b> বৌদ্ধ</p></article>';
+      }).join('') + '</div>' +
+      '<h3>সংবিধানে বৌদ্ধধর্মের মর্যাদা</h3>' +
+      table(['দেশ', 'সাংবিধানিক মর্যাদা', 'বিস্তারিত'], W.constitution.map(function (c) { indexAdd('রাষ্ট্রধর্ম: ' + c.country, 'world', c.detail); return ['<b>' + c.flag + ' ' + MX.esc(c.country) + '</b>', MX.esc(c.status), MX.esc(c.detail)]; })) +
+      '<h3>দেশে দেশে বুদ্ধমূর্তির শৈলী</h3><p class="cb-sub">মুখগুলো প্রতীকী রেখাচিত্র — আসল ছবির জন্য প্রতিটি কার্ডের Commons লিংক ব্যবহার করুন (মুক্ত লাইসেন্সের ছবি, নতুন ট্যাবে খুলবে)।</p>' +
+      '<div class="mx-grid wide">' + W.styles.map(function (x) {
+        indexAdd('মূর্তিশৈলী: ' + x.region, 'world', x.features + ' ' + x.example);
+        return '<article class="mx-card"><div style="text-align:center">' + faceSvg(x.face) + '</div>' +
+          '<h3>' + x.flag + ' ' + MX.esc(x.region) + ' <span class="mx-meta">· ' + MX.esc(x.country) + ' · ' + MX.esc(x.period) + '</span></h3>' +
+          '<p><b>বৈশিষ্ট্য:</b> ' + MX.esc(x.features) + '</p><p><b>উদাহরণ:</b> ' + MX.esc(x.example) + '</p>' +
+          '<div class="mx-btns"><a class="cb-btn sm ghost" target="_blank" rel="noopener" href="https://commons.wikimedia.org/w/index.php?search=' + encodeURIComponent(x.commons_query) + '&title=Special:MediaSearch&type=image">আসল ছবি: Wikimedia Commons ↗</a></div></article>';
+      }).join('') + '</div>' +
+      '<h3>পার্থক্যের কারণ</h3><div class="mx-card"><ul>' + W.style_reasons.map(function (r) { return '<li>' + MX.esc(r) + '</li>'; }).join('') + '</ul></div>';
+
+    var ks = MX.$('kbSources');
+    if (ks && P.sources) ks.insertAdjacentHTML('beforeend', '<h3>নতুন অংশের উৎস</h3><ul>' + P.sources.map(function (s) {
+      return '<li><a href="' + MX.esc(s.url) + '" target="_blank" rel="noopener">' + MX.esc(s.title) + ' ↗</a></li>';
+    }).join('') + '</ul><p class="mx-mini">আপডেট: ' + MX.esc(P.generated_at) + ' · ' + MX.esc(P.note_bn) + '</p>');
+  }
+  MX.fetchJson('data/knowledge-plus.json?v=20261024i').then(renderPlus).catch(function () {
+    var y = MX.$('yanaIntro'); if (y) y.innerHTML = '<p class="mx-meta">নতুন অংশের ডেটা লোড হয়নি।</p>';
   });
 
   /* ---------- খোঁজ ---------- */

@@ -10,7 +10,7 @@
     'corridors.html', 'explore3d.html', 'travel-planner.html', 'knowledge.html',
     'calendar.html', 'children.html', 'support.html',
     'data/atlas-sites.json', 'data/orientation-heritage.json', 'data/festivals-auto.json',
-    'data/travel-plus.json', 'data/heritage-knowledge.json', 'data/site-structure.json'
+    'data/travel-plus.json', 'data/heritage-knowledge.json', 'data/knowledge-plus.json', 'data/site-structure.json'
   ];
 
   /* ---------- অবস্থা ---------- */

@@ -226,7 +226,7 @@
     function addSangha() {
       var script = document.createElement('script');
       script.id = 'cbSanghaScript';
-      script.src = 'sanghamitra.js?v=20261024g';
+      script.src = 'sanghamitra.js?v=20261024i';
       script.async = true;
       document.head.appendChild(script);
     }

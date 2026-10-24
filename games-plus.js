@@ -12,7 +12,8 @@
     somapura: 'পাহাড়পুর — সোমপুর মহাবিহার', shalban: 'শালবন বিহার', 'kotila-mura': 'কোটিলা মুড়া',
     'itakhola-mura': 'ইটাখোলা মুড়া', 'rupban-mura': 'রূপবান মুড়া', 'charpatra-mura': 'চারপত্র মুড়া',
     'ananda-vihara': 'আনন্দ বিহার', 'bhoja-vihara': 'ভোজ বিহার', sitakot: 'সীতাকোট বিহার',
-    'halud-vihara': 'হলুদ বিহার', 'bhasu-vihara': 'ভাসু বিহার', jagaddala: 'জগদ্দল প্রত্নস্থল'
+    'halud-vihara': 'হলুদ বিহার', 'bhasu-vihara': 'ভাসু বিহার', jagaddala: 'জগদ্দল প্রত্নস্থল',
+    'bharat-bhayna': 'ভরত ভায়না বৌদ্ধ মন্দির (কেশবপুর, যশোর)'
   };
   var state = MX.getLocal(KEY, { xp: 0, badges: [], digFound: [], huntStep: 0, huntDone: false, quizBest: 0, timeSeen: [] });
   var DATA = null;
@@ -79,7 +80,9 @@
         var msg = box.querySelector('#huntMsg');
         if (b.dataset.huntOpt === step.answer_site) {
           b.classList.add('correct');
-          msg.innerHTML = '<b>ঠিক ধরেছ!</b> ' + MX.esc(step.fact_bn) + ' <a href="explore3d.html?site=' + step.answer_site + '">360°-তে স্থানটি দেখো →</a>';
+          msg.innerHTML = '<b>ঠিক ধরেছ!</b> ' + MX.esc(step.fact_bn) + (step.answer_site === 'bharat-bhayna'
+            ? ' <a href="index.html?q=%E0%A6%AD%E0%A6%B0%E0%A6%A4#explore">ড্যাশবোর্ডে ছবি ও তথ্যসহ দেখো →</a>'
+            : ' <a href="explore3d.html?site=' + step.answer_site + '">360°-তে স্থানটি দেখো →</a>');
           state.huntStep++;
           if (state.huntStep >= steps.length) { state.huntDone = true; award('treasure-1'); }
           addXP(step.xp, 'ট্রেজার হান্ট সূত্র');
@@ -294,6 +297,103 @@
     w.document.close();
   }
 
+  /* ---------- মেমরি ম্যাচ (নতুন) ---------- */
+  var MEM_ICONS = ['☸', '🪷', '🐘', '🦚', '🕯️', '🔔', '🌳', '🏺'];
+  var memOpen = [], memMatched = 0, memMoves = 0, memLock = false;
+  function startMemory() {
+    var grid = host.querySelector('#gpMemGrid');
+    if (!grid) return;
+    memOpen = []; memMatched = 0; memMoves = 0; memLock = false;
+    var deck = MEM_ICONS.concat(MEM_ICONS).map(function (ic, i) { return { ic: ic, k: i }; });
+    for (var i = deck.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = deck[i]; deck[i] = deck[j]; deck[j] = t; }
+    grid.innerHTML = deck.map(function (c) {
+      return '<button type="button" class="mx-memcard" data-icon="' + c.ic + '" aria-label="কার্ড">❓</button>';
+    }).join('');
+    host.querySelector('#gpMemInfo').textContent = 'চাল: ০ · মিলেছে: ০/৮ জোড়া';
+    grid.querySelectorAll('.mx-memcard').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (memLock || btn.dataset.done || memOpen.indexOf(btn) > -1) return;
+        btn.textContent = btn.dataset.icon; btn.classList.add('open'); memOpen.push(btn);
+        if (memOpen.length !== 2) return;
+        memMoves++;
+        var a = memOpen[0], b = memOpen[1];
+        if (a.dataset.icon === b.dataset.icon) {
+          a.dataset.done = '1'; b.dataset.done = '1'; a.classList.add('done'); b.classList.add('done');
+          memOpen = []; memMatched++;
+          if (!state.memFirst) { state.memFirst = true; addXP(10, 'প্রথম জোড়া মিললো!'); }
+          if (memMatched === 8) {
+            host.querySelector('#gpMemInfo').innerHTML = '🎉 <b>সব জোড়া মিলে গেছে!</b> মোট চাল: ' + MX.bn(memMoves);
+            if (!state.memWin) { state.memWin = true; addXP(60, 'মেমরি ম্যাচ জয়'); award('memory-master'); }
+            else { MX.toast('আবারও জয়! চাল: ' + MX.bn(memMoves)); save(); }
+            return;
+          }
+        } else {
+          memLock = true;
+          setTimeout(function () {
+            a.textContent = '❓'; b.textContent = '❓';
+            a.classList.remove('open'); b.classList.remove('open');
+            memOpen = []; memLock = false;
+          }, 650);
+        }
+        host.querySelector('#gpMemInfo').textContent = 'চাল: ' + MX.bn(memMoves) + ' · মিলেছে: ' + MX.bn(memMatched) + '/৮ জোড়া';
+      });
+    });
+  }
+
+  /* ---------- রঙ করো: ভরত ভায়না ক্রুশ (নতুন) ---------- */
+  function colorSvg() {
+    var R = function (x, y, w, h, label) {
+      return '<rect class="gp-fill" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="#fffdf6" stroke="#7a4a21" stroke-width="2"><title>' + label + '</title></rect>';
+    };
+    return '<svg viewBox="0 0 200 200" role="img" aria-label="ভরত ভায়নার ক্রুশাকার ভূমি-নকশা রঙ করার ছক" style="width:100%;max-width:340px;display:block;margin:0 auto">' +
+      '<text x="100" y="12" text-anchor="middle" font-size="10" fill="#7a4a21">উত্তর ↑</text>' +
+      R(85, 20, 30, 45, 'উত্তর অভিক্ষেপ') + R(85, 135, 30, 45, 'দক্ষিণ অভিক্ষেপ') +
+      R(20, 85, 45, 30, 'পশ্চিম অভিক্ষেপ') + R(135, 85, 45, 30, 'পূর্ব অভিক্ষেপ') +
+      R(65, 65, 70, 70, 'কেন্দ্রীয় বর্গ (মঞ্চ)') +
+      '<circle class="gp-fill" cx="100" cy="100" r="16" fill="#fffdf6" stroke="#7a4a21" stroke-width="2"><title>কেন্দ্রীয় মঞ্চের শিখর</title></circle>' +
+      R(20, 20, 30, 30, 'প্রদক্ষিণপথ কোণ') + R(150, 20, 30, 30, 'প্রদক্ষিণপথ কোণ') +
+      R(20, 150, 30, 30, 'প্রদক্ষিণপথ কোণ') + R(150, 150, 30, 30, 'প্রদক্ষিণপথ কোণ') +
+      '</svg><p class="mx-mini" style="text-align:center">পরিকল্পনামূলক ছক — আসল ভূমি-নকশা ভরত ভায়নার গ্যালারিতে দেখো।</p>';
+  }
+  function initColoring() {
+    var box = host.querySelector('#gpColorSvg'), pal = host.querySelector('#gpPalette');
+    if (!box || !pal) return;
+    box.innerHTML = colorSvg();
+    var colors = ['#d97706', '#b91c1c', '#15803d', '#1d4ed8', '#a21caf', '#facc15', '#0ea5e9', '#78350f'];
+    var current = colors[0];
+    pal.innerHTML = colors.map(function (c, i) {
+      return '<button type="button" class="mx-palbtn' + (i === 0 ? ' active' : '') + '" data-color="' + c + '" style="background:' + c + '" aria-label="রঙ বেছে নাও"></button>';
+    }).join('');
+    pal.querySelectorAll('.mx-palbtn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        current = b.dataset.color;
+        pal.querySelectorAll('.mx-palbtn').forEach(function (x) { x.classList.toggle('active', x === b); });
+      });
+    });
+    function allColored() {
+      var cells = box.querySelectorAll('.gp-fill');
+      for (var i = 0; i < cells.length; i++) { if (!cells[i].dataset.colored) return false; }
+      return true;
+    }
+    box.querySelectorAll('.gp-fill').forEach(function (cell) {
+      cell.style.cursor = 'pointer';
+      cell.addEventListener('click', function () {
+        cell.setAttribute('fill', current); cell.dataset.colored = '1';
+        if (!state.colorDone && allColored()) {
+          state.colorDone = true; addXP(40, 'ভরত ভায়নার ক্রুশ রঙ শেষ!'); award('color-artist');
+        }
+      });
+    });
+    var reset = host.querySelector('#gpColorReset');
+    if (reset) reset.addEventListener('click', function () {
+      box.querySelectorAll('.gp-fill').forEach(function (cell) {
+        cell.setAttribute('fill', '#fffdf6'); delete cell.dataset.colored;
+      });
+    });
+    var memReset = host.querySelector('#gpMemReset');
+    if (memReset) memReset.addEventListener('click', startMemory);
+  }
+
   /* ---------- মূল কাঠামো ---------- */
   host.innerHTML =
     '<div class="cb-wrap">' +
@@ -304,6 +404,17 @@
     '<div class="mx-grid wide" style="margin-top:20px">' +
     '<section class="mx-card"><h3>🗺️ ট্রেজার হান্ট: সূত্র ধরে স্থান খোঁজো</h3><div id="gpHunt"></div></section>' +
     '<section class="mx-card"><h3>🎯 কুইজ কোয়েস্ট</h3><div id="gpQuiz"></div></section></div>' +
+
+    '<div class="mx-grid wide" style="margin-top:20px">' +
+    '<section class="mx-card"><h3>🧠 মেমরি ম্যাচ: জোড়া মিলাও</h3>' +
+    '<p>কার্ড উল্টে একই ছবির জোড়া মেলাও। ৮ জোড়া মেলালেই XP ও “স্মৃতিশক্তির ওস্তাদ” ব্যাজ!</p>' +
+    '<div class="mx-memgrid" id="gpMemGrid"></div>' +
+    '<p id="gpMemInfo"></p><div class="mx-btns"><button type="button" class="cb-btn sm" id="gpMemReset">🔄 আবার সাজাও</button></div></section>' +
+
+    '<section class="mx-card"><h3>🎨 রঙ করো: ভরত ভায়নার ক্রুশ</h3>' +
+    '<p>যশোরের ভরত ভায়নার ক্রুশাকার ভূমি-নকশা (উত্তর ↑) রঙ করো! রঙ বেছে ঘরে চাপ দাও। সব ঘর রঙ হলে “রঙের শিল্পী” ব্যাজ। <a href="index.html?q=%E0%A6%AD%E0%A6%B0%E0%A6%A4#explore">আসল স্থানের তথ্য ও ছবি →</a></p>' +
+    '<div id="gpColorSvg"></div><div id="gpPalette" class="mx-palette"></div>' +
+    '<div class="mx-btns"><button type="button" class="cb-btn sm" id="gpColorReset">↺ আবার সাদা করো</button></div></section></div>' +
 
     '<section class="mx-card" style="margin-top:20px"><h3>⛏️ ডিজিটাল মাটি খনন (তিন স্তর!)</h3>' +
     '<p>স্তর যত গভীর, নিদর্শন তত পুরনো। <b>ব্রাশ</b> দিয়ে সযত্নে খুঁজলে বোনাস XP; বেলচা দ্রুত কিন্তু ঝুঁকিপূর্ণ (কম পয়েন্ট) — আসল খননেও এমনই সাবধানতা লাগে!</p>' +
@@ -340,8 +451,13 @@
     '<a class="cb-btn sm ghost" href="atlas.html#school-kit">ফিল্ড-নোটবুক ও কমিক PDF</a></div>' +
     '<p class="mx-mini">সব ওয়ার্কশিট শ্রেণিকক্ষে বিনামূল্যে ছাপানো যাবে।</p></section></div></div>';
 
-  MX.fetchJson('data/games-plus.json?v=20261024g').then(function (d) {
+  initColoring();
+  startMemory();
+  MX.fetchJson('data/games-plus.json?v=20261024i').then(function (d) {
     DATA = d;
+    if (state.huntDone && state.huntStep < d.treasure_hunt.length) state.huntDone = false; /* নতুন সূত্র এলে পুরনো বিজয়ীও বাকি সূত্র পায় */
+    if (state.memWin) award('memory-master');
+    if (state.colorDone) award('color-artist');
     renderProfile();
     renderHunt();
     renderQuiz();

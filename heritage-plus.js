@@ -29,7 +29,7 @@
     return '<div class="mx-place-tools">' +
       '<a href="' + sv + '"' + ext + '>🧍 360°</a>' +
       '<a href="' + route + '"' + ext + '>🧭 রুট ও বাজেট</a>' +
-      '<a class="donate" href="support.html?site=' + encodeURIComponent(id) + '">🙏 শ্রদ্ধাদান (নিরাপদ নির্দেশনা)</a>' +
+      '<a class="donate" href="support.html?site=' + encodeURIComponent(id) + (name ? '&name=' + encodeURIComponent(name) : '') + '">🙏 শ্রদ্ধাদান (নিরাপদ নির্দেশনা)</a>' +
       '</div>';
   }
 
@@ -40,8 +40,11 @@
       var body = card.querySelector('.cb-place-body');
       if (!body || !id) return;
       var holder = document.createElement('div');
-      holder.innerHTML = toolsHtml(id, '');
+      var h3card = card.querySelector('h3');
+      holder.innerHTML = toolsHtml(id, h3card ? h3card.textContent.trim() : '');
       body.appendChild(holder.firstChild);
+      card.classList.add('mx-reveal');
+      if (window.__cbRevealObs) window.__cbRevealObs.observe(card); else card.classList.add('mx-in');
     });
     var detailBody = document.getElementById('placeDialogBody');
     if (detailBody && detailBody.innerHTML && !detailBody.querySelector('.mx-place-tools')) {
@@ -54,6 +57,13 @@
         if (actions) actions.after(holder2.firstChild);
       }
     }
+  }
+
+  /* হালকা reveal অ্যানিমেশন: স্ক্রলে কার্ড ধীরে ভেসে ওঠে (reduced-motion-এ বন্ধ) */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.__cbRevealObs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('mx-in'); window.__cbRevealObs.unobserve(e.target); } });
+    }, { threshold: 0.08 });
   }
 
   function start() {
@@ -70,7 +80,7 @@
     if (dlg) new MutationObserver(function () { decorate(document); }).observe(dlg, { childList: true });
   }
 
-  MX.fetchJson('data/dashboard-core.json?v=20261024g').then(function (data) {
+  MX.fetchJson('data/dashboard-core.json?v=20261024h').then(function (data) {
     (data.places || []).forEach(function (p) {
       if (p.id && p.coords && p.coords.length === 2) coordsById[p.id] = p.coords;
     });

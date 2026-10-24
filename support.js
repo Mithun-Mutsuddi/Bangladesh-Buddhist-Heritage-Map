@@ -17,7 +17,8 @@
     var id = MX.$('donateSite').value;
     var entry = (CFG.sites || []).filter(function (s) { return s.site_id === id; })[0];
     var box = MX.$('donateCard');
-    var siteName = entry ? entry.site_name_bn : id;
+    var selEl = MX.$('donateSite');
+    var siteName = entry ? entry.site_name_bn : (selEl.options[selEl.selectedIndex] ? selEl.options[selEl.selectedIndex].text : id);
     if (!entry) {
       box.innerHTML = '<div class="mx-note"><b>' + MX.esc(siteName) + ':</b> এই স্থানের যাচাইকৃত দান-তথ্য সাইটে এখনো যোগ হয়নি। দান করতে চাইলে বিহার কর্তৃপক্ষের সঙ্গে সরাসরি (কার্টাজে গিয়ে বা অফিসিয়াল যোগাযোগে) মাধ্যম জেনে নিন। ইন্টারনেটে পাওয়া কোনো নম্বরে যাচাই ছাড়া টাকা পাঠাবেন না। <a href="index.html#explore">ড্যাশবোর্ডে এই বিহার খুঁজুন →</a></div>';
       return;
@@ -101,7 +102,13 @@
     (CFG.sites || []).forEach(function (s) { opts.push([s.site_id, s.site_name_bn]); });
     atlasSites.forEach(function (s) { if (!opts.some(function (o) { return o[0] === s.id; })) opts.push([s.id, s.name.bn]); });
     MX.$('donateSite').innerHTML = opts.map(function (o) { return '<option value="' + MX.esc(o[0]) + '">' + MX.esc(o[1]) + '</option>'; }).join('');
-    var wanted = new URLSearchParams(location.search).get('site');
+    var params = new URLSearchParams(location.search);
+    var wanted = params.get('site');
+    if (wanted && !opts.some(function (o) { return o[0] === wanted; })) {
+      var nm = params.get('name') || wanted;
+      opts.unshift([wanted, nm + ' (কার্ড থেকে এসেছেন)']);
+      MX.$('donateSite').innerHTML = opts.map(function (o) { return '<option value="' + MX.esc(o[0]) + '">' + MX.esc(o[1]) + '</option>'; }).join('');
+    }
     if (wanted && opts.some(function (o) { return o[0] === wanted; })) MX.$('donateSite').value = wanted;
     MX.$('donateSite').addEventListener('change', renderDonateCard);
     renderDonateCard();

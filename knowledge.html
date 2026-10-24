@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#8f3d08">
-  <title>জ্ঞানকোষ — লিপি, চর্যাপদ, প্রতিমাতত্ত্ব, স্বর্গ-নরক, মুদ্রা ও পরিব্রাজক | চর্যাভূমি</title>
+  <title>জ্ঞানকোষ — লিপি, চর্যাপদ, প্রতিমা, ধর্ম-ধারা, দান, প্রাণী-কাহিনী ও বিশ্ব বৌদ্ধ ম্যাপ | চর্যাভূমি</title>
   <meta name="description" content="ব্রাহ্মী-সিদ্ধমাতৃকা লিপি পাঠোদ্ধার, সিলমোহরে বিহারের আসল নাম, চর্যাপদ ও সিদ্ধাচার্য, পালি শব্দের বাংলা যাত্রা, মহাযান-বজ্রযান প্রতিমাতত্ত্ব, ৩১ ভূমি-স্বর্গ-নরক-বিমান, স্থাপত্য ডিরেক্টরি, মুদ্রাশাস্ত্র, বৌদ্ধ বিজ্ঞান, চীনা-তিব্বতি পরিব্রাজক ও লোককথা।">
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
-  <link rel="stylesheet" href="mega.css?v=20261024g">
+  <link rel="stylesheet" href="mega.css?v=20261024i">
 </head>
 <body class="cb">
   <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
@@ -42,6 +42,9 @@
         <button role="tab" aria-selected="false" data-tab="pilgrims">🧳 পরিব্রাজক ও জনপদ</button>
         <button role="tab" aria-selected="false" data-tab="society">🏘️ সমাজ ও লোককথা</button>
         <button role="tab" aria-selected="false" data-tab="paper">✉️ কাগজে ঐতিহ্য</button>
+        <button role="tab" aria-selected="false" data-tab="schools">☸ ধর্ম-ধারা, দান ও শিষ্য</button>
+        <button role="tab" aria-selected="false" data-tab="beings">🐉 প্রাণী·দেবতা·কাহিনী</button>
+        <button role="tab" aria-selected="false" data-tab="world">🌏 বিশ্ব বৌদ্ধ ম্যাপ</button>
       </div>
     </div>
 
@@ -192,6 +195,36 @@
       </div>
     </section>
 
+    <section class="cb-section mx-tabpage" id="tab-schools" hidden>
+      <div class="cb-wrap">
+        <h2>বৌদ্ধ ধর্মের ধারা: থেরবাদ, মহাযান, বজ্রযান — আর সহজযান, মন্ত্রযান, তন্ত্রযান?</h2>
+        <div id="yanaIntro"></div>
+        <div id="yanaDiagram"></div>
+        <div class="mx-grid wide" id="yanaGrid"></div>
+        <h2 style="margin-top:34px">থের, থেরী ও অরহন্তগণ: বুদ্ধের প্রধান শিষ্য-শিষ্যাদের তালিকা</h2>
+        <div id="peopleMain"></div>
+        <h2 style="margin-top:34px">দান কী? কত প্রকার, কোন দানে কী ফল?</h2>
+        <div id="danaMain"></div>
+        <h2 style="margin-top:34px">সচরাচর জিজ্ঞাসা</h2>
+        <div class="mx-grid wide" id="faqGrid"></div>
+      </div>
+    </section>
+
+    <section class="cb-section mx-tabpage" id="tab-beings" hidden>
+      <div class="cb-wrap">
+        <h2>পবিত্র ও কাল্পনিক প্রাণী, দেবতা-অসুর-রাক্ষস এবং পৌরাণিক কাহিনী</h2>
+        <div id="beingsIntro"></div>
+        <div class="mx-grid wide" id="beingsGrid"></div>
+      </div>
+    </section>
+
+    <section class="cb-section mx-tabpage" id="tab-world" hidden>
+      <div class="cb-wrap">
+        <h2>বিশ্বে বৌদ্ধধর্ম: সংখ্যাগরিষ্ঠ দেশ, রাষ্ট্রীয় মর্যাদা, জনসংখ্যা ও মূর্তিশৈলী</h2>
+        <div id="worldMain"></div>
+      </div>
+    </section>
+
     <section class="cb-section alt">
       <div class="cb-wrap">
         <h2>উৎস</h2>
@@ -204,8 +237,8 @@
   <script src="config.js?v=20261024g" defer></script>
   <script src="mega-utils.js?v=20261024g" defer></script>
   <script src="language.js?v=20261024d" defer></script>
-  <script src="brand.js?v=20261024g" defer></script>
-  <script src="knowledge.js?v=20261024g" defer></script>
+  <script src="brand.js?v=20261024i" defer></script>
+  <script src="knowledge.js?v=20261024i" defer></script>
   <script src="pwa.js?v=20261024g" defer></script>
 </body>
 </html>
