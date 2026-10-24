@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>কমিউনিটি হাব — শব্দ-মানচিত্র, অডিও গাইড, ইউটিউব আর্কাইভ | চর্যাভূমি</title>
+  <meta name="description" content="#BDHeritageMap কমিউনিটি হাব: পালি স্তোত্রসহ শব্দ-পরিবেশ (soundscapes), বহুভাষিক অডিও গাইড, ভ্রমণ অভিজ্ঞতা ও ছবির গ্যালারি এবং ডকুমেন্টারি/খনন ভিডিও খোঁজার ইউটিউব আর্কাইভ।">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
+  <link rel="stylesheet" href="mega.css?v=20261024f">
+</head>
+<body class="cb">
+  <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
+  <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
+  <header class="cb-header" id="cbHeader"></header>
+
+  <main id="main">
+    <section class="mx-hero">
+      <div class="cb-wrap">
+        <p class="cb-kicker">🎧 কমিউনিটি · মিডিয়া · ইমার্সিভ</p>
+        <h1>কমিউনিটি হাব ও সাউন্ডস্কেপ</h1>
+        <p class="cb-lead">ঘণ্টার ধ্বনি, বৃষ্টির শব্দ আর পালি বন্দনার নেপথ্যে প্রত্নস্থলের গল্প শুনুন; নিজের ভ্রমণ-অভিজ্ঞতা লিখুন <b>#BDHeritageMap</b> হ্যাশট্যাগে; খনন ও প্রামাণ্যচিত্রের ভিডিও খুঁজুন এক জায়গা থেকে।</p>
+      </div>
+    </section>
+
+    <nav class="mx-navpills" aria-label="এই পাতার অংশসমূহ">
+      <div class="cb-wrap">
+        <a href="#soundscape">🔔 শব্দের মানচিত্র</a><a href="#audioguide">🎙️ অডিও গাইড</a>
+        <a href="#hub">🤝 কমিউনিটি হাব</a><a href="#youtube">▶️ ইউটিউব আর্কাইভ</a>
+      </div>
+    </nav>
+
+    <section class="cb-section" id="soundscape">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Soundscapes (Web Audio — কোনো ফাইল ডাউনলোড হয় না)</p>
+        <h2>শব্দ ও সুরের মানচিত্র</h2>
+        <p class="cb-sub">শব্দগুলো ব্রাউজারেই তৈরি হয় (জেনারেটিভ) — রেকর্ড করা কোনো স্থানের আসল ফিল্ড রেকর্ডিং বলে দাবি করা হয়নি। আস্থা রাখুন: আওয়াজ কমিয়ে পড়ার নেপথ্যে চালানোর জন্য বানানো।</p>
+        <div class="mx-grid">
+          <article class="mx-card"><h3>🔔 বিহারের ঘণ্টা</h3><p>গভীর ধাতব অনুনাদের ধীর ঘণ্টাধ্বনি।</p><div class="mx-btns"><button type="button" class="cb-btn sm" data-sound="bell">বাজান</button></div></article>
+          <article class="mx-card"><h3>🌧️ মেঘ ও বৃষ্টি</h3><p>বর্ষার নরম বৃষ্টির শব্দ — বর্ষাবাসের আবহ।</p><div class="mx-btns"><button type="button" class="cb-btn sm" data-sound="rain">বাজান</button></div></article>
+          <article class="mx-card"><h3>🐦 টিলার পাখির ডাক</h3><p>লালমাই টিলার সকালের কল্পিত পাখি-কূজন।</p><div class="mx-btns"><button type="button" class="cb-btn sm" data-sound="birds">বাজান</button></div></article>
+          <article class="mx-card"><h3>📿 পালি বন্দনা (ভয়েসে শুনুন)</h3><p>নমো তস্স… ও ত্রিশরণ — ডিভাইসের ভয়েসে পাঠ হবে; মানুষের রেকর্ড করা কণ্ঠ নয়।</p><div class="mx-btns"><button type="button" class="cb-btn sm" id="chantBtn">▶ বন্দনা শুনুন</button><a class="cb-btn sm ghost" href="philosophy.html#bandana">মূল পাঠ পড়ুন</a></div></article>
+        </div>
+        <label style="font-weight:700">শব্দের মাত্রা <input type="range" id="soundVol" min="0" max="100" value="60" style="vertical-align:middle"></label>
+        <button type="button" class="cb-btn ghost" id="soundStop" style="margin-left:10px">⏹ সব শব্দ থামান</button>
+        <p class="mx-mini" id="soundStatus" role="status"></p>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="audioguide">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">বহুভাষিক অডিও গাইড</p>
+        <h2>স্থান ধরে অডিও গাইড</h2>
+        <form class="mx-form" onsubmit="return false">
+          <label>স্থান <select id="audioSite"></select></label>
+          <label>ভাষা <select id="audioLang"><option value="bn">বাংলা</option><option value="en">English</option></select></label>
+        </form>
+        <div class="mx-btns">
+          <button type="button" class="cb-btn solid" id="audioPlay">▶ গাইড শুনুন</button>
+          <button type="button" class="cb-btn ghost" id="audioStop">⏹ থামান</button>
+        </div>
+        <div class="mx-card"><h3 style="margin-top:0">ট্রান্সক্রিপ্ট</h3><p id="audioText">স্থান বেছে নিন — Atlas প্রোফাইলের লিখিত গাইড এখানে আসবে।</p>
+        <p class="mx-mini">Atlas-এর এই <a href="atlas.html#learning">অডিও ল্যাব</a>-এও একই গাইড শোনা যায়। ডিভাইসে বাংলা ভয়েস না থাকলে ইংরেজি আওয়াজে বাজতে পারে — তখন ট্রান্সক্রিপ্ট পড়ুন।</p></div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="hub">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">#BDHeritageMap</p>
+        <h2>কমিউনিটি হাব: আপনার অভিজ্ঞতা</h2>
+        <div class="mx-note"><b>গোপনীয়তা:</b> এখানে লেখা পোস্ট শুধু <b>এই ব্রাউজারেই</b> থাকে — কোনো সার্ভারে প্রকাশ হয় না (Firebase যুক্ত হলে মডারেশন-সহ কেন্দ্রীয় পোস্টিং চালু করা যাবে, <a href="heritage-lab.html">Heritage Lab</a> দেখুন)। প্রকাশ্যে শেয়ার করতে পোস্টের “শেয়ার-টেক্সট কপি” করে নিজের Instagram/Threads/Facebook-এ <b>#BDHeritageMap</b> দিয়েই পোস্ট করুন।</div>
+        <div class="mx-grid wide">
+          <form class="mx-card" id="postForm">
+            <h3 style="margin-top:0">নতুন পোস্ট / ভ্রমণ-ডায়েরি</h3>
+            <div class="mx-form" style="grid-template-columns:1fr">
+              <label>আপনার ডিসপ্লে নাম (ঐচ্ছিক) <input id="postName" maxlength="40" placeholder="যেমন: সুমন, বগুড়া"></label>
+              <label>স্থান <select id="postSite"></select></label>
+              <label>আপনার অভিজ্ঞতা/পরামর্শ <textarea id="postText" rows="4" maxlength="800" required placeholder="কী দেখলেন, পরের ভ্রমণকারীকে কী জানাবেন…"></textarea></label>
+              <label>ছবির লিংক (ঐচ্ছিক; নিজের তোলা, Wikimedia/Drive-এর পাবলিক লিংক) <input id="postPhoto" type="url" placeholder="https://…"></label>
+              <label style="font-weight:400"><input type="checkbox" id="postConsent"> এই ছবি/লেখা আমার নিজের এবং #BDHeritageMap দিয়ে শেয়ার করতে সম্মত আছি। অন্যের মুখ স্পষ্ট থাকলে তার অনুমতি নিয়েছি।</label>
+            </div>
+            <div class="mx-btns"><button type="submit" class="cb-btn solid">💾 আমার হাবে যোগ করুন</button>
+            <button type="button" class="cb-btn ghost" id="postExport">⬇ সব পোস্ট JSON-এ নিন</button></div>
+          </form>
+          <div class="mx-card">
+            <h3 style="margin-top:0">সোশ্যাল মিডিয়ায় হ্যাশট্যাগ খোঁজ</h3>
+            <p>অন্যদের #BDHeritageMap পোস্ট দেখতে:</p>
+            <div class="mx-btns">
+              <a class="cb-btn sm" target="_blank" rel="noopener" href="https://www.instagram.com/explore/tags/bdheritagemap/">📸 Instagram ↗</a>
+              <a class="cb-btn sm" target="_blank" rel="noopener" href="https://www.threads.net/tag/BDHeritageMap">🧵 Threads ↗</a>
+              <a class="cb-btn sm" target="_blank" rel="noopener" href="https://www.facebook.com/hashtag/bdheritagemap">Facebook ↗</a>
+              <a class="cb-btn sm ghost" target="_blank" rel="noopener" href="https://www.blogger.com/">✍️ নিজের Blogger খুলুন ↗</a>
+            </div>
+            <p class="mx-mini">সোশ্যাল প্ল্যাটফর্মের লগইন/দৃশ্যমানতা তাদের নিজস্ব নিয়মে চলে; এই সাইট কোনো সোশ্যাল অ্যাকাউন্টের তথ্য সংগ্রহ করে না।</p>
+            <h4>ব্লগ-পোস্ট লিংক (এই ব্রাউজারে বুকমার্ক)</h4>
+            <div class="mx-btns"><input id="blogLinkInput" type="url" placeholder="নিজের ভ্রমণ-ব্লগের লিংক" style="flex:1;padding:9px;border:1.5px solid var(--cb-line);border-radius:10px">
+            <button type="button" class="cb-btn sm" id="blogLinkAdd">যোগ করুন</button></div>
+            <ul id="blogLinkList"></ul>
+          </div>
+        </div>
+        <h3>আমার কমিউনিটি ফিড (শুধু এই ডিভাইসে)</h3>
+        <div class="mx-grid" id="postFeed"></div>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="youtube">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">YouTube Archive (সার্চ-লিংক ভিত্তিক)</p>
+        <h2>প্রামাণ্যচিত্র, খনন ও সাক্ষাৎকার খোঁজ</h2>
+        <p class="cb-sub">কপিরাইট মেনে ভিডিও এম্বেড না করে, যাচাই করা অনুসন্ধান প্রশ্ন দিয়ে লিংক দেওয়া হলো — চ্যানেলের অফিসিয়াল (UNESCO, জাদুঘর, বিশ্ববিদ্যালয়, সরকারি) আপলোড দেখতে অগ্রাধিকার দিন। YouTube Data API-কী বসালে Heritage Lab-এ প্লেলিস্ট-উইজেট চালু করা যাবে।</p>
+        <div class="mx-grid" id="ytGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer" id="cbFooter"></footer>
+  <script src="config.js?v=20261024f" defer></script>
+  <script src="mega-utils.js?v=20261024f" defer></script>
+  <script src="language.js?v=20261024d" defer></script>
+  <script src="brand.js?v=20261024e" defer></script>
+  <script src="community.js?v=20261024f" defer></script>
+  <script src="pwa.js?v=20261024f" defer></script>
+</body>
+</html>

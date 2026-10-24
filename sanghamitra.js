@@ -1,4 +1,6 @@
 /* চর্যাভূমি — সাইটজুড়ে একটি shared সংঘমিত্র (SanghaMitra) panel
+   আপডেট 2026-10-24: জ্ঞানকোষ-রাউটিং, 360°/রুট/বাজেট/উৎসব-অটোতারিখ/সার্টিফিকেট
+   হ্যান্ডলার, কুইক-চিপ সম্প্রসারণ, config.js-ভিত্তিক endpoint (Gemini-ready)।
    ------------------------------------------------------------------
    Default হলো স্থানীয়, source-based নিয়মভিত্তিক guide। ব্যবহারকারী online AI
    চালু করলে window.SANGHAMITRA_API_URL / CHARJAVUMI_CHAT_ENDPOINT বা /api/chat
@@ -229,13 +231,13 @@
     if (/নাম (চাই|দাও|লাগবে|সাজেশন|সাজেস্ট)|নামকরণ/.test(q)) {
       return '<p>কার জন্য নাম — <b>শিশুর</b> নাকি <b>প্রতিষ্ঠান/স্থানের</b>? এভাবে লিখলেই সাজেশন দিচ্ছি: “মেয়ের ধর্মীয় নাম”, “শনিবারে জন্ম নেওয়া ছেলের নাম”, “নতুন বিহারের নাম”।</p>';
     }
-    if (/উৎসব|পূর্ণিমা|কঠিন|প্রবারণা|মাঘী/.test(q)) {
-      return '<p>উৎসবের দিন চন্দ্রপঞ্জিকা ও স্থানীয় সংঘের ঘোষণায় ঠিক হয়; কোনো তারিখ অনুমান করে বলা ঠিক নয় — সংশ্লিষ্ট বিহারের ঘোষণা মিলিয়ে নিন।</p>' +
-        linksHtml([['calendar.html', 'উৎসব ও পূর্ণিমা — পঞ্জিকা']]);
+    if (/উৎসব|পূর্ণিমা|কঠিন|প্রবারণা|মাঘী|বর্ষাবাস|কঠিন চীবর/.test(q)) {
+      return '<p>পঞ্জিকা পাতায় এখন <b>খগোল-গণনায় অটো-আপডেট হওয়া উৎসব ট্র্যাকার</b> আছে — পরবর্তী পূর্ণিমা-উৎসবের সম্ভাব্য তারিখ, কাউন্টডাউন ও Google Calendar (.ics) ডাউনলোডসহ। তারিখটি আনুমানিক (±১ দিন); সংশ্লিষ্ট বিহারের ঘোষণাই চূড়ান্ত।</p>' +
+        linksHtml([['calendar.html#festivals-auto', 'অটো-তারিখসহ উৎসব ট্র্যাকার'], ['calendar.html', 'পূর্ণ পঞ্জিকা (তিথি/নক্ষত্র)']]);
     }
-    if (/রুট|যাব|যেতে|কীভাবে যাব|দিকনির্দেশ|route|how to go/i.test(low)) {
-      return '<p>নতুন একীভূত ড্যাশবোর্ডে স্থানটি খুললেই Google Maps ও দিকনির্দেশনার বোতাম পাবেন। আনুমানিক পিনের ক্ষেত্রে নাম ধরে খুঁজুন — গেটের সঠিক অবস্থান যাওয়ার আগে যাচাই করুন।</p>' +
-        linksHtml([['index.html#travel-help', 'যাতায়াত ও থাকা'], ['index.html#map-section', 'ম্যাপ']]);
+    if (/রুট|যাব|যেতে|কীভাবে যাব|দিকনির্দেশ|route|how to go|ইটিনারারি|itinerary/i.test(low)) {
+      return '<p>নতুন <b>রুট ও ট্রাভেল প্ল্যানারে</b> যাত্রা-শুরু ও গন্তব্য বেছে লাইভ Google Maps/Waze রুট, দূরত্ব-সময়ের আনুমানিক হিসাব, ২—৬ দিনের রেডিমেড ইটিনারারি ও কাছের হোটেল-হাসপাতালের খোঁজ পাবেন। আনুমানিক পিনের ক্ষেত্রে গেটের অবস্থান যাওয়ার আগে যাচাই করুন।</p>' +
+        linksHtml([['travel-planner.html', 'রুট ও ট্রাভেল প্ল্যানার'], ['travel-planner.html#budget', 'বাজেট ক্যালকুলেটর'], ['index.html#map-section', 'হোমের ম্যাপ']]);
     }
     if (/হোটেল|খাবার|হাসপাতাল|ফার্মেসি|এটিএম|atm|থানা|কাছাকাছি/i.test(q)) {
       return '<p>কাছাকাছি সেবা খুঁজতে প্রথমে ড্যাশবোর্ডে স্থানটি বেছে নিন — সেখানে হোটেল, হাসপাতাল, ফার্মেসি, পুলিশ ও ফায়ার সার্ভিসের Maps-খোঁজ বোতাম আছে। কোন বিহারের কাছে খুঁজবেন, নামটি লিখলে আরও নির্দিষ্ট লিংক দিতে পারব।</p>' +
@@ -248,11 +250,71 @@
       return '<p>বাংলার বৌদ্ধ ইতিহাস ও স্থাপত্যের ধারাবাহিক পড়া ইতিহাস পাতায় ও দর্শন পাতার “বাংলায় বৌদ্ধধর্ম” অধ্যায়ে আছে। কোনো নির্দিষ্ট স্থানের নাম লিখলে তার তথ্য ও ম্যাপের দিকে পাঠিয়ে দেব।</p>' +
         linksHtml([['history.html', 'ইতিহাস'], ['philosophy.html#bengal', 'বাংলায় বৌদ্ধধর্ম'], ['index.html#explore', 'স্থান খুঁজুন']]);
     }
-    if (/কুইজ|quiz/i.test(low)) {
-      return '<p>ছবি ও ম্যাপসহ কুইজ খেলতে পারবেন কুইজ পাতায় — প্রতিবার নতুন সেট আসে।</p>' +
-        linksHtml([['quiz.html', 'কুইজ শুরু করুন']]);
+    if (/কুইজ|quiz|গেম|খেলা|ট্রেজার হান্ট|খনন খেলা|পেপার ক্রাফট|ওয়ার্কশিট/i.test(low)) {
+      return '<p>বড় কুইজ ছাড়াও শিশু বিভাগে এখন <b>হেরিটেজ এক্সপ্লোরার</b>: লেভেল ও ব্যাজসহ ট্রেজার হান্ট, কুইজ কোয়েস্ট, তিন-স্তর ডিজিটাল খনন, টাইম-ট্রাভেল স্লাইডার, DIY পেপার স্তূপ-বিহার আর শিক্ষকদের ছাপানো ওয়ার্কশিট।</p>' +
+        linksHtml([['children.html#games-plus', 'হেরিটেজ এক্সপ্লোরার গেম'], ['quiz.html', 'বড় কুইজ'], ['heritage-lab.html#certificate', 'সার্টিফিকেট নিন']]);
     }
-    return '<p>আমি সাহায্য করতে পারি: বৌদ্ধ ঐতিহ্য ও ইতিহাস, স্থান-ভ্রমণ ও রুট, উৎসব-পঞ্জিকা, গৃহী নীতি ও সূত্র, বন্দনা — আর নতুন: <b>শিশুর ধর্মীয় নাম</b> ও <b>প্রতিষ্ঠান/স্থানের নাম</b>। যেকোনো একটি উদাহরণ বোতামে চাপ দিন, বা প্রশ্ন লিখুন।</p>' +
+    if (/360|স্ট্রিট ভিউ|street view|ড্রোন|drone|3d|google earth|kml|স্যাটেলাইট|timelapse|টাইমল্যাপ্স|lens|লেন্স|স্ক্যান/i.test(low)) {
+      return '<p><b>360° ও GIS এক্সপ্লোরারে</b> প্রতিটি Atlas স্থানের Street View প্যানোরামা, ড্রোন-দৃশ্য প্যান, Google Earth 3D ফ্লাইওভার, KML/GeoJSON ডাউনলোড, উচ্চতা-ছক ও ১৯৮৪-পরবর্তী স্যাটেলাইট টাইমল্যাপ্স পাবেন। কোনো ফলক/মূর্তি চিনতে সেখানকার Lens স্ক্যানার (বৈশিষ্ট্য-ম্যাচার) ব্যবহার করুন।</p>' +
+        linksHtml([['explore3d.html', '360° ও GIS এক্সপ্লোরার'], ['explore3d.html#lens', 'লেন্স স্ক্যানার']]);
+    }
+    if (/বাজেট|খরচ কত|budget|cost.*trip/i.test(low)) {
+      return '<p>ট্রাভেল প্ল্যানারের <b>বাজেট ক্যালকুলেটরে</b> দূরত্ব, লোক, দিন, যান ও থাকার মান দিলে ভাগ ভাগ করে আনুমানিক খরচ পাবেন — হার নিজে বদলাতে পারবেন। সংখ্যাগুলো অফিসিয়াল ভাড়া নয়, পরিকল্পনার ধারণা।</p>' +
+        linksHtml([['travel-planner.html#budget', 'বাজেট ক্যালকুলেটর'], ['travel-planner.html#itineraries', 'রেডিমেড ইটিনারারি']]);
+    }
+    if (/scholar|গবেষণা.*পত্র|জার্নাল|থিসিস|সাইটেশন|citation|গ্রন্থপঞ্জি|কার্টাজে রিপোর্ট|asi রিপোর্ট/i.test(low)) {
+      return '<p><b>গবেষণা ডেস্কে</b> বিষয় লিখলেই Google Scholar/Books/JSTOR/থিসিস আর্কাইভের সাজানো লিংক, Cunningham—Dikshit-এর মূল রিপোর্টসহ কোর গ্রন্থপঞ্জি ও সাইটেশন জেনারেটর পাবেন।</p>' +
+        linksHtml([['research.html#scholar', 'Scholar খোঁজ'], ['research.html#biblio', 'গ্রন্থপঞ্জি ও আর্কাইভ'], ['research.html#terminology', 'পরিভাষা অভিধান']]);
+    }
+    if (/ব্রাহ্মী|সিদ্ধমাতৃকা|লিপি|তাম্রশাসন|শিলালিপি|সিলমোহর|আসল নাম/i.test(q)) {
+      return '<p>জ্ঞানকোষের <b>লিপি ও সিলমোহর</b> বিভাগে ব্রাহ্মী থেকে গৌড়ীয় লিপির বিবর্তন, পাহাড়পুর-খালিমপুরসহ প্রধান তাম্রশাসনের পরিচিতি ও প্রকাশিত অনুবাদের উৎস, খেলনা ব্রাহ্মী রূপান্তরক এবং সিলমোহরে পাওয়া বিহারের আসল নাম (যেমন শ্রী-সোমপুরে শ্রী-ধর্মপালদেব-মহাবিহার) দেওয়া আছে।</p>' +
+        linksHtml([['knowledge.html#epigraphy', 'লিপি ও তাম্রশাসন'], ['knowledge.html#epigraphy', 'সিলমোহরে আসল নাম']]);
+    }
+    if (/চর্যাপদ|সিদ্ধাচার্য|লুইপা|কাহ্নপা|সরহপা|ভুসুকু|শবরপা/i.test(q)) {
+      return '<p>চর্যাপদ বৌদ্ধ সিদ্ধাচার্যদের সাধন-গান; হরপ্রসাদ শাস্ত্রী ১৯০৭ সালে নেপাল থেকে পুঁথি এনে ১৯১৬ সালে প্রকাশ করেন। জ্ঞানকোষে প্রমাণ-ধারাবাহিকতা, পদকর্তাদের (লুইপা, কাহ্নপা, ভুসুকু…) রচনা ও বিহার-সম্পর্কের প্রমাণমাত্রাসহ বিস্তারিত আছে।</p>' +
+        linksHtml([['knowledge.html#charya', 'চর্যাপদ ও সিদ্ধাচার্য'], ['knowledge.html#charya', 'পালি শব্দের বাংলা যাত্রা']]);
+    }
+    if (/স্বর্গ|নরক|বিমান|প্রেত|৩১ ভূমি|একত্রিশ ভূমি|অবীচি|দেবলোক/i.test(q)) {
+      return '<p>থেরবাদী পরম্পরায় মোট <b>৩১টি ভূমি</b>: অপায় ৪, মানুষ ১, দেবলোক ৬, রূপব্রহ্ম ১৬, অরূপ ৪। বিমানবত্থু অনুযায়ী দেবলোকে ‘বিমান’ মেলে দান-শীল (বিহারদান, খাদ্য-পানীয় দান) ইত্যাদি কুশলে; রূপ/অরূপ ধ্যানে ব্রহ্মলোক; তীব্র অকুশলে নিরয় (৮ মহানিরয়, সর্বনিম্ন অবীচি) ও কৃপণতা-লোভে প্রেতলোক। ছবিসহ পূর্ণ ছক জ্ঞানকোষে — এটি ধর্মীয় শিক্ষা, প্রত্নতাত্ত্বিক দাবি নয়।</p>' +
+        linksHtml([['knowledge.html#cosmology', 'স্বর্গ·নরক·বিমান: পূর্ণ ছক']]);
+    }
+    if (/প্রতিমা|মূর্তি চিন|অবলোকিতেশ্বর|মঞ্জুশ্রী|প্রজ্ঞাপারমিতা.*দেবী|তারা দেবী|মুদ্রা.*মানে|ভূমিস্পর্শ|টেরাকোটা/i.test(q)) {
+      return '<p>মূর্তি চেনার সহজ সূত্র: বুদ্ধের হাতের মুদ্রা, অবলোকিতেশ্বরের মুকুটে অমিতাভ, ললিতাসনে তারা, পুঁথি-খড়্গসহ মঞ্জুশ্রী। জ্ঞানকোষের প্রতিমাতত্ত্ব কার্ডে অতি-সংক্ষেপে চেনার তালিকা এবং মকর-কিন্নরসহ প্রতীক-প্রাণীর বর্ণনা পাবেন; ছবি হাতে থাকলে Lens স্ক্যানারেও মেলান।</p>' +
+        linksHtml([['knowledge.html#iconography', 'প্রতিমা ও প্রতীক'], ['explore3d.html#lens', 'লেন্স স্ক্যানার']]);
+    }
+    if (/হরিকেল|মুদ্রা তত্ত্ব|মুদ্রাশাস্ত্র|পটিকা|প্রাচীন মুদ্রা|coins/i.test(low)) {
+      return '<p>মুদ্রাশাস্ত্র বিভাগে হরিকেলের রৌপ্য, দেব বংশের স্বর্ণ ও পাল যুগের কড়ি-পটিকা অর্থনীতির সার দেওয়া — ওজনের অনুমান-সংখ্যা বসানো হয়নি, জাদুঘর ক্যাটালগের দিকনির্দেশ দেওয়া আছে। প্রাচীন বিজ্ঞান, মধুচ্ছিস্ট-ঢালাই ও চিকিৎসার কথাও ওই বিভাগে।</p>' +
+        linksHtml([['knowledge.html#coins', 'মুদ্রা ও বিজ্ঞান']]);
+    }
+    if (/হিউয়েন|ফ্যা-হিয়েন|ফ্যাহিয়েন|ই-সিং|ইত সিং|তারানাথ|পরিব্রাজক|জনপদ|পুণ্ড্রবর্ধন|সমতট/i.test(q)) {
+      return '<p>ফ্যা-হিয়েন ও ই-সিং এসেছিলেন সমুদ্রপথে তাম্রলিপ্ত হয়ে; হিউয়েন সাং পুণ্ড্রবর্ধন ও সমতটের বর্ণনা দেন; তারানাথ তিব্বতি পরম্পরার ইতিহাস লেখেন। প্রাচীন জনপদগুলো আজকের ম্যাপে কোথায় — সব জ্ঞানকোষের পরিব্রাজক বিভাগে।</p>' +
+        linksHtml([['knowledge.html#pilgrims', 'পরিব্রাজক ও জনপদ'], ['knowledge.html#society', 'লোককথা ও পরিত্যাগের কারণ']]);
+    }
+    if (/দান কর|শ্রদ্ধাদান|ডোনেশন|donation|বিকাশ|নগদ|রকেট|ফান্ড/i.test(low)) {
+      return '<p>দানের আগে <b>নিরাপদ নির্দেশনা</b> পড়ুন: এই সাইটে শুধু লিখিতভাবে যাচাইকৃত মাধ্যমই নম্বরসহ দেখানো হয়; কেউ কখনো OTP/PIN চায় না; টাকা পাঠানোর আগে বিহারের অফিসে নম্বর মিলিয়ে নিন ও রসিদ রাখুন। প্রত্নস্থলের নামে ব্যক্তিগত নম্বরে টাকা পাঠাবেন না।</p>' +
+        linksHtml([['support.html#donate', 'শ্রদ্ধাদান ডেস্ক ও সতর্কতা'], ['support.html#fund', 'সাইট ফান্ডের লক্ষ্য']]);
+    }
+    if (/সার্টিফিকেট|পাসপোর্ট|ব্যাজ|certificate|passport/i.test(low)) {
+      return '<p>Atlas-এর ভার্চুয়াল পাসপোর্টে প্রমাণ-প্রশ্নের জবাবে স্ট্যাম্প জমা হয়; গেমে XP ও ব্যাজ। ১২টি স্ট্যাম্প পূর্ণ হলে Heritage Lab থেকে যাচাই-কোডসহ <b>ডিজিটাল সার্টিফিকেট</b> (PNG) নিতে পারবেন — NFT নয়, এই ডিভাইসেই তৈরি স্মারক।</p>' +
+        linksHtml([['atlas.html#passport', 'ভার্চুয়াল পাসপোর্ট'], ['heritage-lab.html#certificate', 'সার্টিফিকেট তৈরি করুন']]);
+    }
+    if (/নালন্দা|বিক্রমশীলা|বরোবুদুর|তুলনা.*বিহার|সবচেয়ে বড় বিহার/i.test(q)) {
+      return '<p>Heritage Lab-এ সোমপুরের সঙ্গে নালন্দা, বিক্রমশীলা ও বরোবুদুরের <b>আয়তন, কক্ষসংখ্যা, কাল ও পরিকল্পনার তুলনামূলক চার্ট</b> আছে (উৎসসহ; ‘সবচেয়ে বড়’ জাতীয় ভাসা দাবি এড়িয়ে)।</p>' +
+        linksHtml([['heritage-lab.html#compare', 'বিশ্ব ঐতিহ্য তুলনা চার্ট']]);
+    }
+    if (/জাদুঘর|গেজেট|সংরক্ষণ আইন|antiquities|red list|রেড লিস্ট|বিপন্ন/i.test(low)) {
+      return '<p>সংরক্ষণ ডেস্কে Antiquities Act ও UNESCO অবস্থার সার, গেজেট/CS-SA রেকর্ডের চেকলিস্ট (বানানো নম্বর ছাড়া), বিপন্ন নিদর্শনের রেড-লিস্ট খসড়া ফর্ম এবং কোন নিদর্শন কোন জাদুঘরে — তার ডিরেক্টরি পাবেন। জরুরি ক্ষতি দেখলে ৯৯৯ ও DoA-তে জানান।</p>' +
+        linksHtml([['support.html#legal', 'গেজেট ও সংরক্ষণ'], ['support.html#museums', 'জাদুঘর ডিরেক্টরি']]);
+    }
+    if (/কমিউনিটি|অডিও গাইড|সাউন্ডস্কেপ|শব্দ.*শুন|ইউটিউব|youtube|ভিডিও দেখ/i.test(low)) {
+      return '<p>কমিউনিটি হাবে ঘণ্টা-বৃষ্টি-পাখির <b>সাউন্ডস্কেপ</b>, স্থান ধরে বাংলা/English <b>অডিও গাইড</b>, #BDHeritageMap ডায়েরি ও প্রামাণ্যচিত্র খোঁজার ইউটিউব আর্কাইভ আছে।</p>' +
+        linksHtml([['community.html#soundscape', 'শব্দের মানচিত্র'], ['community.html#audioguide', 'অডিও গাইড'], ['community.html#youtube', 'ইউটিউব আর্কাইভ']]);
+    }
+    if (/ডাকটিকিট|টেলিগ্রাম|পুরনো চিঠি|পুরনো দলিল|পত্রিকার কাটিং|পুরনো ম্যাপ|পুরোনো ক্যালেন্ডার/i.test(q)) {
+      return '<p>ডাকটিকিট, খাম, টেলিগ্রাম, পুরনো দলিল-চিঠি, পত্রিকার কাটিং, পুরনো বই/PDF, গান, ইলাস্ট্রেশন ও ম্যাপ — ‘কাগজে ঐতিহ্য’ খোঁজা ও জমা দেওয়ার নিয়ম সংরক্ষণাগার ও জ্ঞানকোষে দেওয়া। মালিকানা ও সম্মতি ছাড়া ব্যক্তিগত নথি প্রকাশ করবেন না।</p>' +
+        linksHtml([['knowledge.html#paper', 'কাগজে ঐতিহ্য গাইড'], ['historical-archive.html', 'ঐতিহাসিক সংরক্ষণাগার']]);
+    }
+    return '<p>আমি সাহায্য করতে পারি: বৌদ্ধ ঐতিহ্য ও ইতিহাস, স্থান-ভ্রমণ ও রুট, বাজেট, 360° ভ্রমণ, লিপি-চর্যাপদ-মুদ্রা জ্ঞানকোষ, Scholar গবেষণা, উৎসব-পঞ্জিকা, গেম ও সার্টিফিকেট, গৃহী নীতি ও সূত্র, বন্দনা — আর <b>শিশুর ধর্মীয় নাম</b> ও <b>প্রতিষ্ঠান/স্থানের নাম</b>। যেকোনো একটি উদাহরণ বোতামে চাপ দিন, বা প্রশ্ন লিখুন।</p>' +
       linksHtml([['philosophy.html#grihi', 'গৃহী নীতি'], ['philosophy.html#bandana', 'বন্দনা ও জীবনাচার'], ['index.html#explore', 'স্থান খুঁজুন']]);
   }
 
@@ -380,7 +442,8 @@
   function onlineReply(query) {
     var lang = $('chatLanguage').value.startsWith('bn') ? 'bn' : 'en';
     var pending = message(lang === 'bn' ? 'অনলাইন সহায়কের উত্তর খোঁজা হচ্ছে…' : 'Looking up the configured online assistant…');
-    var endpoint = String(window.SANGHAMITRA_API_URL || window.CHARJAVUMI_CHAT_ENDPOINT || '/api/chat').trim();
+    var cfgUrl = (window.CHARYABHUMI_CONFIG && window.CHARYABHUMI_CONFIG.sanghamitraApiUrl) || '';
+    var endpoint = String(window.SANGHAMITRA_API_URL || window.CHARJAVUMI_CHAT_ENDPOINT || cfgUrl || '/api/chat').trim();
     var controller = new AbortController();
     var timeout = setTimeout(function () { controller.abort(); }, 45000);
     return searchPlaces(query, 1).catch(function () { return []; }).then(function (matches) {
@@ -421,7 +484,7 @@
   function ensureStyles() {
     if (document.getElementById('cbSanghaStyles')) return;
     var link = document.createElement('link');
-    link.id = 'cbSanghaStyles'; link.rel = 'stylesheet'; link.href = 'sanghamitra.css?v=20261024e';
+    link.id = 'cbSanghaStyles'; link.rel = 'stylesheet'; link.href = 'sanghamitra.css?v=20261024f';
     document.head.appendChild(link);
   }
   function ensurePanel() {
@@ -434,8 +497,8 @@
       '<select id="voiceSelect" aria-label="Available device voices"><option value="">Device default voice</option></select></div>' +
       '<label class="sm-consent"><input type="checkbox" id="allowStats"> Allow local guide to read my visit stats / ভ্রমণ-পরিসংখ্যান পড়ার অনুমতি</label>' +
       '<label class="sm-consent"><input type="checkbox" id="onlineAI"> Use optional online AI (question + selected public record only)</label>' +
-      '<div id="chatMessages" class="sm-messages" aria-live="polite"><div class="message bot">আমি সংঘমিত্র—সাইটজুড়ে একই সহায়ক। স্থান, ইতিহাস, দর্শন, ভ্রমণ বা শিশুর নাম জিজ্ঞাসা করুন।<small>Default: local curated guide, not generative AI. Online AI is off until you choose it.</small></div></div>' +
-      '<div class="sm-quick"><button type="button" data-sm-prompt="Dharmarajika">Dharmarajika ↗</button><button type="button" data-sm-prompt="My progress">My progress ↗</button><button type="button" data-sm-prompt="শিশুর ধর্মীয় নাম">শিশুর নাম</button><button type="button" data-sm-prompt="ভ্রমণ রুট">ভ্রমণ রুট</button></div>' +
+      '<div id="chatMessages" class="sm-messages" aria-live="polite"><div class="message bot">আমি সংঘমিত্র (আপডেটেড) — স্থান, ইতিহাস, রুট-বাজেট, 360° ভ্রমণ, জ্ঞানকোষ, গবেষণা, উৎসব-তারিখ, গেম-সার্টিফিকেট বা শিশুর নাম — যা লাগে জিজ্ঞাসা করুন।<small>Default: local curated guide, not generative AI. Online AI is off until you choose it.</small></div></div>' +
+      '<div class="sm-quick"><button type="button" data-sm-prompt="ভ্রমণ রুট ও ইটিনারারি">🧭 রুট</button><button type="button" data-sm-prompt="ট্রাভেল বাজেট কত লাগবে">💰 বাজেট</button><button type="button" data-sm-prompt="360 স্ট্রিট ভিউ দেখতে চাই">🧍 360°</button><button type="button" data-sm-prompt="পরের উৎসব কবে">📅 উৎসব</button><button type="button" data-sm-prompt="চর্যাপদ সম্পর্কে জানতে চাই">🎵 চর্যাপদ</button><button type="button" data-sm-prompt="Scholar গবেষণা খুঁজব">🎓 গবেষণা</button><button type="button" data-sm-prompt="শিশুর ধর্মীয় নাম">শিশুর নাম</button><button type="button" data-sm-prompt="My progress">My progress ↗</button></div>' +
       '<form id="chatForm" class="sm-form"><button type="button" class="sm-icon" id="smDictate" aria-label="Speak your question">🎙</button><input id="chatInput" maxlength="500" required placeholder="প্রশ্ন লিখুন / Ask SanghaMitra…" aria-label="Ask SanghaMitra"><button class="send-button" aria-label="Send message">↑</button></form>' +
       '<div class="sm-footer"><button type="button" id="smReadAloud">◖ Read reply aloud</button><button type="button" id="smStopVoice">Stop voice</button></div><p id="smVoiceStatus" class="sm-voice-status" role="status"></p>';
     document.body.appendChild(panel);

@@ -5,6 +5,14 @@
 
 ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই
 
+## ২০২৬-১০-২৪: মেগা ফিচার phase (GIS · ভ্রমণ · জ্ঞানকোষ · গবেষণা · কমিউনিটি)
+
+- **নতুন ৭টি পাতা:** `explore3d.html` (Street View/Earth/KML/Timelapse/Lens), `travel-planner.html` (রুট, ৫ থিম-ভ্রমণসূচি, বাজেট ক্যালকুলেটর), `knowledge.html` (ব্রাহ্মী-সিল-চর্যাপদ-৩১ ভূমি-মুদ্রা জ্ঞানকোষ), `research.html` (Scholar গেটওয়ে ও পরিভাষা অভিধান), `community.html` (শব্দ-পরিবেশ ও ভ্রমণ-খসড়া), `support.html` (নিরাপদ দান গাইড), `heritage-lab.html` (বিশ্ব-তুলনা ও ডিজিটাল সার্টিফিকেট)।
+- **আপডেট:** হোমে `#mega-hub` ও per-card ম্যাপ-টুল, ক্যালেন্ডারে স্বয়ংক্রিয় উৎসব-তারিখ (পঞ্জিকা-ইঞ্জিন, ±১ দিন দাবিত্যাগসহ), শিশুপাতায় XP/ব্যাজ/ট্রেজার-হান্ট/ডিগ/পেপার-ক্র্যাফট, সংঘমিত্রে ১৫+ নতুন বিষয় + Gemini সার্ভার-প্রোভাইডার, PWA (install/offline)।
+- **ডেটা:** নতুন ৬টি JSON (`heritage-knowledge`, `travel-plus`, `research-plus`, `support-config`, `festivals-auto`, `games-plus`) — ফাইল বদলালেই পাতা আপডেট। কোনো API key ছাড়াই চলে; কী শুধু সার্ভারে (`GEMINI_API_KEY`/`OPENAI_API_KEY`)।
+- **সততা-নীতি:** বানানো দান-নম্বর/দাগ-গেজেট নম্বর/ভিডিও আইডি নেই — যাচাইকৃত তথ্য না পেলে ঘর খালি ও নির্দেশনাসহ।
+- বিস্তারিত: `docs/update-2026-10-24-mega-features-bn.md` · টেস্ট: `tests/mega-features.spec.cjs` (১২টি)।
+
 ## নতুন: Charjavumi Travel Tracker
 
 `tracker.html` — ৬৪ জেলার ইন্টারঅ্যাকটিভ ম্যাপ, বিদ্যমান ৩,২১৮টি ডিরেক্টরি রেকর্ডের ভিজিট-চেকলিস্ট, ব্যক্তিগত ছবি/ভিডিও জার্নাল, অনুমতিভিত্তিক foreground GPS রুট, PNG/JPG progress card এবং backup/restore। মূল সাইট অক্ষত; হোমপেজ ও নেভিগেশনে ট্র্যাকার লিংক যোগ করা হয়েছে।

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>ট্রাভেল প্ল্যানার — রুট, ইটিনারারি, আবাসন ও বাজেট ক্যালকুলেটর | চর্যাভূমি</title>
+  <meta name="description" content="বাংলাদেশের বৌদ্ধ ঐতিহ্যস্থানে যাওয়ার ইন্টার‌্যাকটিভ রুট (Google Maps/Waze), ২—৬ দিনের থিমেটিক ইটিনারারি, নিকটস্থ হোটেল-হাসপাতাল ডিরেক্টরি ও ট্রাভেল বাজেট ক্যালকুলেটর।">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
+  <link rel="stylesheet" href="mega.css?v=20261024f">
+</head>
+<body class="cb">
+  <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
+  <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
+  <header class="cb-header" id="cbHeader"></header>
+
+  <main id="main">
+    <section class="mx-hero">
+      <div class="cb-wrap">
+        <p class="cb-kicker">🧭 ট্রাভেল · লজিস্টিকস · ইনক্লুসিভ ট্যুরিজম</p>
+        <h1>রুট ও ট্রাভেল প্ল্যানার</h1>
+        <p class="cb-lead">কোথা থেকে কীভাবে যাবেন, কদিনে কোন ঘাঁটি থেকে কী দেখবেন, কাছে হোটেল-হাসপাতাল কোথায়, মোট খরচ কত পড়তে পারে — সব হিসাব এক পাতায়। লাইভ ট্রাফিকসহ চূড়ান্ত রুট দেখা যাবে Google Maps/Waze-এ।</p>
+      </div>
+    </section>
+
+    <nav class="mx-navpills" aria-label="এই পাতার অংশসমূহ">
+      <div class="cb-wrap">
+        <a href="#route">রুট প্ল্যানার</a><a href="#itineraries">রেডিমেড ইটিনারারি</a>
+        <a href="#nearby">আবাসন ও জরুরি সেবা</a><a href="#budget">বাজেট ক্যালকুলেটর</a><a href="#access">সবার জন্য ভ্রমণ</a>
+      </div>
+    </nav>
+
+    <section class="cb-section" id="route">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Google Maps Platform · Waze</p>
+        <h2>ইন্টার‌্যাকটিভ রুট প্ল্যানার</h2>
+        <form class="mx-form" id="routeForm">
+          <label>কোথা থেকে (যাত্রা শুরু)
+            <select id="routeOrigin"></select>
+          </label>
+          <label>কোথায় যাবেন (গন্তব্য)
+            <select id="routeDest"></select>
+          </label>
+          <label>যানবাহন
+            <select id="routeMode">
+              <option value="driving">🚗 গাড়ি/বাস (ড্রাইভিং রুট)</option>
+              <option value="transit">🚆 পাবলিক পরিবহন (বাস/ট্রেন থাকলে)</option>
+              <option value="walking">🚶 হাঁটা (শেষ অংশের জন্য)</option>
+            </select>
+          </label>
+        </form>
+        <div class="mx-btns">
+          <button type="button" class="cb-btn solid" id="routeGo">🧭 Google Maps-এ লাইভ রুট দেখুন ↗</button>
+          <button type="button" class="cb-btn" id="routeWaze">Waze-এ নেভিগেশন ↗</button>
+          <button type="button" class="cb-btn ghost" id="routeGeo">◎ আমার বর্তমান অবস্থান থেকে</button>
+        </div>
+        <div class="mx-out" id="routeOut" aria-live="polite">যাত্রা-শুরু ও গন্তব্য বেছে নিন — সরাসরি দূরত্ব, আনুমানিক সড়ক-দূরত্ব ও সময় এখানে দেখাবে।</div>
+        <div id="hubCards"></div>
+        <p class="mx-mini">সরাসরি (crow-fly) দূরত্ব থেকে সড়ক-দূরত্ব ≈ ×১.৩ ধরে হিসাব — পাহাড়ি/নদীপথে বেশি লাগতে পারে। ট্রেনের সময় ও টিকিট: <a href="https://eticket.railway.gov.bd/" target="_blank" rel="noopener">বাংলাদেশ রেলওয়ে ই-টিকিট ↗</a> · ফ্লাইট/হোটেল তুলনা: <a href="https://www.google.com/travel" target="_blank" rel="noopener">Google Travel ↗</a></p>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="itineraries">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">থিমেটিক রুট</p>
+        <h2>রেডিমেড ইটিনারারি (২—৬ দিন)</h2>
+        <p class="cb-sub">দিন ধরে সাজানো পরিকল্পনা; শুরুর তারিখ বেছে ক্যালেন্ডার ফাইল (.ics) নিন, প্রিন্ট করুন, অথবা হোমপেজের ভ্রমণ-তালিকায় স্থানগুলো যোগ করে নিন। জাদুঘরের বন্ধের দিন ও সেনানিবাস-সংলগ্ন প্রবেশের নিয়ম Atlas-এ আগে যাচাই করুন।</p>
+        <form class="mx-form" style="max-width:520px">
+          <label>ভ্রমণ শুরুর তারিখ <input type="date" id="tripStart"></label>
+          <label>ইটিনারারি <select id="itinSelect"></select></label>
+        </form>
+        <div id="itinDetail"></div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="nearby">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Google Places-ধাঁচের খোঁজ</p>
+        <h2>নিকটস্থ আবাসন ও জরুরি সেবা ডিরেক্টরি</h2>
+        <p class="cb-sub">গন্তব্য বেছে সেবার ধরনে চাপ দিন — সেই স্থানের ৫ কিমি আশপাশের লাইভ ফলাফল Google Maps-এ খুলবে (রেটিং, অবস্থান, ফোনসহ — কোনো তালিকা আমরা বানিয়ে রাখি না, তাই বন্ধ হয়ে যাওয়া ব্যবসার ভুল তথ্য দেওয়ার ঝুঁকি নেই)। গাইড ঠিক করলে সরকারি নিবন্ধন/বিহারের সুপারিশ যাচাই করুন।</p>
+        <label style="font-weight:700">কোন স্থানের কাছে খুঁজবেন?
+          <select id="nearbySite" style="padding:9px 12px;border-radius:10px;font:inherit"></select>
+        </label>
+        <div class="mx-grid" id="nearbyGrid"></div>
+        <div class="mx-warn"><b>জরুরি:</b> জাতীয় জরুরি সেবা <b>৯৯৯</b> · স্বাস্থ্য বাতায়ন <b>১৬২৬৩</b> · দুর্যোগের আগাম বার্তা <b>১০৯০</b>। নম্বরগুলো সরকারি সূত্রে যাচাই করে ফোনে সেভ রাখুন। সম্পূর্ণ তালিকা: <a href="about.html#emergency">জরুরি নম্বর</a></div>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="budget">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Budget Planner</p>
+        <h2>ট্রাভেল বাজেট ক্যালকুলেটর</h2>
+        <p class="cb-sub">দূরত্ব, লোকসংখ্যা, দিন আর থাকার মান দিলে মোটামুটি খরচের হিসাব পাবেন। হারগুলো ইচ্ছামতো বদলানো যায়; ডিফল্ট মান শুধু ধারণার জন্য — অফিসিয়াল ভাড়া নয়।</p>
+        <form class="mx-form" id="budgetForm">
+          <label>একমুখী সড়ক-দূরত্ব (কিমি) <input type="number" id="bKm" min="0" value="280"></label>
+          <label>যাত্রী সংখ্যা <input type="number" id="bPersons" min="1" value="2"></label>
+          <label>মোট দিন <input type="number" id="bDays" min="1" value="3"></label>
+          <label>রাত (থাকা) <input type="number" id="bNights" min="0" value="2"></label>
+          <label>দূরপাল্লার যান
+            <select id="bTransport"><option value="bus_nonac">বাস (নন-এসি)</option><option value="bus_ac">বাস (এসি)</option><option value="train_chair" selected>ট্রেন (শোভন চেয়ার)</option><option value="train_ac">ট্রেন (এসি)</option></select>
+          </label>
+          <label>প্রতি কিমি ভাড়া (৳/জন) <input type="number" id="bRateKm" step="0.5" min="0" value="3.5"></label>
+          <label>স্থানীয় যাতায়াত (৳/দিন, সবাই মিলে) <input type="number" id="bLocalDay" min="0" value="800"></label>
+          <label>থাকার মান
+            <select id="bStay"><option value="budget">সাশ্রয়ী</option><option value="mid" selected>মাঝারি</option><option value="comfort">আরামদায়ক</option><option value="dakbungalow">ডাকবাংলো (মিললে)</option></select>
+          </label>
+          <label>রুমভাড়া (৳/রাত/রুম) <input type="number" id="bRoomRate" min="0" value="2800"></label>
+          <label>কয়টি রুম <input type="number" id="bRooms" min="1" value="1"></label>
+          <label>খাওয়ার মান
+            <select id="bFood"><option value="budget">সাশ্রয়ী</option><option value="mid" selected>মাঝারি</option><option value="comfort">আরামদায়ক</option></select>
+          </label>
+          <label>খাবার (৳/দিন/জন) <input type="number" id="bFoodRate" min="0" value="1100"></label>
+          <label>গাইড (৳/দিন, ০ হলে নেই) <input type="number" id="bGuide" min="0" value="0"></label>
+          <label>প্রবেশ+জাদুঘর (৳/জন, মোট) <input type="number" id="bEntry" min="0" value="150"></label>
+          <label>বিবিধ বাফার (৳) <input type="number" id="bBuffer" min="0" value="1000"></label>
+        </form>
+        <div class="mx-btns">
+          <button type="button" class="cb-btn solid" id="budgetCalc">💰 খরচের হিসাব করুন</button>
+          <button type="button" class="cb-btn" id="budgetFromRoute">রুট প্ল্যানারের দূরত্ব বসান</button>
+          <button type="button" class="cb-btn ghost" id="budgetPrint">🖨️ বাজেট প্রিন্ট করুন</button>
+        </div>
+        <div id="budgetOut" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="access">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">ইনক্লুসিভ ট্যুরিজম</p>
+        <h2>সবার জন্য ভ্রমণ: প্রবীণ, শিশু ও বিশেষ চাহিদা</h2>
+        <div id="accessTips"></div>
+        <div class="mx-grid">
+          <article class="mx-card"><h3>👶 শিশুসহ ভ্রমণ</h3><p>প্রত্নস্থলে ছায়া কম থাকে — টুপি, পানি, হালকা খাবার ও সানস্ক্রিন রাখুন। শিশুদের জন্য Atlas-এর <a href="children.html">শিশু বিভাগ</a> ও ফিল্ড-নোটবুক প্রিন্ট করে নিন; প্রাচীরে ওঠা থেকে বিরত রাখুন।</p></article>
+          <article class="mx-card"><h3>🧓 প্রবীণসহ ভ্রমণ</h3><p>ভোরের ঠান্ডায় বের হওয়া, দুপুরে জাদুঘর/বিশ্রাম, সন্ধ্যার আগে ফেরা — এই ছক মানুন। নিয়মিত ওষুধ ও চিকিৎসকের নম্বর সঙ্গে রাখুন; টিলার ঢিবির বদলে সমতল আঙিনার স্থানকে অগ্রাধিকার দিন।</p></article>
+          <article class="mx-card"><h3>♿ চলাচলে সহায়তা লাগলে</h3><p>যাওয়ার আগে DoA আঞ্চলিক দপ্তর/সাইট জাদুঘরে ফোন করে র্যাাম্প ও প্রবেশপথের খোঁজ নিন। এই পাতার স্থানভিত্তিক প্রবেশ-তথ্য মাঠ-যাচাইয়ের পর ধাপে ধাপে যোগ করা হবে — ভুল তথ্য এড়াতে অনুমান বসানো হয়নি।</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer" id="cbFooter"></footer>
+  <script src="config.js?v=20261024f" defer></script>
+  <script src="mega-utils.js?v=20261024f" defer></script>
+  <script src="language.js?v=20261024d" defer></script>
+  <script src="brand.js?v=20261024e" defer></script>
+  <script src="travel-planner.js?v=20261024f" defer></script>
+  <script src="pwa.js?v=20261024f" defer></script>
+</body>
+</html>

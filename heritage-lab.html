@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>Heritage Lab — বিশ্ব ঐতিহ্য তুলনা, সার্টিফিকেট, অ্যানালিটিক্স ও টেক স্থিতি | চর্যাভূমি</title>
+  <meta name="description" content="সোমপুর বনাম নালন্দা-বিক্রমশীলা-বরোবুদুর তুলনামূলক চার্ট, সব স্থান ঘোরা শেষে ডিজিটাল সার্টিফিকেট, লোকাল ইউজার অ্যানালিটিক্স ড্যাশবোর্ড, ফিল্ড-রিপোর্ট কিউ, PWA ইনস্টল ও Firebase/Gemini কনফিগ অবস্থা।">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
+  <link rel="stylesheet" href="mega.css?v=20261024f">
+</head>
+<body class="cb">
+  <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
+  <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
+  <header class="cb-header" id="cbHeader"></header>
+
+  <main id="main">
+    <section class="mx-hero">
+      <div class="cb-wrap">
+        <p class="cb-kicker">🧪 টেকনিক্যাল আর্কিটেকচার · অ্যানালিটিক্স · সার্টিফিকেট</p>
+        <h1>Heritage Lab</h1>
+        <p class="cb-lead">তুলনামূলক ডেটা-চার্ট, আপনার অর্জনের সার্টিফিকেট, নিজের ডিভাইসের ব্যবহার-পরিসংখ্যান আর সাইটের পেছনের প্রযুক্তির স্বচ্ছ হিসাব — পরীক্ষাগারের মতো খোলামেলা।</p>
+      </div>
+    </section>
+
+    <nav class="mx-navpills" aria-label="এই পাতার অংশসমূহ">
+      <div class="cb-wrap">
+        <a href="#compare">🌏 বিশ্ব ঐতিহ্য তুলনা</a><a href="#certificate">🏅 সার্টিফিকেট</a>
+        <a href="#analytics">📊 আমার অ্যানালিটিক্স</a><a href="#fieldqueue">📥 ফিল্ড-রিপোর্ট</a><a href="#tech">⚙️ টেক স্থিতি</a>
+      </div>
+    </nav>
+
+    <section class="cb-section" id="compare">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">World Heritage Comparison</p>
+        <h2>সোমপুর বনাম নালন্দা, বিক্রমশীলা ও বরোবুদুর</h2>
+        <div id="compareNote"></div>
+        <div class="mx-canvas-wrap">
+          <h3 style="margin-top:0">পরিসর তুলনা (হেক্টর, আনুমানিক)</h3>
+          <canvas id="compareCanvas" width="1040" height="400" aria-label="বিশ্ব ঐতিহ্যস্থানগুলোর আয়তন তুলনার স্তম্ভলেখ"></canvas>
+        </div>
+        <div id="compareTable"></div>
+        <p class="mx-mini">“অটো-আপডেট” যেভাবে কাজ করে: সংখ্যাগুলো <code>data/research-plus.json</code>-এর <code>world_comparison</code> থেকে পড়া হয় — যাচাই তারিখসহ সেখানে মান বদলালেই এই চার্ট ও সারণি নিজে বদলে যাবে। UNESCO তালিকার লাইভ অবস্থা যাচাই করতে প্রতিটি কার্ডের মূল লিংক দেখুন।</p>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="certificate">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Digital Memento</p>
+        <h2>ডিজিটাল সার্টিফিকেট / ঐতিহ্য-পাস</h2>
+        <p class="cb-sub">Atlas ভার্চুয়াল পাসপোর্টের স্ট্যাম্প ও গেমের XP মিলিয়ে আপনার অর্জন। সবকটি (১২টি) স্ট্যাম্প পূর্ণ হলে “পূর্ণ তীর্থযাত্রী” সার্টিফিকেট; অংশিক হলেও অগ্রগতি-স্মারক নিতে পারবেন। এটি NFT নয় — যাচাই-কোডসহ ছবি (PNG) স্মারক, যা এই ডিভাইসের রেকর্ড থেকে তৈরি।</p>
+        <div class="mx-grid wide">
+          <div class="mx-card">
+            <h3>আপনার অগ্রগতি</h3>
+            <div id="certProgress"></div>
+            <form class="mx-form" onsubmit="return false">
+              <label>সার্টিফিকেটে নাম <input id="certName" maxlength="50" placeholder="আপনার নাম"></label>
+            </form>
+            <div class="mx-btns">
+              <button type="button" class="cb-btn solid" id="certMake">🏅 সার্টিফিকেট তৈরি ও ডাউনলোড</button>
+              <a class="cb-btn ghost" href="atlas.html#passport">Atlas পাসপোর্টে স্ট্যাম্প জমা করুন</a>
+              <a class="cb-btn ghost" href="children.html#games-plus">গেমে XP বাড়ান</a>
+            </div>
+            <p class="mx-mini">স্ট্যাম্প Atlas-এর প্রমাণ-প্রশ্নের পুরস্কার — শারীরিক ভ্রমণের প্রমাণ নয়; সার্টিফিকেটেও তা লেখা থাকে। নাম কোথাও পাঠানো হয় না।</p>
+          </div>
+          <div class="mx-card">
+            <h3>প্রিভিউ</h3>
+            <canvas id="certCanvas" width="1200" height="850" style="width:100%;height:auto;border:1px solid var(--cb-line);border-radius:12px" aria-label="সার্টিফিকেট প্রিভিউ"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="analytics">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Local Analytics — আপনার ডেটা আপনার কাছে</p>
+        <h2>আমার ব্যবহারের ড্যাশবোর্ড</h2>
+        <p class="cb-sub">এই পরিসংখ্যান শুধু এই ব্রাউজারে গোনা পাতা-দর্শন ও পাসপোর্ট-কার্যকলাপ থেকে — সার্ভারে কিছু পাঠানো হয় না। সাইট-ব্যাপী সমষ্টিগত অ্যানালিটিক্সের জন্য মালিক <code>config.js</code>-এ GA4 আইডি বসালে Google Analytics/Looker Studio-তে কোন স্থানে আগ্রহ বেশি তা দেখা যাবে (ব্যক্তিগত জার্নাল/ট্র্যাকার-ডেটা কখনোই নয়)।</p>
+        <div id="analyticsOut"></div>
+        <div class="mx-canvas-wrap"><canvas id="analyticsCanvas" width="1040" height="380" aria-label="পাতাভিত্তিক দর্শনের লেখচিত্র"></canvas></div>
+        <div class="mx-btns"><button type="button" class="cb-btn ghost" id="analyticsClear">আমার লোকাল অ্যানালিটিক্স মুছুন</button></div>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="fieldqueue">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Crowdsourced Field Reports</p>
+        <h2>ফিল্ড-রিপোর্ট কিউ ও ব্যাকএন্ড সংযোগ</h2>
+        <div id="fieldQueueInfo"></div>
+        <div class="mx-btns">
+          <a class="cb-btn solid" href="support.html#legal">🔴 নতুন রেড-লিস্ট রিপোর্ট লিখুন</a>
+          <a class="cb-btn" href="atlas.html#field-desk">Atlas ফিল্ড-ডেস্ক</a>
+          <button type="button" class="cb-btn ghost" id="fieldExportAll">⬇ সব রিপোর্ট একসঙ্গে JSON-এ</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="tech">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Performance · Security · Hosting</p>
+        <h2>টেক স্থিতি ও সাইট-মালিকের চেকলিস্ট</h2>
+        <div id="techStatus"></div>
+        <div class="mx-grid">
+          <article class="mx-card"><h3>📱 অ্যাপ হিসেবে ইনস্টল (PWA)</h3><p>দুর্বল ইন্টারনেটে অফলাইন ক্যাশেসহ দ্রুত লোড। ক্রোম/এজে “Install” এলে এক চাপে হোম-স্ক্রিনে যোগ হবে।</p><div class="mx-btns"><button type="button" class="cb-btn sm" id="pwaInstallBtn">ইনস্টল করুন</button><span class="mx-meta" id="pwaStatus"></span></div></article>
+          <article class="mx-card"><h3>⚡ পারফরম্যান্স</h3><p>Leaflet ম্যাপ lazy-লোড, ছবিতে <code>loading="lazy"</code>, Service Worker ক্যাশে (HTML network-first), স্থানীয় ফন্ট। যাচাই: Chrome Lighthouse-এ Performance ≥ ৯০ লক্ষ্য রাখুন; বড় ছবি যোগ করলে WebP ও প্রস্থ-সীমা ব্যবহার করুন। Flutter চাইলে এই JSON ডেটা-স্তর সরাসরি ব্যবহারযোগ্য; Material-ধাঁচের UI-এর জন্য বিদ্যমান রঙ-টোকেন (CSS variables) নিন।</p></article>
+          <article class="mx-card"><h3>🔒 সিকিউরিটি</h3><p>API সিক্রেট শুধু সার্ভারে; Firestore ব্যবহারে <code>firestore.rules</code>; হোস্টিংয়ে (Vercel/Cloudflare/GitHub Pages) HTTPS বাধ্যতামূলক, <code>Referrer-Policy</code>/<code>X-Content-Type-Options</code> হেডার চালু করুন। বিস্তারিত: <a href="docs/update-2026-10-24-mega-features-bn.md">আপডেট গাইড</a>।</p></article>
+          <article class="mx-card"><h3>🗄️ ব্যাকএন্ড বিকল্প</h3><p>Firebase/Supabase-এর জন্য <code>docs/firestore-schema.json</code> আগেই আছে; নতুন রিপোর্ট-JSON একই ঘরানার। MCP সার্ভার (<code>server/tracker_mcp.py</code>) আগের মতোই আছে — নতুন ডেটা ফাইলগুলো সেখানে রিসোর্স হিসেবে যোগ করা যায়।</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer" id="cbFooter"></footer>
+  <script src="config.js?v=20261024f" defer></script>
+  <script src="mega-utils.js?v=20261024f" defer></script>
+  <script src="language.js?v=20261024d" defer></script>
+  <script src="brand.js?v=20261024e" defer></script>
+  <script src="heritage-lab.js?v=20261024f" defer></script>
+  <script src="pwa.js?v=20261024f" defer></script>
+</body>
+</html>

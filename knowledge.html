@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>জ্ঞানকোষ — লিপি, চর্যাপদ, প্রতিমাতত্ত্ব, স্বর্গ-নরক, মুদ্রা ও পরিব্রাজক | চর্যাভূমি</title>
+  <meta name="description" content="ব্রাহ্মী-সিদ্ধমাতৃকা লিপি পাঠোদ্ধার, সিলমোহরে বিহারের আসল নাম, চর্যাপদ ও সিদ্ধাচার্য, পালি শব্দের বাংলা যাত্রা, মহাযান-বজ্রযান প্রতিমাতত্ত্ব, ৩১ ভূমি-স্বর্গ-নরক-বিমান, স্থাপত্য ডিরেক্টরি, মুদ্রাশাস্ত্র, বৌদ্ধ বিজ্ঞান, চীনা-তিব্বতি পরিব্রাজক ও লোককথা।">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
+  <link rel="stylesheet" href="mega.css?v=20261024f">
+</head>
+<body class="cb">
+  <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
+  <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
+  <header class="cb-header" id="cbHeader"></header>
+
+  <main id="main">
+    <section class="mx-hero">
+      <div class="cb-wrap">
+        <p class="cb-kicker">📜 ঐতিহাসিক দলিল · প্রত্নতত্ত্ব · ইতিহাস</p>
+        <h1>বৌদ্ধ ঐতিহ্য জ্ঞানকোষ</h1>
+        <p class="cb-lead">লিপি থেকে লোককথা — প্রত্নস্থলের পাশে দাঁড়িয়ে যা যা জানতে ইচ্ছে করে, সূত্রসহ সাজানো। যেখানে প্রমাণ দুর্বল বা মতভেদ আছে, স্পষ্ট লেখা আছে।</p>
+        <form class="mx-form" style="max-width:560px" onsubmit="return false">
+          <label style="color:#ffe9bb">🔎 জ্ঞানকোষে খুঁজুন
+            <input id="kbSearch" type="search" placeholder="তারা, লুইপা, হরিকেল, অবীচি, ব্রাহ্মী…">
+          </label>
+        </form>
+        <div id="kbSearchResults" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <div class="cb-wrap">
+      <div class="mx-tabs" role="tablist" aria-label="জ্ঞানকোষের বিভাগ">
+        <button role="tab" aria-selected="true" data-tab="epigraphy">📜 লিপি ও সিলমোহর</button>
+        <button role="tab" aria-selected="false" data-tab="charya">🎵 চর্যাপদ ও সিদ্ধাচার্য</button>
+        <button role="tab" aria-selected="false" data-tab="iconography">🪷 প্রতিমা ও প্রতীক</button>
+        <button role="tab" aria-selected="false" data-tab="cosmology">🌌 স্বর্গ·নরক·বিমান</button>
+        <button role="tab" aria-selected="false" data-tab="archlife">🏛️ স্থাপত্য ও জীবন</button>
+        <button role="tab" aria-selected="false" data-tab="coins">🪙 মুদ্রা ও বিজ্ঞান</button>
+        <button role="tab" aria-selected="false" data-tab="pilgrims">🧳 পরিব্রাজক ও জনপদ</button>
+        <button role="tab" aria-selected="false" data-tab="society">🏘️ সমাজ ও লোককথা</button>
+        <button role="tab" aria-selected="false" data-tab="paper">✉️ কাগজে ঐতিহ্য</button>
+      </div>
+    </div>
+
+    <section class="cb-section mx-tabpage" id="tab-epigraphy">
+      <div class="cb-wrap">
+        <h2>ব্রাহ্মী ও সিদ্ধমাতৃকা লিপি পাঠোদ্ধার</h2>
+        <div id="epiIntro"></div>
+        <h3>লিপির বিবর্তন</h3>
+        <div class="mx-grid wide" id="scriptGrid"></div>
+        <h3>প্রধান তাম্রশাসন ও লিপি: মূল তথ্য ও অনুবাদ-উৎস</h3>
+        <div id="plateList"></div>
+        <div class="mx-card">
+          <h3>✍️ খেলনা ব্রাহ্মী রূপান্তরক (শেখার জন্য)</h3>
+          <p>বাংলা বা ইংরেজি ধ্বনিতে (যেমন: <button type="button" class="cb-mini-btn" data-brahmi-demo="buddha">buddha</button> <button type="button" class="cb-mini-btn" data-brahmi-demo="dhamma">dhamma</button> <button type="button" class="cb-mini-btn" data-brahmi-demo="somapura">somapura</button> <button type="button" class="cb-mini-btn" data-brahmi-demo="বুদ্ধ">বুদ্ধ</button>) লিখুন — কাছাকাছি ব্রাহ্মী অক্ষর দেখাবে।</p>
+          <form class="mx-form" style="max-width:640px" onsubmit="return false">
+            <label>শব্দ লিখুন <input id="brahmiInput" type="text" placeholder="buddha / বুদ্ধ" maxlength="40"></label>
+          </form>
+          <p style="font-size:34px;letter-spacing:4px;min-height:48px" id="brahmiOut" aria-live="polite"></p>
+          <p class="mx-mini" id="brahmiNote"></p>
+          <p class="mx-mini">ডিভাইসে ব্রাহ্মী ফন্ট না থাকলে ফাঁকা বাক্স (□) দেখাতে পারে — সেক্ষেত্রে Noto Sans Brahmi ফন্ট ইনস্টল করুন। এটি পণ্ডিতমহলের পাঠোদ্ধার নয়।</p>
+        </div>
+        <h3>সিলমোহরে বিহারের প্রকৃত নাম</h3>
+        <div id="sealTable"></div>
+      </div>
+    </section>
+
+    <section class="cb-section mx-tabpage" id="tab-charya" hidden>
+      <div class="cb-wrap">
+        <h2>চর্যাপদ ও সিদ্ধাচার্যদের মানচিত্র</h2>
+        <div id="charyaMain"></div>
+        <h3>পালি, প্রাকৃত ও লোকভাষা: বাংলায় টিকে থাকা শব্দ</h3>
+        <div id="paliTable"></div>
+      </div>
+    </section>
+
+    <section class="cb-section mx-tabpage" id="tab-iconography" hidden>
+      <div class="cb-wrap">
+        <h2>প্রতিমাতত্ত্ব: বুদ্ধ, বোধিসত্ত্ব ও দেব-দেবী চেনার উপায়</h2>
+        <p class="cb-sub">জাদুঘরে মূর্তির সামনে এই কার্ডগুলো মেলান; ছবি দিয়ে যাচাই করতে <a href="explore3d.html#lens">লেন্স স্ক্যানার</a> ব্যবহার করুন। এখানে বাংলাদেশে প্রাপ্ত পাল-রীতির বৈশিষ্ট্যকে প্রাধান্য দেওয়া।</p>
+        <div class="mx-grid wide" id="iconGrid"></div>
+      </div>
+    </section>
+
+    <section class="cb-section mx-tabpage" id="tab-cosmology" hidden>
+      <div class="cb-wrap">
+        <h2>বিমান ও স্বর্গ, নরক ও প্রেতলোক — কোন কর্মে কোন গতি?</h2>
+        <div id="cosmoMain"></div>
+      </div>
+    </section>
+
+    <section class="cb-section mx-tabpage" id="tab-archlife" hidden>
+      <div class="cb-wrap">
+        <h2>স্থাপত্য ডিরেক্টরি</h2>
+        <div class="mx-card">
+          <h3>স্তূপের অংশসমূহ (চিত্র)</h3>
+          <svg viewBox="0 0 640 330" role="img" aria-label="স্তূপের অংশ চিহ্নিত চিত্র" style="width:100%;height:auto">
+            <rect x="0" y="0" width="640" height="330" fill="#fdf6df"/>
+            <g font-family="inherit" font-size="15">
+              <rect x="300" y="30" width="40" height="8" fill="#d99b2b"/><rect x="292" y="42" width="56" height="8" fill="#d99b2b"/><rect x="284" y="54" width="72" height="8" fill="#d99b2b"/>
+              <rect x="272" y="66" width="96" height="26" fill="#b5571f"/>
+              <path d="M170 210 a150 118 0 0 1 300 0 Z" fill="#e8b36a"/>
+              <rect x="150" y="210" width="340" height="22" fill="#c97b3f"/>
+              <rect x="120" y="232" width="400" height="20" fill="#b5571f"/>
+              <path d="M60 290 h520" stroke="#8f3d08" stroke-width="3"/>
+              <g stroke="#123f39" stroke-width="1.4">
+                <path d="M348 40 L470 40"/><path d="M368 78 L470 78"/><path d="M430 150 L500 120"/><path d="M490 220 L540 205"/><path d="M150 242 L70 262"/>
+              </g>
+              <text x="475" y="45">ছত্রাবলী (ছাতা-চক্র)</text>
+              <text x="475" y="83">হার্মিকা</text>
+              <text x="505" y="118">অণ্ড (গম্বুজ)</text>
+              <text x="545" y="203">মেধি/বেদি</text>
+              <text x="12" y="285">প্রদক্ষিণ পথ (চারপাশের খোলা জায়গা)</text>
+            </g>
+          </svg>
+          <p class="mx-mini">পরিকল্পনামূলক চিত্র; অঞ্চলভেদে অনুপাত ও উপকরণ বদলায়। কোটি মুড়া ও সোমপুরে এসে আসল কাঠামোয় অংশগুলো খুঁজুন।</p>
+        </div>
+        <div class="mx-grid wide" id="archGrid" style="margin-top:18px"></div>
+        <h2>প্রাত্যহিক জীবন: মৃৎপাত্র, নর্দমা ও কুয়ো</h2>
+        <div class="mx-grid" id="lifeGrid"></div>
+      </div>
+    </section>
+
+    <section class="cb-section mx-tabpage" id="tab-coins" hidden>
+      <div class="cb-wrap">
+        <h2>মুদ্রাশাস্ত্র: পাল, দেব ও হরিকেলের মুদ্রা</h2>
+        <div class="mx-card" style="margin-bottom:16px">
+          <svg viewBox="0 0 640 190" role="img" aria-label="হরিকেল মুদ্রার পরিকল্পনামূলক চিত্র" style="width:100%;height:auto">
+            <g font-family="inherit" font-size="14">
+              <circle cx="140" cy="85" r="62" fill="#e9e4d8" stroke="#9a8f7a" stroke-width="3"/>
+              <text x="140" y="78" text-anchor="middle" font-size="34">🐂</text>
+              <text x="140" y="112" text-anchor="middle">ষাঁড়-প্রতীক</text>
+              <text x="140" y="168" text-anchor="middle" fill="#5b4a3f">অগ্রভাগ (obverse) — ধাঁচ</text>
+              <circle cx="330" cy="85" r="62" fill="#e9e4d8" stroke="#9a8f7a" stroke-width="3"/>
+              <text x="330" y="86" text-anchor="middle" font-size="36">🔱</text>
+              <text x="330" y="116" text-anchor="middle">ত্রিশূল-চন্দ্রবিন্দু</text>
+              <text x="330" y="168" text-anchor="middle" fill="#5b4a3f">পশ্চাৎভাগ (reverse) — ধাঁচ</text>
+              <circle cx="520" cy="85" r="62" fill="#f3dfa0" stroke="#c9a227" stroke-width="3"/>
+              <text x="520" y="92" text-anchor="middle" font-size="20">হরিকেল</text>
+              <text x="520" y="168" text-anchor="middle" fill="#5b4a3f">‘হরিকেল’ পাঠ (legend) — কোনো কোনো প্রকারে</text>
+            </g>
+          </svg>
+          <p class="mx-mini">পরিকল্পনামূলক আঁকা — আসল মুদ্রার ছবি ও ওজনের জন্য জাতীয় জাদুঘরের মুদ্রা-গ্যালারি/ক্যাটালগ দেখুন।</p>
+        </div>
+        <div id="coinList"></div>
+        <h2>বৌদ্ধ বিজ্ঞান, প্রকৌশল, মনোবিজ্ঞান ও চিকিৎসা</h2>
+        <div class="mx-grid" id="scienceGrid"></div>
+      </div>
+    </section>
+
+    <section class="cb-section mx-tabpage" id="tab-pilgrims" hidden>
+      <div class="cb-wrap">
+        <h2>চীনা ও তিব্বতি পরিব্রাজকের চোখে বাংলা</h2>
+        <div class="mx-card">
+          <svg viewBox="0 0 680 300" role="img" aria-label="পরিব্রাজকদের পথের পরিকল্পনামূলক মানচিত্র" style="width:100%;height:auto">
+            <rect width="680" height="300" fill="#eef4ee"/>
+            <g font-family="inherit" font-size="14">
+              <text x="20" y="34" font-weight="700">চীন → মধ্য এশিয়া / সমুদ্রপথ → ভারত → বাংলা</text>
+              <path d="M40 70 C 180 40, 260 120, 360 110 S 560 90, 630 150" fill="none" stroke="#b5571f" stroke-width="3" stroke-dasharray="7 5"/>
+              <path d="M40 250 C 200 280, 340 200, 470 215 S 600 190, 630 160" fill="none" stroke="#1d5c4f" stroke-width="3" stroke-dasharray="7 5"/>
+              <circle cx="360" cy="110" r="7" fill="#8f3d08"/><text x="340" y="96">নালন্দা</text>
+              <circle cx="520" cy="105" r="7" fill="#8f3d08"/><text x="480" y="92">পুণ্ড্রবর্ধন (মহাস্থান)</text>
+              <circle cx="600" cy="130" r="7" fill="#8f3d08"/><text x="556" y="122">সমতট (ময়নামতি)</text>
+              <circle cx="430" cy="205" r="7" fill="#1d5c4f"/><text x="400" y="230">তাম্রলিপ্ত বন্দর</text>
+              <text x="40" y="60">স্থলপথ (হিউয়েন সাং) — কমলা</text>
+              <text x="40" y="242">সমুদ্রপথ (ফ্যা-হিয়েন, ই-সিং) — সবুজ</text>
+              <text x="430" y="280" fill="#5b4a3f">পরিকল্পনামূলক পথচিত্র; স্কেল অনুযায়ী নয়</text>
+            </g>
+          </svg>
+        </div>
+        <div class="mx-grid wide" id="pilgrimGrid" style="margin-top:16px"></div>
+        <h3>প্রাচীন জনপদ: তখনকার ভূগোল আজকের ম্যাপে</h3>
+        <div id="janapadaTable"></div>
+      </div>
+    </section>
+
+    <section class="cb-section mx-tabpage" id="tab-society" hidden>
+      <div class="cb-wrap">
+        <h2>রাজকীয় পৃষ্ঠপোষকতা, সমাজ, লোককথা ও পরিত্যাগের ইতিহাস</h2>
+        <div class="mx-grid wide" id="societyGrid"></div>
+      </div>
+    </section>
+
+    <section class="cb-section mx-tabpage" id="tab-paper" hidden>
+      <div class="cb-wrap">
+        <h2>কাগজে ঐতিহ্য: ডাকটিকিট থেকে পুরনো ম্যাপ</h2>
+        <div id="paperMain"></div>
+        <div class="mx-note">নিজের সংগ্রহের পুরনো ছবি/নথি সাইটে যুক্ত করতে চাইলে <a href="historical-archive.html">ঐতিহাসিক সংরক্ষণাগার</a>-এর নিয়ম পড়ে মালিকানা ও সম্মতিসহ পাঠান।</div>
+      </div>
+    </section>
+
+    <section class="cb-section alt">
+      <div class="cb-wrap">
+        <h2>উৎস</h2>
+        <div id="kbSources"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer" id="cbFooter"></footer>
+  <script src="config.js?v=20261024f" defer></script>
+  <script src="mega-utils.js?v=20261024f" defer></script>
+  <script src="language.js?v=20261024d" defer></script>
+  <script src="brand.js?v=20261024e" defer></script>
+  <script src="knowledge.js?v=20261024f" defer></script>
+  <script src="pwa.js?v=20261024f" defer></script>
+</body>
+</html>

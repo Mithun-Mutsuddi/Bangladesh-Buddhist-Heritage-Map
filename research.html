@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>গবেষণা ডেস্ক — সংঘমিত্র AI, Google Scholar, গ্রন্থপঞ্জি ও পরিভাষা | চর্যাভূমি</title>
+  <meta name="description" content="বিশেষায়িত AI সহায়ক সংঘমিত্র (আপডেটেড), Google Scholar ও Books খোঁজ, কার্টাজে/ASI রিপোর্টের গ্রন্থপঞ্জি, পিএইচডি থিসিস গেটওয়ে, সাইটেশন জেনারেটর ও বৌদ্ধ ঐতিহ্য পরিভাষার বহুভাষিক অভিধান।">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
+  <link rel="stylesheet" href="mega.css?v=20261024f">
+</head>
+<body class="cb">
+  <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
+  <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
+  <header class="cb-header" id="cbHeader"></header>
+
+  <main id="main">
+    <section class="mx-hero">
+      <div class="cb-wrap">
+        <p class="cb-kicker">🎓 একাডেমিক গবেষণা · AI · জ্ঞানকোষ</p>
+        <h1>গবেষণা ডেস্ক</h1>
+        <p class="cb-lead">প্রশ্নের উত্তর সংঘমিত্রের কাছে, গভীর পাঠের সন্ধান Scholar-এ, মূল রিপোর্টের পীডিএফ আর্কাইভে, পরিভাষার নির্ভুল অর্থ অভিধানে — গবেষকের সব টুল এক ডেস্কে।</p>
+      </div>
+    </section>
+
+    <nav class="mx-navpills" aria-label="এই পাতার অংশসমূহ">
+      <div class="cb-wrap">
+        <a href="#sanghamitra">☸ সংঘমিত্র (আপডেট)</a><a href="#scholar">Scholar খোঁজ</a>
+        <a href="#biblio">গ্রন্থপঞ্জি</a><a href="#citation">সাইটেশন</a><a href="#terminology">পরিভাষা অভিধান</a>
+      </div>
+    </nav>
+
+    <section class="cb-section" id="sanghamitra">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Gemini / Vertex AI-ready, সত্য-যাচাইকেন্দ্রিক নকশা</p>
+        <h2>সংঘমিত্র — আপডেটেড AI ভ্রমণ ও জ্ঞান-সহায়ক</h2>
+        <div class="mx-grid wide">
+          <article class="mx-card">
+            <h3>নতুন যা যা পারছে</h3>
+            <ul>
+              <li><b>জ্ঞানকোষ-খোঁজ:</b> লিপি, চর্যাপদ, মুদ্রা, প্রতিমা, স্বর্গ-নরক, বাজেট, 360°, উৎসব-তারিখ, সার্টিফিকেট — নতুন সব বিভাগের প্রশ্নে সুনির্দিষ্ট পাতায় পাঠায়।</li>
+              <li><b>কুইক-অ্যাকশন চিপ:</b> রুট, বাজেট, পরবর্তী উৎসব, Scholar খোঁজ — প্যানেলেই বোতাম।</li>
+              <li><b>ভয়েস:</b> বাংলা/English সহ ডিভাইসের ভয়েসে প্রশ্ন বলুন ও উত্তর শুনুন (আগের মতোই, এখন দ্রুত খোলার বোতামসহ)।</li>
+              <li><b>Gemini-ready সার্ভার:</b> সাইট-মালিক সার্ভারে Gemini API কী বসালে (OpenAI-এর পাশাপাশি Gemini প্রোভাইডার যুক্ত) যাচাইকৃত ডকুমেন্ট-কনটেক্সটসহ উত্তর মিলবে; কী কখনো ব্রাউজারে থাকবে না।</li>
+            </ul>
+            <div class="mx-btns">
+              <button type="button" class="cb-btn solid" data-sangha-open>☸ সংঘমিত্রকে জিজ্ঞাসা করুন</button>
+              <a class="cb-btn ghost" href="docs/sanghamitra-system-prompt.md">সিস্টেম প্রম্পট (ডক)</a>
+            </div>
+          </article>
+          <article class="mx-card">
+            <h3>সত্যতা-নীতি (যা বদলায়নি)</h3>
+            <ul>
+              <li>ডিফল্ট: <b>স্থানীয়, সূত্র-ভিত্তিক গাইড</b> — বানানো উত্তর নয়।</li>
+              <li>অনলাইন AI চালু করলেও সাইট-রেকর্ডের বাইরে তারিখ/ভাড়া/স্থানাঙ্ক বানাতে সিস্টেম প্রম্পটে নিষেধাজ্ঞা; উত্তরের সঙ্গে উৎস-লিংক ফেরত আসে।</li>
+              <li>Dialogflow/Vertex এজেন্ট বসাতে চাইলে একই <code>/api/chat</code> চুক্তি (message, language, site_id) ব্যবহার করুন — সার্ভার ফাইলে প্যাটার্ন দেওয়া।</li>
+              <li>ব্যক্তিগত ট্র্যাকার-ডেটা সম্মতি ছাড়া পড়া হয় না (আগের মতো)।</li>
+            </ul>
+            <p class="mx-meta">স্ট্যাটাস: <span id="sanghaStatus">যাচাই হচ্ছে…</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="scholar">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Google Scholar &amp; Books API-মুক্ত লিংক-সংযোগ</p>
+        <h2>একাডেমিক লিটারেচার খোঁজ</h2>
+        <p class="cb-sub">বিষয় লিখে এক ক্লিকে Scholar, Books, JSTOR ও Internet Archive-এ যান। (Scholar-এর কোনো অফিসিয়াল পাবলিক API নেই — তাই অনুমোদিত উপায়ে সার্চ-লিংক ব্যবহার করা হয়; ফলাফল নতুন ট্যাবে খুলবে।)</p>
+        <form class="mx-form" id="scholarForm" onsubmit="return false">
+          <label>বিষয় / প্রশ্ন <input id="scholarQ" type="text" placeholder="যেমন: Somapura Mahavihara excavation" value="Somapura Mahavihara Paharpur"></label>
+          <label>স্থান দিয়ে সাজেস্ট <select id="scholarSite"></select></label>
+          <label>বছর থেকে (ঐচ্ছিক) <input id="scholarYear" type="number" min="1800" max="2100" placeholder="2000"></label>
+        </form>
+        <div class="mx-btns" id="scholarBtns"></div>
+        <div class="mx-grid" id="topicChips"></div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="biblio">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">ASI · খনন-রিপোর্ট · জার্নাল · থিসিস</p>
+        <h2>কোর গ্রন্থপঞ্জি ও আর্কাইভ লিংক</h2>
+        <div class="mx-grid wide" id="biblioGrid"></div>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="citation">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Citation helper</p>
+        <h2>সাইটেশন জেনারেটর (এই সাইটের তথ্যের জন্য)</h2>
+        <p class="cb-sub">স্কুল-কলেজের অ্যাসাইনমেন্টে এই সাইটের কোনো তথ্য ব্যবহার করলে নিচের মতো সূত্র দিন — আর মূল দাবির জন্য পাতায় দেওয়া প্রাথমিক উৎস (UNESCO/জাদুঘর/রিপোর্ট) উদ্ধৃত করাই সেরা।</p>
+        <form class="mx-form" onsubmit="return false">
+          <label>পাতা বেছে নিন <select id="citePage"></select></label>
+          <label>স্টাইল <select id="citeStyle"><option value="plain">সাধারণ (বাংলা)</option><option value="apa">APA-ধাঁচ</option></select></label>
+        </form>
+        <div class="mx-card"><p id="citeOut" style="margin:0"></p>
+          <div class="mx-btns"><button type="button" class="cb-btn sm" id="citeCopy">📋 সাইটেশন কপি করুন</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="terminology">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Custom Dictionary · Localization</p>
+        <h2>ঐতিহ্য-পরিভাষা অভিধান (বাংলা · English · পালি/সংস্কৃত)</h2>
+        <p class="cb-sub">Google Translate-এ সাধারণ অনুবাদে ‘বিহার’ বা ‘তাম্রশাসন’-এর মতো শব্দে ভুল অর্থ আসতে পারে। এই কাস্টম অভিধান ধরে অনুবাদ করুন; প্রতি এন্ট্রিতে সঠিক প্রসঙ্গসহ Translate লিংক দেওয়া।</p>
+        <form class="mx-form" style="max-width:520px" onsubmit="return false">
+          <label>🔎 পরিভাষা খুঁজুন <input id="termSearch" type="search" placeholder="স্তূপ, stupa, প্রজ্ঞাপারমিতা…"></label>
+          <label>অনুবাদের লক্ষ্য ভাষা
+            <select id="termLang"><option value="en">English</option><option value="hi">हिन्दी</option><option value="si">සිංහල (Sinhala)</option><option value="th">ไทย (Thai)</option><option value="my">မြန်မာ (Burmese)</option><option value="zh-CN">中文</option><option value="ja">日本語</option></select>
+          </label>
+        </form>
+        <div id="termTable"></div>
+        <p class="mx-mini">নতুন পরিভাষা যোগ করতে <code>data/research-plus.json</code>-এর <code>terminology</code> তালিকায় এন্ট্রি দিন — এই পাতা নিজে আপডেট হবে। সাইটের ১৩-ভাষার UI অনুবাদের জন্য দেখুন <code>language.js</code>।</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer" id="cbFooter"></footer>
+  <script src="config.js?v=20261024f" defer></script>
+  <script src="mega-utils.js?v=20261024f" defer></script>
+  <script src="language.js?v=20261024d" defer></script>
+  <script src="brand.js?v=20261024e" defer></script>
+  <script src="research.js?v=20261024f" defer></script>
+  <script src="pwa.js?v=20261024f" defer></script>
+</body>
+</html>

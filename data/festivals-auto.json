@@ -1,0 +1,104 @@
+{
+  "schema_version": "2026-10-24.festivals-auto.v1",
+  "generated_at": "2026-10-24",
+  "method_bn": "তারিখ ব্রাউজারেই খগোল-গণনায় প্রতি বছর নিজে নিজে হিসাব হয় — হার্ডকোড সাল-তারিখ নয়। পদ্ধতি: পূর্ণিমা-মুহূর্ত বের করে জানা অ্যাঙ্কর থেকে থেরবাদী চান্দ্রমাস (Magha, Vesakha, Asalha…) গণনা; ১৩-পূর্ণিমার বছরে আষাঢ়ে অধিক মাস ধরা হয়। ফল আনুমানিক (±১ দিন; অধিক-মাসের বছরে দেশ/সংঘভেদে এক মাস পর্যন্ত ভিন্ন হতে পারে)। প্রকৃত পালনের দিন বিহার/সংঘের ঘোষণা ও সরকারি ছুটির গেজেটে মিলিয়ে নিন।",
+  "festivals": [
+    {
+      "id": "magha-purnima",
+      "name_bn": "মাঘী পূর্ণিমা",
+      "name_en": "Magha Puja",
+      "rule": {
+        "type": "lunar-month",
+        "month": "magha"
+      },
+      "about": "ওবাদ-পাটিমোক্খ উপদেশের স্মরণ; চার অঙ্গসমেত সংঘ-সমাগমের দিন বলে পরম্পরা।",
+      "verify": true
+    },
+    {
+      "id": "buddha-purnima",
+      "name_bn": "বুদ্ধ পূর্ণিমা (বৈশাখী পূর্ণিমা / Vesak)",
+      "name_en": "Buddha Purnima / Vesak",
+      "rule": {
+        "type": "lunar-month",
+        "month": "vesakha"
+      },
+      "about": "বুদ্ধের জন্ম, বোধিলাভ ও মহাপরিনির্বাণের ত্রিস্মৃতি-বিজড়িত দিন; বাংলাদেশে সরকারি ছুটি (গেজেটে নিশ্চিত করুন)।",
+      "verify": true
+    },
+    {
+      "id": "ashadhi-purnima",
+      "name_bn": "আষাঢ়ী পূর্ণিমা",
+      "name_en": "Asalha Puja",
+      "rule": {
+        "type": "lunar-month",
+        "month": "asalha"
+      },
+      "about": "সারনাথে প্রথম ধর্মচক্রপ্রবর্তনের স্মরণ; এর পরদিন থেকে বর্ষাবাস শুরু (প্রথম বস্সা)।",
+      "verify": true
+    },
+    {
+      "id": "vassa-start",
+      "name_bn": "বর্ষাবাস শুরু",
+      "name_en": "Vassa (rains retreat) begins",
+      "rule": {
+        "type": "day-after",
+        "of": "ashadhi-purnima"
+      },
+      "about": "ভিক্ষুদের তিন মাসের বর্ষাবাসের সূচনা। স্থানীয় প্রথায় পরবর্তী (দ্বিতীয়) বস্সাও পালিত হয়।",
+      "verify": true
+    },
+    {
+      "id": "madhu-purnima",
+      "name_bn": "মধু পূর্ণিমা",
+      "name_en": "Madhu Purnima",
+      "rule": {
+        "type": "lunar-month",
+        "month": "potthapada"
+      },
+      "about": "পারিলেয়্য বনে বানরের মধু দানের স্মরণ; Chattogram অঞ্চলের বৌদ্ধদের কাছে বিশেষ প্রিয় উৎসব।",
+      "verify": true
+    },
+    {
+      "id": "prabarana-purnima",
+      "name_bn": "প্রবারণা পূর্ণিমা",
+      "name_en": "Pavarana",
+      "rule": {
+        "type": "lunar-month",
+        "month": "assayuja"
+      },
+      "about": "বর্ষাবাসের সমাপ্তি; সংঘের প্রবারণা-কর্ম ও ফানুস/প্রদীপ উৎসব (অঞ্চলভেদে)। এর এক মাসের মধ্যে কঠিন চীবর দান।",
+      "verify": true
+    },
+    {
+      "id": "kathina-window",
+      "name_bn": "কঠিন চীবর দানের সময়কাল (শুরু)",
+      "name_en": "Kathina season begins",
+      "rule": {
+        "type": "day-after",
+        "of": "prabarana-purnima"
+      },
+      "about": "প্রবারণার পরদিন থেকে এক চান্দ্রমাস — প্রতিটি বিহারে তারিখ আলাদা; সংশ্লিষ্ট বিহারের ঘোষণা দেখুন।",
+      "verify": true
+    },
+    {
+      "id": "uposatha-next",
+      "name_bn": "পরবর্তী উপোসথ (পূর্ণিমা)",
+      "name_en": "Next full-moon Uposatha",
+      "rule": {
+        "type": "next-full-moon"
+      },
+      "about": "প্রতি পূর্ণিমা ও অমাবস্যায় অষ্টশীল পালন; পঞ্জিকা পাতায় তিথির পূর্ণ বিবরণ।",
+      "verify": false
+    }
+  ],
+  "sources": [
+    {
+      "title": "চর্যাভূমি পঞ্জিকা (খগোল-গণনা পদ্ধতি)",
+      "url": "calendar.html#note"
+    },
+    {
+      "title": "সরকারি ছুটির তালিকা — জনপ্রশাসন মন্ত্রণালয়",
+      "url": "https://mopa.gov.bd/"
+    }
+  ]
+}

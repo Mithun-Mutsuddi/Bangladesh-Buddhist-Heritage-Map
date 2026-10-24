@@ -2,9 +2,9 @@
    One structure drives desktop/mobile navigation, homepage topics and search. */
 (function () {
   'use strict';
-  var INFO = 'data/site-info.json?v=20261024e';
-  var STRUCTURE = 'data/site-structure.json?v=20261024e';
-  var RESOURCES = 'data/resource-guides.json?v=20261024e';
+  var INFO = 'data/site-info.json?v=20261024f';
+  var STRUCTURE = 'data/site-structure.json?v=20261024f';
+  var RESOURCES = 'data/resource-guides.json?v=20261024f';
   var state = { info: null, structure: null, resources: null, placesRequested: false, searchSeq: 0 };
   var FALLBACK = { groups: [
     { id: 'heritage', icon: '🏛️', label: 'ইতিহাস ও ঐতিহ্য', short: 'ইতিহাস', items: [{ title: 'ইতিহাস', href: 'history.html', desc: '' }] },
@@ -223,11 +223,21 @@
 
   function loadAssistant() {
     if (window.CharyabhumiSanghaMitra || document.getElementById('cbSanghaScript')) return;
-    var script = document.createElement('script');
-    script.id = 'cbSanghaScript';
-    script.src = 'sanghamitra.js?v=20261024e';
-    script.async = true;
-    document.head.appendChild(script);
+    function addSangha() {
+      var script = document.createElement('script');
+      script.id = 'cbSanghaScript';
+      script.src = 'sanghamitra.js?v=20261024f';
+      script.async = true;
+      document.head.appendChild(script);
+    }
+    if (window.CHARYABHUMI_CONFIG || document.getElementById('cbConfigScript')) { addSangha(); return; }
+    var cfg = document.createElement('script');
+    cfg.id = 'cbConfigScript';
+    cfg.src = 'config.js?v=20261024f';
+    cfg.async = true;
+    cfg.onload = addSangha;
+    cfg.onerror = addSangha; /* কনফিগ না মিললেও স্থানীয় মোডে চলবে */
+    document.head.appendChild(cfg);
   }
 
   function buildHeader(info, structure) {

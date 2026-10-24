@@ -1,0 +1,59 @@
+{
+  "schema_version": "2026-10-24.research-plus.v1",
+  "generated_at": "2026-10-24",
+  "terminology": [
+    {"bn": "বিহার", "en": "vihara / monastery", "pali_skt": "vihāra (পালি/সংস্কৃত)", "def_bn": "ভিক্ষুদের আবাস ও শিক্ষাকেন্দ্র। অনুবাদে ‘monastery’ চলবে; শুধু পূজার ঘর বোঝাতে ‘temple’ ব্যবহার এড়ানো ভালো।"},
+    {"bn": "মহাবিহার", "en": "mahavihara / great monastery-university", "pali_skt": "mahāvihāra", "def_bn": "বিশ্ববিদ্যালয়-পর্যায়ের বড় বিহার; যেমন সোমপুর, নালন্দা, বিক্রমশীলা।"},
+    {"bn": "স্তূপ", "en": "stupa", "pali_skt": "stūpa / thūpa (পালি)", "def_bn": "ধাতু-স্মারক গম্বুজসৌধ। ‘pagoda’ শব্দটি পূর্ব এশিয়ার বহুতল কাঠামোর জন্য — বাংলার স্তূপে ব্যবহার না করাই ভালো।"},
+    {"bn": "তাম্রশাসন", "en": "copperplate charter / grant", "pali_skt": "tāmra-śāsana", "def_bn": "তামার ফলকে খোদাই রাজকীয় দানদলিল; দেবোত্তর ভূমিদানের প্রধান প্রমাণ।"},
+    {"bn": "প্রজ্ঞাপারমিতা", "en": "Prajnaparamita / Perfection of Wisdom", "pali_skt": "prajñāpāramitā", "def_bn": "প্রজ্ঞার পারমিতা — গ্রন্থ, দর্শন ও দেবী তিন অর্থেই ব্যবহৃত।"},
+    {"bn": "চৈত্য", "en": "chaitya / shrine hall", "pali_skt": "caitya / cetiya", "def_bn": "স্তূপকেন্দ্রিক পূজার হল বা পবিত্র কাঠামো।"},
+    {"bn": "সিলমোহর (সীল)", "en": "seal / sealing", "pali_skt": "mudrā (প্রসঙ্গভেদে)", "def_bn": "বিহারের আনুষ্ঠানিক নাম খোদাই করা মাটি/ধাতব ছাপ; আসল নাম শনাক্তের প্রধান প্রমাণ। সাবধান: হাতের ভঙ্গিও ‘মুদ্রা’ — প্রসঙ্গ দেখে অনুবাদ করুন।"},
+    {"bn": "টেরাকোটা ফলক", "en": "terracotta plaque", "pali_skt": "—", "def_bn": "ছাঁচে গড়া/খোদাই পোড়ামাটির অলংকরণ ফলক; পাহাড়পুরের বৈশিষ্ট্য।"},
+    {"bn": "ভোটিভ স্তূপ", "en": "votive stupa", "pali_skt": "—", "def_bn": "ভক্তের দান করা ছোট স্মারক স্তূপ।"},
+    {"bn": "দেবোত্তর", "en": "devottara / rent-free temple land grant", "pali_skt": "devottara", "def_bn": "দেবসেবা/বিহারের জন্য করমুক্ত ভূমিদান-ব্যবস্থা।"},
+    {"bn": "সিদ্ধাচার্য", "en": "siddhacharya / accomplished tantric master", "pali_skt": "siddhācārya", "def_bn": "সাধনায় সিদ্ধিলাভকারী গুরু; চর্যাপদের পদকর্তারা।"},
+    {"bn": "বর্ষাবাস", "en": "vassa / rains retreat", "pali_skt": "vassa (পালি) / varṣāvāsa", "def_bn": "বর্ষাকালে ভিক্ষুদের একস্থানে অবস্থান-সাধনা; শেষে প্রবারণা ও কঠিন চীবর দান।"},
+    {"bn": "উপোসথ", "en": "uposatha / observance day", "pali_skt": "uposatha (পালি)", "def_bn": "পূর্ণিমা-অমাবস্যাসহ শীল-পালনের দিন।"},
+    {"bn": "প্রদক্ষিণ", "en": "circumambulation (clockwise)", "pali_skt": "padakkhiṇa / pradakṣiṇa", "def_bn": "শ্রদ্ধেয় বস্তুকে ডানদিকে রেখে প্রদক্ষিণ করা।"}
+  ],
+  "bibliography": [
+    {"id": "cunningham-asr", "title": "Archaeological Survey of India Reports (কার্টাজে খণ্ডসমূহ)", "author": "Alexander Cunningham (সম্পা.)", "kind": "ASI খনন/জরিপ রিপোর্ট", "desc": "১৯শ শতকের জরিপে পাহাড়পুর (কার্টাজে ১৮৭৯ সফর) ও মহাস্থানের প্রথম পদ্ধতিগত বর্ণনা, plate ও মানচিত্রসহ। Atlas-এ ১৮৮২ খণ্ডের নির্বাচিত পাতার PDF ও plate আছে।", "url": "https://archive.org/search?query=cunningham+archaeological+survey+of+india+reports", "scholar_q": "Cunningham Archaeological Survey Paharpur Mahasthan"},
+    {"id": "dikshit-paharpur", "title": "Excavations at Paharpur (Memoirs of the ASI No. 55)", "author": "K. N. Dikshit", "kind": "খনন-প্রতিবেদন (১৯৩৮)", "desc": "১৯২৩—৩৪ খননের মূল প্রতিবেদন; সিলমোহরের পাঠ থেকে ‘সোমপুর মহাবিহার’ শনাক্তির ভিত্তি।", "url": "https://archive.org/search?query=dikshit+excavations+paharpur", "scholar_q": "Dikshit Excavations at Paharpur Somapura"},
+    {"id": "huntington", "title": "The 'Pāla-Sena' Schools of Sculpture", "author": "Susan L. Huntington", "kind": "শিল্প-ইতিহাস গবেষণাগ্রন্থ", "desc": "পাল-সেন ভাস্কর্যরীতির প্রামাণ্য আলোচনা; বাংলার বোধিসত্ত্ ও তারা মূর্তি চেনার গাইড।", "url": "https://books.google.com/books?q=Huntington+Pala-Sena+Schools+of+Sculpture", "scholar_q": "Huntington Pala Sena sculpture Bengal"},
+    {"id": "bhattacharyya", "title": "The Indian Buddhist Iconography", "author": "Benoytosh Bhattacharyya", "kind": "প্রতিমাতত্ত্ব গ্রন্থ", "desc": "সাধনমালা-ভিত্তিক মহাযান-বজ্রযান দেবদেবী শনাক্তের প্রাথমিক হাতে-কলমে বই; পুরনো সংস্করণ আর্কাইভে পাওয়া যায়।", "url": "https://archive.org/search?query=bhattacharyya+indian+buddhist+iconography", "scholar_q": "Bhattacharyya Indian Buddhist Iconography"},
+    {"id": "charyapada-1916", "title": "বৌদ্ধগান ও দোহা (চর্যাপদ)", "author": "হরপ্রসাদ শাস্ত্রী (সম্পা.)", "kind": "মূল পাঠ-সংস্করণ (১৯১৬)", "desc": "নেপাল থেকে আনা পুঁথির প্রথম প্রকাশ; Internet Archive scan সাইটের আর্কাইভেও লিংক করা আছে।", "url": "https://archive.org/details/BouddhaGanODoha", "scholar_q": "চর্যাপদ হরপ্রসাদ শাস্ত্রী বৌদ্ধগান ও দোহা"},
+    {"id": "xuanzang-beal", "title": "Si-Yu-Ki: Buddhist Records of the Western World", "author": "Xuanzang; অনুবাদ: Samuel Beal", "kind": "ভ্রমণ-বৃত্তান্ত (অনূদিত)", "desc": "হিউয়েন সাঙের বর্ণনায় পুণ্ড্রবর্ধন, সমতট ও তাম্রলিপ্ত; ইংরেজি অনুবাদ আর্কাইভে উন্মুক্ত।", "url": "https://archive.org/search?query=beal+si-yu-ki+buddhist+records", "scholar_q": "Xuanzang Pundravardhana Samatata Tamralipti"},
+    {"id": "taranatha", "title": "History of Buddhism in India", "author": "Tāranātha; অনুবাদ: Lama Chimpa ও Aloka Chattopadhyaya", "kind": "তিব্বতি ইতিহাস (অনূদিত)", "desc": "পাল-যুগের বিহার ও আচার্যদের পরম্পরাগত ইতিহাস; লিপি-প্রমাণের সঙ্গে মিলিয়ে পড়ুন।", "url": "https://archive.org/search?query=taranatha+history+of+buddhism+in+india", "scholar_q": "Taranatha Jagaddala Vikramashila Pala"},
+    {"id": "epigraphia-indica", "title": "Epigraphia Indica (ASI জার্নাল, সব খণ্ড)", "author": "Archaeological Survey of India", "kind": "লিপি-পাঠ জার্নাল", "desc": "পাহাড়পুর (খণ্ড ২০), দামোদরপুর (১৫), খালিমপুর (৪), বৈগ্রাম (২১) তাম্রশাসনের প্রকাশিত পাঠ ও অনুবাদ।", "url": "https://archive.org/search?query=epigraphia+indica", "scholar_q": "Epigraphia Indica Paharpur copper plate Damodarpur"},
+    {"id": "unesco-322", "title": "Ruins of the Buddhist Vihara at Paharpur — UNESCO property 322", "author": "UNESCO World Heritage Centre", "kind": "সরকারি/আন্তর্জাতিক রেকর্ড", "desc": "বিশ্ব ঐতিহ্য তালিকাভুক্তির (১৯৮৫) মানদণ্ড, সীমানা ও সংরক্ষণ-প্রতিবেদন।", "url": "https://whc.unesco.org/en/list/322/", "scholar_q": "Paharpur UNESCO World Heritage Somapura"},
+    {"id": "thesis-gateway", "title": "পিএইচডি থিসিস খোঁজার গেটওয়ে (Shodhganga / ProQuest / বিশ্ববিদ্যালয় রিপোজিটরি)", "author": "একাধিক বিশ্ববিদ্যালয়", "kind": "থিসিস আর্কাইভ", "desc": "ভারতীয় বিশ্ববিদ্যালয়ের থিসিসের জন্য Shodhganga; বাংলাদেশের বিশ্ববিদ্যালয়গুলোর (Dhaka, রাজশাহী, Jahangirnagar, Chattogram) প্রাতিষ্ঠানিক রিপোজিটরিতে ‘Paharpur / Mainamati / Pala art’ খুঁজুন। নির্দিষ্ট থিসিসের নাম যাচাই ছাড়া এখানে বসানো হয়নি।", "url": "https://shodhganga.inflibnet.ac.in/", "scholar_q": "thesis Mainamati Paharpur Buddhist archaeology Bangladesh"}
+  ],
+  "world_comparison": {
+    "checked_at": "2026-10-24",
+    "note_bn": "পরিমাপ প্রকাশিত উৎসের আনুমানিক মান; ‘সবচেয়ে বড়’ ধরনের দাবি এখানে করা হয়নি। তুলনার আগে প্রতিটি স্থানের UNESCO/সরকারি পাতা মিলিয়ে নিন — এই ডেটা ফাইলটি (data/research-plus.json) বদলালেই চার্ট নিজে আপডেট হবে।",
+    "places": [
+      {"id": "somapura", "name_bn": "সোমপুর মহাবিহার (পাহাড়পুর, বাংলাদেশ)", "period": "৮ম শতকের শেষ — ১২শ শতক", "area_ha": 11, "cells": 177, "plan": "চতুষ্কোণ আঙিনা-বিহার, কেন্দ্রে ক্রুশাকার মন্দির", "unesco": "বিশ্ব ঐতিহ্য ১৯৮৫ (322)", "source_url": "https://whc.unesco.org/en/list/322/", "approx_note": "প্রায় ২৭৪ মি বাহুবিশিষ্ট চতুষ্কোণ; আয়তন আনুমানিক ২৭ একর (≈১১ হেক্টর) — UNESCO বর্ণনা অনুযায়ী পরিকল্পনার পরিমাপ।"},
+      {"id": "nalanda", "name_bn": "নালন্দা মহাবিহার (বিহার, ভারত)", "period": "৫ম — ১৩শ শতক", "area_ha": 23, "cells": null, "plan": "একাধিক বিহার ও স্তূপের সারি (উত্তর-দক্ষিণ অক্ষ)", "unesco": "বিশ্ব ঐতিহ্য ২০১৬ (1502)", "source_url": "https://whc.unesco.org/en/list/1502/", "approx_note": "খননকৃত অংশের আয়তন আনুমানিক; মোট প্রাচীন পরিসর আরও বড় ধরা হয়। UNESCO property এলাকা ২৩ হেক্টর।"},
+      {"id": "vikramshila", "name_bn": "বিক্রমশীলা মহাবিহার (ভাগলপুর, ভারত)", "period": "৮ম/৯ম — ১৩শ শতক", "area_ha": null, "cells": 208, "plan": "চতুষ্কোণ বিহার, কেন্দ্রে বিশাল ক্রুশাকার স্তূপ", "unesco": "বিশ্ব ঐতিহ্য নয় (ASI সংরক্ষিত)", "source_url": "https://www.google.com/search?q=Vikramshila+Mahavihara+ASI+Antichak", "approx_note": "কক্ষসংখ্যা খনন-প্রতিবেদনের প্রচলিত হিসাব (≈২০৮); মোট আয়তন যাচাইসাপেক্ষ বলে চার্টে ফাঁকা রাখা।"},
+      {"id": "borobudur", "name_bn": "বরোবুদুর (মধ্য জাভা, ইন্দোনেশিয়া)", "period": "৮ম—৯ম শতক (শৈলেন্দ্র)", "area_ha": 2.5, "cells": null, "plan": "ধাপে ধাপে ওঠা মণ্ডলাকার স্তূপ-পিরামিড (বিহার নয়, মন্দির-পর্বত)", "unesco": "বিশ্ব ঐতিহ্য ১৯৯১ (592)", "source_url": "https://whc.unesco.org/en/list/592/", "approx_note": "ভিত্তি প্রায় ১২৩×১২৩ মি; property এলাকা UNESCO-তে ২.৫ হেক্টর (মূল সৌধ)। সোমপুরের ক্রুশাকার কেন্দ্রীয় মন্দিরের সঙ্গে এর পরিকল্পনাগত সম্পর্ক পণ্ডিতমহলে আলোচিত — সরাসরি প্রমাণ নয়, তুলনামূলক আলোচনা।"}
+    ]
+  },
+  "museums": [
+    {"id": "bnm", "name_bn": "বাংলাদেশ জাতীয় জাদুঘর (Dhaka)", "holds": "পাল-যুগের পাথর ও ব্রোঞ্জ ভাস্কর্য, মুদ্রা-সংগ্রহ (হরিকেলসহ), বিভিন্ন স্থানের প্রধান নিদর্শন", "catalog_note": "অ্যাকসেশন/ক্যাটালগ নম্বর জাদুঘরের গ্যালারি-লেবেল ও প্রকাশিত ক্যাটালগে মিলিয়ে নিন — এখানে নম্বর অনুমান করে বসানো হয়নি।", "url": "https://bangladeshmuseum.gov.bd/"},
+    {"id": "brm", "name_bn": "বরেন্দ্র গবেষণা জাদুঘর (রাজশাহী বিশ্ববিদ্যালয়)", "holds": "বরেন্দ্র অঞ্চলের ভাস্কর্য, লিপি ও পাহাড়পুর-সংলগ্ন সংগ্রহ; দেশের প্রাচীনতম জাদুঘরগুলোর একটি", "catalog_note": "নির্দিষ্ট বস্তুর বর্তমান গ্যালারি-অবস্থান যাওয়ার আগে যাচাই করুন।", "url": "https://www.google.com/search?q=Varendra+Research+Museum+Rajshahi"},
+    {"id": "mainamati-museum", "name_bn": "ময়নামতি প্রত্ন জাদুঘর (কুমিল্লা)", "holds": "শালবনসহ লালমাই-ময়নামতির খননলব্ধ ভাস্কর্য, মুদ্রা, তাম্রশাসন ও মৃৎপাত্রের আঞ্চলিক প্রধান সংগ্রহ", "catalog_note": "Atlas প্রোফাইলে কোন স্থানের বস্তু এখানে আছে তার দিকনির্দেশনা দেওয়া; অ্যাকসেশন নম্বর জাদুঘরে গিয়ে যাচাই করুন।", "url": "https://www.google.com/search?q=Mainamati+Museum+Cumilla"},
+    {"id": "paharpur-museum", "name_bn": "পাহাড়পুর প্রত্নতাত্ত্বিক জাদুঘর (নওগাঁ)", "holds": "সোমপুর খননের পাথর-ভাস্কর্য, টেরাকোটা, সিলমোহর ও মুদ্রার সাইট-সংগ্রহ", "catalog_note": "কিছু প্রধান নিদর্শন জাতীয় জাদুঘর/বরেন্দ্রতেও আছে — বস্তু ধরে যাচাই প্রয়োজন।", "url": "https://www.google.com/search?q=Paharpur+Archaeological+Museum"},
+    {"id": "mahasthan-museum", "name_bn": "মহাস্থান জাদুঘর (বগুড়া)", "holds": "মহাস্থানগড় ও ভাসু বিহার এলাকার নিদর্শন", "catalog_note": "ভাসু বিহারের নির্দিষ্ট বস্তুর repository Atlas-এ ‘যাচাই প্রয়োজন’ হিসেবে আছে।", "url": "https://www.google.com/search?q=Mahasthan+Museum+Bogura"}
+  ],
+  "legal_framework": {
+    "note_bn": "গেজেট নম্বর, CS/SA দাগ নম্বর ও মৌজা-তথ্য স্থানভেদে ভিন্ন এবং সরকারি দলিল ছাড়া নিশ্চিত করা যায় না — তাই এখানে কাঠামো দেওয়া হলো; সাইট-মালিক প্রত্নতত্ত্ব অধিদপ্তর (DoA) থেকে যাচাই করা তথ্য পেলে data ফাইলে যোগ করবেন। বানানো দাগ/গেজেট নম্বর কখনো বসাবেন না।",
+    "fields": ["প্রত্নতত্ত্ব অধিদপ্তরের সংরক্ষিত ঘোষণা (গেজেট নম্বর ও তারিখ)", "CS দাগ নম্বর", "SA দাগ নম্বর", "মৌজার নাম ও JL নম্বর", "কোর জোন সীমানা", "বাফার জোন সীমানা", "জমির মালিকানা (DoA অধিগ্রহণকৃত/ব্যক্তিগত)", "সীমানা প্রাচীরের অবস্থা"],
+    "acts": [
+      {"name": "Ancient Monuments Preservation Act, 1904", "desc": "ব্রিটিশ আমলের আইন; পাহাড়পুর ১৯১৯ সালে এই আইনে সুরক্ষিত ঘোষিত (Atlas-এ সূত্রযুক্ত)।"},
+      {"name": "Antiquities Act, 1968 (বাংলাদেশে বলবৎ)", "desc": "প্রত্নবস্তুর খনন, রপ্তানি ও ক্ষতিসাধন নিয়ন্ত্রণ করে; অনুমতি ছাড়া খনন/নিদর্শন সংগ্রহ আইনত দণ্ডনীয়। সর্বশেষ সংশোধনীর জন্য bdlaws.minlaw.gov.bd দেখুন।"},
+      {"name": "UNESCO World Heritage Convention (1972)", "desc": "পাহাড়পুর ১৯৮৫ সালে তালিকাভুক্ত; লালমাই-ময়নামতি ও মহাস্থান Tentative List-এ (তালিকাভুক্তি নয় — মনোনয়ন পর্যায়)।"}
+    ],
+    "redlist_intro": "বিপন্ন নিদর্শনের ‘রেড লিস্ট’ সমীক্ষা: দখল, ইট-খোঁড়া, লবণাক্ততা, নদীভাঙন বা অবৈধ খনন দেখলে এই ফর্মে খসড়া রেকর্ড করুন, তারপর DoA আঞ্চলিক দপ্তর / স্থানীয় প্রশাসন / জরুরি হলে ৯৯৯-এ জানান। এই ওয়েবসাইট সরকারি অভিযোগ-মাধ্যম নয়।"
+  }
+}

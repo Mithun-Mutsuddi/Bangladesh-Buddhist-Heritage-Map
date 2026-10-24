@@ -1,0 +1,14 @@
+{
+  "name": "চর্যাভূমি — বাংলাদেশের বৌদ্ধ ঐতিহ্য",
+  "short_name": "চর্যাভূমি",
+  "description": "বাংলাদেশের বৌদ্ধ ঐতিহ্য, ইতিহাস, ম্যাপ ও ভ্রমণ গাইড — অফলাইনেও চলে।",
+  "lang": "bn",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fffdf7",
+  "theme_color": "#8f3d08",
+  "icons": [
+    { "src": "assets/brand/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

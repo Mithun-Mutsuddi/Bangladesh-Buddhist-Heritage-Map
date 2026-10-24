@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>শ্রদ্ধাদান, শপ ও সংরক্ষণ — নিরাপদ ডিজিটাল দান গাইড | চর্যাভূমি</title>
+  <meta name="description" content="ঐতিহ্য সংরক্ষণ ফান্ড, বিহারভিত্তিক যাচাইকৃত শ্রদ্ধাদান (বিকাশ/নগদ/রকেট/ব্যাংক) সতর্কতাসহ, ঐতিহ্য-স্যুভেনির শপ, স্পন্সরশিপ নীতি, সরকারি গেজেট-সীমানা কাঠামো, UNESCO স্ট্যাটাস, রেড-লিস্ট সমীক্ষা ফর্ম ও জাদুঘর ডিরেক্টরি।">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
+  <link rel="stylesheet" href="mega.css?v=20261024f">
+</head>
+<body class="cb">
+  <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
+  <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
+  <header class="cb-header" id="cbHeader"></header>
+
+  <main id="main">
+    <section class="mx-hero">
+      <div class="cb-wrap">
+        <p class="cb-kicker">🙏 অর্থায়ন · ই-কমার্স · আইনি ও সংরক্ষণ</p>
+        <h1>শ্রদ্ধাদান, শপ ও সংরক্ষণ ডেস্ক</h1>
+        <p class="cb-lead">ভালো কাজে টাকা পাঠানো সহজ, কিন্তু নিরাপদে পাঠানোই আসল। এখানে কেবল <b>লিখিতভাবে যাচাইকৃত</b> মাধ্যমই নম্বরসহ দেখানো হয় — বাকিগুলোতে সরাসরি বিহারে যোগাযোগের পরামর্শ।</p>
+      </div>
+    </section>
+
+    <nav class="mx-navpills" aria-label="এই পাতার অংশসমূহ">
+      <div class="cb-wrap">
+        <a href="#donate">🙏 শ্রদ্ধাদান</a><a href="#fund">সাইট ফান্ড</a><a href="#shop">🛒 শপ</a>
+        <a href="#sponsor">স্পন্সরশিপ</a><a href="#legal">⚖️ গেজেট ও সংরক্ষণ</a><a href="#museums">🏛️ জাদুঘর ডিরেক্টরি</a>
+      </div>
+    </nav>
+
+    <section class="cb-section" id="donate">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Donation Gateway — নিরাপত্তা প্রথমে</p>
+        <h2>স্থান ধরে শ্রদ্ধাদান</h2>
+        <div id="donateWarnings"></div>
+        <label style="font-weight:700">কোন স্থান/প্রতিষ্ঠানকে দিতে চান?
+          <select id="donateSite" style="padding:9px 12px;border-radius:10px;font:inherit"></select>
+        </label>
+        <div id="donateCard" style="margin-top:16px"></div>
+        <div id="donateMethodsInfo"></div>
+        <form class="mx-card" id="intentForm" style="margin-top:16px">
+          <h3 style="margin-top:0">📝 দানের ইচ্ছা রেকর্ড করুন (শুধু এই ব্রাউজারে)</h3>
+          <p class="mx-meta">এটি পেমেন্ট নয় — নিজের দানের হিসাব রাখার ডায়েরি। টাকা আপনার বিকাশ/নগদ/ব্যাংক অ্যাপ থেকে যাচাইকৃত নম্বরে নিজেই পাঠাবেন।</p>
+          <div class="mx-form">
+            <label>পরিমাণ (৳) <input id="intentAmount" type="number" min="1" placeholder="৫০০"></label>
+            <label>মাধ্যম <select id="intentMethod"><option value="bkash">বিকাশ</option><option value="nagad">নগদ</option><option value="rocket">রকেট</option><option value="bank">ব্যাংক</option><option value="cash">সশরীরে</option></select></label>
+            <label>উদ্দেশ্য <input id="intentPurpose" maxlength="80" placeholder="যেমন: চীবর দান / রক্ষণাবেক্ষণ"></label>
+          </div>
+          <div class="mx-btns"><button type="submit" class="cb-btn sm">💾 রেকর্ড করুন</button></div>
+          <div id="intentList"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="fund">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">সাইটের উন্নয়ন ফান্ড</p>
+        <h2>লক্ষ্য ও উদ্দেশ্য, স্বচ্ছতা</h2>
+        <div id="fundInfo"></div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="shop">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">E-commerce · Print-on-Demand</p>
+        <h2>ঐতিহ্য-শপ (ডেমো ক্যাটালগ)</h2>
+        <div id="shopStatus"></div>
+        <div class="mx-grid" id="shopGrid"></div>
+        <div class="mx-card"><h3 style="margin-top:0">🧺 আমার আগ্রহের তালিকা</h3><div id="cartList"></div>
+        <div class="mx-btns"><button type="button" class="cb-btn sm" id="cartExport">⬇ তালিকা ডাউনলোড</button><button type="button" class="cb-btn sm ghost" id="cartClear">তালিকা খালি করুন</button></div></div>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="sponsor">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Sponsorship · Ad Manager/AdSense</p>
+        <h2>স্পন্সরশিপ নীতি</h2>
+        <div id="sponsorInfo"></div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="legal">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">প্রশাসনিক গেজেট · Antiquities Act · UNESCO</p>
+        <h2>আইনি কাঠামো, সীমানা ও রেড-লিস্ট সমীক্ষা</h2>
+        <div id="legalInfo"></div>
+        <h3>স্থানভিত্তিক আইনি/UNESCO অবস্থা (Atlas তথ্য)</h3>
+        <div id="siteLegalTable"></div>
+        <h3>🔴 রেড-লিস্ট ফিল্ড রিপোর্ট (খসড়া — এই ব্রাউজারে)</h3>
+        <div id="redlistIntro"></div>
+        <form class="mx-card" id="redForm">
+          <div class="mx-form">
+            <label>স্থান <select id="redSite"></select></label>
+            <label>ঝুঁকির ধরন
+              <select id="redType"><option>দখল/অবৈধ স্থাপনা</option><option>ইট-মাটি খোঁড়া</option><option>লুট/অবৈধ খনন</option><option>নদীভাঙন/ধস</option><option>লবণাক্ততা/ক্ষয়</option><option>আবর্জনা/আগুনের ক্ষতি</option><option>অন্যান্য</option></select>
+            </label>
+            <label>দেখার তারিখ <input id="redDate" type="date"></label>
+            <label>ঝুঁকির মাত্রা <select id="redLevel"><option value="low">কম</option><option value="medium">মাঝারি</option><option value="high">বেশি (জরুরি)</option></select></label>
+          </div>
+          <label style="display:block;font-weight:600">যা দেখলেন (শুধু পর্যবেক্ষণ; অনুমান আলাদা করে লিখুন)
+            <textarea id="redText" rows="4" maxlength="1200" required style="width:100%;padding:10px;border:1.5px solid var(--cb-line);border-radius:10px;font:inherit"></textarea>
+          </label>
+          <label style="display:block;margin-top:10px"><input type="checkbox" id="redConsent"> আমি বুঝেছি এটি সরকারি অভিযোগ নয়; খসড়াটি নিজে DoA/প্রশাসনের কাছে পৌঁছাব। কারো ব্যক্তিগত তথ্য/অভিযোগ প্রমাণ ছাড়া লিখিনি।</label>
+          <div class="mx-btns"><button type="submit" class="cb-btn solid">💾 খসড়া রাখুন</button>
+          <button type="button" class="cb-btn" id="redExport">⬇ সব খসড়া JSON-এ নিন (DoA/Firebase জমার জন্য)</button></div>
+          <div id="redList"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="museums">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Cross-reference</p>
+        <h2>জাদুঘর ডিরেক্টরি: কোন নিদর্শন কোথায়?</h2>
+        <div class="mx-grid wide" id="museumGrid"></div>
+        <h3>স্থান → জাদুঘর মিলিয়ে দেখুন</h3>
+        <div id="siteMuseumTable"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer" id="cbFooter"></footer>
+  <script src="config.js?v=20261024f" defer></script>
+  <script src="mega-utils.js?v=20261024f" defer></script>
+  <script src="language.js?v=20261024d" defer></script>
+  <script src="brand.js?v=20261024e" defer></script>
+  <script src="support.js?v=20261024f" defer></script>
+  <script src="pwa.js?v=20261024f" defer></script>
+</body>
+</html>

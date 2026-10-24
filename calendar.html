@@ -8,6 +8,8 @@
   <meta name="description" content="আজকের বাংলা তারিখ, বঙ্গাব্দ, বুদ্ধাব্দ, ইংরেজি তারিখ ও ঘড়ি; তিথি, পক্ষ, নক্ষত্র, যোগ, করণ, সূর্যোদয়-সূর্যাস্ত; আসন্ন পূর্ণিমা, অমাবস্যা ও উপোসথ — সব নিজে নিজে আপডেট হয়। লোকনাথ ও বেণীমাধব শীলের পঞ্জিকার সঙ্গে তুলনার নোটসহ।">
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="mega.css?v=20261024f">
 </head>
 <body class="cb">
   <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
@@ -81,6 +83,16 @@
       </div>
     </section>
 
+    <!-- ============ অটো-আপডেট উৎসব ট্র্যাকার (2026-10-24 আপডেট) ============ -->
+    <section class="cb-section" id="festivals-auto">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">Google Calendar (.ics) · নিজে নিজে আপডেট</p>
+        <h2>আসন্ন উৎসব: অটো-তারিখ ও কাউন্টডাউন</h2>
+        <p class="cb-sub">বুদ্ধ পূর্ণিমা, মাঘী পূর্ণিমা, আষাঢ়ী পূর্ণিমা, বর্ষাবাস, মধু পূর্ণিমা, প্রবারণা ও কঠিন চীবর দানের সম্ভাব্য তারিখ খগোল-গণনায় প্রতি বছর নিজে থেকে তৈরি হয় — পুরনো সালের হার্ডকোড তারিখ নয়।</p>
+        <div id="festivalAuto"></div>
+      </div>
+    </section>
+
     <!-- ============ বঙ্গাব্দের মাস ============ -->
     <section class="cb-section alt" id="months">
       <div class="cb-wrap">
@@ -118,5 +130,9 @@
   <script src="language.js?v=20261024d" defer></script>
   <script src="brand.js?v=20261024d" defer></script>
   <script src="calendar.js?v=20261022b" defer></script>
+  <script src="config.js?v=20261024f" defer></script>
+  <script src="mega-utils.js?v=20261024f" defer></script>
+  <script src="festival-auto.js?v=20261024f" defer></script>
+  <script src="pwa.js?v=20261024f" defer></script>
 </body>
 </html>
