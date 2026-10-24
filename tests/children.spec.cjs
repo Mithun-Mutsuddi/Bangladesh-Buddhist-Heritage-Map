@@ -210,7 +210,7 @@ test('homepage and shared navigation integrate children without changing existin
   await page.goto('/index.html');
   await expect(page.locator('#placeGrid .cb-place-card').first()).toBeVisible({ timeout: 20000 });
   await expect(page.locator('#dashStatus')).toContainText('৩,২১৮', { timeout: 20000 });
-  await expect(page.locator('#cbFeatures .cb-feat')).toHaveCount(15);
+  await expect(page.locator('#cbFeatures .cb-feat')).toHaveCount(16);
   await expect(page.locator('.cb-nav a[href="children.html"]')).toHaveCount(1);
   await expect(page.locator('.cb-cards a[href="children.html"]')).toHaveCount(1);
   await page.locator('#cbLanguageSelect').selectOption('en');

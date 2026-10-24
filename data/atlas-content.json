@@ -1,0 +1,523 @@
+{
+  "schema_version": "2026-10-24.atlas-content.v1",
+  "generated_at": "2026-10-24",
+  "circuits": [
+    {
+      "id": "greater-comilla",
+      "hub": "cumilla",
+      "days": 2,
+      "name": {
+        "bn": "বৃহত্তর কুমিল্লা · লালমাই-ময়নামতি সার্কিট",
+        "en": "Greater Cumilla · Lalmai-Mainamati circuit"
+      },
+      "summary": {
+        "bn": "দক্ষিণ থেকে উত্তরে সাত component-এর evidence-based পরিকল্পনা। প্রথম দিন শালবন ও জাদুঘর; দ্বিতীয় দিনের সেনানিবাস-সংশ্লিষ্ট প্রবেশ আগে নিশ্চিত করুন।",
+        "en": "An evidence-based south-to-north plan for seven components. Start with Shalban and the museum; confirm second-day cantonment-related access first."
+      },
+      "stops": [
+        {
+          "site": "shalban",
+          "day": 1
+        },
+        {
+          "site": "rupban-mura",
+          "day": 1
+        },
+        {
+          "site": "itakhola-mura",
+          "day": 1
+        },
+        {
+          "site": "bhoja-vihara",
+          "day": 2
+        },
+        {
+          "site": "ananda-vihara",
+          "day": 2
+        },
+        {
+          "site": "kotila-mura",
+          "day": 2
+        },
+        {
+          "site": "charpatra-mura",
+          "day": 2
+        }
+      ],
+      "notes": [
+        {
+          "bn": "শালবনের সঙ্গে ময়নামতি জাদুঘরের সময় রাখুন; রবিবার বন্ধ ও সোমবারের ভিন্ন সময় মনে রাখুন।",
+          "en": "Allow time for Mainamati Museum with Shalban; remember Sunday closure and different Monday hours."
+        },
+        {
+          "bn": "এই ক্রম স্থানাঙ্কের সাহায্যে পরিকল্পনার সুবিধার জন্য; এটি turn-by-turn road route বা সব স্থান খোলা থাকার নিশ্চয়তা নয়।",
+          "en": "The order aids planning from coordinates; it is not a turn-by-turn road route or a guarantee that every place is open."
+        },
+        {
+          "bn": "চারপত্র বৌদ্ধ বিহার নয়—ব্রাহ্মণ্য মন্দির হিসেবে পড়ুন ও আলোচনা করুন।",
+          "en": "Read and discuss Charpatra as a Brahmanical temple, not a Buddhist monastery."
+        }
+      ]
+    },
+    {
+      "id": "northern-vihara",
+      "hub": "bogura",
+      "days": 4,
+      "name": {
+        "bn": "উত্তরের মহাবিহার সার্কিট · বরেন্দ্র",
+        "en": "Northern Vihara circuit · Varendra"
+      },
+      "summary": {
+        "bn": "বগুড়া থেকে ভাসু, তারপর হলুদ–সোমপুর–জগদ্দল–সীতাকোট। লম্বা দূরত্ব ও সীমিত খননের পার্থক্য বুঝে চার দিনের ধীর পরিকল্পনা।",
+        "en": "From Bogura to Bhasu, then Halud, Somapura, Jagaddala and Sitakot: a slower four-day plan that recognises long distances and different excavation scales."
+      },
+      "stops": [
+        {
+          "site": "bhasu-vihara",
+          "day": 1
+        },
+        {
+          "site": "halud-vihara",
+          "day": 2
+        },
+        {
+          "site": "somapura",
+          "day": 2
+        },
+        {
+          "site": "jagaddala",
+          "day": 3
+        },
+        {
+          "site": "sitakot",
+          "day": 4
+        }
+      ],
+      "notes": [
+        {
+          "bn": "ভাসুর সঙ্গে মহাস্থানগড়/জাদুঘর আলাদা সময় চায়; ভাসু = Po-Shi-Po নিশ্চিত নয়।",
+          "en": "Mahasthangarh and its museum deserve separate time near Bhasu; Bhasu is not securely identified as Po-Shi-Po."
+        },
+        {
+          "bn": "সোমপুর ও পাহাড়পুর একই স্থান; জগদ্দলের স্থান-সমীকরণ tentative।",
+          "en": "Somapura and Paharpur are one site; Jagaddala's identification remains tentative."
+        },
+        {
+          "bn": "দূরত্বগুলি straight-line planning aid; বাস/ট্রেন/স্থানীয় যান, ভাড়া ও সড়ক অবস্থা যাত্রার আগে যাচাই প্রয়োজন।",
+          "en": "Distances are straight-line planning aids; verify bus/train/local transport, fares and roads before travel."
+        }
+      ]
+    }
+  ],
+  "travel_modes": [
+    {
+      "icon": "🚆",
+      "name": {
+        "bn": "ট্রেন",
+        "en": "Train"
+      },
+      "source": "rail",
+      "text": {
+        "bn": "সময়সূচি, seat availability ও ভাড়া Bangladesh Railway e-ticket/Rail Sheba বা authorised counter-এ দেখুন। অনুমোদিত মাধ্যম ছাড়া অগ্রিম অর্থ দেবেন না।",
+        "en": "Check schedules, seat availability and fares through Bangladesh Railway e-ticket/Rail Sheba or an authorised counter. Do not prepay unauthorised sellers."
+      }
+    },
+    {
+      "icon": "🚌",
+      "name": {
+        "bn": "বাস ও স্থানীয় যান",
+        "en": "Bus and local transport"
+      },
+      "source": "",
+      "text": {
+        "bn": "জেলা/জেলা-বাইরের বাসের একটি সার্বজনীন সরকারি timetable নেই। পরিচালকের counter/official channel থেকে timetable, fare ও drop-off নিশ্চিত করুন; শেষ অংশের ফেরার যান আগে ঠিক করুন।",
+        "en": "There is no single official timetable for every interdistrict bus. Confirm schedules, fares and drop-off with the operator's counter or official channel, and arrange return last-mile transport."
+      }
+    },
+    {
+      "icon": "✈️",
+      "name": {
+        "bn": "বিমান",
+        "en": "Air"
+      },
+      "source": "caab",
+      "text": {
+        "bn": "CAAB ও airline-এর সরকারি flight status/fare দেখুন। বিমানবন্দর থেকে প্রত্নস্থলের road transfer আলাদা পরিকল্পনা; কোনো সাইটে সরাসরি বিমান যায় না।",
+        "en": "Check official CAAB and airline flight status and fares. Plan the road transfer from the airport separately; no profiled site is reached directly by air."
+      }
+    },
+    {
+      "icon": "⛴️",
+      "name": {
+        "bn": "লঞ্চ · নৌকা · জাহাজ",
+        "en": "Launch · boat · ship"
+      },
+      "source": "biwta",
+      "text": {
+        "bn": "এই অভ্যন্তরীণ প্রত্নস্থলগুলির নির্দিষ্ট launch route ধরে নেবেন না। যেখানে waterway উপযোগী, BIWTA/BIWTC ও ঘাট কর্তৃপক্ষের schedule, safety notice ও fare দেখুন; নৌকায় অভিজ্ঞ স্থানীয় নির্দেশনা ও life jacket প্রয়োজন।",
+        "en": "Do not assume a direct launch route to these inland sites. Where a waterway is useful, check BIWTA/BIWTC and ghat authority schedules, safety notices and fares; small boats need competent local guidance and life jackets."
+      }
+    }
+  ],
+  "travel_checklist": [
+    {
+      "bn": "সরকারি সময়সূচি, বিশেষ ছুটি ও টিকিটমূল্য যাত্রার দিনের আগে আবার দেখুন",
+      "en": "Recheck official hours, special closures and admission the day before departure"
+    },
+    {
+      "bn": "বাস/ট্রেন/বিমান/নৌপথের ভাড়া ও schedule অনুমোদিত counter বা official channel-এ যাচাই করুন",
+      "en": "Verify fares and schedules through authorised counters or official channels"
+    },
+    {
+      "bn": "প্রবেশের স্থানাঙ্ক আলাদা করে নিশ্চিত করুন—site coordinate গেট নয়",
+      "en": "Confirm the entrance separately; a site coordinate is not a gate"
+    },
+    {
+      "bn": "ফেরার যান, মোবাইল নেটওয়ার্ক, পানি, ওষুধ, আবহাওয়া ও accessibility পরিকল্পনা করুন",
+      "en": "Plan return transport, connectivity, water, medication, weather and accessibility"
+    },
+    {
+      "bn": "খাবার/হোটেলের সাম্প্রতিক অবস্থা, নিরাপত্তা ও দাম নিজে যাচাই করুন; জরুরি সেবা ৯৯৯",
+      "en": "Check current food/lodging conditions, safety and prices yourself; emergency service 999"
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-09-03",
+      "kind": "metadata",
+      "site": "shalban",
+      "source": "mainamati-tickets",
+      "title": {
+        "bn": "ময়নামতি টিকিট ও পার্কিং তালিকা হালনাগাদ",
+        "en": "Mainamati admission and parking metadata updated"
+      },
+      "text": {
+        "bn": "ময়নামতি জাদুঘর/শালবনের দর্শক শ্রেণিভিত্তিক প্রবেশমূল্য সরকারি পাতা থেকে নথিভুক্ত; অন্য component-এ প্রয়োগ করা হয়নি।",
+        "en": "Official Mainamati Museum/Shalban admission categories were recorded; they were not applied to other components."
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "kind": "metadata",
+      "site": "somapura",
+      "source": "doa-hours",
+      "title": {
+        "bn": "DoA সাধারণ জাদুঘর/প্রত্নস্থল সময়সূচি হালনাগাদ",
+        "en": "DoA general museum and site schedule updated"
+      },
+      "text": {
+        "bn": "সোমপুরের visitor panel-এ তারিখসহ সাধারণ সরকারি সময়সূচি ও বিশেষ নোটিশ যাচাইয়ের নির্দেশ যুক্ত হয়েছে।",
+        "en": "Somapura's visitor panel now cites the dated general schedule and directs readers to special notices."
+      }
+    },
+    {
+      "date": "2025-04-22",
+      "kind": "research",
+      "site": "bhasu-vihara",
+      "source": "dharma-mahasthan",
+      "title": {
+        "bn": "মহাস্থানগড়ে ২০২২ ও ২০২৫ খননের গবেষক প্রতিবেদন",
+        "en": "Researcher report on Mahasthangarh campaigns in 2022 and 2025"
+      },
+      "text": {
+        "bn": "নতুন গবেষণা-কর্মসূচি, সম্ভাব্য প্রাচীন পুকুর এবং মৃৎপাত্র/মুদ্রার বিশ্লেষণ চলমান—চূড়ান্ত সিদ্ধান্ত হিসেবে নয়।",
+        "en": "The report describes new campaigns, a possible ancient pond and ongoing pottery/coin analysis—not final conclusions."
+      }
+    },
+    {
+      "date": "2025-09-28",
+      "kind": "news",
+      "site": "somapura",
+      "source": "bss-paharpur",
+      "title": {
+        "bn": "পাহাড়পুরের দর্শক-সুবিধা ও ব্যবস্থাপনা নিয়ে সংবাদ",
+        "en": "News on visitor facilities and management at Paharpur"
+      },
+      "text": {
+        "bn": "সংবাদটি দর্শক-সুবিধার dated lead হিসেবে রাখা; স্থাপত্য/ইতিহাসের অসঙ্গতিপূর্ণ সংখ্যা UNESCO/Banglapedia দিয়ে cross-check করা।",
+        "en": "The report is retained as a dated visitor-facility lead; inconsistent architectural and historical claims are cross-checked against UNESCO/Banglapedia."
+      }
+    },
+    {
+      "date": "2023-05-17",
+      "kind": "heritage",
+      "site": "shalban",
+      "source": "unesco-mainamati",
+      "title": {
+        "bn": "লালমাই-ময়নামতির ২১ component tentative nomination",
+        "en": "Lalmai-Mainamati tentative nomination with 21 components"
+      },
+      "text": {
+        "bn": "সাতটি selected profile-এর মাপ, কক্ষ, স্থাপত্য ও সংরক্ষণ-বিবরণের প্রধান সাম্প্রতিক উৎস। tentative = World Heritage নয়।",
+        "en": "The principal recent source for dimensions, cells, architecture and conservation in seven selected profiles. Tentative does not mean World Heritage."
+      }
+    },
+    {
+      "date": "2023-05-17",
+      "kind": "heritage",
+      "site": "bhasu-vihara",
+      "source": "unesco-mahasthan",
+      "title": {
+        "bn": "মহাস্থান–করতোয়া cultural landscape nomination",
+        "en": "Mahasthan–Karatoya cultural landscape nomination"
+      },
+      "text": {
+        "bn": "ভাসুকে বিস্তৃত landscape-এর প্রাসঙ্গিক ঐতিহ্য-অংশ হিসেবে পড়ার সরকারি উৎস; পৃথক World Heritage মর্যাদা নয়।",
+        "en": "An official source for reading Bhasu within a wider heritage landscape, not as a separate World Heritage property."
+      }
+    }
+  ],
+  "archival": [
+    {
+      "title": {
+        "bn": "কানিংহাম ১৮৮২ · নির্বাচিত পাঁচ scan পাতা",
+        "en": "Cunningham 1882 · five selected scan pages"
+      },
+      "file": "assets/atlas/cunningham-1882-selected-pages.pdf",
+      "source": "cunningham",
+      "category": "public-domain survey excerpt",
+      "text": {
+        "bn": "পাহাড়পুর আলোচনার তিন পাতা এবং Plate XXIX (Mahasthan) ও Plate XXXII (Paharpur)। সম্পূর্ণ মূল item-এর লিংকও দেওয়া আছে।",
+        "en": "Three pages of Paharpur discussion plus Plate XXIX (Mahasthan) and Plate XXXII (Paharpur), with a link to the complete source item."
+      }
+    },
+    {
+      "title": {
+        "bn": "পাহাড়পুর · Plate XXXII",
+        "en": "Paharpur · Plate XXXII"
+      },
+      "file": "assets/atlas/cunningham-paharpur-plate32.jpg",
+      "source": "cunningham",
+      "category": "public-domain survey plate",
+      "text": {
+        "bn": "ভাস্কর্য ও carved brick-এর ১৮৮২ survey plate; ঐতিহাসিক নথি, বর্তমান অবস্থার ছবি নয়।",
+        "en": "An 1882 survey plate of sculpture and carved brick; a historical record, not a photograph of current condition."
+      }
+    },
+    {
+      "title": {
+        "bn": "মহাস্থান · Plate XXIX",
+        "en": "Mahasthan · Plate XXIX"
+      },
+      "file": "assets/atlas/cunningham-mahasthan-plate29.jpg",
+      "source": "cunningham",
+      "category": "public-domain survey map",
+      "text": {
+        "bn": "পড়ার সুবিধায় ঘোরানো ও contrast-adjusted; মূল scan-এর তথ্য বদলানোর দাবি নয়।",
+        "en": "Rotated and contrast-adjusted for readability; not presented as an unmodified scan."
+      }
+    },
+    {
+      "title": {
+        "bn": "দীক্ষিত ১৯৩৮ · Excavations at Paharpur",
+        "en": "Dikshit 1938 · Excavations at Paharpur"
+      },
+      "url": "https://archive.org/details/in.ernet.dli.2015.115760",
+      "source": "dikshit",
+      "category": "external historic report",
+      "text": {
+        "bn": "সম্পূর্ণ প্রতিবেদন Internet Archive-এ পড়ার লিংক; স্থানীয় mirror বা blanket public-domain দাবি নয়।",
+        "en": "Read the complete report at Internet Archive; no local mirror or blanket public-domain claim."
+      }
+    }
+  ],
+  "passport": {
+    "storage_note": {
+      "bn": "পাসপোর্ট, নাম ও stamp শুধু এই ব্রাউজারে সংরক্ষিত; স্বয়ংক্রিয়ভাবে কোথাও পাঠানো হয় না। Stamp প্রমাণ-প্রশ্নের পুরস্কার—শারীরিক ভ্রমণের প্রমাণ নয়।",
+      "en": "Passport name and stamps are stored only in this browser and are not sent anywhere automatically. Stamps reward evidence questions; they do not prove a physical visit."
+    },
+    "levels": [
+      {
+        "min": 0,
+        "name": {
+          "bn": "নতুন অভিযাত্রী",
+          "en": "New Explorer"
+        }
+      },
+      {
+        "min": 1,
+        "name": {
+          "bn": "তরুণ প্রত্নতাত্ত্বিক",
+          "en": "Young Archaeologist"
+        }
+      },
+      {
+        "min": 4,
+        "name": {
+          "bn": "ঐতিহ্য গবেষক",
+          "en": "Heritage Researcher"
+        }
+      },
+      {
+        "min": 8,
+        "name": {
+          "bn": "ঐতিহ্য সংরক্ষক",
+          "en": "Heritage Conservator"
+        }
+      },
+      {
+        "min": 12,
+        "name": {
+          "bn": "হেরিটেজ মাস্টার",
+          "en": "Heritage Master"
+        }
+      }
+    ],
+    "hunts": [
+      {
+        "id": "three-jewels",
+        "name": {
+          "bn": "ত্রিরত্নের সূত্র",
+          "en": "Trail of the Three Jewels"
+        },
+        "required": [
+          "kotila-mura",
+          "itakhola-mura",
+          "rupban-mura",
+          "shalban"
+        ],
+        "badge": {
+          "bn": "ময়নামতি প্রমাণ-পদক",
+          "en": "Mainamati Evidence Badge"
+        },
+        "text": {
+          "bn": "স্তূপ, কক্ষ, মুদ্রা ও স্থাপত্যের চার প্রমাণ মিলিয়ে hunt সম্পূর্ণ করুন।",
+          "en": "Complete the hunt with four clues about stupas, cells, coins and architecture."
+        }
+      },
+      {
+        "id": "northern-classrooms",
+        "name": {
+          "bn": "উত্তরের পাঠশালা",
+          "en": "Northern Classrooms"
+        },
+        "required": [
+          "somapura",
+          "sitakot",
+          "halud-vihara",
+          "bhasu-vihara",
+          "jagaddala"
+        ],
+        "badge": {
+          "bn": "বরেন্দ্র গবেষণা-পদক",
+          "en": "Varendra Research Badge"
+        },
+        "text": {
+          "bn": "নিশ্চিত তথ্য ও tentative identification-এর পার্থক্য খুঁজুন।",
+          "en": "Find the difference between secure evidence and tentative identifications."
+        }
+      },
+      {
+        "id": "courtyard-detectives",
+        "name": {
+          "bn": "কক্ষ ও আঙিনার গোয়েন্দা",
+          "en": "Courtyard Detectives"
+        },
+        "required": [
+          "somapura",
+          "shalban",
+          "ananda-vihara",
+          "bhoja-vihara"
+        ],
+        "badge": {
+          "bn": "স্থাপত্য তুলনা-পদক",
+          "en": "Architecture Comparison Badge"
+        },
+        "text": {
+          "bn": "১৭৭, ১১৫ ও বদলে যাওয়া central plan তুলনা করুন।",
+          "en": "Compare 177 and 115 cells and changing central plans."
+        }
+      }
+    ],
+    "children_tools": [
+      {
+        "url": "children.html#archaeologist",
+        "name": {
+          "bn": "ভার্চুয়াল খনন",
+          "en": "Virtual dig"
+        },
+        "text": {
+          "bn": "বিদ্যমান layer-based খনন খেলা; বাস্তব সাইটে খোঁড়ার নির্দেশ নয়।",
+          "en": "Use the existing layer-based dig activity; it is not an instruction to dig at a real site."
+        }
+      },
+      {
+        "url": "children.html#paper",
+        "name": {
+          "bn": "টাইম-ট্রাভেল স্লাইডার",
+          "en": "Time-travel slider"
+        },
+        "text": {
+          "bn": "বিদ্যমান reconstruction comparison দিয়ে ‘প্রমাণ’ ও ‘কাল্পনিক পুনর্গঠন’ আলাদা করুন।",
+          "en": "Use the existing reconstruction comparison to distinguish evidence from imaginative reconstruction."
+        }
+      },
+      {
+        "url": "children.html#art",
+        "name": {
+          "bn": "রং ও শিল্প",
+          "en": "Colouring and art"
+        },
+        "text": {
+          "bn": "বিদ্যমান colouring/craft tools দিয়ে নিজের field notebook সাজান।",
+          "en": "Use the existing colouring and craft tools to make a field notebook."
+        }
+      },
+      {
+        "url": "children.html#stories",
+        "name": {
+          "bn": "জাতক কমিক ও গল্প",
+          "en": "Jataka comics and stories"
+        },
+        "text": {
+          "bn": "বিদ্যমান local comic ও rights-checked listening collection-এ ফিরে যান।",
+          "en": "Return to the existing local comic and rights-checked listening collection."
+        }
+      }
+    ]
+  },
+  "school_kit": {
+    "pdf": "assets/atlas/school-field-notebook.pdf",
+    "comic_pdf": "assets/atlas/itu-pala-evidence-comic.pdf",
+    "title": {
+      "bn": "স্কুল ট্রিপ কিট · প্রমাণ খুঁজি, নিদর্শন রক্ষা করি",
+      "en": "School trip kit · Find evidence, protect heritage"
+    },
+    "roles": [
+      {
+        "bn": "পর্যবেক্ষক",
+        "en": "Observer"
+      },
+      {
+        "bn": "মানচিত্র পাঠক",
+        "en": "Map reader"
+      },
+      {
+        "bn": "উৎস যাচাইকারী",
+        "en": "Source checker"
+      },
+      {
+        "bn": "সময় ও নিরাপত্তা সহায়ক",
+        "en": "Time and safety helper"
+      }
+    ],
+    "rules": [
+      {
+        "bn": "খোঁড়া, চড়া, ছোঁয়া বা নিদর্শন তোলা নয়",
+        "en": "No digging, climbing, touching or collecting"
+      },
+      {
+        "bn": "ছবিতে ক্ষতি দেখালেও অনুমানকে ঘটনা বলবেন না",
+        "en": "Do not turn a visual impression into a confirmed damage event"
+      },
+      {
+        "bn": "Observation, interpretation ও source citation আলাদা লিখুন",
+        "en": "Write observations, interpretations and citations separately"
+      },
+      {
+        "bn": "জরুরি ক্ষতি/লুট DoA, স্থানীয় কর্তৃপক্ষ বা ৯৯৯-এ জানান; public portal অফিসিয়াল রিপোর্ট নয়",
+        "en": "Report urgent damage or looting to DoA/local authorities or 999; this public portal is not an official report"
+      }
+    ]
+  }
+}

@@ -8,6 +8,7 @@
   // প্রতিটি পাতার মূল কনটেন্ট নিজে লিখে রাখে; এখানে শুধু হেডার-ফুটার বসে।
   var NAV = [
     { href: 'index.html', label: 'হোম', key: 'nav.home' },
+    { href: 'atlas.html', label: 'গবেষণা ও ভ্রমণ Atlas', key: 'nav.atlas' },
     { href: 'index.html#explore', label: 'স্থান খুঁজুন', key: 'nav.explore' },
     { href: 'tracker.html', label: 'আমার ট্রাভেল ট্র্যাকার', key: 'nav.tracker' },
     { href: 'index.html#planner', label: 'ভ্রমণ প্ল্যানার', key: 'nav.planner' },
@@ -93,6 +94,7 @@
               esc(fo.since || '') + '</p>' +
           '</div>' +
           '<div><h4>ঘুরে দেখুন</h4>' +
+            '<a href="atlas.html">গবেষণা ও ভ্রমণ Atlas</a>' +
             '<a href="index.html#explore">স্থান খুঁজুন</a>' +
             '<a href="index.html#planner">ভ্রমণ প্ল্যানার</a>' +
             '<a href="about.html#rail">ট্রেনের তথ্য</a>' +

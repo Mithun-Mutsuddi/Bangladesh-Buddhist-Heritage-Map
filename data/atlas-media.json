@@ -1,0 +1,116 @@
+{
+  "schema_version": "2026-10-24.atlas-media.v1",
+  "note": "Locally stored with the stated Wikimedia Commons licences. Images are resized or format-converted for web delivery with original composition preserved and the same licence/creator credit retained. 360-degree provider media and protected modern reports are not mirrored.",
+  "images": [
+    {
+      "file": "somapura-aerial.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Aerial_view_of_Somapura_Mahavihara.jpg/1920px-Aerial_view_of_Somapura_Mahavihara.jpg",
+      "credit": "Md. Ahsanul Haque Nayem",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Somapura_Mahavihara.jpg",
+      "width": 1800,
+      "height": 1212,
+      "bytes": 807424
+    },
+    {
+      "file": "somapura-terracotta.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Paharpur_Terracotta_by_Farhana_1.jpg",
+      "credit": "Farhana Azad",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Paharpur_Terracotta_by_Farhana_1.jpg",
+      "width": 1756,
+      "height": 977,
+      "bytes": 190154
+    },
+    {
+      "file": "shalban.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Shalban_Vihara_%281%29.jpg/1920px-Shalban_Vihara_%281%29.jpg",
+      "credit": "Shahidul Hasan Roman",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Shalban_Vihara_(1).jpg",
+      "width": 1800,
+      "height": 1350,
+      "bytes": 621611
+    },
+    {
+      "file": "kotila-mura.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE.png",
+      "credit": "Sabilaenun",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E0%A6%95%E0%A7%8B%E0%A6%9F%E0%A6%BF%E0%A6%B2%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE.png",
+      "width": 680,
+      "height": 452,
+      "bytes": 568708
+    },
+    {
+      "file": "itakhola-mura.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Itakhola_Mura_%28front%29.jpg/1920px-Itakhola_Mura_%28front%29.jpg",
+      "credit": "Masum-al-hasan",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Itakhola_Mura_(front).jpg",
+      "width": 1800,
+      "height": 1350,
+      "bytes": 772744
+    },
+    {
+      "file": "rupban-mura.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Rupban_Mura%2C_Comilla.jpg/1920px-Rupban_Mura%2C_Comilla.jpg",
+      "credit": "Masum-al-hasan",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Rupban_Mura,_Comilla.jpg",
+      "width": 1800,
+      "height": 1350,
+      "bytes": 700931
+    },
+    {
+      "file": "sitakot.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Sitakot_Bihara_1.jpg/1920px-Sitakot_Bihara_1.jpg",
+      "credit": "Zaheerahmed786",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sitakot_Bihara_1.jpg",
+      "width": 1800,
+      "height": 1350,
+      "bytes": 785466
+    },
+    {
+      "file": "halud-vihara.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Halud_Vihar_1.jpg/1920px-Halud_Vihar_1.jpg",
+      "credit": "Rangan Datta Wiki",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Halud_Vihar_1.jpg",
+      "width": 1800,
+      "height": 1193,
+      "bytes": 596820
+    },
+    {
+      "file": "bhasu-vihara.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Bhasu_Vihara_1.jpg/1920px-Bhasu_Vihara_1.jpg",
+      "credit": "Rangan Datta Wiki",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Bhasu_Vihara_1.jpg",
+      "width": 1800,
+      "height": 1061,
+      "bytes": 521057
+    },
+    {
+      "file": "jagaddala.jpg",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Jagaddala_Mahavihara.jpg/1920px-Jagaddala_Mahavihara.jpg",
+      "credit": "Suvopartho",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Jagaddala_Mahavihara.jpg",
+      "width": 1800,
+      "height": 1013,
+      "bytes": 584038
+    }
+  ]
+}

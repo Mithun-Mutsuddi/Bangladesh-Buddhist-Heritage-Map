@@ -50,7 +50,7 @@
   ];
   var EN = {
     'language.label': 'Language / ভাষা',
-    'nav.home': 'Home', 'nav.explore': 'Explore places', 'nav.tracker': 'My travel tracker',
+    'nav.home': 'Home', 'nav.atlas': 'Research & Travel Atlas', 'nav.explore': 'Explore places', 'nav.tracker': 'My travel tracker',
     'nav.planner': 'Trip planner', 'nav.maps': 'Historical maps', 'nav.history': 'History',
     'nav.archaeology': 'Archaeology article', 'nav.philosophy': 'Buddhism',
     'nav.culture': 'Art & culture', 'nav.children': 'Children', 'nav.kings': 'Royal profiles', 'nav.library': 'Library',

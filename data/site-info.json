@@ -83,6 +83,17 @@
  ],
  "features": [
   {
+   "id": "research-travel-atlas",
+   "icon": "⌖",
+   "title": "গবেষণা ও ভ্রমণ Atlas",
+   "title_en": "Research & Travel Atlas",
+"desc": "১২টি major-site profile, ২টি circuit, ৩৫টি উৎস, archival survey, rights-aware 360° media, bilingual transcript, field-update draft ও evidence passport।",
+ "desc_en": "Twelve major-site dossiers, two circuits, 35 sources, archival surveys, rights-aware 360° media, bilingual transcripts, local field-update drafts and an evidence passport. Existing 3,218 records remain linked.",
+   "status": "live",
+   "link": "atlas.html",
+   "linkText": "Atlas খুলুন"
+  },
+  {
    "id": "my-map",
    "icon": "🗺️",
    "title": "আমার ট্রাভেল ট্র্যাকার",
