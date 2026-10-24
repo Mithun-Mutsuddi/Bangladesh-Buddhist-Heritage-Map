@@ -65,8 +65,9 @@ test('early language control names Chakma and Marma honestly and works on librar
   await page.locator('#cbLanguageSelect').selectOption('rmz');
   await expect(page.locator('#cbLanguageSupport')).toContainText('Marma');
   await page.goto('/library.html');
-  await expect(page.locator('#cbLanguageSelectStandalone')).toBeVisible();
-  await expect(page.locator('a[href="historical-archive.html"]')).toHaveCount(1);
+  await expect(page.locator('#cbLanguageSelect')).toBeVisible();
+  await expect(page.locator('#cbLanguageSelectStandalone')).toHaveCount(0);
+  await expect(page.locator('#cbNav a[href="historical-archive.html"]')).toHaveCount(1);
 });
 
 test('direct mobile map links are not covered by the welcome dialog', async ({ page }) => {

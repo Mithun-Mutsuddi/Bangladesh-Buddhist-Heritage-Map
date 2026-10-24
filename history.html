@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://upload.wikimedia.org">
   <link rel="stylesheet" href="styles.css?v=20261023d">
   <link rel="stylesheet" href="history.css?v=20261022i">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261024e">
 </head>
 <body>
   <a class="skip-link" href="#main">মূল কনটেন্টে যান</a>
@@ -17,29 +18,7 @@
     <span class="flag-blue"></span><span class="flag-yellow"></span><span class="flag-red"></span><span class="flag-white"></span><span class="flag-orange"></span><span class="flag-mixed"></span>
   </div>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="প্রথম পাতায় ফিরে যান">
-        <span class="brand-mark" aria-hidden="true">☸</span>
-        <span class="brand-copy"><strong>চর্যাভূমি</strong><small>হাজার বছরের পথ ধরে</small></span>
-      </a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">☰ <span class="sr-only">মেনু খুলুন</span></button>
-      <nav class="site-nav" id="siteNav" aria-label="প্রধান নেভিগেশন">
-        <a href="index.html">হোম</a>
-        <a href="index.html#explore">স্থান খুঁজুন</a>
-        <a href="index.html#planner">ভ্রমণ প্ল্যানার</a>
-        <a href="history.html">ইতিহাস</a>
-        <a href="culture.html">শিল্প ও সংস্কৃতি</a>
-        <a href="kings.html">রাজাদের প্রোফাইল</a>
-        <a href="library.html">লাইব্রেরি</a>
-        <a href="historical-archive.html">সংরক্ষণাগার</a>
-        <a href="contribution.html">অবদান</a>
-        <a href="institutions.html">প্রতিষ্ঠান</a>
-        <a href="quiz.html">কুইজ</a>
-        <a href="about.html">আমাদের কথা</a>
-      </nav>
-    </div>
-  </header>
+  <header class="cb-header" id="cbHeader"></header>
 
   <main id="main">
     <section class="hist-hero" id="top">
@@ -92,15 +71,10 @@
     </section>
   </main>
 
-  <footer class="hist-footer">
-    <div class="wrap">
-      <p>বাংলাদেশ বৌদ্ধ ঐতিহ্য মানচিত্র · ইতিহাস বিভাগ · ফাইল: <code>data/heritage-history.json</code></p>
-      <p><a href="index.html">স্থান-নির্দেশিকা</a> · <a href="history.html#top">ঐতিহাসিক আর্কাইভ</a> · <a href="#top">উপরে ফিরুন ↑</a></p>
-    </div>
-  </footer>
+  <footer class="cb-footer" id="cbFooter"></footer>
 
   <script src="language.js?v=20261024d" defer></script>
-  <script src="nav-mini.js?v=20261022a" defer></script>
+  <script src="brand.js?v=20261024e" defer></script>
   <script src="history.js?v=20261022d" defer></script>
 </body>
 </html>

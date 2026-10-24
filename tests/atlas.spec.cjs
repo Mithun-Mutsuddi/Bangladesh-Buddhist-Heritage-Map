@@ -192,7 +192,8 @@ test('Atlas is linked from shared navigation, archive and existing children tool
   await page.goto('/historical-archive.html');
   await expect(page.locator('a[href="atlas.html#tours"]')).toHaveCount(1);
   await page.goto('/children.html');
-  await expect(page.locator('a[href="atlas.html#passport"]')).toHaveCount(1);
+  await expect(page.locator('#cbNav a[href="atlas.html#passport"]')).toHaveCount(1);
+  await expect(page.locator('.kids-jump a[href="atlas.html#passport"]')).toHaveCount(1);
 });
 
 test('mobile Atlas and open dossier have no page-level horizontal overflow', async ({ page }) => {

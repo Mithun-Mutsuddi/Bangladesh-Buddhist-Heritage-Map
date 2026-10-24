@@ -42,9 +42,8 @@
     if (!$('sanghamitra-moved-note')) {
       const el = document.createElement('aside');
       el.id='sanghamitra-moved-note'; el.className='upgrade-caution sangha-moved-note';
-      /* সংঘমিত্র চ্যাট এখন নতুন হোমপেজে (index.html#sanghamitra, sanghamitra.js) —
-         এই এমবেডেড উইজেটটি ইচ্ছাকৃতভাবে খুলে নেওয়া হলো; নিচে পথনির্দেশ মাত্র। */
-      el.innerHTML = '☸ <strong>সংঘমিত্র সহায়ক এখন নতুন হোমপেজে:</strong> <a href="index.html#sanghamitra">হোমের সংঘমিত্র সেকশনে যান →</a> সেখানে শিশুর ধর্মীয় নাম ও প্রতিষ্ঠান/স্থানের নামের সাজেশনও যোগ হয়েছে।';
+      /* Legacy pages link to the one shared sanghamitra.js panel. */
+      el.innerHTML = '☸ <strong>একটি shared সংঘমিত্র সহায়ক:</strong> <a href="index.html?assistant=1">সংঘমিত্র খুলুন →</a> স্থান, ইতিহাস, ভ্রমণ ও শিশুর নামের স্থানীয় উত্তর এবং optional online AI একই panel-এ।';
       const community = $('community-contact');
       const reportBar = community && community.querySelector('.community-report-bar');
       if (reportBar) reportBar.insertAdjacentElement('afterend', el);
@@ -316,86 +315,10 @@
     render();
   }
 
-  function addMessage(content,role){
-    const box=$('sanghaMessages');if(!box)return;
-    const node=document.createElement('div');node.className='sangha-message '+role;node.innerHTML=content;box.append(node);box.scrollTop=box.scrollHeight;
-  }
-  function answerBot(query){
-    const q=query.toLocaleLowerCase('bn');const data=places();
-    const p=data.find(site=>[site.name,site.nameEn,site.district,site.upazila,site.summary].filter(Boolean).some(x=>q.includes(String(x).toLocaleLowerCase('bn'))));
-    const en=/\b(how|where|route|travel|hotel|hospital|history|festival|police|fire|near|visit|etiquette|photo)\b/i.test(query);
-    const intro=en?'Here is the most reliable guidance in this directory:':'এই ডিরেক্টরির তথ্যের ভিত্তিতে নির্দেশনা:';
-    let answer='',links='';
-    if(/festival|উৎসব|পূর্ণিমা|চীবর|কঠিন/.test(q)){
-      answer=en?'Festival dates may follow a lunar calendar and local Sangha announcements. Confirm the Gregorian date with the host monastery; this tracker does not guess dates.':'উৎসবের দিন চন্দ্রপঞ্জিকা ও স্থানীয় সংঘের ঘোষণায় নির্ধারিত হতে পারে। Gregorian তারিখ সংশ্লিষ্ট বিহারের ঘোষণায় নিশ্চিত করুন; ক্যালেন্ডার অনুমান করে তারিখ দেয় না.';
-      links='<a href="#festival-tracker">উৎসব ক্যালেন্ডার / Festival tracker ↗</a>';
-    }else if(/hotel|food|restaurant|hospital|clinic|medical|police|fire|transport|হোটেল|খাবার|হাসপাতাল|চিকিৎসা|পুলিশ|ফায়ার|পরিবহন|বাস|ট্রেন/.test(q)){
-      const target=p||byPlaceId($('travelDestination')?.value);
-      if(target){
-        const term=/hospital|clinic|medical|হাসপাতাল|চিকিৎসা/.test(q)?'hospital clinic near ':/police|পুলিশ/.test(q)?'police station near ':/fire|ফায়ার/.test(q)?'fire service near ':/hotel|হোটেল/.test(q)?'hotel near ':/food|restaurant|খাবার/.test(q)?'restaurant near ':'transport near ';
-        answer=(en?'Search nearby services around ':'নির্বাচিত স্থানের কাছে সেবা খুঁজুন: ')+esc(target.name)+'. '+(en?'Map results do not guarantee opening or availability.':'মানচিত্রের ফলাফল খোলা থাকা বা সেবা পাওয়ার নিশ্চয়তা নয়.');
-        links='<a href="'+mapsSearch(term+placeQuery(target))+'" target="_blank" rel="noopener noreferrer">কাছাকাছি সেবা খুঁজুন / Search nearby ↗</a> <a href="#travel-guide">ভ্রমণ গাইড / Travel guide ↗</a>';
-      }else{answer=en?'Which heritage site or town should I search near?':'কোন বিহার বা শহরের কাছে সেবা খুঁজবেন?';links='<a href="#travel-guide">ভ্রমণ গাইড / Travel guide ↗</a>';}
-    }else if(/route|travel|যাব|যেতে|রুট|যাতায়াত|দিকনির্দেশ|কীভাবে/.test(q)){
-      answer=en?'Enter your starting place and choose a site in the travel planner. Approximate locations use name-based Google Maps search rather than a guessed gate coordinate.':'ভ্রমণ গাইডে শুরুর স্থান লিখে গন্তব্য বেছে নিন। আনুমানিক পিন হলে নির্দিষ্ট গেট ধরে রুট না দিয়ে নাম-ভিত্তিক Google Maps অনুসন্ধান হবে.';
-      links='<a href="#travel-guide">রুট পরিকল্পনা / Plan route ↗</a>';
-    }else if(/etiquette|conduct|respect|photo|picture|শিষ্টাচার|আচরণ|ছবি|জুতা|পোশাক/.test(q)){
-      answer=en?'At an active monastery, dress modestly, speak quietly, follow shoe-removal instructions, ask permission before photographing people or ceremonies, and respect restricted areas.':'সক্রিয় বিহারে শালীন পোশাক পরুন, নীরব থাকুন, জুতা রাখার নিয়ম মানুন, মানুষ বা ধর্মীয় অনুষ্ঠানের ছবি তোলার আগে অনুমতি নিন এবং নিষিদ্ধ এলাকা এড়িয়ে চলুন.';
-    }else if(/history|historic|architecture|archaeology|ইতিহাস|প্রত্ন|স্থাপত্য|পাল|মৌর্য|গুপ্ত|কুষাণ/.test(q)||p){
-      if(p){
-        answer=esc(p.name)+' — '+esc(p.summary||p.history||'');
-        if(p.pinApproximate||p.verificationPending)answer+=' '+(en?'Coordinate warning: this pin is approximate, not a surveyed entrance.':'স্থানাঙ্ক সতর্কতা: এই পিন আনুমানিক, জরিপকৃত প্রবেশদ্বার নয়.');
-        if(p.source)links+='<a href="'+esc(p.source)+'" target="_blank" rel="noopener noreferrer">তথ্যসূত্র / Source ↗</a> ';
-        links+='<a href="'+mapsSearch(placeQuery(p))+'" target="_blank" rel="noopener noreferrer">Google Maps ↗</a>';
-      }else{
-        answer=en?'Bangladesh has Pala-period Buddhist monuments as well as modern living monasteries. Do not assign Maurya, Kushan, Gupta or Pala dates to a specific site without site-specific evidence.':'বাংলাদেশে পাল যুগের বৌদ্ধ প্রত্নস্থল এবং আধুনিক জীবন্ত বিহার—দুই ধরনের ঐতিহ্য আছে। নির্দিষ্ট প্রত্নতাত্ত্বিক প্রমাণ ছাড়া কোনো স্থানকে মৌর্য, কুষাণ, গুপ্ত বা পাল যুগের বলে দাবি করা ঠিক নয়.';
-        links='<a href="#references">তথ্যসূত্র / Sources ↗</a>';
-      }
-    }else{
-      answer=en?'I can help with heritage history, travel planning, nearby services, festivals and visitor etiquette. Include a site or town name for a more precise answer.':'আমি ঐতিহ্যের ইতিহাস, ভ্রমণ পরিকল্পনা, কাছাকাছি সেবা, উৎসব ও আচরণবিধি নিয়ে সাহায্য করতে পারি। নির্দিষ্ট উত্তরের জন্য বিহার বা শহরের নাম লিখুন.';
-      links='<a href="#explore">স্থান খুঁজুন / Find a site ↗</a>';
-    }
-    return '<p>'+intro+'</p><p>'+answer+'</p>'+(links?'<div class="sangha-answer-links">'+links+'</div>':'');
-  }
-  async function sendBotMessage(query){
-    const endpoint=String(window.SANGHAMITRA_API_URL||'').trim();
-    if(!endpoint){addMessage(answerBot(query),'bot');return;}
-    const input=$('sanghaInput');
-    const lang=/[\u0980-\u09FF]/.test(query)?'bn':'en';
-    const site=places().find(p=>[p.name,p.district,p.upazila].filter(Boolean).some(x=>query.toLocaleLowerCase('bn').includes(String(x).toLocaleLowerCase('bn'))));
-    const pending=document.createElement('div');
-    pending.className='sangha-message bot';pending.textContent=lang==='bn'?'উত্তর তৈরি হচ্ছে…':'Preparing an answer…';
-    $('sanghaMessages').append(pending);
-    try{
-      const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:query,language:lang,site_id:site?site.id:null})});
-      if(!response.ok)throw new Error('API status '+response.status);
-      const result=await response.json();
-      pending.remove();
-      addMessage('<p>'+esc(result.answer||result.response||'এই মুহূর্তে উত্তর পাওয়া যায়নি।')+'</p>'+(Array.isArray(result.sources)&&result.sources.length?'<div class="sangha-answer-links">'+result.sources.slice(0,5).map(s=>'<a href="'+esc(s.url||s)+'" target="_blank" rel="noopener noreferrer">'+esc(s.title||'তথ্যসূত্র')+' ↗</a>').join('')+'</div>':''),'bot');
-    }catch(error){
-      pending.remove();
-      addMessage(answerBot(query)+'<p class="seo-editorial-note">লাইভ AI service পাওয়া যায়নি; এখানে স্থানীয় ডেমো সহায়ক ব্যবহার করা হয়েছে।</p>','bot');
-      console.warn('SanghaMitra API unavailable; local fallback used.',error);
-    }
-  }
-
-  function setupBot(){
-    const panel=$('sanghaPanel'),toggle=$('sanghaToggle');
-    toggle?.addEventListener('click',()=>{const open=panel.hidden;panel.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.querySelector('b').textContent=open?'−':'＋';if(open)$('sanghaInput')?.focus();});
-    $('sanghaClose')?.addEventListener('click',()=>{panel.hidden=true;toggle?.setAttribute('aria-expanded','false');if(toggle)toggle.querySelector('b').textContent='＋';});
-    $('sanghaForm')?.addEventListener('submit',event=>{
-      event.preventDefault();const q=$('sanghaInput').value.trim();if(!q)return;
-      addMessage('<p>'+esc(q)+'</p>','user');$('sanghaInput').value='';
-      sendBotMessage(q);
-    });
-    const quick={history:'বাংলাদেশের বৌদ্ধ ইতিহাস ও স্থাপত্য সম্পর্কে বলুন',route:'ঢাকা থেকে পাহাড়পুর যাওয়ার রুট কীভাবে পরিকল্পনা করব?',nearby:'নির্বাচিত স্থানের কাছে হাসপাতাল ও হোটেল কোথায়?',etiquette:'সক্রিয় বিহার ভ্রমণের আচরণবিধি কী?'};
-    document.querySelectorAll('[data-sangha-quick]').forEach(btn=>btn.addEventListener('click',()=>{const q=quick[btn.dataset.sanghaQuick]||'বৌদ্ধ ঐতিহ্য সম্পর্কে বলুন';addMessage('<p>'+esc(q)+'</p>','user');addMessage(answerBot(q),'bot');}));
-  }
-
   function init(){
     addSections();
     try{setupMapRecovery();}catch(e){console.error('Map recovery failed',e);const m=$('map');if(m)m.innerHTML='<div class="map-library-fallback"><strong>ম্যাপ শুরু করা যায়নি</strong><p>Google Maps-এ স্থাননাম অনুসন্ধান করুন বা পৃষ্ঠা reload করুন।</p></div>';}
-    setupTravel();setupCommunity();setupFestivals();setupSeoContent(); /* setupBot() বাদ: চ্যাট এখন হোমে */
+    setupTravel();setupCommunity();setupFestivals();setupSeoContent();
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();

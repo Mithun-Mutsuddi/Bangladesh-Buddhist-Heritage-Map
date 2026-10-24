@@ -5,6 +5,7 @@
   var QUIZ = 'data/quiz-bank.json?v=20261022a';
   var QUIZ2 = 'data/quiz-extra14.json?v=20261022b';   /* রাউন্ড ১৫ সংযোজন */
   var DIST = 'data/district-famous.json?v=20261022m1';
+  var STRUCTURE = 'data/site-structure.json?v=20261024e';
   // হিরো-সংখ্যার জন্য মেগাবাইট-খানেক স্থান/কুইজ/লাইব্রেরি ডেটা আর লোড করা হয় না;
   // site-info.coverage ও district-famous-এর প্রস্তুত হিসাবই যথেষ্ট। এতে হোমপেজ দ্রুত খোলে।
 
@@ -41,24 +42,18 @@
     }
   }
 
-  function features(info) {
+  function features(structure) {
     var box = $('cbFeatures');
     if (!box) return;
-    var labels = info.status_labels || {};
-    box.innerHTML = (info.features || []).map(function (f) {
-      var link = f.link
-        ? '<a class="cb-feat-link" href="' + esc(f.link) + '">' + esc(f.linkText || 'দেখুন') + ' →</a>'
-        : '<span class="cb-feat-link" style="color:var(--cb-muted);font-weight:400">লিংক শীঘ্রই</span>';
-      return '<article class="cb-feat" id="f-' + esc(f.id) + '">' +
-        '<div class="cb-feat-top">' +
-          '<span class="cb-feat-ico" aria-hidden="true">' + f.icon + '</span>' +
-          '<span class="cb-badge ' + esc(f.status) + '">' + esc(labels[f.status] || f.status) + '</span>' +
-        '</div>' +
-        '<h3>' + esc(f.title) + '<span class="en">' + esc(f.title_en || '') + '</span></h3>' +
-        '<p>' + esc(f.desc) + '</p>' +
-        (f.desc_en ? '<p class="en-desc">' + esc(f.desc_en) + '</p>' : '') +
-        link +
-      '</article>';
+    box.innerHTML = ((structure && structure.groups) || []).map(function (g) {
+      var items = g.items || [];
+      return '<article class="cb-feat cb-topic-card" id="topic-' + esc(g.id) + '">' +
+        '<div class="cb-feat-top"><span class="cb-feat-ico" aria-hidden="true">' + esc(g.icon || '☸') + '</span>' +
+        '<span class="cb-badge live">' + bn(items.length) + 'টি subcategory</span></div>' +
+        '<h3 data-i18n="nav.group.' + esc(g.id) + '">' + esc(g.label) + '</h3><p class="cb-topic-intro">' + esc(g.description || '') + '</p>' +
+        '<div class="cb-topic-links">' + items.map(function (item) {
+          return '<a href="' + esc(item.href) + '"' + (item.key ? ' data-i18n="' + esc(item.key) + '"' : '') + '>' + esc(item.title) + '</a>';
+        }).join('') + '</div></article>';
     }).join('');
   }
 
@@ -215,11 +210,11 @@
     };
     // শুধু ছোট দুই ফাইল প্রথমে: সাইট-তথ্য ও জেলা-সারাংশ।
     // আগে heritage-sites/additions/quiz/library মিলিয়ে প্রায় ৩ MB না এলে হোমের মূল অংশ আটকে থাকত।
-    Promise.all([get(INFO, null), get(DIST, null)]).then(function (res) {
+    Promise.all([get(INFO, null), get(DIST, null), get(STRUCTURE, { groups: [] })]).then(function (res) {
       var info = res[0];
       if (!info) return;
       brandText(info);
-      features(info);
+      features(res[2]);
       audience(info);
       promises(info);
       founder(info);
@@ -228,6 +223,8 @@
       quizFacts(info, baseQuiz + 147);
       heroStats(info, res[1], baseQuiz + 147);
       if (res[1]) { districtSection(res[1]); bindDistrict(); }
+      // Structure-driven labels may arrive after the shared language control.
+      if (window.CharyabhumiLanguage) window.CharyabhumiLanguage.refresh();
 
       // কুইজের অতিরিক্ত প্রশ্নসংখ্যা নিশ্চিত করতে ছোট ফাইলটি idle সময়ে পড়া হয়।
       var verifyQuizCount = function () {

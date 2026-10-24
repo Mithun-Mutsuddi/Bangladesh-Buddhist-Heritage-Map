@@ -2,7 +2,7 @@
 
 ## What runs on GitHub Pages
 
-The current site remains a static HTML/CSS/JavaScript app. Publish the repository's root directory from the `main` branch using **Settings → Pages → Deploy from a branch → main / (root)**. The new responsive enhancements add the festival tracker, route planner, nearby-service searches, a community correction helper, a local SanghaMitra demo, and long-form site articles. These sections do not require a database to render.
+The current site remains a static HTML/CSS/JavaScript app. Publish the repository's root directory from the `main` branch using **Settings → Pages → Deploy from a branch → main / (root)**. The responsive enhancements include the festival tracker, route planner, nearby-service searches, a community correction helper and long-form site articles. One shared `sanghamitra.js` panel provides the source-based local guide across the homepage, content pages and tracker. These sections do not require a database to render.
 
 The map itself uses Leaflet and OpenStreetMap tiles. Google Maps links are used for route, place-name and nearby-service searches; this branch does not require a Google Maps JavaScript API key. If a browser blocks the Leaflet CDN, an explanatory search-link fallback is shown. Browser geolocation requires user permission and a secure context (normally HTTPS or localhost).
 
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 uvicorn server.sanghamitra_api:app --reload --port 8000
 ```
 
-Then set `window.SANGHAMITRA_API_URL = "https://your-api-host.example/api/chat"` before `heritage-enhancements.js` loads, or inject it in the hosting platform's runtime configuration. Do not set this to localhost on the public website. If the API is not configured or fails, the website falls back to the rule-based local guide.
+Then set `window.SANGHAMITRA_API_URL = "https://your-api-host.example/api/chat"` before the shared `sanghamitra.js` loads, or inject it in the hosting platform's runtime configuration. `CHARJAVUMI_CHAT_ENDPOINT` is also supported; otherwise the optional online mode tries same-origin `/api/chat`. Do not set this to localhost on the public website. The local guide is the default and works without a server. Online AI is opt-in; if its request fails, the panel reports the failure instead of presenting a fabricated generated answer.
 
 The API uses a curated site record, not the whole directory, for each query. It returns only that record's source URLs and does not expose request headers or provider error bodies. Production deployments should add rate limiting, abuse monitoring, a hosting-specific secrets manager, TLS, cost controls, and provider-specific safety review.
 

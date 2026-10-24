@@ -86,7 +86,16 @@ body.cb-welcome-open { overflow: hidden; }
   .cb-welcome[open] { display: block; }
   .cb-welcome-art { height: 190px; min-height: 0; border-radius: 19px 19px 0 0; }
   .cb-welcome-art svg { min-height: 0; height: 250px; margin-top: -30px; }
-  .cb-welcome-body { padding: 23px 20px 22px; }
+  .cb-welcome-body { padding: 23px 20px 22px; display: flex; flex-direction: column; }
+  .cb-welcome-language { order: 0; }
+  .cb-welcome-time { order: 1; }
+  .cb-welcome-body h2 { order: 2; }
+  #welcomeText { order: 3; }
+  .cb-welcome-actions { order: 4; margin: 2px 0 17px; }
+  .cb-welcome-festival { order: 5; }
+  .cb-welcome-date { order: 6; }
+  .cb-welcome-form { order: 7; }
+  .cb-welcome-privacy { order: 8; }
   .cb-welcome-close { position: fixed; top: max(18px, env(safe-area-inset-top)); right: 18px; }
 }
 @media (max-width: 440px) {

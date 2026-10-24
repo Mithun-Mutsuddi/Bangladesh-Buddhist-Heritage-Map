@@ -149,7 +149,8 @@ A focused implementation is available on branch `feat/heritage-guide-upgrade` an
 
 ### Included files
 
-- `heritage-enhancements.js` + `upgrade.css`: responsive festival tracker, route planner, local-service Google Maps searches, community correction form, map recovery layer, bilingual SanghaMitra demo and source-aware long-form content UI.
+- `heritage-enhancements.js` + `upgrade.css`: legacy-responsive festival tracker, route planner, local-service Google Maps searches, community correction form, map recovery layer and source-aware long-form content UI. The former separate chatbot was removed.
+- `sanghamitra.js` + `sanghamitra.css`: the single shared source-based assistant used across the site and tracker, with consent-gated statistics, optional online AI and device-dependent voice controls.
 - `data/heritage-sites.json`: normalized JSON export of all 323 directory records, including location coordinates when present, source URLs, category, history, approximate-pin and verification status.
 - `data/heritage-seo-bn.json` and `seo-content.js`: Bengali SEO/editorial drafts for all 323 records. Every text targets 200+ whitespace-separated words. Some site-specific records lack enough independent historical evidence, so generated pages are explicitly marked as drafts for human editing; they must not be represented as research-verified articles before editorial review.
 - `data/events.json`: Buddhist festivals and lunar/local-date guidance; no fixed Gregorian festival dates are invented.

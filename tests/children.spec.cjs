@@ -210,12 +210,13 @@ test('homepage and shared navigation integrate children without changing existin
   await page.goto('/index.html');
   await expect(page.locator('#placeGrid .cb-place-card').first()).toBeVisible({ timeout: 20000 });
   await expect(page.locator('#dashStatus')).toContainText('৩,২১৮', { timeout: 20000 });
-  await expect(page.locator('#cbFeatures .cb-feat')).toHaveCount(16);
+  await expect(page.locator('#cbFeatures .cb-feat')).toHaveCount(6);
   await expect(page.locator('.cb-nav a[href="children.html"]')).toHaveCount(1);
-  await expect(page.locator('.cb-cards a[href="children.html"]')).toHaveCount(1);
+  await expect(page.locator('#cbFeatures a[href="children.html"]')).toHaveCount(1);
   await page.locator('#cbLanguageSelect').selectOption('en');
-  await expect(page.locator('.cb-nav a[href="children.html"]')).toHaveText('Children');
-  await expect(page.locator('.cb-cards a[href="children.html"] b')).toHaveText('Children: learn, play & make');
+  await expect(page.locator('.cb-nav a[href="children.html"] b')).toHaveText('Children');
+  await expect(page.locator('#cbFeatures a[href="children.html"]')).toHaveText('Children');
+  await page.locator('.cb-nav-group[data-nav-group="learning"] summary').click();
   await page.locator('.cb-nav a[href="children.html"]').click();
   await expect(page).toHaveURL(/children\.html$/);
   await expect(page.locator('#mediaGrid .kids-media-card')).toHaveCount(8, { timeout: 15000 });

@@ -12,6 +12,7 @@
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
   <link rel="stylesheet" href="atlas.css?v=20261024a">
+  <link rel="stylesheet" href="resource-guides.css?v=20261024e">
 </head>
 <body class="cb atlas-page">
   <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
@@ -96,6 +97,8 @@
         <div class="atlas-circuit-tabs" id="circuitTabs" role="tablist" aria-label="Travel circuits"></div>
         <div id="circuitPlan" class="atlas-circuit-plan"></div>
         <div class="atlas-travel-modes" id="travelModes"></div>
+        <div class="atlas-subhead" id="travel-tools"><h3>External travel planning tools</h3><span>Official service links · কোনো scraping বা automatic upload নয়</span></div>
+        <div class="resource-grid" data-resource-target="travel"></div>
         <div class="atlas-travel-check"><div><h3 data-ui="beforeTravel">যাত্রার আগে পাঁচটি যাচাই</h3><p data-ui="noInvented">কোনো unverified fare, schedule বা road condition লেখা হয়নি।</p></div><ol id="travelChecklist"></ol><div class="atlas-emergency"><strong>জরুরি সেবা / Emergency: <a href="tel:999">999</a></strong><a href="https://999.gov.bd/" target="_blank" rel="noopener">Official information ↗</a></div></div>
       </div>
     </section>
@@ -150,7 +153,7 @@
           <div class="atlas-audio-controls"><label><span data-ui="chooseStory">গল্পের প্রত্নস্থল</span><select id="audioSite"></select></label><div class="atlas-audio-buttons"><button class="cb-btn solid" id="playAudio" type="button">▶ <span data-ui="listen">শুনুন</span></button><button class="cb-btn ghost" id="stopAudio" type="button" data-ui="stop">থামান</button></div><p id="audioStatus" role="status" data-ui="audioNote">ডিভাইসে Bangla/English voice থাকলে browser-generated narration বাজবে; transcript সবসময় পড়া যায়।</p></div>
           <article class="atlas-transcript"><h3 id="transcriptTitle">Transcript</h3><p id="transcriptText"></p><p class="atlas-transcript-note" data-ui="transcriptNote">Transcript পড়ে narration মিলিয়ে নিন; তথ্যের মূল উৎস profile-এর bibliography.</p></article>
         </div>
-        <div class="atlas-school-grid">
+        <div class="atlas-school-grid" id="school-kit">
           <article class="atlas-download-card featured"><span class="atlas-download-icon">🎒</span><h3 data-ui="schoolKit">স্কুল ট্রিপ field notebook</h3><p data-ui="schoolKitText">৬ পাতা · ভূমিকা, নিরাপত্তা, observation, sketch, damage draft ও ১২ stamp page · বাংলা/English.</p><a class="cb-btn solid" href="assets/atlas/school-field-notebook.pdf" download>PDF ডাউনলোড · ৬ পাতা</a></article>
           <article class="atlas-download-card"><span class="atlas-download-icon">▤</span><h3 data-ui="atlasComic">ইটু ও হারানো ফলকের রহস্য</h3><p data-ui="atlasComicText">৩ পাতা · ৬ panel · original bilingual archaeology/Pala-era comic; imagined scene স্পষ্টভাবে চিহ্নিত।</p><a class="cb-btn ghost" href="assets/atlas/itu-pala-evidence-comic.pdf" download>Comic PDF ডাউনলোড</a></article>
         </div>
@@ -171,5 +174,6 @@
   <script src="brand.js?v=20261024e"></script>
   <script src="language.js?v=20261024e"></script>
   <script src="atlas.js?v=20261024a"></script>
+  <script src="resource-guides.js?v=20261024e" defer></script>
 </body>
 </html>

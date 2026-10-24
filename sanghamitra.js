@@ -1,11 +1,10 @@
-/* চর্যাভূমি — সংঘমিত্র (SanghaMitra) সহায়ক · নতুন হোমপেজ-সংস্করণ
+/* চর্যাভূমি — সাইটজুড়ে একটি shared সংঘমিত্র (SanghaMitra) panel
    ------------------------------------------------------------------
-   এটি স্ট্যাটিক নিয়মভিত্তিক সহায়ক (GitHub Pages-এর জন্য)। লাইভ AI যুক্ত করতে
-   পেজে আগেভাগে  window.SANGHAMITRA_API_URL = "https://.../api/chat"  বসালে
-   server/sanghamitra_api.py-এর এন্ডপয়েন্টকে কল করবে; ব্যর্থ হলে এই স্থানীয়
-   উত্তরগুলোই ফলব্যাক দেবে। লক্ষ্য করুন: প্রকাশনার সাইটে localhost বসাবেন না।
-   পুরোনো ড্যাশবোর্ডের উইজেটটি এখানে সরিয়ে আনা হয়েছে (heritage-enhancements.js)।
-   নতুন ফিচার: শিশুর ধর্মীয় নাম ও প্রতিষ্ঠান/স্থানের নাম-সাজেশন। */
+   Default হলো স্থানীয়, source-based নিয়মভিত্তিক guide। ব্যবহারকারী online AI
+   চালু করলে window.SANGHAMITRA_API_URL / CHARJAVUMI_CHAT_ENDPOINT বা /api/chat
+   ব্যবহৃত হয়; ব্যর্থতা স্পষ্টভাবে দেখানো হয়, generated উত্তর বানিয়ে দেওয়া হয় না।
+   প্রকাশনার সাইটে localhost বসাবেন না। শিশুর নাম, প্রতিষ্ঠানের নাম, স্থান-সন্ধান,
+   consent-gated visit statistics ও device voice controls একই implementation-এ। */
 (function () {
   'use strict';
 
@@ -257,76 +256,271 @@
       linksHtml([['philosophy.html#grihi', 'গৃহী নীতি'], ['philosophy.html#bandana', 'বন্দনা ও জীবনাচার'], ['index.html#explore', 'স্থান খুঁজুন']]);
   }
 
-  function addMessage(box, html, role) {
-    var node = document.createElement('div');
-    node.className = 'cb-sangha-msg ' + role;
-    node.innerHTML = html;
-    box.appendChild(node);
-    box.scrollTop = box.scrollHeight;
-  }
+  /* ---------- One shared assistant across the entire site ---------- */
+  var placePromise = null;
+  var lastReply = '';
+  var lastFocus = null;
 
-  function send(box, query) {
-    var endpoint = String(window.SANGHAMITRA_API_URL || '').trim();
-    if (!endpoint) { addMessage(box, answerBot(query), 'bot'); return; }
-    var pending = document.createElement('div');
-    pending.className = 'cb-sangha-msg bot';
-    pending.textContent = 'উত্তর তৈরি হচ্ছে…';
-    box.appendChild(pending);
-    box.scrollTop = box.scrollHeight;
-    fetch(endpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: query, language: /[\u0980-\u09FF]/.test(query) ? 'bn' : 'en', site_id: null })
-    }).then(function (r) {
-      if (!r.ok) throw new Error('API ' + r.status);
+  function normalize(value) {
+    return String(value || '').toLocaleLowerCase('bn').replace(/[\u200c\u200d]/g, '').replace(/\s+/g, ' ').trim();
+  }
+  function localTrackerPlaces() {
+    try {
+      var api = window.CharyabhumiTracker;
+      var list = api && api.getPlaces ? api.getPlaces() : null;
+      return list && list.length ? list : null;
+    } catch (_) { return null; }
+  }
+  function loadPlaces() {
+    var local = localTrackerPlaces();
+    if (local) return Promise.resolve(local);
+    if (placePromise) return placePromise;
+    placePromise = fetch('data/tracker-places.json?v=20261024e').then(function (r) {
+      if (!r.ok) throw new Error('place directory ' + r.status);
       return r.json();
-    }).then(function (result) {
-      pending.remove();
-      var html = '<p>' + esc(result.answer || result.response || 'এই মুহূর্তে উত্তর পাওয়া যায়নি।') + '</p>';
-      if (Array.isArray(result.sources) && result.sources.length) {
-        html += '<div class="cb-sangha-links">' + result.sources.slice(0, 5).map(function (s) {
-          return '<a href="' + esc(s.url || s) + '" target="_blank" rel="noopener">' + esc(s.title || 'তথ্যসূত্র') + ' ↗</a>';
-        }).join('') + '</div>';
-      }
-      addMessage(box, html, 'bot');
-    }).catch(function (err) {
-      pending.remove();
-      console.warn('SanghaMitra API unavailable; local fallback used.', err);
-      addMessage(box, answerBot(query) + '<p class="cb-sangha-note">লাইভ সেবা পাওয়া যায়নি — স্থানীয় সহায়কের উত্তর দেখানো হলো।</p>', 'bot');
+    }).then(function (data) { return data.places || []; }).catch(function (err) {
+      placePromise = null;
+      throw err;
+    });
+    return placePromise;
+  }
+  function searchPlaces(query, limit) {
+    var term = normalize(query);
+    if (term.length < 2) return Promise.resolve([]);
+    var stop = ['the','and','tell','about','please','what','which','have','from','বলুন','সম্পর্কে','জানতে','চাই','একটি','কোনো'];
+    var tokens = term.replace(/[?.!,“”]/g, '').split(' ').filter(function (t) {
+      return t.length >= 3 && stop.indexOf(t) === -1;
+    });
+    return loadPlaces().then(function (places) {
+      return places.map(function (p) {
+        var names = normalize([p.name, p.en, p.id, (p.aliases || []).join(' ')].join(' '));
+        var geography = normalize([p.district, p.division, p.upazila, p.category, p.type].join(' '));
+        var score = 0;
+        if (normalize(p.id) === term) score += 160;
+        if (p.en && normalize(p.en) === term) score += 120;
+        if (names.indexOf(term) !== -1) score += 60;
+        if (names.indexOf(term) === 0) score += 18;
+        if (geography.indexOf(term) !== -1) score += 12;
+        tokens.forEach(function (token) {
+          if (names.indexOf(token) !== -1) score += 8;
+          else if (geography.indexOf(token) !== -1) score += 3;
+        });
+        return { place: p, score: score };
+      }).filter(function (x) { return x.score >= 3; }).sort(function (a, b) {
+        return b.score - a.score || String(a.place.name).localeCompare(String(b.place.name), 'bn');
+      }).slice(0, limit || 6).map(function (x) { return x.place; });
     });
   }
-
-  var QUICK = {
-    history: 'বাংলাদেশের বৌদ্ধ ইতিহাস সম্পর্কে বলুন',
-    route: 'কোনো বিহারে যাওয়ার রুট কীভাবে পরিকল্পনা করব?',
-    etiquette: 'সক্রিয় বিহার ভ্রমণের আচরণবিধি কী?',
-    festival: 'আসন্ন বৌদ্ধ উৎসব কবে?',
-    babyname: 'শিশুর ধর্মীয় নামের সাজেশন দিন',
-    babygirl: 'মেয়ের ধর্মীয় নাম দিন',
-    weekday: 'শুক্রবারে জন্ম নেওয়া ছেলের নাম দিন',
-    placename: 'নতুন বিহারের নামের সাজেশন দিন',
-    grihi: 'গৃহী নীতি — পঞ্চশীল ও সিগালোবাদ সুত্ত সম্পর্কে বলুন'
-  };
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var box = $('sanghaHomeMessages');
-    var form = $('sanghaHomeForm');
-    var input = $('sanghaHomeInput');
-    if (!box || !form || !input) return;
-    form.addEventListener('submit', function (ev) {
-      ev.preventDefault();
-      var q = input.value.trim();
-      if (!q) return;
-      addMessage(box, '<p>' + esc(q) + '</p>', 'user');
-      input.value = '';
-      send(box, q);
+  function safeLink(url) {
+    try {
+      var parsed = new URL(String(url || ''), location.href);
+      return /^(https?:)$/.test(parsed.protocol) ? parsed.href : '';
+    } catch (_) { return ''; }
+  }
+  function message(text, role, links, trustedHtml) {
+    var box = $('chatMessages');
+    var div = document.createElement('div');
+    div.className = 'message ' + (role || 'bot');
+    if (trustedHtml) div.innerHTML = text;
+    else div.textContent = text;
+    (links || []).forEach(function (link) {
+      var url = safeLink(link.url || link);
+      if (!url) return;
+      var a = document.createElement('a');
+      a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.textContent = '\n' + (link.title || 'মূল উৎস') + ' ↗';
+      div.appendChild(a);
     });
-    Array.prototype.forEach.call(document.querySelectorAll('[data-sangha-home-quick]'), function (btn) {
-      btn.addEventListener('click', function () {
-        var q = QUICK[btn.getAttribute('data-sangha-home-quick')] || 'বৌদ্ধ ঐতিহ্য সম্পর্কে বলুন';
-        addMessage(box, '<p>' + esc(q) + '</p>', 'user');
-        send(box, q);
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+    if (role !== 'user') lastReply = div.textContent || '';
+    return div;
+  }
+  function appendPlaceLinks(list) {
+    if (!list.length) return;
+    var div = document.createElement('div');
+    div.className = 'sm-place-links';
+    list.forEach(function (p) {
+      var a = document.createElement('a');
+      a.href = 'index.html?q=' + encodeURIComponent(p.id) + '#explore';
+      a.textContent = (p.en || p.name) + ' ↗';
+      div.appendChild(a);
+    });
+    $('chatMessages').appendChild(div);
+    $('chatMessages').scrollTop = $('chatMessages').scrollHeight;
+  }
+  function broadQuery(q) {
+    var specific = normalize(q).replace(/[?.!,“”]/g, '').split(' ').filter(function (word) {
+      return word.length >= 2 && ['বিহার','মন্দির','স্থান','তথ্য','নাম','ইতিহাস','প্রত্নতত্ত্ব','ভ্রমণ','দর্শন','buddhist','temple','place','history','tell','about','information'].indexOf(word) === -1;
+    });
+    return !specific.length;
+  }
+  function statsReply() {
+    if (!$('allowStats').checked) {
+      message('Please enable “Allow local guide to read my visit stats” above. Your map is private until you grant access. / অনুমতি ছাড়া আপনার ব্যক্তিগত ম্যাপ পড়া হয় না।');
+      return true;
+    }
+    var api = window.CharyabhumiTracker;
+    if (api && api.getStats) {
+      var s = api.getStats();
+      message('You have visited ' + s.sites + ' of ' + s.total + ' heritage records (' + s.percent + '%) and ' + s.districts + ' of 64 districts. ' + s.remaining + ' places remain. Counts are self-reported; no private journal, photo or precise route was read.');
+      return true;
+    }
+    var visited = 0, districts = 0;
+    try {
+      var saved = JSON.parse(localStorage.getItem('charjavumi.tracker.v1') || '{}');
+      visited = Array.isArray(saved.visited) ? new Set(saved.visited).size : 0;
+      districts = Array.isArray(saved.districts) ? new Set(saved.districts).size : 0;
+    } catch (_) {}
+    loadPlaces().then(function (places) {
+      message('You have self-reported ' + visited + ' visits in this browser. The full directory has ' + places.length + ' records; ' + districts + ' manually/GPS-recorded district marks were found. Open the tracker for the complete private calculation. No journal, photo or precise route was read.');
+    }).catch(function () { message('The saved visit count could not be compared with the directory right now. Open the tracker and try again.'); });
+    return true;
+  }
+  function onlineReply(query) {
+    var lang = $('chatLanguage').value.startsWith('bn') ? 'bn' : 'en';
+    var pending = message(lang === 'bn' ? 'অনলাইন সহায়কের উত্তর খোঁজা হচ্ছে…' : 'Looking up the configured online assistant…');
+    var endpoint = String(window.SANGHAMITRA_API_URL || window.CHARJAVUMI_CHAT_ENDPOINT || '/api/chat').trim();
+    var controller = new AbortController();
+    var timeout = setTimeout(function () { controller.abort(); }, 45000);
+    return searchPlaces(query, 1).catch(function () { return []; }).then(function (matches) {
+      return fetch(endpoint, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, signal: controller.signal,
+        body: JSON.stringify({ message: query, language: lang, site_id: matches[0] ? matches[0].id : null })
       });
-    });
+    }).then(function (response) {
+      if (!response.ok) throw new Error('Online AI unavailable');
+      return response.json();
+    }).then(function (data) {
+      pending.remove();
+      if (typeof data.answer !== 'string') throw new Error('Invalid response');
+      message(data.answer, 'bot', data.sources || []);
+    }).catch(function () {
+      pending.remove();
+      message('Online AI is unavailable. No generated answer was returned. Turn off online AI to use the source-based local guide. / অনলাইন AI অনুপলব্ধ; স্থানীয় গাইড ব্যবহার করতে online AI বন্ধ করুন।');
+    }).finally(function () { clearTimeout(timeout); });
+  }
+  function send(query) {
+    var q = String(query || '').trim();
+    if (!q) return;
+    message(q, 'user');
+    $('chatInput').value = '';
+    if ($('onlineAI').checked) return onlineReply(q);
+    var n = normalize(q);
+    if (/progress|stats|how many|remaining|অগ্রগতি|কত.*দেখ|বাকি/.test(n)) return statsReply();
+    if (broadQuery(q)) { message(answerBot(q), 'bot', [], true); return; }
+    searchPlaces(q, 5).then(function (matches) {
+      if (!matches.length) { message(answerBot(q), 'bot', [], true); return; }
+      var p = matches[0];
+      var caution = p.approx ? '\n\nLocation/access note: this record may use an approximate pin; verify locally before travel.' : '\n\nVerify current opening hours and access before travel.';
+      message((p.en || p.name) + '\n' + p.name + '\n\n' + (p.history || p.summary || 'Source-linked directory record.') + caution, 'bot', p.source ? [{ title: p.sourceLabel || 'Original source', url: p.source }] : []);
+      appendPlaceLinks(matches);
+    }).catch(function () { message(answerBot(q) + '<p class="sm-note">স্থান-ডিরেক্টরি এখন লোড হয়নি; সাধারণ local guide-এর উত্তর দেখানো হলো।</p>', 'bot', [], true); });
+  }
+
+  function ensureStyles() {
+    if (document.getElementById('cbSanghaStyles')) return;
+    var link = document.createElement('link');
+    link.id = 'cbSanghaStyles'; link.rel = 'stylesheet'; link.href = 'sanghamitra.css?v=20261024e';
+    document.head.appendChild(link);
+  }
+  function ensurePanel() {
+    if ($('assistantPanel')) return;
+    var panel = document.createElement('aside');
+    panel.id = 'assistantPanel'; panel.className = 'sm-panel'; panel.hidden = true;
+    panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-labelledby', 'assistantTitle'); panel.setAttribute('aria-label', 'SanghaMitra assistant');
+    panel.innerHTML = '<div class="sm-head"><span class="sm-mark" aria-hidden="true">☸</span><div><h2 id="assistantTitle">সংঘমিত্র · SanghaMitra</h2><small id="assistantMode">Source-based local guide · optional online AI</small></div><button type="button" class="sm-icon" id="smClose" aria-label="Close assistant">×</button></div>' +
+      '<div class="sm-options"><select id="chatLanguage" aria-label="Assistant language"><option value="bn-BD">বাংলা</option><option value="en-US">English</option><option value="hi-IN">हिन्दी · voice</option><option value="es-ES">Español · voice</option></select>' +
+      '<select id="voiceSelect" aria-label="Available device voices"><option value="">Device default voice</option></select></div>' +
+      '<label class="sm-consent"><input type="checkbox" id="allowStats"> Allow local guide to read my visit stats / ভ্রমণ-পরিসংখ্যান পড়ার অনুমতি</label>' +
+      '<label class="sm-consent"><input type="checkbox" id="onlineAI"> Use optional online AI (question + selected public record only)</label>' +
+      '<div id="chatMessages" class="sm-messages" aria-live="polite"><div class="message bot">আমি সংঘমিত্র—সাইটজুড়ে একই সহায়ক। স্থান, ইতিহাস, দর্শন, ভ্রমণ বা শিশুর নাম জিজ্ঞাসা করুন।<small>Default: local curated guide, not generative AI. Online AI is off until you choose it.</small></div></div>' +
+      '<div class="sm-quick"><button type="button" data-sm-prompt="Dharmarajika">Dharmarajika ↗</button><button type="button" data-sm-prompt="My progress">My progress ↗</button><button type="button" data-sm-prompt="শিশুর ধর্মীয় নাম">শিশুর নাম</button><button type="button" data-sm-prompt="ভ্রমণ রুট">ভ্রমণ রুট</button></div>' +
+      '<form id="chatForm" class="sm-form"><button type="button" class="sm-icon" id="smDictate" aria-label="Speak your question">🎙</button><input id="chatInput" maxlength="500" required placeholder="প্রশ্ন লিখুন / Ask SanghaMitra…" aria-label="Ask SanghaMitra"><button class="send-button" aria-label="Send message">↑</button></form>' +
+      '<div class="sm-footer"><button type="button" id="smReadAloud">◖ Read reply aloud</button><button type="button" id="smStopVoice">Stop voice</button></div><p id="smVoiceStatus" class="sm-voice-status" role="status"></p>';
+    document.body.appendChild(panel);
+    $('smClose').addEventListener('click', close);
+    $('chatForm').addEventListener('submit', function (event) { event.preventDefault(); send($('chatInput').value); });
+    panel.querySelectorAll('[data-sm-prompt]').forEach(function (button) { button.addEventListener('click', function () { send(button.dataset.smPrompt); }); });
+    $('onlineAI').addEventListener('change', function () { $('assistantMode').textContent = this.checked ? 'Online AI · requires configured server' : 'Source-based local guide · optional online AI'; });
+    $('chatLanguage').addEventListener('change', loadVoices);
+    $('smReadAloud').addEventListener('click', speak);
+    $('smStopVoice').addEventListener('click', function () { if (window.speechSynthesis) speechSynthesis.cancel(); });
+    $('smDictate').addEventListener('click', dictate);
+    if ('speechSynthesis' in window) {
+      speechSynthesis.addEventListener('voiceschanged', loadVoices);
+      loadVoices();
+    }
+  }
+  function open() {
+    ensureStyles(); ensurePanel();
+    lastFocus = document.activeElement;
+    closeSearchIfOpen();
+    $('assistantPanel').hidden = false;
+    setTimeout(function () { $('chatInput').focus(); }, 30);
+  }
+  function closeSearchIfOpen() {
+    var search = $('cbSiteSearch');
+    if (search && search.open && typeof search.close === 'function') search.close();
+  }
+  function close() {
+    var panel = $('assistantPanel');
+    if (panel) panel.hidden = true;
+    if (window.speechSynthesis) speechSynthesis.cancel();
+    if (lastFocus && document.contains(lastFocus) && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+  function ask(query) { open(); send(query); }
+  function setLanguage(code) {
+    ensurePanel();
+    $('chatLanguage').value = code === 'bn' ? 'bn-BD' : 'en-US';
+    loadVoices();
+  }
+  function loadVoices() {
+    if (!$('voiceSelect') || !$('chatLanguage') || !('speechSynthesis' in window)) return;
+    var language = $('chatLanguage').value.slice(0, 2);
+    var voices = speechSynthesis.getVoices().filter(function (v) { return v.lang.toLowerCase().startsWith(language); });
+    $('voiceSelect').innerHTML = '<option value="">Device default voice</option>' + voices.map(function (v) {
+      return '<option value="' + esc(v.voiceURI) + '">' + esc(v.name) + ' · ' + esc(v.lang) + '</option>';
+    }).join('');
+  }
+  function speak() {
+    var status = $('smVoiceStatus');
+    if (!('speechSynthesis' in window)) { status.textContent = 'Speech synthesis is not supported in this browser.'; return; }
+    if (!lastReply) { status.textContent = 'Ask the guide a question first.'; return; }
+    var language = $('chatLanguage').value;
+    var voices = speechSynthesis.getVoices();
+    if (!voices.some(function (v) { return v.lang.toLowerCase().startsWith(language.slice(0, 2)); })) {
+      status.textContent = 'No matching device voice is installed. Add one in device settings.'; return;
+    }
+    var selected = voices.find(function (v) { return v.voiceURI === $('voiceSelect').value; });
+    speechSynthesis.cancel();
+    var utterance = new SpeechSynthesisUtterance(lastReply);
+    utterance.lang = language; utterance.rate = .94;
+    if (selected) utterance.voice = selected;
+    utterance.onerror = function () { status.textContent = 'Voice playback failed. Try another device voice.'; };
+    speechSynthesis.speak(utterance); status.textContent = '';
+  }
+  function dictate() {
+    var Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    var status = $('smVoiceStatus');
+    if (!Recognition) { status.textContent = 'Voice input is not supported here. Please type your question.'; return; }
+    if (!window.confirm('Your browser may send microphone audio to its speech recognition provider. Continue with voice input?')) return;
+    var recognition = new Recognition(); recognition.lang = $('chatLanguage').value;
+    recognition.onresult = function (event) { $('chatInput').value = event.results[0][0].transcript; $('chatInput').focus(); };
+    recognition.onerror = function () { status.textContent = 'Microphone unavailable or permission denied. Please type instead.'; };
+    recognition.start(); status.textContent = 'Listening… review the transcript before sending.';
+  }
+
+  ensureStyles(); ensurePanel();
+  window.CharyabhumiSanghaMitra = { open: open, close: close, ask: ask, searchPlaces: searchPlaces, setLanguage: setLanguage };
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest('[data-sangha-open]');
+    if (button) { event.preventDefault(); open(); }
   });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && $('assistantPanel') && !$('assistantPanel').hidden) close();
+  });
+  document.addEventListener('cb:tracker-ready', function () { /* subsequent queries use the already-loaded private tracker context */ });
+  var params = new URLSearchParams(location.search);
+  if (params.get('assistant') === '1' || location.hash === '#sanghamitra') setTimeout(open, 180);
 })();

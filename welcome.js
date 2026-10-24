@@ -8,7 +8,7 @@
   var SESSION_KEY = 'charyabhumiWelcomeSeenV1';
   var $ = function (id) { return document.getElementById(id); };
   var query = new URLSearchParams(location.search);
-  if (query.get('welcome') === '0') return;
+  var autoDisabled = query.get('welcome') === '0';
   var forced = query.get('welcome') === '1';
   var profile = readProfile();
 
@@ -136,11 +136,15 @@
     document.body.classList.remove('cb-welcome-open');
   }
   function openWelcome() {
+    if (dialog.open) return;
+    if (window.CharyabhumiSanghaMitra) window.CharyabhumiSanghaMitra.close();
     render();
     document.body.classList.add('cb-welcome-open');
     if (typeof dialog.showModal === 'function') dialog.showModal();
     else dialog.setAttribute('open', '');
   }
+  var reopen = $('welcomeOpen');
+  if (reopen) reopen.addEventListener('click', openWelcome);
 
   $('welcomeName').value = profile.name;
   $('welcomeLocation').value = profile.location;
@@ -196,5 +200,11 @@
   // with a full-screen first-visit dialog on a small screen. Explicit ?welcome=1
   // remains available for the welcome experience and its regression tests.
   var mapDeepLink = /^#(?:explore|map-section|map)$/.test(location.hash);
-  if (forced || (!seen() && !mapDeepLink)) setTimeout(openWelcome, 450);
+  var assistantDeepLink = query.get('assistant') === '1' || location.hash === '#sanghamitra';
+  if (forced || (!autoDisabled && !assistantDeepLink && !seen() && !mapDeepLink)) {
+    setTimeout(function () {
+      var assistant = $('assistantPanel');
+      if (!assistant || assistant.hidden) openWelcome();
+    }, 450);
+  }
 })();
