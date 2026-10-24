@@ -314,6 +314,22 @@
       return '<p>ডাকটিকিট, খাম, টেলিগ্রাম, পুরনো দলিল-চিঠি, পত্রিকার কাটিং, পুরনো বই/PDF, গান, ইলাস্ট্রেশন ও ম্যাপ — ‘কাগজে ঐতিহ্য’ খোঁজা ও জমা দেওয়ার নিয়ম সংরক্ষণাগার ও জ্ঞানকোষে দেওয়া। মালিকানা ও সম্মতি ছাড়া ব্যক্তিগত নথি প্রকাশ করবেন না।</p>' +
         linksHtml([['knowledge.html#paper', 'কাগজে ঐতিহ্য গাইড'], ['historical-archive.html', 'ঐতিহাসিক সংরক্ষণাগার']]);
     }
+    if (/আর্কিও|জ্যোতির্বিজ্ঞান|সৌর সারিবদ্ধ|দিগ্বিন্যাস|সূর্যোদয়ের দিকে|কোন দিকে মুখ|মণ্ডল|পবিত্র জ্যামিতি|অজিমুখ/i.test(q)) {
+      return '<p>প্রমাণটি মজার: সোমপুর ও শালবন — দুই বড় বিহারেরই একমাত্র প্রবেশদ্বার <b>উত্তর</b> দিকে, সূর্যোদয়ের পূর্বে নয়। <b>প্রত্ন-জ্যোতির্বিজ্ঞান</b> পাতায় প্রকাশিত প্রমাণের ছক, তারিখভিত্তিক <b>সূর্যোদয়-অজিমুখ ক্যালকুলেটর</b>, স্তর-টোগলসহ <b>মণ্ডল জ্যামিতি</b>র রেখাচিত্র এবং মাঠে নিজে মাপ নেওয়ার ৬ ধাপের পদ্ধতি পাবেন — সারিবদ্ধতার দাবি প্রমাণ ছাড়া করা হয়নি।</p>' +
+        linksHtml([['orientation.html#documented', 'প্রমাণে দিগ্বিন্যাস'], ['orientation.html#solarcalc', 'সূর্যোদয় ক্যালকুলেটর'], ['orientation.html#Mandala', 'মণ্ডল জ্যামিতি']]);
+    }
+    if (/অ্যানাস্টাইলোসিস|আসল ইট|সংস্কার.*চিন|পুনর্গঠন|আসল.*সংস্কার|দেয়াল.*আসল/i.test(q)) {
+      return '<p>কোনটা প্রাচীন, কোনটা আধুনিক মেরামত — <b>সংরক্ষণ-সত্যতা</b> পাতায় রঙিন স্তরের শিক্ষামূলক ডেমো, ইট-গাঁথুনি-পাটিনা পড়ার ৬টি সূত্র, ভেনিস সনদের নীতি এবং ১৮৮২ সালের কানিংহাম প্লেট বনাম আজকের আকাশছবির স্লাইডার আছে। মনে রাখুন: দেয়ালভিত্তিক নিশ্চিত সিদ্ধান্ত শুধু সংরক্ষণ-প্রতিবেদনেই সম্ভব।</p>' +
+        linksHtml([['restoration.html#anastylosis', 'রঙিন স্তর ডেমো'], ['restoration.html#historic', '১৮৮২ বনাম আজ'], ['restoration.html#timeline', 'সংরক্ষণ-সময়রেখা']]);
+    }
+    if (/করিডোর|সিল্ক রোড|ত্রিপুরা.*বাগান|বাগান.*ত্রিপুরা|আরাকান.*সংযোগ|আন্তঃসীমান্ত|ট্রানজিট/i.test(q)) {
+      return '<p>বাংলাদেশের বিহারগুলো বিচ্ছিন্ন ছিল না — <b>বৌদ্ধ করিডোর</b> পাতায় নালন্দা-বিক্রমশীলার স্থলপথ, ব্রহ্মপুত্র-মেঘনার নদীপথ এবং তাম্রলিপ্ত-চট্টগ্রাম-আরাকান-বাগানের সাগরপথ ক্লিকযোগ্য মানচিত্রে সাজানো। হিউয়েন সাং, ই-সিং, ফা-হিয়েন ও অতীশের যাত্রাপথও সেখানে।</p>' +
+        linksHtml([['corridors.html#map', 'করিডোর মানচিত্র'], ['corridors.html#stories', 'পথিকদের গল্প']]);
+    }
+    if (/অফলাইন|offline|নেট ছাড়া|সিগন্যাল নেই|পকেট গাইড/i.test(low)) {
+      return '<p><b>অফলাইন প্যাকে</b> এক ক্লিকে ১২টি স্থান ও গাইডপাতা ফোনে জমিয়ে রাখা যায়; সঙ্গে নেট-ছাড়া চলা অবস্থান-ছক (GPS চিহ্নসহ), ডাউনলোডযোগ্য ডেটা-প্যাক, ছাপানো পকেট গাইড এবং Google Maps/Organic Maps-এ আসল অফলাইন ম্যাপ নামানোর নির্দেশনা। বাড়ি থেকে বেরোনোর আগেই সেভ করে নিন।</p>' +
+        linksHtml([['offline.html#save', 'অফলাইন সেভ'], ['offline.html#pack', 'পকেট গাইড ও ডেটা-প্যাক']]);
+    }
     return '<p>আমি সাহায্য করতে পারি: বৌদ্ধ ঐতিহ্য ও ইতিহাস, স্থান-ভ্রমণ ও রুট, বাজেট, 360° ভ্রমণ, লিপি-চর্যাপদ-মুদ্রা জ্ঞানকোষ, Scholar গবেষণা, উৎসব-পঞ্জিকা, গেম ও সার্টিফিকেট, গৃহী নীতি ও সূত্র, বন্দনা — আর <b>শিশুর ধর্মীয় নাম</b> ও <b>প্রতিষ্ঠান/স্থানের নাম</b>। যেকোনো একটি উদাহরণ বোতামে চাপ দিন, বা প্রশ্ন লিখুন।</p>' +
       linksHtml([['philosophy.html#grihi', 'গৃহী নীতি'], ['philosophy.html#bandana', 'বন্দনা ও জীবনাচার'], ['index.html#explore', 'স্থান খুঁজুন']]);
   }
@@ -484,7 +500,7 @@
   function ensureStyles() {
     if (document.getElementById('cbSanghaStyles')) return;
     var link = document.createElement('link');
-    link.id = 'cbSanghaStyles'; link.rel = 'stylesheet'; link.href = 'sanghamitra.css?v=20261024f';
+    link.id = 'cbSanghaStyles'; link.rel = 'stylesheet'; link.href = 'sanghamitra.css?v=20261024g';
     document.head.appendChild(link);
   }
   function ensurePanel() {
@@ -498,7 +514,7 @@
       '<label class="sm-consent"><input type="checkbox" id="allowStats"> Allow local guide to read my visit stats / ভ্রমণ-পরিসংখ্যান পড়ার অনুমতি</label>' +
       '<label class="sm-consent"><input type="checkbox" id="onlineAI"> Use optional online AI (question + selected public record only)</label>' +
       '<div id="chatMessages" class="sm-messages" aria-live="polite"><div class="message bot">আমি সংঘমিত্র (আপডেটেড) — স্থান, ইতিহাস, রুট-বাজেট, 360° ভ্রমণ, জ্ঞানকোষ, গবেষণা, উৎসব-তারিখ, গেম-সার্টিফিকেট বা শিশুর নাম — যা লাগে জিজ্ঞাসা করুন।<small>Default: local curated guide, not generative AI. Online AI is off until you choose it.</small></div></div>' +
-      '<div class="sm-quick"><button type="button" data-sm-prompt="ভ্রমণ রুট ও ইটিনারারি">🧭 রুট</button><button type="button" data-sm-prompt="ট্রাভেল বাজেট কত লাগবে">💰 বাজেট</button><button type="button" data-sm-prompt="360 স্ট্রিট ভিউ দেখতে চাই">🧍 360°</button><button type="button" data-sm-prompt="পরের উৎসব কবে">📅 উৎসব</button><button type="button" data-sm-prompt="চর্যাপদ সম্পর্কে জানতে চাই">🎵 চর্যাপদ</button><button type="button" data-sm-prompt="Scholar গবেষণা খুঁজব">🎓 গবেষণা</button><button type="button" data-sm-prompt="শিশুর ধর্মীয় নাম">শিশুর নাম</button><button type="button" data-sm-prompt="My progress">My progress ↗</button></div>' +
+      '<div class="sm-quick"><button type="button" data-sm-prompt="ভ্রমণ রুট ও ইটিনারারি">🧭 রুট</button><button type="button" data-sm-prompt="ট্রাভেল বাজেট কত লাগবে">💰 বাজেট</button><button type="button" data-sm-prompt="360 স্ট্রিট ভিউ দেখতে চাই">🧍 360°</button><button type="button" data-sm-prompt="পরের উৎসব কবে">📅 উৎসব</button><button type="button" data-sm-prompt="চর্যাপদ সম্পর্কে জানতে চাই">🎵 চর্যাপদ</button><button type="button" data-sm-prompt="Scholar গবেষণা খুঁজব">🎓 গবেষণা</button><button type="button" data-sm-prompt="বিহারের দরজা কোন দিকে মুখ করে? মণ্ডল কাকে বলে?">☀️ দিগ্বিন্যাস</button><button type="button" data-sm-prompt="নেট ছাড়া অফলাইন ম্যাপ কীভাবে পাব">📴 অফলাইন</button><button type="button" data-sm-prompt="শিশুর ধর্মীয় নাম">শিশুর নাম</button><button type="button" data-sm-prompt="My progress">My progress ↗</button></div>' +
       '<form id="chatForm" class="sm-form"><button type="button" class="sm-icon" id="smDictate" aria-label="Speak your question">🎙</button><input id="chatInput" maxlength="500" required placeholder="প্রশ্ন লিখুন / Ask SanghaMitra…" aria-label="Ask SanghaMitra"><button class="send-button" aria-label="Send message">↑</button></form>' +
       '<div class="sm-footer"><button type="button" id="smReadAloud">◖ Read reply aloud</button><button type="button" id="smStopVoice">Stop voice</button></div><p id="smVoiceStatus" class="sm-voice-status" role="status"></p>';
     document.body.appendChild(panel);

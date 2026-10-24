@@ -176,8 +176,8 @@
   }
 
   Promise.all([
-    MX.fetchJson('data/atlas-sites.json?v=20261024f'),
-    MX.fetchJson('data/atlas-media.json?v=20261024f').catch(function () { return { images: [] }; })
+    MX.fetchJson('data/atlas-sites.json?v=20261024g'),
+    MX.fetchJson('data/atlas-media.json?v=20261024g').catch(function () { return { images: [] }; })
   ]).then(function (res) {
     var data = res[0];
     sites = (data.sites || []).concat(EXTRA);

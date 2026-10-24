@@ -137,8 +137,8 @@
   }
 
   Promise.all([
-    MX.fetchJson('data/travel-plus.json?v=20261024f'),
-    MX.fetchJson('data/atlas-sites.json?v=20261024f')
+    MX.fetchJson('data/travel-plus.json?v=20261024g'),
+    MX.fetchJson('data/atlas-sites.json?v=20261024g')
   ]).then(function (res) {
     travel = res[0];
     atlasSites = res[1].sites || [];

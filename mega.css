@@ -90,3 +90,20 @@ a.mx-chip:hover{background:var(--cb-gold);color:#3a1f08}
 /* লম্বা লেখার select যেন মোবাইলে পাতা চওড়া না করে */
 select{max-width:100%}
 #games-plus img,#games-plus svg{max-width:100%}
+/* ===== ২০২৬-১০-২৪ পর্যায় ২: ওরিয়েন্টেশন / সংরক্ষণ / করিডোর / অফলাইন ===== */
+.mx-svgbox{background:#fff;border:1px solid var(--cb-line);border-radius:14px;padding:14px;margin:14px 0;overflow-x:auto}
+.mx-svgbox svg{display:block;margin:0 auto;max-width:100%}
+.mx-layerbar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.mx-layerbtn{border:1.5px solid var(--cb-forest);background:#fff;color:var(--cb-forest);border-radius:999px;padding:7px 14px;font:inherit;font-size:14px;cursor:pointer}
+.mx-layerbtn[aria-pressed="true"]{background:var(--cb-forest);color:#fff}
+.mx-legend{display:flex;flex-wrap:wrap;gap:14px;margin:10px 0;font-size:14px}
+.mx-legend .sw{display:inline-block;width:16px;height:16px;border-radius:4px;border:1px solid rgba(0,0,0,.25);vertical-align:-3px;margin-right:6px}
+.mx-bigout{font-size:20px;font-weight:800;color:var(--cb-forest)}
+.mx-rowgap{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;margin:12px 0}
+.mx-rowgap label{font-weight:600}
+.mx-rowgap input,.mx-rowgap select{padding:8px 10px;border:1px solid var(--cb-line);border-radius:10px;font:inherit}
+.mx-nodecard h3{margin:.2em 0}
+.mx-kbd{background:var(--cb-sand-deep);border-radius:6px;padding:1px 7px;font-weight:700}
+/* ফ্লেক্স সারিতে লম্বা লেখার ফর্ম যেন মোবাইলে পাতা চওড়া না করে */
+.mx-rowgap label{min-width:0;flex:1 1 200px}
+.mx-rowgap label select,.mx-rowgap label input{width:100%;max-width:100%}

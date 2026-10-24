@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>অফলাইন প্যাক — নেট ছাড়াই প্রত্নপ্রান্তরে মানচিত্র ও গাইড | চর্যাভূমি</title>
+  <meta name="description" content="দুর্গম প্রত্নস্থলে মোবাইল ডেটা না থাকলেও চলবে: এক ক্লিকে ১২টি স্থানের অফলাইন সেভ (PWA), স্থানাঙ্ক-মানচিত্রছক, ডাউনলোডযোগ্য ডেটা-প্যাক, ছাপানো যায় এমন পকেট গাইড এবং Google Maps/Organic Maps অফলাইন ভেক্টর ম্যাপের নির্দেশনা।">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
+  <link rel="stylesheet" href="mega.css?v=20261024g">
+</head>
+<body class="cb">
+  <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
+  <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
+  <header class="cb-header" id="cbHeader"></header>
+
+  <main id="main">
+    <section class="mx-hero">
+      <div class="cb-wrap">
+        <p class="cb-kicker">📴 OFFLINE-FIRST · PWA</p>
+        <h1>নেট নেই তো কী — প্রান্তরে গাইড চলবেই</h1>
+        <p class="cb-lead">প্রত্নস্থলের টিলায় দাঁড়িয়ে সিগন্যাল না পাওয়াই স্বাভাবিক। বাড়ির Wi-Fi থেকে বেরোনোর আগেই এই পাতা থেকে স্থানগুলো ফোনে জমিয়ে নিন; পরে এয়ারপ্লেন মোডেও মানচিত্র-ছক, স্থানাঙ্ক আর গাইড চলবে।</p>
+        <div class="mx-kicker-row">
+          <span class="mx-chip" id="netChip">…</span>
+          <span class="mx-chip" id="swChip">…</span>
+        </div>
+      </div>
+    </section>
+
+    <nav class="mx-navpills" aria-label="এই পাতার অংশসমূহ">
+      <div class="cb-wrap">
+        <a href="#save">অফলাইন সেভ</a><a href="#plotmap">অবস্থান-ছক</a><a href="#pack">ডেটা-প্যাক ও পকেট গাইড</a><a href="#realmaps">আসল অফলাইন ম্যাপ</a>
+      </div>
+    </nav>
+
+    <section class="cb-section" id="save" aria-labelledby="saveTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">ONE-TAP OFFLINE SAVE</p>
+        <h2 id="saveTitle">এক ক্লিকে অফলাইন সেভ</h2>
+        <p class="cb-sub">বোতামটি চাপলে ১২টি Atlas স্থানের ডেটা, ছবি এবং এই পাতাসহ পড়ার মূল পাতাগুলো ব্রাউজারের ক্যাশে জমে যাবে। পরে ইন্টারনেট ছাড়া সাইট খুললেও এগুলো পাবেন।</p>
+        <div class="mx-grid">
+          <div class="mx-card">
+            <h3>📥 সেভ করুন</h3>
+            <button type="button" class="cb-btn solid" id="offlineSaveBtn">১২টি স্থান + গাইডপাতা অফলাইনে সেভ</button>
+            <p id="offlineProgress" class="mx-meta" aria-live="polite" style="margin-top:10px">এখনো এই সেশন থেকে সেভ হয়নি।</p>
+            <button type="button" class="cb-btn" id="installBtn" hidden>📱 হোম-স্ক্রিনে অ্যাপের মতো যোগ করুন</button>
+          </div>
+          <div class="mx-card" id="cacheStatus">
+            <h3>🗄️ ক্যাশের অবস্থা</h3>
+            <p class="mx-meta">পড়া হচ্ছে…</p>
+          </div>
+        </div>
+        <div class="mx-note"><b>কী জমে না:</b> Google Street View/Earth-এর মতো বাইরের সেবা অফলাইনে চলবে না — সেগুলোর বদলে এই পাতার <b>অবস্থান-ছক</b> ও <b>পকেট গাইড</b>ই মাঠের সঙ্গী। সত্যিকারের রাস্তা-মানের অফলাইন ভেক্টর ম্যাপ চাইলে নিচের “আসল অফলাইন ম্যাপ” অংশ দেখুন।</div>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="plotmap" aria-labelledby="plotTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">POSITION PLOT · WORKS OFFLINE</p>
+        <h2 id="plotTitle">১২ স্থানের অবস্থান-ছক</h2>
+        <p class="cb-sub">অক্ষাংশ-দ্রাঘিমাংশ ছকে বসানো (রাস্তার ম্যাপ নয়): কোন স্থান কোথায়, একে অপরের কোন দিকে — এই ধারণাটিই অফলাইনে সবচেয়ে দরকারি। নিজের GPS অবস্থানও চিহ্নিত করা যায়।</p>
+        <div class="mx-rowgap">
+          <button type="button" class="cb-btn" id="myLocBtn">📍 আমার অবস্থান দেখাও</button>
+          <span id="myLocOut" class="mx-meta" aria-live="polite">GPS অবস্থান শুধু এই ব্রাউজারেই থাকে, কোথাও পাঠানো হয় না।</span>
+        </div>
+        <div class="mx-grid">
+          <div class="mx-svgbox" id="plotSvg" style="grid-column:span 2"></div>
+          <div class="mx-card">
+            <h3>ক্রম অনুযায়ী স্থান</h3>
+            <ol id="plotList" style="margin:0;padding-left:20px;line-height:1.9"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="pack" aria-labelledby="packTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">PORTABLE BACKUP</p>
+        <h2 id="packTitle">ডেটা-প্যাক ডাউনলোড ও পকেট গাইড</h2>
+        <div class="mx-grid">
+          <div class="mx-card">
+            <h3>🧳 অফলাইন ডেটা-প্যাক (JSON)</h3>
+            <p>স্থানের নাম, জেলা, স্থানাঙ্ক ও সারাংশসহ একটিই ফাইল — গবেষক/শিক্ষকের কাছে রাখার মতো প্রাতিষ্ঠানিক ব্যাকআপ; যেকোনো অ্যাপ বা স্প্রেডশিটে ব্যবহারযোগ্য।</p>
+            <button type="button" class="cb-btn solid" id="packBtn">ডেটা-প্যাক ডাউনলোড</button>
+            <p class="mx-meta" id="packInfo"></p>
+          </div>
+          <div class="mx-card">
+            <h3>🖨️ পকেট গাইড (ছাপুন/PDF রাখুন)</h3>
+            <p>একপাতার ছক: স্থান, জেলা, স্থানাঙ্ক, এক-লাইন পরিচয়। প্রিন্ট ডায়ালগ থেকে PDF সেভ করে ফোনে রাখুন বা কাগজে ছাপিয়ে ব্যাগে নিন।</p>
+            <button type="button" class="cb-btn" id="pocketBtn">পকেট গাইড তৈরি করুন</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="realmaps" aria-labelledby="realTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">OFFLINE VECTOR MAPS</p>
+        <h2 id="realTitle">আসল অফলাইন ম্যাপ যেভাবে নেবেন</h2>
+        <div class="mx-grid" id="offTips"></div>
+        <p style="margin-top:16px"><a class="cb-btn" href="travel-planner.html">রুট ও বাজেট সাজাতে যান →</a> <a class="cb-btn" href="explore3d.html">360° অনলাইনে আগে দেখে যান →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer" id="cbFooter"></footer>
+  <script src="config.js?v=20261024g" defer></script>
+  <script src="mega-utils.js?v=20261024g" defer></script>
+  <script src="language.js?v=20261024d" defer></script>
+  <script src="brand.js?v=20261024g" defer></script>
+  <script src="offline.js?v=20261024g" defer></script>
+  <script src="pwa.js?v=20261024g" defer></script>
+</body>
+</html>

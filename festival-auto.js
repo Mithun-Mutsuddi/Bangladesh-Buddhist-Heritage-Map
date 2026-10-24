@@ -20,7 +20,7 @@
     return 'আর ' + MX.bn(d) + ' দিন বাকি';
   }
 
-  MX.fetchJson('data/festivals-auto.json?v=20261024f').then(function (data) {
+  MX.fetchJson('data/festivals-auto.json?v=20261024g').then(function (data) {
     var upcoming = MX.nextLunarFestivals(data.festivals, new Date());
 
     if (mini && upcoming.length) {

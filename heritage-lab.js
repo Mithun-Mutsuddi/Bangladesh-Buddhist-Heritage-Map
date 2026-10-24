@@ -175,7 +175,7 @@
     MX.$('pwaStatus').textContent = window.matchMedia('(display-mode: standalone)').matches ? 'ইনস্টল করা অবস্থায় চলছে ✓' : 'ব্রাউজার প্রম্পট এলে বোতাম কাজ করবে';
   }
 
-  MX.fetchJson('data/research-plus.json?v=20261024f').then(function (R) {
+  MX.fetchJson('data/research-plus.json?v=20261024g').then(function (R) {
     var W = R.world_comparison;
     MX.$('compareNote').innerHTML = '<div class="mx-note">যাচাই তারিখ: ' + MX.esc(W.checked_at) + ' · ' + MX.esc(W.note_bn) + '</div>';
     drawCompare(W.places);

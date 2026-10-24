@@ -71,8 +71,8 @@
 
   /* ডেটা: গ্রন্থপঞ্জি + পরিভাষা + স্থান-সাজেস্ট */
   Promise.all([
-    MX.fetchJson('data/research-plus.json?v=20261024f'),
-    MX.fetchJson('data/atlas-sites.json?v=20261024f')
+    MX.fetchJson('data/research-plus.json?v=20261024g'),
+    MX.fetchJson('data/atlas-sites.json?v=20261024g')
   ]).then(function (res) {
     var R = res[0];
     MX.$('scholarSite').innerHTML = '<option value="">— স্থান বেছে প্রশ্ন বসান —</option>' + (res[1].sites || []).map(function (s) {

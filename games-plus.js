@@ -340,7 +340,7 @@
     '<a class="cb-btn sm ghost" href="atlas.html#school-kit">ফিল্ড-নোটবুক ও কমিক PDF</a></div>' +
     '<p class="mx-mini">সব ওয়ার্কশিট শ্রেণিকক্ষে বিনামূল্যে ছাপানো যাবে।</p></section></div></div>';
 
-  MX.fetchJson('data/games-plus.json?v=20261024f').then(function (d) {
+  MX.fetchJson('data/games-plus.json?v=20261024g').then(function (d) {
     DATA = d;
     renderProfile();
     renderHunt();

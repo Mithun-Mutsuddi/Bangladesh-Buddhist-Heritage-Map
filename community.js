@@ -82,7 +82,7 @@
   /* ---------- অডিও গাইড ---------- */
   var atlasSites = [];
   Promise.all([
-    MX.fetchJson('data/atlas-sites.json?v=20261024f')
+    MX.fetchJson('data/atlas-sites.json?v=20261024g')
   ]).then(function (res) {
     atlasSites = res[0].sites || [];
     var opts = atlasSites.map(function (s) { return '<option value="' + MX.esc(s.id) + '">' + MX.esc(s.name.bn) + '</option>'; }).join('');

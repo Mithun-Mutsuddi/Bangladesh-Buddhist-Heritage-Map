@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3d08">
+  <title>প্রত্ন-জ্যোতির্বিজ্ঞান ও পবিত্র জ্যামিতি — বিহার-স্তূপের দিগ্বিন্যাস ও মণ্ডল | চর্যাভূমি</title>
+  <meta name="description" content="সোমপুর ও শালবন বিহারের প্রবেশদ্বার কেন উত্তরে? সূর্যোদয়ের অজিমুখ ক্যালকুলেটর, মণ্ডল জ্যামিতির স্তরভিত্তিক রেখাচিত্র, প্রমাণভিত্তিক দিগ্বিন্যাস-বিশ্লেষণ ও মাঠে নিজে মাপ নেওয়ার পদ্ধতি — আর্কিও-অ্যাস্ট্রোনমি হাতে-কলমে।">
+  <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261024b">
+  <link rel="stylesheet" href="mega.css?v=20261024g">
+</head>
+<body class="cb">
+  <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
+  <div class="cb-flag" aria-hidden="true"><span class="b"></span><span class="y"></span><span class="r"></span><span class="w"></span><span class="o"></span><span class="m"></span></div>
+  <header class="cb-header" id="cbHeader"></header>
+
+  <main id="main">
+    <section class="mx-hero">
+      <div class="cb-wrap">
+        <p class="cb-kicker">☀️ আর্কিও-অ্যাস্ট্রোনমি · পবিত্র জ্যামিতি</p>
+        <h1>বিহার-স্তূপ কোন দিকে মুখ করে আছে — আর কেন?</h1>
+        <p class="cb-lead">জনপ্রিয় ধারণা: প্রাচীন মন্দিরমুখ সূর্যোদয়ের দিকে। বাস্তব প্রমাণ বলছে সোমপুর ও শালবন — দুই বড় বিহারেরই একমাত্র প্রবেশ <b>উত্তর</b> দিকে। এই পাতায় প্রমাণ, ব্যাখ্যা আর অজানা — তিনটে আলাদাভাবে সাজানো, সঙ্গে নিজে হিসাব ও মাপ নেওয়ার সরঞ্জাম।</p>
+        <div id="oriHonesty"></div>
+      </div>
+    </section>
+
+    <nav class="mx-navpills" aria-label="এই পাতার অংশসমূহ">
+      <div class="cb-wrap">
+        <a href="#documented">প্রমাণ যা বলে</a><a href="#solarcalc">সূর্যোদয় ক্যালকুলেটর</a>
+        <a href="#Mandala">মণ্ডল জ্যামিতি</a><a href="#field">মাঠে যাচাই</a><a href="#glossary">পরিভাষা</a>
+      </div>
+    </nav>
+
+    <section class="cb-section" id="documented" aria-labelledby="docTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">DOCUMENTED ORIENTATION</p>
+        <h2 id="docTitle">প্রকাশিত প্রমাণে দিগ্বিন্যাস</h2>
+        <p class="cb-sub" id="oriIntro"></p>
+        <div class="mx-grid" id="oriDocs"></div>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="solarcalc" aria-labelledby="solarTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">SUNRISE AZIMUTH · LIVE TOOL</p>
+        <h2 id="solarTitle">সূর্যোদয়ের অজিমুখ ক্যালকুলেটর</h2>
+        <p class="cb-sub">স্থান ও তারিখ বসান — ঐ অক্ষাংশে সেদিন সূর্য উত্তর থেকে কত ডিগ্রিতে উঠবে-ডুববে তা বেরিয়ে যাবে (সমতল দিগন্ত ধরে, জ্যোতির্বৈজ্ঞানিক সূত্রে)। এরপর কোনো কাঠামোর মাপা অক্ষের সঙ্গে মিলিয়ে নিজেই বিচার করুন।</p>
+        <div class="mx-rowgap">
+          <label>স্থান <select id="azSite"></select></label>
+          <label>তারিখ <input type="date" id="azDate" value="2026-03-20"></label>
+          <button type="button" class="cb-btn solid" id="azBtn">হিসাব করুন</button>
+          <button type="button" class="cb-btn" id="azSolsticeS">গ্রীষ্ম অয়নান্ত</button>
+          <button type="button" class="cb-btn" id="azSolsticeW">শীত অয়নান্ত</button>
+          <button type="button" class="cb-btn" id="azEquinox">বিষুব</button>
+        </div>
+        <div class="mx-grid">
+          <div class="mx-card" id="azOut" aria-live="polite"></div>
+          <div class="mx-svgbox" id="azCompass" aria-label="কম্পাসে সূর্যোদয়ের দিক"></div>
+        </div>
+        <div class="mx-note"><b>পড়া শিখুন:</b> অজিমুখ ৯০° মানে ঠিক পূর্ব। গ্রীষ্ম অয়নান্তে বাংলাদেশে সূর্য ওঠে প্রায় ৬৪°-তে (উত্তর-পূর্ব ঘেঁষে), শীতে প্রায় ১১৬°-তে (দক্ষিণ-পূর্ব ঘেঁষে)। কোনো প্রবেশদ্বারের অক্ষ যদি এই সীমার ভেতরে পড়ে, সেটি বছরের <i>কোনো না কোনো</i> দিনের সূর্যোদয়ের সঙ্গে মিলবেই — তাই শুধু মিল পেলেই সৌর-পরিকল্পনা প্রমাণিত হয় না; উৎসব-তিথি, একাধিক স্থানের প্যাটার্ন ও লিখিত সূত্র লাগে।</div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="Mandala" aria-labelledby="MandalaTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">SACRED GEOMETRY &amp; Mandala</p>
+        <h2 id="MandalaTitle">পবিত্র জ্যামিতি: মণ্ডল ছকে বিহার</h2>
+        <p class="cb-sub" id="MandalaIntro"></p>
+        <div class="mx-layerbar" id="MandalaBtns" role="group" aria-label="জ্যামিতির স্তর চালু-বন্ধ"></div>
+        <div class="mx-grid">
+          <div class="mx-svgbox" id="MandalaSvg"></div>
+          <div>
+            <div id="MandalaLayers"></div>
+            <div class="mx-note" id="MandalaCompare"></div>
+            <p class="cb-note">⚠️ এই রেখাচিত্রটি <b>পরিকল্পিত-ধারণা (schematic)</b> — জরিপ-নিখুঁত স্থাপত্য-নকশা নয়। আসল পরিমাপ দেখতে Atlas প্রোফাইল ও দীক্ষিতের প্রতিবেদনের প্লেট দেখুন।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-section alt" id="field" aria-labelledby="fieldTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">FIELD METHOD</p>
+        <h2 id="fieldTitle">মাঠে নিজে যাচাই করুন (৬ ধাপ)</h2>
+        <p class="cb-sub">বাংলাদেশের স্থানগুলোর জন্য নিয়মতান্ত্রিক আর্কিও-অ্যাস্ট্রোনমি জরিপ এখনো হয়নি — আপনার যত্নে নেওয়া মাপই হতে পারে প্রথম ডেটা।</p>
+        <div class="mx-grid" id="oriMethod"></div>
+      </div>
+    </section>
+
+    <section class="cb-section" id="glossary" aria-labelledby="glosTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">KEY CONCEPTS</p>
+        <h2 id="glosTitle">পরিভাষা এক ঝলকে</h2>
+        <div class="mx-grid" id="oriConcepts"></div>
+        <p style="margin-top:16px"><a class="cb-btn" href="restoration.html">সংরক্ষণের সত্যতা: কোনটা আসল ইট →</a> <a class="cb-btn" href="explore3d.html">GIS/3D-তে স্থানটি দেখুন →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer" id="cbFooter"></footer>
+  <script src="config.js?v=20261024g" defer></script>
+  <script src="mega-utils.js?v=20261024g" defer></script>
+  <script src="language.js?v=20261024d" defer></script>
+  <script src="brand.js?v=20261024g" defer></script>
+  <script src="orientation.js?v=20261024g" defer></script>
+  <script src="pwa.js?v=20261024g" defer></script>
+</body>
+</html>

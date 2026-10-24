@@ -86,9 +86,9 @@
   }
 
   Promise.all([
-    MX.fetchJson('data/support-config.json?v=20261024f'),
-    MX.fetchJson('data/research-plus.json?v=20261024f'),
-    MX.fetchJson('data/atlas-sites.json?v=20261024f')
+    MX.fetchJson('data/support-config.json?v=20261024g'),
+    MX.fetchJson('data/research-plus.json?v=20261024g'),
+    MX.fetchJson('data/atlas-sites.json?v=20261024g')
   ]).then(function (res) {
     CFG = res[0]; RES = res[1]; atlasSites = res[2].sites || [];
 

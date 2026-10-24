@@ -1,7 +1,7 @@
 /* চর্যাভূমি — Service Worker: দুর্বল ইন্টারনেটেও দ্রুত লোড ও অফলাইন পাঠ।
    কৌশল: HTML = network-first (তাজা তথ্য), বাকি same-origin asset = cache-first।
    সংস্করণ বদলালে পুরনো ক্যাশে মুছে যায়। */
-var VERSION = 'charyabhumi-v20261024-mega2';
+var VERSION = 'charyabhumi-v20261024-mega3';
 var CORE = [
   'index.html', 'charyabhumi.css', 'mega.css', 'brand.js', 'language.js',
   'config.js', 'mega-utils.js', 'manifest.webmanifest', 'pwa.js', 'festival-auto.js',
@@ -9,9 +9,11 @@ var CORE = [
   'knowledge.html', 'knowledge.js', 'research.html', 'research.js',
   'community.html', 'community.js', 'support.html', 'support.js',
   'heritage-lab.html', 'heritage-lab.js',
+  'orientation.html', 'orientation.js', 'restoration.html', 'restoration.js',
+  'corridors.html', 'corridors.js', 'offline.html', 'offline.js',
   'data/site-structure.json', 'data/site-info.json', 'data/festivals-auto.json',
   'data/heritage-knowledge.json', 'data/travel-plus.json', 'data/research-plus.json',
-  'data/support-config.json', 'data/games-plus.json'
+  'data/support-config.json', 'data/games-plus.json', 'data/orientation-heritage.json', 'data/atlas-sites.json'
 ];
 
 self.addEventListener('install', function (event) {

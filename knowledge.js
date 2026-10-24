@@ -68,7 +68,7 @@
   var searchIndex = [];
   function indexAdd(title, tab, text) { searchIndex.push({ title: title, tab: tab, text: (title + ' ' + (text || '')).toLowerCase() }); }
 
-  MX.fetchJson('data/heritage-knowledge.json?v=20261024f').then(function (K) {
+  MX.fetchJson('data/heritage-knowledge.json?v=20261024g').then(function (K) {
     /* লিপি */
     MX.$('epiIntro').innerHTML = '<p class="cb-sub">' + MX.esc(K.epigraphy.intro) + '</p>';
     MX.$('scriptGrid').innerHTML = K.epigraphy.scripts.map(function (s) {

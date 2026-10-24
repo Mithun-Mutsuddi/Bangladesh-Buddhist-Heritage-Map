@@ -12,6 +12,7 @@
 - **ডেটা:** নতুন ৬টি JSON (`heritage-knowledge`, `travel-plus`, `research-plus`, `support-config`, `festivals-auto`, `games-plus`) — ফাইল বদলালেই পাতা আপডেট। কোনো API key ছাড়াই চলে; কী শুধু সার্ভারে (`GEMINI_API_KEY`/`OPENAI_API_KEY`)।
 - **সততা-নীতি:** বানানো দান-নম্বর/দাগ-গেজেট নম্বর/ভিডিও আইডি নেই — যাচাইকৃত তথ্য না পেলে ঘর খালি ও নির্দেশনাসহ।
 - বিস্তারিত: `docs/update-2026-10-24-mega-features-bn.md` · টেস্ট: `tests/mega-features.spec.cjs` (১২টি)।
+- **পর্যায় ২ (একই দিন):** `orientation.html` (আর্কিও-অ্যাস্ট্রোনমি ও মণ্ডল জ্যামিতি), `restoration.html` (অ্যানাস্টাইলোসিস-সত্যতা ও ১৮৮২ বনাম আজ), `corridors.html` (আন্তঃসীমান্ত বৌদ্ধ করিডোর মানচিত্র), `offline.html` (অফলাইন প্যাক/PWA); ডেটা `data/orientation-heritage.json`; SW `mega3`। বিস্তারিত: `docs/update-2026-10-24-orientation-corridors-bn.md` · টেস্ট: `tests/orientation-phase.spec.cjs` (১০টি)।
 
 ## নতুন: Charjavumi Travel Tracker
 

@@ -70,7 +70,7 @@
     if (dlg) new MutationObserver(function () { decorate(document); }).observe(dlg, { childList: true });
   }
 
-  MX.fetchJson('data/dashboard-core.json?v=20261024f').then(function (data) {
+  MX.fetchJson('data/dashboard-core.json?v=20261024g').then(function (data) {
     (data.places || []).forEach(function (p) {
       if (p.id && p.coords && p.coords.length === 2) coordsById[p.id] = p.coords;
     });
