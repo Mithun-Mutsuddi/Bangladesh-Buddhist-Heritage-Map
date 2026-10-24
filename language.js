@@ -53,7 +53,7 @@
     'nav.home': 'Home', 'nav.explore': 'Explore places', 'nav.tracker': 'My travel tracker',
     'nav.planner': 'Trip planner', 'nav.maps': 'Historical maps', 'nav.history': 'History',
     'nav.archaeology': 'Archaeology article', 'nav.philosophy': 'Buddhism',
-    'nav.culture': 'Art & culture', 'nav.kings': 'Royal profiles', 'nav.library': 'Library',
+    'nav.culture': 'Art & culture', 'nav.children': 'Children', 'nav.kings': 'Royal profiles', 'nav.library': 'Library',
     'nav.archive': 'Historical archive', 'nav.contribution': 'Contribute',
     'nav.institutions': 'Social institutions', 'nav.calendar': 'Calendar', 'nav.quiz': 'Quiz',
     'nav.about': 'About us',
@@ -73,7 +73,9 @@
     'archive.creatorText': 'The 54-entry creator archive preserves artists, writers, musicians and cultural practitioners with attribution and verification states.',
     'archive.animationNote': 'A visual index of connected sources—not a claim that the whole internet has been archived.',
     'home.archiveTitle': 'A living archive of Buddhist heritage',
-    'home.archiveText': 'Start with source-labelled gateways and verification states, then open the existing library and creator archive for books, images, audio, video, art and culture.'
+    'home.archiveText': 'Start with source-labelled gateways and verification states, then open the existing library and creator archive for books, images, audio, video, art and culture.',
+    'home.childrenTitle': 'Children: learn, play & make',
+    'home.childrenText': 'Jataka-inspired games, a local comic, virtual archaeology, printable temple model, colouring, step-by-step crafts and source-aware songs.'
   };
   var original = new WeakMap();
 

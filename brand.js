@@ -2,7 +2,7 @@
    site-info.json থেকে ব্র্যান্ড নাম, মূলমন্ত্র ও যোগাযোগ পড়ে রেন্ডার করে। */
 (function () {
   'use strict';
-  var INFO = 'data/site-info.json?v=20261023d';
+  var INFO = 'data/site-info.json?v=20261024d';
   var state = { info: null };
 
   // প্রতিটি পাতার মূল কনটেন্ট নিজে লিখে রাখে; এখানে শুধু হেডার-ফুটার বসে।
@@ -16,6 +16,7 @@
     { href: 'purna-chandra-tarai.html', label: 'প্রত্নতত্ত্ব-নিবন্ধ', key: 'nav.archaeology' },
     { href: 'philosophy.html', label: 'বৌদ্ধধর্ম', key: 'nav.philosophy' },
     { href: 'culture.html', label: 'শিল্প ও সংস্কৃতি', key: 'nav.culture' },
+    { href: 'children.html', label: 'শিশু বিভাগ', key: 'nav.children' },
     { href: 'kings.html', label: 'রাজাদের প্রোফাইল', key: 'nav.kings' },
     { href: 'library.html', label: 'লাইব্রেরি', key: 'nav.library' },
     { href: 'historical-archive.html', label: 'ঐতিহাসিক সংরক্ষণাগার', key: 'nav.archive' },
@@ -102,6 +103,7 @@
             '<a href="purna-chandra-tarai.html">প্রত্নতত্ত্ব-নিবন্ধ</a>' +
             '<a href="maps.html">ঐতিহাসিক মানচিত্র</a>' +
             '<a href="culture.html">শিল্প ও সংস্কৃতি</a>' +
+            '<a href="children.html">শিশু বিভাগ · খেলা ও craft</a>' +
             '<a href="kings.html">রাজাদের প্রোফাইল</a>' +
             '<a href="library.html">লাইব্রেরি</a>' +
             '<a href="historical-archive.html">ঐতিহাসিক সংরক্ষণাগার</a>' +

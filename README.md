@@ -21,6 +21,14 @@
 - **ভাষা:** ওয়েবসাইটের শুরুতে persistent language selector; বাংলা/English-এর পাশে Chakma (`ccp`) ও Marma (`rmz`) community-support option এবং স্পষ্টভাবে চিহ্নিত automatic-translation route। পূর্ণ মানব-সম্পাদিত অনুবাদের দাবি নয়।
 - **নতুন phase report:** `docs/update-2026-10-24-public-archive-bn.md`। পুরোনো private browser-local draft archive (`archive.js`) public source registry থেকে আলাদা।
 
+## ২০২৬-১০-২৪: শিশু learning-and-play phase
+
+- **পাতা:** `children.html` + `children.css` + `children.js`; হোমপেজ, সূচিপত্র, footer ও shared navigation-এ যুক্ত।
+- **খেলা ও archaeology:** জাতক/সংস্কৃতি quiz, প্রতীক memory, keyboard-সহ hypothetical reconstruction/present-photo slider এবং Canvas scratch-off dig-এর non-scratch বিকল্প। Reconstruction প্রমাণ নয়; ডালিঝরার নথিচিত্রকে কেবল **টেরাকোটা ভাস্কর্যের খণ্ডাংশ** বলা হয়েছে।
+- **স্থানীয় downloads:** ৪-পাতার printable Somapura paper model, ৭-পাতার art pack, ৩-পাতার original Banyan Deer mini-comic এবং নতুন শিক্ষামূলক song/notation PDF; generator: `tools/build_children_assets.py`।
+- **Culture ও listening:** ছয়টি four-step SVG craft activity, synthesized digital bell/original melody এবং `data/children-content.json`-এ source/rights/status-সহ media ও listening leads। Protected ACK PDF, lyrics, ভিডিও বা recording rehost নয়; search-indexed upload-কে প্রামাণ্য tradition বলা হয়নি।
+- **Privacy/accessibility:** sign-up বা drawing upload নেই; touch/mouse/keyboard controls, reduced-motion pause এবং printable/non-scratch alternatives রয়েছে। Automated coverage: `tests/children.spec.cjs`। বিস্তারিত source/QA: `docs/children-phase-bn.md`।
+
 - **হোমপেজ:** `index.html`; নাম, Dhaka time, উৎসব ও ঐচ্ছিক এলাকা অনুযায়ী session-once graphical welcome
 - **নতুন গবেষণা-পাতা:** `purna-chandra-tarai.html` (পূর্ণচন্দ্র মুখার্জি) ও `maps.html` (BD MAPS এবং ডালিঝরা)
 - **পূর্ববর্তী হালনাগাদের বিস্তারিত প্রতিবেদন:** `docs/update-2026-10-23-bn.md`; নতুন phase: `docs/update-2026-10-24-public-archive-bn.md`

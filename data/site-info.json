@@ -215,6 +215,17 @@
    "linkText": "কুইজ শুরু করুন"
   },
   {
+   "id": "children",
+   "icon": "🧒",
+   "title": "শিশু বিভাগ",
+   "title_en": "Children's learning & play",
+   "desc": "জাতক-ভিত্তিক খেলা, কমিক, virtual archaeology, printable paper model, colouring, craft animation ও সূত্রসহ শ্রবণ।",
+   "desc_en": "Jataka-inspired games, comics, virtual archaeology, printable paper crafts, colouring, craft animation and sourced listening.",
+   "status": "live",
+   "link": "children.html",
+   "linkText": "খেলা ও তৈরি শুরু করুন"
+  },
+  {
    "id": "emergency",
    "icon": "🚨",
    "title": "জরুরি নম্বর",

@@ -1,0 +1,303 @@
+{
+  "schema": "2026-10-24.children.v1",
+  "updated": "2026-10-24",
+  "scope": "শিশুদের জন্য যাচাইকৃত সূত্রের গেটওয়ে, স্থানীয় মূল শিক্ষামূলক কনটেন্ট ও rights-aware download/watch লিংক। এটি সব বৌদ্ধ শিশু-কনটেন্টের পূর্ণ সংগ্রহ নয়।",
+  "media": [
+    {
+      "id": "local-banyan-deer-comic",
+      "title": "বনরাজার সাহস · মিনি-কমিক",
+      "kind": "comic",
+      "formats": ["read", "download", "play"],
+      "language": "বাংলা",
+      "age": "৬+",
+      "description": "Banyan Deer জাতক থেকে অনুপ্রাণিত নতুন, অহিংস তিন-পাতার অভিযোজন। ব্রাউজারে ছয় প্যানেল দেখুন বা PDF প্রিন্ট করুন।",
+      "view": "local:comic",
+      "download": "assets/children/pdf/banyan-deer-mini-comic.pdf",
+      "source": "চর্যাভূমি শিশু বিভাগের মূল রচনা ও চিত্র",
+      "sourceUrl": "assets/children/pdf/banyan-deer-mini-comic.pdf",
+      "rights": "এই সাইটের জন্য নতুন তৈরি; কোনো আধুনিক কমিকের অনুলিপি নয়।",
+      "status": "original-local"
+    },
+    {
+      "id": "gutenberg-jataka-babbitt",
+      "title": "Jataka Tales · Ellen C. Babbitt",
+      "kind": "book",
+      "formats": ["read", "download"],
+      "language": "English",
+      "age": "৮+ · পরিবারে পড়া",
+      "description": "Ellsworth Young-এর চিত্রসহ ১৯১২ সালের শিশু-উপযোগী English retelling; Project Gutenberg-এ পড়া ও EPUB ডাউনলোড।",
+      "view": "https://www.gutenberg.org/cache/epub/62514/pg62514-images.html",
+      "download": "https://www.gutenberg.org/ebooks/62514.epub3.images",
+      "source": "Project Gutenberg eBook #62514",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/62514",
+      "rights": "Public domain in the USA; নিজের দেশের আইন ও Gutenberg-এর শর্ত দেখুন।",
+      "status": "source-checked"
+    },
+    {
+      "id": "commons-jataka-scan",
+      "title": "Jataka tales re-told · ১৯১২ scan",
+      "kind": "comic-book-scan",
+      "formats": ["read", "download"],
+      "language": "English",
+      "age": "৮+ · পরিবারে পড়া",
+      "description": "মূল বইয়ের ১১৮-পাতার চিত্রিত scan; পুরোনো ছাপা ও চিত্র দেখার জন্য Wikimedia Commons-এর PDF।",
+      "view": "https://commons.wikimedia.org/wiki/File:Jataka_tales_re-told_(IA_jatakatalesretol00babb).pdf",
+      "download": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Jataka_tales_re-told_%28IA_jatakatalesretol00babb%29.pdf",
+      "source": "Wikimedia Commons / Internet Archive · Ellen C. Babbitt",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jataka_tales_re-told_(IA_jatakatalesretol00babb).pdf",
+      "rights": "Public domain; মূল source/credit রাখুন।",
+      "status": "source-checked"
+    },
+    {
+      "id": "buddhanet-illustrated-jataka",
+      "title": "Buddhist Tales for Young & Old · Vol. 1",
+      "kind": "illustrated-book",
+      "formats": ["read", "download"],
+      "language": "English",
+      "age": "৭+ · কিছু গল্প অভিভাবকের সঙ্গে",
+      "description": "Prince Goodspeaker; John Patterson-এর line drawing-সহ illustrated PDF, যা রং করার জন্যও ব্যবহার করা যায়।",
+      "view": "https://www.buddhanet.net/ebooks_childrens/",
+      "download": "https://www.buddhanet.net/pdf_file/jtwebv1p.pdf",
+      "source": "BuddhaNet / Buddha Dharma Education Association",
+      "sourceUrl": "https://www.buddhanet.net/ebooks_childrens/",
+      "rights": "Publisher-এর source-provided download; local rehost বা অন্য প্রকাশনায় ব্যবহারের আগে শর্ত যাচাই করুন।",
+      "status": "source-checked"
+    },
+    {
+      "id": "ack-buddha-official",
+      "title": "Buddha · Amar Chitra Katha",
+      "kind": "commercial-comic",
+      "formats": ["read"],
+      "language": "English · editionভেদে ভিন্ন",
+      "age": "publisher-এর নির্দেশনা দেখুন",
+      "description": "Publisher-এর official Buddha digital title page; সেখানে Buy ও Subscribe route আছে। এটি protected commercial comic—অননুমোদিত free PDF সংযুক্ত করা হয়নি।",
+      "view": "https://digital.amarchitrakatha.com/id005835005/Buddha",
+      "download": "",
+      "source": "Amar Chitra Katha Pvt. Ltd. · official digital title",
+      "sourceUrl": "https://digital.amarchitrakatha.com/id005835005/Buddha",
+      "rights": "Protected commercial content; official listing-এর Buy/Subscribe বা publisher-অনুমোদিত preview ব্যবহার করুন।",
+      "status": "source-checked"
+    },
+    {
+      "id": "watsanfran-animated-stories",
+      "title": "Animated Buddhist Stories · Jataka",
+      "kind": "animation",
+      "formats": ["watch"],
+      "language": "English · কিছু ভিডিওতে অন্য ভাষা",
+      "age": "অভিভাবক আগে নির্বাচন করুন",
+      "description": "San Fran Dhammaram Temple-এর নিজস্ব animation collection; Nigrodhamiga, Mahakapi ও অন্যান্য গল্প। কিছু গল্পে কঠিন/দুঃখজনক বিষয় আছে।",
+      "view": "https://watsanfran.org/animated-buddhist-stories/",
+      "download": "",
+      "source": "San Fran Dhammaram Temple / watsanfran",
+      "sourceUrl": "https://watsanfran.org/animated-buddhist-stories/",
+      "rights": "মূল চ্যানেল/পাতায় দেখুন; ভিডিও ডাউনলোড বা rehost নয়।",
+      "status": "source-checked"
+    },
+    {
+      "id": "bbc-two-buddhist-stories",
+      "title": "Siddhartha and the Swan + The Monkey King",
+      "kind": "cartoon",
+      "formats": ["watch"],
+      "language": "English",
+      "age": "৫–৭ · BBC Teach search listing",
+      "description": "দুটি ছোট animated Buddhist story; BBC Teach-এর YouTube ভিডিওতে যান। শ্রেণিকক্ষে দেখানোর আগে বিজ্ঞাপন/পরবর্তী suggested video পরীক্ষা করুন।",
+      "view": "https://www.youtube.com/watch?v=J-UwlloVveI",
+      "download": "",
+      "source": "BBC Teach · YouTube",
+      "sourceUrl": "https://www.youtube.com/watch?v=J-UwlloVveI",
+      "rights": "মূল চ্যানেলে watch-only; download/rehost নয়।",
+      "status": "search-indexed"
+    },
+    {
+      "id": "buddhanet-kids-page",
+      "title": "BuddhaNet Kids’ Page",
+      "kind": "interactive-art-story",
+      "formats": ["read", "play"],
+      "language": "English",
+      "age": "৬+ · পুরোনো interface",
+      "description": "Buddha picture activity ও illustrated Jataka story-এর পুরোনো কিন্তু শিক্ষামূলক children’s gateway।",
+      "view": "https://www.buddhanet.net/mag_kids/",
+      "download": "",
+      "source": "BuddhaNet",
+      "sourceUrl": "https://www.buddhanet.net/mag_kids/",
+      "rights": "Source website-এ ব্যবহার করুন; interactive asset আলাদা করে কপি নয়।",
+      "status": "search-indexed"
+    }
+  ],
+  "culture": [
+    {
+      "id": "lantern",
+      "title": "ফানুস ও paper lantern",
+      "relationship": "বাংলাদেশের কিছু বৌদ্ধ সম্প্রদায় প্রবারণা পূর্ণিমায় ফানুস ওড়ায়; Vesak-এও বিভিন্ন অঞ্চলে lantern ব্যবহৃত হয়। এটি সব বৌদ্ধের একই আচার নয় এবং lantern অন্য সংস্কৃতিতেও আছে।",
+      "materials": "রঙিন কাগজ, কাঁচি, আঠা/টেপ, সুতো এবং শুধু battery LED tea-light",
+      "steps": [
+        "কাগজকে অর্ধেক ভাঁজ করে সহজ ফুল/তারা কাটুন—আগুন লাগানোর অংশ বানাবেন না।",
+        "কাগজটি খুলে চারপাশে আঠা দিয়ে হালকা ঝুড়ির আকৃতি দিন।",
+        "ওপরে সুতো লাগিয়ে ঝুলিয়ে সাজান; ভেতরে শুধু battery LED রাখুন।",
+        "ছবি তুলে আলোর নকশা আলোচনা করুন; ফানুস ওড়ানো বা মোমবাতি এই শিশু-কাজের অংশ নয়।"
+      ],
+      "safety": "আগুন, fuel cell, মোমবাতি বা sky-lantern release নয়। LED ব্যবহার করুন; বাতাসে ওড়ানোর নির্দেশনা ইচ্ছাকৃতভাবে নেই।",
+      "sourceLabel": "Buddhistdoor Global · Prabāraṇā Pūrnīmā in Bangladesh",
+      "sourceUrl": "https://www.buddhistdoor.net/features/skybound-lights-the-buddhist-festival-of-prabara%E1%B9%87a-purnima-in-bangladesh/"
+    },
+    {
+      "id": "mandala",
+      "title": "মণ্ডল ও জ্যামিতিক art",
+      "relationship": "বৌদ্ধ প্রসঙ্গে মণ্ডল শুধু colouring pattern নয়; এটি নির্দিষ্ট ritual, visualization ও cosmic symbolism-এর সঙ্গে যুক্ত হতে পারে। এখানে একটি সাধারণ জ্যামিতিক art exercise, অর্পিত/অভিষিক্ত মণ্ডল তৈরির নির্দেশ নয়।",
+      "materials": "কাগজ, পেন্সিল, স্কেল, কম্পাস বা গোল বাটির রিম, রং পেন্সিল",
+      "steps": [
+        "কেন্দ্রে ছোট বিন্দু দিয়ে একটির পর একটি বড় বৃত্ত আঁকুন।",
+        "স্কেল দিয়ে কেন্দ্র থেকে সমান ৮ ভাগ করুন; দৃষ্টি স্থির রাখতে ধীরে কাজ করুন।",
+        "প্রতিটি ভাগে নিজের তৈরি সাধারণ পদ্ম/জ্যামিতিক motif পুনরাবৃত্তি করুন।",
+        "রং শেষে লিখুন—কোন আকৃতি ও রং বেছে নিলেন এবং কেন; এটি ritual object বলে দাবি করবেন না।"
+      ],
+      "safety": "পবিত্র/অভিষিক্ত মণ্ডলের নকল বা ritual নির্দেশ নয়; কম্পাসের ধারালো ডগায় সাবধানতা।",
+      "sourceLabel": "Rubin Museum of Himalayan Art · Art of Mandala",
+      "sourceUrl": "https://rubinmuseum.org/highlights/mandala/"
+    },
+    {
+      "id": "mask",
+      "title": "Dragon, nāga ও paper mask",
+      "relationship": "দক্ষিণ ও দক্ষিণ-পূর্ব এশীয় বৌদ্ধ শিল্পে সাপসদৃশ nāga দেখা যায়; Himalayan/Chinese dragon-এর ইতিহাস ও রূপ আলাদা। সব dragon mask বৌদ্ধ নয় এবং সব বৌদ্ধ উৎসবে এটি ব্যবহৃত হয় না।",
+      "materials": "পুরু কাগজ, পেন্সিল, রং, আঠা, ইলাস্টিকের বদলে হাতে ধরার কাঠি",
+      "steps": [
+        "একটি কাল্পনিক নাগ/ড্রাগনের মুখের symmetric খসড়া আঁকুন—কোনো নির্দিষ্ট দেবতার মুখ নকল করবেন না।",
+        "চোখের জায়গা বড়দের সাহায্যে কাটুন; বাতাস ও দৃষ্টি পরিষ্কার রাখুন।",
+        "জল, বন ও প্রকৃতির গল্পের জন্য নিজের রং ও নকশা দিন।",
+        "মুখে শক্ত করে বাঁধার বদলে কাঠি ধরে shadow play-এ ব্যবহার করুন।"
+      ],
+      "safety": "নাক/মুখ আটকে যায় এমন বাঁধন নয়; কাঁচি বড়দের সহায়তায়। ঐতিহ্যবাহী cham mask বলে উপস্থাপন নয়।",
+      "sourceLabel": "Himalayan Art Resources · Dragon subject overview",
+      "sourceUrl": "https://www.himalayanart.org/search/set.cfm?setID=3907"
+    },
+    {
+      "id": "bowl",
+      "title": "Singing bowl ও digital শব্দ",
+      "relationship": "Bowl-shaped bell বিভিন্ন বৌদ্ধ অঞ্চলে ব্যবহৃত হয়, কিন্তু ‘সবগুলো প্রাচীন Tibetan singing bowl’ দাবির পক্ষে যথেষ্ট প্রমাণ নেই। আধুনিক meditation/sound use আর প্রাচীন আচার এক নয়।",
+      "materials": "শুধু এই পাতার digital bell, কাগজ ও রং পেন্সিল; ধাতু গলানো/পিটানোর কাজ নয়",
+      "steps": [
+        "আগে নিচের digital bell-এর ছোট শব্দটি শুনুন—এটি synthesized, প্রকৃত bowl recording নয়।",
+        "শব্দ কখন জোরে হয় এবং কীভাবে ধীরে মিলিয়ে যায়, লিখুন।",
+        "কাগজে বাটির আকৃতি ও শব্দের ঢেউ এঁকে নিজের sound-art বানান।",
+        "চিকিৎসা, ঐশ্বরিক ক্ষমতা বা প্রাচীন উৎসের দাবি না করে পরিবারের সঙ্গে আলোচনা করুন।"
+      ],
+      "safety": "শব্দ কম রাখুন; কানের কাছে জোরে বাজাবেন না। ধাতু পিটানো/গলানো শিশুদের কাজ নয়।",
+      "sourceLabel": "Tricycle · Tibetan Singing Bowls: Where Did They Really Come From?",
+      "sourceUrl": "https://tricycle.org/article/tibetan-singing-bowls/",
+      "audio": "assets/children/audio/digital-bell.wav"
+    },
+    {
+      "id": "origami",
+      "title": "Origami lotus",
+      "relationship": "Origami জাপানি paper-folding art; এটি নিজে বৌদ্ধ আচার নয়। পদ্ম একাধিক দক্ষিণ এশীয় ঐতিহ্যে ব্যবহৃত হয়, তাই কাগজের পদ্মকে শুধু বৌদ্ধ প্রতীক বলা ঠিক নয়।",
+      "materials": "একটি বর্গাকার পাতলা কাগজ (প্রায় ১৫ × ১৫ সেমি), পেন্সিল ও রং; আঠা প্রয়োজন নেই",
+      "steps": [
+        "বর্গাকার কাগজ কর্নার থেকে কর্নারে ভাঁজ করে মাঝের রেখা চিহ্নিত করুন।",
+        "চার কর্নার কেন্দ্রে আনুন; ছোট বর্গটি উল্টে আবার কর্নার ভাঁজ করুন।",
+        "পাপড়ির চার অংশ ধীরে বাইরের দিকে আনুন—কাগজ ছিঁড়লে নতুনটি নিন।",
+        "নিজের পদ্মের রং ও আকৃতি আলোচনা করুন; এটি decorative craft, পূজার নির্দেশ নয়।"
+      ],
+      "safety": "ছোট কাগজের টুকরো শিশুর মুখে দেওয়া যাবে না; কঠিন ভাঁজে বড়দের সাহায্য নিন।",
+      "sourceLabel": "Asian Art Museum · Paper lotus activity (ভিন্ন, multi-paper পদ্ধতি)",
+      "sourceUrl": "https://education.asianart.org/resources/fold-a-paper-lotus-flower/"
+    },
+    {
+      "id": "shadow",
+      "title": "Jataka-inspired shadow art",
+      "relationship": "দক্ষিণ-পূর্ব এশিয়ায় shadow theatre-এর সমৃদ্ধ ঐতিহ্য আছে এবং Jataka গল্প নানা visual/performance মাধ্যমে বলা হয়। এই সহজ কাগজের কাজটি কোনো নির্দিষ্ট wayang বা traditional Buddhist theatre-এর অনুলিপি নয়।",
+      "materials": "কালো কাগজ, কাঁচি, আঠা, কাঠি, সাদা কাপড়/কাগজ ও battery LED টর্চ",
+      "steps": [
+        "বনরাজা, হরিণ বা গাছের সহজ silhouette কাটুন; মানুষের বাস্তব ছবি/পরিচয় ব্যবহার করবেন না।",
+        "কাটা চরিত্রে কাঠি লাগিয়ে সাদা পর্দার পেছনে ধরুন।",
+        "LED টর্চ দূরে-কাছে করে ছায়ার আকার কীভাবে বদলায় দেখুন।",
+        "দয়া ও সাহসের ছোট নতুন দৃশ্য বানিয়ে পরিবারের সঙ্গে উপস্থাপন করুন।"
+      ],
+      "safety": "মোমবাতি নয়, battery LED ব্যবহার করুন; চোখে সরাসরি আলো ফেলবেন না।",
+      "sourceLabel": "Asian Art Museum · Shadow Theater lesson",
+      "sourceUrl": "https://education.asianart.org/resources/shadow-theater-bringing-your-character-to-life/"
+    }
+  ],
+  "chants": [
+    {
+      "id": "three-refuges",
+      "title": "ত্রিশরণ · Three Refuges",
+      "type": "pali-chant",
+      "text": "Buddhaṃ saraṇaṃ gacchāmi\nDhammaṃ saraṇaṃ gacchāmi\nSaṅghaṃ saraṇaṃ gacchāmi",
+      "meaning": "সহজ ভাবার্থ: আমি বুদ্ধ, ধম্ম ও সঙ্ঘের শরণ নিই। এটি নতুন শিক্ষামূলক ভাবার্থ; আচার্য-সম্প্রদায়ের অনুবাদ ও উচ্চারণ আলাদা হতে পারে।",
+      "tune": "একটি সার্বজনীন সুর নেই; মঠ ও অঞ্চলভেদে উচ্চারণ ও ছন্দ ভিন্ন।",
+      "sourceLabel": "Buddhist Society of Victoria · Sunday Chanting",
+      "sourceUrl": "https://www.bsv.net.au/sunday-chanting/"
+    },
+    {
+      "id": "metta-goodwill",
+      "title": "মেত্তা · সব প্রাণীর কল্যাণ",
+      "type": "pali-chant",
+      "text": "Sabbe sattā sukhitā hontu",
+      "meaning": "সহজ ভাবার্থ: সব প্রাণী সুখী হোক। ছোট একটি উক্তি দেখানো হয়েছে; পূর্ণ সুত্ত/আচার এটি নয়।",
+      "tune": "একটি নির্দিষ্ট ‘Buddha kirtan’ সুর নয়; বিভিন্ন tradition-এ আলাদা chant আছে।",
+      "sourceLabel": "Dhammatalks · A Chanting Guide excerpt",
+      "sourceUrl": "https://www.dhammatalks.org/books/Undaunted/Section0021.html"
+    },
+    {
+      "id": "regional-buddha-kirtan",
+      "title": "বাংলার Buddha kirtan · পালা/বিষয়ের lead",
+      "type": "regional-lead",
+      "text": "সিদ্ধার্থের গৃহত্যাগ · রাজা অশোক · অঙ্গুলিমাল",
+      "meaning": "একটি সংস্কৃতি-সূত্রে এই বিষয়গুলোর performance-এর কথা পাওয়া যায়। এগুলোকে সব বারুয়া সম্প্রদায়ের একই পদ, একই সুর বা সম্পূর্ণ তালিকা বলা যাবে না।",
+      "tune": "ঐতিহ্যবাহী পদ/সুরের অনুমোদিত recording ও স্থানীয় শিল্পীর যাচাই এখনো প্রয়োজন; তাই এখানে কথা/সুর বানিয়ে দেওয়া হয়নি।",
+      "sourceLabel": "Mukto Arts · The Kirtan in Bangladesh",
+      "sourceUrl": "https://www.muktoarts.org/more-publication/the-kirtan-in-bangladesh-diverse-traditional-music-genres/"
+    },
+    {
+      "id": "maitri-original",
+      "title": "মৈত্রীর আলো · নতুন কথা ও সুর",
+      "type": "original-song",
+      "text": "আলো জ্বলুক প্রাণে প্রাণে\nমৈত্রী ফুটুক মনে মনে\nসবাই সুখী হোক সব সময়\nশান্তি ছড়াক পথে পথে",
+      "meaning": "শিশুদের সঙ্গে মৈত্রী ও শান্তির কথা বলার নতুন চার-লাইনের অনুশীলন; ধর্মগ্রন্থ বা ঐতিহ্যবাহী কীর্তন নয়।",
+      "tune": "৪/৪ · ধীরে · সা রে গা মা | মা গা রে সা — সম্পূর্ণ notation PDF-এ।",
+      "audio": "assets/children/audio/maitri-original.wav",
+      "download": "assets/children/pdf/maitri-original-song.pdf",
+      "sourceLabel": "চর্যাভূমি শিশু বিভাগের মূল রচনা ও synthesized melody",
+      "sourceUrl": "assets/children/pdf/maitri-original-song.pdf"
+    },
+    {
+      "id": "listening-nishita-barua",
+      "title": "নিশিতা বড়ুয়া · Buddha Kirtan listening lead",
+      "type": "external-listening",
+      "text": "নিশিতা বড়ুয়া · uploader-এর metadata-তে Buddha Kirtan",
+      "meaning": "Ghunia TV-এর YouTube metadata-তে শিল্পীর নাম ও Buddha Kirtan উল্লেখ আছে। এটি শোনার lead, সব বারুয়া মণ্ডলীর প্রামাণ্য রেপার্টরি বলে দাবি নয়; শিশুদের দেখানোর আগে preview করুন।",
+      "tune": "কথা, সুর ও performance মূল recording-এ; lyrics/notation কপি নয়। প্রচলিত পদ বা সুর হিসেবে শ্রেণিবদ্ধ করতে স্থানীয় শিল্পীর যাচাই প্রয়োজন।",
+      "view": "https://www.youtube.com/watch?v=Y5LuqUtOVs0",
+      "sourceLabel": "ঘুনিয়া টিভি - Buddhist Media · YouTube channel",
+      "sourceUrl": "https://www.youtube.com/@GhuniaTV",
+      "status": "search-indexed",
+      "rights": "মূল channel-এ watch-only; download/rehost নয়। Upload-এর ownership/performance rights independently verified নয়।"
+    },
+    {
+      "id": "listening-nayan-barua",
+      "title": "নয়ন বড়ুয়া মুন্না · Buddha kirtan listening lead",
+      "type": "external-listening",
+      "text": "নয়ন বড়ুয়া মুন্না · uploader-এর metadata-তে বুদ্ধ কীর্তন",
+      "meaning": "The Buddhist TV-এর YouTube metadata-তে শিল্পী ও বুদ্ধ কীর্তন উল্লেখ আছে। শিরোনামের অংশ হিসেবে থাকা কথা এখানে নকল করা হয়নি; tradition/তাল প্রমাণ করার তালিকা নয়।",
+      "tune": "কথা ও সুর শুনতে মূল source; কোনো universal traditional melody দাবি নয়। স্থানীয় মণ্ডলীর শিক্ষকের সঙ্গে তুলনা করে শিখুন।",
+      "view": "https://www.youtube.com/watch?v=10FIxZOvZ0o",
+      "sourceLabel": "The Buddhist TV · YouTube channel",
+      "sourceUrl": "https://www.youtube.com/@thebuddhisttv7591",
+      "status": "search-indexed",
+      "rights": "মূল channel-এ watch-only; download/rehost নয়। Upload-এর ownership/performance rights independently verified নয়।"
+    },
+    {
+      "id": "listening-shakya-mitra-barua",
+      "title": "শাক্য মিত্র বড়ুয়া · Bangla Buddha Kirton lead",
+      "type": "external-listening",
+      "text": "শাক্য মিত্র বড়ুয়া · Bangla Buddha Kirton (uploader title)",
+      "meaning": "BDS TV-এর YouTube metadata-তে শিল্পীর নামসহ Bangla Buddha Kirton শিরোনাম পাওয়া যায়। আরেকটি তুলনামূলক listening lead; পুরোনো/প্রামাণ্য recording হিসেবে স্বয়ংক্রিয়ভাবে অনুমান নয়।",
+      "tune": "কথা/সুর কপি বা transcription নয়; মূল recording শুনে উচ্চারণ, ডাক-উত্তর ও বাদ্যের পার্থক্য আলোচনা করার সুযোগ।",
+      "view": "https://www.youtube.com/watch?v=yiNlVxRkpns",
+      "sourceLabel": "BDS TV · YouTube channel",
+      "sourceUrl": "https://www.youtube.com/@BDSTV",
+      "status": "search-indexed",
+      "rights": "মূল channel-এ watch-only; download/rehost নয়। Upload-এর ownership/performance rights independently verified নয়।"
+    }
+  ]
+}
