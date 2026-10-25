@@ -3,7 +3,7 @@
 (function () {
   'use strict';
   var INFO = 'data/site-info.json?v=20261024g';
-  var STRUCTURE = 'data/site-structure.json?v=20261024g';
+  var STRUCTURE = 'data/site-structure.json?v=20261025b';
   var RESOURCES = 'data/resource-guides.json?v=20261024g';
   var state = { info: null, structure: null, resources: null, placesRequested: false, searchSeq: 0 };
   var FALLBACK = { groups: [

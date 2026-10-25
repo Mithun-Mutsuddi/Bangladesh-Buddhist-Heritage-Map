@@ -1,13 +1,22 @@
-/* চর্যাভূমি — বৌদ্ধ পঞ্জিকা, বাংলা-ইংরেজি ক্যালেন্ডার ও ঘড়ি (রাউন্ড ১৫)
-   সব হিসাব ব্রাউজারেই: সূর্য-চন্দ্রের দ্রাঘিমা (Meeus-এর সংক্ষিপ্ত সূত্র), সূর্যোদয়-সূর্যাস্ত
-   (স্ট্যান্ডার্ড সানরাইজ সমীকরণ), বাংলা বর্ষপঞ্জি (বাংলা একাডেমি, ২০১৯-সংশোধিত নিয়ম)।
-   ছাপা পঞ্জিকা (লোকনাথ / বেণীমাধব শীল) সূর্যসিদ্ধান্ত-ভিত্তিক — তাই সন্ধিক্ষণে কয়েক মিনিট পার্থক্য হতে পারে। */
+/* চর্যাভূমি — বৌদ্ধ পঞ্জিকা, বাংলা-ইংরেজি ক্যালেন্ডার ও ঘড়ি (v2 2026-10-25)
+   সব হিসাব ব্রাউজারেই: Meeus-সংক্ষিপ্ত সূর্য-চন্দ্র দ্রাঘিমায় পূর্ণিমা-অমাবস্যা,
+   সূর্যোদয়-সূর্যাস্ত, বাংলা বর্ষপঞ্জি (বাংলা একাডেমি ২০১৯)।
+   ব্যবহারকারীর স্থানীয় টাইমজোন অনুসারে তারিখ/তিথি দেখায় (ডিফল্ট ঢাকা)।
+   ছাপা পঞ্জিকার সঙ্গে সংশোধিত verified dates ম্যানুয়াল OVERRIDES-এ রাখা আছে। */
 (function () {
   'use strict';
 
-  /* ---------- সময় অঞ্চল: সব হিসাব ঢাকা (UTC+6) অনুসারে ---------- */
-  var TZ = 6;
+  /* MX v2 ইঞ্জিন (mega-lunar-v2.js) থেকে উন্নত ফাংশন পাওয়া যাবে; না পাওয়া
+     গেলে calendar.js-এর পুরনো ফলব্যাক গণনা ব্যবহার হবে। */
+  var MX2 = window.MX || {};
+
+  /* ---------- সময় অঞ্চল: ঘড়ি ব্যবহারকারীর লোকাল টাইম দেখাবে; সূর্যোদয়-সূর্যাস্ত ঢাকা (LAT/LON)
+     অনুসারে গোনা হবে (পঞ্জিকার মূল কেন্দ্র ঢাকা)। ---------- */
+  var TZ_OFF_MIN = MX2.getUserTzOffsetMin ? MX2.getUserTzOffsetMin() : 360;
+  var TZ = TZ_OFF_MIN / 60;
+  var SUN_TZ = 6; /* ঢাকা — সূর্যোদয়/সূর্যাস্ত গণনার জন্য */
   var LAT = 23.8103, LON = 90.4125; /* ঢাকা */
+  var TZ_LABEL = (MX2.tzLabel || function(){ return 'স্থানীয় সময় (ঢাকা UTC+৬)'; })();
 
   var BN_DIG = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
   function bn(n) {
@@ -106,7 +115,8 @@
     if (m > 2 && isLeap(y)) n += 1;
     return n;
   }
-  /* NOAA-ধাঁচের সরল সমীকরণ — ঢাকার সূর্যোদয়/সূর্যাস্ত, ±২ মিনিট নির্ভুল */
+  /* NOAA-ধাঁচের সরল সমীকরণ — ঢাকার অক্ষাংশ-দ্রাঘিমায় সূর্যোদয়/সূর্যাস্ত গণনা,
+     ফল ব্যবহারকারীর লোকাল সময় (TZ) অনুযায়ী ঘণ্টায়; প্রায় ±২ মিনিট নির্ভুল। */
   function sunTimes(y, m, d) {
     var N = dayOfYear(y, m, d);
     var B = rad(360 / 365 * (N - 81));
@@ -115,11 +125,18 @@
     var cosHa = (Math.sin(rad(-0.833)) - Math.sin(rad(LAT)) * Math.sin(decl)) / (Math.cos(rad(LAT)) * Math.cos(decl));
     if (cosHa < -1 || cosHa > 1) return null;
     var ha = Math.acos(cosHa) * 180 / Math.PI;
-    var noon = 12 - LON / 15 - eot / 60;      /* UT ঘণ্টা */
+    var noonUT = 12 - LON / 15 - eot / 60;  /* UT ঘণ্টা */
+    /* সূর্যোদয়/সূর্যাস্ত গণনা LAT/LON ঢাকার জন্য; রিটার্ন ঘণ্টা দুটি ফর্ম্যাটে:
+       riseDhaka — ঢাকার স্থানীয় সময় (UTC+6) (পঞ্জিকার তিথি নির্ণয়ের জন্য স্থির),
+       rise     — ব্যবহারকারীর লোকাল টাইমে (স্ক্রিনে দেখানোর জন্য)। */
+    var riseDhaka = (noonUT - ha / 15 + SUN_TZ + 24) % 24;
+    var setDhaka  = (noonUT + ha / 15 + SUN_TZ + 24) % 24;
     return {
-      rise: (noon - ha / 15 + TZ + 24) % 24,
-      set: (noon + ha / 15 + TZ + 24) % 24,
-      transit: (noon + TZ + 24) % 24
+      rise: riseDhaka + (TZ - SUN_TZ),  /* লোকাল TZ-তে রূপান্তর */
+      set:  setDhaka  + (TZ - SUN_TZ),
+      transit: (noonUT + TZ + 24) % 24,
+      riseDhaka: riseDhaka,
+      setDhaka:  setDhaka
     };
   }
   function hhmm(h) {
@@ -147,15 +164,20 @@
     return { year: bYear, month: BN_MONTH[i], monthIdx: i, day: off + 1, lens: lens };
   }
 
-  /* ---------- ঢাকার “এখন” ---------- */
-  function dhakaNow(ts) {
-    var t = new Date((ts == null ? Date.now() : ts) + TZ * 3600 * 1000);
-    return { y: t.getUTCFullYear(), m: t.getUTCMonth() + 1, d: t.getUTCDate(), h: t.getUTCHours(), mi: t.getUTCMinutes(), s: t.getUTCSeconds(), wd: t.getUTCDay() };
+  /* ---------- “এখন” (ব্যবহারকারীর লোকাল টাইম) ---------- */
+  function nowLocal(ts) {
+    var t = (ts == null) ? new Date() : new Date(ts);
+    return { y: t.getFullYear(), m: t.getMonth() + 1, d: t.getDate(), h: t.getHours(), mi: t.getMinutes(), s: t.getSeconds(), wd: t.getDay() };
   }
+  /* ফলব্যাক (পুরনো কোডের সঙ্গে সামঞ্জস্য): dhakaNow → local time */
+  var dhakaNow = nowLocal;
   function panchangaOn(y, m, d) {
     var st = sunTimes(y, m, d);
-    var riseH = st ? st.rise : 6;
-    return { p: panchanga(jd(y, m, d, (riseH - TZ))), st: st };
+    /* তিথি নির্ণয় পঞ্জিকার মূল কেন্দ্র ঢাকার সূর্যোদয়ে (স্থির UTC+6) গণনা করা হয়
+       — ব্যবহারকারীর লোকাল TZ পরিবর্তন করলে পুণ্যতিথি পরিবর্তন হবে না, শুধু স্ক্রিনের
+       সূর্যোদয়/সূর্যাস্ত সময় লোকাল টাইমে দেখানো হবে। */
+    var riseDhaka = st ? st.riseDhaka : 6;
+    return { p: panchanga(jd(y, m, d, (riseDhaka - SUN_TZ))), st: st };
   }
   var cache = {};
   function dayInfo(y, m, d) {
@@ -172,8 +194,10 @@
     document.getElementById('todayWeek').textContent = WEEK[n.wd] + ' · ' + info.p.pakkha;
     document.getElementById('todayBnDate').textContent = bn(bd.day) + ' ' + bd.month + ' ' + bn(bd.year) + ' বঙ্গাব্দ';
     document.getElementById('todayEnDate').textContent = n.d + ' ' + EN_MONTH[n.m - 1] + ' ' + n.y + ' খ্রিস্টাব্দ';
-    document.getElementById('todayEra').innerHTML =
+            document.getElementById('todayEra').innerHTML =
       'বুদ্ধাব্দ <b>' + bn(n.y + 543) + '</b> · বঙ্গাব্দ <b>' + bn(bd.year) + '</b>';
+    var tzEl = document.getElementById('todayClockZone');
+    if (tzEl) tzEl.textContent = TZ_LABEL;
     document.getElementById('todayClock').textContent = bn(pad2(n.h)) + ':' + bn(pad2(n.mi)) + ':' + bn(pad2(n.s));
 
     var p = info.p;
@@ -190,9 +214,17 @@
     }).join('');
 
     if (info.st) {
+      var overrideNote = '';
+      try {
+        var OVS = {
+          '2026-10-25': 'পূর্ণিমার তিথি আজ সূর্যোদয়ে শুরু না হলেও বাংলাদেশ সরকারি ছুটি ও সংঘের ঘোষণা অনুযায়ী আজই প্রবারণা পূর্ণিমা পালিত হচ্ছে (পূর্ণিমার মুহূর্ত কাল ২৬ অক্টোবর সকাল ১০:১১-এ)।'
+        };
+        var key = n.y + '-' + (n.m<10?'0':'') + n.m + '-' + (n.d<10?'0':'') + n.d;
+        if (OVS[key]) overrideNote = '<br>📌 <b>' + OVS[key] + '</b>';
+      } catch(_){}
       document.getElementById('sunNote').innerHTML =
         '🌅 সূর্যোদয় <b>' + hhmm(info.st.rise) + '</b> · সূর্যাস্ত <b>' + hhmm(info.st.set) +
-        '</b> · মধ্যাহ্ন <b>' + hhmm(info.st.transit) + '</b> — ঢাকা (২৩.৮১° উ, ৯০.৪১° পূ) অনুসারে। তিথি গণনা করা হয়েছে সূর্যোদয়ের মুহূর্তে, ছাপা পঞ্জিকার নিয়ম মেনে।';
+        '</b> · মধ্যাহ্ন <b>' + hhmm(info.st.transit) + '</b> — ঢাকা (২৩.৮১° উ, ৯০.৪১° পূ) অনুসারে। তিথি গণনা করা হয়েছে সূর্যোদয়ের মুহূর্তে, ছাপা পঞ্জিকার নিয়ম মেনে।' + overrideNote;
     }
   }
 
@@ -243,11 +275,18 @@
       }
     }
     var LABEL = {
-      'বৈশাখ': 'বুদ্ধ পূর্ণিমা — বুদ্ধের জন্ম, বোধি ও মহাপরিনির্বাণের স্মৃতি',
-      'আষাঢ়': 'আষাঢ়ী পূর্ণিমা — বর্ষাবাস (ভিক্ষুদের বৃষ্টিবাস) শুরু',
-      'আশ্বিন': 'প্রবারণা পূর্ণিমা — বর্ষাবাস শেষ, চীবর-দান ও কথা পূর্ণিমা',
-      'মাঘ': 'মাঘী পূর্ণিমা — ত্রিপিটক-স্মৃতি ও সংঘের দিন',
-      'ফাল্গুন': 'ফাল্গুনী পূর্ণিমা — মাঘোৎসবের সমাপ্তি-পর্ব'
+      'চৈত্র': 'চৈত্র পূর্ণিমা — বার্ষিক চক্রের শেষ পূর্ণিমা; আত্মশুদ্ধি ও বিশ্বশান্তি প্রার্থনা',
+      'বৈশাখ': 'বৈশাখী/বুদ্ধ পূর্ণিমা — বুদ্ধের জন্ম, বোধি ও মহাপরিনির্বাণের ত্রিস্মৃতি',
+      'জ্যৈষ্ঠ': 'জ্যৈষ্ঠ পূর্ণিমা — মহিন্দ-সংঘমিত্রার লঙ্কা গমন ও ধর্মপ্রচার স্মৃতি',
+      'আষাঢ়': 'আষাঢ়ী পূর্ণিমা — প্রথম ধর্মচক্রপ্রবর্তন ও বর্ষাবাস শুরু',
+      'শ্রাবণ': 'শ্রাবণী পূর্ণিমা — বর্ষাবাসের মাঝামাঝি; অধ্যয়ন ও আত্মসংযম',
+      'ভাদ্র': 'মধু পূর্ণিমা — পারিলেয়্যক বনে বানরের মধু দান; প্রাণীদের প্রতি মৈত্রী',
+      'আশ্বিন': 'প্রবারণা পূর্ণিমা — বর্ষাবাস শেষ; ফানুস ও চীবর-দান',
+      'কার্তিক': 'কার্তিক পূর্ণিমা — অরহৎ সারিপুত্রের পারিনির্বাণ; কঠিন চীবর সমাপ্তি',
+      'অগ্রহায়ণ': 'অগ্রহায়ণ পূর্ণিমা — বোধিবৃক্ষের শাখা লঙ্কায় প্রেরণ স্মৃতি',
+      'পৌষ': 'পৌষ পূর্ণিমা — বুদ্ধের লঙ্কাগমন ও মৈত্রী বার্তা',
+      'মাঘ': 'মাঘী পূর্ণিমা — আয়ুসংস্কার বিসর্জন; সংঘ দিবস (ওবাদ পাটিমোক্খ)',
+      'ফাল্গুন': 'ফাল্গুনী পূর্ণিমা — কপিলবস্তুতে প্রথম প্রত্যাবর্তন স্মৃতি'
     };
     var mine = fullMoons.filter(function (x) { return LABEL[x.bd.month]; }).map(function (x) {
       return '<li><span>' + bn(x.bd.day) + ' ' + x.bd.month + ' ' + bn(x.bd.year) + '</span> <b>' + fmtDate(x) + '</b><br><small>' + LABEL[x.bd.month] + '</small></li>';

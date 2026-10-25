@@ -3,6 +3,7 @@
   'use strict';
   var dialog = document.getElementById('welcomeDialog');
   if (!dialog) return;
+  var MX = window.MX || {};
 
   var PROFILE_KEY = 'charyabhumiWelcomeProfileV1';
   var SESSION_KEY = 'charyabhumiWelcomeSeenV1';
@@ -13,11 +14,18 @@
   var profile = readProfile();
 
   var FESTIVALS = {
-    'বৈশাখ': { name: 'বুদ্ধ পূর্ণিমা', detail: 'বুদ্ধের জন্ম, বোধিলাভ ও মহাপরিনির্বাণের স্মৃতি' },
-    'আষাঢ়': { name: 'আষাঢ়ী পূর্ণিমা', detail: 'প্রথম ধর্মদেশনা ও বর্ষাবাসের সূচনা-প্রসঙ্গ' },
-    'আশ্বিন': { name: 'প্রবারণা পূর্ণিমা', detail: 'বর্ষাবাস-সমাপ্তির পূর্ণিমা; স্থানীয় ঘোষণা যাচাই করুন' },
-    'মাঘ': { name: 'মাঘী পূর্ণিমা', detail: 'সংঘ ও ধর্মানুশীলনের স্মৃতি' },
-    'ফাল্গুন': { name: 'ফাল্গুনী পূর্ণিমা', detail: 'পূর্ণিমা ও উপোসথের শুভেচ্ছা' }
+    'চৈত্র': { name: 'চৈত্র পূর্ণিমা', detail: 'বার্ষিক চক্রের শেষ পূর্ণিমা; আত্মশুদ্ধি, সমতা ও বিশ্বশান্তি প্রার্থনা' },
+    'বৈশাখ': { name: 'বুদ্ধ পূর্ণিমা (বৈশাখী পূর্ণিমা)', detail: 'বুদ্ধের জন্ম, বোধিলাভ ও মহাপরিনির্বাণের ত্রিস্মৃতি-বিজড়িত পবিত্রতম দিন' },
+    'জ্যৈষ্ঠ': { name: 'জ্যৈষ্ঠ পূর্ণিমা', detail: 'অরহৎ মহিন্দ ও সংঘমিত্রা থেরীর লঙ্কা গমন ও ধর্মপ্রচার স্মৃতি' },
+    'আষাঢ়': { name: 'আষাঢ়ী পূর্ণিমা', detail: 'সিদ্ধার্থের গর্ভাবতরণ, গৃহত্যাগ, প্রথম ধর্মচক্রপ্রবর্তন ও বর্ষাবাস শুরু' },
+    'শ্রাবণ': { name: 'শ্রাবণী পূর্ণিমা', detail: 'বর্ষাবাসের মধ্যবর্তী সময়; আত্মসংযম, অধ্যয়ন ও ধ্যান' },
+    'ভাদ্র': { name: 'মধু পূর্ণিমা (ভাদ্র পূর্ণিমা)', detail: 'পারিলেয়্যক বনে বানর ও হস্তীর মধু দান; প্রাণীদের প্রতি মৈত্রী বার্তা' },
+    'আশ্বিন': { name: 'প্রবারণা পূর্ণিমা (আশ্বিনী পূর্ণিমা)', detail: 'বর্ষাবাস সমাপ্তি; ক্ষমা বিনিময় ও ফানুস/আকাশপ্রদীপ উৎসব' },
+    'কার্তিক': { name: 'কার্তিক পূর্ণিমা', detail: 'অরহৎ সারিপুত্রের মহাপরিনির্বাণ; কঠিন চীবর দানোৎসবের সমাপ্তি' },
+    'অগ্রহায়ণ': { name: 'অগ্রহায়ণ পূর্ণিমা', detail: 'লঙ্কায় বোধিবৃক্ষের শাখা প্রেরণ স্মৃতি; বোধিপূজা দিন' },
+    'পৌষ': { name: 'পৌষ পূর্ণিমা', detail: 'বুদ্ধের লঙ্কাদ্বীপ আগমন ও শান্তি-মৈত্রীর বাণী স্মরণ' },
+    'মাঘ': { name: 'মাঘী পূর্ণিমা', detail: 'আয়ুসংস্কার বিসর্জন, ওবাদ পাটিমোক্খ উপদেশ ও সংঘ দিবস' },
+    'ফাল্গুন': { name: 'ফাল্গুনী পূর্ণিমা', detail: 'কপিলবস্তুতে বুদ্ধের প্রথম প্রত্যাবর্তন ও শাক্যপরিবারে ধর্মদেশনা' }
   };
   var SEASONS = {
     'বৈশাখ': 'বৈশাখের নতুন আলোয় মৈত্রী ও শান্তির শুভেচ্ছা',
@@ -72,6 +80,38 @@
     if (!fixed[key]) return null;
     return { title: fixed[key][0], detail: fixed[key][1], kind: 'festival' };
   }
+
+  function inVassaSeason(now, api) {
+    try {
+      var upList = api.upcoming(60, now.getTime());
+      var lastFull = null;
+      var n = api.dhakaNow(now.getTime());
+      var today = new Date(Date.UTC(n.y, n.m - 1, n.d));
+      for (var i = 0; i < upList.length; i++) {
+        var d = new Date(Date.UTC(upList[i].y, upList[i].m - 1, upList[i].d));
+        if (upList[i].t === 15 && d <= today) lastFull = upList[i];
+      }
+      if (lastFull && lastFull.bd.month === 'আষাঢ়') return true;
+      if (lastFull && lastFull.bd.month === 'শ্রাবণ') return true;
+      if (lastFull && lastFull.bd.month === 'ভাদ্র') return true;
+    } catch (_) {}
+    return false;
+  }
+  function inKathinaSeason(now, api) {
+    try {
+      var upList = api.upcoming(40, now.getTime());
+      var lastFull = null;
+      var n = api.dhakaNow(now.getTime());
+      var today = new Date(Date.UTC(n.y, n.m - 1, n.d));
+      for (var i = 0; i < upList.length; i++) {
+        var d = new Date(Date.UTC(upList[i].y, upList[i].m - 1, upList[i].d));
+        if (upList[i].t === 15 && d <= today) lastFull = upList[i];
+      }
+      if (lastFull && lastFull.bd.month === 'আশ্বিন') return true;
+      if (lastFull && lastFull.bd.month === 'কার্তিক') return true;
+    } catch (_) {}
+    return false;
+  }
   function festivalFor(now) {
     var fixed = fixedFestival(now);
     if (fixed) return fixed;
@@ -81,21 +121,72 @@
         var n = api.dhakaNow(now.getTime());
         var bd = api.banglaDate(n.y, n.m, n.d);
         var info = api.dayInfo(n.y, n.m, n.d);
+        /* পূর্ণিমা */
         if (info.p.tithi === 15) {
           var current = FESTIVALS[bd.month] || { name: 'পূর্ণিমা ও উপোসথ', detail: 'শীল, ধ্যান ও আত্মপর্যালোচনার শুভেচ্ছা' };
+          var postfix = /পূর্ণিমা$/.test(current.name) ? 'র' : '-এর';
           return {
-            title: current.name + (/পূর্ণিমা$/.test(current.name) ? 'র' : '-এর') + ' শুভেচ্ছা',
+            title: current.name + postfix + ' শুভেচ্ছা',
             detail: current.detail + ' · তিথির হিসাব আনুমানিক; স্থানীয় পঞ্জিকা ও বিহারের ঘোষণা মিলিয়ে নিন',
             kind: 'purnima'
           };
         }
+        /* অমাবস্যা */
+        if (info.p.tithi === 30) {
+          return {
+            title: 'অমাবস্যা উপোসথের শুভেচ্ছা',
+            detail: 'অমাবস্যা তিথিতে অষ্টশীল পালন, আত্মসংযম ও ধ্যানের মঙ্গল কামনা',
+            kind: 'uposatha'
+          };
+        }
+        /* অষ্টমী (উপোসথ) */
+        if (info.p.tithi === 8 || info.p.tithi === 23) {
+          return {
+            title: (info.p.tithi === 8 ? 'শুক্লা' : 'কৃষ্ণা') + ' অষ্টমী উপোসথ',
+            detail: 'অষ্টমী উপোসথে অষ্টশীল পালন, বুদ্ধবন্দনা ও পুণ্যার্জনের শুভেচ্ছা',
+            kind: 'uposatha'
+          };
+        }
+        /* হলকর্ষণ (১-৪ বৈশাখ / ১৪-১৭ এপ্রিল) */
+        if (bd.month === 'বৈশাখ' && bd.day <= 4) {
+          return {
+            title: 'হলকর্ষণ উৎসবের শুভেচ্ছা',
+            detail: 'কৃষিনির্ভর বাংলার প্রাচীন ঐতিহ্য; বুদ্ধের শিশুকালীন জম্বু ধ্যান ও নবান্নের স্মরণ',
+            kind: 'festival'
+          };
+        }
+        /* বর্ষাবাস ঋতু */
+        if (inVassaSeason(now, api)) {
+          return {
+            title: 'বর্ষাবাসের শুভেচ্ছা',
+            detail: 'ভিক্ষুসংঘের তিন মাসের বর্ষাবাস চলছে — অধ্যয়ন, শীল ও ধ্যানের সময়',
+            kind: 'vassa'
+          };
+        }
+        /* কঠিন চীবর মৌসুম */
+        if (inKathinaSeason(now, api)) {
+          return {
+            title: 'কঠিন চীবর দানোৎসবের শুভেচ্ছা',
+            detail: 'প্রবারণার পর এক চান্দ্রমাস — প্রতিটি বিহারে কঠিন চীবর দান অনুষ্ঠিত হয়',
+            kind: 'kathina'
+          };
+        }
+        /* আসন্ন পূর্ণিমা */
         var next = api.upcoming(46, now.getTime()).filter(function (x, i) {
-          return i > 0 && x.t === 15 && FESTIVALS[x.bd.month];
+          return x.t === 15 && FESTIVALS[x.bd.month];
         })[0];
-        if (next) {
+        if (next && next.y === n.y && next.m === n.m && next.d === n.d + 1) {
           var upcoming = FESTIVALS[next.bd.month];
           return {
-            title: 'আসন্ন ' + upcoming.name,
+            title: 'আগামীকাল ' + upcoming.name,
+            detail: 'প্রস্তুতি ও শীল গ্রহণের জন্য মঙ্গল কামনা',
+            kind: 'purnima'
+          };
+        }
+        if (next) {
+          var up = FESTIVALS[next.bd.month];
+          return {
+            title: 'আসন্ন ' + up.name,
             detail: api.fmtDate(next).split(' · ')[0] + ' · আনুমানিক পঞ্জিকা-হিসাব; স্থানীয় ঘোষণা যাচাই করুন',
             kind: 'purnima'
           };
