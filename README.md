@@ -5,6 +5,13 @@
 
 ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই
 
+## ২০২৬-১০-২৭: সংঘ-সূত্র অনুসন্ধান, নতুন রাখাইন ভিক্ষু ও জাদুঘর-খোঁজ (রাউন্ড ২১)
+
+- **৮৬ → ৮৭ এন্ট্রি।** নতুন **ভদন্ত উঃ ছেকাচারা মহাথের** (২২ ডিসে ১৯২৫ – ২৬ এপ্রিল ২০২৬, ১০০/১০১ বছর) — রামু শ্রীকুল পুরাতন রাখাইন বৌদ্ধ বিহারের অধ্যক্ষ; ১৯৪২ শ্রামণ্য, ১৯৫৬ আকিয়াবের বেইচিং বিহারে উপসম্পদা, ১৯৮৮-এ রামুতে প্রত্যাবর্তন; ৭–৮ মে ২০২৬ রাখাইন রীতির (ছে কাং, এয়াইং-আলং, তালাং) অন্ত্যেষ্টিক্রিয়ার নথিভুক্ত বিবরণ।
+- **রাখাইন এন্ট্রি এখন ৬টি।** সংঘরাজ ভিক্ষু মহাসভার **সদস্য-তালিকা অনলাইনে নেই** — শুধু সংঘরাজ/উপসংঘরাজ নির্বাচনের সংবাদ; তাই ওই তালিকা থেকে নাম তোলা যায়নি। পাওয়া গেল স্থানীয় সংবাদপত্র ‘আমাদের রামু’-র জীবনী-প্রতিবেদন। সারমিত্র/সত্যপ্রিয় মহাথেরের সম্প্রদায়-পরিচয় নিশ্চিত নয় বলে তাঁদের এন্ট্রি করা হয়নি — কারণ লেখা আছে।
+- **প্রিনছা খে ও মুক্তিযুদ্ধ জাদুঘর:** জাদুঘরের সাইটে নামভিত্তিক অনলাইন সার্চ নেই, ‘রাখাইন’/‘প্রিনছা’ লিখে কোনো নথি মেলে না; রেকর্ডে যোগ হলো আর্কাইভ-অনুসন্ধানের ফল ও যোগাযোগ-পথ (ইমেইল/ফোন)।
+- মুদ্রিত সূত্র-তালিকা (কক্সবাজারের ইতিহাস ২০২৪, সংঘরাজ ভিক্ষু মহাসভার সম্মেলন-স্মারক, বিহার-ইতিহাস পুস্তিকা): `docs/research-2026-10-27-rakhain-sources-bn.md` · SW `charyabhumi-v20261027-rakhain21`।
+
 ## ২০২৬-১০-২৭: উক্যচিং মারমার সেক্টর-বিতর্ক, তিন রাখাইন ব্যক্তিত্ব ও সময়রেখার ঘনত্ব (রাউন্ড ২০)
 
 - **৮৩ → ৮৬ এন্ট্রি।** রাখাইন সম্প্রদায় **২ → ৫**: **এথিন রাখাইন** (সাবেক সংসদ সদস্য, শিক্ষাবিদ), **অগ্গমেধাবী ভিক্ষু** (১৬৬৬-এ ‘অং খ্যেং থা’ জনপদের পত্তন — কক্সবাজারের আদি নাম) ও **প্রিনছা খে** (১৯৭১-এ রাখাইন বীরঙ্গনা; একক-সূত্র, স্পষ্ট সতর্কতা-লেবেলসহ)।
@@ -79,7 +86,7 @@
 
 ## ২০২৬-১০-২৪: Public archive, upazila ও language phase
 
-- **Public Historical Archive:** `historical-archive.html` + `data/historical-archive.json` — Buddha, Buddhism, Bengali/Bangladeshi Buddhist heritage-এর **৩৫টি source gateway**, media/topic/source-state filters, animated inline SVG, existing ৮২-item library ও ৮৬-entry creator archive-এর cross-link। প্রতিটি item-এ verification scope ও rights boundary আছে; এটি পুরো internet archive করার দাবি নয়।
+- **Public Historical Archive:** `historical-archive.html` + `data/historical-archive.json` — Buddha, Buddhism, Bengali/Bangladeshi Buddhist heritage-এর **৩৫টি source gateway**, media/topic/source-state filters, animated inline SVG, existing ৮২-item library ও ৮৭-entry creator archive-এর cross-link। প্রতিটি item-এ verification scope ও rights boundary আছে; এটি পুরো internet archive করার দাবি নয়।
 - **সম্পূর্ণ upazila filter:** `index.html`-এর জেলা filter-এর পাশে উপজেলা; `data/bd-geo.json`-এর ৮ বিভাগ / ৬৪ জেলা / ৪৯৫ উপজেলা / ৪,৫৪০ ইউনিয়ন। একই নামের উপজেলা district-scoped value-তে রাখা হয়েছে।
 - **Data cleanup:** ৩৫৯ core + ২,৮৫৯ directory = **৩২১৮ records** অক্ষত; canonical spelling/category/geography, reviewed exceptions এবং tracker synchronization। বিস্তারিত audit: `docs/data-curation-2026-10-24.json`।
 - **ভাষা:** ওয়েবসাইটের শুরুতে persistent language selector; বাংলা/English-এর পাশে Chakma (`ccp`) ও Marma (`rmz`) community-support option এবং স্পষ্টভাবে চিহ্নিত automatic-translation route। পূর্ণ মানব-সম্পাদিত অনুবাদের দাবি নয়।
@@ -103,7 +110,7 @@
 - **পঞ্জিকা:** `calendar.html` — বঙ্গাব্দ · বুদ্ধাব্দ · ইংরেজি তারিখ, ঘড়ি, তিথি-নক্ষত্র-যোগ-করণ, পূর্ণিমা-অমাবস্যা-উপোসথ (ব্রাউজারেই গণনা)
 - **কুইজ:** `quiz.html` — ৬৬২টি প্রশ্ন, ১১ বিষয়, ছবি-কুইজ (`data/quiz-bank.json` + `data/quiz-extra14.json` + `data/quiz-images.json`, ছবি `assets/quiz/`)
 - **কোন জেলায় কী বিখ্যাত:** `index.html#districts` — `data/district-famous.json` (৩০ জেলা, ৩২১৮ অদ্বিতীয় রেকর্ড)
-- **বুদ্ধ ও বৌদ্ধ চরিত্রের নির্মাতা-আর্কাইভ:** `culture.html#creator-archive` — `data/heritage-creators.json` + `creator-archive.js` + `creator-archive.css`; ৮৬টি ছবিসহ এন্ট্রি, বাংলা/ইংরেজি খোঁজ, অঞ্চল·বিষয়·সম্পর্ক·মিডিয়া ফিল্টার, PDF/অডিও/ভিডিও/বই/শিল্পকর্ম লিংক, উক্তি-যাচাই লেবেল ও লাইব্রেরি-সংযোগ।
+- **বুদ্ধ ও বৌদ্ধ চরিত্রের নির্মাতা-আর্কাইভ:** `culture.html#creator-archive` — `data/heritage-creators.json` + `creator-archive.js` + `creator-archive.css`; ৮৭টি ছবিসহ এন্ট্রি, বাংলা/ইংরেজি খোঁজ, অঞ্চল·বিষয়·সম্পর্ক·মিডিয়া ফিল্টার, PDF/অডিও/ভিডিও/বই/শিল্পকর্ম লিংক, উক্তি-যাচাই লেবেল ও লাইব্রেরি-সংযোগ।
 - সাইট: https://mithun-mutsuddi.github.io/Bangladesh-Buddhist-Heritage-Map/
 - প্রতিষ্ঠাতা: Mithun Mutsuddi · mithunmutsuddi92@gmail.com · WhatsApp +8801882191626
 - শুরু: অক্টোবর ২০২৬
