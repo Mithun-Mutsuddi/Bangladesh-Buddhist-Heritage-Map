@@ -136,7 +136,7 @@
     $('statProfiles').textContent = tx('গভীর profile', 'in-depth profiles'); $('statCircuits').textContent = tx('ভ্রমণ circuit', 'travel circuits');
     $('statSources').textContent = tx('নথিভুক্ত উৎস', 'documented sources'); $('statRecords').textContent = tx('মূল রেকর্ড সংরক্ষিত', 'core records retained');
     $('scopeText').innerHTML = '<strong>' + esc(tx('পরিধি স্পষ্ট:', 'Clear scope:')) + '</strong> ' + esc(T(state.data.scope)) + ' <b>' + esc(T(state.data.verification_label)) + '</b> — ' + esc(tx('GPS হলো প্রকাশিত site/component coordinate, surveyed entrance নয়।', 'GPS values are published site/component coordinates, not surveyed entrances.'));
-    $('existingMapLink').textContent = tx('৩,২১৮ রেকর্ডের মূল মানচিত্র ↗', 'Open the existing 3,218-record map ↗');
+    $('existingMapLink').textContent = tx('৩২১৮ রেকর্ডের মূল মানচিত্র ↗', 'Open the existing 3,218-record map ↗');
     $('profileSearch').placeholder = tx('সোমপুর, কুমিল্লা, তাম্রলিপি…', 'Somapura, Cumilla, copperplate…');
     $('passportNote').textContent = T(state.content.passport.storage_note);
     $('passportName').placeholder = tx('আমার নাম / My name', 'My name / আমার নাম');

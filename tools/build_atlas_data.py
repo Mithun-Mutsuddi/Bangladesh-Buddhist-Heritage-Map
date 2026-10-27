@@ -364,7 +364,7 @@ S.append(site(
 DATA = {
     "schema_version": "2026-10-24.atlas.v1",
     "generated_at": TODAY,
-    "scope": b("১২টি গভীর major-site profile দিয়ে শুরু; মূল ৩,২১৮ রেকর্ড, মানচিত্র, archive ও tracker অপরিবর্তিত সংখ্যায় সংযুক্ত। প্রতিটি profile-এর documentation level আলাদা।", "Starting with twelve in-depth major-site profiles, linked to—not replacing—the existing 3,218 records, maps, archive and tracker. Documentation depth varies by profile."),
+    "scope": b("১২টি গভীর major-site profile দিয়ে শুরু; মূল ৩২১৮ রেকর্ড, মানচিত্র, archive ও tracker অপরিবর্তিত সংখ্যায় সংযুক্ত। প্রতিটি profile-এর documentation level আলাদা।", "Starting with twelve in-depth major-site profiles, linked to—not replacing—the existing 3,218 records, maps, archive and tracker. Documentation depth varies by profile."),
     "verification_label": b("যাত্রার আগে যাচাই প্রয়োজন", "Verify before travel"),
     "sources": SOURCES,
     "hubs": [

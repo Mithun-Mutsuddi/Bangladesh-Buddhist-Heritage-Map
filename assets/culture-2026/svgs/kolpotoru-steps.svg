@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" role="img" aria-labelledby="t d">
+  <title id="t">কল্পতরু বানানোর পাঁচ ধাপ</title>
+  <desc id="d">বাঁশ-কাঠের কাঠামো, শাখা, দানসামগ্রী ঝোলানো, সাজসজ্জা ও সংকল্প — পাঁচটি ধাপের চিত্র।</desc>
+  <rect width="960" height="460" fill="#fdf6e9"/>
+  <g stroke="#c8a97a" stroke-width="2" fill="none">
+    <path d="M0 400 H960" stroke="#dbc79f"/>
+  </g>
+  <text x="30" y="44" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="22" fill="#8f3d08">কল্পতরু বানানোর পাঁচ ধাপ</text>
+  <text x="30" y="70" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="14" fill="#6b5334">প্রচলিত কারুশিল্প-পদ্ধতির সারসংক্ষেপ · মাপ স্থানীয় বিহার ও উৎসব-কমিটির সঙ্গে মিলিয়ে নিন</text>
+
+  <g font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="13" fill="#3b2a1a">
+    <!-- step 1: frame -->
+    <g transform="translate(30,100)">
+      <rect width="170" height="300" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="85" y="28" text-anchor="middle" font-size="15" fill="#8f3d08">১. কাঠামো</text>
+      <line x1="85" y1="70" x2="85" y2="240" stroke="#8a6a3a" stroke-width="7"/>
+      <line x1="45" y1="240" x2="125" y2="240" stroke="#8a6a3a" stroke-width="6"/>
+      <line x1="55" y1="235" x2="35" y2="275" stroke="#8a6a3a" stroke-width="5"/>
+      <line x1="115" y1="235" x2="135" y2="275" stroke="#8a6a3a" stroke-width="5"/>
+      <circle cx="85" cy="240" r="7" fill="#b07a34"/>
+      <text x="85" y="290" text-anchor="middle">বাঁশ/কাঠের কেন্দ্রীয়</text>
+      <text x="85" y="308" text-anchor="middle">দণ্ড + ত্রিপদী ভিত</text>
+    </g>
+    <!-- step 2: branches -->
+    <g transform="translate(215,100)">
+      <rect width="170" height="300" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="85" y="28" text-anchor="middle" font-size="15" fill="#8f3d08">২. শাখা</text>
+      <line x1="85" y1="80" x2="85" y2="240" stroke="#8a6a3a" stroke-width="7"/>
+      <g stroke="#8a6a3a" stroke-width="4" fill="none">
+        <path d="M85 110 L40 85"/><path d="M85 110 L130 85"/>
+        <path d="M85 150 L35 130"/><path d="M85 150 L135 130"/>
+        <path d="M85 190 L45 172"/><path d="M85 190 L125 172"/>
+      </g>
+      <g fill="#2f7d32" opacity=".8">
+        <ellipse cx="34" cy="82" rx="10" ry="6"/><ellipse cx="136" cy="82" rx="10" ry="6"/>
+        <ellipse cx="28" cy="127" rx="10" ry="6"/><ellipse cx="142" cy="127" rx="10" ry="6"/>
+      </g>
+      <text x="85" y="290" text-anchor="middle">৪–৮টি শাখা; নরম</text>
+      <text x="85" y="308" text-anchor="middle">ডগা, ধারালো প্রান্ত নয়</text>
+    </g>
+    <!-- step 3: hang offerings -->
+    <g transform="translate(400,100)">
+      <rect width="170" height="300" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="85" y="28" text-anchor="middle" font-size="15" fill="#8f3d08">৩. দানসামগ্রী</text>
+      <line x1="85" y1="80" x2="85" y2="240" stroke="#8a6a3a" stroke-width="7"/>
+      <g stroke="#8a6a3a" stroke-width="3" fill="none">
+        <path d="M85 110 L40 85"/><path d="M85 110 L130 85"/><path d="M85 150 L35 130"/><path d="M85 150 L135 130"/>
+      </g>
+      <g>
+        <circle cx="38" cy="98" r="7" fill="#d98b3a"/><rect x="120" y="92" width="16" height="14" rx="3" fill="#c04a3a"/>
+        <rect x="26" y="142" width="15" height="13" rx="3" fill="#4b7bb5"/><circle cx="140" cy="144" r="7" fill="#e2c15c"/>
+      </g>
+      <text x="85" y="290" text-anchor="middle">চীবর, চাল-ডাল, সাবান,</text>
+      <text x="85" y="308" text-anchor="middle">তেল, দান-নোট — ঝুলিয়ে</text>
+      <text x="85" y="326" text-anchor="middle">সামনে কার্ডে নাম লিখুন</text>
+    </g>
+    <!-- step 4: decorate -->
+    <g transform="translate(585,100)">
+      <rect width="170" height="300" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="85" y="28" text-anchor="middle" font-size="15" fill="#8f3d08">৪. সাজসজ্জা</text>
+      <line x1="85" y1="80" x2="85" y2="240" stroke="#8a6a3a" stroke-width="7"/>
+      <path d="M85 200 q-35 25 -55 60 M85 200 q35 25 55 60" stroke="#8a6a3a" stroke-width="3" fill="none"/>
+      <g fill="#e8b93a"><circle cx="60" cy="150" r="5"/><circle cx="72" cy="160" r="5"/><circle cx="100" cy="160" r="5"/><circle cx="112" cy="150" r="5"/></g>
+      <g fill="#c95a3a"><circle cx="66" cy="145" r="5"/><circle cx="106" cy="145" r="5"/></g>
+      <path d="M85 205 q-20 30 0 55" stroke="#b07a34" stroke-width="3" fill="none"/>
+      <text x="85" y="290" text-anchor="middle">গাঁদা-মালা, প্রদীপ, আলপনা;</text>
+      <text x="85" y="308" text-anchor="middle">বিহারের রং ও রীতি মানুন</text>
+    </g>
+    <!-- step 5: dedication -->
+    <g transform="translate(770,100)">
+      <rect width="170" height="300" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="85" y="28" text-anchor="middle" font-size="15" fill="#8f3d08">৫. সংকল্প</text>
+      <circle cx="85" cy="125" r="24" fill="#f6e3bd" stroke="#b07a34" stroke-width="3"/>
+      <path d="M85 105 v40 M65 125 h40" stroke="#b07a34" stroke-width="3"/>
+      <text x="85" y="175" text-anchor="middle" font-size="12">ত্রিশরণ + পঞ্চশীল</text>
+      <text x="85" y="196" text-anchor="middle" font-size="12">সংঘের উদ্দেশে উৎসর্গ</text>
+      <text x="85" y="290" text-anchor="middle">যে দিন দান, সেই দিনই</text>
+      <text x="85" y="308" text-anchor="middle">ভেঙে ফেলা সহজ রাখুন</text>
+    </g>
+  </g>
+  <text x="30" y="440" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="12" fill="#6b5334">সতর্কতা: বিদ্যুৎ-তার, মোমবাতি ও কাগজ একসঙ্গে রাখবেন না; শিশুদের নাগালে আগুন নয়।</text>
+</svg>

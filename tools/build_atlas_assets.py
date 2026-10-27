@@ -76,7 +76,7 @@ def school_kit():
     for yy,label in [(370,"দল / School / Group"),(455,"তারিখ / Date"),(540,"প্রত্নস্থল / Site"),(625,"শিক্ষক বা দায়িত্বপ্রাপ্ত বড় / Responsible adult")]:line(d,yy,label,width=790)
     y=box(d,(82,735,1158,1015),"ভ্রমণের আগে / Before travel","সরকারি সময়, বিশেষ ছুটি, টিকিট, প্রবেশ অনুমতি, সড়ক, ফেরার যান, আবহাওয়া, পানি, ওষুধ, accessibility এবং জরুরি যোগাযোগ যাচাই করুন। Site coordinate কখনো surveyed entrance gate নয়।\n\nVerify official hours, closures, tickets, permission, roads, return transport, weather, water, medication, accessibility and emergency contacts.",GREEN)
     box(d,(82,1040,1158,1320),"নিরাপত্তা ও সংরক্ষণ / Safety and care","খোঁড়া, দেয়ালে চড়া, ভাস্কর্য ছোঁয়া, ইট/টেরাকোটা/মুদ্রা তোলা বা অনুমতি ছাড়া drone নয়। ক্ষতি দেখলে নিজে মেরামত নয়—দূর থেকে নথি রেখে দায়িত্বপূর্ণ কর্তৃপক্ষকে জানান।\nNo digging, climbing, touching, collecting or unauthorised drones. Do not repair damage yourself.",TERRA)
-    d.text((90,1380),"Atlas scope: ১২টি গভীর profile · পূর্ণ ৩,২১৮ রেকর্ডের documentation দাবি নয়",font=font(20),fill=MUTED)
+    d.text((90,1380),"Atlas scope: ১২টি গভীর profile · পূর্ণ ৩২১৮ রেকর্ডের documentation দাবি নয়",font=font(20),fill=MUTED)
     pages.append(im)
 
     im,d,y=page("ভূমিকা ও প্রস্তুতি", "Roles and preparation · প্রতিটি দলে কাজ ভাগ করুন")

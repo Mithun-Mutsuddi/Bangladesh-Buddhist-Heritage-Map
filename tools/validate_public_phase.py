@@ -28,7 +28,7 @@ def main():
     directory = [dict(zip(directory_doc["fields"], row)) for row in directory_doc["places"]]
     tracker = tracker_doc["places"]
 
-    if len(core) != 359 or len(directory) != 2859 or len(core) + len(directory) != 3218:
+    if len(core) != 386 or len(directory) != 2832 or len(core) + len(directory) != 3218:
         errors.append(f"record totals changed: {len(core)} + {len(directory)}")
     if len(tracker) != 3218:
         errors.append(f"tracker total changed: {len(tracker)}")

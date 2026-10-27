@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+  <title id="t">ফানুস বানানো ও ওড়ানোর নিয়ম</title>
+  <desc id="d">কাগজের চার পাশ জোড়া, তারের বদলে বাঁশের রিং, তুলা-মোমের বাতি, শীতল বাতাস ভরা ও নিরাপদে ছাড়া — পাঁচটি ধাপ।</desc>
+  <rect width="960" height="440" fill="#f2f6fb"/>
+  <text x="30" y="44" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="22" fill="#1d3a5c">ফানুস (আকাশ-প্রদীপ) — বানানো ও ওড়ানোর নিয়ম</text>
+  <g font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="13" fill="#17293f">
+    <g transform="translate(30,84)">
+      <rect width="170" height="300" rx="12" fill="#fff" stroke="#c8d6e6"/>
+      <text x="85" y="26" text-anchor="middle" font-size="14" fill="#1d3a5c">১. কাগজ</text>
+      <path d="M55 70 L115 70 L128 220 L42 220 z" fill="#ffe9b5" stroke="#c99a3a" stroke-width="2"/>
+      <line x1="85" y1="70" x2="85" y2="220" stroke="#e0bd6a" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text x="85" y="250" text-anchor="middle">হালকা, না-ভেজা কাগজ;</text>
+      <text x="85" y="268" text-anchor="middle">৪টি দিক জোড়া</text>
+    </g>
+    <g transform="translate(215,84)">
+      <rect width="170" height="300" rx="12" fill="#fff" stroke="#c8d6e6"/>
+      <text x="85" y="26" text-anchor="middle" font-size="14" fill="#1d3a5c">২. মুখের রিং</text>
+      <ellipse cx="85" cy="200" rx="48" ry="14" fill="none" stroke="#8a6a3a" stroke-width="4"/>
+      <path d="M45 200 q8 -12 18 0 M107 200 q8 -12 18 0" stroke="#8a6a3a" stroke-width="2" fill="none"/>
+      <text x="85" y="250" text-anchor="middle">বাঁশ/কাঠের পাতলা রিং —</text>
+      <text x="85" y="268" text-anchor="middle">লোহার তার নয়</text>
+    </g>
+    <g transform="translate(400,84)">
+      <rect width="170" height="300" rx="12" fill="#fff" stroke="#c8d6e6"/>
+      <text x="85" y="26" text-anchor="middle" font-size="14" fill="#1d3a5c">৩. বাতি</text>
+      <ellipse cx="85" cy="196" rx="26" ry="8" fill="#d9c08a"/>
+      <path d="M85 176 q-10 -14 0 -26 q10 12 0 26" fill="#f08a2c"/>
+      <text x="85" y="250" text-anchor="middle">রিংয়ের মাঝে তুলা/মোমের</text>
+      <text x="85" y="268" text-anchor="middle">ছোট বাতি, নিরাপদে বাঁধা</text>
+    </g>
+    <g transform="translate(585,84)">
+      <rect width="170" height="300" rx="12" fill="#fff" stroke="#c8d6e6"/>
+      <text x="85" y="26" text-anchor="middle" font-size="14" fill="#1d3a5c">৪. গরম বাতাস</text>
+      <path d="M50 200 L120 200 L112 80 L58 80 z" fill="#ffe9b5" stroke="#c99a3a" stroke-width="2"/>
+      <g stroke="#e07a2c" stroke-width="2" fill="none" opacity=".9">
+        <path d="M70 190 q-6 -30 4 -60"/><path d="M85 190 q6 -34 -2 -66"/><path d="M100 190 q-4 -28 4 -58"/>
+      </g>
+      <text x="85" y="250" text-anchor="middle">মাটি থেকে ধরে দু-তিন</text>
+      <text x="85" y="268" text-anchor="middle">জন খাড়া রাখুন</text>
+    </g>
+    <g transform="translate(770,84)">
+      <rect width="170" height="300" rx="12" fill="#fff" stroke="#c8d6e6"/>
+      <text x="85" y="26" text-anchor="middle" font-size="14" fill="#1d3a5c">৫. ছাড়া</text>
+      <path d="M40 210 L130 210" stroke="#7f9ab5" stroke-width="2"/>
+      <circle cx="85" cy="120" r="16" fill="#ffe9b5" stroke="#c99a3a" stroke-width="2"/>
+      <path d="M85 136 v40" stroke="#c99a3a" stroke-width="2" stroke-dasharray="5 5"/>
+      <g stroke="#e07a2c" stroke-width="2" fill="none"><path d="M60 150 q10 14 25 6"/><path d="M110 150 q-10 14 -25 6"/></g>
+      <text x="85" y="250" text-anchor="middle">খোলা মাঠ, বাতাস স্থির;</text>
+      <text x="85" y="268" text-anchor="middle">বিমানবন্দর-বিদ্যুৎলাইন</text>
+      <text x="85" y="286" text-anchor="middle">থেকে দূরে</text>
+    </g>
+  </g>
+  <rect x="30" y="398" width="910" height="30" rx="8" fill="#fdecec" stroke="#e2b4b4"/>
+  <text x="44" y="418" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="12.5" fill="#8a2f2f">নিরাপত্তা: তারযুক্ত ফানুস নিষিদ্ধ (বিমান চলাচল ও বিদ্যুৎলাইনের ঝুঁকি); শুকনো মৌসুমে আগুন ছড়াতে পারে — স্থানীয় প্রশাসনের নির্দেশ মানুন।</text>
+</svg>

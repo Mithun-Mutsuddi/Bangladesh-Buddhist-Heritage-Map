@@ -90,7 +90,7 @@
     dialog.innerHTML = '<div class="cb-search-head"><div><p class="cb-eyebrow">একই structure · একই search</p><h2 id="cbSiteSearchTitle">কী খুঁজতে চান?</h2></div>' +
       '<button type="button" class="cb-search-close" data-search-close aria-label="সার্চ বন্ধ করুন">×</button></div>' +
       '<label class="cb-search-box"><span aria-hidden="true">🔎</span><input id="cbSiteSearchInput" type="search" maxlength="120" autocomplete="off" placeholder="পাহাড়পুর, রাজা, PDF, Google Scholar, tracker…" aria-describedby="cbSiteSearchStatus"></label>' +
-      '<p id="cbSiteSearchStatus" class="cb-search-status" role="status">বিষয়, পাতা, বহিস্তর research tool বা ৩,২১৮ স্থানের নাম লিখুন।</p>' +
+      '<p id="cbSiteSearchStatus" class="cb-search-status" role="status">বিষয়, পাতা, বহিস্তর research tool বা ৩২১৮ স্থানের নাম লিখুন।</p>' +
       '<div id="cbSiteSearchResults" class="cb-search-results"></div>';
     document.body.appendChild(dialog);
     var input = dialog.querySelector('#cbSiteSearchInput');
@@ -174,7 +174,7 @@
       return window.CharyabhumiSanghaMitra.searchPlaces(q, 6).then(function (places) {
         if (seq !== state.searchSeq) return;
         if (places.length) {
-          results.innerHTML = localHtml + '<h3 class="cb-search-heading">ঐতিহ্যস্থান · ৩,২১৮ রেকর্ড</h3>' + places.map(function (p) {
+          results.innerHTML = localHtml + '<h3 class="cb-search-heading">ঐতিহ্যস্থান · ৩২১৮ রেকর্ড</h3>' + places.map(function (p) {
             return linkHtml({ title: p.name + (p.en ? ' · ' + p.en : ''), href: 'index.html?q=' + encodeURIComponent(p.id) + '#explore', desc: [p.district, p.upazila, p.category].filter(Boolean).join(' · ') }, false, 'স্থান');
           }).join('');
         }

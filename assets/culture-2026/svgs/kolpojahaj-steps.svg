@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="t d">
+  <title id="t">কল্পজাহাজ / তরি বানানোর চার ধাপ</title>
+  <desc id="d">কাগজ-বাঁশের কাঠামো, জাহাজের পেট, বুদ্ধ-প্রতিম ও প্রদীপ বসানো এবং জলরঙ-সাজ — চার ধাপের চিত্র।</desc>
+  <rect width="960" height="470" fill="#fdf6e9"/>
+  <text x="30" y="44" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="22" fill="#8f3d08">কল্পজাহাজ / তরি বানানোর চার ধাপ</text>
+  <text x="30" y="70" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="14" fill="#6b5334">হালকা, ভাসমান ও দ্রুত ভেঙে যাওয়ার মতো করে বানানো হয় — যাতে জল ও উৎসবের পর প্রকৃতিতে ক্ষতি না থাকে</text>
+
+  <g font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="13" fill="#3b2a1a">
+    <g transform="translate(30,96)">
+      <rect width="210" height="330" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="105" y="28" text-anchor="middle" font-size="15" fill="#8f3d08">১. ভাসমান ভিত</text>
+      <!-- bamboo raft -->
+      <g transform="translate(30,60)">
+        <rect x="0" y="80" width="150" height="9" rx="4" fill="#c9a35c"/>
+        <rect x="0" y="95" width="150" height="9" rx="4" fill="#c9a35c"/>
+        <rect x="0" y="110" width="150" height="9" rx="4" fill="#c9a35c"/>
+        <path d="M10 70 q30 -14 60 0 q30 14 60 0" stroke="#5b8fa8" stroke-width="3" fill="none"/>
+        <path d="M10 145 q30 -12 60 0 q30 12 60 0" stroke="#5b8fa8" stroke-width="3" fill="none"/>
+      </g>
+      <text x="105" y="290" text-anchor="middle">কলাগাছের ডাঁটা / বাঁশের</text>
+      <text x="105" y="308" text-anchor="middle">মাচা — জাহাজ এর উপরেই বসে</text>
+    </g>
+
+    <g transform="translate(258,96)">
+      <rect width="210" height="330" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="105" y="28" text-anchor="middle" font-size="15" fill="#8f3d08">২. জাহাজের পেট</text>
+      <g transform="translate(35,70)">
+        <path d="M0 90 q70 45 140 0 l-14 34 q-56 26 -112 0 z" fill="#d46a3a" stroke="#8f3d08" stroke-width="2"/>
+        <path d="M10 74 h120 l10 16 h-140 z" fill="#f0b46a" stroke="#8f3d08" stroke-width="2"/>
+        <line x1="70" y1="20" x2="70" y2="74" stroke="#8a6a3a" stroke-width="5"/>
+        <path d="M70 26 L110 44 L70 60 z" fill="#3f7f9c"/>
+      </g>
+      <text x="105" y="290" text-anchor="middle">বাঁশ, বেত, রঙিন কাগজ;</text>
+      <text x="105" y="308" text-anchor="middle">ভিতরে শুকনো কলার কাঠি</text>
+    </g>
+
+    <g transform="translate(486,96)">
+      <rect width="210" height="330" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="105" y="28" text-anchor="middle" font-size="15" fill="#8f3d08">৩. প্রতিম ও প্রদীপ</text>
+      <g transform="translate(40,60)">
+        <path d="M0 120 q65 30 130 0 l-12 30 q-53 20 -106 0 z" fill="#d46a3a" stroke="#8f3d08" stroke-width="2"/>
+        <rect x="46" y="52" width="38" height="48" rx="4" fill="#f6e3bd" stroke="#b07a34" stroke-width="2"/>
+        <circle cx="65" cy="76" r="10" fill="#e0a12e"/>
+        <g fill="#e9b23a"><ellipse cx="20" cy="118" rx="5" ry="8"/><ellipse cx="45" cy="122" rx="5" ry="8"/><ellipse cx="70" cy="124" rx="5" ry="8"/><ellipse cx="95" cy="122" rx="5" ry="8"/><ellipse cx="118" cy="118" rx="5" ry="8"/></g>
+      </g>
+      <text x="105" y="290" text-anchor="middle">মাঝখানে ক্ষুদ্র বুদ্ধ-প্রতিম,</text>
+      <text x="105" y="308" text-anchor="middle">চারপাশে মাটির প্রদীপ</text>
+    </g>
+
+    <g transform="translate(714,96)">
+      <rect width="210" height="330" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="105" y="28" text-anchor="middle" font-size="15" fill="#8f3d08">৪. সাজ ও সূত্রপাঠ</text>
+      <g transform="translate(40,64)">
+        <path d="M0 116 q65 30 130 0" stroke="#8f3d08" stroke-width="2" fill="none"/>
+        <g fill="#e0788f"><circle cx="18" cy="104" r="6"/><circle cx="42" cy="112" r="6"/><circle cx="88" cy="112" r="6"/><circle cx="114" cy="104" r="6"/></g>
+        <g fill="#f2c94c"><circle cx="30" cy="100" r="5"/><circle cx="60" cy="110" r="5"/><circle cx="100" cy="104" r="5"/></g>
+        <path d="M0 40 q65 -22 130 0" stroke="#5aa0c0" stroke-width="3" fill="none" stroke-dasharray="7 6"/>
+      </g>
+      <text x="105" y="290" text-anchor="middle">ফুল, পতাকা, 'সাধু' ধ্বনি;</text>
+      <text x="105" y="308" text-anchor="middle">ভাসানোর আগে ধর্মদেশনা</text>
+    </g>
+  </g>
+  <text x="30" y="452" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="12" fill="#6b5334">প্রবাহ ও নৌ-নিরাপত্তা: দ্রুত স্রোত, বাঁধ বা নৌ-পথ থেকে দূরে ভাসান; শিশুদের সঙ্গে বড়রা থাকুন।</text>
+</svg>

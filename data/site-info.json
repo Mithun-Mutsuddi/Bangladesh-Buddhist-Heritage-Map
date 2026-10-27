@@ -1,428 +1,428 @@
 {
- "schema_version": "2026-10-22.site-info.v3",
- "generated_at": "2026-10-23",
- "brand": {
-  "name_bn": "চর্যাভূমি",
-  "name_en": "Charyabhumi",
-  "mark": "☸",
-  "motto": "হাজার বছরের পথ ধরে",
-  "slogan": "বাংলার বৌদ্ধ স্থানগুলো নিজে ঘুরে দেখুন — ইতিহাস, পথ আর মানুষের সঙ্গে।",
-  "tagline": "বাংলাদেশের বৌদ্ধ স্থান — ভ্রমণ, ইতিহাস, মানুষ",
-  "tagline_en": "Bangladesh's Buddhist heritage — travel, history, people.",
-  "since": "অক্টোবর ২০২৬",
-  "slogan_en": "Go and see Bengal’s Buddhist places yourself — with their history, the roads that lead there, and the people who keep them."
- },
- "hero": {
-  "kicker": "ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই",
-  "title": "বাংলাদেশের বৌদ্ধ ঐতিহ্য, এক জায়গায়",
-  "lead": "৬৪ জেলার দর্শনীয় বৌদ্ধ স্থান, যাতায়াত, খরচ ও থাকার তথ্য; নিজের ঘোরা জেলা বেছে ভ্রমণ-ম্যাপ; ইতিহাস, শিল্পরীতি আর মানুষের গল্প — সব বাংলায়, বিনামূল্যে।"
- },
- "about": {
-  "title": "আমাদের কথা",
-  "paras": [
-   "চর্যাভূমি একটি ফ্রি বাংলাদেশি বৌদ্ধ-ঐতিহ্য, ইতিহাস ও ভ্রমণ-ওয়েবসাইট। এখানে নিজের ঘোরা জেলাগুলো বেছে ভ্রমণ-ম্যাপ বানানো যায়, আর ৬৪ জেলার দর্শনীয় বৌদ্ধ স্থান, যাতায়াত, খরচ ও থাকার তথ্য পাওয়া যায়। কোনো সাইন-আপ নেই, কোনো বিজ্ঞাপন নেই।",
-   "নামটা এসেছে চর্যাপদ থেকে — বাংলা ভাষার সবচেয়ে পুরোনো নিদর্শন, যেটি আসলে বৌদ্ধ সিদ্ধাচার্যদের সাধন-গান। অর্থাৎ এই সাইটের যাত্রা শুরু হয় সেই জায়গা থেকেই, যেখানে বাংলা ভাষা লিখিত রূপ পায়। মূলমন্ত্র তাই — “হাজার বছরের পথ ধরে”।",
-   "এই সাইট কাদের জন্য: দেশের বৌদ্ধ পরিবার ও তীর্থযাত্রী, যাঁরা নিজের জেলা-পাশের জেলার বিহারগুলো চিনতে চান; বিদেশি বৌদ্ধ ও গবেষক, যাঁরা বাংলাদেশের বৌদ্ধ ইতিহাস, পাল যুগ, প্রত্নস্থল আর জীবন্ত সংস্কৃতি জানতে চান; এবং যে কেউ, যিনি নিরাপদে ও সম্মানের সঙ্গে এই স্থানগুলো ভ্রমণ করতে চান।",
-   "নীতিমালা সরল: যা লিখি, তার সূত্র দিই। যেখানে প্রমাণ সরু, সেখানে “যাচাই বাকি” লিখে দিই। কোনো ফোন নম্বর, তারিখ বা ছবি অনুমান করে বসাই না। কোনো স্থানের ব্যক্তিগত তথ্য অনুমতি ছাড়া প্রকাশ করি না।"
+  "schema_version": "2026-10-22.site-info.v3",
+  "generated_at": "2026-10-23",
+  "brand": {
+    "name_bn": "চর্যাভূমি",
+    "name_en": "Charyabhumi",
+    "mark": "☸",
+    "motto": "হাজার বছরের পথ ধরে",
+    "slogan": "বাংলার বৌদ্ধ স্থানগুলো নিজে ঘুরে দেখুন — ইতিহাস, পথ আর মানুষের সঙ্গে।",
+    "tagline": "বাংলাদেশের বৌদ্ধ স্থান — ভ্রমণ, ইতিহাস, মানুষ",
+    "tagline_en": "Bangladesh's Buddhist heritage — travel, history, people.",
+    "since": "অক্টোবর ২০২৬",
+    "slogan_en": "Go and see Bengal’s Buddhist places yourself — with their history, the roads that lead there, and the people who keep them."
+  },
+  "hero": {
+    "kicker": "ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই",
+    "title": "বাংলাদেশের বৌদ্ধ ঐতিহ্য, এক জায়গায়",
+    "lead": "৬৪ জেলার দর্শনীয় বৌদ্ধ স্থান, যাতায়াত, খরচ ও থাকার তথ্য; নিজের ঘোরা জেলা বেছে ভ্রমণ-ম্যাপ; ইতিহাস, শিল্পরীতি আর মানুষের গল্প — সব বাংলায়, বিনামূল্যে।"
+  },
+  "about": {
+    "title": "আমাদের কথা",
+    "paras": [
+      "চর্যাভূমি একটি ফ্রি বাংলাদেশি বৌদ্ধ-ঐতিহ্য, ইতিহাস ও ভ্রমণ-ওয়েবসাইট। এখানে নিজের ঘোরা জেলাগুলো বেছে ভ্রমণ-ম্যাপ বানানো যায়, আর ৬৪ জেলার দর্শনীয় বৌদ্ধ স্থান, যাতায়াত, খরচ ও থাকার তথ্য পাওয়া যায়। কোনো সাইন-আপ নেই, কোনো বিজ্ঞাপন নেই।",
+      "নামটা এসেছে চর্যাপদ থেকে — বাংলা ভাষার সবচেয়ে পুরোনো নিদর্শন, যেটি আসলে বৌদ্ধ সিদ্ধাচার্যদের সাধন-গান। অর্থাৎ এই সাইটের যাত্রা শুরু হয় সেই জায়গা থেকেই, যেখানে বাংলা ভাষা লিখিত রূপ পায়। মূলমন্ত্র তাই — “হাজার বছরের পথ ধরে”।",
+      "এই সাইট কাদের জন্য: দেশের বৌদ্ধ পরিবার ও তীর্থযাত্রী, যাঁরা নিজের জেলা-পাশের জেলার বিহারগুলো চিনতে চান; বিদেশি বৌদ্ধ ও গবেষক, যাঁরা বাংলাদেশের বৌদ্ধ ইতিহাস, পাল যুগ, প্রত্নস্থল আর জীবন্ত সংস্কৃতি জানতে চান; এবং যে কেউ, যিনি নিরাপদে ও সম্মানের সঙ্গে এই স্থানগুলো ভ্রমণ করতে চান।",
+      "নীতিমালা সরল: যা লিখি, তার সূত্র দিই। যেখানে প্রমাণ সরু, সেখানে “যাচাই বাকি” লিখে দিই। কোনো ফোন নম্বর, তারিখ বা ছবি অনুমান করে বসাই না। কোনো স্থানের ব্যক্তিগত তথ্য অনুমতি ছাড়া প্রকাশ করি না।"
+    ],
+    "en_paras": [
+      "Charyabhumi is a free, ad-free, sign-up-free guide to Bangladesh's Buddhist heritage, history and travel. Pick the districts you have already visited and build your own travel map; find Buddhist sites across all 64 districts with how-to-reach, cost and stay information.",
+      "The name comes from the Charyapada — the oldest surviving specimen of the Bengali language, which is in fact a collection of Buddhist mystic songs. Our motto is “Along a thousand-year path”.",
+      "It is built for Bangladeshi Buddhist families and pilgrims, for foreign Buddhists and researchers studying the Pala period and living Buddhist culture, and for any traveller who wants to visit these places respectfully and safely.",
+      "Our rule is simple: every claim carries a source; where evidence is thin we say “verification pending”; we never invent phone numbers, dates or photographs."
+    ]
+  },
+  "audience": [
+    {
+      "icon": "🧭",
+      "who": "দেশি বৌদ্ধ ভ্রমণার্থী",
+      "what": "নিজের জেলা ও পাশের জেলার বিহার, পূর্ণিমা-পার্বণ, যাতায়াত ও থাকার খরচ।"
+    },
+    {
+      "icon": "🌏",
+      "who": "বিদেশি বৌদ্ধ ও গবেষক",
+      "what": "পাল যুগ, মহাবিহার, চর্যাপদ, প্রত্নস্থল ও জীবন্ত সংস্কৃতির সহজ ব্যাখ্যা — ইংরেজি সারসংক্ষেপসহ।"
+    },
+    {
+      "icon": "🎒",
+      "who": "সাধারণ পর্যটক",
+      "what": "কোথায় যাবেন, কীভাবে যাবেন, কখন যাবেন, কত খরচ — এক পাতায়।"
+    }
   ],
-  "en_paras": [
-   "Charyabhumi is a free, ad-free, sign-up-free guide to Bangladesh's Buddhist heritage, history and travel. Pick the districts you have already visited and build your own travel map; find Buddhist sites across all 64 districts with how-to-reach, cost and stay information.",
-   "The name comes from the Charyapada — the oldest surviving specimen of the Bengali language, which is in fact a collection of Buddhist mystic songs. Our motto is “Along a thousand-year path”.",
-   "It is built for Bangladeshi Buddhist families and pilgrims, for foreign Buddhists and researchers studying the Pala period and living Buddhist culture, and for any traveller who wants to visit these places respectfully and safely.",
-   "Our rule is simple: every claim carries a source; where evidence is thin we say “verification pending”; we never invent phone numbers, dates or photographs."
-  ]
- },
- "audience": [
-  {
-   "icon": "🧭",
-   "who": "দেশি বৌদ্ধ ভ্রমণার্থী",
-   "what": "নিজের জেলা ও পাশের জেলার বিহার, পূর্ণিমা-পার্বণ, যাতায়াত ও থাকার খরচ।"
+  "promises": [
+    {
+      "icon": "🆓",
+      "t": "সম্পূর্ণ ফ্রি",
+      "d": "সব তথ্য, ম্যাপ ও ডাউনলোড — কোনো টাকা নেই।"
+    },
+    {
+      "icon": "🚫",
+      "t": "সাইন-আপ নেই",
+      "d": "অ্যাকাউন্ট খুলতে হয় না; আপনার ভ্রমণ-তালিকা আপনার ব্রাউজারেই থাকে।"
+    },
+    {
+      "icon": "📵",
+      "t": "বিজ্ঞাপন নেই",
+      "d": "কোনো বিজ্ঞাপন, ট্র্যাকিং বা স্পনসর্ড লিংক নেই।"
+    },
+    {
+      "icon": "📷",
+      "t": "ছবি ফোনেই থাকে",
+      "d": "আপনার তোলা ছবি সার্ভারে যুক্ত হয় না — ফোন/ব্রাউজারেই থাকে।"
+    },
+    {
+      "icon": "📚",
+      "t": "সূত্রসহ তথ্য",
+      "d": "প্রতিটি দাবির পাশে সূত্র; সরু প্রমাণে “যাচাই বাকি” লেখা থাকে।"
+    },
+    {
+      "icon": "🤝",
+      "t": "স্থানীয়দের কথা",
+      "d": "স্থানীয়দের পাঠানো কম-পরিচিত জায়গা ও ইতিহাস আলাদা করে দেখানো হয়।"
+    }
+  ],
+  "features": [
+    {
+      "id": "research-travel-atlas",
+      "icon": "⌖",
+      "title": "গবেষণা ও ভ্রমণ Atlas",
+      "title_en": "Research & Travel Atlas",
+      "desc": "১২টি major-site profile, ২টি circuit, ৩৫টি উৎস, archival survey, rights-aware 360° media, bilingual transcript, field-update draft ও evidence passport।",
+      "desc_en": "Twelve major-site dossiers, two circuits, 35 sources, archival surveys, rights-aware 360° media, bilingual transcripts, local field-update drafts and an evidence passport. Existing 3,218 records remain linked.",
+      "status": "live",
+      "link": "atlas.html",
+      "linkText": "Atlas খুলুন"
+    },
+    {
+      "id": "my-map",
+      "icon": "🗺️",
+      "title": "আমার ট্রাভেল ট্র্যাকার",
+      "title_en": "My travel tracker",
+      "desc": "৬৪ জেলা ও ঐতিহ্যস্থান চিহ্নিত করুন, ব্যক্তিগত ছবি-ভিডিও জার্নাল রাখুন, অনুমতি দিয়ে GPS রুট রেকর্ড করুন এবং PNG/JPG কার্ড শেয়ার করুন।",
+      "desc_en": "Track districts and heritage places, save a private media journal, record foreground GPS routes with consent, and download a progress card. Local storage only; cloud sync is not connected.",
+      "status": "partial",
+      "link": "tracker.html",
+      "linkText": "আমার ট্র্যাকার খুলুন"
+    },
+    {
+      "id": "world-map",
+      "icon": "🌍",
+      "title": "বিশ্ব ম্যাপ",
+      "title_en": "World map",
+      "desc": "যেসব দেশে বৌদ্ধ স্থান ভ্রমণ করেছেন, তার ম্যাপ।",
+      "desc_en": "A map of the countries where you have visited Buddhist sites.",
+      "status": "planned",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "id": "photo-map",
+      "icon": "🖼️",
+      "title": "ছবির ম্যাপ",
+      "title_en": "Photo map",
+      "desc": "ঘোরা জেলা, বিভাগ বা পাশাপাশি জেলা মিলিয়ে নিজের তোলা ছবির ম্যাপ; ছবি ফোনেই থাকে।",
+      "desc_en": "Map your own photographs by district or division; photos stay on your phone.",
+      "status": "partial",
+      "link": "index.html#historical-archive",
+      "linkText": "সংরক্ষণ-ঘর"
+    },
+    {
+      "id": "where",
+      "icon": "🧭",
+      "title": "কোথায় ঘুরবেন",
+      "title_en": "Where to go",
+      "desc": "৬৪ জেলার দর্শনীয় বৌদ্ধ স্থান, কীভাবে যাবেন, খরচ ও সেরা সময়।",
+      "desc_en": "Buddhist sites in all 64 districts — how to get there, cost and best season.",
+      "status": "live",
+      "link": "index.html#explore",
+      "linkText": "স্থান খুঁজুন"
+    },
+    {
+      "id": "planner",
+      "icon": "🧳",
+      "title": "ট্রিপ প্ল্যানার",
+      "title_en": "Trip planner",
+      "desc": "কয়েকটি জেলা বেছে নিলে সাজানো রুট, দিনের পরিকল্পনা ও আনুমানিক খরচ।",
+      "desc_en": "Choose districts to get a route, day plan and estimated cost.",
+      "status": "live",
+      "link": "index.html#planner",
+      "linkText": "প্ল্যানার"
+    },
+    {
+      "id": "train",
+      "icon": "🚆",
+      "title": "ট্রেনের সময়সূচি",
+      "title_en": "Train information",
+      "desc": "সরকারি সূত্রে আন্তঃনগর ট্রেনের তালিকা ও অফিসিয়াল ই-টিকেট — বানানো সময়সূচি নয়।",
+      "desc_en": "Official intercity train list and the official e-ticket portal — no invented timings.",
+      "status": "partial",
+      "link": "about.html#rail",
+      "linkText": "রেলের তথ্য"
+    },
+    {
+      "id": "blog",
+      "icon": "📝",
+      "title": "ব্লগ ও গাইড",
+      "title_en": "Blog & guides",
+      "desc": "ভ্রমণ গাইড, ট্রিপ প্ল্যান, মৌসুমি পরামর্শ — বাংলা ও ইংরেজি।",
+      "desc_en": "Travel guides, trip plans and seasonal advice in Bengali and English.",
+      "status": "partial",
+      "link": "culture.html",
+      "linkText": "শিল্প ও সংস্কৃতি"
+    },
+    {
+      "id": "horizon",
+      "icon": "💎",
+      "title": "অজানা দিগন্ত",
+      "title_en": "Unknown horizons",
+      "desc": "স্থানীয়দের পাঠানো কম-পরিচিত জায়গা, তিথি ও ইতিহাস।",
+      "desc_en": "Lesser-known places, dates and histories sent in by local people.",
+      "status": "planned",
+      "link": "",
+      "linkText": ""
+    },
+    {
+      "id": "philosophy",
+      "icon": "☸",
+      "title": "বৌদ্ধধর্ম ও দর্শন",
+      "title_en": "Buddhism & philosophy",
+      "desc": "বুদ্ধের জীবন ও বাংলায় বৌদ্ধধর্মের ইতিহাস; চিত্র-চার্টে ভবচক্র, ৩১ লোকভূমি, ধ্যান ও বিনয়, সঙ্গে গৃহী নীতি, সূত্র-গাথা, বন্দনা ও জীবনাচার।",
+      "desc_en": "The Buddha's life and Buddhism in Bengal — with visual maps of dependent origination, the 31 planes, meditation and Vinaya, plus lay ethics, suttas, vandana and life-cycle observances.",
+      "status": "live",
+      "link": "philosophy.html",
+      "linkText": "পড়ুন"
+    },
+    {
+      "id": "calendar",
+      "icon": "📅",
+      "title": "পঞ্জিকা, বাংলা-ইংরেজি ক্যালেন্ডার ও ঘড়ি",
+      "title_en": "Panjika, calendars & clock",
+      "desc": "আজকের বঙ্গাব্দ-বুদ্ধাব্দ-ইংরেজি তারিখ, ঢাকার ঘড়ি, তিথি-পক্ষ-নক্ষত্র-যোগ-করণ, সূর্যোদয়, আসন্ন পূর্ণিমা-অমাবস্যা-উপোসথ — সব নিজে নিজে আপডেট।",
+      "desc_en": "Today's Bangla, Buddhist and English dates, Dhaka clock, tithi/nakshatra/yoga/karana, sunrise, upcoming full moon, new moon and uposatha — all self-updating.",
+      "status": "live",
+      "link": "calendar.html",
+      "linkText": "আজকের পঞ্জিকা"
+    },
+    {
+      "id": "district",
+      "icon": "🍲",
+      "title": "কোন জেলায় কী বিখ্যাত",
+      "title_en": "What each district is known for",
+      "desc": "৩০টি জেলার বৌদ্ধ ঐতিহ্য এক নজরে — কতটি স্থান, কোন ধরনের, সূত্রসহ বিশেষত্ব ও উদাহরণ।",
+      "desc_en": "Buddhist heritage across 30 districts — how many sites, of what kind, sourced specialties and examples.",
+      "status": "live",
+      "link": "index.html#districts",
+      "linkText": "জেলা ধরে দেখুন"
+    },
+    {
+      "id": "quiz",
+      "icon": "🎮",
+      "title": "কুইজ",
+      "title_en": "Quiz",
+      "desc": "ছবি ও ম্যাপসহ ১০টি প্রশ্ন — ধর্ম, ইতিহাস, রাজবংশ, স্থান; লিডারবোর্ডসহ।",
+      "desc_en": "Ten questions with images — religion, history, dynasties, places; with a leaderboard.",
+      "status": "live",
+      "link": "quiz.html",
+      "linkText": "কুইজ শুরু করুন"
+    },
+    {
+      "id": "children",
+      "icon": "🧒",
+      "title": "শিশু বিভাগ",
+      "title_en": "Children's learning & play",
+      "desc": "জাতক-ভিত্তিক খেলা, কমিক, virtual archaeology, printable paper model, colouring, craft animation ও সূত্রসহ শ্রবণ।",
+      "desc_en": "Jataka-inspired games, comics, virtual archaeology, printable paper crafts, colouring, craft animation and sourced listening.",
+      "status": "live",
+      "link": "children.html",
+      "linkText": "খেলা ও তৈরি শুরু করুন"
+    },
+    {
+      "id": "emergency",
+      "icon": "🚨",
+      "title": "জরুরি নম্বর",
+      "title_en": "Emergency numbers",
+      "desc": "৯৯৯, ফায়ার সার্ভিস, স্বাস্থ্য-হেল্পলাইন ও ট্যুরিস্ট পুলিশের যাচাই করা নম্বর।",
+      "desc_en": "Verified national emergency, fire, health and tourist-police numbers.",
+      "status": "live",
+      "link": "about.html#emergency",
+      "linkText": "নম্বর দেখুন"
+    },
+    {
+      "id": "app",
+      "icon": "📱",
+      "title": "অ্যান্ড্রয়েড অ্যাপ",
+      "title_en": "Android app",
+      "desc": "Google Play-তে ফ্রি অ্যাপ — শীঘ্রই আসছে। প্রকাশ হলেই এখানে লিংক বসবে।",
+      "desc_en": "A free Android app is coming soon. The link will appear here once published.",
+      "status": "coming",
+      "link": "",
+      "linkText": ""
+    }
+  ],
+  "status_labels": {
+    "live": "চালু",
+    "partial": "আংশিক চালু",
+    "planned": "পরিকল্পিত",
+    "coming": "শীঘ্রই আসছে"
   },
-  {
-   "icon": "🌏",
-   "who": "বিদেশি বৌদ্ধ ও গবেষক",
-   "what": "পাল যুগ, মহাবিহার, চর্যাপদ, প্রত্নস্থল ও জীবন্ত সংস্কৃতির সহজ ব্যাখ্যা — ইংরেজি সারসংক্ষেপসহ।"
+  "languages": [
+    {
+      "code": "bn",
+      "name": "বাংলা",
+      "note": "সম্পূর্ণ সাইট",
+      "status": "live"
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "note": "এই পাতা + কুইজ (সারসংক্ষেপ)",
+      "status": "partial"
+    },
+    {
+      "code": "more",
+      "name": "অন্যান্য বিশ্বভাষা",
+      "note": "হিন্দি, নেপালি, সিংহলি, থাই, চীনা — পরিকল্পিত",
+      "status": "planned"
+    }
+  ],
+  "emergency": [
+    {
+      "name": "জাতীয় জরুরি সেবা",
+      "numbers": [
+        "৯৯৯"
+      ],
+      "dial": "999",
+      "note": "পুলিশ, ফায়ার সার্ভিস ও অ্যাম্বুলেন্স — ২৪ ঘণ্টা, বিনামূল্যে।",
+      "source": "বাংলাদেশ সরকার (bangladesh.gov.bd)",
+      "url": "https://bangladesh.gov.bd/pages/static-pages/69a55ba386514399668e4e89"
+    },
+    {
+      "name": "ফায়ার সার্ভিস ও সিভিল ডিফেন্স",
+      "numbers": [
+        "১০২"
+      ],
+      "dial": "102",
+      "note": "অগ্নিকাণ্ড ও উদ্ধার — জাতীয় হটলাইন।",
+      "source": "Bangladesh Police hotline তালিকা",
+      "url": "https://www.police.gov.bd/en/hot_line_number"
+    },
+    {
+      "name": "স্বাস্থ্য বাতায়ন",
+      "numbers": [
+        "১৬২৬৩"
+      ],
+      "dial": "16263",
+      "note": "ডাক্তারের পরামর্শ ও স্বাস্থ্যসেবার তথ্য (জরুরি অবস্থায় ৯৯৯)।",
+      "source": "স্বাস্থ্য অধিদপ্তর (DGHS)",
+      "url": "https://www.dghs.gov.bd/"
+    },
+    {
+      "name": "ট্যুরিস্ট পুলিশ হেল্পলাইন",
+      "numbers": [
+        "০১৩২০-২২২২২২",
+        "০১৮৮৭-৮৭৮৭৮৭"
+      ],
+      "dial": "01320222222",
+      "note": "পর্যটকদের নিরাপত্তা ও সহায়তা — ২৪ ঘণ্টা হেল্পলাইন।",
+      "source": "ট্যুরিস্ট পুলিশ (tourist.police.gov.bd)",
+      "url": "https://tourist.police.gov.bd/"
+    },
+    {
+      "name": "নারী ও শিশু নির্যাতন প্রতিরোধ",
+      "numbers": [
+        "১০৯"
+      ],
+      "dial": "109",
+      "note": "সরকারি হেল্পলাইন।",
+      "source": "বাংলাদেশ সরকার",
+      "url": "https://bangladesh.gov.bd/pages/static-pages/69a55ba386514399668e4e89"
+    },
+    {
+      "name": "সরকারি তথ্য ও সেবা",
+      "numbers": [
+        "৩৩৩"
+      ],
+      "dial": "333",
+      "note": "জাতীয় তথ্য ও সেবা কেন্দ্র।",
+      "source": "বাংলাদেশ সরকার",
+      "url": "https://bangladesh.gov.bd/pages/static-pages/69a55ba386514399668e4e89"
+    }
+  ],
+  "emergency_note": "এগুলো জাতীয়, যাচাই করা নম্বর। কোনো নির্দিষ্ট বিহার বা জেলার ফার্মেসি, টিকিট কাউন্টার বা থানার নম্বর আমরা অনুমান করে বসাই না — স্থানীয়ভাবে যাচাই করে তারপর যোগ করা হয়।",
+  "rail": [
+    {
+      "name": "বাংলাদেশ রেলওয়ে — অফিসিয়াল ই-টিকেট",
+      "desc": "সরকারি ওয়েবসাইটে ট্রেন খোঁজা, সিট দেখা ও টিকিট কেনা (১০ দিন আগে পর্যন্ত)। শুধু এই সাইট বা Rail Sheba অ্যাপ ব্যবহার করুন — তৃতীয় পক্ষের সাইট নয়।",
+      "url": "https://eticket.railway.gov.bd/",
+      "tag": "অফিসিয়াল"
+    },
+    {
+      "name": "বাংলাদেশ রেলওয়ে — মূল ওয়েবসাইট",
+      "desc": "রেলের নোটিশ, সময়সূচি ও নিয়মাবলি।",
+      "url": "https://railway.gov.bd/",
+      "tag": "অফিসিয়াল"
+    },
+    {
+      "name": "আন্তঃনগর ট্রেনের তালিকা (PDF)",
+      "desc": "রেলওয়ে পোর্টালে প্রকাশিত সরকারি তালিকা — ট্রেনের নাম, ছাড়ার ও পৌঁছানোর স্টেশন-সময়।",
+      "url": "https://railway.portal.gov.bd/sites/default/files/files/railway.portal.gov.bd/page/e64d9448_0615_4316_87f0_deb10f5c847d/Intercity%20Trains.pdf",
+      "tag": "সরকারি PDF"
+    }
+  ],
+  "rail_note": "ট্রেনের সময় সচরাচর বদলায় — যাত্রার আগে অফিসিয়াল সাইট বা স্টেশন থেকে যাচাই করুন। এই সাইটে কোনো ট্রেনের সময় নিজে থেকে লেখা হয় না।",
+  "founder": {
+    "name": "Mithun Mutsuddi",
+    "bn_name": "মিথুন মুৎসুদ্দী",
+    "role": "প্রতিষ্ঠাতা ও পরিচালক",
+    "photo": "assets/brand/founder.jpg",
+    "site": "https://mithun-mutsuddi.github.io",
+    "email": "mithunmutsuddi92@gmail.com",
+    "whatsapp": "+8801882191626",
+    "whatsapp_link": "https://wa.me/8801882191626",
+    "since": "শুরু: অক্টোবর ২০২৬"
   },
-  {
-   "icon": "🎒",
-   "who": "সাধারণ পর্যটক",
-   "what": "কোথায় যাবেন, কীভাবে যাবেন, কখন যাবেন, কত খরচ — এক পাতায়।"
+  "contact": {
+    "title": "যোগাযোগ",
+    "text": "মতামত, ভুল সংশোধন বা যেকোনো প্রয়োজনে মেসেজ দিন। কোনো বিহার বা স্থানের তথ্য ভুল থাকলে জানান — সূত্রসহ সংশোধন করা হবে।",
+    "channels": [
+      {
+        "icon": "✉️",
+        "label": "ইমেইল",
+        "value": "mithunmutsuddi92@gmail.com",
+        "url": "mailto:mithunmutsuddi92@gmail.com"
+      },
+      {
+        "icon": "💬",
+        "label": "হোয়াটসঅ্যাপ",
+        "value": "+880 1882-191626",
+        "url": "https://wa.me/8801882191626"
+      },
+      {
+        "icon": "🌐",
+        "label": "প্রতিষ্ঠাতার সাইট",
+        "value": "mithun-mutsuddi.github.io",
+        "url": "https://mithun-mutsuddi.github.io"
+      },
+      {
+        "icon": "☸",
+        "label": "এই ওয়েবসাইট",
+        "value": "mithun-mutsuddi.github.io/Bangladesh-Buddhist-Heritage-Map",
+        "url": "https://mithun-mutsuddi.github.io/Bangladesh-Buddhist-Heritage-Map/"
+      }
+    ]
+  },
+  "quiz_info": {
+    "title": "কুইজ — বৌদ্ধ ধর্ম, ইতিহাস ও সংস্কৃতি",
+    "lead": "১০টি প্রশ্ন, ১০টি বিষয় — বুদ্ধের জীবন, ত্রিপিটক, দর্শন ও চার ধারা, বাংলায় বৌদ্ধ ইতিহাস, স্থান, ব্যক্তিত্ব, ছবি-কুইজ। প্রতিবার নতুন সেট, প্রতিটি প্রশ্নে সূত্র।",
+    "note": "লিডারবোর্ড আপনার ব্রাউজারেই সংরক্ষিত হয় (সাইন-আপ নেই)। তাই এটি আপনার ডিভাইসের ফল — সবার জন্য আলাদা।"
+  },
+  "coverage": {
+    "districts_with_data": 30,
+    "districts_total": 64,
+    "sites_total": 3218,
+    "library_items": 82,
+    "quiz_questions": 515,
+    "note": "৬৪ জেলার মধ্যে এখন ৩০টি জেলার বিহার-তালিকা ডেটাসেটে আছে; বাকি জেলাগুলোর তথ্য ধাপে ধাপে যোগ হচ্ছে। যেসব জেলার তথ্য এখনো নেই, সেখানে “তথ্য আসছে” লেখা থাকে — অনুমান করে কিছু বসানো হয় না। ২৭ অক্টোবর ২০২৬: উত্তরবঙ্গের ২৭টি বিহার/কেন্দ্র ও অগ্রপুরী প্রত্নস্থল সমৃদ্ধ রেকর্ডে উন্নীত; একই গ্রাম-ডাকঘরের দুই নাম (মাধবপাড়া) একীকৃত — মোট ৩২১৮।",
+    "method": "সরকারি বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের জেলা-ভিত্তিক ১১টি PDF তালিকা + প্রত্নতত্ত্ব/বাংলাপিডিয়া + আমাদের নিজস্ব যাচাই।"
   }
- ],
- "promises": [
-  {
-   "icon": "🆓",
-   "t": "সম্পূর্ণ ফ্রি",
-   "d": "সব তথ্য, ম্যাপ ও ডাউনলোড — কোনো টাকা নেই।"
-  },
-  {
-   "icon": "🚫",
-   "t": "সাইন-আপ নেই",
-   "d": "অ্যাকাউন্ট খুলতে হয় না; আপনার ভ্রমণ-তালিকা আপনার ব্রাউজারেই থাকে।"
-  },
-  {
-   "icon": "📵",
-   "t": "বিজ্ঞাপন নেই",
-   "d": "কোনো বিজ্ঞাপন, ট্র্যাকিং বা স্পনসর্ড লিংক নেই।"
-  },
-  {
-   "icon": "📷",
-   "t": "ছবি ফোনেই থাকে",
-   "d": "আপনার তোলা ছবি সার্ভারে যুক্ত হয় না — ফোন/ব্রাউজারেই থাকে।"
-  },
-  {
-   "icon": "📚",
-   "t": "সূত্রসহ তথ্য",
-   "d": "প্রতিটি দাবির পাশে সূত্র; সরু প্রমাণে “যাচাই বাকি” লেখা থাকে।"
-  },
-  {
-   "icon": "🤝",
-   "t": "স্থানীয়দের কথা",
-   "d": "স্থানীয়দের পাঠানো কম-পরিচিত জায়গা ও ইতিহাস আলাদা করে দেখানো হয়।"
-  }
- ],
- "features": [
-  {
-   "id": "research-travel-atlas",
-   "icon": "⌖",
-   "title": "গবেষণা ও ভ্রমণ Atlas",
-   "title_en": "Research & Travel Atlas",
-"desc": "১২টি major-site profile, ২টি circuit, ৩৫টি উৎস, archival survey, rights-aware 360° media, bilingual transcript, field-update draft ও evidence passport।",
- "desc_en": "Twelve major-site dossiers, two circuits, 35 sources, archival surveys, rights-aware 360° media, bilingual transcripts, local field-update drafts and an evidence passport. Existing 3,218 records remain linked.",
-   "status": "live",
-   "link": "atlas.html",
-   "linkText": "Atlas খুলুন"
-  },
-  {
-   "id": "my-map",
-   "icon": "🗺️",
-   "title": "আমার ট্রাভেল ট্র্যাকার",
-   "title_en": "My travel tracker",
-   "desc": "৬৪ জেলা ও ঐতিহ্যস্থান চিহ্নিত করুন, ব্যক্তিগত ছবি-ভিডিও জার্নাল রাখুন, অনুমতি দিয়ে GPS রুট রেকর্ড করুন এবং PNG/JPG কার্ড শেয়ার করুন।",
-   "desc_en": "Track districts and heritage places, save a private media journal, record foreground GPS routes with consent, and download a progress card. Local storage only; cloud sync is not connected.",
-   "status": "partial",
-   "link": "tracker.html",
-   "linkText": "আমার ট্র্যাকার খুলুন"
-  },
-  {
-   "id": "world-map",
-   "icon": "🌍",
-   "title": "বিশ্ব ম্যাপ",
-   "title_en": "World map",
-   "desc": "যেসব দেশে বৌদ্ধ স্থান ভ্রমণ করেছেন, তার ম্যাপ।",
-   "desc_en": "A map of the countries where you have visited Buddhist sites.",
-   "status": "planned",
-   "link": "",
-   "linkText": ""
-  },
-  {
-   "id": "photo-map",
-   "icon": "🖼️",
-   "title": "ছবির ম্যাপ",
-   "title_en": "Photo map",
-   "desc": "ঘোরা জেলা, বিভাগ বা পাশাপাশি জেলা মিলিয়ে নিজের তোলা ছবির ম্যাপ; ছবি ফোনেই থাকে।",
-   "desc_en": "Map your own photographs by district or division; photos stay on your phone.",
-   "status": "partial",
-   "link": "index.html#historical-archive",
-   "linkText": "সংরক্ষণ-ঘর"
-  },
-  {
-   "id": "where",
-   "icon": "🧭",
-   "title": "কোথায় ঘুরবেন",
-   "title_en": "Where to go",
-   "desc": "৬৪ জেলার দর্শনীয় বৌদ্ধ স্থান, কীভাবে যাবেন, খরচ ও সেরা সময়।",
-   "desc_en": "Buddhist sites in all 64 districts — how to get there, cost and best season.",
-   "status": "live",
-   "link": "index.html#explore",
-   "linkText": "স্থান খুঁজুন"
-  },
-  {
-   "id": "planner",
-   "icon": "🧳",
-   "title": "ট্রিপ প্ল্যানার",
-   "title_en": "Trip planner",
-   "desc": "কয়েকটি জেলা বেছে নিলে সাজানো রুট, দিনের পরিকল্পনা ও আনুমানিক খরচ।",
-   "desc_en": "Choose districts to get a route, day plan and estimated cost.",
-   "status": "live",
-   "link": "index.html#planner",
-   "linkText": "প্ল্যানার"
-  },
-  {
-   "id": "train",
-   "icon": "🚆",
-   "title": "ট্রেনের সময়সূচি",
-   "title_en": "Train information",
-   "desc": "সরকারি সূত্রে আন্তঃনগর ট্রেনের তালিকা ও অফিসিয়াল ই-টিকেট — বানানো সময়সূচি নয়।",
-   "desc_en": "Official intercity train list and the official e-ticket portal — no invented timings.",
-   "status": "partial",
-   "link": "about.html#rail",
-   "linkText": "রেলের তথ্য"
-  },
-  {
-   "id": "blog",
-   "icon": "📝",
-   "title": "ব্লগ ও গাইড",
-   "title_en": "Blog & guides",
-   "desc": "ভ্রমণ গাইড, ট্রিপ প্ল্যান, মৌসুমি পরামর্শ — বাংলা ও ইংরেজি।",
-   "desc_en": "Travel guides, trip plans and seasonal advice in Bengali and English.",
-   "status": "partial",
-   "link": "culture.html",
-   "linkText": "শিল্প ও সংস্কৃতি"
-  },
-  {
-   "id": "horizon",
-   "icon": "💎",
-   "title": "অজানা দিগন্ত",
-   "title_en": "Unknown horizons",
-   "desc": "স্থানীয়দের পাঠানো কম-পরিচিত জায়গা, তিথি ও ইতিহাস।",
-   "desc_en": "Lesser-known places, dates and histories sent in by local people.",
-   "status": "planned",
-   "link": "",
-   "linkText": ""
-  },
-  {
-   "id": "philosophy",
-   "icon": "☸",
-   "title": "বৌদ্ধধর্ম ও দর্শন",
-   "title_en": "Buddhism & philosophy",
-   "desc": "বুদ্ধের জীবন ও বাংলায় বৌদ্ধধর্মের ইতিহাস; চিত্র-চার্টে ভবচক্র, ৩১ লোকভূমি, ধ্যান ও বিনয়, সঙ্গে গৃহী নীতি, সূত্র-গাথা, বন্দনা ও জীবনাচার।",
-   "desc_en": "The Buddha's life and Buddhism in Bengal — with visual maps of dependent origination, the 31 planes, meditation and Vinaya, plus lay ethics, suttas, vandana and life-cycle observances.",
-   "status": "live",
-   "link": "philosophy.html",
-   "linkText": "পড়ুন"
-  },
-  {
-   "id": "calendar",
-   "icon": "📅",
-   "title": "পঞ্জিকা, বাংলা-ইংরেজি ক্যালেন্ডার ও ঘড়ি",
-   "title_en": "Panjika, calendars & clock",
-   "desc": "আজকের বঙ্গাব্দ-বুদ্ধাব্দ-ইংরেজি তারিখ, ঢাকার ঘড়ি, তিথি-পক্ষ-নক্ষত্র-যোগ-করণ, সূর্যোদয়, আসন্ন পূর্ণিমা-অমাবস্যা-উপোসথ — সব নিজে নিজে আপডেট।",
-   "desc_en": "Today's Bangla, Buddhist and English dates, Dhaka clock, tithi/nakshatra/yoga/karana, sunrise, upcoming full moon, new moon and uposatha — all self-updating.",
-   "status": "live",
-   "link": "calendar.html",
-   "linkText": "আজকের পঞ্জিকা"
-  },
-  {
-   "id": "district",
-   "icon": "🍲",
-   "title": "কোন জেলায় কী বিখ্যাত",
-   "title_en": "What each district is known for",
-   "desc": "৩০টি জেলার বৌদ্ধ ঐতিহ্য এক নজরে — কতটি স্থান, কোন ধরনের, সূত্রসহ বিশেষত্ব ও উদাহরণ।",
-   "desc_en": "Buddhist heritage across 30 districts — how many sites, of what kind, sourced specialties and examples.",
-   "status": "live",
-   "link": "index.html#districts",
-   "linkText": "জেলা ধরে দেখুন"
-  },
-  {
-   "id": "quiz",
-   "icon": "🎮",
-   "title": "কুইজ",
-   "title_en": "Quiz",
-   "desc": "ছবি ও ম্যাপসহ ১০টি প্রশ্ন — ধর্ম, ইতিহাস, রাজবংশ, স্থান; লিডারবোর্ডসহ।",
-   "desc_en": "Ten questions with images — religion, history, dynasties, places; with a leaderboard.",
-   "status": "live",
-   "link": "quiz.html",
-   "linkText": "কুইজ শুরু করুন"
-  },
-  {
-   "id": "children",
-   "icon": "🧒",
-   "title": "শিশু বিভাগ",
-   "title_en": "Children's learning & play",
-   "desc": "জাতক-ভিত্তিক খেলা, কমিক, virtual archaeology, printable paper model, colouring, craft animation ও সূত্রসহ শ্রবণ।",
-   "desc_en": "Jataka-inspired games, comics, virtual archaeology, printable paper crafts, colouring, craft animation and sourced listening.",
-   "status": "live",
-   "link": "children.html",
-   "linkText": "খেলা ও তৈরি শুরু করুন"
-  },
-  {
-   "id": "emergency",
-   "icon": "🚨",
-   "title": "জরুরি নম্বর",
-   "title_en": "Emergency numbers",
-   "desc": "৯৯৯, ফায়ার সার্ভিস, স্বাস্থ্য-হেল্পলাইন ও ট্যুরিস্ট পুলিশের যাচাই করা নম্বর।",
-   "desc_en": "Verified national emergency, fire, health and tourist-police numbers.",
-   "status": "live",
-   "link": "about.html#emergency",
-   "linkText": "নম্বর দেখুন"
-  },
-  {
-   "id": "app",
-   "icon": "📱",
-   "title": "অ্যান্ড্রয়েড অ্যাপ",
-   "title_en": "Android app",
-   "desc": "Google Play-তে ফ্রি অ্যাপ — শীঘ্রই আসছে। প্রকাশ হলেই এখানে লিংক বসবে।",
-   "desc_en": "A free Android app is coming soon. The link will appear here once published.",
-   "status": "coming",
-   "link": "",
-   "linkText": ""
-  }
- ],
- "status_labels": {
-  "live": "চালু",
-  "partial": "আংশিক চালু",
-  "planned": "পরিকল্পিত",
-  "coming": "শীঘ্রই আসছে"
- },
- "languages": [
-  {
-   "code": "bn",
-   "name": "বাংলা",
-   "note": "সম্পূর্ণ সাইট",
-   "status": "live"
-  },
-  {
-   "code": "en",
-   "name": "English",
-   "note": "এই পাতা + কুইজ (সারসংক্ষেপ)",
-   "status": "partial"
-  },
-  {
-   "code": "more",
-   "name": "অন্যান্য বিশ্বভাষা",
-   "note": "হিন্দি, নেপালি, সিংহলি, থাই, চীনা — পরিকল্পিত",
-   "status": "planned"
-  }
- ],
- "emergency": [
-  {
-   "name": "জাতীয় জরুরি সেবা",
-   "numbers": [
-    "৯৯৯"
-   ],
-   "dial": "999",
-   "note": "পুলিশ, ফায়ার সার্ভিস ও অ্যাম্বুলেন্স — ২৪ ঘণ্টা, বিনামূল্যে।",
-   "source": "বাংলাদেশ সরকার (bangladesh.gov.bd)",
-   "url": "https://bangladesh.gov.bd/pages/static-pages/69a55ba386514399668e4e89"
-  },
-  {
-   "name": "ফায়ার সার্ভিস ও সিভিল ডিফেন্স",
-   "numbers": [
-    "১০২"
-   ],
-   "dial": "102",
-   "note": "অগ্নিকাণ্ড ও উদ্ধার — জাতীয় হটলাইন।",
-   "source": "Bangladesh Police hotline তালিকা",
-   "url": "https://www.police.gov.bd/en/hot_line_number"
-  },
-  {
-   "name": "স্বাস্থ্য বাতায়ন",
-   "numbers": [
-    "১৬২৬৩"
-   ],
-   "dial": "16263",
-   "note": "ডাক্তারের পরামর্শ ও স্বাস্থ্যসেবার তথ্য (জরুরি অবস্থায় ৯৯৯)।",
-   "source": "স্বাস্থ্য অধিদপ্তর (DGHS)",
-   "url": "https://www.dghs.gov.bd/"
-  },
-  {
-   "name": "ট্যুরিস্ট পুলিশ হেল্পলাইন",
-   "numbers": [
-    "০১৩২০-২২২২২২",
-    "০১৮৮৭-৮৭৮৭৮৭"
-   ],
-   "dial": "01320222222",
-   "note": "পর্যটকদের নিরাপত্তা ও সহায়তা — ২৪ ঘণ্টা হেল্পলাইন।",
-   "source": "ট্যুরিস্ট পুলিশ (tourist.police.gov.bd)",
-   "url": "https://tourist.police.gov.bd/"
-  },
-  {
-   "name": "নারী ও শিশু নির্যাতন প্রতিরোধ",
-   "numbers": [
-    "১০৯"
-   ],
-   "dial": "109",
-   "note": "সরকারি হেল্পলাইন।",
-   "source": "বাংলাদেশ সরকার",
-   "url": "https://bangladesh.gov.bd/pages/static-pages/69a55ba386514399668e4e89"
-  },
-  {
-   "name": "সরকারি তথ্য ও সেবা",
-   "numbers": [
-    "৩৩৩"
-   ],
-   "dial": "333",
-   "note": "জাতীয় তথ্য ও সেবা কেন্দ্র।",
-   "source": "বাংলাদেশ সরকার",
-   "url": "https://bangladesh.gov.bd/pages/static-pages/69a55ba386514399668e4e89"
-  }
- ],
- "emergency_note": "এগুলো জাতীয়, যাচাই করা নম্বর। কোনো নির্দিষ্ট বিহার বা জেলার ফার্মেসি, টিকিট কাউন্টার বা থানার নম্বর আমরা অনুমান করে বসাই না — স্থানীয়ভাবে যাচাই করে তারপর যোগ করা হয়।",
- "rail": [
-  {
-   "name": "বাংলাদেশ রেলওয়ে — অফিসিয়াল ই-টিকেট",
-   "desc": "সরকারি ওয়েবসাইটে ট্রেন খোঁজা, সিট দেখা ও টিকিট কেনা (১০ দিন আগে পর্যন্ত)। শুধু এই সাইট বা Rail Sheba অ্যাপ ব্যবহার করুন — তৃতীয় পক্ষের সাইট নয়।",
-   "url": "https://eticket.railway.gov.bd/",
-   "tag": "অফিসিয়াল"
-  },
-  {
-   "name": "বাংলাদেশ রেলওয়ে — মূল ওয়েবসাইট",
-   "desc": "রেলের নোটিশ, সময়সূচি ও নিয়মাবলি।",
-   "url": "https://railway.gov.bd/",
-   "tag": "অফিসিয়াল"
-  },
-  {
-   "name": "আন্তঃনগর ট্রেনের তালিকা (PDF)",
-   "desc": "রেলওয়ে পোর্টালে প্রকাশিত সরকারি তালিকা — ট্রেনের নাম, ছাড়ার ও পৌঁছানোর স্টেশন-সময়।",
-   "url": "https://railway.portal.gov.bd/sites/default/files/files/railway.portal.gov.bd/page/e64d9448_0615_4316_87f0_deb10f5c847d/Intercity%20Trains.pdf",
-   "tag": "সরকারি PDF"
-  }
- ],
- "rail_note": "ট্রেনের সময় সচরাচর বদলায় — যাত্রার আগে অফিসিয়াল সাইট বা স্টেশন থেকে যাচাই করুন। এই সাইটে কোনো ট্রেনের সময় নিজে থেকে লেখা হয় না।",
- "founder": {
-  "name": "Mithun Mutsuddi",
-  "bn_name": "মিথুন মুৎসুদ্দী",
-  "role": "প্রতিষ্ঠাতা ও পরিচালক",
-  "photo": "assets/brand/founder.jpg",
-  "site": "https://mithun-mutsuddi.github.io",
-  "email": "mithunmutsuddi92@gmail.com",
-  "whatsapp": "+8801882191626",
-  "whatsapp_link": "https://wa.me/8801882191626",
-  "since": "শুরু: অক্টোবর ২০২৬"
- },
- "contact": {
-  "title": "যোগাযোগ",
-  "text": "মতামত, ভুল সংশোধন বা যেকোনো প্রয়োজনে মেসেজ দিন। কোনো বিহার বা স্থানের তথ্য ভুল থাকলে জানান — সূত্রসহ সংশোধন করা হবে।",
-  "channels": [
-   {
-    "icon": "✉️",
-    "label": "ইমেইল",
-    "value": "mithunmutsuddi92@gmail.com",
-    "url": "mailto:mithunmutsuddi92@gmail.com"
-   },
-   {
-    "icon": "💬",
-    "label": "হোয়াটসঅ্যাপ",
-    "value": "+880 1882-191626",
-    "url": "https://wa.me/8801882191626"
-   },
-   {
-    "icon": "🌐",
-    "label": "প্রতিষ্ঠাতার সাইট",
-    "value": "mithun-mutsuddi.github.io",
-    "url": "https://mithun-mutsuddi.github.io"
-   },
-   {
-    "icon": "☸",
-    "label": "এই ওয়েবসাইট",
-    "value": "mithun-mutsuddi.github.io/Bangladesh-Buddhist-Heritage-Map",
-    "url": "https://mithun-mutsuddi.github.io/Bangladesh-Buddhist-Heritage-Map/"
-   }
-  ]
- },
- "quiz_info": {
-  "title": "কুইজ — বৌদ্ধ ধর্ম, ইতিহাস ও সংস্কৃতি",
-  "lead": "১০টি প্রশ্ন, ১০টি বিষয় — বুদ্ধের জীবন, ত্রিপিটক, দর্শন ও চার ধারা, বাংলায় বৌদ্ধ ইতিহাস, স্থান, ব্যক্তিত্ব, ছবি-কুইজ। প্রতিবার নতুন সেট, প্রতিটি প্রশ্নে সূত্র।",
-  "note": "লিডারবোর্ড আপনার ব্রাউজারেই সংরক্ষিত হয় (সাইন-আপ নেই)। তাই এটি আপনার ডিভাইসের ফল — সবার জন্য আলাদা।"
- },
- "coverage": {
-  "districts_with_data": 30,
-  "districts_total": 64,
-  "sites_total": 3218,
-  "library_items": 82,
-  "quiz_questions": 515,
-  "note": "৬৪ জেলার মধ্যে এখন ৩০টি জেলার বিহার-তালিকা ডেটাসেটে আছে; বাকি জেলাগুলোর তথ্য ধাপে ধাপে যোগ হচ্ছে। যেসব জেলার তথ্য এখনো নেই, সেখানে “তথ্য আসছে” লেখা থাকে — অনুমান করে কিছু বসানো হয় না।",
-  "method": "সরকারি বৌদ্ধ ধর্মীয় কল্যাণ ট্রাস্টের জেলা-ভিত্তিক ১১টি PDF তালিকা + প্রত্নতত্ত্ব/বাংলাপিডিয়া + আমাদের নিজস্ব যাচাই।"
- }
 }

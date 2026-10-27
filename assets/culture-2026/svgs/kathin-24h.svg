@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="t d">
+  <title id="t">কঠিন চীবর দান: ২৪ ঘণ্টার ধারা</title>
+  <desc id="d">সূর্যোদয় থেকে পরদিন সূর্যোদয় পর্যন্ত তুলা কাটা, সুতা কাটা, বেইনে বোনা, কাটা, সেলাই, রং করা ও দান — ছয়টি ধাপের রেখাচিত্র।</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d2a4a"/><stop offset=".45" stop-color="#5b4a72"/>
+      <stop offset=".62" stop-color="#c9773f"/><stop offset="1" stop-color="#f0d6a0"/>
+    </linearGradient>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8f3d08"/>
+    </marker>
+  </defs>
+  <rect width="960" height="420" fill="#fdf6e9"/>
+  <rect x="24" y="20" width="912" height="96" rx="14" fill="url(#sky)"/>
+  <circle cx="86" cy="68" r="22" fill="#ffd479"/>
+  <circle cx="878" cy="68" r="14" fill="#ffe9b5" opacity=".85"/>
+  <text x="122" y="62" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="21" fill="#fff">সূর্যোদয় — দিন ১</text>
+  <text x="122" y="90" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="16" fill="#f4e6c8">তুলা সংগ্রহ ও মজুদ আগেই শেষ; এখন থেকে ঘড়ি চলছে</text>
+  <text x="806" y="46" text-anchor="middle" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="15" fill="#ffe9b5">পরদিন সূর্যোদয়ের আগে</text>
+
+  <g font-family="'Noto Sans Bengali',system-ui,sans-serif">
+    <path d="M70 300 H890" stroke="#8f3d08" stroke-width="3" marker-end="url(#arw)" opacity=".5"/>
+    <g>
+      <circle cx="110" cy="300" r="30" fill="#fff" stroke="#8f3d08" stroke-width="3"/>
+      <text x="110" y="307" text-anchor="middle" font-size="20" fill="#8f3d08">১</text>
+      <text x="110" y="360" text-anchor="middle" font-size="15" fill="#3b2a1a">তুলা থেকে</text>
+      <text x="110" y="380" text-anchor="middle" font-size="15" fill="#3b2a1a">চরকায় সুতা</text>
+    </g>
+    <g>
+      <circle cx="255" cy="300" r="30" fill="#fff" stroke="#8f3d08" stroke-width="3"/>
+      <text x="255" y="307" text-anchor="middle" font-size="20" fill="#8f3d08">২</text>
+      <text x="255" y="360" text-anchor="middle" font-size="15" fill="#3b2a1a">বেইন (কোমড়</text>
+      <text x="255" y="380" text-anchor="middle" font-size="15" fill="#3b2a1a">তাঁত) টানা</text>
+    </g>
+    <g>
+      <circle cx="400" cy="300" r="30" fill="#fff" stroke="#8f3d08" stroke-width="3"/>
+      <text x="400" y="307" text-anchor="middle" font-size="20" fill="#8f3d08">৩</text>
+      <text x="400" y="360" text-anchor="middle" font-size="15" fill="#3b2a1a">কাপড় বোনা</text>
+      <text x="400" y="380" text-anchor="middle" font-size="15" fill="#3b2a1a">(চারজন একসঙ্গে)</text>
+    </g>
+    <g>
+      <circle cx="545" cy="300" r="30" fill="#fff" stroke="#8f3d08" stroke-width="3"/>
+      <text x="545" y="307" text-anchor="middle" font-size="20" fill="#8f3d08">৪</text>
+      <text x="545" y="360" text-anchor="middle" font-size="15" fill="#3b2a1a">কাটা ও</text>
+      <text x="545" y="380" text-anchor="middle" font-size="15" fill="#3b2a1a">সেলাই</text>
+    </g>
+    <g>
+      <circle cx="690" cy="300" r="30" fill="#fff" stroke="#8f3d08" stroke-width="3"/>
+      <text x="690" y="307" text-anchor="middle" font-size="20" fill="#8f3d08">৫</text>
+      <text x="690" y="360" text-anchor="middle" font-size="15" fill="#3b2a1a">রং করা ও</text>
+      <text x="690" y="380" text-anchor="middle" font-size="15" fill="#3b2a1a">শুকানো</text>
+    </g>
+    <g>
+      <circle cx="830" cy="300" r="30" fill="#8f3d08" stroke="#8f3d08" stroke-width="3"/>
+      <text x="830" y="307" text-anchor="middle" font-size="20" fill="#fff">৬</text>
+      <text x="830" y="360" text-anchor="middle" font-size="15" fill="#3b2a1a">সংঘকে চীবর</text>
+      <text x="830" y="380" text-anchor="middle" font-size="15" fill="#3b2a1a">দান</text>
+    </g>
+  </g>
+  <text x="24" y="34" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="13" fill="#8f3d08">রেখাচিত্র · চর্যাভূমি</text>
+</svg>

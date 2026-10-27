@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="t d">
+  <title id="t">ঘিলা, বৌচি ও পিঠা — উৎসবের ছোট খেলা</title>
+  <desc id="d">লাঠিতে ঘিলা নিক্ষেপ, বৌচি (কড়ি-বীজ) খেলা ও পিঠার থালা — তিনটি দৃশ্যের রেখাচিত্র।</desc>
+  <rect width="900" height="420" fill="#fdf6e9"/>
+  <text x="28" y="42" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="21" fill="#8f3d08">ঘিলা, বৌচি ও পিঠা — উৎসবের ছোট খেলা</text>
+  <g font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="13" fill="#3b2a1a">
+    <!-- ghila -->
+    <g transform="translate(28,70)">
+      <rect width="270" height="310" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="135" y="26" text-anchor="middle" font-size="15" fill="#8f3d08">ঘিলা</text>
+      <line x1="40" y1="250" x2="230" y2="250" stroke="#c8a97a" stroke-width="3"/>
+      <circle cx="120" cy="240" r="12" fill="#d9a04a" stroke="#8a5a20" stroke-width="2"/>
+      <circle cx="160" cy="243" r="12" fill="#d9a04a" stroke="#8a5a20" stroke-width="2"/>
+      <path d="M60 200 L170 130" stroke="#8a6a3a" stroke-width="5" stroke-linecap="round"/>
+      <path d="M96 118 q26 -22 52 -6" stroke="#b07a34" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+      <text x="135" y="286" text-anchor="middle">কাঠ/শিং-এর গোল চাকতি;</text>
+      <text x="135" y="304" text-anchor="middle">লাঠির ঘায়ে দূরে পাঠানো</text>
+    </g>
+    <!-- bouchi -->
+    <g transform="translate(315,70)">
+      <rect width="270" height="310" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="135" y="26" text-anchor="middle" font-size="15" fill="#8f3d08">বৌচি / কড়ি</text>
+      <ellipse cx="135" cy="215" rx="92" ry="34" fill="#f1e2c4" stroke="#c8a97a" stroke-width="2"/>
+      <g fill="#9a6a37">
+        <ellipse cx="90" cy="205" rx="8" ry="5"/><ellipse cx="112" cy="218" rx="8" ry="5"/><ellipse cx="140" cy="207" rx="8" ry="5"/>
+        <ellipse cx="166" cy="220" rx="8" ry="5"/><ellipse cx="186" cy="206" rx="8" ry="5"/>
+      </g>
+      <g fill="#c9532f"><circle cx="104" cy="200" r="5"/><circle cx="152" cy="215" r="5"/><circle cx="178" cy="212" r="5"/></g>
+      <text x="135" y="286" text-anchor="middle">বীজ/কড়ি ছুঁড়ে খেলার</text>
+      <text x="135" y="304" text-anchor="middle">ছোট ছোট দলগত খেলা</text>
+    </g>
+    <!-- pitha -->
+    <g transform="translate(602,70)">
+      <rect width="270" height="310" rx="12" fill="#fff" stroke="#e0cba4"/>
+      <text x="135" y="26" text-anchor="middle" font-size="15" fill="#8f3d08">পিঠা ও পাজন</text>
+      <ellipse cx="135" cy="210" rx="95" ry="26" fill="#e0cba4" stroke="#a8803f" stroke-width="2"/>
+      <g fill="#f0d6a0" stroke="#a8803f" stroke-width="1.5">
+        <ellipse cx="95" cy="196" rx="22" ry="12"/><ellipse cx="145" cy="190" rx="22" ry="12"/><ellipse cx="185" cy="199" rx="22" ry="12"/>
+      </g>
+      <circle cx="145" cy="188" r="5" fill="#c9532f"/><circle cx="95" cy="194" r="4" fill="#c9532f"/>
+      <g fill="#2f7d32"><circle cx="120" cy="176" r="4"/><circle cx="168" cy="175" r="4"/></g>
+      <text x="135" y="286" text-anchor="middle">বিহার ও পাড়ায় পিঠা উৎসব,</text>
+      <text x="135" y="304" text-anchor="middle">চৈত্র-বৈশাখে পাজন</text>
+    </g>
+  </g>
+  <text x="28" y="404" font-family="'Noto Sans Bengali',system-ui,sans-serif" font-size="12" fill="#6b5334">খেলার নিয়ম এলাকাভেদে বদলায় — স্থানীয় প্রবীণদের কাছ থেকে নিয়ম জেনে খেলাই রীতি।</text>
+</svg>

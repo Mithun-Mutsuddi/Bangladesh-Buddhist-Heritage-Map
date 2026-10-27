@@ -5,6 +5,19 @@
 
 ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই
 
+## ২০২৬-১০-২৭: উৎসব ও লোকসংস্কৃতি phase (রাউন্ড ১৩)
+
+- **নতুন ৪ বিভাগ / ১৫ এন্ট্রি / ১৫ ছবি-কী** — `data/heritage-culture.json` এখন **৮ বিভাগ, ৪৩ এন্ট্রি**:
+  প্রবারণা → কঠিন চীবর → কল্পতরু; জল-নৌকা-আলোর আচার (কল্পজাহাজ/তরি, প্রদীপ-ফানুস, জল খেলা, ফুল-প্রদীপ ভাসানো);
+  নৃত্য ও খেলা (পাংখো, ময়ুর, বিজু, গরাইয়া, বাঁশ খেলা, ঘিলা-বৌচি-পিঠা); এবং **কল্পতরু / কল্পজাহাজ / ফানুস / ড্রাগন মহারথ বানানোর নিয়ম**।
+- **সচল চিত্র:** নতুন `culture-fest-anim.js` — ৭টি ইনলাইন-SVG অ্যানিমেশন (বাইরের ছবি/লাইব্রেরি ছাড়াই), `prefers-reduced-motion` মানে।
+  ছবি: `assets/culture-2026/` — ১০টি নিজস্ব ইলাস্ট্রেশন + `svgs/` এ ৫টি রেখাচিত্র।
+- **হোমে সেতু:** “আপনার পরবর্তী গন্তব্য খুঁজুন” অংশে 🪔 উৎসব-বিভাগের ৭টি সরাসরি লিংক-চিপ (`index.html`, `culture-2026.css`)।
+- **সূত্র:** মালিকের দেওয়া `Kolpotoru.pdf` (পুস্তিকা, পৃ. ১৭৩–১৭৫) `assets/docs/kolpotoru-kathin-chibar.pdf` নামে সংরক্ষিত ও উদ্ধৃত;
+  বাকি তথ্য সংবাদ/সংস্থান-লিংকসহ প্রতিটি এন্ট্রির নিচে। রেপোর দুটি প্রত্নতত্ত্ব-ব্রোশিওর আগেই সাইটে ছিল — নতুন করে কিছু যোগ করা হয়নি।
+- **দ্বৈত-নিয়ন্ত্রণ:** বিল্ড-স্ক্রিপ্ট id/title/image-key সংঘর্ষে বন্ধ হয়; ২০টি এন্ট্রিতে `dedupe` নোট; নতুন↔পুরোনো `see_also` ক্রস-লিংক।
+- বিস্তারিত: `docs/update-2026-10-27-culture-festivals-bn.md` · SW `charyabhumi-v20261027-culture13`।
+
 ## ২০২৬-১০-২৪: মেগা ফিচার phase (GIS · ভ্রমণ · জ্ঞানকোষ · গবেষণা · কমিউনিটি)
 
 - **নতুন ৭টি পাতা:** `explore3d.html` (Street View/Earth/KML/Timelapse/Lens), `travel-planner.html` (রুট, ৫ থিম-ভ্রমণসূচি, বাজেট ক্যালকুলেটর), `knowledge.html` (ব্রাহ্মী-সিল-চর্যাপদ-৩১ ভূমি-মুদ্রা জ্ঞানকোষ), `research.html` (Scholar গেটওয়ে ও পরিভাষা অভিধান), `community.html` (শব্দ-পরিবেশ ও ভ্রমণ-খসড়া), `support.html` (নিরাপদ দান গাইড), `heritage-lab.html` (বিশ্ব-তুলনা ও ডিজিটাল সার্টিফিকেট)।
@@ -18,7 +31,7 @@
 
 ## নতুন: Charjavumi Travel Tracker
 
-`tracker.html` — ৬৪ জেলার ইন্টারঅ্যাকটিভ ম্যাপ, বিদ্যমান ৩,২১৮টি ডিরেক্টরি রেকর্ডের ভিজিট-চেকলিস্ট, ব্যক্তিগত ছবি/ভিডিও জার্নাল, অনুমতিভিত্তিক foreground GPS রুট, PNG/JPG progress card এবং backup/restore। মূল সাইট অক্ষত; হোমপেজ ও নেভিগেশনে ট্র্যাকার লিংক যোগ করা হয়েছে।
+`tracker.html` — ৬৪ জেলার ইন্টারঅ্যাকটিভ ম্যাপ, বিদ্যমান ৩২১৮টি ডিরেক্টরি রেকর্ডের ভিজিট-চেকলিস্ট, ব্যক্তিগত ছবি/ভিডিও জার্নাল, অনুমতিভিত্তিক foreground GPS রুট, PNG/JPG progress card এবং backup/restore। মূল সাইট অক্ষত; হোমপেজ ও নেভিগেশনে ট্র্যাকার লিংক যোগ করা হয়েছে।
 
 ডেটা এই ব্রাউজারেই থাকে। Cloud sign-in/live buddies চালু নয়। স্থানীয় সংঘমিত্র উৎসভিত্তিক গাইড; optional online AI ও scoped-token STDIO MCP server আলাদা করে configure করতে হবে। MCP imported snapshot ব্যবহার করে, browser sync নয়।
 
@@ -28,7 +41,7 @@
 
 - **Public Historical Archive:** `historical-archive.html` + `data/historical-archive.json` — Buddha, Buddhism, Bengali/Bangladeshi Buddhist heritage-এর **৩৫টি source gateway**, media/topic/source-state filters, animated inline SVG, existing ৮২-item library ও ৫৪-entry creator archive-এর cross-link। প্রতিটি item-এ verification scope ও rights boundary আছে; এটি পুরো internet archive করার দাবি নয়।
 - **সম্পূর্ণ upazila filter:** `index.html`-এর জেলা filter-এর পাশে উপজেলা; `data/bd-geo.json`-এর ৮ বিভাগ / ৬৪ জেলা / ৪৯৫ উপজেলা / ৪,৫৪০ ইউনিয়ন। একই নামের উপজেলা district-scoped value-তে রাখা হয়েছে।
-- **Data cleanup:** ৩৫৯ core + ২,৮৫৯ directory = **৩,২১৮ records** অক্ষত; canonical spelling/category/geography, reviewed exceptions এবং tracker synchronization। বিস্তারিত audit: `docs/data-curation-2026-10-24.json`।
+- **Data cleanup:** ৩৫৯ core + ২,৮৫৯ directory = **৩২১৮ records** অক্ষত; canonical spelling/category/geography, reviewed exceptions এবং tracker synchronization। বিস্তারিত audit: `docs/data-curation-2026-10-24.json`।
 - **ভাষা:** ওয়েবসাইটের শুরুতে persistent language selector; বাংলা/English-এর পাশে Chakma (`ccp`) ও Marma (`rmz`) community-support option এবং স্পষ্টভাবে চিহ্নিত automatic-translation route। পূর্ণ মানব-সম্পাদিত অনুবাদের দাবি নয়।
 - **নতুন phase report:** `docs/update-2026-10-24-public-archive-bn.md`। পুরোনো private browser-local draft archive (`archive.js`) public source registry থেকে আলাদা।
 
@@ -49,7 +62,7 @@
 - **বৌদ্ধধর্ম ও দর্শন:** `philosophy.html` — বুদ্ধের জীবন, মূল শিক্ষা, বাংলায় বৌদ্ধধর্মের ইতিহাস, চার ধারা, ত্রিপিটক (`data/philosophy.json`)
 - **পঞ্জিকা:** `calendar.html` — বঙ্গাব্দ · বুদ্ধাব্দ · ইংরেজি তারিখ, ঘড়ি, তিথি-নক্ষত্র-যোগ-করণ, পূর্ণিমা-অমাবস্যা-উপোসথ (ব্রাউজারেই গণনা)
 - **কুইজ:** `quiz.html` — ৬৬২টি প্রশ্ন, ১১ বিষয়, ছবি-কুইজ (`data/quiz-bank.json` + `data/quiz-extra14.json` + `data/quiz-images.json`, ছবি `assets/quiz/`)
-- **কোন জেলায় কী বিখ্যাত:** `index.html#districts` — `data/district-famous.json` (৩০ জেলা, ৩,২১৮ অদ্বিতীয় রেকর্ড)
+- **কোন জেলায় কী বিখ্যাত:** `index.html#districts` — `data/district-famous.json` (৩০ জেলা, ৩২১৮ অদ্বিতীয় রেকর্ড)
 - **বুদ্ধ ও বৌদ্ধ চরিত্রের নির্মাতা-আর্কাইভ:** `culture.html#creator-archive` — `data/heritage-creators.json` + `creator-archive.js` + `creator-archive.css`; ৫৪টি ছবিসহ এন্ট্রি, বাংলা/ইংরেজি খোঁজ, অঞ্চল·বিষয়·সম্পর্ক·মিডিয়া ফিল্টার, PDF/অডিও/ভিডিও/বই/শিল্পকর্ম লিংক, উক্তি-যাচাই লেবেল ও লাইব্রেরি-সংযোগ।
 - সাইট: https://mithun-mutsuddi.github.io/Bangladesh-Buddhist-Heritage-Map/
 - প্রতিষ্ঠাতা: Mithun Mutsuddi · mithunmutsuddi92@gmail.com · WhatsApp +8801882191626
@@ -61,7 +74,7 @@
 
 ## বর্তমান ডিরেক্টরি
 
-> ২৩ অক্টোবর ২০২৬-এর সক্রিয় হোমপেজ ও ট্র্যাকার ডেটা: **৩,২১৮টি আলাদা ID (৩৫৯ core + ২,৮৫৯ directory)**। নিচের ছোট সংখ্যাগুলো পুরোনো development log-এর তৎকালীন হিসাব; বর্তমান মোট নয়।
+> ২৩ অক্টোবর ২০২৬-এর সক্রিয় হোমপেজ ও ট্র্যাকার ডেটা: **৩২১৮টি আলাদা ID (৩৫৯ core + ২,৮৫৯ directory)**। নিচের ছোট সংখ্যাগুলো পুরোনো development log-এর তৎকালীন হিসাব; বর্তমান মোট নয়।
 
 - বুদ্ধ স্মৃতিচিহ্ন/জাদী/স্তূপের আলাদা ফিল্টার; আশরফপুর, গোকুল মেধ, মের্হ টিলা বিহার, ঘিলাতলী সার্বজনীন বৌদ্ধ বিহার, শীলছড়ি শান্তি নিকেতন, সিলেট আখালিয়া বিহার ও সংশ্লিষ্ট শ্মশানসহ ৭টি নতুন রেকর্ড যোগ হয়েছে; অনিশ্চিত GPS/পরিচয়/যোগাযোগ যাচাইাধীন চিহ্নিত; অতীশ দীপঙ্কর স্মৃতি কমপ্লেক্স, দমদম পীরস্থান ঢিবি, দলিজহারা বৌদ্ধ বিহার-চৈত্য কমপ্লেক্স ও ঝুড়িঝাড়া ঢিবি যুক্ত। ভরত ভায়নার placeholder-কে উৎস-সমর্থিত রেকর্ডে উন্নীত করা হয়েছে; তার pin-এ আনুমানিকতার সতর্কতা আছে।
 
@@ -186,6 +199,15 @@ uvicorn server.sanghamitra_api:app --reload --port 8000
 
 Never put provider keys in the public frontend or commit secrets. GitHub Pages serves the static frontend only; deploy the optional Python API separately.
 
+### Uttarbanga vihara enrichment (27 Oct 2026)
+
+The 27 name-only North-Bengal vihara rows from the Buddhist Religious Welfare Trust list were promoted in place
+(same `id`s, no duplicates) into full editorial records with Bengali summaries, history, travel notes, corrected
+upazila/district data and a self-made illustrated plate in `assets/bihar-2026/`. One new archaeological record,
+অগ্রপুরী বিহার (ধামইরহাট, নওগাঁ), was added from additional published sources, so the dataset now holds ৩২১৮
+records (382 rich `core` + 2,837 directory rows). Illustrations are explicitly labelled as symbolic artwork,
+never as photographs of the site. Details: [docs/update-2026-10-27-uttarbanga-vihar-bn.md](docs/update-2026-10-27-uttarbanga-vihar-bn.md).
+
 ### Validation
 
 From the repository root:
@@ -199,4 +221,4 @@ npm test
 npx playwright test
 ```
 
-The public-phase validator checks ৩,২১৮ records, 495 upazilas, tracker synchronization, archive metadata and language hooks. Browser tests cover the homepage, tracker, upazila deep links, archive filters, language states and reduced motion. This is a structural check, not a guarantee that each historical claim, GPS coordinate, current opening time, event date, travel route or fee is factually verified. Check the source URL and the relevant site/host authority before publishing.
+The public-phase validator checks ৩২১৮ records, 495 upazilas, tracker synchronization, archive metadata and language hooks. Browser tests cover the homepage, tracker, upazila deep links, archive filters, language states and reduced motion. This is a structural check, not a guarantee that each historical claim, GPS coordinate, current opening time, event date, travel route or fee is factually verified. Check the source URL and the relevant site/host authority before publishing.

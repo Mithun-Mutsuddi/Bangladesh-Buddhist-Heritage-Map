@@ -4,8 +4,8 @@
 (function () {
   'use strict';
 
-  var CORE = 'data/dashboard-core.json?v=20261024h';
-  var DIRECTORY = 'data/dashboard-directory.json?v=20261024b';
+  var CORE = 'data/dashboard-core.json?v=20261027a';
+  var DIRECTORY = 'data/dashboard-directory.json?v=20261027a';
   var GEO = 'data/bd-geo.json?v=20261024b';
   var PAGE = 24;
   var LS_TRIP = 'buddhistHeritageItinerary';

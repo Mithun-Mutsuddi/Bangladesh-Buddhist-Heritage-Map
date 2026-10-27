@@ -2,12 +2,13 @@
    data/heritage-culture.json + data/heritage-library.json (মিডিয়া রেফারেন্স) */
 (function () {
   'use strict';
-  var CULTURE = 'data/heritage-culture.json?v=20261022a';
+  var CULTURE = 'data/heritage-culture.json?v=20261027a';
   var LIBRARY = 'data/heritage-library.json?v=20261022a';
   var list = document.getElementById('culList');
   if (!list) return;
 
   var state = { q: '', sec: 'all', media: 'all', data: null, lib: {} };
+  var titleById = {};   /* see_also সংযোগের জন্য এন্ট্রি-শিরোনামের তালিকা */
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -32,6 +33,15 @@
   /* ---- মিডিয়া রেফারেন্স সমাধান ---------------------------------- */
   function resolve(ref) {
     if (!ref) return null;
+    /* সাইটে সংরক্ষিত নিজস্ব PDF (যেমন পুস্তিকার স্ক্যান) */
+    if (ref.indexOf('pdf:') === 0) {
+      var lf = (state.data.local_files || {})[ref.slice(4)];
+      if (!lf) return null;
+      return {
+        kind: 'pdf', title: lf.title, sub: lf.note, view: lf.url, file: lf.url,
+        creator: null, license: null, credit: null, thumb: null
+      };
+    }
     if (ref.indexOf('lib:') === 0) {
       var it = state.lib[ref.slice(4)];
       if (!it) return null;
@@ -58,10 +68,15 @@
     var meta = MEDIA_META[kind] || MEDIA_META.image;
     var extra = '';
     if (m.creator) extra = ' · ' + esc(m.creator);
-    return '<a class="cul-mbtn ' + kind + '" href="' + esc(m.view || m.file) + '" target="_blank" rel="noopener noreferrer" title="' + esc(m.title) + '">' +
-      '<span class="cul-mico">' + meta.icon + '</span>' +
-      '<span class="cul-mtx"><strong>' + meta.label + '</strong><small>' + esc(m.title) + extra + '</small></span></a>' +
+    /* ছবির ক্ষেত্রে আইকনের বদলে ছোট থাম্বনেইল, আর আলাদা ডাউনলোড-বোতাম নয় */
+    var icon = kind === 'image' && (m.thumb || m.file)
+      ? '<img class="cul-mthumb" src="' + esc(m.thumb || m.file) + '" alt="" loading="lazy" decoding="async">'
+      : '<span class="cul-mico">' + meta.icon + '</span>';
+    var dl = kind === 'image' ? '' :
       '<a class="cul-mdl" href="' + esc(m.file) + '" target="_blank" rel="noopener noreferrer" download>⬇ ফাইল</a>';
+    return '<a class="cul-mbtn ' + kind + '" href="' + esc(m.view || m.file) + '" target="_blank" rel="noopener noreferrer" title="' + esc(m.title) + '">' +
+      icon +
+      '<span class="cul-mtx"><strong>' + meta.label + '</strong><small>' + esc(m.title) + extra + '</small></span></a>' + dl;
   }
 
   function figure(ref, big) {
@@ -90,16 +105,33 @@
     var src = (e.sources || []).map(function (s) {
       return '<li><a href="' + esc(s.u) + '" target="_blank" rel="noopener noreferrer">' + esc(s.t) + '</a></li>';
     }).join('');
+    var anim = e.anim ? '<div class="cul-anim" data-anim="' + esc(e.anim) + '" aria-label="' + esc(e.title) + ' — সচল চিত্র">' +
+      '<noscript><p>অ্যানিমেশন দেখতে জাভাস্ক্রিপ্ট চালু করুন।</p></noscript></div>' : '';
+    var steps = (e.steps || []).map(function (p, i) {
+      return '<li class="cul-step"><span class="cul-stepno">' + bn(i + 1) + '</span><div><strong>' + esc(p.k) + '</strong><p>' + esc(p.v) + '</p></div></li>';
+    }).join('');
+    var quote = e.quote ? '<blockquote class="cul-quote"><p class="pali">' + esc(e.quote.text) + '</p>' +
+      (e.quote.note ? '<footer>' + esc(e.quote.note) + '</footer>' : '') + '</blockquote>' : '';
+    var see = (e.see_also || []).map(function (id) {
+      var t = titleById[id];
+      return t ? '<a class="cul-see" href="#e-' + esc(id) + '">☸ ' + esc(t) + '</a>' : '';
+    }).join('');
+    var dedupe = e.dedupe ? '<p class="cul-dedupe"><strong>দ্বৈত-এড়ানোর নোট:</strong> ' + esc(e.dedupe) + '</p>' : '';
     return '<article class="cul-card" id="e-' + esc(e.id) + '">' +
       '<div class="cul-side">' + hero + '</div>' +
       '<div class="cul-main">' +
         '<p class="cul-badge ' + st[1] + '">' + esc(st[0]) + '</p>' +
         '<h3>' + esc(e.title) + '</h3>' +
         '<p class="cul-sub">' + esc(e.sub) + '</p>' +
+        anim +
         '<p class="cul-about">' + esc(e.about) + '</p>' +
         (pts ? '<dl class="cul-points">' + pts + '</dl>' : '') +
+        quote +
+        (steps ? '<div class="cul-howto"><p class="cul-howto-t">ধাপে ধাপে</p><ol class="cul-steps">' + steps + '</ol></div>' : '') +
         (av ? '<div class="cul-av">' + av + '</div>' : '') +
         (rest ? '<div class="cul-gallery">' + rest + '</div>' : '') +
+        (see ? '<div class="cul-seealso"><span>বিস্তারিত দেখুন</span>' + see + '</div>' : '') +
+        dedupe +
         (src ? '<details class="cul-src"><summary>সূত্র ও মূল লেখা (' + bn((e.sources || []).length) + ')</summary><ul>' + src + '</ul></details>' : '') +
       '</div></article>';
   }
@@ -111,7 +143,7 @@
         var m = resolve(p[1]);
         if (m) parts.push(mediaBtn(m, p[0]));
       });
-    return parts.length ? '<div class="cul-blockav"><p class="cul-blockav-t">এই বিভাগের চারটি মিডিয়া</p><div class="cul-blockav-g">' + parts.join('') + '</div></div>' : '';
+    return parts.length ? '<div class="cul-blockav"><p class="cul-blockav-t">এই বিভাগের মিডিয়া (' + bn(parts.length) + ')</p><div class="cul-blockav-g">' + parts.join('') + '</div></div>' : '';
   }
 
   function sectionHtml(sec) {
@@ -132,8 +164,10 @@
       if (state.media !== 'image' && !e.media[state.media]) return false;
     }
     if (!state.q) return true;
-    var hay = [e.title, e.sub, e.about,
+    var hay = [e.title, e.sub, e.about, e.seo || '',
       (e.points || []).map(function (p) { return p.k + ' ' + p.v; }).join(' '),
+      (e.steps || []).map(function (p) { return p.k + ' ' + p.v; }).join(' '),
+      (e.quote || {}).text || '', e.dedupe || '',
       (e.sources || []).map(function (s) { return s.t; }).join(' '),
       (e.media.images || []).join(' '), e.media.video || '', e.media.audio || '', e.media.pdf || ''
     ].join(' ');
@@ -156,6 +190,9 @@
     if (cnt) cnt.textContent = total ? bn(total) + 'টি এন্ট্রি দেখানো হচ্ছে' : '';
     var empty = document.getElementById('culEmpty');
     if (empty) empty.hidden = total > 0;
+    if (window.CultureFestAnim && window.CultureFestAnim.mount) {
+      window.CultureFestAnim.mount(list);
+    }
   }
 
   function chips() {
@@ -222,6 +259,9 @@
   ]).then(function (res) {
     state.data = res[0];
     (res[1].items || []).forEach(function (it) { state.lib[it.id] = it; });
+    state.data.sections.forEach(function (sec) {
+      sec.entries.forEach(function (e) { titleById[e.id] = e.title; });
+    });
 
     var s = state.data.stats;
     var stats = document.getElementById('culStats');
