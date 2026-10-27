@@ -1,7 +1,7 @@
 /* চর্যাভূমি — Service Worker: দুর্বল ইন্টারনেটেও দ্রুত লোড ও অফলাইন পাঠ।
    কৌশল: HTML = network-first (তাজা তথ্য), বাকি same-origin asset = cache-first।
    সংস্করণ বদলালে পুরনো ক্যাশে মুছে যায়। */
-var VERSION = 'charyabhumi-v20261027-people17';
+var VERSION = 'charyabhumi-v20261027-people18';
 var CORE = [
   'index.html', 'charyabhumi.css', 'mega.css', 'brand.js', 'language.js',
   'config.js', 'mega-utils.js', 'manifest.webmanifest', 'pwa.js', 'festival-auto.js',

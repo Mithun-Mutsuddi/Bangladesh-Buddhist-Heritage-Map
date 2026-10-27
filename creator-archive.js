@@ -129,6 +129,10 @@
     return /^https?:\/\//i.test(String(url || ''));
   }
 
+  function boldify(text) {
+    return esc(text).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  }
+
   function tax(group, key) {
     var t = state.data && state.data.taxonomy && state.data.taxonomy[group];
     return (t && t[key]) || key;
@@ -389,7 +393,7 @@
         (w.medium ? ' <span>· ' + esc(w.medium) + '</span>' : '') +
         (w.note ? '<p>' + esc(w.note) + '</p>' : '') + '</div>';
     }).join('');
-    var details = (record.details || []).map(function (d) { return '<li>' + esc(d) + '</li>'; }).join('');
+    var details = (record.details || []).map(function (d) { return '<li>' + boldify(d) + '</li>'; }).join('');
     var timeline = (record.timeline || []).filter(function (t) { return t && t[1]; }).map(function (t) {
       return '<li><span class="ca-tl-year">' + esc(t[0]) + '</span><span class="ca-tl-text">' + esc(t[1]) + '</span></li>';
     }).join('');
@@ -415,8 +419,8 @@
       fact('বৌদ্ধ চরিত্র / বিষয়', (record.characters || []).join(' · ')) +
       '</div>' +
       '<p class="ca-subject">☸ ' + esc(record.buddhistSubject) + '</p>' +
-      '<h4>সংক্ষিপ্ত পরিচিতি</h4><p>' + esc(record.summary) + '</p>' +
-      '<h4>কেন গুরুত্বপূর্ণ</h4><p>' + esc(record.significance) + '</p>' +
+      '<h4>সংক্ষিপ্ত পরিচিতি</h4><p>' + boldify(record.summary) + '</p>' +
+      '<h4>কেন গুরুত্বপূর্ণ</h4><p>' + boldify(record.significance) + '</p>' +
       (works ? '<h4>🎨 নির্বাচিত কাজ</h4><div class="ca-work-list">' + works + '</div>' : '') +
       (timeline ? '<h4>⏳ সময়রেখা</h4><ul class="ca-timeline">' + timeline + '</ul>' : '') +
       quoteHtml(record) +
