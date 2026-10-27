@@ -5,6 +5,14 @@
 
 ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই
 
+## ২০২৬-১০-২৭: নির্মাতা-আর্কাইভে ১১ জন নতুন মানুষ (রাউন্ড ১৬)
+
+- **৫৪ → ৬৫ এন্ট্রি** — মালিকের দেওয়া `জীবনকাহিনি.pdf` থেকে ৫ জন (ডাঃ সামন্ত ভদ্র ভিক্ষু ১৯২১–২০০০, সম্বোধি মহাস্থবির 'কবিবর', পুণ্যজ্যোতি ভিক্ষু, তিরতন শরণ মুৎসুদ্দী, রোহিণী রঞ্জন মুৎসুদ্দী), বাংলাদেশের আদিবাসী-বৌদ্ধ ঐতিহাসিক ৩ জন (রাজগুরু অগ্রবংশ মহাথের, জ্ঞানশ্রী মহাথের, সারমেধ মহাস্থবির) এবং বিদেশি তীর্থযাত্রী ৩ জন (ফা-হিয়েন, হিউয়েন সাং, ই-ৎসিং)।
+- **ছবি:** ডাঃ সামন্ত ভদ্র মুৎসুদ্দীর পারিবারিক আলোকচিত্র (অনুমতিসহ) + তিন তীর্থযাত্রীর পাবলিক-ডোমেইন প্রতিকৃতি; বাকি ৭ জনের জন্য **নিজস্ব প্রতীকী SVG প্লেট** — ভিন্ন কারও ছবি বসানো হয়নি, কার্ডেই লেখা “প্রতীকী প্রতিকৃতি”।
+- **দ্বৈত-নিয়ন্ত্রণ:** id + normalize-করা নাম + ছবির SHA-256 — তিন স্তরে ডুপ্লিকেট আটকানো; বিল্ড idempotent।
+- **ইঞ্জিন:** `creator-archive.js` এখন `assets/…` আপেক্ষিক ছবি দেখায় এবং লোকাল ছবি ব্যর্থ হলে অন্য সাইটে ফাইল খোঁজে না।
+- বিস্তারিত: `docs/update-2026-10-27-creator-people-bn.md` · SW `charyabhumi-v20261027-people16`।
+
 ## ২০২৬-১০-২৭: উৎসব ও লোকসংস্কৃতি phase (রাউন্ড ১৩)
 
 - **নতুন ৪ বিভাগ / ১৫ এন্ট্রি / ১৫ ছবি-কী** — `data/heritage-culture.json` এখন **৮ বিভাগ, ৪৩ এন্ট্রি**:
@@ -39,7 +47,7 @@
 
 ## ২০২৬-১০-২৪: Public archive, upazila ও language phase
 
-- **Public Historical Archive:** `historical-archive.html` + `data/historical-archive.json` — Buddha, Buddhism, Bengali/Bangladeshi Buddhist heritage-এর **৩৫টি source gateway**, media/topic/source-state filters, animated inline SVG, existing ৮২-item library ও ৫৪-entry creator archive-এর cross-link। প্রতিটি item-এ verification scope ও rights boundary আছে; এটি পুরো internet archive করার দাবি নয়।
+- **Public Historical Archive:** `historical-archive.html` + `data/historical-archive.json` — Buddha, Buddhism, Bengali/Bangladeshi Buddhist heritage-এর **৩৫টি source gateway**, media/topic/source-state filters, animated inline SVG, existing ৮২-item library ও ৬৫-entry creator archive-এর cross-link। প্রতিটি item-এ verification scope ও rights boundary আছে; এটি পুরো internet archive করার দাবি নয়।
 - **সম্পূর্ণ upazila filter:** `index.html`-এর জেলা filter-এর পাশে উপজেলা; `data/bd-geo.json`-এর ৮ বিভাগ / ৬৪ জেলা / ৪৯৫ উপজেলা / ৪,৫৪০ ইউনিয়ন। একই নামের উপজেলা district-scoped value-তে রাখা হয়েছে।
 - **Data cleanup:** ৩৫৯ core + ২,৮৫৯ directory = **৩২১৮ records** অক্ষত; canonical spelling/category/geography, reviewed exceptions এবং tracker synchronization। বিস্তারিত audit: `docs/data-curation-2026-10-24.json`।
 - **ভাষা:** ওয়েবসাইটের শুরুতে persistent language selector; বাংলা/English-এর পাশে Chakma (`ccp`) ও Marma (`rmz`) community-support option এবং স্পষ্টভাবে চিহ্নিত automatic-translation route। পূর্ণ মানব-সম্পাদিত অনুবাদের দাবি নয়।
@@ -63,7 +71,7 @@
 - **পঞ্জিকা:** `calendar.html` — বঙ্গাব্দ · বুদ্ধাব্দ · ইংরেজি তারিখ, ঘড়ি, তিথি-নক্ষত্র-যোগ-করণ, পূর্ণিমা-অমাবস্যা-উপোসথ (ব্রাউজারেই গণনা)
 - **কুইজ:** `quiz.html` — ৬৬২টি প্রশ্ন, ১১ বিষয়, ছবি-কুইজ (`data/quiz-bank.json` + `data/quiz-extra14.json` + `data/quiz-images.json`, ছবি `assets/quiz/`)
 - **কোন জেলায় কী বিখ্যাত:** `index.html#districts` — `data/district-famous.json` (৩০ জেলা, ৩২১৮ অদ্বিতীয় রেকর্ড)
-- **বুদ্ধ ও বৌদ্ধ চরিত্রের নির্মাতা-আর্কাইভ:** `culture.html#creator-archive` — `data/heritage-creators.json` + `creator-archive.js` + `creator-archive.css`; ৫৪টি ছবিসহ এন্ট্রি, বাংলা/ইংরেজি খোঁজ, অঞ্চল·বিষয়·সম্পর্ক·মিডিয়া ফিল্টার, PDF/অডিও/ভিডিও/বই/শিল্পকর্ম লিংক, উক্তি-যাচাই লেবেল ও লাইব্রেরি-সংযোগ।
+- **বুদ্ধ ও বৌদ্ধ চরিত্রের নির্মাতা-আর্কাইভ:** `culture.html#creator-archive` — `data/heritage-creators.json` + `creator-archive.js` + `creator-archive.css`; ৬৫টি ছবিসহ এন্ট্রি, বাংলা/ইংরেজি খোঁজ, অঞ্চল·বিষয়·সম্পর্ক·মিডিয়া ফিল্টার, PDF/অডিও/ভিডিও/বই/শিল্পকর্ম লিংক, উক্তি-যাচাই লেবেল ও লাইব্রেরি-সংযোগ।
 - সাইট: https://mithun-mutsuddi.github.io/Bangladesh-Buddhist-Heritage-Map/
 - প্রতিষ্ঠাতা: Mithun Mutsuddi · mithunmutsuddi92@gmail.com · WhatsApp +8801882191626
 - শুরু: অক্টোবর ২০২৬

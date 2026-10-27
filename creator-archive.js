@@ -21,6 +21,7 @@
   window.__caImgError = function (img) {
     var stage = Number(img.dataset.fallbackStage || 0);
     var file = img.dataset.caFile || '';
+    if (img.dataset.caLocal === '1') { img.onerror = null; img.src = FALLBACK_SVG; return; }
     if (stage === 0 && file) {
       img.dataset.fallbackStage = '1';
       img.src = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(file) + '?width=500';
@@ -79,7 +80,9 @@
     sculpture: 'ভাস্কর্য',
     context: 'প্রেক্ষাপটচিত্র',
     'film-still': 'চলচ্চিত্রের স্থিরচিত্র',
-    performance: 'পরিবেশনার ছবি'
+    performance: 'পরিবেশনার ছবি',
+    illustration: 'প্রতীকী চিত্র',
+    photograph: 'আলোকচিত্র'
   };
   var QUOTE_STATUS = {
     verified: '✅ যাচাইকৃত উক্তি',
@@ -117,6 +120,7 @@
     var u = String(url || '').trim();
     if (/^https?:\/\//i.test(u)) return u;
     if (/^(library|culture|history|index|contribution)\.html([?#].*)?$/i.test(u)) return u;
+    if (/^assets\/[A-Za-z0-9][A-Za-z0-9._\/-]*$/.test(u) && u.indexOf('..') === -1) return u;
     if (/^#[a-z0-9\-_/]+$/i.test(u)) return u;
     return '#creator-archive';
   }
@@ -159,6 +163,7 @@
       ' style="' + esc(style) + '"' +
       (detail ? '' : ' loading="lazy" decoding="async"') +
       ' referrerpolicy="no-referrer" data-ca-file="' + esc(file) + '"' +
+      (/^assets\//.test(String(im.url || '')) ? ' data-ca-local="1"' : '') +
       ' onerror="window.__caImgError && window.__caImgError(this)">' +
       '<span class="ca-image-type">🖼️ ' + esc(IMAGE_TYPES[im.type] || 'ছবি') + '</span>' +
       '</span>' +
