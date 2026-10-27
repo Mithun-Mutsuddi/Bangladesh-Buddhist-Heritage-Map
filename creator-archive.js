@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var DATA_URL = 'data/heritage-creators.json?v=20261023c';
+  var DATA_URL = 'data/heritage-creators.json?v=20261027d';
   var LIB_URL = 'data/heritage-library.json?v=20261022a';
   var root = document.getElementById('creator-archive');
   if (!root) return;
@@ -43,6 +43,8 @@
     regions: document.getElementById('caRegionFilters'),
     categories: document.getElementById('caCategoryFilters'),
     relations: document.getElementById('caRelationFilters'),
+    movements: document.getElementById('caMovementFilters'),
+    movementSection: document.getElementById('caMovementSection'),
     count: document.getElementById('caCount'),
     grid: document.getElementById('caGrid'),
     empty: document.getElementById('caEmpty'),
@@ -56,6 +58,7 @@
     region: 'all',
     category: 'all',
     relation: 'all',
+    movement: 'all',
     media: 'all',
     sort: 'curated',
     verifiedOnly: false,
@@ -205,6 +208,9 @@
       (record.characters || []).join(' '),
       record.featuredWork,
       tax('relationTypes', record.relationType),
+      (record.movement || []).map(function (m) { return tax('movements', m); }).join(' '),
+      tax('communities', record.community),
+      (record.timeline || []).map(function (t) { return (t || []).join(' '); }).join(' '),
       record.summary,
       record.significance,
       (record.details || []).join(' '),
@@ -223,6 +229,7 @@
     if (state.region !== 'all' && record.region !== state.region) return false;
     if (state.category !== 'all' && (record.categories || []).indexOf(state.category) === -1) return false;
     if (state.relation !== 'all' && record.relationType !== state.relation) return false;
+    if (state.movement !== 'all' && (record.movement || []).indexOf(state.movement) === -1) return false;
     if (state.media !== 'all' && mediaKinds(record).indexOf(state.media) === -1) return false;
     if (state.verifiedOnly && !isReliableQuote(record)) return false;
     if (!state.q) return true;
@@ -254,6 +261,12 @@
       quotePill = '<span class="ca-pill quote' + (record.quote.status === 'misattributed' ? ' caution' : '') + '">' +
         esc(QUOTE_STATUS[record.quote.status] || 'উক্তি') + '</span>';
     }
+    var movementPills = (record.movement || []).map(function (m) {
+      return '<span class="ca-pill movement">⚑ ' + esc(tax('movements', m)) + '</span>';
+    }).join('');
+    if (record.community) {
+      movementPills += '<span class="ca-pill community">' + esc(tax('communities', record.community)) + '</span>';
+    }
     var badges = mediaKinds(record).map(function (kind) {
       var count = (record.media || []).filter(function (m) { return m.kind === kind; }).length;
       return '<span class="ca-media-badge">' + MEDIA_META[kind].icon + ' ' + esc(MEDIA_META[kind].label) + ' ' + bn(count) + '</span>';
@@ -262,7 +275,7 @@
     return '<article class="ca-card" id="creator-' + esc(record.id) + '" data-creator-card="' + esc(record.id) + '">' +
       imageHtml(record, false) +
       '<div class="ca-body">' +
-      '<div class="ca-topline"><span class="ca-pill relation">' + esc(tax('relationTypes', record.relationType)) + '</span>' + quotePill + '</div>' +
+      '<div class="ca-topline"><span class="ca-pill relation">' + esc(tax('relationTypes', record.relationType)) + '</span>' + movementPills + quotePill + '</div>' +
       '<h3>' + esc(record.titleBn) + '</h3>' +
       (record.titleEn ? '<p class="ca-english">' + esc(record.titleEn) + '</p>' : '') +
       '<p class="ca-creator"><strong>' + esc(record.creatorBn) + '</strong>' + (record.creatorEn ? ' · ' + esc(record.creatorEn) : '') + '</p>' +
@@ -310,9 +323,54 @@
       container.innerHTML = html;
     }
 
+    if (els.movements) {
+      var mvKeys = Object.keys(taxData.movements || {});
+      var mvHtml = chipHtml('movement', 'all', 'সব এন্ট্রি', records.length, state.movement === 'all');
+      mvKeys.forEach(function (key) {
+        var n = records.filter(function (r) { return (r.movement || []).indexOf(key) > -1; }).length;
+        if (n) mvHtml += chipHtml('movement', key, '⚑ ' + taxData.movements[key], n, state.movement === key);
+      });
+      els.movements.innerHTML = mvHtml;
+    }
+
     build(els.regions, 'region', taxData.regions, state.region, 'সব অঞ্চল');
     build(els.categories, 'category', taxData.categories, state.category, 'সব মাধ্যম/বিষয়');
     build(els.relations, 'relation', taxData.relationTypes, state.relation, 'সব সম্পর্ক-ধরন');
+  }
+
+  var MOVEMENT_LEAD = {
+    'british-era': 'ব্রিটিশ ঔপনিবেশিক শাসনের বিরুদ্ধে চট্টগ্রাম-ভিত্তিক সশস্ত্র সংগ্রামে যুক্ত বৌদ্ধ বড়ুয়া বিপ্লবী ও সংগঠক। মাস্টারদা সূর্য সেনের দল, অনুশীলন সমিতি, সেলুলার জেল ও ফাঁসিকাষ্ঠ—সবই এই তালিকায়।',
+    '1971': '১৯৭১ সালের মুক্তিযুদ্ধে অস্ত্র হাতে, চিকিৎসা-শিবিরে, পরিচয়পত্র ও অর্থ-অস্ত্র পরিবহনে যুক্ত বৌদ্ধ নারী-পুরুষ। বীর বিক্রম খেতাবপ্রাপ্ত একমাত্র আদিবাসী মুক্তিযোদ্ধাও এখানে আছেন।'
+  };
+
+  function movementCard(record) {
+    var line = String(record.significance || record.summary || '').split('।')[0];
+    return '<button type="button" class="ca-mv-card" data-open-creator="' + esc(record.id) + '">' +
+      '<span class="ca-mv-name">' + esc(record.titleBn) + '</span>' +
+      '<span class="ca-mv-years">' + esc(record.years || '') + '</span>' +
+      '<span class="ca-mv-line">' + esc(line) + '।</span>' +
+      '</button>';
+  }
+
+  function renderMovementSection() {
+    var el = els.movementSection;
+    if (!el || !state.data) return;
+    var all = state.data.records.filter(function (r) { return (r.movement || []).length; });
+    var keys = Object.keys((state.data.taxonomy || {}).movements || {});
+    var html = '<div class="ca-mv-head">' +
+      '<p class="ca-kicker">নতুন বিভাগ · ফিল্টার করুন উপরের “⚑ বিপ্লবী ও মুক্তিযুদ্ধ” ছাঁকনি দিয়ে</p>' +
+      '<h3 id="caMovementTitle">⚑ বিপ্লবী ও মুক্তিযুদ্ধ</h3>' +
+      '<p class="ca-mv-intro">এই বিভাগে দুটি আলাদা সংগ্রাম একসঙ্গে দেখা যায়—<strong>ব্রিটিশবিরোধী আন্দোলন</strong> এবং <strong>১৯৭১-এর মুক্তিযুদ্ধ</strong>। ' +
+      'দুই সংগ্রামই একই বৌদ্ধ সমাজের সন্তানদের আত্মদানে গড়া; কিন্তু ইতিহাসের বইয়ে তাঁদের নাম প্রায় আলাদা করে থাকে না। ' +
+      'মোট <strong>' + bn(all.length) + '</strong>টি এন্ট্রি—প্রতিটির সঙ্গে যাচাই করা উৎস ও সময়রেখা আছে।</p></div>';
+    keys.forEach(function (key) {
+      var recs = all.filter(function (r) { return (r.movement || []).indexOf(key) > -1; });
+      if (!recs.length) return;
+      html += '<div class="ca-mv-group"><h4>⚑ ' + esc(tax('movements', key)) + ' <span>' + bn(recs.length) + ' এন্ট্রি</span></h4>' +
+        '<p class="ca-mv-lead">' + esc(MOVEMENT_LEAD[key] || '') + '</p>' +
+        '<div class="ca-mv-grid">' + recs.map(movementCard).join('') + '</div></div>';
+    });
+    el.innerHTML = html;
   }
 
   function renderStats() {
@@ -331,7 +389,8 @@
       [bdBangla, 'বাংলাদেশি / বাঙালি এন্ট্রি'],
       [counts.pdf, 'PDF / মূলপাঠ লিংক'],
       [counts.audio, 'অডিও লিংক'],
-      [counts.video + '/' + quoteCount, 'ভিডিও / নির্ভরযোগ্য উক্তি']
+      [counts.video + '/' + quoteCount, 'ভিডিও / নির্ভরযোগ্য উক্তি'],
+      [records.filter(function (r) { return (r.movement || []).length; }).length, 'বিপ্লবী ও মুক্তিযুদ্ধ এন্ট্রি']
     ];
     els.stats.innerHTML = vals.map(function (v) {
       var display = String(v[0]).split('/').map(function (x) { return /\d/.test(x) ? bn(Number(x)) : x; }).join('/');
@@ -417,6 +476,8 @@
       fact('ভাষা / মাধ্যম', record.language) +
       fact('প্রধান কাজ', record.featuredWork) +
       fact('বৌদ্ধ চরিত্র / বিষয়', (record.characters || []).join(' · ')) +
+      ((record.movement || []).length ? fact('সংগ্রাম', record.movement.map(function (m) { return tax('movements', m); }).join(' · ')) : '') +
+      (record.community ? fact('সম্প্রদায়', tax('communities', record.community)) : '') +
       '</div>' +
       '<p class="ca-subject">☸ ' + esc(record.buddhistSubject) + '</p>' +
       '<h4>সংক্ষিপ্ত পরিচিতি</h4><p>' + boldify(record.summary) + '</p>' +
@@ -501,6 +562,7 @@
       state.region = 'all';
       state.category = 'all';
       state.relation = 'all';
+      state.movement = 'all';
       state.media = 'all';
       state.sort = 'curated';
       state.verifiedOnly = false;
@@ -603,6 +665,7 @@
 
     renderStats();
     renderChips();
+    renderMovementSection();
     bindEvents();
     render();
     initialHashOpen();

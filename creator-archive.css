@@ -451,3 +451,93 @@
 @media (max-width: 520px) {
   .ca-timeline li { grid-template-columns: 1fr; gap: 2px; }
 }
+
+/* ===== ⚑ বিপ্লবী ও মুক্তিযুদ্ধ বিভাগ (রাউন্ড ১৯) ===== */
+.ca-pill.movement {
+  background: #7a1e12;
+  border-color: #7a1e12;
+  color: #ffe9c9;
+  font-weight: 700;
+}
+.ca-pill.community {
+  background: #eef3e6;
+  border-color: #b9cbab;
+  color: #35502b;
+  font-weight: 700;
+}
+.ca-movement {
+  margin: 26px 0 10px;
+  padding: 22px 22px 12px;
+  border: 1px solid var(--ca-line);
+  border-left: 6px solid #7a1e12;
+  border-radius: 16px;
+  background:
+    radial-gradient(420px 200px at 100% 0%, rgba(255, 193, 94, .22), transparent 65%),
+    #fffaf0;
+  scroll-margin-top: 84px;
+}
+.ca-mv-head h3 {
+  margin: 4px 0 8px;
+  font-size: clamp(21px, 3vw, 30px);
+  color: #5d1610;
+}
+.ca-mv-intro {
+  margin: 0 0 6px;
+  max-width: 900px;
+  color: var(--ca-ink);
+  font-size: 14.5px;
+  line-height: 1.75;
+}
+.ca-mv-group { margin-top: 18px; }
+.ca-mv-group h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #7a1e12;
+}
+.ca-mv-group h4 span {
+  margin-left: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ca-soft);
+}
+.ca-mv-lead {
+  margin: 0 0 10px;
+  max-width: 860px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--ca-soft);
+}
+.ca-mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  gap: 10px;
+}
+.ca-mv-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 14px;
+  border: 1px solid var(--ca-line);
+  border-top: 3px solid #b9500d;
+  border-radius: 12px;
+  background: var(--ca-card);
+  font: inherit;
+  text-align: right;
+  text-align: start;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.ca-mv-card:hover,
+.ca-mv-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--ca-mid);
+  box-shadow: 0 8px 20px rgba(122, 30, 18, .14);
+  outline: none;
+}
+.ca-mv-name { font-weight: 800; font-size: 14.5px; color: #5d1610; }
+.ca-mv-years { font-size: 12px; color: var(--ca-soft); }
+.ca-mv-line { font-size: 12.5px; line-height: 1.6; color: var(--ca-ink); }
+@media (max-width: 520px) {
+  .ca-movement { padding: 16px 14px 8px; }
+  .ca-mv-grid { grid-template-columns: 1fr; }
+}

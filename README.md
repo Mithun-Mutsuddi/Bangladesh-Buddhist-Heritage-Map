@@ -5,6 +5,14 @@
 
 ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই
 
+## ২০২৬-১০-২৭: বিপ্লবী ও মুক্তিযুদ্ধ বিভাগ, ৫৪ এন্ট্রির মানোন্নয়ন ও আদিবাসী ব্যক্তিত্ব (রাউন্ড ১৯)
+
+- **৭২ → ৮৩ এন্ট্রি।** পুরোনো **৫৪টি** এন্ট্রির প্রতিটিতে নতুন করে লেখা **সময়রেখা (৩–৭টি তারিখসহ ঘটনা)**, যাচাই-নোট ও **৫৪টি নতুন ইন্টারনেট-সূত্র (URL)** যোগ—প্রতিটি লিংক HTTP 200 যাচাই করা। এখন ৮৩টি এন্ট্রিতেই সময়রেখা আছে; পুরোনো কোনো তথ্য মোছা হয়নি, তাই পুনরাবৃত্তি বা তথ্য-ক্ষতিও নেই।
+- **নতুন বিভাগ ⚑ ‘বিপ্লবী ও মুক্তিযুদ্ধ’** — `culture.html`-এ আলাদা ফিল্টার-ব্লক ও সেকশন, দুই উপ-শাখা: **ব্রিটিশবিরোধী আন্দোলন (৭)** ও **১৯৭১-এর মুক্তিযুদ্ধ (৫)**; আলাদা ব্যক্তি **১০** (দুইজন দুই শাখাতেই)।
+- **নতুন ১১টি এন্ট্রি:** ব্রিটিশবিরোধী — ধীরেন্দ্রলাল, রোহিণীরঞ্জন, নিরঞ্জন, মহেশচন্দ্র ও মহেন্দ্রলাল বড়ুয়া; ১৯৭১ — **ইউ. কে. চিং (উক্যচিং মারমা, বীর বিক্রম)**, **বাগ্মীশ্বর বড়ুয়া** ও **ভিক্ষু জিনানন্দ**; আদিবাসী — **উ পঞ্ঞা জোত মহাথের** (মারমা), **রানি ইয়েন ইয়েন** ও **ভদন্ত উ কুইন্দা মহাথের** (রাখাইন)।
+- **ছবি:** ১১টি নতুন নিজস্ব SVG প্লেট (মশাল ও পাহাড় মোটিফ), key-ভিত্তিক অনন্য অলংকরণ; কোনো ভিন্ন ব্যক্তির ছবি ব্যবহৃত হয়নি। **quote স্কিমা** `{textBn, attribution, caution, status}`-এ সংশোধিত।
+- বিস্তারিত: `docs/update-2026-10-27-movement-section-bn.md` · SW `charyabhumi-v20261027-movement19`।
+
 ## ২০২৬-১০-২৭: বিপ্লবী জীবন, ১৯৭১ ও তিন নতুন ব্যক্তিত্ব (রাউন্ড ১৮)
 
 - **৬৯ → ৭২ এন্ট্রি।** নতুন পৃষ্ঠা থেকে ডাঃ সামন্ত ভদ্রের রেকর্ডে যোগ হলো — **§১০ বিপ্লবী জীবন** (মাস্টারদা সূর্য সেনের ‘বিপ্লবী দল’, সহযোদ্ধাদের তালিকা) এবং **§১১ ১৯৭১** (পোড়া পাহাড় অপারেশন, দুই ভাইয়ের সঙ্গে ভারতে প্রশিক্ষণ, আগরতলায় অন্নসত্র ও চিকিৎসা)। পুণ্যজ্যোতি ভিক্ষুর রেকর্ডেও প্রশিক্ষণ-তথ্য যোগ।
@@ -64,7 +72,7 @@
 
 ## ২০২৬-১০-২৪: Public archive, upazila ও language phase
 
-- **Public Historical Archive:** `historical-archive.html` + `data/historical-archive.json` — Buddha, Buddhism, Bengali/Bangladeshi Buddhist heritage-এর **৩৫টি source gateway**, media/topic/source-state filters, animated inline SVG, existing ৮২-item library ও ৭২-entry creator archive-এর cross-link। প্রতিটি item-এ verification scope ও rights boundary আছে; এটি পুরো internet archive করার দাবি নয়।
+- **Public Historical Archive:** `historical-archive.html` + `data/historical-archive.json` — Buddha, Buddhism, Bengali/Bangladeshi Buddhist heritage-এর **৩৫টি source gateway**, media/topic/source-state filters, animated inline SVG, existing ৮২-item library ও ৮৩-entry creator archive-এর cross-link। প্রতিটি item-এ verification scope ও rights boundary আছে; এটি পুরো internet archive করার দাবি নয়।
 - **সম্পূর্ণ upazila filter:** `index.html`-এর জেলা filter-এর পাশে উপজেলা; `data/bd-geo.json`-এর ৮ বিভাগ / ৬৪ জেলা / ৪৯৫ উপজেলা / ৪,৫৪০ ইউনিয়ন। একই নামের উপজেলা district-scoped value-তে রাখা হয়েছে।
 - **Data cleanup:** ৩৫৯ core + ২,৮৫৯ directory = **৩২১৮ records** অক্ষত; canonical spelling/category/geography, reviewed exceptions এবং tracker synchronization। বিস্তারিত audit: `docs/data-curation-2026-10-24.json`।
 - **ভাষা:** ওয়েবসাইটের শুরুতে persistent language selector; বাংলা/English-এর পাশে Chakma (`ccp`) ও Marma (`rmz`) community-support option এবং স্পষ্টভাবে চিহ্নিত automatic-translation route। পূর্ণ মানব-সম্পাদিত অনুবাদের দাবি নয়।
@@ -88,7 +96,7 @@
 - **পঞ্জিকা:** `calendar.html` — বঙ্গাব্দ · বুদ্ধাব্দ · ইংরেজি তারিখ, ঘড়ি, তিথি-নক্ষত্র-যোগ-করণ, পূর্ণিমা-অমাবস্যা-উপোসথ (ব্রাউজারেই গণনা)
 - **কুইজ:** `quiz.html` — ৬৬২টি প্রশ্ন, ১১ বিষয়, ছবি-কুইজ (`data/quiz-bank.json` + `data/quiz-extra14.json` + `data/quiz-images.json`, ছবি `assets/quiz/`)
 - **কোন জেলায় কী বিখ্যাত:** `index.html#districts` — `data/district-famous.json` (৩০ জেলা, ৩২১৮ অদ্বিতীয় রেকর্ড)
-- **বুদ্ধ ও বৌদ্ধ চরিত্রের নির্মাতা-আর্কাইভ:** `culture.html#creator-archive` — `data/heritage-creators.json` + `creator-archive.js` + `creator-archive.css`; ৭২টি ছবিসহ এন্ট্রি, বাংলা/ইংরেজি খোঁজ, অঞ্চল·বিষয়·সম্পর্ক·মিডিয়া ফিল্টার, PDF/অডিও/ভিডিও/বই/শিল্পকর্ম লিংক, উক্তি-যাচাই লেবেল ও লাইব্রেরি-সংযোগ।
+- **বুদ্ধ ও বৌদ্ধ চরিত্রের নির্মাতা-আর্কাইভ:** `culture.html#creator-archive` — `data/heritage-creators.json` + `creator-archive.js` + `creator-archive.css`; ৮৩টি ছবিসহ এন্ট্রি, বাংলা/ইংরেজি খোঁজ, অঞ্চল·বিষয়·সম্পর্ক·মিডিয়া ফিল্টার, PDF/অডিও/ভিডিও/বই/শিল্পকর্ম লিংক, উক্তি-যাচাই লেবেল ও লাইব্রেরি-সংযোগ।
 - সাইট: https://mithun-mutsuddi.github.io/Bangladesh-Buddhist-Heritage-Map/
 - প্রতিষ্ঠাতা: Mithun Mutsuddi · mithunmutsuddi92@gmail.com · WhatsApp +8801882191626
 - শুরু: অক্টোবর ২০২৬
