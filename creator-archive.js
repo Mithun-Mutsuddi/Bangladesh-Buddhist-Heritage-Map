@@ -390,6 +390,9 @@
         (w.note ? '<p>' + esc(w.note) + '</p>' : '') + '</div>';
     }).join('');
     var details = (record.details || []).map(function (d) { return '<li>' + esc(d) + '</li>'; }).join('');
+    var timeline = (record.timeline || []).filter(function (t) { return t && t[1]; }).map(function (t) {
+      return '<li><span class="ca-tl-year">' + esc(t[0]) + '</span><span class="ca-tl-text">' + esc(t[1]) + '</span></li>';
+    }).join('');
     var sources = (record.sources || []).map(function (s) {
       var url = safeUrl(s.url);
       return '<li><a href="' + esc(url) + '"' + (isExternal(url) ? ' target="_blank" rel="noopener noreferrer"' : '') + '>' + esc(s.label) + '</a></li>';
@@ -415,6 +418,7 @@
       '<h4>সংক্ষিপ্ত পরিচিতি</h4><p>' + esc(record.summary) + '</p>' +
       '<h4>কেন গুরুত্বপূর্ণ</h4><p>' + esc(record.significance) + '</p>' +
       (works ? '<h4>🎨 নির্বাচিত কাজ</h4><div class="ca-work-list">' + works + '</div>' : '') +
+      (timeline ? '<h4>⏳ সময়রেখা</h4><ul class="ca-timeline">' + timeline + '</ul>' : '') +
       quoteHtml(record) +
       (details ? '<h4>📌 প্রমাণ ও সতর্কতার নোট</h4><ul class="ca-details-list">' + details + '</ul>' : '') +
       mediaHtml(record) +
