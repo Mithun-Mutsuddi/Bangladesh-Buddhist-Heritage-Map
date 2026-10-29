@@ -1,0 +1,195 @@
+/* tracker-site.css — ভ্রমণ-ট্র্যাকারকে চর্যাভূমি সাইটের রঙ, ফন্ট ও নেভিগেশনের সঙ্গে মেলানো।
+   tracker.css-এর পরে লোড হয়, তাই এখানকার নিয়ম আগের নিয়মগুলোকে ওভাররাইড করে। */
+
+/* ---------- ১. রঙ ও ফন্ট — সাইটের প্যালেট ---------- */
+:root {
+  --bg: #fffdf7;
+  --ink: #2a1f19;
+  --muted: #7b6a5d;
+  --green: #123f39;
+  --green-dark: #0d2f2b;
+  --sage: #e7f0ea;
+  --border: #e8dfc9;
+  --orange: #b8862b;
+  --serif: "Noto Serif Bengali", "Noto Sans Bengali", "Hind Siliguri", Georgia, serif;
+  --sans: "Noto Sans Bengali", "Hind Siliguri", "Kalpurush", "SolaimanLipi", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --tracker-header-h: 68px;
+}
+body.cb.tracker {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+body.cb.tracker h1, body.cb.tracker h2, body.cb.tracker h3 { font-family: var(--sans); color: var(--green-dark); }
+
+/* ---------- ২. সাইট-হেডার ও সাইডবারের অবস্থান ---------- */
+body.cb.tracker .cb-header { position: sticky; top: 0; z-index: 80; }
+body.cb.tracker .sidebar { top: var(--tracker-header-h); height: calc(100% - var(--tracker-header-h)); }
+body.cb.tracker .app-shell { min-height: calc(100vh - var(--tracker-header-h)); }
+body.cb.tracker .topbar { top: 0; }
+
+/* সাইডবারে ফেরার পথ — নেভিগেশনেরই প্রথম আইটেম */
+.tracker-home-link {
+  display: flex; align-items: center; gap: 8px;
+  margin: 4px 10px 10px; padding: 10px 12px;
+  border: 1px solid var(--border); border-radius: 10px;
+  background: var(--sage); color: var(--green-dark);
+  font-size: 12.5px; font-weight: 700; text-decoration: none;
+}
+.tracker-home-link:hover { background: var(--green); color: #fff8e7; }
+.tracker-home-link .icon { width: 17px; height: 17px; }
+body.cb.tracker .sidebar #nav .nav-item[data-view="settings"] { border-top: 1px solid var(--border); border-radius: 0; margin-top: 6px; }
+
+/* ---------- ৩. মূল কনটেন্টের পাঠযোগ্যতা ---------- */
+/* আগের ডিজাইনে ৫–৯px লেখা ছিল — ফোনে পড়াই যেত না। সাইটের মান অনুযায়ী
+   ছোট লেখার ন্যূনতম ১২px, বর্ণনার ন্যূনতম ১৩.৫px। */
+body.cb.tracker .eyebrow { font-size: 11.5px !important; letter-spacing: 1.1px; }
+body.cb.tracker .muted,
+body.cb.tracker main p { font-size: 13.5px; }
+body.cb.tracker .stat-number { font-family: var(--serif); }
+body.cb.tracker main .tag,
+body.cb.tracker main .text-button,
+body.cb.tracker main .segmented button,
+body.cb.tracker main .map-instruction,
+body.cb.tracker main .map-neighbor,
+body.cb.tracker main .map-legend,
+body.cb.tracker main .attribution,
+body.cb.tracker main .stat-label,
+body.cb.tracker main .stat-note,
+body.cb.tracker main .hero-tag,
+body.cb.tracker main .hero-location,
+body.cb.tracker main .hero-foot,
+body.cb.tracker main .breadcrumb,
+body.cb.tracker main .subtle-tag,
+body.cb.tracker main .art-type,
+body.cb.tracker main .visit-button,
+body.cb.tracker main .checklist,
+body.cb.tracker main .filter-row button,
+body.cb.tracker main .mini-share small,
+body.cb.tracker main .info-box,
+body.cb.tracker main small,
+body.cb.tracker .footer,
+body.cb.tracker .footer a,
+body.cb.tracker .footer button { font-size: 12px !important; line-height: 1.45; }
+body.cb.tracker main small { font-size: 11.5px !important; }
+body.cb.tracker main .hero p { font-size: 13.5px !important; max-width: 30ch; }
+body.cb.tracker main h1 { font-size: 28px; line-height: 1.35; letter-spacing: -0.2px; }
+body.cb.tracker main h2 { font-size: 18px; line-height: 1.45; }
+body.cb.tracker .panel-heading p { font-size: 12.5px !important; }
+
+/* ---------- ৪. মোবাইল: নেভিগেশন পুরোটা দেখা যাবে ---------- */
+@media (max-width: 760px) {
+  body.cb.tracker .sidebar {
+    position: fixed; top: auto; bottom: 0; left: 0; width: 100%;
+    height: auto; min-height: 58px; padding: 0;
+    display: block; background: var(--bg);
+    border-top: 1px solid var(--border); border-right: 0;
+    box-shadow: 0 -2px 12px rgba(18, 63, 57, .08);
+    z-index: 70;
+  }
+  /* আগের নিয়মে ব্র্যান্ড ও ৪ নম্বর আইটেম লুকানো ছিল — এখন আর লুকাবে না */
+  body.cb.tracker .sidebar > .brand,
+  body.cb.tracker .sidebar > .nav-item,
+  body.cb.tracker .sidebar .nav-item:nth-child(4) { display: flex !important; }
+  body.cb.tracker .sidebar > .brand,
+  body.cb.tracker .sidebar > .workspace-label,
+  body.cb.tracker .sidebar > .sidebar-line,
+  body.cb.tracker .sidebar > .sidebar-bottom { display: none !important; }
+
+  /* সব ভিউ এক সারিতে, প্রয়োজন হলে অনুভূমিকভাবে স্ক্রল */
+  body.cb.tracker .sidebar nav {
+    display: flex; align-items: stretch; justify-content: flex-start;
+    gap: 2px; height: 58px; overflow-x: auto; overflow-y: hidden;
+    padding: 0 6px; scrollbar-width: none;
+  }
+  body.cb.tracker .sidebar nav::-webkit-scrollbar { display: none; }
+  body.cb.tracker .sidebar .nav-item {
+    flex: 0 0 auto; min-width: 62px; flex-direction: column; gap: 3px;
+    padding: 7px 8px; margin: 0; border-radius: 8px;
+    align-items: center; justify-content: center;
+  }
+  body.cb.tracker .sidebar .nav-item > span:not(.nav-dot) { font-size: 10.5px !important; line-height: 1.2; text-align: center; }
+  body.cb.tracker .sidebar .nav-item .icon { width: 20px; height: 20px; }
+  body.cb.tracker .sidebar .nav-item.active { background: var(--sage); color: var(--green-dark); }
+
+  /* সেটিংস ও গাইড বোতামগুলোও একই সারিতে থাকবে, তাই আলাদা লাইন লাগবে না */
+  body.cb.tracker .sidebar > .nav-item { flex: 0 0 auto; }
+
+  body.cb.tracker .sidebar #nav .tracker-home-link {
+    display: flex; flex: 0 0 auto; flex-direction: column; gap: 3px;
+    justify-content: center; align-items: center;
+    min-width: 58px; margin: 0; padding: 7px 8px; border: 0; border-radius: 8px;
+    background: var(--sage); color: var(--green-dark); font-size: 10.5px; font-weight: 700;
+  }
+  body.cb.tracker .sidebar #nav .tracker-home-link span { font-size: 10.5px !important; }
+  body.cb.tracker .sidebar #nav .nav-item[data-sangha-open] small.beta { display: none; }
+  body.cb.tracker .sidebar #nav .nav-item[data-view="settings"] { border-top: 0; margin-top: 0; border-radius: 8px; }
+
+  body.cb.tracker main { padding: 20px 16px 84px; }
+  body.cb.tracker .page-heading h1 { font-size: 26px; }
+  body.cb.tracker .page-heading .muted,
+  body.cb.tracker .hero p,
+  body.cb.tracker .stat-note,
+  body.cb.tracker .panel-heading p,
+  body.cb.tracker .checklist,
+  body.cb.tracker .place-grid,
+  body.cb.tracker .settings-panel { font-size: 12.5px; }
+  body.cb.tracker .footer { padding-bottom: 70px; }
+}
+
+/* ---------- ৫. ছোট পর্দায় খুব ছোট লেখা আর নয় ---------- */
+@media (max-width: 420px) {
+  body.cb.tracker .hero h2 { font-size: 30px; }
+  body.cb.tracker .sidebar .nav-item > span:not(.nav-dot) { font-size: 10px !important; }
+}
+
+/* ---------- ৬. ম্যাপ ও শেয়ার-কার্ডের ভেতরের ছোট লেখা ---------- */
+body.cb.tracker main .map-label b,
+body.cb.tracker main .map-label span,
+body.cb.tracker main .map-footer span,
+body.cb.tracker main .map-legend span,
+body.cb.tracker main .stat-card span,
+body.cb.tracker main .mini-share small,
+body.cb.tracker main #miniBadge,
+body.cb.tracker main .share-panel small,
+body.cb.tracker main .guide-promo small { font-size: 12px !important; line-height: 1.4; }
+body.cb.tracker main .map-label b { font-size: 13px !important; }
+body.cb.tracker main #miniStat { font-size: 15px; }
+body.cb.tracker main .map-instruction { font-size: 12px !important; padding: 6px 10px; }
+body.cb.tracker main .attribution { font-size: 11.5px !important; line-height: 1.5; }
+
+/* ---------- ৭. চেকলিস্টের সংখ্যা-লেখা ---------- */
+body.cb.tracker main .checklist .division summary span,
+body.cb.tracker main .checklist-bottom span,
+body.cb.tracker main .checklist label span { font-size: 12px !important; }
+body.cb.tracker main .checklist .division summary { font-size: 13px !important; }
+body.cb.tracker main .map-label span { font-size: 10.5px !important; opacity: .75; }
+
+/* ---------- ৮. সাইট-হেডারেই ব্র্যান্ড আছে — সাইডবারে ডাবল ব্র্যান্ড নয় ---------- */
+body.cb.tracker .sidebar > .brand { display: none !important; }
+body.cb.tracker .sidebar { padding-top: 16px; }
+
+/* ৭৬১–১০০০px: আইকন-রেলেও প্রতিটি আইটেমের নাম লেখা থাকবে */
+@media (min-width: 761px) and (max-width: 1000px) {
+  body.cb.tracker .sidebar { width: 84px; padding: 16px 8px 0; overflow-y: auto; }
+  body.cb.tracker .app-shell { margin-left: 84px; }
+  body.cb.tracker .sidebar #nav .nav-item,
+  body.cb.tracker .sidebar #nav .tracker-home-link {
+    flex-direction: column; gap: 3px; justify-content: center; align-items: center;
+    padding: 9px 4px; text-align: center;
+  }
+  body.cb.tracker .sidebar #nav .nav-item > span,
+  body.cb.tracker .sidebar #nav .tracker-home-link > span {
+    display: block !important; font-size: 11px !important; line-height: 1.25;
+    white-space: normal; max-width: 72px;
+  }
+  body.cb.tracker .sidebar #nav .nav-item > small.beta { display: none; }
+  body.cb.tracker .sidebar #nav .nav-item .icon { width: 22px; height: 22px; }
+  body.cb.tracker .sidebar #nav .tracker-home-link { margin: 0 0 8px; border: 1px solid var(--border); }
+}
+@media (min-width: 1001px) {
+  body.cb.tracker .sidebar { padding-top: 16px; }
+}
+
+/* ট্র্যাকারের নিজের ‘ভাষা’ নির্বাচক আছে — সাইটের ভাষা-বার ডাবল হয়, তাই বন্ধ */
+body.cb.tracker .cb-language-bar { display: none; }

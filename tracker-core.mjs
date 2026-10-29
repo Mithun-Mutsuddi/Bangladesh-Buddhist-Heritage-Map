@@ -5,7 +5,7 @@ export const normalize = value => String(value ?? '').normalize('NFC').toLowerCa
 export const districtKey = value => ({'রাঙ্গামাটি':'রাঙামাটি','মুন্সিগঞ্জ':'মুন্সীগঞ্জ','চাপাইনবাবগঞ্জ':'চাঁপাইনবাবগঞ্জ','নেত্রকোনা':'নেত্রকোণা','ব্রাহ্মনবাড়িয়া':'ব্রাহ্মণবাড়িয়া'}[normalize(value)] || normalize(value));
 export const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function safeURL(value) { try {const u=new URL(value);return ['https:','http:'].includes(u.protocol)?u.href:'';}catch{return '';}}
-export function freshState(){return {version:1,name:'',language:'en',visited:[],districts:[],buddies:[],routes:[],lastSaved:null};}
+export function freshState(){return {version:1,name:'',language:'bn',visited:[],districts:[],buddies:[],routes:[],lastSaved:null};}
 export function validateState(raw, knownSites, knownDistricts){
  if(!raw || raw.version!==1 || typeof raw!=='object') throw new Error('This is not a supported tracker backup.');
  const s=freshState();s.name=String(raw.name||'').slice(0,40);s.language=raw.language==='bn'?'bn':'en';

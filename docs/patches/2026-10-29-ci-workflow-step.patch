@@ -1,0 +1,11 @@
+diff --git a/.github/workflows/heritage-validation.yml b/.github/workflows/heritage-validation.yml
+index 0ae04e3..d7d4afc 100644
+--- a/.github/workflows/heritage-validation.yml
++++ b/.github/workflows/heritage-validation.yml
+@@ -27,3 +27,6 @@ jobs:
+           node --check heritage-additions.js
+           node --check heritage-enhancements.js
+           node --check seo-content.js
++          node --check buddha-vamsa.js
++      - name: Buddha-vamsa data tests
++        run: node --test tests/buddha-vamsa-data.test.mjs

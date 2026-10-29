@@ -753,13 +753,28 @@ body.cb {
   }
   .cb-hero-buddha .cb-hero-bg img { object-position: 63% center; }
 }
-@media (max-width: 560px) {
-  .cb-hero-buddha { background: linear-gradient(130deg, #4b1f05, #873708); }
-  .cb-hero-buddha::after {
-    background: linear-gradient(90deg, rgba(70, 27, 2, .72), rgba(84, 32, 3, .40)),
-                linear-gradient(0deg, rgba(55, 18, 0, .38), transparent 65%);
+/* ছোট পর্দায় ছবিটা আড়াআড়ি ক্রপ হয়ে বুদ্ধমূর্তির বড় অংশ কেটে যাচ্ছিল।
+   তাই ফোনে হিরো দু-ভাগে: উপরে ছবির পুরো ব্যান্ড (58vw), নিচে লেখা —
+   ছবি আর লেখা একে অপরকে ঢাকে না, মূর্তিও পুরো দেখা যায়। */
+@media (max-width: 620px) {
+  .cb-hero-buddha {
+    padding-top: 58vw;
+    background: linear-gradient(180deg, #4b1f05 0%, #7d3307 42%, #9c4409 100%);
   }
-  .cb-hero-buddha .cb-hero-bg img { object-position: 65% center; }
+  .cb-hero-buddha .cb-hero-bg { inset: 0 0 auto; height: 58vw; }
+  .cb-hero-buddha .cb-hero-bg img { object-position: 50% 12%; opacity: 1; }
+  .cb-hero-buddha::after {
+    background: linear-gradient(180deg,
+      rgba(75, 31, 5, 0) 0%,
+      rgba(75, 31, 5, .10) 40%,
+      rgba(75, 31, 5, .55) 52%,
+      rgba(75, 31, 5, .88) 58%,
+      rgba(75, 31, 5, .90) 100%);
+  }
+  .cb-hero-buddha .cb-hero-in { padding-top: 8px; }
+}
+@media (max-width: 560px) {
+  .cb-hero-buddha { background: linear-gradient(180deg, #4b1f05 0%, #873708 60%, #a04a0c 100%); }
 }
 
 /* ==========================================================================

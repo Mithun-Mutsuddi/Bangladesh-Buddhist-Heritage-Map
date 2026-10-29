@@ -1,7 +1,7 @@
 /* চর্যাভূমি — Service Worker: দুর্বল ইন্টারনেটেও দ্রুত লোড ও অফলাইন পাঠ।
    কৌশল: HTML = network-first (তাজা তথ্য), বাকি same-origin asset = cache-first।
    সংস্করণ বদলালে পুরনো ক্যাশে মুছে যায়। */
-var VERSION = 'charyabhumi-v20261027-rakhain21';
+var VERSION = 'charyabhumi-v20261029-riddhi';
 var CORE = [
   'index.html', 'charyabhumi.css', 'mega.css', 'brand.js', 'language.js',
   'config.js', 'mega-utils.js', 'manifest.webmanifest', 'pwa.js', 'festival-auto.js',
@@ -15,6 +15,12 @@ var CORE = [
   'data/heritage-knowledge.json', 'data/knowledge-plus.json', 'data/travel-plus.json', 'data/research-plus.json',
   'data/support-config.json', 'data/games-plus.json', 'data/orientation-heritage.json', 'data/atlas-sites.json',
   'culture.html', 'culture.js', 'culture-2026.css', 'culture-fest-anim.js',
+  'buddha-vamsa.html', 'buddha-vamsa.js', 'buddha-vamsa.css',
+  'data/buddha-vamsa/meta.json', 'data/buddha-vamsa/dynasties.json', 'data/buddha-vamsa/kings.json',
+  'data/buddha-vamsa/lineage.json', 'data/buddha-vamsa/jatakas.json', 'data/buddha-vamsa/quotes.json',
+  'data/buddha-vamsa/inscriptions.json', 'data/buddha-vamsa/places.json', 'data/buddha-vamsa/sculptures.json',
+  'data/buddha-vamsa/culture.json', 'data/buddha-vamsa/archives.json', 'data/buddha-vamsa/media.json',
+  'data/buddha-vamsa/images.json',
   'data/heritage-culture.json', 'data/heritage-library.json',
   'assets/culture-2026/svgs/kolpotoru-steps.svg', 'assets/culture-2026/svgs/kolpojahaj-steps.svg',
   'assets/culture-2026/svgs/fanus-steps.svg', 'assets/culture-2026/svgs/kathin-24h.svg',

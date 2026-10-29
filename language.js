@@ -53,7 +53,7 @@
     'nav.home': 'Home', 'nav.atlas': 'Research & Travel Atlas', 'nav.explore': 'Explore places', 'nav.tracker': 'My travel tracker',
     'nav.planner': 'Trip planner', 'nav.maps': 'Historical maps', 'nav.history': 'History',
     'nav.archaeology': 'Archaeology article', 'nav.philosophy': 'Buddhism',
-    'nav.culture': 'Art & culture', 'nav.children': 'Children', 'nav.kings': 'Royal profiles', 'nav.library': 'Library',
+    'nav.culture': 'Art & culture', 'nav.children': 'Children', 'nav.kings': 'Royal profiles', 'nav.buddhavamsa': 'Buddha lineage & dynasties', 'nav.library': 'Library',
     'nav.archive': 'Historical archive', 'nav.contribution': 'Contribute',
     'nav.institutions': 'Social institutions', 'nav.calendar': 'Calendar', 'nav.quiz': 'Quiz',
     'nav.about': 'About us',

@@ -1,0 +1,280 @@
+{
+ "schema_version": "2026-10-29.buddha-vamsa.quotes.v2",
+ "note": "ধম্মপদের পালি পাঠ (খুদ্দকনিকায়) ও বাংলা অর্থ। পাশে সেই বাক্য কোথায় শিলালিপি বা পাণ্ডুলিপিতে পাওয়া গেছে তার সংক্ষিপ্ত তালিকা।",
+ "themeLabels": {
+  "citta": "মন ও চিত্ত",
+  "khanti": "ক্ষমা ও অহিংসা",
+  "appamada": "অপ্রমাদ",
+  "dana": "দান",
+  "anicca": "অনিত্য",
+  "atta": "আত্মশরণ",
+  "sukha": "সন্তোষ",
+  "metta": "মৈত্রী"
+ },
+ "quotes": [
+  {
+   "id": "dhp1",
+   "ref": "ধম্মপদ ১",
+   "source": "খুদ্দকনিকায় — ধম্মপদ, যমকবগ্গ",
+   "theme": "citta",
+   "pali": "Manopubbaṅgamā dhammā, manoseṭṭhā manomayā; manasā ce paduṭṭhena, bhāsati vā karoti vā, tato naṃ dukkhamanveti, cakkaṃva vahato padaṃ.",
+   "bn": "সব ধর্মের অগ্রণী মন, মনই শ্রেষ্ঠ, মনেই গঠিত। কলুষিত মনে যদি কেউ কথা বলে বা কাজ করে, দুঃখ তাকে অনুসরণ করে — যেমন চাকা গাড়ির পায়ের ছাপ অনুসরণ করে।",
+   "whereFound": [
+    "গান্ধারী ধম্মপদ (খরোষ্ঠী পাণ্ডুলিপি)",
+    "পাটনা ধম্মপদ (সংস্কৃত)",
+    "চীনা ‘ফা-কিউ-চিং’ অনুবাদ"
+   ]
+  },
+  {
+   "id": "dhp2",
+   "ref": "ধম্মপদ ২",
+   "source": "ধম্মপদ, যমকবগ্গ",
+   "theme": "citta",
+   "pali": "Manopubbaṅgamā dhammā, manoseṭṭhā manomayā; manasā ce pasannena, bhāsati vā karoti vā, tato naṃ sukhamanveti, chāyāva anapāyinī.",
+   "bn": "প্রসন্ন মনে কথা বললে বা কাজ করলে সুখ তাকে অনুসরণ করে — ছায়ার মতো, কখনো নড়ে না।",
+   "whereFound": [
+    "গান্ধারী ধম্মপদ",
+    "বৌদ্ধ ধর্ম-বাক্য-ফলক"
+   ]
+  },
+  {
+   "id": "dhp5",
+   "ref": "ধম্মপদ ৫",
+   "source": "ধম্মপদ, যমকবগ্গ",
+   "theme": "khanti",
+   "pali": "Na hi verena verāni, sammantīdha kudācanaṃ; averena ca sammanti, esa dhammo sanantano.",
+   "bn": "এই জগতে কখনো শত্রুতায় শত্রুতা থামে না; অশত্রুত্বেই তা থামে — এটিই সনাতন ধর্ম।",
+   "whereFound": [
+    "থাইল্যান্ড ও মিয়ানমারের ধর্মবাক্য-ফলক",
+    "মৈত্রী-দিবসের পাঠ"
+   ]
+  },
+  {
+   "id": "dhp21",
+   "ref": "ধম্মপদ ২১",
+   "source": "ধম্মপদ, অপ্রমাদবগ্গ",
+   "theme": "appamada",
+   "pali": "Appamādo amatapadaṃ, pamādo maccuno padaṃ; appamattā na mīyanti, ye pamattā yathā matā.",
+   "bn": "অপ্রমাদই অমৃতের পথ, প্রমাদ মৃত্যুর পথ। অপ্রমাদীরা মৃত্যুকে অতিক্রম করে; অন্যদের অবস্থা মৃতের মতো।",
+   "whereFound": [
+    "কুশীনগরের মহাপরিনির্বাণ-স্মারক"
+   ]
+  },
+  {
+   "id": "dhp50",
+   "ref": "ধম্মপদ ৫০",
+   "source": "ধম্মপদ, পণ্ডিতবগ্গ",
+   "theme": "atta",
+   "pali": "Na paresaṃ vilomāni, na paresaṃ katākataṃ; attanova avekkheyya, katāni akatāni ca.",
+   "bn": "অন্যের ভুল-ত্রুটি নয়, নিজের কৃত ও অকৃত কর্মের দিকে তাকাও।",
+   "whereFound": [
+    "শ্রীলঙ্কার ধম্মপদ-সংস্করণ",
+    "জাপানি ধম্মপদ-পাঠ"
+   ]
+  },
+  {
+   "id": "dhp100",
+   "ref": "ধম্মপদ ১০০",
+   "source": "ধম্মপদ, সহস্সবগ্গ",
+   "theme": "atta",
+   "pali": "Sahassamapi ce vācā, anatthapadasaṃhitā; ekaṃ atthapadaṃ seyyo, yaṃ sutvā upasammati.",
+   "bn": "অর্থহীন শব্দের হাজার বাক্যের চেয়ে একটি অর্থপূর্ণ বাক্যই ভালো, যা শুনে মন শান্ত হয়।",
+   "whereFound": [
+    "সহস্সবগ্গ-পাঠ",
+    "থাই ‘চিন্তামণি’-সংকলন"
+   ]
+  },
+  {
+   "id": "dhp103",
+   "ref": "ধম্মপদ ১০৩",
+   "source": "ধম্মপদ, সহস্সবগ্গ",
+   "theme": "khanti",
+   "pali": "Yo sahassaṃ sahassena, saṅgāme mānuse jine; ekañca jeyyamattānaṃ, sa ve saṅgāmajuttamo.",
+   "bn": "যে যোদ্ধা যুদ্ধে সহস্রবার সহস্র মানুষকে জয় করে, তার চেয়ে শ্রেষ্ঠ সে-ই যে কেবল নিজেকে জয় করে।",
+   "whereFound": [
+    "সহস্সবগ্গ-পাঠ",
+    "বর্মি রাজকীয় ধম্মপদ-সংস্করণ"
+   ]
+  },
+  {
+   "id": "dhp165",
+   "ref": "ধম্মপদ ১৬৫",
+   "source": "ধম্মপদ, মলবগ্গ",
+   "theme": "atta",
+   "pali": "Attanā hi kataṃ pāpaṃ, attanā saṃkilissati; attanā akataṃ pāpaṃ, attanāva visujjhati; suddhi asuddhi paccattaṃ, nāññamañño visodhaye.",
+   "bn": "নিজের করা পাপে নিজেই কলুষিত হও; নিজে পাপ না করলে নিজেই শুদ্ধ হও। শুদ্ধি ও অশুদ্ধি নিজের ব্যাপার — অন্য কেউ কাউকে শুদ্ধ করতে পারে না।",
+   "whereFound": [
+    "মলবগ্গ-পাঠ",
+    "বৌদ্ধ স্বনির্ভরতা-শিক্ষার পাঠ্য"
+   ]
+  },
+  {
+   "id": "dhp183",
+   "ref": "ধম্মপদ ১৮৩",
+   "source": "ধম্মপদ, বুদ্ধবগ্গ",
+   "theme": "khanti",
+   "pali": "Sabbapāpassa akaraṇaṃ, kusalassa upasampadā; sacittapariyodapanaṃ, etaṃ buddhāna sāsanaṃ.",
+   "bn": "সব পাপ থেকে বিরত থাকা, কুশল-কর্মে প্রতিষ্ঠা, নিজের মনকে সম্পূর্ণ পরিষ্কার করা — এটিই বুদ্ধদের শিক্ষা।",
+   "whereFound": [
+    "প্রায় সব বৌদ্ধ দেশের মন্দির-দেয়ালের মূল বাণী",
+    "শিল্পপটে ‘তিন-পদ’-রূপ"
+   ]
+  },
+  {
+   "id": "dhp184",
+   "ref": "ধম্মপদ ১৮৪",
+   "source": "ধম্মপদ, বুদ্ধবগ্গ",
+   "theme": "khanti",
+   "pali": "Khantī paramaṃ tapo titikkhā, nibbānaṃ paramaṃ vadanti buddhā; na pabbajito parūpaghātī, samaṇo hoti paraṃ viheṭhayanto.",
+   "bn": "ক্ষমা-সহিষ্ণুতাই সর্বোচ্চ তপ; বুদ্ধরা নির্বাণকেই শ্রেষ্ঠ বলেন। যে অন্যকে আঘাত করে সে ভিক্ষু নয়, শ্রমণও নয়।",
+   "whereFound": [
+    "বুদ্ধবগ্গ-পাঠ",
+    "অশোক-যুগের অহিংসা-লিপির সঙ্গে প্রায়ই উদ্ধৃত"
+   ]
+  },
+  {
+   "id": "dhp185",
+   "ref": "ধম্মপদ ১৮৫",
+   "source": "ধম্মপদ, বুদ্ধবগ্গ",
+   "theme": "khanti",
+   "pali": "Anūpavādo anūpaghāto, pātimokkhe ca saṃvaro; mattaññutā ca bhattasmiṃ, pantañca sayanāsanaṃ; adhicitte ca āyogo, etaṃ buddhāna sāsanaṃ.",
+   "bn": "নিন্দা না করা, আঘাত না করা, প্রাতিমোক্ষ-শীল পালন, ভোজনে মিতাহার, নির্জন শয্যা-আসন ও উচ্চতর চিত্ত-ভাবনা — এটিই বুদ্ধদের শিক্ষা।",
+   "whereFound": [
+    "বুদ্ধবগ্গ-পাঠ",
+    "শ্রীলঙ্কা ও মিয়ানমারের পিরিত-পাঠ"
+   ]
+  },
+  {
+   "id": "dhp194",
+   "ref": "ধম্মপদ ১৯৪",
+   "source": "ধম্মপদ, বুদ্ধবগ্গ",
+   "theme": "sukha",
+   "pali": "Sukho buddhānamuppādo, sukhā saddhammadesanā; sukhā saṅghassa samaggī, samaggānaṃ tapo sukho.",
+   "bn": "বুদ্ধদের আবির্ভাব সুখের, সদ্ধর্মের দেশনা সুখের, সংঘের সমৃদ্ধি সুখের, সমগ্রদের তপস্যা সুখের।",
+   "whereFound": [
+    "বুদ্ধপূজার পাঠ",
+    "বাংলাদেশের বৌদ্ধবিহারের প্রার্থনা-পুস্তিকা"
+   ]
+  },
+  {
+   "id": "dhp197",
+   "ref": "ধম্মপদ ১৯৭",
+   "source": "ধম্মপদ, সুখবগ্গ",
+   "theme": "metta",
+   "pali": "Susukhaṃ vata jīvāma, verinesu averino; verinesu manussesu, averino viharāma.",
+   "bn": "যাদের মধ্যে শত্রু আছে, আমরা শত্রুহীন হয়ে সুখে বাস করি; শত্রু-মানুষের মধ্যে অশত্রু হয়ে বাস করি।",
+   "whereFound": [
+    "সুখবগ্গ-পাঠ",
+    "ক্ষমা-দিবসের স্মারক"
+   ]
+  },
+  {
+   "id": "dhp204",
+   "ref": "ধম্মপদ ২০৪",
+   "source": "ধম্মপদ, সুখবগ্গ",
+   "theme": "sukha",
+   "pali": "Ārogyaṃ paramā lābhā, santuṭṭhiṃ paramaṃ dhanaṃ; vissāsaṃ paramā ñāti, nibbānaṃ paramaṃ sukhaṃ.",
+   "bn": "আরোগ্যই সর্বোচ্চ লাভ, সন্তোষই সর্বোচ্চ ধন, বিশ্বাসই সর্বোচ্চ জ্ঞাতি, নির্বাণই সর্বোচ্চ সুখ।",
+   "whereFound": [
+    "সুখবগ্গ-পাঠ",
+    "বাংলাদেশের বিহার-শিলালিপিতে খোদিত পাওয়া যায়"
+   ]
+  },
+  {
+   "id": "dhp223",
+   "ref": "ধম্মপদ ২২৩",
+   "source": "ধম্মপদ, কোধবগ্গ",
+   "theme": "khanti",
+   "pali": "Akkodhena jine kodhaṃ, asādhuṃ sādhunā jine; jine kadariyaṃ dānena, saccenālikavādinaṃ.",
+   "bn": "অক্রোধে ক্রোধ জয় করো, অসাধুকে সাধু দিয়ে, কৃপণতাকে দান দিয়ে, মিথ্যাবাদীকে সত্য দিয়ে।",
+   "whereFound": [
+    "কোধবগ্গ-পাঠ",
+    "থাইল্যান্ডের রাজকীয় শিলালিপি"
+   ]
+  },
+  {
+   "id": "dhp277",
+   "ref": "ধম্মপদ ২৭৭",
+   "source": "ধম্মপদ, মগ্গবগ্গ",
+   "theme": "anicca",
+   "pali": "Sabbe saṅkhārā aniccā ti, yadā paññāya passati; atha nibbindati dukkhe, esa maggo visuddhiyā.",
+   "bn": "‘সব সংস্কার অনিত্য’ — যখন প্রজ্ঞায় তা দেখা যায়, তখন দুঃখে বিমুখতা জন্মে; এটাই বিশুদ্ধির পথ।",
+   "whereFound": [
+    "মগ্গবগ্গ-পাঠ",
+    "বিপস্সনা-ধ্যানের মূল পাঠ"
+   ]
+  },
+  {
+   "id": "dhp348",
+   "ref": "ধম্মপদ ৩৪৮",
+   "source": "ধম্মপদ, তণ্হাবগ্গ",
+   "theme": "anicca",
+   "pali": "Muñca pure muñca pacchato, majjhe muñca bhavassa pāragū; sabbattha vimuttamānaso, na punaṃ jātijaraṃ upehisi.",
+   "bn": "অতীত ছাড়ো, ভবিষ্যৎ ছাড়ো, বর্তমানও ছাড়ো; সর্বত্র মুক্তমনা হলে আর জন্ম-জরায় ফিরবে না।",
+   "whereFound": [
+    "তণ্হাবগ্গ-পাঠ",
+    "মহাসী-ধ্যান-পরম্পরার পাঠ"
+   ]
+  },
+  {
+   "id": "dhp354",
+   "ref": "ধম্মপদ ৩৫৪",
+   "source": "ধম্মপদ, তণ্হাবগ্গ",
+   "theme": "dana",
+   "pali": "Sabbadānaṃ dhammadānaṃ jināti, sabbarasaṃ dhammaraso jināti; sabbaratiṃ dhammarati jināti, taṇhakkhayo sabbadukkhaṃ jināti.",
+   "bn": "সব দানের মধ্যে ধর্মদান জয়ী, সব রসের মধ্যে ধর্মরস জয়ী, সব আনন্দের মধ্যে ধর্মানন্দ জয়ী; তণ্হার ক্ষয় সব দুঃখকে জয় করে।",
+   "whereFound": [
+    "তণ্হাবগ্গ-পাঠ",
+    "গ্রন্থ-দান-অনুষ্ঠানের পাঠ"
+   ]
+  },
+  {
+   "id": "dhp380",
+   "ref": "ধম্মপদ ৩৮০",
+   "source": "ধম্মপদ, ভিক্খুবগ্গ",
+   "theme": "atta",
+   "pali": "Attā hi attano nātho, ko hi nātho paro siyā; attanā sudantena, nāthaṃ labhati dullabhaṃ.",
+   "bn": "আত্মাই আত্মার রক্ষক; অন্য কে রক্ষা করবে? নিজেকে সুদমিত করলেই দুর্লভ রক্ষক পাওয়া যায়।",
+   "whereFound": [
+    "ভিক্খুবগ্গ-পাঠ",
+    "কোরিয়া-জাপানের স্ব-শিক্ষা-পাঠ"
+   ]
+  },
+  {
+   "id": "ye-dhamma",
+   "ref": "অস্সজি-গাথা (‘যে ধম্মা…’)",
+   "source": "বিনয় পিটক, মহাবগ্গ",
+   "theme": "citta",
+   "pali": "Ye dhammā hetuppabhavā, tesaṃ hetuṃ tathāgato āha; tesañca yo nirodho, evaṃvādī mahāsamaṇo.",
+   "bn": "যে সব ধর্ম হেতু থেকে উৎপন্ন, তাদের হেতু তথাগত বলেছেন এবং তাদের নিরোধও — এই কথা বলেন মহাশ্রমণ।",
+   "whereFound": [
+    "সাঁচী, সারনাথ ও বোধগয়ার ‘ধর্ম-বাক্য’ শিলালিপি",
+    "বৌদ্ধ ধর্মচক্র-শিল্পে বহুল ব্যবহৃত"
+   ]
+  },
+  {
+   "id": "metta",
+   "ref": "করণীয়মেত্ত সুত্তের গাথা",
+   "source": "সুত্তনিপাত — করণীয়মেত্ত সুত্ত",
+   "theme": "metta",
+   "pali": "Sukhino vā khemino hontu, sabbe sattā bhavantu sukhitattā.",
+   "bn": "সব প্রাণী সুখী হোক, নিরাপদ হোক; সব সত্ত্ব সুখীচিত্ত হোক।",
+   "whereFound": [
+    "বিশ্বের প্রায় সব বৌদ্ধ মন্দিরের মৈত্রী-পাঠ",
+    "বাংলাদেশের বৌদ্ধ প্রার্থনা-পুস্তিকা"
+   ]
+  },
+  {
+   "id": "last-words",
+   "ref": "মহাপরিনির্বাণের শেষ বাণী",
+   "source": "দীঘনিকায় ১৬ — মহাপরিনিব্বান সুত্ত",
+   "theme": "appamada",
+   "pali": "Vayadhammā saṅkhārā, appamādena sampādetha.",
+   "bn": "সব সংস্কার ক্ষয়ধর্মী — অপ্রমাদে সম্পন্ন করো।",
+   "whereFound": [
+    "কুশীনগরের মহাপরিনির্বাণ-স্তূপ",
+    "সব বৌদ্ধ পরম্পরায় শেষ শিক্ষা হিসেবে পাঠ্য"
+   ]
+  }
+ ]
+}
