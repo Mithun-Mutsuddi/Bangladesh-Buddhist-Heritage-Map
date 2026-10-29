@@ -174,7 +174,7 @@
       return window.CharyabhumiSanghaMitra.searchPlaces(q, 6).then(function (places) {
         if (seq !== state.searchSeq) return;
         if (places.length) {
-          results.innerHTML = localHtml + '<h3 class="cb-search-heading">ঐতিহ্যস্থান · ৩২১৮ রেকর্ড</h3>' + places.map(function (p) {
+          results.innerHTML = localHtml + '<h3 class="cb-search-heading">ঐতিহ্যস্থান · ৩,২১৮ রেকর্ড</h3>' + places.map(function (p) {
             return linkHtml({ title: p.name + (p.en ? ' · ' + p.en : ''), href: 'index.html?q=' + encodeURIComponent(p.id) + '#explore', desc: [p.district, p.upazila, p.category].filter(Boolean).join(' · ') }, false, 'স্থান');
           }).join('');
         }

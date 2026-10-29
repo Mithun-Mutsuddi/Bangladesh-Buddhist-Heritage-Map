@@ -1,7 +1,7 @@
 /* চর্যাভূমি — Service Worker: দুর্বল ইন্টারনেটেও দ্রুত লোড ও অফলাইন পাঠ।
    কৌশল: HTML = network-first (তাজা তথ্য), বাকি same-origin asset = cache-first।
    সংস্করণ বদলালে পুরনো ক্যাশে মুছে যায়। */
-var VERSION = 'charyabhumi-v20261027-rakhain21';
+var VERSION = 'charyabhumi-v20261029-cleanup1';
 var CORE = [
   'index.html', 'charyabhumi.css', 'mega.css', 'brand.js', 'language.js',
   'config.js', 'mega-utils.js', 'manifest.webmanifest', 'pwa.js', 'festival-auto.js',
@@ -26,7 +26,9 @@ var CORE = [
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(VERSION).then(function (cache) {
-      return cache.addAll(CORE.map(function (u) { return new Request(u, { cache: 'reload' }); })).catch(function () { /* আংশিক হলেও চলবে */ });
+      return Promise.all(CORE.map(function (u) {
+        return cache.add(new Request(u, { cache: 'reload' })).catch(function () { /* অন্য ফাইলগুলো সংরক্ষিত থাকবে */ });
+      }));
     }).then(function () { return self.skipWaiting(); })
   );
 });
@@ -34,7 +36,7 @@ self.addEventListener('install', function (event) {
 self.addEventListener('activate', function (event) {
   event.waitUntil(
     caches.keys().then(function (keys) {
-      return Promise.all(keys.filter(function (k) { return k !== VERSION; }).map(function (k) { return caches.delete(k); }));
+      return Promise.all(keys.filter(function (k) { return k.indexOf('charyabhumi-') === 0 && k !== VERSION; }).map(function (k) { return caches.delete(k); }));
     }).then(function () { return self.clients.claim(); })
   );
 });
@@ -43,28 +45,35 @@ self.addEventListener('fetch', function (event) {
   var req = event.request;
   if (req.method !== 'GET') return;
   var url = new URL(req.url);
-  if (url.origin !== self.location.origin) return; /* বাইরের সাইট (Google Maps ইত্যাদি) সরাসরি */
+  if (url.origin !== self.location.origin) return;
+  // API responses can be personalized or change frequently: never cache them.
+  var scopePath = new URL(self.registration.scope).pathname;
+  if (url.pathname.indexOf(scopePath + 'api/') === 0) return;
   var isDoc = req.mode === 'navigate' || url.pathname.endsWith('.html');
   if (isDoc) {
-    event.respondWith(
-      fetch(req).then(function (res) {
+    event.respondWith(fetch(req).then(function (res) {
+      if (res.ok) {
         var copy = res.clone();
-        caches.open(VERSION).then(function (c) { c.put(req, copy); });
-        return res;
-      }).catch(function () { return caches.match(req).then(function (m) { return m || caches.match('index.html'); }); })
-    );
+        event.waitUntil(caches.open(VERSION).then(function (c) { return c.put(req, copy); }).catch(function () {}));
+      }
+      return res;
+    }).catch(function () {
+      return caches.open(VERSION).then(function (c) {
+        return c.match(req).then(function (m) { return m || c.match(new URL('index.html', self.registration.scope).href); });
+      }).then(function (m) { return m || Response.error(); });
+    }));
     return;
   }
-  event.respondWith(
-    caches.match(req).then(function (hit) {
-      var network = fetch(req).then(function (res) {
-        if (res && res.ok) {
+  event.respondWith(caches.open(VERSION).then(function (c) {
+    return c.match(req).then(function (hit) {
+      if (hit) return hit;
+      return fetch(req).then(function (res) {
+        if (res.ok) {
           var copy = res.clone();
-          caches.open(VERSION).then(function (c) { c.put(req, copy); });
+          event.waitUntil(c.put(req, copy).catch(function () {}));
         }
         return res;
-      }).catch(function () { return hit; });
-      return hit || network;
-    })
-  );
+      });
+    });
+  }));
 });

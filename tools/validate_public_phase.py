@@ -43,8 +43,14 @@ def main():
     districts = sum(len(v.get("d", [])) for v in geo)
     upazilas = sum(len(d.get("u", [])) for v in geo for d in v.get("d", []))
     unions = sum(len(u.get("un", [])) for v in geo for d in v.get("d", []) for u in d.get("u", []))
-    if (divisions, districts, upazilas, unions) != (8, 64, 495, 4540):
+    if (divisions, districts, upazilas, unions) != (8, 64, 495, 4537):
         errors.append(f"gazetteer totals changed: {(divisions, districts, upazilas, unions)}")
+    for v in geo:
+        for d in v.get("d", []):
+            for u in d.get("u", []):
+                names = u.get("un", [])
+                if len(names) != len(set(names)):
+                    errors.append(f"duplicate union in {d['n']}/{u['n']}")
     division_for = {d["n"]: v["n"] for v in geo for d in v.get("d", [])}
     valid_upazilas = {(d["n"], u["n"]) for v in geo for d in v.get("d", []) for u in d.get("u", [])}
 
