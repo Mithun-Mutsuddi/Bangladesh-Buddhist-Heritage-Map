@@ -222,13 +222,6 @@
   }
   function closeWelcome() {
     markSeen();
-    // Consume the explicit one-shot request so a refresh does not reopen it.
-    if (forced) {
-      var url = new URL(location.href);
-      url.searchParams.delete('welcome');
-      history.replaceState(history.state, '', url.href);
-      forced = false;
-    }
     if (dialog.open && typeof dialog.close === 'function') dialog.close();
     else dialog.removeAttribute('open');
     document.body.classList.remove('cb-welcome-open');

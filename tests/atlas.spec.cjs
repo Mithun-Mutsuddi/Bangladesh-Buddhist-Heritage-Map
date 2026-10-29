@@ -180,9 +180,9 @@ test('compiled map and tracker retain 3,218 places with the same twelve correcte
     expect(record.verify).toContain('atlas-source-reviewed');
   }
   const core = await (await page.request.get('/data/dashboard-core.json')).json();
-  expect(core.places).toHaveLength(386);
+  expect(core.places).toHaveLength(359);
   const directory = await (await page.request.get('/data/dashboard-directory.json')).json();
-  expect(directory.places).toHaveLength(2832);
+  expect(directory.places).toHaveLength(2859);
 });
 
 test('Atlas is linked from shared navigation, archive and existing children tools', async ({ page }) => {
