@@ -271,7 +271,7 @@
 
   /* Canvas scratch-off with an equivalent non-scratch reveal. */
   const digCanvas = $('#digCanvas');
-  const digContext = digCanvas.getContext('2d', {willReadFrequently:true});
+  const digContext = digCanvas ? digCanvas.getContext('2d', {willReadFrequently:true}) : null;
   let digging = false;
   let digMoves = 0;
   let digDone = false;
@@ -340,13 +340,13 @@
     digContext.lineCap = 'round'; digContext.lineJoin = 'round'; digContext.lineWidth = 62;
     digContext.beginPath(); digContext.moveTo(from.x, from.y); digContext.lineTo(to.x, to.y); digContext.stroke();
   };
-  digCanvas.addEventListener('pointerdown', event => {
+  if (digCanvas) digCanvas.addEventListener('pointerdown', event => {
     if (digDone || !digContext) return;
     event.preventDefault(); digging = true; lastDigPoint = digPoint(event);
     digCanvas.setPointerCapture(event.pointerId); scratch(lastDigPoint, lastDigPoint);
     $('#digHint').hidden = true;
   });
-  digCanvas.addEventListener('pointermove', event => {
+  if (digCanvas) digCanvas.addEventListener('pointermove', event => {
     if (!digging || digDone) return;
     event.preventDefault();
     const next = digPoint(event); scratch(lastDigPoint, next); lastDigPoint = next;
@@ -354,11 +354,11 @@
     if (digMoves % 7 === 0) updateDigProgress();
   });
   const stopDigging = () => { if (digging) updateDigProgress(); digging = false; };
-  digCanvas.addEventListener('pointerup', stopDigging);
+  if (digCanvas) digCanvas.addEventListener('pointerup', stopDigging);
   digCanvas.addEventListener('pointercancel', stopDigging);
-  $('#digReveal').addEventListener('click', finishDig);
-  $('#digReset').addEventListener('click', resetDig);
-  resetDig();
+  if ($('#digReveal')) $('#digReveal').addEventListener('click', finishDig);
+  if ($('#digReset')) $('#digReset').addEventListener('click', resetDig);
+  if (digCanvas) resetDig();
 
   /* Colouring: separate transparent paint layer means erasing preserves line art. */
   const artCanvas = $('#artCanvas');
