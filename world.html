@@ -94,6 +94,7 @@ body{ background:#fffaf0; color:#1a140d; font-family:"Noto Sans Bengali",system-
     </div>
     <div>
       <div class="card" id="countryCard" style="display:none"></div>
+      <p style="font-size:11px; color:#8a7a60; margin:6px 0 0">ছবি: Wikimedia Commons CC BY-SA — লোড না হলে alt text দেখাবে</p>
       <div class="card" style="background:linear-gradient(180deg,#fff,#fff7df)">
         <h3>📊 বিশ্ব সারসংক্ষেপ (Pew 2020 strict)</h3>
         <div id="worldSummary" style="font-size:13px; line-height:1.9; color:#6e5a46"></div>
@@ -535,7 +536,8 @@ function renderMap(){
   // Add circle markers for countries
   var metric=document.getElementById('metricFilter').value;
   DATA.countries.forEach(function(r){
-    var latlng={TH:[15.8,100.9], CN:[35,105], MM:[21.9,95.9], JP:[36.2,138.3], VN:[14,108], KH:[12.5,104.9], LK:[7.8,80.7], KR:[35.9,127.8], IN:[20.6,78.9], MY:[4.2,101.9], BD:[23.7,90.4], US:[39.8,-98.5], LA:[19.8,102.5], ID:[-0.8,113.9], TW:[23.7,120.9], AU:[-25.2,133.7], GB:[55.4,-3.4], MN:[46.8,103.8], BT:[27.5,90.4], SG:[1.35,103.8]}[r.iso];
+    var latlng={TH:[15.8,100.9], CN:[35,105], MM:[21.9,95.9], JP:[36.2,138.3], VN:[14,108], KH:[12.5,104.9], LK:[7.8,80.7], KR:[35.9,127.8], IN:[20.6,78.9], MY:[4.2,101.9], BD:[23.7,90.4], US:[39.8,-98.5], LA:[19.8,102.5], ID:[-0.8,113.9], TW:[23.7,120.9], AU:[-25.2,133.7], GB:[55.4,-3.4], MN:[46.8,103.8], BT:[27.5,90.4], SG:[1.35,103.8],
+      FR:[46.2,2.2], DE:[51.1,10.4], CA:[56.1,-106.3], BR:[-14.2,-51.9], RU:[61.5,105.3], NP:[28.3,84.1], PK:[30.3,69.3], AE:[23.4,53.8], SA:[23.8,45.0], ZA:[-30.5,22.9], NZ:[-40.9,174.8], IT:[41.8,12.5], NL:[52.1,5.2], SE:[60.1,18.6], HK:[22.3,114.1], MO:[22.1,113.5], NO:[60.4,8.4], DK:[56.2,9.5], PE:[-9.1,-75.0], CL:[-35.6,-71.5]}[r.iso];
     if(!latlng) return;
     var val;
     if(metric==='pop') val=r.buddhist_strict;
@@ -548,7 +550,9 @@ function renderMap(){
     var radius = 6 + Math.sqrt(val/max)*18;
     var color = metric==='pop' ? '#8f3d08' : metric==='pct' ? '#4a5f9e' : metric==='birth' ? '#1d5c4f' : metric==='monk' ? '#b55a0f' : '#6b4e9e';
     var marker=L.circleMarker(latlng, { radius:radius, color:color, fillColor:color, fillOpacity:0.55, weight:1 }).addTo(map);
-    marker.bindPopup('<b>'+r.flag+' '+r.country+'</b><br>বৌদ্ধ: '+fmt(r.buddhist_strict)+' ('+fmtPct(r.pct_country||0)+')<br>জন্ম '+r.birth_per_1000+'/1000 · ভিক্ষু '+r.monk_per_10000+'/10k<br><button onclick="document.getElementById(\'q\').value=\''+r.country+'\'; renderTable();" style="margin-top:6px; padding:4px 8px; border-radius:999px; border:1px solid #ead6b8; background:#fff; cursor:pointer">টেবিলে দেখো</button>');
+    var imgMap={TH:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Wat_Phra_Kaew_Bangkok.jpg/200px-Wat_Phra_Kaew_Bangkok.jpg', MM:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Shwedagon_Pagoda.jpg/200px-Shwedagon_Pagoda.jpg', LK:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Temple_of_the_Tooth_Kandy.jpg/200px-Temple_of_the_Tooth_Kandy.jpg', BD:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Chittagong_Hill_Tracts_landscape.jpg/200px-Chittagong_Hill_Tracts_landscape.jpg', JP:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Kinkaku-ji_Kyoto.jpg/200px-Kinkaku-ji_Kyoto.jpg', US:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Hsi_Lai_Temple.jpg/200px-Hsi_Lai_Temple.jpg'};
+    var img = imgMap[r.iso] ? '<img src="'+imgMap[r.iso]+'" style="width:100%; height:80px; object-fit:cover; border-radius:6px; margin:4px 0" loading="lazy" onerror="this.style.display=\'none\'">' : '';
+    marker.bindPopup(img+'<b>'+r.flag+' '+r.country+'</b><br>বৌদ্ধ: '+fmt(r.buddhist_strict)+' ('+fmtPct(r.pct_country||0)+')<br>জন্ম '+r.birth_per_1000+'/1000 · ভিক্ষু '+r.monk_per_10000+'/10k<br><button onclick="document.getElementById(\'q\').value=\''+r.country+'\'; renderTable();" style="margin-top:6px; padding:4px 8px; border-radius:999px; border:1px solid #ead6b8; background:#fff; cursor:pointer">টেবিলে দেখো</button>');
   });
 }
 
