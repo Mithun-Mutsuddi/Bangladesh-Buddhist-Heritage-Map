@@ -423,3 +423,10 @@ a.cul-lic { font-size:12px !important }
 :not(#legibility) span.lib-rights.warn { font-size:12px !important }
 :not(#legibility) span.lib-type { font-size:12px !important }
 :not(#legibility) span.rj-verdict { font-size:12px !important }
+
+/* প্রোফাইলে দ্বৈততা/সতর্কতা-নোট */
+.king-note-warn {
+  margin: 10px 0 0; padding: 10px 12px; border-radius: 8px;
+  background: #fdf6e6; border: 1px solid #ecd9a8; color: #6d5426;
+  font-size: .82rem; line-height: 1.7;
+}

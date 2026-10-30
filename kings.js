@@ -1,4 +1,4 @@
-/* রাজাদের প্রোফাইল — data/heritage-kings.json থেকে কার্ড তৈরি।
+/* ব্যক্তি-প্রোফাইল — data/heritage-kings.json থেকে কার্ড তৈরি।
    kings.html?id=<king-id> → শুধু সেই রাজার পূর্ণ প্রোফাইল
    kings.html?dynasty=<dynasty-id> → সেই রাজবংশের রাজারা */
 (() => {
@@ -34,6 +34,7 @@
       </header>
       <div class="king-body">
         ${k.summary ? `<p class="king-summary">${esc(k.summary)}</p>` : `<p class="king-summary muted">${esc(k.note || 'এই রাজা সম্পর্কে প্রাথমিক সূত্র কম — শুধু নাম ও রাজত্বকাল নিশ্চিত।')}</p>`}
+        ${k.note && k.summary ? `<p class="king-note-warn">${esc(k.note)}</p>` : ''}
         ${k.verifyNote ? `<p class="verify-note">${esc(k.verifyNote)}</p>` : ''}
         ${k.roleNote ? `<p class="role-note"><b>ভূমিকা:</b> ${esc(k.roleNote)}</p>` : ''}
         ${k.buddhism ? `<div class="field wide buddha"><h4><span class="ico">☸</span>বৌদ্ধধর্মে অবদান</h4><p>${esc(k.buddhism)}</p></div>` : ''}
@@ -99,7 +100,7 @@
   async function run() {
     let data;
     try {
-      const res = await fetch('data/heritage-kings.json', { cache: 'force-cache' });
+      const res = await fetch('data/heritage-kings.json', { cache: 'default' });
       if (!res.ok) throw new Error('HTTP ' + res.status);
       data = await res.json();
     } catch (err) {

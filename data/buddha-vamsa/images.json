@@ -1777,6 +1777,30 @@
    "license": "Public domain",
    "source": "https://commons.wikimedia.org/wiki/File:Bhutan_Parliamentary_Delegation_Visit_Dharmarajika_Buddhist_Monastery_Dhaka_2015-12-29_(PID-0056696).jpg",
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bhutan_Parliamentary_Delegation_Visit_Dharmarajika_Buddhist_Monastery_Dhaka_2015-12-29_%28PID-0056696%29.jpg/960px-Bhutan_Parliamentary_Delegation_Visit_Dharmarajika_Buddhist_Monastery_Dhaka_2015-12-29_%28PID-0056696%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-marma": {
+   "image": "assets/buddha-vamsa/comm-marma.jpg",
+   "title": "Marma Dancer (s), Indigenous People's Day, 2014, Dhaka, Bangladesh © Biplob Rahman-0.jpg",
+   "credit": "Biplobcht",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File%3AMarma_Dancer_%28s%29%2C_Indigenous_People%27s_Day%2C_2014%2C_Dhaka%2C_Bangladesh_%C2%A9_Biplob_Rahman-0.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Marma_Dancer_%28s%29%2C_Indigenous_People%27s_Day%2C_2014%2C_Dhaka%2C_Bangladesh_%C2%A9_Biplob_Rahman-0.jpg/960px-Marma_Dancer_%28s%29%2C_Indigenous_People%27s_Day%2C_2014%2C_Dhaka%2C_Bangladesh_%C2%A9_Biplob_Rahman-0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-tanchangya": {
+   "image": "assets/buddha-vamsa/comm-tanchangya.jpg",
+   "title": "Tanchangya Women.png",
+   "credit": "ইজিয়ান",
+   "license": "CC0",
+   "source": "https://commons.wikimedia.org/wiki/File%3ATanchangya_Women.png",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/5/52/Tanchangya_Women.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "comm-chak": {
+   "image": "assets/buddha-vamsa/comm-chak.jpg",
+   "title": "Chak woman in traditional attire 33.jpg",
+   "credit": "Wasiul Bahar",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File%3AChak_woman_in_traditional_attire_33.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Chak_woman_in_traditional_attire_33.jpg/960px-Chak_woman_in_traditional_attire_33.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   }
  }
 }

@@ -396,3 +396,24 @@
 @media (max-width: 560px) {
   .bv-item > figure:first-child { aspect-ratio: 3 / 2; }
 }
+
+/* ---- ঋদ্ধি-ঘটনাপঞ্জির ছবি: সব একই মাপে ---- */
+#bvRiddhiEvents > .bv-item > figure:first-child {
+  margin: 0 0 10px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f1ece0;
+}
+#bvRiddhiEvents > .bv-item > figure:first-child img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+#bvRiddhiEvents > .bv-item > figure:first-child figcaption {
+  margin-top: 4px; font-size: .72rem; line-height: 1.5;
+}
+
+/* লিপির নমুনা অক্ষর — যেখানে ফন্ট আছে সেখানে সুন্দর দেখাবে, না থাকলে বাকি লেখা ঠিক থাকবে */
+.bv-uni {
+  font-family: "Noto Sans Myanmar", "Myanmar Text", "Noto Sans Chakma", "Noto Sans Bengali", system-ui, sans-serif;
+  white-space: nowrap;
+}

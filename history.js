@@ -65,7 +65,7 @@
         <div class="dyn-cap">রাজধানী: ${esc((d.capitals || []).join(' · ') || 'নিশ্চিত নয়')}</div>
         <div class="dyn-badges">
           <span class="verify-badge ${esc(d.verified || 'standard')}">✔ ${esc(VERIFY_LABEL[d.verified] || VERIFY_LABEL.standard)}</span>
-          <a class="king-link" href="kings.html?dynasty=${encodeURIComponent(d.id)}">রাজাদের প্রোফাইল →</a>
+          <a class="king-link" href="kings.html?dynasty=${encodeURIComponent(d.id)}">ব্যক্তি-প্রোফাইল →</a>
         </div>
         ${(d.altNames && d.altNames.length) ? `<div class="dyn-alt">অন্য নাম: ${esc(d.altNames.join(' · '))}</div>` : ''}
       </header>

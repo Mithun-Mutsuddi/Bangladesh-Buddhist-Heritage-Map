@@ -589,7 +589,7 @@
       </tr>`).join('')}</tbody>`;
 
     $('bvRiddhiEvents').innerHTML = R.events.map((e) => `<article class="bv-item">
-      ${state.images['riddhi-' + e.id] ? figure('riddhi-' + e.id, e.name) : ''}
+      ${state.images['riddhi-' + e.id] ? `<figure>${figure('riddhi-' + e.id, e.name)}</figure>` : ''}
       <h3>${esc(e.name)}</h3>
       <p class="meta"><b>স্থান:</b> ${esc(e.place)}</p>
       <p class="meta"><b>সময়:</b> ${esc(e.when)}</p>
@@ -698,7 +698,7 @@
       renderDynastyFilters(); renderDynasties(); drawGantt(); drawGeo();
       renderKingFilters(); renderKings();
       $('bvKingsSub').textContent = 'জাতক-জনশ্রুতির রাজা ও ঐতিহাসিক শাসক একসঙ্গে, কিন্তু প্রতিটি কার্ডে নির্ভরযোগ্যতার ব্যাজ দেওয়া আছে। বাংলাদেশের জমিদার ও সার্কেল-প্রধানদের পূর্ণ তালিকা আলাদা পাতায়।';
-      $('bvKingCrosslink').innerHTML = `বাংলাদেশের রাজা, জমিদার, সার্কেল-প্রধান ও ভিক্ষু-পণ্ডিতদের পূর্ণ প্রোফাইল (১১১ জন) → <a href="${esc(kings.crosslink.href)}">${esc(kings.crosslink.label)}</a>`;
+      $('bvKingCrosslink').innerHTML = `বাংলাদেশের রাজা, জমিদার, সার্কেল-প্রধান, পণ্ডিত ও ভিক্ষুদের পূর্ণ প্রোফাইল (১১২ জন) → <a href="${esc(kings.crosslink.href)}">${esc(kings.crosslink.label)}</a>`;
       $('bvLinkedProfiles').innerHTML = (kings.linkedProfiles || []).map((p) => `<article class="bv-item">
         <div class="badges"><span class="bv-badge">${esc(p.country)}</span><span class="bv-badge ${esc(p.certainty)}">${esc(certLabel(p.certainty))}</span></div>
         <h3><a href="${esc(p.href)}">${esc(p.name)}</a></h3>

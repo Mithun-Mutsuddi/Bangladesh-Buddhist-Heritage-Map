@@ -1,7 +1,7 @@
 {
  "schema_version": "2026-10-22.quiz.v1",
  "generated_at": "2026-10-22",
- "note": "সব প্রশ্ন এই সাইটের যাচাই করা ডেটা (বিহার তালিকা, রাজাদের প্রোফাইল, লাইব্রেরি, শিল্প ও সংস্কৃতি বিভাগ) থেকে স্বয়ংক্রিয়ভাবে বা হাতে তৈরি। কোনো বানানো তথ্য নেই।",
+ "note": "সব প্রশ্ন এই সাইটের যাচাই করা ডেটা (বিহার তালিকা, ব্যক্তি-প্রোফাইল, লাইব্রেরি, শিল্প ও সংস্কৃতি বিভাগ) থেকে স্বয়ংক্রিয়ভাবে বা হাতে তৈরি। কোনো বানানো তথ্য নেই।",
  "per_round": 10,
  "bank_size": 515,
  "tags": {
@@ -5086,7 +5086,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/I42_1karshapana_Maurya_Bindusara_MACW4165_1ar_%288486583162%29.jpg/1280px-I42_1karshapana_Maurya_Bindusara_MACW4165_1ar_%288486583162%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৩২২–২৯৮ খ্রিস্টপূর্ব"
   },
@@ -5101,7 +5101,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Sarnath_Ashoka_Pillar..jpg/1280px-Sarnath_Ashoka_Pillar..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ২৬৮–২৩২ খ্রিস্টপূর্ব"
   },
@@ -5116,7 +5116,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Kanishka_enhanced.jpg/1280px-Kanishka_enhanced.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ১২৭–১৫০ খ্রিস্টাব্দ"
   },
@@ -5131,7 +5131,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Coin_of_Samudragupta%2C_Battle_axe_type%2C_Kannauj.jpg/1280px-Coin_of_Samudragupta%2C_Battle_axe_type%2C_Kannauj.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৩৩৫–৩৮০ খ্রিস্টাব্দ"
   },
@@ -5146,7 +5146,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/India%2C_Chandragupta_II%2C_Gupta_Period%2C_late_4th-early_5th_century_-_Coin_of_Chandragupta_II_-_1977.62_-_Cleveland_Museum_of_Art.jpg/1280px-India%2C_Chandragupta_II%2C_Gupta_Period%2C_late_4th-early_5th_century_-_Coin_of_Chandragupta_II_-_1977.62_-_Cleveland_Museum_of_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৩৮০–৪১৫ খ্রিস্টাব্দ"
   },
@@ -5161,7 +5161,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Archer_Type_Coin%2C_Kumaragupta_I%2C_Gupta_Dynasty%2C_National_Museum_New_Delhi.jpg/1280px-Archer_Type_Coin%2C_Kumaragupta_I%2C_Gupta_Dynasty%2C_National_Museum_New_Delhi.jpg",
    "note": "আনু. ৪১৫–৪৫৫ খ্রিস্টাব্দ"
   },
@@ -5176,7 +5176,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Sasanka_Deva_king_of_Gauda_circa_600-630.jpg/1280px-Sasanka_Deva_king_of_Gauda_circa_600-630.jpg",
    "note": "আনু. ৫৯০–৬৩৭ খ্রিস্টাব্দ"
   },
@@ -5191,7 +5191,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Rupban_Mura%2C_Comilla.jpg/1280px-Rupban_Mura%2C_Comilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৬২৫–৬৪০ খ্রিস্টাব্দ"
   },
@@ -5206,7 +5206,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Rupban_Mura%2C_Comilla.jpg/1280px-Rupban_Mura%2C_Comilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৬৫৮–৬৭৫ খ্রিস্টাব্দ"
   },
@@ -5221,7 +5221,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Shalban_Vihara%2C_Mainamati_20260131_133640.jpg/1280px-Shalban_Vihara%2C_Mainamati_20260131_133640.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৬৫০–৬৭৫"
   },
@@ -5236,7 +5236,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Shalban_Vihara%2C_Mainamati_20260131_133640.jpg/1280px-Shalban_Vihara%2C_Mainamati_20260131_133640.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৬৭৫–৭০০"
   },
@@ -5251,7 +5251,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/New_Shalban_Vihara_%28Mainamati%2CCumilla%29_in_2022.01.jpg/1280px-New_Shalban_Vihara_%28Mainamati%2CCumilla%29_in_2022.01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৭৮০–৮২০"
   },
@@ -5266,7 +5266,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/New_Shalban_Vihara_%28Mainamati%2CCumilla%29_in_2022.01.jpg/1280px-New_Shalban_Vihara_%28Mainamati%2CCumilla%29_in_2022.01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৮২০–৮৫০"
   },
@@ -5281,7 +5281,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Khalimpur_Inscription_of_Dharmapala_Part_1.png/1280px-Khalimpur_Inscription_of_Dharmapala_Part_1.png",
    "note": "আনু. ৭৭০–৮১০ খ্রিস্টাব্দ"
   },
@@ -5296,7 +5296,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Map_of_Pala_Empire_under_Devapala.png/1280px-Map_of_Pala_Empire_under_Devapala.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৮১০–৮৫০ খ্রিস্টাব্দ"
   },
@@ -5311,7 +5311,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/First_level_plinth_at_Somapura_Mahavihara.jpg/1280px-First_level_plinth_at_Somapura_Mahavihara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৯৭৭–১০২৭ খ্রিস্টাব্দ"
   },
@@ -5326,7 +5326,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Vikramashila_University.jpg/1280px-Vikramashila_University.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ১০৭৭–১১২০ খ্রিস্টাব্দ"
   },
@@ -5341,7 +5341,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Coin_-_Silver_-_Circa_9-10th_Century_13th_Century_CE_-_Harikela_Kingdom_-_ACCN_90-C2752_-_Indian_Museum_-_Kolkata_2014-04-04_4303.JPG/1280px-Coin_-_Silver_-_Circa_9-10th_Century_13th_Century_CE_-_Harikela_Kingdom_-_ACCN_90-C2752_-_Indian_Museum_-_Kolkata_2014-04-04_4303.JPG",
    "note": "আনু. ৮০০–৮৫০"
   },
@@ -5356,7 +5356,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/New_Shalban_Vihara_%28Mainamati%2CCumilla%29_in_2022.01.jpg/1280px-New_Shalban_Vihara_%28Mainamati%2CCumilla%29_in_2022.01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৯৩৫–৯৭৫ খ্রিস্টাব্দ"
   },
@@ -5371,7 +5371,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Brick_structures_on_mound_at_Bangarh_at_Gangarampur_in_Dakshin_Dinajpur_district_81.jpg/1280px-Brick_structures_on_mound_at_Bangarh_at_Gangarampur_in_Dakshin_Dinajpur_district_81.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ৯৫০–৯৭০"
   },
@@ -5386,7 +5386,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Arial_Bil_Bikrampur.jpg/1280px-Arial_Bil_Bikrampur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ১০৯৭–১১৬০ খ্রিস্টাব্দ"
   },
@@ -5401,7 +5401,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Arial_Bil_Bikrampur.jpg/1280px-Arial_Bil_Bikrampur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ১১৬০–১১৭৯ খ্রিস্টাব্দ"
   },
@@ -5416,7 +5416,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Arial_Bil_Bikrampur.jpg/1280px-Arial_Bil_Bikrampur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ১১৭৯–১২০৬ খ্রিস্টাব্দ"
   },
@@ -5431,7 +5431,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Arial_Bil_Bikrampur.jpg/1280px-Arial_Bil_Bikrampur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ১২৮৯ খ্রিস্টাব্দ (শক ১২১১)"
   },
@@ -5446,7 +5446,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Rupban_Mura%2C_Comilla.jpg/1280px-Rupban_Mura%2C_Comilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ১২০৪–১২২৫"
   },
@@ -5461,7 +5461,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/New_Shalban_Vihara_%28Mainamati%2CCumilla%29_in_2022.01.jpg/1280px-New_Shalban_Vihara_%28Mainamati%2CCumilla%29_in_2022.01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ১৩শ শতকের গোড়া (তারিখ বিতর্কিত)"
   },
@@ -5476,7 +5476,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/New_Shalban_Vihara_%28Mainamati%2CCumilla%29_in_2022.01.jpg/1280px-New_Shalban_Vihara_%28Mainamati%2CCumilla%29_in_2022.01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ১৩০০–১৩১০"
   },
@@ -5491,7 +5491,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Mrauk_U_pagodas_near_Shitthaung_temple.jpg/1280px-Mrauk_U_pagodas_near_Shitthaung_temple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৪২৯–১৪৩৩"
   },
@@ -5506,7 +5506,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Shitthaung_temple_interior.jpg/1280px-Shitthaung_temple_interior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৪৫৯–১৪৮২"
   },
@@ -5521,7 +5521,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Shitthaung001.jpg/1280px-Shitthaung001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৫৩১–১৫৫৪"
   },
@@ -5536,7 +5536,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/King_Min_Razagyi.jpg/1280px-King_Min_Razagyi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৫৯৩–১৬১২"
   },
@@ -5551,7 +5551,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Ratanabon_Paya_%28left%29_and_Shitthaung_temple_%28right%29.jpg/1280px-Ratanabon_Paya_%28left%29_and_Shitthaung_temple_%28right%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৬২২–১৬৩৮"
   },
@@ -5566,7 +5566,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/King_Thiri_Thudhamma_Raza%27s_Coin.jpg/1280px-King_Thiri_Thudhamma_Raza%27s_Coin.jpg",
    "note": "১৭৮২–১৭৮৫"
   },
@@ -5581,7 +5581,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Statue_of_Shakyamuni_at_Buddha_Dhatu_Jadi.jpg/1280px-Statue_of_Shakyamuni_at_Buddha_Dhatu_Jadi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৬১৪–১৬৩০"
   },
@@ -5596,7 +5596,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Bandarban_Town_%283640035555%29.jpg/1280px-Bandarban_Town_%283640035555%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "২০১৩–বর্তমান"
   },
@@ -5611,7 +5611,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Rangamati%2C_Bangladesh-The_Most_Beautiful_place_in_the_world.a.jpg/1280px-Rangamati%2C_Bangladesh-The_Most_Beautiful_place_in_the_world.a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "?–১৯৮৪"
   },
@@ -5626,7 +5626,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Rangamati_Hill_Track.jpg/1280px-Rangamati_Hill_Track.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৯৮৪–১৯৯১"
   },
@@ -5641,7 +5641,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Rangamati_Rajban_Bihar_Buddhist_Temple.JPG/1280px-Rangamati_Rajban_Bihar_Buddhist_Temple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৯৯৮–২০০৮"
   },
@@ -5656,7 +5656,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Rangamati%2C_Bangladesh-The_Most_Beautiful_place_in_the_world.a.jpg/1280px-Rangamati%2C_Bangladesh-The_Most_Beautiful_place_in_the_world.a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "২০০৯–বর্তমান"
   },
@@ -5671,7 +5671,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Rajabhuban_Chakma_Rajbari_11.jpg/1280px-Rajabhuban_Chakma_Rajbari_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "?–১৮৩২"
   },
@@ -5686,7 +5686,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Rajabhuban_Chakma_Rajbari_12.jpg/1280px-Rajabhuban_Chakma_Rajbari_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৮৩২–১৮৭৩"
   },
@@ -5701,7 +5701,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Rajabhuban_Chakma_Rajbari_02.jpg/1280px-Rajabhuban_Chakma_Rajbari_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৮৭৩–১৮৮৫"
   },
@@ -5716,7 +5716,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Rajabhuban_Chakma_Rajbari_06.jpg/1280px-Rajabhuban_Chakma_Rajbari_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৮৯৭–১৯৩৩"
   },
@@ -5731,7 +5731,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Rajabhuban_Chakma_Rajbari_09.jpg/1280px-Rajabhuban_Chakma_Rajbari_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৯৩৫–১৯৫১"
   },
@@ -5746,7 +5746,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Rajabhuban_Chakma_Rajbari_11.jpg/1280px-Rajabhuban_Chakma_Rajbari_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৯৫৩–১৯৭১"
   },
@@ -5761,7 +5761,7 @@
    ],
    "a": 2,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Rajabhuban_Chakma_Rajbari_02.jpg/1280px-Rajabhuban_Chakma_Rajbari_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৯৭৭–বর্তমান"
   },
@@ -5776,7 +5776,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Mahamuni_Mandir_01.jpg/1280px-Mahamuni_Mandir_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "আনু. ১৮৪৩–১৯১৪"
   },
@@ -5791,7 +5791,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Celebrating_Probarona_Purnima_in_Chittagong_Buddhist_Vihara.jpg/1280px-Celebrating_Probarona_Purnima_in_Chittagong_Buddhist_Vihara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৮৯২ (প্রতিষ্ঠাকাল)"
   },
@@ -5806,7 +5806,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Chittagong_College_Gate_Rohan.jpg/1280px-Chittagong_College_Gate_Rohan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৮৪৭–১৯২২"
   },
@@ -5821,7 +5821,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Chittagong_College_Gate_Rohan.jpg/1280px-Chittagong_College_Gate_Rohan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১৮৬০–১৮৯৪"
   },
@@ -5836,7 +5836,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Bauddha_Dharmankur_Sabha_I.JPG/1280px-Bauddha_Dharmankur_Sabha_I.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "২২ জুন ১৮৬৫ – ৩০ এপ্রিল ১৯২৭"
   },
@@ -5851,7 +5851,7 @@
    ],
    "a": 3,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Chittagong_College_Gate_Rohan.jpg/1280px-Chittagong_College_Gate_Rohan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "২৩ সেপ্টেম্বর ১৮৭২ – ৩ ডিসেম্বর ১৯৩৯"
   },
@@ -5866,7 +5866,7 @@
    ],
    "a": 1,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/%E0%A6%AE%E0%A7%87%E0%A6%A7%E0%A6%B8_%E0%A6%AE%E0%A7%81%E0%A6%A8%E0%A6%BF%E0%A6%B0_%E0%A6%86%E0%A6%B6%E0%A7%8D%E0%A6%B0%E0%A6%AE._kdnphotography.jpg/1280px-%E0%A6%AE%E0%A7%87%E0%A6%A7%E0%A6%B8_%E0%A6%AE%E0%A7%81%E0%A6%A8%E0%A6%BF%E0%A6%B0_%E0%A6%86%E0%A6%B6%E0%A7%8D%E0%A6%B0%E0%A6%AE._kdnphotography.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "৩১ ডিসেম্বর ১৮৭৯ – ১২ মে ১৯৭১"
   },
@@ -5881,7 +5881,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Rangamati_Rajban_Bihar_Buddhist_Temple.JPG/1280px-Rangamati_Rajban_Bihar_Buddhist_Temple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "৮ জানুয়ারি ১৯২০ – ৩০ জানুয়ারি ২০১২"
   },
@@ -5896,7 +5896,7 @@
    ],
    "a": 0,
    "tag": "ব্যক্তিত্ব",
-   "src": "রাজাদের প্রোফাইল (docs/audit-report)",
+   "src": "ব্যক্তি-প্রোফাইল (kings.html)",
    "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Ramu%2C_Cox%27s_Bazar_08.jpg/1280px-Ramu%2C_Cox%27s_Bazar_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "note": "১০ জুন ১৯৩০ – ৩ অক্টোবর ২০১৯"
   },
