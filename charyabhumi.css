@@ -1429,3 +1429,15 @@ body.cb-search-open { overflow: hidden; }
 .cb-welcome-festival small,
 :not(#legibility) .cb-welcome-festival a { font-size: 12px !important; }
 :not(#legibility) .cb-cluster b { font-size: 12px !important; }
+
+/* হোমপেজ ম্যাপ: আনুমানিক পিন আলাদা চেনা যায় (ড্যাশ-রিং, বড় নয়) */
+.cb-leaflet-pin.is-approx {
+  background: rgba(255, 253, 244, .92);
+  border: 1.5px dashed #b78a52;
+  color: #a97a42;
+  box-shadow: none;
+  opacity: .92;
+}
+.cb-leaflet-pin-wrap.is-approx .cb-leaflet-pin { transform: scale(.86); }
+.legend-pin.approx,
+.cb-legend .approx { border-radius: 50%; }

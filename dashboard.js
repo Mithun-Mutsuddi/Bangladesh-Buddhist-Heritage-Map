@@ -631,14 +631,18 @@
   function markerFor(p) {
     var old = markers.get(p.id);
     if (old) return old;
+    // যাচাইকৃত পিন আর আনুমানিক পিন আলাদা দেখাই — নাহলে ব্যবহারকারী ভাবেন
+    // প্রতিটি পিনই মাঠে মেপে বসানো, যা সত্য নয়।
+    var approx = !!(p.approx || p.pinApproximate || p.verificationPending);
     var icon = L.divIcon({
-      className: 'cb-leaflet-pin-wrap',
-      html: '<div class="cb-leaflet-pin" aria-hidden="true">☸</div>',
-      iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -16]
+      className: 'cb-leaflet-pin-wrap' + (approx ? ' is-approx' : ''),
+      html: '<div class="cb-leaflet-pin' + (approx ? ' is-approx' : '') + '" aria-hidden="true">☸</div>',
+      iconSize: [approx ? 26 : 32, approx ? 26 : 32], iconAnchor: [approx ? 13 : 16, approx ? 13 : 16], popupAnchor: [0, -16]
     });
     var m = L.marker(p.coords, { icon: icon, title: p.name, alt: p.name });
     m.bindPopup('<div class="cb-map-popup"><strong>' + esc(p.name) + '</strong><p>' + esc(locationLine(p)) + '</p>' +
-      (p.approx ? '<p><em>পিন আনুমানিক / যাচাইাধীন</em></p>' : '') +
+      (approx ? '<p><em>⚠ আনুমানিক পিন (তালিকা/সূত্র-ভিত্তিক) — গেটের মাপা GPS নয়। ভ্রমণের আগে যাচাই করুন।</em></p>'
+               : '<p><em>সূত্র-যুক্ত পিন — তবু প্রবেশপথ ও সময় যাচাই করুন।</em></p>') +
       '<p><a href="' + esc(googleDir(p)) + '" target="_blank" rel="noopener">Google Maps-এ খুলুন ↗</a></p></div>');
     m.on('click', function () { selectedId = p.id; });
     markers.set(p.id, m);
