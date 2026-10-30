@@ -31,6 +31,7 @@
   const state = {
     meta: null, dynasties: [], kings: [], lineage: null, jatakas: [], quotes: [],
     inscriptions: [], places: [], sculptures: [], culture: null, archives: [], media: [], riddhi: null,
+    communities: null, commRegion: 'all',
     images: {}, dynRegion: 'all', kingCert: 'all', quoteTheme: 'all', placeCountry: 'all', cultureTab: 'artStyles',
   };
 
@@ -304,6 +305,14 @@
     }));
   }
 
+  /* রাজা-শাসকের ছবি: যে ছবি সত্যিই পাওয়া গেছে কেবল সেটাই দেখাই —
+     বাকিদের কার্ডে ‘ছবি নেই’ প্লেসহোল্ডার বসিয়ে ভিড় বাড়াই না। */
+  function kingFigure(k) {
+    const key = k.imgKey || ('king-' + k.id);
+    if (!state.images[key]) return '';
+    return `<figure>${figure(key, k.name)}</figure>`;
+  }
+
   function renderKings() {
     const q = ($('bvKingSearch').value || '').trim().toLowerCase();
     const list = state.kings.filter((k) => {
@@ -313,6 +322,7 @@
     });
     $('bvKingCount').textContent = `${bn(list.length)} / ${bn(state.kings.length)} জন`;
     $('bvKingList').innerHTML = list.map((k) => `<article class="bv-item">
+      ${kingFigure(k)}
       <div class="badges">
         <span class="bv-badge ${esc(k.certainty)}">${esc(certLabel(k.certainty))}</span>
         <span class="bv-badge">${esc(k.country)}</span>
@@ -485,7 +495,79 @@
     </article>`).join('');
   }
 
+
+  /* ---------------- বৌদ্ধ জনগোষ্ঠী ও লিপি ---------------- */
+  function renderCommFilters() {
+    const groups = (state.communities && state.communities.groups) || [];
+    const regions = [...new Set(groups.map((g) => g.country))];
+    const all = ['all', ...regions];
+    $('bvCommRegions').innerHTML = all.map((r) => `<button type="button" class="bv-chip${state.commRegion === r ? ' on' : ''}" data-region="${esc(r)}">${r === 'all' ? 'সব দেশ' : esc(r)}</button>`).join('');
+    $('bvCommRegions').querySelectorAll('[data-region]').forEach((b) => b.addEventListener('click', () => {
+      state.commRegion = b.dataset.region;
+      renderCommFilters(); renderCommunities();
+    }));
+  }
+
+  function renderCommunities() {
+    const C = state.communities;
+    if (!C) return;
+    $('bvCommIntro').textContent = C.intro;
+    $('bvCommCaution').textContent = C.caution;
+    $('bvCommSources').innerHTML = 'সূত্র: ' + C.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)} ↗</a>`).join(' · ');
+    const q = ($('bvCommSearch').value || '').trim().toLowerCase();
+    const list = C.groups.filter((g) => {
+      const okR = state.commRegion === 'all' || g.country === state.commRegion;
+      const hay = [g.name, g.autonym, g.country, g.region, g.script.name, g.script.unicode, g.history, g.buddhism].join(' ').toLowerCase();
+      return okR && (!q || hay.includes(q));
+    });
+    $('bvCommCount').textContent = `${bn(list.length)} / ${bn(C.groups.length)} জনগোষ্ঠী`;
+    /* ছবি না থাকার কারণ স্পষ্ট করে বলা — ব্যবহারকারীর শর্ত */
+    const missing = C.groups.filter((g) => !state.images['comm-' + g.id]).map((g) => g.name);
+    const noteEl = $('bvCommImgNote');
+    if (noteEl) {
+      noteEl.textContent = missing.length
+        ? `ছবি ছাড়া ${bn(missing.length)}টি জনগোষ্ঠী: ${missing.join(', ')} — এদের জন্য উইকিমিডিয়া কমন্সে মুক্ত-লাইসেন্সের নির্ভরযোগ্য ছবি পাওয়া যায়নি, তাই অনুমানভিত্তিক বা কপিরাইটযুক্ত ছবি বসানো হয়নি।`
+        : 'সব জনগোষ্ঠীর জন্য মুক্ত-লাইসেন্সের ছবি আছে।';
+    }
+    $('bvCommList').innerHTML = list.map((g) => `<article class="bv-item bv-comm">
+      ${state.images['comm-' + g.id] ? `<div class="bv-arch-img">${figure('comm-' + g.id, g.name)}</div>` : ''}
+      <div class="badges">
+        <span class="bv-badge flag">${esc(g.country)}</span>
+        <span class="bv-badge">${esc(g.buddhism)}</span>
+      </div>
+      <h3>${esc(g.name)}</h3>
+      <span class="role">${esc(g.autonym)}</span>
+      <div class="bv-script"><b>লিপি / চিহ্ন:</b> ${esc(g.script.name)}
+        ${g.script.unicode && g.script.unicode !== '—' ? `<span class="bv-uni">${esc(g.script.unicode)}</span>` : ''}
+        <p>${esc(g.script.note)}</p></div>
+      <p class="meta"><b>প্রতীক:</b> ${esc(g.symbol)}</p>
+      <p class="meta"><b>কোথায়:</b> ${esc(g.region)}</p>
+      <p class="meta"><b>জনসংখ্যা:</b> ${esc(g.population)}</p>
+      <p>${esc(g.history)}</p>
+    </article>`).join('') || '<p class="bv-mini">এই ছাঁকনিতে কিছু পাওয়া যায়নি।</p>';
+  }
+
   /* ---------------- ঋদ্ধি ও শিষ্য ---------------- */
+
+  /* ঋদ্ধি-প্রদর্শন নিষেধের ইতিহাস — কখন, কেন, কোথায় লেখা */
+  function renderProhibition(P) {
+    if (!P || !$('bvProhTimeline')) return;
+    $('bvProhTitle').textContent = P.title;
+    $('bvProhIntro').textContent = P.intro;
+    $('bvProhRule').innerHTML = `<div class="pali">${esc(P.rule.pali)}</div>
+      <p class="bn">${esc(P.rule.bn)}</p>
+      <p class="meta">সূত্র: ${esc(P.rule.ref)}</p>`;
+    $('bvProhTimeline').innerHTML = P.timeline.map((t) => `<li>
+        <b>${esc(t.when)}</b>
+        <span class="place">${esc(t.where)}</span>
+        <p>${esc(t.what)}</p>
+        <span class="src">নির্ভরযোগ্যতা: ${esc(t.status)}</span>
+      </li>`).join('');
+    $('bvProhWhy').innerHTML = P.why.map((w) => `<li>${esc(w)}</li>`).join('');
+    $('bvProhAllowed').innerHTML = P.allowed.map((w) => `<li>${esc(w)}</li>`).join('');
+    $('bvProhSources').innerHTML = 'সূত্র: ' + P.sources.map((x) => `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.label)} ↗</a>`).join(' · ');
+  }
+
   function renderRiddhi() {
     const R = state.riddhi;
     if (!R) return;
@@ -494,6 +576,7 @@
     $('bvRiddhiFraming').innerHTML = R.framing.map((f) => `<p>${esc(f)}</p>`).join('');
     $('bvRiddhiPlaceLabel').textContent = R.placesLabel || '';
     $('bvRiddhiLegacy').textContent = R.legacy || '';
+    renderProhibition(R.prohibition);
 
     $('bvRiddhiPowers').innerHTML = `<thead><tr><th>ক্ষমতা</th><th>কী</th><th>কে</th><th>কোথায়</th><th>কখন</th><th>সূত্র</th></tr></thead><tbody>${
       R.powers.map((p) => `<tr>
@@ -582,11 +665,11 @@
 
   async function init() {
     try {
-      const [meta, dyn, kings, lineage, jat, quotes, insc, places, sculpt, culture, archives, media, images, riddhi] = await Promise.all([
+      const [meta, dyn, kings, lineage, jat, quotes, insc, places, sculpt, culture, archives, media, images, riddhi, communities] = await Promise.all([
         load('meta.json'), load('dynasties.json'), load('kings.json'), load('lineage.json'),
         load('jatakas.json'), load('quotes.json'), load('inscriptions.json'), load('places.json'),
         load('sculptures.json'), load('culture.json'), load('archives.json'), load('media.json'), load('images.json'),
-        load('riddhi.json'),
+        load('riddhi.json'), load('communities.json'),
       ]);
       state.meta = meta;
       state.dynasties = dyn.dynasties;
@@ -606,10 +689,12 @@
       state.media = media.media;
       state.images = images.images || {};
       state.riddhi = riddhi;
+      state.communities = communities;
 
       renderIntro();
       renderLineage();
       renderRiddhi();
+      renderCommFilters(); renderCommunities();
       renderDynastyFilters(); renderDynasties(); drawGantt(); drawGeo();
       renderKingFilters(); renderKings();
       $('bvKingsSub').textContent = 'জাতক-জনশ্রুতির রাজা ও ঐতিহাসিক শাসক একসঙ্গে, কিন্তু প্রতিটি কার্ডে নির্ভরযোগ্যতার ব্যাজ দেওয়া আছে। বাংলাদেশের জমিদার ও সার্কেল-প্রধানদের পূর্ণ তালিকা আলাদা পাতায়।';
@@ -642,6 +727,7 @@
       bindSearch('bvKingSearch', renderKings);
       bindSearch('bvSculptSearch', renderSculptures);
       bindSearch('bvPlaceSearch', renderPlaces);
+      bindSearch('bvCommSearch', renderCommunities);
     } catch (err) {
       console.error(err);
       const lead = $('bvLead');

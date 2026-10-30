@@ -1,7 +1,7 @@
 /* চর্যাভূমি — Service Worker: দুর্বল ইন্টারনেটেও দ্রুত লোড ও অফলাইন পাঠ।
    কৌশল: HTML = network-first (তাজা তথ্য), বাকি same-origin asset = cache-first।
    সংস্করণ বদলালে পুরনো ক্যাশে মুছে যায়। */
-var VERSION = 'charyabhumi-v20261030-images';
+var VERSION = 'charyabhumi-v20261030-legibility';
 var CORE = [
   'index.html', 'charyabhumi.css', 'mega.css', 'brand.js', 'language.js',
   'config.js', 'mega-utils.js', 'manifest.webmanifest', 'pwa.js', 'festival-auto.js',
@@ -21,6 +21,7 @@ var CORE = [
   'data/buddha-vamsa/inscriptions.json', 'data/buddha-vamsa/places.json', 'data/buddha-vamsa/sculptures.json',
   'data/buddha-vamsa/culture.json', 'data/buddha-vamsa/archives.json', 'data/buddha-vamsa/media.json',
   'data/buddha-vamsa/images.json', 'data/buddha-vamsa/riddhi.json',
+  'data/buddha-vamsa/communities.json', 'data/counts.json',
   'tracker-site.css',
   'data/heritage-culture.json', 'data/heritage-library.json',
   'assets/culture-2026/svgs/kolpotoru-steps.svg', 'assets/culture-2026/svgs/kolpojahaj-steps.svg',

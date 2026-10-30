@@ -110,3 +110,7 @@ body.cb-welcome-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .cb-welcome[open], .cb-welcome::backdrop, .cb-welcome *, .cb-welcome *::before, .cb-welcome *::after { animation: none !important; transition: none !important; }
 }
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+p.cb-welcome-date { font-size:12px }
+:not(#legibility) small.cb-welcome-privacy { font-size:12px }

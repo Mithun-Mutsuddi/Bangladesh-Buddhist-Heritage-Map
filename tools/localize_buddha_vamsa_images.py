@@ -35,7 +35,33 @@ def wanted() -> list[str]:
     for row in riddhi.get("events", []):
         key = "riddhi-" + row["id"]
         keys.append(key)
+    # রাজা ও জনগোষ্ঠীর ছবিও নিজেরা রাখি — হটলিংক-৪২৯ আর হবে না
+    kings = json.loads((DATA / "kings.json").read_text(encoding="utf-8"))
+    for row in kings.get("kings", []):
+        keys.append(row.get("imgKey") or ("king-" + row["id"]))
+    comm_path = DATA / "communities.json"
+    if comm_path.exists():
+        comm = json.loads(comm_path.read_text(encoding="utf-8"))
+        for row in comm.get("groups", []):
+            keys.append("comm-" + row["id"])
     return keys
+
+
+THUMB_WIDTH = "960px"
+
+
+def thumb_url(url: str) -> str:
+    """মূল (full-size) ফাইল চাইলে উইকিমিডিয়া ৪২৯ দেয় — তাই থাম্ব-অকারে চাই।
+    /commons/a/ab/Name.jpg → /commons/thumb/a/ab/Name.jpg/800px-Name.jpg"""
+    url = url.split("?")[0]  # utm-প্যারামিটার থাকলে উইকিমিডিয়া ৪০০ দেয়
+    marker = "/wikipedia/commons/"
+    if marker not in url or "/thumb/" in url:
+        return url
+    head, tail = url.split(marker, 1)
+    parts = tail.split("/")
+    if len(parts) < 3:
+        return url
+    return f"{head}{marker}thumb/{tail}/{THUMB_WIDTH}-{parts[-1]}"
 
 
 def fetch(url: str, dest: Path, retries: int = 8) -> bool:
@@ -93,8 +119,9 @@ def main() -> int:
             record["image"] = f"assets/buddha-vamsa/{dest.name}"
             skipped += 1
             continue
-        print(f"[{key}] {record['remote'][:80]}", flush=True)
-        if fetch(record["remote"], dest):
+        src = thumb_url(record["remote"])
+        print(f"[{key}] {src[:90]}", flush=True)
+        if fetch(src, dest):
             record["image"] = f"assets/buddha-vamsa/{dest.name}"
             got += 1
         else:

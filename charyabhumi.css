@@ -1400,3 +1400,32 @@ body.cb-search-open { overflow: hidden; }
   .atlas-stamp button,
   .atlas-stamp small { font-size: 10.5px !important; }
 }
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+.brandline small { font-size:12px !important }
+:not(#legibility) .cb-chip small { font-size:12px !important }
+:not(#legibility) .cb-d-bar-label small { font-size:12px !important }
+:not(#legibility) .cb-d-plane-group small { font-size:12px !important }
+:not(#legibility) .cb-d-plane-group span { font-size:12px !important }
+:not(#legibility) .cb-ec a { font-size:12px !important }
+:not(#legibility) .cb-prac-verse figcaption { font-size:12px !important }
+:not(#legibility) .cb-trip-stats span { font-size:12px !important }
+:not(#legibility) .is-human small { font-size:12px !important }
+:not(#legibility) .is-human span { font-size:12px !important }
+:not(#legibility) .types span { font-size:12px !important }
+:not(#legibility) a.cb-btn.solid { font-size:12px !important }
+:not(#legibility) a.cb-mini-btn.link { font-size:12px !important }
+:not(#legibility) span.bnd { font-size:12px !important }
+:not(#legibility) span.cb-badge.live { font-size:12px !important }
+:not(#legibility) span.cb-place-approx { font-size:12px !important }
+:not(#legibility) span.cb-place-badge { font-size:12px !important }
+:not(#legibility) span.cb-place-photo-kind { font-size:12px !important }
+:not(#legibility) span.cb-prac-ref { font-size:12px !important }
+:not(#legibility) span.cb-prac-status { font-size:12px !important }
+:not(#legibility) span.king-mini-role.r-mixed { font-size:12px !important }
+:not(#legibility) span.tag { font-size:12px !important }
+
+:not(#legibility) /* legibility floor — welcome card ও মানচিত্র-ক্লাস্টার */
+.cb-welcome-festival small,
+:not(#legibility) .cb-welcome-festival a { font-size: 12px !important; }
+:not(#legibility) .cb-cluster b { font-size: 12px !important; }

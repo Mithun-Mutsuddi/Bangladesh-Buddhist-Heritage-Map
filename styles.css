@@ -506,3 +506,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     background-size: cover, cover, cover;
   }
 }
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+p.eyebrow { font-size:12px }

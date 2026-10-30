@@ -541,3 +541,13 @@
   .ca-movement { padding: 16px 14px 8px; }
   .ca-mv-grid { grid-template-columns: 1fr; }
 }
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+span.ca-image-type { font-size:12px }
+:not(#legibility) span.ca-media-badge { font-size:12px }
+:not(#legibility) span.ca-pill { font-size:12px }
+:not(#legibility) span.ca-pill.community { font-size:12px }
+:not(#legibility) span.ca-pill.movement { font-size:12px }
+:not(#legibility) span.ca-pill.quote { font-size:12px }
+:not(#legibility) span.ca-pill.quote.caution { font-size:12px }
+:not(#legibility) span.ca-pill.relation { font-size:12px }

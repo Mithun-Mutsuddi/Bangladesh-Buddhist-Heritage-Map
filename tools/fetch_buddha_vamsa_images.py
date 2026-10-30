@@ -99,6 +99,16 @@ def main() -> int:
         for row in culture.get(section, []):
             add(f"{section}-{row['id']}", row.get("imgQuery"))
 
+    kings = json.loads((DATA / "kings.json").read_text(encoding="utf-8"))
+    for row in kings.get("kings", []):
+        add(row.get("imgKey") or ("king-" + row["id"]), row.get("imgQuery"))
+
+    comm_path = DATA / "communities.json"
+    if comm_path.exists():
+        comm = json.loads(comm_path.read_text(encoding="utf-8"))
+        for row in comm.get("groups", []):
+            add("comm-" + row["id"], row.get("imgQuery"))
+
     riddhi_path = DATA / "riddhi.json"
     if riddhi_path.exists():
         riddhi = json.loads(riddhi_path.read_text(encoding="utf-8"))

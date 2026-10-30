@@ -402,3 +402,24 @@
   .cul-pt { grid-template-columns: 1fr; gap: 4px; }
   .cul-mdl { flex: 1 1 auto; text-align: center; }
 }
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+a.cul-lic { font-size:12px !important }
+:not(#legibility) button.lib-chip.on { font-size:12px !important }
+:not(#legibility) button.lib-chip { font-size:12px !important }
+:not(#legibility) p.lib-src { font-size:12px !important }
+:not(#legibility) span.ev-meta { font-size:12px !important }
+:not(#legibility) span.kind { font-size:12px !important }
+:not(#legibility) span.king-mini-dyn { font-size:12px !important }
+:not(#legibility) span.king-mini-role.r-buddhist { font-size:12px !important }
+:not(#legibility) span.king-mini-role.r-chief { font-size:12px !important }
+:not(#legibility) span.king-mini-role.r-lay { font-size:12px !important }
+:not(#legibility) span.king-mini-role.r-monk { font-size:12px !important }
+:not(#legibility) span.king-mini-role.r-none { font-size:12px !important }
+:not(#legibility) span.king-mini-role.r-patron { font-size:12px !important }
+:not(#legibility) span.king-mini-role.r-zamindar { font-size:12px !important }
+:not(#legibility) span.lib-rights.mute { font-size:12px !important }
+:not(#legibility) span.lib-rights.ok { font-size:12px !important }
+:not(#legibility) span.lib-rights.warn { font-size:12px !important }
+:not(#legibility) span.lib-type { font-size:12px !important }
+:not(#legibility) span.rj-verdict { font-size:12px !important }

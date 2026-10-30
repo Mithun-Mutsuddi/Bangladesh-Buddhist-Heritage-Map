@@ -1,6 +1,6 @@
 {
  "schema_version": "2026-10-29.buddha-vamsa.images.v4",
- "note": "উইকিমিডিয়া কমন্স থেকে আনা ছবি; যেগুলো ফোল্ডারে নামানো গেছে সেগুলো assets/buddha-vamsa/ থেকে আসে (দ্রুত, ৪২৯-মুক্ত), বাকিগুলো কমন্স থেকেই — লেখক, লাইসেন্স ও উৎস-লিংক সবসময় সংরক্ষিত।",
+ "note": "উইকিমিডিয়া কমন্স থেকে আনা ছবি; যেগুলো পাতা দেখায় সেগুলো assets/buddha-vamsa/ ফোল্ডারে রাখা — দ্রুত ও ৪২৯-মুক্ত। প্রতিটির লেখক, লাইসেন্স ও উৎস-লিংক সংরক্ষিত।",
  "images": {
   "place-lumbini": {
    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Lumbini%2C_Eternal_flame%2C_Nepal.jpg/960px-Lumbini%2C_Eternal_flame%2C_Nepal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1131,7 +1131,7 @@
    "remote": "https://upload.wikimedia.org/wikipedia/commons/5/56/Mahapajapati.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   "riddhi-pindola": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Le_Temple_J%C3%B4raku-ji_-_La_statue_de_pierre_du_Pi%E1%B9%87%E1%B8%8Dola_Bharadv%C3%A2ja.jpg/960px-Le_Temple_J%C3%B4raku-ji_-_La_statue_de_pierre_du_Pi%E1%B9%87%E1%B8%8Dola_Bharadv%C3%A2ja.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-pindola.jpg",
    "title": "File:Le Temple Jôraku-ji - La statue de pierre du Piṇḍola Bharadvâja.jpg",
    "credit": "Yanajin33",
    "license": "CC BY-SA 3.0",
@@ -1139,7 +1139,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Le_Temple_J%C3%B4raku-ji_-_La_statue_de_pierre_du_Pi%E1%B9%87%E1%B8%8Dola_Bharadv%C3%A2ja.jpg/960px-Le_Temple_J%C3%B4raku-ji_-_La_statue_de_pierre_du_Pi%E1%B9%87%E1%B8%8Dola_Bharadv%C3%A2ja.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "riddhi-culapanthaka": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/101_Culapanthaka_%28Doorman%29_%289142056214%29.jpg/960px-101_Culapanthaka_%28Doorman%29_%289142056214%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-culapanthaka.jpg",
    "title": "File:101 Culapanthaka (Doorman) (9142056214).jpg",
    "credit": "Photo Dharma from Sadao, Thailand",
    "license": "CC BY 2.0",
@@ -1147,7 +1147,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/101_Culapanthaka_%28Doorman%29_%289142056214%29.jpg/960px-101_Culapanthaka_%28Doorman%29_%289142056214%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "riddhi-devadatta": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Buddha_with_the_Elephant_Nalagiri.jpg/960px-Buddha_with_the_Elephant_Nalagiri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-devadatta.jpg",
    "title": "File:Buddha with the Elephant Nalagiri.jpg",
    "credit": "Unknown authorUnknown author",
    "license": "CC BY-SA 3.0",
@@ -1155,7 +1155,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Buddha_with_the_Elephant_Nalagiri.jpg/960px-Buddha_with_the_Elephant_Nalagiri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "riddhi-moggallana": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/004_Arahat_Moggallana_%2826595378658%29.jpg/960px-004_Arahat_Moggallana_%2826595378658%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-moggallana.jpg",
    "title": "File:004 Arahat Moggallana (26595378658).jpg",
    "credit": "Anandajoti Bhikkhu from Sadao, Thailand",
    "license": "CC BY 2.0",
@@ -1163,7 +1163,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/004_Arahat_Moggallana_%2826595378658%29.jpg/960px-004_Arahat_Moggallana_%2826595378658%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "riddhi-uppalavanna": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/003_Uppalavanna_%2813574568914%29.jpg/960px-003_Uppalavanna_%2813574568914%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-uppalavanna.jpg",
    "title": "File:003 Uppalavanna (13574568914).jpg",
    "credit": "Photo Dharma from Sadao, Thailand",
    "license": "CC BY 2.0",
@@ -1171,7 +1171,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/003_Uppalavanna_%2813574568914%29.jpg/960px-003_Uppalavanna_%2813574568914%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "riddhi-mahinda": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Mihintale_-_Stupa_Ambasthala_i_Buda.jpg/960px-Mihintale_-_Stupa_Ambasthala_i_Buda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-mahinda.jpg",
    "title": "File:Mihintale - Stupa Ambasthala i Buda.jpg",
    "credit": "Josep Renalias Lohen11",
    "license": "CC BY 4.0",
@@ -1179,7 +1179,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Mihintale_-_Stupa_Ambasthala_i_Buda.jpg/960px-Mihintale_-_Stupa_Ambasthala_i_Buda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "riddhi-ashoka-relics": {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Relics_of_Buddha_obtained_from_a_stupa_built_by_Emperor_Asoka_in_3rd_century_BCE%2C_National_Museum_Delhi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "image": "assets/buddha-vamsa/riddhi-ashoka-relics.jpg",
    "title": "File:Relics of Buddha obtained from a stupa built by Emperor Asoka in 3rd century BCE, National Museum Delhi.jpg",
    "credit": "Prince Roy",
    "license": "CC BY 2.0",
@@ -1187,7 +1187,7 @@
    "remote": "https://upload.wikimedia.org/wikipedia/commons/2/24/Relics_of_Buddha_obtained_from_a_stupa_built_by_Emperor_Asoka_in_3rd_century_BCE%2C_National_Museum_Delhi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   "riddhi-padmasambhava": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Guru_Rinpoche_in_mist_2.jpg/960px-Guru_Rinpoche_in_mist_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-padmasambhava.jpg",
    "title": "File:Guru Rinpoche in mist 2.jpg",
    "credit": "John Hill",
    "license": "CC BY-SA 3.0",
@@ -1195,7 +1195,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Guru_Rinpoche_in_mist_2.jpg/960px-Guru_Rinpoche_in_mist_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "riddhi-milarepa": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Bhutanese_painted_thanka_of_Milarepa_%281052-1135%29%2C_Late_19th-early_20th_Century%2C_Dhodeydrag_Gonpa%2C_Thimphu%2C_Bhutan.jpg/960px-Bhutanese_painted_thanka_of_Milarepa_%281052-1135%29%2C_Late_19th-early_20th_Century%2C_Dhodeydrag_Gonpa%2C_Thimphu%2C_Bhutan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-milarepa.jpg",
    "title": "File:Bhutanese painted thanka of Milarepa (1052-1135), Late 19th-early 20th Century, Dhodeydrag Gonpa, Thimphu, Bhutan.jpg",
    "credit": "Unknown authorUnknown author",
    "license": "Public domain",
@@ -1211,7 +1211,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/An_used_postage_stamp_of_Mongolia_from_personal_collection%2C_featuring_lord_Buddha.jpg/960px-An_used_postage_stamp_of_Mongolia_from_personal_collection%2C_featuring_lord_Buddha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "eph-stamp-tajikistan": {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Stamp_of_Tajikistan_-_2008_-_Colnect_421818_-_Buddha.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "image": "assets/buddha-vamsa/eph-stamp-tajikistan.jpg",
    "title": "File:Stamp of Tajikistan - 2008 - Colnect 421818 - Buddha.jpeg",
    "credit": "Post of Tajikistan",
    "license": "Public domain",
@@ -1235,7 +1235,7 @@
    "remote": "https://upload.wikimedia.org/wikipedia/commons/1/1a/%E0%B8%9B%E0%B8%8F%E0%B8%B4%E0%B8%97%E0%B8%B4%E0%B8%99%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A2%E0%B8%B2%E0%B8%97%E0%B8%B1%E0%B8%A1%E0%B9%83%E0%B8%88_1941.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   "riddhi-yamaka": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/048_The_Double_Miracle_of_Fire_and_Water_%289013118109%29.jpg/960px-048_The_Double_Miracle_of_Fire_and_Water_%289013118109%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-yamaka.jpg",
    "title": "File:048 The Double Miracle of Fire and Water (9013118109).jpg",
    "credit": "Photo Dharma from Sadao, Thailand",
    "license": "CC BY 2.0",
@@ -1251,7 +1251,7 @@
    "remote": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Buddha_performs_miracle_of_Sravasti_Gandhara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   "riddhi-anuruddha": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Rajgir_-_061_Aniruddha_%289241948239%29.jpg/960px-Rajgir_-_061_Aniruddha_%289241948239%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-anuruddha.jpg",
    "title": "File:Rajgir - 061 Aniruddha (9241948239).jpg",
    "credit": "Photo Dharma from Penang, Malaysia",
    "license": "CC BY 2.0",
@@ -1259,7 +1259,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Rajgir_-_061_Aniruddha_%289241948239%29.jpg/960px-Rajgir_-_061_Aniruddha_%289241948239%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "riddhi-sankassa": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Descent_of_the_Buddha_from_the_Trayastrimsa_Heaven_Sanchi_Stupa_1_Northern_Gateway.jpg/960px-Descent_of_the_Buddha_from_the_Trayastrimsa_Heaven_Sanchi_Stupa_1_Northern_Gateway.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/riddhi-sankassa.jpg",
    "title": "File:Descent of the Buddha from the Trayastrimsa Heaven Sanchi Stupa 1 Northern Gateway.jpg",
    "credit": "Photo Dharma from Sadao, Thailand",
    "license": "CC BY 2.0",
@@ -1267,7 +1267,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Descent_of_the_Buddha_from_the_Trayastrimsa_Heaven_Sanchi_Stupa_1_Northern_Gateway.jpg/960px-Descent_of_the_Buddha_from_the_Trayastrimsa_Heaven_Sanchi_Stupa_1_Northern_Gateway.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "eph-stamp-afg-1932": {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Buddha_stamp_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "image": "assets/buddha-vamsa/eph-stamp-afg-1932.jpg",
    "title": "File:Buddha stamp 1932.jpg",
    "credit": "Abdul Ghafoor Breshna",
    "license": "Public domain",
@@ -1283,7 +1283,7 @@
    "remote": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Buddha_stamp_1932_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   "eph-stamp-jp-1953": {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Kamakura_Buddha_80Yen_stamp.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "image": "assets/buddha-vamsa/eph-stamp-jp-1953.jpg",
    "title": "File:Kamakura Buddha 80Yen stamp.JPG",
    "credit": "carpkazu",
    "license": "Public domain",
@@ -1299,7 +1299,7 @@
    "remote": "https://upload.wikimedia.org/wikipedia/commons/9/93/Stamp_of_Afghanistan_-_1951_-_Colnect_487673_-_Buddha_of_Bamian.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   "eph-match-in-temple": {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Matchbox_label_-_Temple_-_India_%28circa_1940s%29_-_MBP1510561900.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "image": "assets/buddha-vamsa/eph-match-in-temple.jpg",
    "title": "File:Matchbox label - Temple - India (circa 1940s) - MBP1510561900.jpg",
    "credit": "Unknown (commercial matchbox manufacturer)",
    "license": "Public domain",
@@ -1331,7 +1331,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Buddhajanti-_2%2C600_Years_of_the_Buddha%E2%80%99s_Enlithenment_01.jpg/960px-Flag_of_Buddhajanti-_2%2C600_Years_of_the_Buddha%E2%80%99s_Enlithenment_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "media-lightofasia": {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Prem_Sanyas_-_Himansu_Rai_-_Seeta_Devi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "image": "assets/buddha-vamsa/media-lightofasia.jpg",
    "title": "File:Prem Sanyas - Himansu Rai - Seeta Devi.jpg",
    "credit": "Unknown authorUnknown author",
    "license": "Public domain",
@@ -1339,7 +1339,7 @@
    "remote": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Prem_Sanyas_-_Himansu_Rai_-_Seeta_Devi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
   },
   "media-lightofasia-poster": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Prem_Sanyas.jpg/960px-Prem_Sanyas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/media-lightofasia-poster.jpg",
    "title": "File:Prem Sanyas.jpg",
    "credit": "Unknown authorUnknown author",
    "license": "Public domain",
@@ -1347,7 +1347,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Prem_Sanyas.jpg/960px-Prem_Sanyas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "media-vesak": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Celebrating_Vesak_%28The_Buddha%27s_Birthday%29.JPG/960px-Celebrating_Vesak_%28The_Buddha%27s_Birthday%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/media-vesak.jpg",
    "title": "File:Celebrating Vesak (The Buddha's Birthday).JPG",
    "credit": "Boinghiem",
    "license": "CC BY-SA 3.0",
@@ -1355,7 +1355,7 @@
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Celebrating_Vesak_%28The_Buddha%27s_Birthday%29.JPG/960px-Celebrating_Vesak_%28The_Buddha%27s_Birthday%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "media-photo-1952": {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Buddhistisk_helligdom_ved_Birlatempelet_i_Delhi_%281952%29_%2816250965554%29.jpg/960px-Buddhistisk_helligdom_ved_Birlatempelet_i_Delhi_%281952%29_%2816250965554%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "image": "assets/buddha-vamsa/media-photo-1952.jpg",
    "title": "File:Buddhistisk helligdom ved Birlatempelet i Delhi (1952) (16250965554).jpg",
    "credit": "Municipal Archives of Trondheim from Trondheim, Norway",
    "license": "CC BY 2.0",
@@ -1369,6 +1369,414 @@
    "license": "Public domain",
    "source": "https://commons.wikimedia.org/wiki/File:Buddha_Anniversary_Poster_-_DPLA_-_5a70c35d5f32a089a6b06baa548dc070.jpg",
    "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Buddha_Anniversary_Poster_-_DPLA_-_5a70c35d5f32a089a6b06baa548dc070.jpg/960px-Buddha_Anniversary_Poster_-_DPLA_-_5a70c35d5f32a089a6b06baa548dc070.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-bimbisara": {
+   "image": "assets/buddha-vamsa/king-bimbisara.jpg",
+   "title": "File:Bimbisar welcoming Buddha Roundel 30 buddha ivory tusk.jpg",
+   "credit": "Nomu420",
+   "license": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bimbisar_welcoming_Buddha_Roundel_30_buddha_ivory_tusk.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Bimbisar_welcoming_Buddha_Roundel_30_buddha_ivory_tusk.jpg/960px-Bimbisar_welcoming_Buddha_Roundel_30_buddha_ivory_tusk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-ajatashatru": {
+   "image": "assets/buddha-vamsa/king-ajatashatru.jpg",
+   "title": "File:Ajatashatru stupa at Rajgir.jpg",
+   "credit": "myself",
+   "license": "CC BY-SA 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Ajatashatru_stupa_at_Rajgir.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Ajatashatru_stupa_at_Rajgir.jpg/960px-Ajatashatru_stupa_at_Rajgir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-udayana": {
+   "image": "assets/buddha-vamsa/king-udayana.jpg",
+   "title": "File:King Sakkanthi Vengan Periya Udayana Thevar.jpg",
+   "credit": "Anjukottu maravan",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:King_Sakkanthi_Vengan_Periya_Udayana_Thevar.jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/f/fe/King_Sakkanthi_Vengan_Periya_Udayana_Thevar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "king-pasenadi": {
+   "image": "assets/buddha-vamsa/king-pasenadi.jpg",
+   "title": "File:Prasenajit of Kosala pays a visti.jpg",
+   "credit": "C. Hargrave Martin",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Prasenajit_of_Kosala_pays_a_visti.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Prasenajit_of_Kosala_pays_a_visti.jpg/960px-Prasenajit_of_Kosala_pays_a_visti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-suddhodana": {
+   "image": "assets/buddha-vamsa/king-suddhodana.jpg",
+   "title": "File:Suddhodana maskey.jpg",
+   "credit": "Chandra Man Maskey",
+   "license": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Suddhodana_maskey.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Suddhodana_maskey.jpg/960px-Suddhodana_maskey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-menander": {
+   "image": "assets/buddha-vamsa/king-menander.jpg",
+   "title": "File:Menander I, portrait from coinage.jpg",
+   "credit": "CNG Coins",
+   "license": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Menander_I,_portrait_from_coinage.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Menander_I%2C_portrait_from_coinage.jpg/960px-Menander_I%2C_portrait_from_coinage.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-devanampiya-tissa": {
+   "image": "assets/buddha-vamsa/king-devanampiya-tissa.jpg",
+   "title": "File:King Devanampiya Tissa.jpg",
+   "credit": "The National Archives UK",
+   "license": "No restrictions",
+   "source": "https://commons.wikimedia.org/wiki/File:King_Devanampiya_Tissa.jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/2/24/King_Devanampiya_Tissa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "king-dutugemunu": {
+   "image": "assets/buddha-vamsa/king-dutugemunu.jpg",
+   "title": "File:Anuradhapura17.jpg",
+   "credit": "No machine-readable author provided. Jolle~commonswiki assumed (based on copyright claims).",
+   "license": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Anuradhapura17.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Anuradhapura17.jpg/960px-Anuradhapura17.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-anawrahta": {
+   "image": "assets/buddha-vamsa/king-anawrahta.jpg",
+   "title": "File:Anawrahta Art Gallery interior.jpg",
+   "credit": "Mssk-ZWM",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Anawrahta_Art_Gallery_interior.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Anawrahta_Art_Gallery_interior.jpg/960px-Anawrahta_Art_Gallery_interior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-jayavarman7": {
+   "image": "assets/buddha-vamsa/king-jayavarman7.jpg",
+   "title": "File:Bouddha dans le That Luang (Vientiane) (4346166108).jpg",
+   "credit": "Jean-Pierre Dalbéra from Paris, France",
+   "license": "CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bouddha_dans_le_That_Luang_(Vientiane)_(4346166108).jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Bouddha_dans_le_That_Luang_%28Vientiane%29_%284346166108%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "king-songtsen-gampo": {
+   "image": "assets/buddha-vamsa/king-songtsen-gampo.jpg",
+   "title": "File:Burial Mound of Songtsen Gampo.jpg",
+   "credit": "Hugh Richardson",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Burial_Mound_of_Songtsen_Gampo.jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Burial_Mound_of_Songtsen_Gampo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "king-trisong-detsen": {
+   "image": "assets/buddha-vamsa/king-trisong-detsen.jpg",
+   "title": "File:Emperor Trisong Detsen.jpg",
+   "credit": "Unknown authorUnknown author",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Emperor_Trisong_Detsen.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Emperor_Trisong_Detsen.jpg/960px-Emperor_Trisong_Detsen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-shotoku": {
+   "image": "assets/buddha-vamsa/king-shotoku.jpg",
+   "title": "File:Prince Shotoku with Attendants, 13th century.jpg",
+   "credit": "Unknown author",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Prince_Shotoku_with_Attendants,_13th_century.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Prince_Shotoku_with_Attendants%2C_13th_century.jpg/960px-Prince_Shotoku_with_Attendants%2C_13th_century.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-shomu": {
+   "image": "assets/buddha-vamsa/king-shomu.jpg",
+   "title": "File:Shomu-Tenno-Sai festival at Todaiji.jpg",
+   "credit": "Charlotte Marillet (chacrebleu)",
+   "license": "CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Shomu-Tenno-Sai_festival_at_Todaiji.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Shomu-Tenno-Sai_festival_at_Todaiji.jpg/960px-Shomu-Tenno-Sai_festival_at_Todaiji.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-beopheung": {
+   "image": "assets/buddha-vamsa/king-beopheung.png",
+   "title": "File:Silla-monarch(22-30).png",
+   "credit": "ja:user:田英",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Silla-monarch(22-30).png",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Silla-monarch%2822-30%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "king-goryeo-taejo": {
+   "image": "assets/buddha-vamsa/king-goryeo-taejo.jpg",
+   "title": "File:Taejo of Goryeo.jpg",
+   "credit": "Korea Cultural Heritage Policy Research Institute\n\n한국문화유산정책연구소",
+   "license": "Attribution",
+   "source": "https://commons.wikimedia.org/wiki/File:Taejo_of_Goryeo.jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Taejo_of_Goryeo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "king-ram-khamhaeng": {
+   "image": "assets/buddha-vamsa/king-ram-khamhaeng.jpg",
+   "title": "File:Ram Khamhaeng Inscription, December 2024.jpg",
+   "credit": "Paul_012",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ram_Khamhaeng_Inscription,_December_2024.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Ram_Khamhaeng_Inscription%2C_December_2024.jpg/960px-Ram_Khamhaeng_Inscription%2C_December_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-lithai": {
+   "image": "assets/buddha-vamsa/king-lithai.jpg",
+   "title": "File:King Lithai (Maha Dharmarājā I) พระยาลิไทย (พระมหาธรรมราชาที่หนึ่ง) - ภาพ 01.jpg",
+   "credit": "Chainwit.",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:King_Lithai_(Maha_Dharmar%C4%81j%C4%81_I)_%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B4%E0%B9%84%E0%B8%97%E0%B8%A2_(%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87)_-_%E0%B8%A0%E0%B8%B2%E0%B8%9E_01.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/King_Lithai_%28Maha_Dharmar%C4%81j%C4%81_I%29_%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B4%E0%B9%84%E0%B8%97%E0%B8%A2_%28%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87%29_-_%E0%B8%A0%E0%B8%B2%E0%B8%9E_01.jpg/960px-King_Lithai_%28Maha_Dharmar%C4%81j%C4%81_I%29_%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B4%E0%B9%84%E0%B8%97%E0%B8%A2_%28%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87%29_-_%E0%B8%A0%E0%B8%B2%E0%B8%9E_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-mongkut": {
+   "image": "assets/buddha-vamsa/king-mongkut.jpg",
+   "title": "File:King Rama IV of Siam (Mongkut) Portrait.jpg",
+   "credit": "Unknown authorUnknown author",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:King_Rama_IV_of_Siam_(Mongkut)_Portrait.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/King_Rama_IV_of_Siam_%28Mongkut%29_Portrait.jpg/960px-King_Rama_IV_of_Siam_%28Mongkut%29_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-mindon-min": {
+   "image": "assets/buddha-vamsa/king-mindon-min.jpg",
+   "title": "File:-Mindon Min-2.JPG",
+   "credit": "Ekyaw",
+   "license": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:-Mindon_Min-2.JPG",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/-Mindon_Min-2.JPG/960px--Mindon_Min-2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-kublai": {
+   "image": "assets/buddha-vamsa/king-kublai.jpg",
+   "title": "File:20150425 Oberhausen Impericon Festival Kublai Khan 0031.jpg",
+   "credit": "© Markus Felix (talk to me)",
+   "license": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:20150425_Oberhausen_Impericon_Festival_Kublai_Khan_0031.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/20150425_Oberhausen_Impericon_Festival_Kublai_Khan_0031.jpg/960px-20150425_Oberhausen_Impericon_Festival_Kublai_Khan_0031.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-zanabazar": {
+   "image": "assets/buddha-vamsa/king-zanabazar.jpg",
+   "title": "File:YesheDorje.jpg",
+   "credit": "Wikimedia Commons contributor",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:YesheDorje.jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/5/58/YesheDorje.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "king-manadeva": {
+   "image": "assets/buddha-vamsa/king-manadeva.jpg",
+   "title": "File:Changu Narayan Temple inscription of Manadeva, Sanskrit language, Gupta script.jpg",
+   "credit": "Gerd Eichmann",
+   "license": "CC BY 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Changu_Narayan_Temple_inscription_of_Manadeva,_Sanskrit_language,_Gupta_script.jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Changu_Narayan_Temple_inscription_of_Manadeva%2C_Sanskrit_language%2C_Gupta_script.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "king-bhupatindra": {
+   "image": "assets/buddha-vamsa/king-bhupatindra.jpg",
+   "title": "File:Bhupatindra Malla 2018-09.jpg",
+   "credit": "Nirmal Dulal",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bhupatindra_Malla_2018-09.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Bhupatindra_Malla_2018-09.jpg/960px-Bhupatindra_Malla_2018-09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-parakramabahu": {
+   "image": "assets/buddha-vamsa/king-parakramabahu.jpg",
+   "title": "File:Council Chamber of Parakramabahu I.jpg",
+   "credit": "G.Kiruthikan at Tamil Wikipedia",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Council_Chamber_of_Parakramabahu_I.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Council_Chamber_of_Parakramabahu_I.jpg/960px-Council_Chamber_of_Parakramabahu_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-kirti-sri": {
+   "image": "assets/buddha-vamsa/king-kirti-sri.jpg",
+   "title": "File:118 King Rajasingha makes Ven Saranankara Sangharaja (19820173144).jpg",
+   "credit": "Photo Dharma from Sadao, Thailand",
+   "license": "CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:118_King_Rajasingha_makes_Ven_Saranankara_Sangharaja_(19820173144).jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/118_King_Rajasingha_makes_Ven_Saranankara_Sangharaja_%2819820173144%29.jpg/960px-118_King_Rajasingha_makes_Ven_Saranankara_Sangharaja_%2819820173144%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-ugyen-wangchuck": {
+   "image": "assets/buddha-vamsa/king-ugyen-wangchuck.jpg",
+   "title": "File:Face detail, Sir Ugyen Wangchuck and his family, 1905 (cropped).jpg",
+   "credit": "John Claude White",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Face_detail,_Sir_Ugyen_Wangchuck_and_his_family,_1905_(cropped).jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Face_detail%2C_Sir_Ugyen_Wangchuck_and_his_family%2C_1905_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "king-sihanouk": {
+   "image": "assets/buddha-vamsa/king-sihanouk.jpg",
+   "title": "File:Norodom Sihanouk (1983).jpg",
+   "credit": "Rob Croes for Anefo",
+   "license": "CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Norodom_Sihanouk_(1983).jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Norodom_Sihanouk_%281983%29.jpg/960px-Norodom_Sihanouk_%281983%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-sibi": {
+   "image": "assets/buddha-vamsa/king-sibi.jpg",
+   "title": "File:035 Sibi Jataka 1.jpg",
+   "credit": "Anandajoti",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:035_Sibi_Jataka_1.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/035_Sibi_Jataka_1.jpg/960px-035_Sibi_Jataka_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "king-ashoka-bengal": {
+   "image": "assets/buddha-vamsa/king-ashoka-bengal.png",
+   "title": "File:Mahasthan Brahmi Inscription.png",
+   "credit": "Amader kotha",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mahasthan_Brahmi_Inscription.png",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/5/53/Mahasthan_Brahmi_Inscription.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "riddhi-savatti-mango": {
+   "image": "assets/buddha-vamsa/riddhi-savatti-mango.jpg",
+   "title": "File:025 Jetavana at Sravasti.jpg",
+   "credit": "Anandajoti",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:025_Jetavana_at_Sravasti.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/025_Jetavana_at_Sravasti.jpg/960px-025_Jetavana_at_Sravasti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-rakhain": {
+   "image": "assets/buddha-vamsa/comm-rakhain.jpg",
+   "title": "File:\"The \"Chinthe\" Guards of the Akyab Island Temple\" (BOND 0119).jpeg",
+   "credit": "Frank Bond",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:%22The_%22Chinthe%22_Guards_of_the_Akyab_Island_Temple%22_(BOND_0119).jpeg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/c/c5/%22The_%22Chinthe%22_Guards_of_the_Akyab_Island_Temple%22_%28BOND_0119%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "comm-tripura": {
+   "image": "assets/buddha-vamsa/comm-tripura.jpg",
+   "title": "File:Ethnic cultural harmony in Bangladesh.jpg",
+   "credit": "Manik121",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ethnic_cultural_harmony_in_Bangladesh.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Ethnic_cultural_harmony_in_Bangladesh.jpg/960px-Ethnic_cultural_harmony_in_Bangladesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-khumi-kheyang": {
+   "image": "assets/buddha-vamsa/comm-khumi-kheyang.jpg",
+   "title": "File:Khumi Dancer, Indigenous People's Day, 2014, Dhaka, Bangladesh © Biplob Rahman-0.jpg",
+   "credit": "Biplobcht",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Khumi_Dancer,_Indigenous_People%27s_Day,_2014,_Dhaka,_Bangladesh_%C2%A9_Biplob_Rahman-0.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Khumi_Dancer%2C_Indigenous_People%27s_Day%2C_2014%2C_Dhaka%2C_Bangladesh_%C2%A9_Biplob_Rahman-0.jpg/960px-Khumi_Dancer%2C_Indigenous_People%27s_Day%2C_2014%2C_Dhaka%2C_Bangladesh_%C2%A9_Biplob_Rahman-0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-mro": {
+   "image": "assets/buddha-vamsa/comm-mro.jpg",
+   "title": "File:Mro Child, Chimbuk Hill, Bandarban, 2010 by Biplob Rahman.jpg",
+   "credit": "Biplob Rahaman",
+   "license": "CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mro_Child,_Chimbuk_Hill,_Bandarban,_2010_by_Biplob_Rahman.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Mro_Child%2C_Chimbuk_Hill%2C_Bandarban%2C_2010_by_Biplob_Rahman.jpg/960px-Mro_Child%2C_Chimbuk_Hill%2C_Bandarban%2C_2010_by_Biplob_Rahman.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-burmese": {
+   "image": "assets/buddha-vamsa/comm-burmese.jpg",
+   "title": "File:Inle Lake, Buddhist monastery, Myanmar.jpg",
+   "credit": "Vyacheslav Argenberg",
+   "license": "CC BY 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Inle_Lake,_Buddhist_monastery,_Myanmar.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Inle_Lake%2C_Buddhist_monastery%2C_Myanmar.jpg/960px-Inle_Lake%2C_Buddhist_monastery%2C_Myanmar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-thai": {
+   "image": "assets/buddha-vamsa/comm-thai.jpg",
+   "title": "File:Ayutthaya Thailand 2004.jpg",
+   "credit": "Evilarry",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Ayutthaya_Thailand_2004.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Ayutthaya_Thailand_2004.jpg/960px-Ayutthaya_Thailand_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-khmer": {
+   "image": "assets/buddha-vamsa/comm-khmer.jpg",
+   "title": "File:Khmer-Palelai-1.jpg",
+   "credit": "Keven1776",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Khmer-Palelai-1.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Khmer-Palelai-1.jpg/960px-Khmer-Palelai-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-lao": {
+   "image": "assets/buddha-vamsa/comm-lao.jpg",
+   "title": "File:Buddhist alms in Si Phan Don.jpg",
+   "credit": "Basile Morin",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Buddhist_alms_in_Si_Phan_Don.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Buddhist_alms_in_Si_Phan_Don.jpg/960px-Buddhist_alms_in_Si_Phan_Don.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-tibetan": {
+   "image": "assets/buddha-vamsa/comm-tibetan.jpg",
+   "title": "File:Buddhist Prayer Flags.jpg",
+   "credit": "Rajani Gairshail",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Buddhist_Prayer_Flags.jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/6/63/Buddhist_Prayer_Flags.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "comm-newar": {
+   "image": "assets/buddha-vamsa/comm-newar.jpg",
+   "title": "File:At Hiranya Varna Mahavihar (105478739).jpeg",
+   "credit": "Daniele Zanni",
+   "license": "CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:At_Hiranya_Varna_Mahavihar_(105478739).jpeg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/At_Hiranya_Varna_Mahavihar_%28105478739%29.jpeg/960px-At_Hiranya_Varna_Mahavihar_%28105478739%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-mongol": {
+   "image": "assets/buddha-vamsa/comm-mongol.jpg",
+   "title": "File:Lama in the Gandan Monastery in Ulan Bator, Mongolia, 1981.jpg",
+   "credit": "Hans Bernhard (Schnobby)",
+   "license": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Lama_in_the_Gandan_Monastery_in_Ulan_Bator,_Mongolia,_1981.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Lama_in_the_Gandan_Monastery_in_Ulan_Bator%2C_Mongolia%2C_1981.jpg/960px-Lama_in_the_Gandan_Monastery_in_Ulan_Bator%2C_Mongolia%2C_1981.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-japanese": {
+   "image": "assets/buddha-vamsa/comm-japanese.jpg",
+   "title": "File:Exterior facade of Kannon Hall Buddhist temple with Goshikimaku Buddhist flags Ninna-ji Kyoto Japan.jpg",
+   "credit": "Basile Morin",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Exterior_facade_of_Kannon_Hall_Buddhist_temple_with_Goshikimaku_Buddhist_flags_Ninna-ji_Kyoto_Japan.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Exterior_facade_of_Kannon_Hall_Buddhist_temple_with_Goshikimaku_Buddhist_flags_Ninna-ji_Kyoto_Japan.jpg/960px-Exterior_facade_of_Kannon_Hall_Buddhist_temple_with_Goshikimaku_Buddhist_flags_Ninna-ji_Kyoto_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-korean": {
+   "image": "assets/buddha-vamsa/comm-korean.jpg",
+   "title": "File:Bulguksa temple entrance gate stairs flower bed and blue sky in Gyeongju South Korea.jpg",
+   "credit": "Basile Morin",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bulguksa_temple_entrance_gate_stairs_flower_bed_and_blue_sky_in_Gyeongju_South_Korea.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Bulguksa_temple_entrance_gate_stairs_flower_bed_and_blue_sky_in_Gyeongju_South_Korea.jpg/960px-Bulguksa_temple_entrance_gate_stairs_flower_bed_and_blue_sky_in_Gyeongju_South_Korea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-vietnamese": {
+   "image": "assets/buddha-vamsa/comm-vietnamese.jpg",
+   "title": "File:August 2003, temple in Hanoi.jpg",
+   "credit": "Syced",
+   "license": "CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:August_2003,_temple_in_Hanoi.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/August_2003%2C_temple_in_Hanoi.jpg/960px-August_2003%2C_temple_in_Hanoi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-chinese": {
+   "image": "assets/buddha-vamsa/comm-chinese.jpg",
+   "title": "File:Li Cheng Buddhist Temple in Mountain All.jpg",
+   "credit": "Li Cheng (c. 919 - c. 967 AD)",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Li_Cheng_Buddhist_Temple_in_Mountain_All.jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Li_Cheng_Buddhist_Temple_in_Mountain_All.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "comm-balinese": {
+   "image": "assets/buddha-vamsa/comm-balinese.jpg",
+   "title": "File:COLLECTIE TROPENMUSEUM Kesaman. een Balinese tempel. TMnr 60004823.jpg",
+   "credit": "Unknown authorUnknown author",
+   "license": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Kesaman._een_Balinese_tempel._TMnr_60004823.jpg",
+   "remote": "https://upload.wikimedia.org/wikipedia/commons/d/d8/COLLECTIE_TROPENMUSEUM_Kesaman._een_Balinese_tempel._TMnr_60004823.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "comm-shan-tai": {
+   "image": "assets/buddha-vamsa/comm-shan-tai.jpg",
+   "title": "File:20160806 Inle Lake temple 8606.jpg",
+   "credit": "Jakub Hałun",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:20160806_Inle_Lake_temple_8606.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/20160806_Inle_Lake_temple_8606.jpg/960px-20160806_Inle_Lake_temple_8606.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-chakma": {
+   "image": "assets/buddha-vamsa/comm-chakma.jpg",
+   "title": "File:Chakma Raj Vihara,Rangamati.jpg",
+   "credit": "Ven Bipassi Bhikkhu",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Chakma_Raj_Vihara,Rangamati.jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Chakma_Raj_Vihara%2CRangamati.jpg/960px-Chakma_Raj_Vihara%2CRangamati.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-sinhala": {
+   "image": "assets/buddha-vamsa/comm-sinhala.jpg",
+   "title": "File:Colombo. Kelaniya Raja Maha Vihara temple (4).jpg",
+   "credit": "Pierre André Leclercq",
+   "license": "CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Colombo._Kelaniya_Raja_Maha_Vihara_temple_(4).jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Colombo._Kelaniya_Raja_Maha_Vihara_temple_%284%29.jpg/960px-Colombo._Kelaniya_Raja_Maha_Vihara_temple_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "comm-bangali-buddha": {
+   "image": "assets/buddha-vamsa/comm-bangali-buddha.jpg",
+   "title": "File:Bhutan Parliamentary Delegation Visit Dharmarajika Buddhist Monastery Dhaka 2015-12-29 (PID-0056696).jpg",
+   "credit": "Press Information Department",
+   "license": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Bhutan_Parliamentary_Delegation_Visit_Dharmarajika_Buddhist_Monastery_Dhaka_2015-12-29_(PID-0056696).jpg",
+   "remote": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bhutan_Parliamentary_Delegation_Visit_Dharmarajika_Buddhist_Monastery_Dhaka_2015-12-29_%28PID-0056696%29.jpg/960px-Bhutan_Parliamentary_Delegation_Visit_Dharmarajika_Buddhist_Monastery_Dhaka_2015-12-29_%28PID-0056696%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   }
  }
 }

@@ -304,3 +304,95 @@
 /* স্টিকি হেডারের উচ্চতা এড়িয়ে অ্যাঙ্কর-লিংক ও গভীর লিংক ঠিক জায়গায় থামুক */
 .bv-section[id], .bv-section [id] { scroll-margin-top: 86px; }
 @media (max-width: 760px) { .bv-section[id], .bv-section [id] { scroll-margin-top: 76px; } }
+
+/* ---- গ্যালারি-কার্ডের ছবি: সব একই অনুপাতে, কাটা বা বিশাল নয় ---- */
+.bv-gallery {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  align-items: start;
+}
+.bv-gallery > article > figure:first-child,
+.bv-gallery > figure:first-child {
+  margin: 0 0 4px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f1ece0;
+}
+.bv-gallery > article > figure:first-child img,
+.bv-gallery > figure:first-child img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.bv-gallery > article > figure:first-child .noimg {
+  display: grid; place-items: center; height: 100%; padding: 12px;
+  color: var(--cb-muted); font-size: .8rem; text-align: center;
+}
+.bv-item > figure:first-child { margin: 0 0 2px; }
+@media (max-width: 560px) {
+  .bv-gallery { grid-template-columns: 1fr; }
+  .bv-gallery > article > figure:first-child { aspect-ratio: 3 / 2; }
+}
+
+/* ---- বৌদ্ধ জনগোষ্ঠী ও লিপি ---- */
+.bv-comm .bv-script {
+  background: #f7f3e7; border: 1px dashed var(--cb-line); border-radius: 10px;
+  padding: 9px 12px; font-size: .85rem; color: var(--cb-ink-soft);
+}
+.bv-comm .bv-script b { color: var(--cb-ink); }
+.bv-comm .bv-script p { margin: 5px 0 0; font-size: .8rem; line-height: 1.65; }
+.bv-uni {
+  display: inline-block; margin-inline-start: 6px; padding: 2px 9px; border-radius: 10px;
+  background: var(--cb-forest); color: #fff4ce; font-size: .78rem; letter-spacing: .02em;
+  line-height: 1.6; max-width: 100%;
+}
+.bv-chip {
+  border: 1px solid var(--cb-line); background: #fffdf8; color: var(--cb-bark);
+  border-radius: 999px; padding: 5px 12px; font: inherit; font-size: .82rem; cursor: pointer;
+}
+.bv-chip.on { background: var(--cb-forest); color: #fff8e7; border-color: var(--cb-forest); }
+
+/* ---- ঋদ্ধি: নিষেধ-ইতিহাস ---- */
+.bv-h4 { margin: 22px 0 8px; font-size: 1rem; color: var(--cb-forest); }
+.bv-proh { margin-top: 34px; border-top: 1px solid var(--cb-line); padding-top: 18px; }
+.bv-rule .pali {
+  margin: 0 0 8px; padding: 10px 12px; background: #f7f3e7; border-left: 3px solid var(--cb-gold);
+  border-radius: 8px; font-size: .86rem; font-style: italic; color: #4a3a2c;
+}
+.bv-rule .bn { margin: 0 0 6px; font-weight: 600; color: var(--cb-ink); }
+.bv-rule .meta { margin: 0; font-size: .8rem; color: var(--cb-muted); }
+.bv-proh-timeline { list-style: none; margin: 0; padding: 0 0 0 18px; border-left: 2px dashed #d8c9a6; }
+.bv-proh-timeline li { position: relative; margin: 0 0 16px; padding-left: 6px; }
+.bv-proh-timeline li:before {
+  content: ""; position: absolute; left: -25px; top: 6px; width: 11px; height: 11px;
+  border-radius: 50%; background: var(--cb-gold); border: 2px solid #fffdf7;
+}
+.bv-proh-timeline b { display: block; color: var(--cb-forest); font-size: .92rem; }
+.bv-proh-timeline .place { font-size: .8rem; color: var(--cb-bark); font-weight: 600; }
+.bv-proh-timeline p { margin: 4px 0; font-size: .88rem; line-height: 1.75; color: var(--cb-ink-soft); }
+.bv-proh-timeline .src { font-size: .74rem; color: var(--cb-muted); }
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+.bv-credit a { font-size:12px !important }
+:not(#legibility) span.bv-badge.damaged { font-size:12px !important }
+:not(#legibility) span.bv-badge.flag { font-size:12px !important }
+:not(#legibility) span.bv-badge.historical { font-size:12px !important }
+:not(#legibility) span.bv-badge.mixed { font-size:12px !important }
+:not(#legibility) span.bv-badge.traditional { font-size:12px !important }
+:not(#legibility) span.bv-badge.unesco { font-size:12px !important }
+:not(#legibility) span.bv-badge { font-size:12px !important }
+:not(#legibility) span.bv-tag.mixed { font-size:12px !important }
+:not(#legibility) span.bv-tag.traditional { font-size:12px !important }
+:not(#legibility) span.bv-uni { font-size:12px !important }
+:not(#legibility) span.st { font-size:12px !important }
+
+/* কার্ড-গ্রিড: প্রতিটি কার্ড নিজের উচ্চতা রাখে (সারি জুড়ে টানাটানি নয়);
+   রাজা-কার্ডের ছবি একই অনুপাতে — বিভাগে ছবি সমান আকারের। */
+.bv-grid { align-items: start; }
+.bv-item > figure:first-child {
+  aspect-ratio: 16 / 10; overflow: hidden; border-radius: 10px;
+  background: #f2ede1;
+}
+.bv-item > figure:first-child img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bv-item > figure:first-child figcaption { margin-top: 6px; }
+@media (max-width: 560px) {
+  .bv-item > figure:first-child { aspect-ratio: 3 / 2; }
+}

@@ -262,3 +262,11 @@
   .kids-page .cb-section { padding:20px 0; break-inside:avoid; }
   .kids-page { background:#fff; }
 }
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+.craft-step-list li { font-size:12px !important }
+:not(#legibility) .kids-media-note a { font-size:12px !important }
+:not(#legibility) li.active { font-size:12px !important }
+:not(#legibility) p.kids-media-note { font-size:12px !important }
+:not(#legibility) span.kids-chip { font-size:12px !important }
+:not(#legibility) span.media-format { font-size:12px !important }

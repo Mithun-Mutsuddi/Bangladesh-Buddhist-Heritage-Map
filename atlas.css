@@ -70,3 +70,59 @@
 @media(max-width:560px){.atlas-hero-grid{padding-top:35px;padding-bottom:38px}.atlas-hero h1{font-size:34px}.atlas-hero-lead{font-size:15px}.atlas-hero-stats{grid-template-columns:repeat(2,1fr);gap:18px}.atlas-hero-media img{height:240px}.atlas-scope{padding:14px;gap:10px}.atlas-scope-mark{display:none}.atlas-profile-grid{grid-template-columns:1fr}.atlas-filters{grid-template-columns:1fr}.atlas-filters label:first-child{grid-column:auto}.atlas-dossier-title{padding:25px 20px}.atlas-dossier-title h3{font-size:25px}.atlas-dossier-head figure{min-height:235px}.atlas-coordinate-strip{grid-template-columns:1fr}.atlas-coordinate-strip>div{border-right:0;border-bottom:1px solid #dac7a0}.atlas-dossier-body{padding:20px 17px}.atlas-fact-grid{grid-template-columns:1fr}.atlas-travel-panel{grid-template-columns:1fr}.atlas-travel-cell.full{grid-column:auto}.atlas-quest{padding:16px}.atlas-quest-answers{grid-template-columns:1fr}.atlas-archive-grid{grid-template-columns:1fr}.atlas-photo-credit-grid{grid-template-columns:1fr}.atlas-travel-modes{grid-template-columns:1fr}.atlas-travel-check{grid-template-columns:1fr;padding:17px}.atlas-emergency{flex-direction:column}.atlas-update{grid-template-columns:1fr auto;gap:8px}.atlas-update-date{grid-column:1}.atlas-update-kind{grid-column:2;grid-row:1}.atlas-update>div{grid-column:1/-1}.atlas-update>a{grid-column:1/-1}.atlas-form-two{grid-template-columns:1fr}.atlas-field-form{padding:15px}.atlas-draft{grid-template-columns:1fr}.atlas-draft-actions{grid-column:auto}.atlas-stamp-grid{grid-template-columns:repeat(3,1fr);gap:8px}.atlas-stamp-seal{width:60px;height:60px}.atlas-passport-head img{width:88px}.atlas-passport-progress{grid-template-columns:1fr auto}.atlas-progress-track{grid-column:1/-1;grid-row:2}.atlas-download-card{padding:80px 18px 20px}.atlas-download-icon{left:18px;top:18px}.atlas-children-tools{grid-template-columns:1fr}.atlas-learning-hero{flex-direction:column}.atlas-learning-hero .cb-btn{margin-top:0}.atlas-circuit-plan{padding:17px}.atlas-circuit-intro{grid-template-columns:1fr}.atlas-circuit-days{justify-self:start}.atlas-subhead{align-items:flex-start;flex-direction:column;gap:5px}}
 @media(prefers-reduced-motion:reduce){.atlas-page *{scroll-behavior:auto!important;transition:none!important}.atlas-profile-card:hover{transform:none}.atlas-profile-card:hover .atlas-card-media img{transform:none}}
 @media print{@page{size:A4;margin:14mm}body.atlas-print{background:#fff;font-size:11pt}body.atlas-print #cbHeader,body.atlas-print #cbFooter,body.atlas-print .cb-flag,body.atlas-print .atlas-toast,body.atlas-print .atlas-jump,body.atlas-print .cb-skip{display:none!important}body.atlas-print #main>*:not(.print-target){display:none!important}body.atlas-print .print-target{display:block!important;padding:0!important;background:#fff!important}body.atlas-print .print-target .cb-wrap{max-width:none;padding:0}body.atlas-print .atlas-circuit-tabs,body.atlas-print .atlas-passport-controls,body.atlas-print .atlas-passport-actions,body.atlas-print button,body.atlas-print .atlas-stamp button{display:none!important}body.atlas-print .atlas-circuit-plan,body.atlas-print .atlas-stamp,body.atlas-print .atlas-hunt{break-inside:avoid;box-shadow:none}body.atlas-print .atlas-stamp-grid{grid-template-columns:repeat(4,1fr)}body.atlas-print .atlas-passport-progress{color:#173f38;background:#eef2ea;border:1px solid #999}body.atlas-print .atlas-level-badge b{color:#173f38}body.atlas-print .atlas-level-badge small{color:#444}body.atlas-print a{color:#222;text-decoration:none}body.atlas-print .atlas-route{overflow:visible;grid-template-columns:repeat(4,1fr)}body.atlas-print .atlas-route-stop:before{display:none}}
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+a.cb-btn.ghost { font-size:12px !important }
+:not(#legibility) p.atlas-card-location { font-size:12px !important }
+:not(#legibility) p.atlas-transcript-note { font-size:12px !important }
+:not(#legibility) span.atlas-archive-kind { font-size:12px !important }
+:not(#legibility) span.atlas-card-region { font-size:12px !important }
+:not(#legibility) span.atlas-hunt-progress { font-size:12px !important }
+:not(#legibility) span.atlas-route-leg { font-size:12px !important }
+:not(#legibility) span.atlas-stamp-mini { font-size:12px !important }
+:not(#legibility) span.atlas-update-kind { font-size:12px !important }
+:not(#legibility) strong.atlas-hunt-badge { font-size:12px !important }
+
+:not(#legibility) /* legibility floor — atlas (১২px ন্যূনতম) */
+.atlas-hero-stats span,
+:not(#legibility) .atlas-hero-media figcaption a,
+:not(#legibility) .atlas-tour-card small,
+:not(#legibility) .atlas-archive-card p,
+:not(#legibility) .atlas-archive-card a,
+:not(#legibility) .atlas-archive-card li,
+:not(#legibility) .atlas-travel-check li,
+:not(#legibility) .atlas-photo-credit-grid p,
+:not(#legibility) .atlas-photo-credit-grid a,
+:not(#legibility) .atlas-photo-credit-grid button,
+:not(#legibility) .atlas-stamp h4 { font-size: 12px !important; }
+:not(#legibility) .atlas-stamp h4 { font-size: 13px !important; line-height: 1.5; }
+:not(#legibility) .atlas-card-meta span,
+:not(#legibility) .atlas-card-meta,
+:not(#legibility) .atlas-route-stop small,
+:not(#legibility) .atlas-circuit-notes p,
+:not(#legibility) .atlas-mode-card a,
+:not(#legibility) .atlas-mode-card small,
+:not(#legibility) .atlas-photo-credit-grid button { font-size: 12px !important; }
+
+/* legibility floor — atlas শেষ পাস (১২px ন্যূনতম) */
+:not(#legibility) .atlas-card-placeholder span,
+:not(#legibility) .atlas-circuit-days span,
+:not(#legibility) .atlas-mode-card p,
+:not(#legibility) .atlas-travel-check p,
+:not(#legibility) .atlas-update p,
+:not(#legibility) .atlas-update a,
+:not(#legibility) .atlas-update button,
+:not(#legibility) .atlas-warning a,
+:not(#legibility) .atlas-warning p,
+:not(#legibility) .atlas-import span,
+:not(#legibility) .atlas-level-badge small,
+:not(#legibility) .atlas-stamp small,
+:not(#legibility) .atlas-stamp button,
+:not(#legibility) .atlas-stamp p,
+:not(#legibility) .atlas-hunt p,
+:not(#legibility) .atlas-audio-controls p,
+:not(#legibility) .atlas-child-tool span,
+:not(#legibility) .atlas-bib-item span,
+:not(#legibility) .atlas-bib-item h3 a,
+:not(#legibility) .atlas-bib-item p { font-size: 12px !important; }
+:not(#legibility) small { font-size: 12px !important; }

@@ -18,3 +18,16 @@
 @media(max-width:480px){.archive-filters{grid-template-columns:1fr}.archive-filters label:nth-child(4){grid-column:auto}.archive-stats div{flex:1;min-width:88px;padding:10px}.archive-stats strong{font-size:22px}.archive-stats span{font-size:10px}.archive-hero .cb-actions{display:grid}.archive-hero .cb-actions .cb-btn{text-align:center}.archive-card h3{font-size:17px}}
 @media(prefers-reduced-motion:reduce){.archive-rings,.archive-wheel,.archive-manuscript,.archive-node,.archive-stars,.archive-card{animation:none!important}.archive-linked-card{transition:none}}
 @media print{.archive-hero{background:#fff;color:#000}.archive-hero h1,.archive-policy h2{color:#000}.archive-orbit-wrap,.archive-filters,.archive-more-wrap,.archive-card-actions,.cb-header,.cb-footer{display:none!important}.archive-grid{grid-template-columns:1fr 1fr}.archive-policy{background:#fff;color:#000}.archive-policy-grid p{color:#222}}
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+.archive-details strong { font-size:12px !important }
+:not(#legibility) .archive-details summary { font-size:12px !important }
+:not(#legibility) .archive-meta span { font-size:12px !important }
+:not(#legibility) .archive-stats span { font-size:12px !important }
+:not(#legibility) a.cb-mini-btn { font-size:12px !important }
+:not(#legibility) p.archive-orbit-caption { font-size:12px !important }
+:not(#legibility) span.archive-badge.discovery { font-size:12px !important }
+:not(#legibility) span.archive-badge.rights { font-size:12px !important }
+:not(#legibility) span.archive-badge { font-size:12px !important }
+:not(#legibility) span.archive-card-id { font-size:12px !important }
+:not(#legibility) span.archive-type-label { font-size:12px !important }

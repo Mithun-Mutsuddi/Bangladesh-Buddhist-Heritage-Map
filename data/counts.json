@@ -1,0 +1,30 @@
+{
+ "schema_version": "2026-10-30.counts.v1",
+ "note": "সব সংখ্যা ডেটা ফাইল থেকে গোনা। ডেটা বদলালে `python tools/reconcile_counts.py` চালিয়ে এই ফাইল হালনাগাদ করুন — টেস্ট এটা পাহারা দেয়।",
+ "buddha_vamsa": {
+  "dynasties": 35,
+  "kings": 35,
+  "linked_kings": 3,
+  "jatakas": 16,
+  "quotes": 22,
+  "inscriptions": 20,
+  "places": 43,
+  "sculptures": 27,
+  "archives": 26,
+  "media": 16,
+  "communities": 23,
+  "riddhi_powers": 6,
+  "riddhi_events": 13,
+  "images": 222,
+  "culture": 81,
+  "archives_with_image": 12,
+  "media_with_image": 3
+ },
+ "site": {
+  "heritage_kings": 111,
+  "heritage_sites": 337,
+  "heritage_sites_declared": 337,
+  "tracker_places": 3218,
+  "nav_items": 44
+ }
+}

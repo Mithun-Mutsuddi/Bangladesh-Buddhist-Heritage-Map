@@ -98,3 +98,9 @@
   .cb-dalijhara-panel { grid-template-columns: 1fr; gap: 28px; }
   .cb-dalijhara-panel figure { max-width: 350px; margin-inline: auto; }
 }
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+.cb-portrait small { font-size:12px !important }
+:not(#legibility) .cb-story small { font-size:12px !important }
+:not(#legibility) .cb-story-grid small { font-size:12px !important }
+:not(#legibility) .cb-story-lead-image small { font-size:12px !important }

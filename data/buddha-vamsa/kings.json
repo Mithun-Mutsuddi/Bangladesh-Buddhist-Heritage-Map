@@ -38,7 +38,9 @@
    "mother": "—",
    "evidence": "মহাবগ্গ (বিনয়), সামঞ্ঞফল সুত্ত; রাজগিরের প্রত্নস্তর।",
    "note": "পুত্র অজাতশত্রুর হাতে মৃত্যু — বৌদ্ধ গ্রন্থে দেবদত্তের প্ররোচনার কাহিনিসহ।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Bimbisara",
+   "imgKey": "king-bimbisara"
   },
   {
    "id": "ajatashatru",
@@ -66,7 +68,9 @@
    "mother": "কোশলদেবী",
    "evidence": "সামঞ্ঞফল সুত্ত; চুল্লবগ্গ ও মহাবংশের সংগীতি-বিবরণ।",
    "note": "পিতৃহত্যার কাহিনি ধর্মগ্রন্থে আছে; ঐতিহাসিক মূল্যায়নে সতর্কতা দরকার।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Ajatashatru",
+   "imgKey": "king-ajatashatru"
   },
   {
    "id": "udayana",
@@ -94,7 +98,9 @@
    "mother": "—",
    "evidence": "পালি বিনয় (সংঘ-বিভেদ-ঘটনা), ভাসের নাটক, কৌশাম্বী প্রত্নস্থল।",
    "note": "‘উদয়ভদ্দ’ অজাতসত্তুর উত্তরসূরি — দুজন আলাদা ব্যক্তি; এখানে গুলিয়ে ফেলা হয়নি।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Udayana king",
+   "imgKey": "king-udayana"
   },
   {
    "id": "pasenadi",
@@ -121,7 +127,9 @@
    "mother": "—",
    "evidence": "সংযুত্তনিকায় (কোসল সংযুত্ত), জেতবনের প্রত্নস্তর।",
    "note": "পুত্র বিরুধক কর্তৃক সিংহাসনচ্যুত হন।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Prasenajit",
+   "imgKey": "king-pasenadi"
   },
   {
    "id": "suddhodana",
@@ -149,7 +157,9 @@
    "mother": "—",
    "evidence": "বুদ্ধবংশ (পালি), ললিতবিস্তার, মহাবস্তু; তিলৌরাকোটের প্রত্নস্তর।",
    "note": "বৌদ্ধ ও জৈন-ব্রাহ্মণ্য বিবরণে কিছু পার্থক্য আছে।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Suddhodana",
+   "imgKey": "king-suddhodana"
   },
   {
    "id": "mahanama",
@@ -174,7 +184,9 @@
    "mother": "—",
    "evidence": "সংযুত্তনিকায় (মহানাম সুত্ত), অঙ্গুত্তরনিকায়।",
    "note": "‘শাক্য’ পদবিধারী আজও নেপালে আছেন — কিন্তু বুদ্ধের সঙ্গে জৈবিক যোগাযোগ প্রমাণিত নয়।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Sakya Mahanama",
+   "imgKey": "king-mahanama"
   },
   {
    "id": "menander",
@@ -203,7 +215,9 @@
    "mother": "—",
    "evidence": "মিলিন্দপঞ্হ (পালি), প্লুতার্ক ও স্ট্রাবোর বিবরণ, ইন্দো-গ্রিক রৌপ্যমুদ্রা।",
    "note": "মিলিন্দপঞ্হ পরবর্তী যুগের সংকলন; কাহিনির মূল ব্যক্তি ঐতিহাসিক।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Menander I coin",
+   "imgKey": "king-menander"
   },
   {
    "id": "devanampiya-tissa",
@@ -231,7 +245,9 @@
    "mother": "—",
    "evidence": "মহাবংশ (১১–২০ অধ্যায়), মিহিনতলের প্রত্নস্থল।",
    "note": "‘দেবানম্পিয়’ উপাধি অশোকের লিপিতেও আছে — দুজনের উপাধি এক।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Devanampiya Tissa",
+   "imgKey": "king-devanampiya-tissa"
   },
   {
    "id": "dutugemunu",
@@ -256,7 +272,9 @@
    "mother": "বিহারমহাদেবী",
    "evidence": "মহাবংশ (২২–৩২ অধ্যায়), রুয়ানবেলিসায়ের প্রত্নপ্রমাণ।",
    "note": "যুদ্ধকথা ধর্মীয় উদ্দেশ্যে রঙিন করা হয়েছে — আধুনিক ইতিহাসবিদেরা এই দিকটি চিনিয়ে দেন।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Dutugemunu",
+   "imgKey": "king-dutugemunu"
   },
   {
    "id": "anawrahta",
@@ -283,7 +301,9 @@
    "mother": "—",
    "evidence": "ম্যাথোন-পিনসা ও অন্যান্য মন্দির-শিলালিপি, চীনা ও পিউ বিবরণ।",
    "note": "পাগানের অনেক শিলালিপি এখনো সম্পূর্ণ সম্পাদিত নয় — গবেষণার সুযোগ।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Anawrahta",
+   "imgKey": "king-anawrahta"
   },
   {
    "id": "jayavarman7",
@@ -309,7 +329,9 @@
    "mother": "জয়রাজচূড়ামণি",
    "evidence": "প্রেহ খান-এর শিলালিপি, বায়োনের ৬০০+ মূর্তি, চৌ তা-কুয়ানের বিবরণ।",
    "note": "পরে থেরবাদ প্রধানের সময় মহাযান-প্রতিমা ও পাথর পুনর্ব্যবহৃত হয় — প্রমাণের ক্ষতি হয়েছে।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Jayavarman VII face",
+   "imgKey": "king-jayavarman7"
   },
   {
    "id": "songtsen-gampo",
@@ -335,7 +357,9 @@
    "mother": "—",
    "evidence": "দুনহুয়াং-এর তিব্বতীয় দলিল, লাসার শিলালিপি, তাং-রাজদরবারের বিবরণ।",
    "note": "‘ধর্ম-রাজা’ চরিত্রে পরবর্তী পাণ্ডিত্যের রঙিন স্তর আছে।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Songtsen Gampo",
+   "imgKey": "king-songtsen-gampo"
   },
   {
    "id": "trisong-detsen",
@@ -360,7 +384,9 @@
    "mother": "—",
    "evidence": "সম্যের শিলালিপি (৭৭৯-এর দলিল), দুনহুয়াং-পাণ্ডুলিপি।",
    "note": "‘সম্য-বিতর্ক’ (চীনা চ্যান বনাম ভারতীয় ধ্যান) তিব্বতীয় ইতিহাসের বিখ্যাত ঘটনা।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Trisong Detsen",
+   "imgKey": "king-trisong-detsen"
   },
   {
    "id": "shotoku",
@@ -387,7 +413,9 @@
    "mother": "—",
    "evidence": "নিহোন শোকি, তেন্নোজি-নথি, হোর্যুজির প্রত্নকাঠামো।",
    "note": "‘১৭-অনুচ্ছেদ’ তাঁর নিজের লেখা কি না — এখনো বিতর্কিত।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Prince Shotoku",
+   "imgKey": "king-shotoku"
   },
   {
    "id": "shomu",
@@ -412,7 +440,9 @@
    "mother": "—",
    "evidence": "শোসোইন দলিল, তোদাইজির ৭৫২-এর দাইবুৎসু-অভিষেক-নথি।",
    "note": "শোসোইন-নথিতে নারী-সহ সব শ্রেণির দান-তালিকা — সামাজিক ইতিহাসের রত্ন।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Emperor Shomu Todai-ji",
+   "imgKey": "king-shomu"
   },
   {
    "id": "beopheung",
@@ -437,7 +467,9 @@
    "mother": "—",
    "evidence": "সমগুক সাগি, হোয়াংনিয়ংসার ইতিহাস-নথি।",
    "note": "‘সমগুক’ ১৩শ শতকে সংকলিত — প্রাথমিক সূত্র নয়, কিন্তু একমাত্র পূর্ণ বর্ণনা।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Beopheung Silla",
+   "imgKey": "king-beopheung"
   },
   {
    "id": "goryeo-taejo",
@@ -462,7 +494,9 @@
    "mother": "—",
    "evidence": "তেজোর ‘দশ উপদেশ’, গোরিও-শিলালিপি।",
    "note": "কোরিয়ায় বৌদ্ধ-রাষ্ট্র সম্পর্কের সবচেয়ে স্পষ্ট নীতিদস্তাবেজ।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Taejo of Goryeo",
+   "imgKey": "king-goryeo-taejo"
   },
   {
    "id": "ram-khamhaeng",
@@ -486,7 +520,9 @@
    "mother": "—",
    "evidence": "রাম খামহেং-শিলালিপি (১৮৩৩-র কপি), সুখোথাই প্রত্নাঞ্চল।",
    "note": "শিলালিপির সত্যতা নিয়ে ১৯৮০-র দশকে বিতর্ক হয়েছিল; এখন অধিকাংশ পণ্ডিত গ্রহণ করেন।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Ram Khamhaeng inscription",
+   "imgKey": "king-ram-khamhaeng"
   },
   {
    "id": "lithai",
@@ -511,7 +547,9 @@
    "mother": "—",
    "evidence": "ত্রিভূমিকথা (১৩৪৫), সুখোথাই-শিলালিপি।",
    "note": "গ্রন্থের রচনাকাল ও লেখকত্ব নিয়ে দুই মত আছে।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Lithai",
+   "imgKey": "king-lithai"
   },
   {
    "id": "mongkut",
@@ -536,7 +574,9 @@
    "mother": "—",
    "evidence": "রাজকীয় সংস্করণ, সংঘ-আইন, ডিগনি-শিলালিপির সংস্করণ।",
    "note": "পশ্চিমা ‘দ্য কিং অ্যান্ড আই’ নাটক-চলচ্চিত্রে চরিত্রটি ঐতিহাসিকভাবে বিকৃত।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Mongkut Rama IV",
+   "imgKey": "king-mongkut"
   },
   {
    "id": "mindon-min",
@@ -561,7 +601,9 @@
    "mother": "—",
    "evidence": "কুথোদো-শিলালিপি (১৮৭১), রাজদরবারের সংস্কৃতি-বিবরণ।",
    "note": "কুথোদোর সব শিলালিপির পাঠ এখনো পূর্ণ প্রকাশিত নয় — গবেষণার সুযোগ।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Mindon Min",
+   "imgKey": "king-mindon-min"
   },
   {
    "id": "kublai",
@@ -586,7 +628,9 @@
    "mother": "সোরখাকতানি বেকি",
    "evidence": "তিব্বতীয় ‘পিরেন’-দলিল, ইউয়ান রাজকীয় ফরমান।",
    "note": "ব্যক্তিগতভাবে তিনি বৌদ্ধ ছিলেন কি না — পণ্ডিতদের মধ্যে ভিন্নমত আছে।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Kublai Khan",
+   "imgKey": "king-kublai"
   },
   {
    "id": "zanabazar",
@@ -613,7 +657,9 @@
    "mother": "—",
    "evidence": "জানাবাজার জাদুঘরের ভাস্কর্য, মঙ্গোলীয় অনুবাদ-গ্রন্থ।",
    "note": "অনেক ‘জানাবাজার’ তালুই পরে নির্মিত — শিল্প-ঐতিহাসিক যাচাই দরকার।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Zanabazar",
+   "imgKey": "king-zanabazar"
   },
   {
    "id": "manadeva",
@@ -637,7 +683,9 @@
    "mother": "—",
    "evidence": "চাঙ্গু-নারায়ণ শিলালিপি (ব্রাহ্মী), পাটনের প্রত্নস্থল।",
    "note": "নেপালি প্রত্নলিপি-শাস্ত্রের সূচনা-বিন্দু।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Manadeva inscription",
+   "imgKey": "king-manadeva"
   },
   {
    "id": "bhupatindra",
@@ -662,7 +710,9 @@
    "mother": "—",
    "evidence": "ভক্তপুর দরবার স্কয়ার, রাজ-নথি, UNESCO-তালিকাভুক্ত নগর।",
    "note": "মল্ল রাজারা হিন্দু-বৌদ্ধ উভয় অনুষ্ঠানেই দান করতেন।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Bhupatindra Malla",
+   "imgKey": "king-bhupatindra"
   },
   {
    "id": "parakramabahu",
@@ -687,7 +737,9 @@
    "mother": "—",
    "evidence": "চুলাভংস (১২শ শতক), গল-বিহার-শিলালিপি, পোলোন্নারুয়া প্রত্নস্থল।",
    "note": "একীভূতকরণে কিছু ধারা হারিয়ে যায় — সংঘ-ইতিহাসে সেই বিতর্কও আছে।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Parakramabahu I",
+   "imgKey": "king-parakramabahu"
   },
   {
    "id": "kirti-sri",
@@ -712,7 +764,9 @@
    "mother": "—",
    "evidence": "১৭৫৩-র সংঘ-দলিল, দলদা মালিগাওয়ার রাজকীয় নথি।",
    "note": "নায়ক্কর রাজারা দক্ষিণ ভারত থেকে এসে স্থানীয় ভাষা-ধর্ম গ্রহণ করেন।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Kirti Sri Rajasinha",
+   "imgKey": "king-kirti-sri"
   },
   {
    "id": "ugyen-wangchuck",
@@ -737,7 +791,9 @@
    "mother": "—",
    "evidence": "১৯০৭-র পুনাখা চুক্তি, ব্রিটিশ-ভুটান সম্পর্ক-নথি।",
    "note": "‘রাজা = ধর্মের রক্ষক’ নীতি ২০০৮-র সংবিধানে পুনরায় লেখা হয়।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Ugyen Wangchuck",
+   "imgKey": "king-ugyen-wangchuck"
   },
   {
    "id": "sihanouk",
@@ -762,7 +818,9 @@
    "mother": "কোসলক মণিবণ্ঢন",
    "evidence": "রাজকীয় ফিরমান, ১৯৯৩-র সংবিধান, জাতিসংঘ-নথি।",
    "note": "১৯৭০-পরবর্তী সংঘ-কাঠামো ভেঙে যাওয়া ও পুনর্গঠন গবেষণার বিষয়।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Norodom Sihanouk",
+   "imgKey": "king-sihanouk"
   },
   {
    "id": "brahmadatta",
@@ -790,7 +848,9 @@
    "jatakas": [
     "নিরোধ-জাতক",
     "মহাকুশ-জাতক"
-   ]
+   ],
+   "imgQuery": "Brahmadatta jataka",
+   "imgKey": "king-brahmadatta"
   },
   {
    "id": "sibi",
@@ -817,7 +877,9 @@
    "note": "শিবি জনগোষ্ঠী পেশোয়ার অঞ্চল-সংলগ্ন ছিল বলে অনুমান; ‘রাজা’ ঐতিহাসিক চরিত্র নন।",
    "jatakas": [
     "সিবি-জাতক (৪৯৯)"
-   ]
+   ],
+   "imgQuery": "Sibi jataka",
+   "imgKey": "king-sibi"
   },
   {
    "id": "mahasammata",
@@ -841,7 +903,9 @@
    "mother": "—",
    "evidence": "অগ্গঞ্ঞ সুত্ত (দীঘনিকায় ২৭); বুদ্ধবংশ ও মহাবংশের বংশ-তালিকা।",
    "note": "আক্ষরিক ঐতিহাসিক ব্যক্তি নন — বৌদ্ধ সমাজদর্শনের ‘origin myth’।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Mahasammata",
+   "imgKey": "king-mahasammata"
   },
   {
    "id": "okkaka",
@@ -866,7 +930,9 @@
    "mother": "—",
    "evidence": "অম্বট্ঠ সুত্ত (দীঘনিকায় ৩), বুদ্ধবংশ (পালি)।",
    "note": "ব্রাহ্মণ্য পুরাণের ইক্ষ্বাকু-ধারার সঙ্গে নাম-মিল, কিন্তু দুই ধারা ভিন্নভাবে এই নাম ব্যবহার করে।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Okkaka",
+   "imgKey": "king-okkaka"
   },
   {
    "id": "atthadassi",
@@ -890,7 +956,9 @@
    "mother": "—",
    "evidence": "বুদ্ধবংশ (পালি) ও তার টীকা।",
    "note": "এই নামগুলো ধর্মীয় cosmology-র; ঐতিহাসিকতা দাবি করা হয় না।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Atthadassi Buddha",
+   "imgKey": "king-atthadassi"
   },
   {
    "id": "ashoka-bengal",
@@ -915,7 +983,9 @@
    "mother": "—",
    "evidence": "মহাস্থানগড়ের খনন-প্রতিবেদন (প্রত্নতত্ত্ব অধিদপ্তর), ব্রাহ্মী-লিপি।",
    "note": "‘অশোকের স্তূপ’-কাহিনি প্রত্নতাত্ত্বিকভাবে যাচাইকৃত নয় — জনশ্রুতি হিসেবে রাখা হয়েছে।",
-   "jatakas": []
+   "jatakas": [],
+   "imgQuery": "Mahasthan Brahmi inscription",
+   "imgKey": "king-ashoka-bengal"
   }
  ],
  "linkedProfiles": [

@@ -1,0 +1,15 @@
+diff --git a/.github/workflows/heritage-validation.yml b/.github/workflows/heritage-validation.yml
+index 0ae04e3..086c819 100644
+--- a/.github/workflows/heritage-validation.yml
++++ b/.github/workflows/heritage-validation.yml
+@@ -27,3 +27,10 @@ jobs:
+           node --check heritage-additions.js
+           node --check heritage-enhancements.js
+           node --check seo-content.js
++      - name: Buddha-vamsa and data-count tests
++        run: |
++          node --check buddha-vamsa.js
++          node --test tests/buddha-vamsa-data.test.mjs
++          node --test tests/data-counts.test.mjs
++      - name: Reconcile data counts (fails if data/counts.json is stale)
++        run: python tools/reconcile_counts.py

@@ -201,3 +201,43 @@ body.cb.tracker .cb-language-bar { display: none; }
   body.cb.tracker main .page-heading .button,
   body.cb.tracker main .page-heading > .button { font-size: 12.5px !important; }
 }
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+.map-label span { font-size:12px !important }
+:not(#legibility) .mini-share span { font-size:12px !important }
+:not(#legibility) p.attribution { font-size:12px !important }
+:not(#legibility) p.eyebrow { font-size:12px !important }
+
+:not(#legibility) /* legibility floor — tracker (১২px ন্যূনতম) */
+.profile b,
+:not(#legibility) .profile small,
+:not(#legibility) .page-heading .eyebrow,
+:not(#legibility) .page-heading .button span,
+:not(#legibility) .page-heading .button,
+:not(#legibility) .stat-number small,
+:not(#legibility) .map-panel .attribution { font-size: 12px !important; }
+:not(#legibility) .page-heading .eyebrow,
+:not(#legibility) .hero-content .button span,
+:not(#legibility) .hero-content .button,
+:not(#legibility) .stat-number small { font-size: 12px !important; }
+
+:not(#legibility) /* legibility floor — tracker শেষ পাস */
+p.eyebrow,
+:not(#legibility) .stat-number small,
+:not(#legibility) p.attribution,
+:not(#legibility) .hero-content .button span,
+:not(#legibility) .hero-content .button,
+:not(#legibility) button .button span,
+:not(#legibility) small,
+:not(#legibility) .card-caption small,
+:not(#legibility) .featured-body small,
+:not(#legibility) .map-label span:not(.flag) { font-size: 12px !important; }
+:not(#legibility) .hero .button,
+:not(#legibility) .button,
+:not(#legibility) .button span { font-size: 12px !important; }
+
+/* মোবাইলে পেজ-হেডিং-এর বোতামটি আইকন-কেবল (accessible name আছে) — তাই লেখা লুকোই */
+@media (max-width: 760px) {
+  :not(#legibility) .page-heading > .button,
+  :not(#legibility) .page-heading > .button span { font-size: 0 !important; }
+}

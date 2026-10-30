@@ -31,8 +31,27 @@ export function stats(state, places, districts){
 export function badge(n){return n>=100?'Heritage Guardian':n>=25?'Heritage Wanderer':n>=5?'Curious Explorer':'New Explorer';}
 export function haversine(a,b){const r=Math.PI/180,dLat=(b.lat-a.lat)*r,dLon=(b.lng-a.lng)*r;const q=Math.sin(dLat/2)**2+Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(q),Math.sqrt(Math.max(0,1-q)));}
 export function routeDistance(points){return points.reduce((sum,p,i)=>sum+(i?haversine(points[i-1],p):0),0);}
+/* জিপিএস-নির্ভুলতার স্তর — ‘ভালো’ আর ‘কেবল আন্দাজ’ আলাদা করে দেখানো হয়,
+   যাতে ৫০ মিটার-নির্ভুল পয়েন্টকে সঠিক স্থানের প্রমাণ ভাবা না হয়। */
+export const ACCURACY_LIMIT_METRES = 80;
+export function accuracyTier(metres){
+ if(!Number.isFinite(metres)||metres<0)return 'unknown';
+ if(metres<=10)return 'excellent';
+ if(metres<=30)return 'good';
+ if(metres<=ACCURACY_LIMIT_METRES)return 'fair';
+ return 'poor';
+}
+export function accuracyLabel(metres){
+ return {excellent:'চমৎকার (±১০ মি)',good:'ভালো (±৩০ মি)',fair:'মোটামুটি (±৮০ মি)',poor:'দুর্বল (>৮০ মি — নেওয়া হয় না)',unknown:'অজানা'}[accuracyTier(metres)];
+}
+export function routeAccuracy(points){
+ if(!points.length)return {tier:'unknown',median:null,accepted:0,rejected:0};
+ const acc=points.map(p=>p.accuracy).sort((a,b)=>a-b);
+ const median=acc[Math.floor(acc.length/2)];
+ return {tier:accuracyTier(median),median,accepted:points.filter(p=>p.accuracy<=ACCURACY_LIMIT_METRES).length,rejected:points.filter(p=>p.accuracy>ACCURACY_LIMIT_METRES).length};
+}
 export function acceptPoint(points,p){
- if(!Number.isFinite(p.lat)||!Number.isFinite(p.lng)||Math.abs(p.lat)>90||Math.abs(p.lng)>180||!Number.isFinite(p.accuracy)||p.accuracy>80||p.accuracy<0||!Number.isFinite(p.time))return false;
+ if(!Number.isFinite(p.lat)||!Number.isFinite(p.lng)||Math.abs(p.lat)>90||Math.abs(p.lng)>180||!Number.isFinite(p.accuracy)||p.accuracy>ACCURACY_LIMIT_METRES||p.accuracy<0||!Number.isFinite(p.time))return false;
  const last=points.at(-1);if(!last)return true;
  const seconds=(p.time-last.time)/1000,km=haversine(last,p);
  return seconds>=5&&km>=.015&&km/seconds*3600<200;
@@ -44,4 +63,4 @@ export function geometryPath(g){const polys=g.type==='Polygon'?[g.coordinates]:g
 export function shareSnapshot(state, places, districts, includeName=true){const x=stats(state,places,districts);return {v:1,name:includeName?state.name.slice(0,40):'Explorer',sites:x.sites,total:x.total,districts:[...visitedDistricts(state,places,districts)],badge:x.badge};}
 export function encodeShare(snapshot){const bytes=new TextEncoder().encode(JSON.stringify(snapshot));let s='';bytes.forEach(b=>s+=String.fromCharCode(b));return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
 export function decodeShare(str,knownDistricts){if(str.length>12000)throw Error('Share link is too long.');const raw=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(str.replace(/-/g,'+').replace(/_/g,'/')),c=>c.charCodeAt(0))));if(raw.v!==1||!Number.isInteger(raw.sites)||!Number.isInteger(raw.total)||raw.sites<0||raw.total<raw.sites||raw.total>100000)throw Error('Invalid progress card.');return {v:1,name:String(raw.name||'Explorer').slice(0,40),sites:raw.sites,total:raw.total,districts:[...new Set((Array.isArray(raw.districts)?raw.districts:[]).filter(d=>knownDistricts.has(d)))],badge:badge(raw.sites)};}
-export function routeGeoJSON(routes){return {type:'FeatureCollection',features:routes.filter(r=>r.points.length).map(r=>({type:'Feature',properties:{started:r.started,ended:r.ended,accuracy_metres:r.points.map(p=>p.accuracy),timestamps:r.points.map(p=>new Date(p.time).toISOString())},geometry:r.points.length===1?{type:'Point',coordinates:[r.points[0].lng,r.points[0].lat]}:{type:'LineString',coordinates:r.points.map(p=>[p.lng,p.lat])}}))};}
+export function routeGeoJSON(routes){return {type:'FeatureCollection',features:routes.filter(r=>r.points.length).map(r=>({type:'Feature',properties:{started:r.started,ended:r.ended,accuracy_metres:r.points.map(p=>p.accuracy),accuracy_tier:routeAccuracy(r.points).tier,accuracy_median_metres:routeAccuracy(r.points).median,timestamps:r.points.map(p=>new Date(p.time).toISOString())},geometry:r.points.length===1?{type:'Point',coordinates:[r.points[0].lng,r.points[0].lat]}:{type:'LineString',coordinates:r.points.map(p=>[p.lng,p.lat])}}))};}

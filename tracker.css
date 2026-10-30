@@ -4,3 +4,27 @@
 :root{--serif:'Lora','Noto Sans Bengali',Georgia,serif;--muted:#6d7a6d}
 .page-heading .muted,.panel-heading p{color:#778571}.stat-label,.stat-note{color:#7b8872}.hero p{color:#646e51}.share-panel p,.guide-promo p{color:#7c886b}.check-row{color:#5d7150}.map-instruction{color:#78876d}.featured-body p{color:#75866c}.hero h2{font-weight:400}.mini-share>span{letter-spacing:-.3px}.brand{font-size:23px}.stat-number.badge-number{font-size:16px}#toast{opacity:0;visibility:hidden}#toast.visible{opacity:1;visibility:visible}
 @media(max-width:760px){.sidebar>.nav-item{display:none!important}.sidebar .nav-item:nth-child(4){display:flex}.sidebar .nav-item{padding:6px 7px}.guide-promo h2 br:after{content:' '}.guide-promo h2 br{display:initial}.hero h2{font-size:32px}.page-heading h1{font-size:24px}.brand{font-size:22px}}
+
+:not(#legibility) /* ---- legibility floor: কোনো লেখা ১২px-এর ছোট নয় ---- */
+.check-row { font-size:12px }
+:not(#legibility) .eyebrow { font-size:12px }
+:not(#legibility) .hero p { font-size:12px }
+:not(#legibility) .hero-foot { font-size:12px }
+:not(#legibility) .hero-location { font-size:12px }
+:not(#legibility) .hero-tag { font-size:12px }
+:not(#legibility) .local-indicator { font-size:12px }
+:not(#legibility) .map-footer { font-size:12px }
+:not(#legibility) .map-legend { font-size:12px }
+:not(#legibility) .panel-heading p { font-size:12px }
+:not(#legibility) .profile small { font-size:12px }
+:not(#legibility) .route-item { font-size:12px }
+:not(#legibility) .segmented button { font-size:12px }
+:not(#legibility) .share-warning { font-size:12px }
+:not(#legibility) .side-note a { font-size:12px }
+:not(#legibility) .side-note p { font-size:12px }
+:not(#legibility) .stat-label { font-size:12px }
+:not(#legibility) .stat-note { font-size:12px }
+:not(#legibility) .stat-number small { font-size:12px }
+:not(#legibility) .workspace-label { font-size:12px }
+:not(#legibility) div.workspace-label { font-size:12px }
+:not(#legibility) p.attribution { font-size:12px }
