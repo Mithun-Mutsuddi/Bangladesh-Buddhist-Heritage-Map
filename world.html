@@ -87,7 +87,7 @@ body{ background:#fffaf0; color:#1a140d; font-family:"Noto Sans Bengali",system-
   <div class="map-wrap">
     <div>
       <div id="worldMap" aria-label="বিশ্ব বৌদ্ধ মানচিত্র"></div>
-      <p class="small" style="margin:6px 0 0">🗺️ রঙ গাঢ় = বেশি বৌদ্ধ · ক্লিক করলে দেশের কার্ড খুলবে · Leaflet + CartoDB positron (tile fallback আছে)</p>
+      <p class="small" style="margin:6px 0 0">🗺️ রঙ গাঢ় = বেশি বৌদ্ধ · ক্লিক করলে দেশের কার্ড খুলবে · Leaflet + OpenStreetMap (no API key, tile fallback HOT)</p>
       <div style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:8px 10px; margin-top:8px; font-size:11px; line-height:1.8">
         <b style="color:#4a1f05">মহাদেশ:</b> <span id="continentBadges"></span>
       </div>
@@ -487,7 +487,7 @@ function showCountry(r){
   // highlight on map if available
   if(window.censusMap && r.iso){
     // try to fly to country (approx via latlng table)
-    var latlng={TH:[15.8,100.9], CN:[35,105], MM:[21.9,95.9], JP:[36.2,138.3], VN:[14,108], KH:[12.5,104.9], LK:[7.8,80.7], KR:[35.9,127.8], IN:[20.6,78.9], MY:[4.2,101.9], BD:[23.7,90.4], US:[39.8,-98.5], LA:[19.8,102.5], ID:[-0.8,113.9], TW:[23.7,120.9], AU:[-25.2,133.7], GB:[55.4,-3.4], MN:[46.8,103.8], BT:[27.5,90.4], SG:[1.35,103.8]};
+    var latlng={TH:[15.8,100.9], CN:[35,105], MM:[21.9,95.9], JP:[36.2,138.3], VN:[14,108], KH:[12.5,104.9], LK:[7.8,80.7], KR:[35.9,127.8], IN:[20.6,78.9], MY:[4.2,101.9], BD:[23.7,90.4], US:[39.8,-98.5], LA:[19.8,102.5], ID:[-0.8,113.9], TW:[23.7,120.9], AU:[-25.2,133.7], GB:[55.4,-3.4], MN:[46.8,103.8], BT:[27.5,90.4], SG:[1.35,103.8], TH2:[15.8,100.9], KH2:[12.5,104.9], LK2:[7.8,80.7], JP2:[36.2,138.3], NP:[28.3,84.1], PK:[30.3,69.3], AE:[23.4,53.8], SA:[23.8,45.0], ZA:[-30.5,22.9], NZ:[-40.9,174.9], IT:[41.8,12.5], NL:[52.1,5.2], SE:[60.1,18.6], HK:[22.3,114.1], MO:[22.1,113.5], NO:[60.4,8.4], DK:[56.2,9.5], PE:[-9.1,-75.0], CL:[-35.6,-71.5], FR:[46.2,2.2], DE:[51.1,10.4], CA:[56.1,-106.3], BR:[-14.2,-51.9], RU:[61.5,105.3], ES:[40.4,-3.7], PL:[51.9,19.1], PT:[39.3,-8.2], CH:[46.8,8.2], AT:[47.5,14.5], BE:[50.5,4.4], CZ:[49.8,15.4], HU:[47.1,19.5], FI:[61.9,25.7], IE:[53.4,-8.2], GR:[39.0,21.8], TR:[38.9,35.2], MX:[23.6,-102.5], AR:[-38.4,-63.6], CO:[4.5,-74.2], EC:[-1.8,-78.1], VE:[6.4,-66.5], KE:[-0.0,37.9], NG:[9.0,8.6], EG:[26.8,30.8], MA:[31.7,-7.0], TZ:[-6.3,34.8], UG:[1.3,32.2], ET:[9.1,40.4], FJ:[-16.5,179.9], PG:[-6.3,143.9], QA:[25.2,51.5], PH:[12.8,121.7], TH2:[15.8,100.9], KH2:[12.5,104.9], LK2:[7.8,80.7], JP2:[36.2,138.3], NP:[28.3,84.1], PK:[30.3,69.3], AE:[23.4,53.8], SA:[23.8,45.0], ZA:[-30.5,22.9], NZ:[-40.9,174.9], IT:[41.8,12.5], NL:[52.1,5.2], SE:[60.1,18.6], HK:[22.3,114.1], MO:[22.1,113.5], NO:[60.4,8.4], DK:[56.2,9.5], PE:[-9.1,-75.0], CL:[-35.6,-71.5], FR:[46.2,2.2], DE:[51.1,10.4], CA:[56.1,-106.3], BR:[-14.2,-51.9], RU:[61.5,105.3], ES:[40.4,-3.7], PL:[51.9,19.1], PT:[39.3,-8.2], CH:[46.8,8.2], AT:[47.5,14.5], BE:[50.5,4.4], CZ:[49.8,15.4], HU:[47.1,19.5], FI:[61.9,25.7], IE:[53.4,-8.2], GR:[39.0,21.8], TR:[38.9,35.2], MX:[23.6,-102.5], AR:[-38.4,-63.6], CO:[4.5,-74.2], EC:[-1.8,-78.1], VE:[6.4,-66.5], KE:[-0.0,37.9], NG:[9.0,8.6], EG:[26.8,30.8], MA:[31.7,-7.0], TZ:[-6.3,34.8], UG:[1.3,32.2], ET:[9.1,40.4], FJ:[-16.5,179.9], PG:[-6.3,143.9], QA:[25.2,51.5], PH:[12.8,121.7]};
     var ll=latlng[r.iso];
     if(ll) censusMap.setView(ll, r.iso==='CN'||r.iso==='US'||r.iso==='IN'?3:5);
   }
@@ -530,13 +530,20 @@ function renderMap(){
   if(window.censusMap) { window.censusMap.remove(); window.censusMap=null; }
   var map=L.map('worldMap', { worldCopyJump:true, minZoom:1.5 }).setView([20, 90], 2);
   window.censusMap=map;
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution:'© OpenStreetMap © CartoDB', maxZoom:6
-  }).addTo(map).on('tileerror', function(){ /* fallback handled by Leaflet */ });
+  // Free OSM — no API key (Carto now requires key) + tileerror fallback to HOT
+  var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution:'© OpenStreetMap contributors', maxZoom:6, maxNativeZoom:19
+  }).addTo(map);
+  var hot = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    attribution:'© OpenStreetMap HOT', maxZoom:6
+  });
+  osm.on('tileerror', function(){ if(!map.hasLayer(hot)) hot.addTo(map); });
+  // Ensure markers visible after tiles load
+  setTimeout(function(){ map.invalidateSize(); }, 400);
   // Add circle markers for countries
   var metric=document.getElementById('metricFilter').value;
   DATA.countries.forEach(function(r){
-    var latlng={TH:[15.8,100.9], CN:[35,105], MM:[21.9,95.9], JP:[36.2,138.3], VN:[14,108], KH:[12.5,104.9], LK:[7.8,80.7], KR:[35.9,127.8], IN:[20.6,78.9], MY:[4.2,101.9], BD:[23.7,90.4], US:[39.8,-98.5], LA:[19.8,102.5], ID:[-0.8,113.9], TW:[23.7,120.9], AU:[-25.2,133.7], GB:[55.4,-3.4], MN:[46.8,103.8], BT:[27.5,90.4], SG:[1.35,103.8],
+    var latlng={TH:[15.8,100.9], CN:[35,105], MM:[21.9,95.9], JP:[36.2,138.3], VN:[14,108], KH:[12.5,104.9], LK:[7.8,80.7], KR:[35.9,127.8], IN:[20.6,78.9], MY:[4.2,101.9], BD:[23.7,90.4], US:[39.8,-98.5], LA:[19.8,102.5], ID:[-0.8,113.9], TW:[23.7,120.9], AU:[-25.2,133.7], GB:[55.4,-3.4], MN:[46.8,103.8], BT:[27.5,90.4], SG:[1.35,103.8], TH2:[15.8,100.9], KH2:[12.5,104.9], LK2:[7.8,80.7], JP2:[36.2,138.3], NP:[28.3,84.1], PK:[30.3,69.3], AE:[23.4,53.8], SA:[23.8,45.0], ZA:[-30.5,22.9], NZ:[-40.9,174.9], IT:[41.8,12.5], NL:[52.1,5.2], SE:[60.1,18.6], HK:[22.3,114.1], MO:[22.1,113.5], NO:[60.4,8.4], DK:[56.2,9.5], PE:[-9.1,-75.0], CL:[-35.6,-71.5], FR:[46.2,2.2], DE:[51.1,10.4], CA:[56.1,-106.3], BR:[-14.2,-51.9], RU:[61.5,105.3], ES:[40.4,-3.7], PL:[51.9,19.1], PT:[39.3,-8.2], CH:[46.8,8.2], AT:[47.5,14.5], BE:[50.5,4.4], CZ:[49.8,15.4], HU:[47.1,19.5], FI:[61.9,25.7], IE:[53.4,-8.2], GR:[39.0,21.8], TR:[38.9,35.2], MX:[23.6,-102.5], AR:[-38.4,-63.6], CO:[4.5,-74.2], EC:[-1.8,-78.1], VE:[6.4,-66.5], KE:[-0.0,37.9], NG:[9.0,8.6], EG:[26.8,30.8], MA:[31.7,-7.0], TZ:[-6.3,34.8], UG:[1.3,32.2], ET:[9.1,40.4], FJ:[-16.5,179.9], PG:[-6.3,143.9], QA:[25.2,51.5], PH:[12.8,121.7],
       FR:[46.2,2.2], DE:[51.1,10.4], CA:[56.1,-106.3], BR:[-14.2,-51.9], RU:[61.5,105.3], NP:[28.3,84.1], PK:[30.3,69.3], AE:[23.4,53.8], SA:[23.8,45.0], ZA:[-30.5,22.9], NZ:[-40.9,174.8], IT:[41.8,12.5], NL:[52.1,5.2], SE:[60.1,18.6], HK:[22.3,114.1], MO:[22.1,113.5], NO:[60.4,8.4], DK:[56.2,9.5], PE:[-9.1,-75.0], CL:[-35.6,-71.5]}[r.iso];
     if(!latlng) return;
     var val;
