@@ -58,9 +58,13 @@ body{ background:#fffaf0; color:#1a140d; font-family:"Noto Sans Bengali",system-
 
 <main class="wrap" style="padding:16px 0 24px">
   <!-- KPI -->
-    <div style="background:#4a1f05; color:#ffe7bb; text-align:center; padding:8px 12px; font-weight:800; font-size:11px; letter-spacing:.03em; border-radius:0">🏛️ ইতিহাস ও ঐতিহ্য গ্রুপ → বিশ্ব বৌদ্ধ জনগণনা + জনগোষ্ঠী + পদবী (একই বিভাগে)</div>
+    <div style="background:#4a1f05; color:#ffe7bb; text-align:center; padding:8px 12px; font-weight:800; font-size:11px; letter-spacing:.03em; border-radius:0">🏛️ ইতিহাস ও ঐতিহ্য → বৌদ্ধ জনগোষ্ঠী → 🌏 বিশ্ব বৌদ্ধ জনগণনা মানচিত্র (live) — একই বিভাগে community.html এও লিংক</div>
 
+  <div style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:10px; margin:8px 0; font-size:12px; text-align:center">
+    📍 এই মানচিত্র এখন <b>ইতিহাস ও ঐতিহ্য → বৌদ্ধ জনগোষ্ঠী</b> বিভাগের ভিতরে — <a href="community.html#padabi" style="color:#8f3d08; font-weight:800">community.html#padabi তে সব জনগোষ্ঠী একসাথে →</a> · <a href="community.html" style="color:#4a1f05">একই বিভাগে যান ↗</a>
+  </div>
   <div class="kpi" id="kpi"></div>
+  <div id="timelineKpi" style="display:none; background:#fff7df; border:1px dashed #ffbd57; padding:8px 12px; border-radius:10px; font-size:12px; margin:8px 0"></div>
 
   <div class="note">
     🔄 <b>Auto-update:</b> এই পাতা খুললে <code>data/world-buddhist-census.json</code> লোড করে, তারপর background-এ Wikipedia <i>Buddhism by country</i> + WorldPopulationReview থেকে নতুন সংখ্যা fetch করার চেষ্টা করে — CORS বাধা হলে local cache-এ ফিরে আসে, কোনো ভুল সংখ্যা দেখায় না। শেষ যাচাই: <b id="lastVerified"></b> · <a href="data/world-buddhist-census.json" target="_blank" style="color:#8f3d08; font-weight:800">JSON দেখো →</a>
@@ -69,7 +73,7 @@ body{ background:#fffaf0; color:#1a140d; font-family:"Noto Sans Bengali",system-
   <!-- History Timeline 570 BCE → 2026 -->
   <section style="background:linear-gradient(135deg,#fffaf0 0%, #e7f4ee 100%); border:2px solid #123f39; border-radius:16px; padding:14px; margin:12px 0">
     <h3 style="margin:0 0 8px; color:#4a1f05; font-size:14px">⏳ সময় অনুসারে বৌদ্ধ জনসংখ্যা — ৫৭০ BCE (বুদ্ধ জন্ম) → ২০২৬ (live)</h3>
-    <p style="font-size:11px; color:#6e5a46; margin:0 0 10px">Slider টানলে <b>বিশ্ব + বাংলাদেশ</b> বৌদ্ধ জনসংখ্যা ও ম্যাপ একসাথে ফিল্টার হবে। ৫৭০ BCE থেকে আপডেট পর্যন্ত — প্রাচীন অনুমান ±30%।</p>
+    <p style="font-size:11px; color:#6e5a46; margin:0 0 10px">Slider টানলে <b>বিশ্ব + বাংলাদেশ মোট</b> বৌদ্ধ জনসংখ্যা (timelineKpi) আপডেট হবে। <b>Per-country ঐতিহাসিক</b> জনগণনা 1800-এর আগে নেই, তাই table/map 2020 Pew strict-এই থাকে — নিচে historic note দেখুন। ৫৭০ BCE থেকে 2026 ±30% অনুমান।</p>
     <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap">
       <input id="timeSlider" type="range" min="0" max="17" value="16" step="1" style="flex:1; min-width:200px; accent-color:#4a1f05">
       <span id="timeLabel" style="background:#4a1f05; color:#ffe7bb; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:800; min-width:180px; text-align:center">২০২০ CE · 324M (4.1%)</span>
@@ -411,11 +415,12 @@ function updateTime(){
     document.getElementById('timeBdPop').textContent = bd.bd_buddhist>=1000000 ? (bd.bd_buddhist/1000000).toFixed(2)+'M' : (bd.bd_buddhist>=1000 ? Math.round(bd.bd_buddhist/1000)+'K' : bd.bd_buddhist);
     document.getElementById('timeBdEvent').textContent=bd.note;
   }
-  // Re-render map opacity by scaling circle radius with historical ratio
-  if(DATA){
-    var ratio = d.buddhist_pop / 324190000;
-    // Update KPI with historical vs current
-    document.getElementById('kpi').innerHTML += '<div style="background:#fff7df; border:1px dashed #ffbd57; padding:6px 8px; border-radius:8px; font-size:11px"><b>⏳ '+d.label.split(' · ')[0]+':</b> বিশ্ব '+ (d.buddhist_pop>=1000000? Math.round(d.buddhist_pop/1000000)+'M': d.buddhist_pop) +' ('+d.pct+'%) · BD '+(bd? bd.bd_buddhist : '?')+'</div>';
+  // Update timeline KPI (separate, don't duplicate main KPI)
+  var tk=document.getElementById('timelineKpi');
+  if(tk){ tk.innerHTML='<b>⏳ '+d.label.split(' · ')[0]+':</b> বিশ্ব '+(d.buddhist_pop>=1000000? Math.round(d.buddhist_pop/1000000)+'M': d.buddhist_pop) +' ('+d.pct+'%) · BD '+(bd? (bd.bd_buddhist>=1000000? (bd.bd_buddhist/1000000).toFixed(2)+'M': bd.bd_buddhist): '?')+' — '+d.event; tk.style.display='block'; }
+  // Filter map/table by historical ratio (opacity)
+  if(DATA && window.filterByTime){
+    window.filterByTime(ratio, d);
   }
   buildTimeChips();
 }
@@ -569,6 +574,13 @@ document.querySelectorAll('th[data-sort]').forEach(function(th){
 });
 
 // Map
+window.filterByTime=function(ratio, d){
+  // Update table title with historical context
+  var info=document.getElementById('countInfo');
+  if(info){ info.textContent='⏳ '+d.label+' — ঐতিহাসিক অনুমান (table এখনও 2020 Pew strict দেখাচ্ছে, নিচে timelineKpi দেখুন)'; }
+  // Map circle radius/opacity already reflects current; for history we could scale opacity
+  // For now just update notice — full historical census per country not yet available (only global)
+};
 function renderMap(){
   if(!window.L) return;
   var el=document.getElementById('worldMap');
