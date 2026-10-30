@@ -241,3 +241,14 @@ p.eyebrow,
   :not(#legibility) .page-heading > .button,
   :not(#legibility) .page-heading > .button span { font-size: 0 !important; }
 }
+
+/* ম্যাপ-লেজেন্ড: যাচাইকৃত পিন আর আনুমানিক অবস্থান আলাদা দেখানো */
+.legend-pin.approx {
+  background: none; border: 1.5px dashed #b08a5f; border-radius: 50%;
+  display: inline-block; width: 9px; height: 9px; vertical-align: middle;
+}
+.directory-tools { flex-wrap: wrap; }
+.directory-tools select { min-width: 130px; flex: 1 1 130px; }
+#placeReliability {
+  font-size: 12px; color: #6f7f62; margin: 12px 0 4px; line-height: 1.7;
+}
