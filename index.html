@@ -13,8 +13,8 @@
   <meta property="og:image" content="assets/brand/buddha-hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="charyabhumi.css?v=20261030e">
-  <link rel="stylesheet" href="welcome.css?v=20261030e">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261031c">
+  <link rel="stylesheet" href="welcome.css?v=20261031b">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="mega.css?v=20261024h">
   <link rel="stylesheet" href="culture-2026.css?v=20261027a">
@@ -145,6 +145,12 @@
           <label>উপজেলা
             <select id="upazilaFilter"><option value="all">সব উপজেলা</option></select>
           </label>
+          <label>থানা
+            <select id="thanaFilter"><option value="all">সব থানা</option></select>
+          </label>
+          <label>ইউনিয়ন / পৌরসভা
+            <select id="unionFilter"><option value="all">সব ইউনিয়ন</option></select>
+          </label>
           <label>স্থানের ধরন
             <select id="categoryFilter"><option value="all">সব ধরন</option></select>
           </label>
@@ -166,6 +172,7 @@
                 <p>ম্যাপ লাইব্রেরি এই অংশের কাছে এলেই লোড হয়—তাই পেজের শুরু আটকে থাকে না। পিন আনুমানিক হলে তা আলাদা করে লেখা থাকে।</p>
                 <button type="button" class="cb-btn solid sm" id="loadMapBtn">ম্যাপ চালু করুন</button>
               </div>
+              <div class="cb-simple-map" id="simpleMap" hidden aria-label="সরল ম্যাপ — ইন্টারনেট ছাড়াও চলে"></div>
               <div id="map" role="application" aria-label="বাংলাদেশের বৌদ্ধ ঐতিহ্যস্থানের ইন্টার‌্যাকটিভ ম্যাপ">
                 <div class="cb-map-placeholder"><span aria-hidden="true">☸</span><strong>ম্যাপ প্রস্তুত হচ্ছে</strong><p>“ম্যাপ চালু করুন” চাপ দিন, অথবা এই অংশে স্ক্রল করলেই Leaflet ম্যাপ লোড হবে।</p></div>
               </div>
@@ -173,9 +180,22 @@
                 <p class="cb-map-status" id="mapActionStatus" aria-live="polite">ম্যাপ চালু করলে ছাঁকনি অনুযায়ী পিন দেখা যাবে।</p>
                 <button type="button" class="cb-mini-btn" id="locateMe">◎ আমার অবস্থান</button>
                 <button type="button" class="cb-mini-btn" id="refreshMap">↻ ম্যাপ রিফ্রেশ</button>
+                <button type="button" class="cb-mini-btn" id="simpleMapBtn" aria-pressed="false">▦ সরল ম্যাপ</button>
                 <a class="cb-mini-btn link" href="maps.html">ঐতিহাসিক ম্যাপ</a>
                 <a class="cb-mini-btn link" href="https://www.google.com/maps/search/?api=1&amp;query=Buddhist%20temples%20Bangladesh" target="_blank" rel="noopener">Google Maps ↗</a>
               </div>
+              <details class="cb-map-diag" id="mapDiagnostics">
+                <summary>🔧 ম্যাপ ও GPS-এর অবস্থা — কী কাজ করছে, কী করছে না</summary>
+                <ul>
+                  <li><span>ম্যাপ লাইব্রেরি (Leaflet)</span><b id="diagLeaflet">দেখা হচ্ছে…</b></li>
+                  <li><span>ম্যাপের পটভূমি (tile)</span><b id="diagTiles">দেখা হচ্ছে…</b></li>
+                  <li><span>তালিকা থেকে লোড হওয়া রেকর্ড</span><b id="diagRecords">—</b></li>
+                  <li><span>এখন ম্যাপে পিন</span><b id="diagPins">—</b></li>
+                  <li><span>কোঅর্ডিনেট-যুক্ত / আনুমানিক</span><b id="diagCoords">—</b></li>
+                  <li><span>আপনার অবস্থান (GPS)</span><b id="diagGps">এখনো চাওয়া হয়নি</b></li>
+                </ul>
+                <p class="cb-map-diag-note" id="diagNote"></p>
+              </details>
             </div>
 
             <div id="placeDetail" hidden></div>
@@ -377,7 +397,7 @@
   <footer class="cb-footer" id="cbFooter"></footer>
 
   <script src="language.js?v=20261024d" defer></script>
-  <script src="brand.js?v=20261024d" defer></script>
+  <script src="brand.js?v=20261031c" defer></script>
   <script src="home.js?v=20261024d" defer></script>
   <script src="calendar.js?v=20261023d" defer></script>
   <script src="welcome.js?v=20261030a" defer></script>

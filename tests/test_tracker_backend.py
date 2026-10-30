@@ -66,6 +66,13 @@ class OptionalAPITests(unittest.TestCase):
             self.assertEqual(self.client.post('/api/chat',json={'message':'Hello','language':'en'}).status_code,429)
         requests.clear()
 
+try:
+    import mcp  # noqa: F401  (mcp.server.fastmcp দরকার)
+    HAVE_MCP = True
+except Exception:  # pragma: no cover - নির্ভরতা না থাকলে টেস্ট স্কিপ
+    HAVE_MCP = False
+
+@unittest.skipUnless(HAVE_MCP, 'mcp প্যাকেজ নেই — requirements.txt দেখুন')
 class MCPToolsTests(unittest.TestCase):
     def test_public_tools_and_missing_private_token(self):
         from server.tracker_mcp import list_maps,find_places,read_introduction,read_my_map

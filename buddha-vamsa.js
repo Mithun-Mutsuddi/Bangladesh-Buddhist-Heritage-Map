@@ -695,18 +695,14 @@
       renderLineage();
       renderRiddhi();
       renderCommFilters(); renderCommunities();
-      renderDynastyFilters(); renderDynasties(); drawGantt(); drawGeo();
-      renderKingFilters(); renderKings();
-      $('bvKingsSub').textContent = 'জাতক-জনশ্রুতির রাজা ও ঐতিহাসিক শাসক একসঙ্গে, কিন্তু প্রতিটি কার্ডে নির্ভরযোগ্যতার ব্যাজ দেওয়া আছে। বাংলাদেশের জমিদার ও সার্কেল-প্রধানদের পূর্ণ তালিকা আলাদা পাতায়।';
-      $('bvKingCrosslink').innerHTML = `বাংলাদেশের রাজা, জমিদার, সার্কেল-প্রধান, পণ্ডিত ও ভিক্ষুদের পূর্ণ প্রোফাইল (১১২ জন) → <a href="${esc(kings.crosslink.href)}">${esc(kings.crosslink.label)}</a>`;
-      $('bvLinkedProfiles').innerHTML = (kings.linkedProfiles || []).map((p) => `<article class="bv-item">
-        <div class="badges"><span class="bv-badge">${esc(p.country)}</span><span class="bv-badge ${esc(p.certainty)}">${esc(certLabel(p.certainty))}</span></div>
-        <h3><a href="${esc(p.href)}">${esc(p.name)}</a></h3>
-        <span class="meta">${esc(p.reign || '')} · ${esc(p.dynasty)}</span>
-        <p>${esc(p.summary)}</p>
-        <p class="meta"><b>ধর্মীয় ভূমিকা:</b> ${esc(p.dhamma)}</p>
-        <p class="meta"><a href="${esc(p.href)}">পূর্ণ প্রোফাইল দেখুন →</a></p>
-      </article>`).join('');
+      /* রাজবংশ ও শাসক-তালিকা এখন ‘বৌদ্ধ ধর্মের পৃষ্ঠপোষক’ বিভাগে (patrons.html) —
+         সেই সেকশন এই পাতায় না থাকলে রেন্ডারও করা হয় না। */
+      if ($('bvDynList')) { renderDynastyFilters(); renderDynasties(); drawGantt(); drawGeo(); }
+      if ($('bvKingList')) {
+        renderKingFilters(); renderKings();
+        $('bvKingsSub').textContent = 'জাতক-জনশ্রুতির রাজা ও ঐতিহাসিক শাসক একসঙ্গে, কিন্তু প্রতিটি কার্ডে নির্ভরযোগ্যতার ব্যাজ দেওয়া আছে। বাংলাদেশের জমিদার ও সার্কেল-প্রধানদের পূর্ণ তালিকা আলাদা পাতায়।';
+      }
+      if ($('bvKingCrosslink')) $('bvKingCrosslink').innerHTML = `বাংলাদেশের রাজা, জমিদার, সার্কেল-প্রধান, পণ্ডিত ও ভিক্ষুদের পূর্ণ প্রোফাইল (১১২ জন) → <a href="${esc(kings.crosslink.href)}">${esc(kings.crosslink.label)}</a>`;
       renderJatakas();
       renderQuoteFilters(); renderQuotes();
       renderInscriptions();
@@ -723,8 +719,8 @@
         if (target) requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
       }
 
-      bindSearch('bvDynSearch', renderDynasties);
-      bindSearch('bvKingSearch', renderKings);
+      if ($('bvDynSearch')) bindSearch('bvDynSearch', renderDynasties);
+      if ($('bvKingSearch')) bindSearch('bvKingSearch', renderKings);
       bindSearch('bvSculptSearch', renderSculptures);
       bindSearch('bvPlaceSearch', renderPlaces);
       bindSearch('bvCommSearch', renderCommunities);

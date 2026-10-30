@@ -7,8 +7,9 @@
   <title>ঐতিহাসিক সংরক্ষণাগার — Buddhist Historical Archive | চর্যাভূমি</title>
   <meta name="description" content="বুদ্ধ, বৌদ্ধধর্ম, বাংলা ও বাংলাদেশের বৌদ্ধ ঐতিহ্যের source-linked archive: বই, PDF, পুঁথি, ছবি, ভাস্কর্য, গবেষণা, অডিও, ভিডিও, মানচিত্র ও জীবন্ত সংস্কৃতি।">
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="charyabhumi.css?v=20261030e">
-  <link rel="stylesheet" href="historical-archive.css?v=20261030e">
+  <link rel="stylesheet" href="charyabhumi.css?v=20261031c">
+  <link rel="stylesheet" href="historical-archive.css?v=20261031b">
+  <link rel="stylesheet" href="archive.css?v=20261031c">
 </head>
 <body class="cb archive-page">
   <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
@@ -102,6 +103,99 @@
       </div>
     </section>
 
+
+    <section class="cb-section historical-archive-section" id="submit" aria-labelledby="submitTitle">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow">CONTRIBUTE · প্রমাণসহ জমা</p>
+        <h2 id="submitTitle">নিজের নথি, ছবি বা স্মৃতি জমা দিন</h2>
+        <p class="archive-notice"><strong>কোনো কিছু স্বয়ংক্রিয়ভাবে প্রকাশ পায় না।</strong> এই ফর্মে যা লিখবেন ও ফাইল বাছবেন, তা <strong>কেবল আপনার এই ব্রাউজারেই</strong> (IndexedDB) জমা থাকে — সার্ভারে যায় না। জমা দেওয়ার জন্য নিচের ধাপ ৩-এ “GitHub-এ জমা দিন” চাপলে metadata-সহ একটি issue তৈরি হয়; বড় ফাইল হলে ZIP নামিয়ে issue-এ নিজে সংযুক্ত করুন। প্রকাশের আগে সম্পাদক উৎস, তারিখ, কপিরাইট/অনুমতি ও ব্যক্তিগত তথ্য যাচাই করেন।</p>
+        <div class="archive-layout">
+          <div class="archive-panel">
+            <h3>১) খসড়া তৈরি করুন</h3>
+            <form class="archive-form" id="draftForm" novalidate>
+              <label>শিরোনাম (আবশ্যক)
+                <input id="draftTitle" name="title" type="text" maxlength="140" required placeholder="যেমন: ১৯৫০-এর ময়নামতি সংস্কার-কাজের ফটো" autocomplete="off">
+              </label>
+              <div class="archive-two-col">
+                <label>ধরন
+                  <select id="draftType" name="type">
+                    <option value="image">ছবি / ফটোগ্রাফ</option>
+                    <option value="pdf">স্ক্যান / নথি (PDF)</option>
+                    <option value="text">লিখিত বিবরণ / পাণ্ডুলিপি</option>
+                    <option value="audio">অডিও সাক্ষাৎকার</option>
+                    <option value="video">ভিডিও</option>
+                    <option value="link">শুধু সূত্র-লিংক</option>
+                  </select>
+                </label>
+                <label>সম্পর্কিত স্থান / বিহার
+                  <input id="draftPlace" name="place" type="text" maxlength="120" placeholder="যেমন: সোমপুর মহাবিহার, নওগাঁ" autocomplete="off">
+                </label>
+              </div>
+              <div class="archive-two-col">
+                <label>ঘটনা / নথির তারিখ
+                  <input id="draftHistoricDate" name="historicDate" type="text" maxlength="60" placeholder="যেমন: ১৯৫০ বা আনুমানিক ১০ম শতক" autocomplete="off">
+                </label>
+                <label>ধারণ / রেকর্ডের তারিখ
+                  <input id="draftCaptureDate" name="captureDate" type="text" maxlength="60" placeholder="যেমন: ২০২৪-১২-০৫" autocomplete="off">
+                </label>
+              </div>
+              <div class="archive-two-col">
+                <label>আলোকচিত্রী / রেকর্ডকারী
+                  <input id="draftPhotographer" name="photographer" type="text" maxlength="90" placeholder="নাম — অজানা হলে খালি রাখুন" autocomplete="off">
+                </label>
+                <label>সংগ্রহকারী / পরিবারের সূত্র
+                  <input id="draftCollector" name="collector" type="text" maxlength="90" placeholder="কার কাছ থেকে পাওয়া" autocomplete="off">
+                </label>
+              </div>
+              <div class="archive-two-col">
+                <label>জমা দিচ্ছেন (নাম)
+                  <input id="draftUploader" name="uploader" type="text" maxlength="90" placeholder="আপনার নাম" autocomplete="name">
+                </label>
+                <label>যোগাযোগ (প্রকাশযোগ্য হলে)
+                  <input id="draftContact" name="contact" type="text" maxlength="120" placeholder="ইমেইল/ফোন — না দিলেও চলবে" autocomplete="off">
+                </label>
+              </div>
+              <label>মূল সূত্রের লিংক
+                <input id="draftUrl" name="url" type="url" maxlength="300" placeholder="https://… (আর্কাইভ, বই, পত্রিকা বা প্রতিষ্ঠানের পাতা)" autocomplete="off">
+              </label>
+              <label>বিবরণ ও ইতিহাস
+                <textarea id="draftDescription" name="description" rows="4" maxlength="2000" placeholder="নথিটি কী, কোথা থেকে পাওয়া, কোন তথ্য এতে আছে, কোন অংশ অনুমান — সংক্ষেপে লিখুন।"></textarea>
+              </label>
+              <label>ফাইল (ঐচ্ছিক — এই ডিভাইসেই থাকে)
+                <input id="draftFile" name="file" type="file" accept="image/*,audio/*,video/*,.pdf,.txt,.doc,.docx">
+              </label>
+              <p class="archive-hint">সর্বোচ্চ ৭৫ MB। ফাইল বড় হলে ছোট কপি বা মূল লিংক দিন। অনুমতি ছাড়া অন্যের ছবি/অডিও জমা দেবেন না।</p>
+              <div class="archive-actions">
+                <button class="cb-btn solid" type="submit">খসড়া সংরক্ষণ করুন</button>
+                <button class="cb-btn ghost" type="reset">ফর্ম খালি করুন</button>
+              </div>
+              <p class="archive-status" id="draftStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="archive-panel">
+            <div class="archive-list-heading">
+              <div>
+                <h3>২) আপনার জমা — এই ব্রাউজারে</h3>
+                <p>নিচের তালিকা কেবল আপনিই দেখছেন। যেকোনো রেকর্ড মোছা যায়; কিছুই স্বয়ংক্রিয়ভাবে প্রকাশিত হয়নি।</p>
+              </div>
+              <span id="draftCount">০</span>
+            </div>
+            <div class="archive-export-actions archive-actions">
+              <button class="cb-btn ghost" type="button" id="draftJsonExport">JSON ডাউনলোড</button>
+              <button class="cb-btn ghost" type="button" id="draftExport">মিডিয়াসহ ZIP</button>
+              <button class="cb-btn solid" type="button" id="draftSubmit">৩) GitHub-এ জমা দিন ↗</button>
+            </div>
+            <div class="archive-list" id="draftList"></div>
+          </div>
+        </div>
+        <ol class="archive-steps">
+          <li><strong>খসড়া যা থাকে তা-ই জমা হয়।</strong> তালিকা না দেখালে ফর্মটি আগে সংরক্ষণ করুন — জমা বোতাম শেষ খসড়াটি ব্যবহার করে।</li>
+          <li><strong>প্রমাণ আগে।</strong> তারিখ, creator, অনুমতি/licence ও সম্ভব হলে একটি আলাদা corroborating source লিখুন; না থাকলে “অজানা” বলেই লিখুন।</li>
+          <li><strong>প্রকাশ সম্পাদকের হাতে।</strong> issue অনুমোদনের পরই কোনো উপাদান সাইটে যোগ হয়; যাচাই-না-হওয়া কিছু “community lead” হিসেবেই থাকে।</li>
+        </ol>
+      </div>
+    </section>
+
     <section class="cb-section archive-policy" id="policy" aria-labelledby="policyTitle">
       <div class="cb-wrap">
         <p class="cb-eyebrow">AUTHENTICITY · RIGHTS · CARE</p>
@@ -112,13 +206,15 @@
           <article><span>03</span><h3>জনগোষ্ঠীর ভাষা ও কণ্ঠ</h3><p>বাংলা ও English interface-এর পর Chakma (ccp) ও Marma (rmz) community translation যোগ করার কাঠামো আছে। যেসব article-এর মানব-সম্পাদিত অনুবাদ নেই, সেগুলোকে অনুবাদিত বলা হয় না; automatic translation আলাদা চিহ্নিত।</p></article>
           <article><span>04</span><h3>সংরক্ষণ চলমান</h3><p>একই স্থানের বিভিন্ন তারিখ, নাম, বানান বা tradition-এর ব্যাখ্যা থাকলে তা মুছে নয়—প্রসঙ্গ ও সূত্রসহ তুলনা করা হবে। নতুন সংশোধন, ক্ষতিগ্রস্ত link ও অসম্পূর্ণ metadata জানানোর পথ খোলা আছে।</p></article>
         </div>
-        <div class="archive-contribute"><div><h3>আপনার কাছে পুঁথি, ছবি, newspaper cutting, audio বা গবেষণার সূত্র আছে?</h3><p>প্রথমে মূল উৎস, তারিখ, creator, অনুমতি/licence ও সম্ভব হলে একটি আলাদা corroborating source পাঠান। Facebook group-এর public post-এর link দিলেও private content পাঠানোর চেষ্টা করা হবে না।</p></div><div class="cb-actions"><a class="cb-btn solid" href="about.html#contact" data-i18n="archive.contribute">সূত্র প্রস্তাব করুন</a><a class="cb-btn ghost" href="https://www.facebook.com/search/groups/?q=Buddhist%20Historical%20Archive" target="_blank" rel="noopener">Public Facebook group ↗</a></div></div>
+        <div class="archive-contribute"><div><h3>আপনার কাছে পুঁথি, ছবি, newspaper cutting, audio বা গবেষণার সূত্র আছে?</h3><p>প্রথমে মূল উৎস, তারিখ, creator, অনুমতি/licence ও সম্ভব হলে একটি আলাদা corroborating source পাঠান। Facebook group-এর public post-এর link দিলেও private content পাঠানোর চেষ্টা করা হবে না।</p></div><div class="cb-actions"><a class="cb-btn solid" href="#submit">নিজের নথি জমা দিন</a><a class="cb-btn ghost" href="about.html#contact" data-i18n="archive.contribute">সম্পাদককে লিখুন</a><a class="cb-btn ghost" href="https://www.facebook.com/search/groups/?q=Buddhist%20Historical%20Archive" target="_blank" rel="noopener">Public Facebook group ↗</a></div></div>
       </div>
     </section>
   </main>
   <footer class="cb-footer" id="cbFooter"></footer>
   <script src="language.js?v=20261024d" defer></script>
-  <script src="brand.js?v=20261024d" defer></script>
-  <script src="historical-archive.js?v=20261024b" defer></script>
+  <script src="brand.js?v=20261031c" defer></script>
+  <script src="assets/vendor/jszip/jszip.min.js?v=20261031c" defer></script>
+  <script src="archive.js?v=20261031c" defer></script>
+  <script src="historical-archive.js?v=20261031c" defer></script>
 </body>
 </html>

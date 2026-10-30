@@ -44,3 +44,36 @@
 
 .archive-video-frame { position:relative; width:100%; aspect-ratio:16/9; margin-top:12px; overflow:hidden; border-radius:8px; background:#161616; }
 .archive-video-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+/* জমা-প্রবাহ (historical-archive.html#submit) — মোবাইলেও পুরো প্রস্থ, পাঠযোগ্য মাপ */
+#draftForm label > span[aria-hidden] { color:#a12c16; }
+.archive-steps { margin:18px 0 0; padding:0 0 0 20px; color:#5c5648; font-size:12.5px; line-height:1.9; }
+.archive-steps li { margin-bottom:8px; }
+.archive-steps strong { color:var(--forest); }
+.draft-empty { margin:0; padding:14px; border:1px dashed #ddd0b6; border-radius:10px; color:var(--muted); font-size:12px; line-height:1.8; }
+.archive-list-heading > span { font-size:14px; }
+@media(max-width:520px){
+  .archive-steps { font-size:12px; padding-left:16px; }
+  #draftForm input, #draftForm select, #draftForm textarea { font-size:14.5px; }
+  .archive-form label { font-size:12.5px; }
+  .archive-export-actions { display:grid; grid-template-columns:1fr; }
+  .archive-export-actions .cb-btn { width:100%; }
+}
+
+/* পাঠযোগ্যতা: ১১px-এর নিচে কিছু নয় — ডেস্কটপে ১২.৫px, মোবাইলে ১৩px */
+:not(#legibility) .archive-details p { font-size:12.5px !important; line-height:1.8; }
+:not(#legibility) p.archive-hint { font-size:12.5px !important; line-height:1.75; }
+:not(#legibility) .archive-list-heading p { font-size:12.5px !important; }
+:not(#legibility) p.archive-status { font-size:12.5px !important; }
+:not(#legibility) .archive-card-actions .cb-mini-btn { font-size:12.5px !important; }
+:not(#legibility) .archive-meta { font-size:12.5px !important; }
+.archive-reliability { margin:0 0 14px; padding:11px 13px; border:1px solid #e6dcc4; border-radius:10px; background:#fffdf6; color:#5c5648; font-size:12.5px; line-height:1.8; }
+.archive-reliability strong { color:var(--forest); }
+@media (max-width:520px){
+  :not(#legibility) .archive-details p,
+  :not(#legibility) p.archive-hint,
+  :not(#legibility) .archive-list-heading p,
+  :not(#legibility) p.archive-status,
+  :not(#legibility) .archive-meta { font-size:13px !important; }
+  .archive-reliability { font-size:13px; }
+}

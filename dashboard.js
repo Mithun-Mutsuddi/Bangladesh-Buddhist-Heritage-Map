@@ -19,7 +19,8 @@
 
   var els = {
     status: $('dashStatus'), search: $('placeSearch'), division: $('divisionFilter'),
-    district: $('districtFilter'), upazila: $('upazilaFilter'), category: $('categoryFilter'), coordsOnly: $('coordsOnly'),
+    district: $('districtFilter'), upazila: $('upazilaFilter'), thana: $('thanaFilter'), union: $('unionFilter'),
+    category: $('categoryFilter'), coordsOnly: $('coordsOnly'),
     clear: $('clearFilters'), results: $('resultsCount'), shown: $('shownCount'),
     grid: $('placeGrid'), empty: $('emptyState'), more: $('loadMorePlaces'),
     detail: $('placeDetail'), dialog: $('placeDialog'), dialogBody: $('placeDialogBody'),
@@ -28,7 +29,10 @@
     itineraryList: $('itineraryList'), exportBtn: $('exportItinerary'), clearTrip: $('clearItinerary'),
     totalStat: $('dashTotalStat'), pinStat: $('dashPinStat'),
     mapBox: $('map'), mapStatus: $('mapActionStatus'), loadMap: $('loadMapBtn'),
-    locate: $('locateMe'), refreshMap: $('refreshMap')
+    locate: $('locateMe'), refreshMap: $('refreshMap'),
+    simpleMap: $('simpleMap'), simpleMapBtn: $('simpleMapBtn'),
+    diagLeaflet: $('diagLeaflet'), diagTiles: $('diagTiles'), diagRecords: $('diagRecords'),
+    diagPins: $('diagPins'), diagCoords: $('diagCoords'), diagGps: $('diagGps'), diagNote: $('diagNote')
   };
 
   var places = [];
@@ -314,6 +318,18 @@
       });
     return rows.sort(function (a, b) { return a.label.localeCompare(b.label, 'bn'); });
   }
+  function selState(key) { return els[key] && els[key].value ? els[key].value : 'all'; }
+  /* নামের পাশে রেকর্ড-সংখ্যা — “৩টি” দেখলে বোঝা যায় এখানে সত্যিই কিছু আছে */
+  function countOptions(values) {
+    var counts = {};
+    (values || []).forEach(function (v) {
+      var key = clean(v);
+      if (!key) return;
+      counts[key] = (counts[key] || 0) + 1;
+    });
+    return Object.keys(counts).sort(function (a, b) { return a.localeCompare(b, 'bn'); })
+      .map(function (k) { return { value: k, label: k + ' (' + bn(counts[k]) + ')' }; });
+  }
   function refreshFilters() {
     // Preserve a valid selection while options are being cascaded. The old
     // implementation reset the division to “all” during its own change event.
@@ -334,9 +350,33 @@
     }).map(function (p) { return p.upazila; }));
     fillSelect(els.upazila, upazilas, 'সব উপজেলা', [{ value: '__unknown__', label: 'উপজেলা অজানা / যাচাইাধীন' }]);
     if (els.upazila && up !== 'all' && (upazilas.some(function (v) { return (typeof v === 'object' ? v.value : v) === up; }) || up === '__unknown__')) els.upazila.value = up;
+    /* থানা ও ইউনিয়ন: উপরের ছাঁকনির ভেতরকার রেকর্ড থেকেই তালিকা, পাশে সংখ্যা —
+       যেখানে কোনো রেকর্ড নেই সেখানে অপশনই তৈরি হয় না (তাই “কিছুই আসে না” অবস্থা হয় না)। */
+    var thanaSel = selState('thana');
+    var upSelected = els.upazila ? els.upazila.value : 'all';
+    var pool = places.filter(function (p) {
+      if (div !== 'all' && p.division !== div) return false;
+      if (dist !== 'all' && p.district !== dist) return false;
+      if (upSelected !== 'all' && upSelected !== '__unknown__' && p.upazila !== upSelected.split('::').pop()) return false;
+      return true;
+    });
+    fillSelect(els.thana, countOptions(pool.map(function (p) { return p.thana; })), 'সব থানা');
+    if (els.thana && thanaSel !== 'all' && Array.prototype.some.call(els.thana.options, function (o) { return o.value === thanaSel; })) els.thana.value = thanaSel;
+    var thanaVal = els.thana ? els.thana.value : 'all';
+    var unionSel = selState('union');
+    var unionPool = pool.filter(function (p) { return thanaVal === 'all' || p.thana === thanaVal; });
+    fillSelect(els.union, countOptions(unionPool.map(function (p) { return p.union; })), 'সব ইউনিয়ন');
+    if (els.union && unionSel !== 'all' && Array.prototype.some.call(els.union.options, function (o) { return o.value === unionSel; })) els.union.value = unionSel;
     // category is the only broad taxonomy; type remains a detailed subtype.
     fillSelect(els.category, uniqueSorted(places.map(function (p) { return p.category; })), 'সব ধরন');
     if (els.category && cat !== 'all' && Array.from(els.category.options).some(function (option) { return option.value === cat; })) els.category.value = cat;
+  }
+  function refreshDiagInit() {
+    if (els.diagLeaflet) els.diagLeaflet.textContent = window.L ? 'লোড হয়েছে' : 'এখনো লোড হয়নি (ম্যাপ চালু করুন)';
+    /* টাইল একবার চেষ্টা শুরু হলে (সফল/ব্যর্থ/চলমান) সেই অবস্থা আর মুছি না —
+       নইলে ম্যাপ দেখা যাচ্ছে অথচ ডায়াগনস্টিকে “চালু করা হয়নি” লেখা থাকত। */
+    if (els.diagTiles && !tileStarted) els.diagTiles.textContent = diagTilesText('off');
+    refreshDiagCounts();
   }
   function refreshStats() {
     if (els.totalStat) els.totalStat.textContent = bn(places.length) + 'টি';
@@ -380,6 +420,8 @@
     var div = els.division ? els.division.value : 'all';
     var dist = els.district ? els.district.value : 'all';
     var up = els.upazila ? els.upazila.value : 'all';
+    var thana = els.thana ? els.thana.value : 'all';
+    var union = els.union ? els.union.value : 'all';
     var cat = els.category ? els.category.value : 'all';
     var coordsOnly = !!(els.coordsOnly && els.coordsOnly.checked);
 
@@ -393,6 +435,8 @@
           if (p.district !== upParts[0] || p.upazila !== upParts[1]) return false;
         } else if (p.upazila !== up) return false;
       }
+      if (thana !== 'all' && p.thana !== thana) return false;
+      if (union !== 'all' && p.union !== union) return false;
       if (cat !== 'all' && p.category !== cat) return false;
       if (coordsOnly && !hasCoords(p)) return false;
       if (!tokens.length) return true;
@@ -608,6 +652,7 @@
   }
   function mountTiles() {
     if (!map || !window.L) return;
+    tileStarted = true;
     if (tileLayer) { try { map.removeLayer(tileLayer); } catch (_) {} }
     var providers = [
       { name: 'OpenStreetMap', url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', options: { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' } },
@@ -618,11 +663,29 @@
     function mount() {
       if (timer) clearTimeout(timer);
       if (tileLayer) { try { map.removeLayer(tileLayer); } catch (_) {} }
-      if (idx >= providers.length) { setMapStatus('ম্যাপ টাইল আসছে না। পিনে চাপ দিয়ে Google Maps ব্যবহার করুন, অথবা নেটওয়ার্ক বদলে আবার চেষ্টা করুন।'); return; }
+      if (idx >= providers.length) {
+        setMapStatus('ম্যাপের পটভূমি (tile) কোনো সার্ভার থেকে আসছে না — তাই টাইল ছাড়া আঁকা সরল ম্যাপ দেখানো হচ্ছে। পিন ও তথ্য ঠিকই আছে।');
+        setDiag('tiles', diagTilesText('fail'));
+        if (els.diagNote) els.diagNote.textContent = 'তিনটি টাইল সার্ভারই ব্যর্থ হয়েছে। ইন্টারনেট বা firewall বদলে “ম্যাপ রিফ্রেশ” চাপলে আবার চেষ্টা হবে।';
+        setSimpleMap(true, 'auto');
+        return;
+      }
       loaded = 0; errors = 0;
       tileLayer = L.tileLayer(providers[idx].url, providers[idx].options);
-      tileLayer.on('tileload', function () { loaded++; if (loaded === 1) setMapStatus('ম্যাপ তৈরি। পিনে চাপ দিলে স্থানের নাম ও Google Maps লিংক পাবেন।'); });
-      tileLayer.on('tileerror', function () { errors++; if (errors >= 4 && loaded < 2) { idx++; mount(); } });
+      tileLayer.on('tileload', function () {
+        loaded++;
+        if (loaded === 1) {
+          setMapStatus('ম্যাপ তৈরি। পিনে চাপ দিলে স্থানের নাম ও Google Maps লিংক পাবেন।');
+          setDiag('leaflet', 'লোড হয়েছে');
+          setDiag('tiles', diagTilesText('ok', providers[idx].name));
+          if (els.diagNote) els.diagNote.textContent = '';
+          if (simpleOn) setSimpleMap(false);
+        }
+      });
+      tileLayer.on('tileerror', function () {
+        errors++;
+        if (errors >= 4 && loaded < 2) { setDiag('tiles', diagTilesText('retry', providers[idx].name)); idx++; mount(); }
+      });
       tileLayer.addTo(map);
       timer = setTimeout(function () { if (loaded < 2 && idx < providers.length - 1) { idx++; mount(); } }, 4500);
     }
@@ -649,6 +712,8 @@
     return m;
   }
   function updateMarkers(focus) {
+    refreshDiagCounts();
+    if (simpleOn) renderSimpleMap();
     if (!map || !markerLayer || !window.L) return;
     var pins = filtered.filter(hasCoords).map(markerFor);
     markerLayer.clearLayers();
@@ -691,6 +756,7 @@
       .then(function () {
         if (!window.L || typeof L.map !== 'function' || !els.mapBox) throw new Error('Leaflet unavailable');
         els.mapBox.innerHTML = '';
+        setDiag('leaflet', 'লোড হয়েছে');
         map = L.map(els.mapBox, { scrollWheelZoom: false, preferCanvas: true }).setView([23.685, 90.3563], 7);
         window.__charyabhumiMap = map;
         mountTiles();
@@ -715,6 +781,10 @@
       .catch(function (err) {
         console.error('[dashboard map]', err);
         mapPromise = null;
+        setDiag('leaflet', 'লোড হয়নি — ' + (err && err.message ? err.message : 'অজানা কারণ'));
+        setDiag('tiles', diagTilesText('fail'));
+        if (els.diagNote) els.diagNote.textContent = 'ম্যাপ লাইব্রেরি (Leaflet) কোনো সোর্স থেকে আসেনি — তাই টাইল ছাড়া আঁকা সরল ম্যাপ দেখানো হচ্ছে। বাকি সব তথ্য কাজ করছে।';
+        setSimpleMap(true, 'auto');
         if (els.mapBox) {
           els.mapBox.innerHTML = '<div class="cb-map-fallback"><strong>ইন্টার‌্যাকটিভ ম্যাপ লোড করা যায়নি</strong><p>ইন্টারনেট/CDN সংযোগ ঠিক করে আবার চেষ্টা করুন। ততক্ষণ কার্ডের “Google Maps” লিংক ব্যবহার করা যাবে।</p><button type="button" class="cb-btn solid sm" id="retryMapBtn">↻ আবার চেষ্টা</button></div>';
           var retry = $('retryMapBtn'); if (retry) retry.addEventListener('click', ensureMap);
@@ -742,20 +812,132 @@
       }, 180);
     });
   }
+  /* GPS: প্রতিটি ব্যর্থতার আলাদা কারণ ও করণীয় লেখা হয় —
+     “অবস্থান পাওয়া যায়নি” এক লাইনে সব সমস্যা ঢেকে রাখা হতো। */
+  var gpsBusy = false;
+  function gpsReason(err) {
+    var code = err && err.code;
+    if (code === 1) return 'আপনি Location অনুমতি দেননি (Permission denied)। ব্রাউজারের ঠিকানা-বারের 🔒/ⓘ আইকনে চাপ দিয়ে Location → Allow করুন, তারপর আবার চেষ্টা করুন।';
+    if (code === 2) return 'ফোন বা কম্পিউটারের অবস্থান (GPS) সেবা বন্ধ বা সিগন্যাল নেই (Position unavailable)। ডিভাইসের Location বন্ধ থাকলে চালু করুন; ঘরের ভেতরে থাকলে জানালার কাছে এসে চেষ্টা করুন।';
+    if (code === 3) return 'নির্ধারিত সময়ের মধ্যে অবস্থান পাওয়া যায়নি (Timeout)। GPS ঠান্ডা-স্টার্টে সময় লাগে — এক মিনিট পরে আবার চেষ্টা করুন।';
+    return 'অবস্থান পাওয়া যায়নি' + (err && err.message ? ' — ' + err.message : '') + '।';
+  }
+  function reportGps(text, note) {
+    setDiag('gps', text);
+    setMapStatus(text);
+    if (els.diagNote && note) els.diagNote.textContent = note;
+  }
   function locateMe() {
-    if (!navigator.geolocation || !window.isSecureContext) {
-      setMapStatus('অবস্থান জানতে HTTPS ও ব্রাউজারের Location permission দরকার।');
+    if (gpsBusy) return;
+    if (!navigator.geolocation) {
+      reportGps('এই ব্রাউজারে Geolocation নেই — অবস্থান দেখানো সম্ভব নয়।', 'পুরোনো/সীমিত ব্রাউজারে GPS থাকে না। অন্য ব্রাউজার (Chrome, Firefox, Safari) ব্যবহার করুন।');
       return;
     }
-    setMapStatus('আপনার অবস্থান শনাক্ত করা হচ্ছে…');
+    if (!window.isSecureContext) {
+      reportGps('অবস্থান জানতে HTTPS দরকার (এই পাতাটি নিরাপদ origin-এ নেই)।', 'http:// দিয়ে খুললে ব্রাউজার Location চায় না। https:// ঠিকানায় খুললে কাজ করবে — বাকি সব তথ্য এখনই ব্যবহার করা যাবে।');
+      return;
+    }
+    gpsBusy = true;
+    reportGps('আপনার অবস্থান খোঁজা হচ্ছে… (প্রথমবার কিছুটা সময় লাগতে পারে)');
     navigator.geolocation.getCurrentPosition(function (pos) {
+      gpsBusy = false;
       userPosition = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+      var acc = Math.round(pos.coords.accuracy || 0);
+      reportGps('আপনার অবস্থান পাওয়া গেছে (±' + bn(acc) + ' মিটার নির্ভুলতা)।');
       ensureMap().then(function (m) {
-        if (m) { drawUserMarker(); m.setView([userPosition.lat, userPosition.lng], 12, { animate: false }); setMapStatus('আপনার অবস্থান ম্যাপে দেখানো হয়েছে।'); }
+        if (m) { drawUserMarker(); m.setView([userPosition.lat, userPosition.lng], 12, { animate: false }); }
+        else { setSimpleMap(true, 'auto'); }
       });
     }, function (err) {
-      setMapStatus(err && err.code === 1 ? 'Location অনুমতি বন্ধ আছে—Site settings থেকে Allow করুন।' : 'অবস্থান পাওয়া যায়নি। GPS চালু করে আবার চেষ্টা করুন।');
-    }, { enableHighAccuracy: false, timeout: 15000, maximumAge: 60000 });
+      gpsBusy = false;
+      reportGps(gpsReason(err));
+    }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 30000 });
+
+    /* অনুমতির অবস্থা আগেই জেনে রাখি, যাতে ব্যবহারকারী বুঝতে পারেন কোন দিকে সমস্যা */
+    if (navigator.permissions && navigator.permissions.query) {
+      navigator.permissions.query({ name: 'geolocation' }).then(function (status) {
+        if (status.state === 'denied') reportGps('Location অনুমতি বন্ধ (ব্লক করা) আছে — ব্রাউজার সেটিংস থেকে Allow না করলে কাজ করবে না।', 'ঠিকানা-বারের 🔒 আইকন → Site settings → Location → Allow করুন, তারপর পাতা রিফ্রেশ করুন।');
+        status.onchange = function () { if (status.state === 'granted') setDiag('gps', 'অনুমতি দেওয়া হয়েছে — “আমার অবস্থান” চাপুন'); };
+      }).catch(function () {});
+    }
+  }
+
+  /* ---------------- ম্যাপ ও GPS-এর অবস্থা (ডায়াগনস্টিক) ----------------
+     অডিটের সমস্যা: Leaflet তৈরি হয়েছে কি না, টাইল এসেছে কি না, কত রেকর্ড ও কত পিন
+     আছে — ব্যবহারকারী কিছুই জানতে পারতেন না। এখন সব এক জায়গায় দেখা যায়। */
+  var diag = { leaflet: 'চেষ্টা হয়নি', tiles: 'চেষ্টা হয়নি', provider: '', gps: 'এখনো চাওয়া হয়নি' };
+  function setDiag(key, value) {
+    diag[key] = value;
+    var el = els['diag' + key.charAt(0).toUpperCase() + key.slice(1)];
+    if (el) el.textContent = value;
+  }
+  function diagTilesText(state, provider) {
+    if (state === 'ok') return 'আসছে' + (provider ? ' — ' + provider : '');
+    if (state === 'loading') return 'লোড হচ্ছে…';
+    if (state === 'retry') return 'আসছে না — পরের সার্ভারে চেষ্টা চলছে';
+    if (state === 'fail') return 'আসছে না — সরল ম্যাপ দেখানো হচ্ছে';
+    if (state === 'off') return 'ম্যাপ চালু করা হয়নি';
+    return 'চেষ্টা হয়নি';
+  }
+  function refreshDiagCounts() {
+    if (!els.diagRecords) return;
+    var withCoords = places.filter(hasCoords);
+    var precise = withCoords.filter(function (p) { return !(p.approx || p.pinApproximate || p.verificationPending); });
+    els.diagRecords.textContent = bn(places.length) + 'টি' + (directoryLoaded ? '' : ' (ডিরেক্টরি এখনো আসছে)');
+    if (els.diagCoords) els.diagCoords.textContent = bn(withCoords.length) + 'টি পিন-যুক্ত · যাচাইকৃত ' + bn(precise.length) + ' · আনুমানিক ' + bn(withCoords.length - precise.length);
+    if (els.diagPins) els.diagPins.textContent = bn(filtered.filter(hasCoords).length) + 'টি (ছাঁকনি মেনে)';
+  }
+
+  /* ---------------- সরল ম্যাপ: টাইল ছাড়াই আঁকা যায় ----------------
+     ইন্টারনেট নেই বা তিনটি টাইল সার্ভারই ব্যর্থ হলে ফাঁকা বাক্স না দেখিয়ে
+     বাংলাদেশের সীমার ভেতরে আপেক্ষিক অবস্থানে পিন এঁকে দেওয়া হয়। */
+  var simpleOn = false;
+  var tileStarted = false;
+  var BD = { lonMin: 87.9, lonMax: 92.7, latMin: 20.5, latMax: 26.75 };
+  function renderSimpleMap() {
+    if (!els.simpleMap) return;
+    var pins = filtered.filter(hasCoords);
+    var W = 520, H = 660, pad = 26;
+    var x = function (lon) { return pad + ((lon - BD.lonMin) / (BD.lonMax - BD.lonMin)) * (W - pad * 2); };
+    var y = function (lat) { return pad + ((BD.latMax - lat) / (BD.latMax - BD.latMin)) * (H - pad * 2); };
+    var grid = '';
+    for (var lon = 88; lon <= 92; lon += 1) {
+      grid += '<line x1="' + x(lon).toFixed(1) + '" x2="' + x(lon).toFixed(1) + '" y1="' + pad + '" y2="' + (H - pad) + '" stroke="#e6ddca"/>' +
+        '<text x="' + x(lon).toFixed(1) + '" y="' + (H - pad + 15) + '" text-anchor="middle" font-size="10" fill="#8a7f6c">' + lon + '°</text>';
+    }
+    for (var lat = 21; lat <= 26; lat += 1) {
+      grid += '<line x1="' + pad + '" x2="' + (W - pad) + '" y1="' + y(lat).toFixed(1) + '" y2="' + y(lat).toFixed(1) + '" stroke="#e6ddca"/>' +
+        '<text x="' + pad + '" y="' + (y(lat) - 4).toFixed(1) + '" font-size="10" fill="#8a7f6c">' + lat + '°</text>';
+    }
+    var dots = pins.slice(0, 900).map(function (p) {
+      var approx = !!(p.approx || p.pinApproximate || p.verificationPending);
+      return '<circle cx="' + x(p.coords[1]).toFixed(1) + '" cy="' + y(p.coords[0]).toFixed(1) + '" r="' + (approx ? 3.4 : 5) + '"' +
+        ' fill="' + (approx ? '#c98a12' : '#8f3d08') + '" fill-opacity="' + (approx ? 0.55 : 0.95) + '" stroke="#fffdf7" stroke-width="0.8">' +
+        '<title>' + esc(p.name) + (p.district ? ' — ' + esc(p.district) : '') + (approx ? ' (আনুমানিক পিন)' : ' (যাচাইকৃত পিন)') + '</title></circle>';
+    }).join('');
+    els.simpleMap.innerHTML =
+      '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="সরল মানচিত্রে বৌদ্ধ ঐতিহ্যস্থানের আপেক্ষিক অবস্থান">' +
+      '<rect x="' + pad + '" y="' + pad + '" width="' + (W - pad * 2) + '" height="' + (H - pad * 2) + '" fill="#f8f4e8" stroke="#ded2b8"/>' +
+      grid + dots + '</svg>' +
+      '<p class="cb-simple-note">টাইল ছাড়া আঁকা সরল মানচিত্র — কেবল আপেক্ষিক অবস্থান বোঝাতে (এতে সড়ক, নদী বা সীমানা নেই)। ' +
+      'দেখানো হচ্ছে ' + bn(Math.min(pins.length, 900)) + 'টি পিন' + (pins.length > 900 ? ' (' + bn(pins.length) + 'টির মধ্যে)' : '') + '। ' +
+      '<span class="cb-simple-legend"><i class="dot-ok"></i>যাচাইকৃত <i class="dot-approx"></i>আনুমানিক</span></p>';
+  }
+  function setSimpleMap(on, reason) {
+    simpleOn = !!on;
+    if (els.simpleMap) els.simpleMap.hidden = !simpleOn;
+    if (els.mapBox) els.mapBox.hidden = simpleOn;
+    if (els.simpleMapBtn) {
+      els.simpleMapBtn.setAttribute('aria-pressed', simpleOn ? 'true' : 'false');
+      els.simpleMapBtn.textContent = simpleOn ? '▦ আন্তঃক্রিয় ম্যাপ' : '▦ সরল ম্যাপ';
+    }
+    if (simpleOn) {
+      renderSimpleMap();
+      setDiag('tiles', reason === 'auto' ? diagTilesText('fail') : 'বন্ধ — সরল ম্যাপ দেখানো হচ্ছে (ইচ্ছাকৃত)');
+      if (els.diagNote) els.diagNote.textContent = reason === 'auto'
+        ? 'ম্যাপের পটভূমি আসেনি, তাই টাইল ছাড়া আঁকা সরল ম্যাপ দেখানো হচ্ছে। পিন ও তথ্য ঠিকই আছে।'
+        : 'সরল ম্যাপ চালু — নেটওয়ার্ক ফিরলে “আন্তঃক্রিয় ম্যাপ” চেপে আগের অবস্থায় ফেরা যাবে।';
+    } else if (els.diagNote) els.diagNote.textContent = '';
   }
 
   function copyText(text) {
@@ -809,7 +991,7 @@
         i += 500;
         if (i < expanded.length) { setTimeout(chunk, 0); return; }
         directoryLoaded = true; directoryLoading = false;
-        refreshFilters(); applyUrlParams(); refreshStats(); applyFilters(false, false); renderItinerary();
+        refreshFilters(); applyUrlParams(); refreshStats(); refreshDiagInit(); applyFilters(false, false); renderItinerary();
         setStatus(bn(places.length) + 'টি রেকর্ড প্রস্তুত—সব বিহার-ডিরেক্টরিসহ।');
       }
       chunk();
@@ -858,13 +1040,26 @@
     if (els.division) els.division.addEventListener('change', function () {
       if (els.district) els.district.value = 'all';
       if (els.upazila) els.upazila.value = 'all';
+      if (els.thana) els.thana.value = 'all';
+      if (els.union) els.union.value = 'all';
       refreshFilters(); applyFilters(true, false);
     });
     if (els.district) els.district.addEventListener('change', function () {
       if (els.upazila) els.upazila.value = 'all';
+      if (els.thana) els.thana.value = 'all';
+      if (els.union) els.union.value = 'all';
       refreshFilters(); applyFilters(true, false);
     });
-    if (els.upazila) els.upazila.addEventListener('change', function () { applyFilters(true, false); });
+    if (els.upazila) els.upazila.addEventListener('change', function () {
+      if (els.thana) els.thana.value = 'all';
+      if (els.union) els.union.value = 'all';
+      refreshFilters(); applyFilters(true, false);
+    });
+    if (els.thana) els.thana.addEventListener('change', function () {
+      if (els.union) els.union.value = 'all';
+      refreshFilters(); applyFilters(true, false);
+    });
+    if (els.union) els.union.addEventListener('change', function () { applyFilters(true, false); });
     if (els.category) els.category.addEventListener('change', function () { applyFilters(true, false); });
     if (els.coordsOnly) els.coordsOnly.addEventListener('change', function () { applyFilters(true, false); });
     if (els.clear) els.clear.addEventListener('click', function () {
@@ -873,6 +1068,8 @@
       if (els.division) els.division.value = 'all';
       if (els.district) els.district.value = 'all';
       if (els.upazila) els.upazila.value = 'all';
+      if (els.thana) els.thana.value = 'all';
+      if (els.union) els.union.value = 'all';
       if (els.category) els.category.value = 'all';
       refreshFilters(); applyFilters(true, false);
       if (els.search) els.search.focus();
@@ -903,8 +1100,19 @@
     });
     if (els.loadMap) els.loadMap.addEventListener('click', ensureMap);
     if (els.locate) els.locate.addEventListener('click', locateMe);
+    if (els.simpleMapBtn) els.simpleMapBtn.addEventListener('click', function () {
+      setSimpleMap(!simpleOn);
+      if (!simpleOn && map) mountTiles();
+    });
     if (els.refreshMap) els.refreshMap.addEventListener('click', function () {
-      ensureMap().then(function (m) { if (m) { try { m.invalidateSize(); if (tileLayer) tileLayer.redraw(); } catch (_) {} updateMarkers(false); } });
+      setDiag('tiles', diagTilesText('loading'));
+      if (simpleOn) setSimpleMap(false);
+      ensureMap().then(function (m) {
+        if (!m) return;
+        try { m.invalidateSize(); } catch (_) {}
+        mountTiles();
+        updateMarkers(false);
+      });
     });
     document.addEventListener('click', function (event) {
       var link = event.target.closest('[data-dash-district]');
@@ -952,7 +1160,7 @@
       geo = Array.isArray(results[1]) ? results[1] : [];
       geoReady = geo.length > 0;
       addPlaces(data.places || []);
-      refreshFilters(); refreshStats(); applyUrlParams(); applyFilters(true, false); renderItinerary();
+      refreshFilters(); refreshStats(); refreshDiagInit(); applyUrlParams(); applyFilters(true, false); renderItinerary();
       if (!geoReady) setStatus('স্থানের তালিকা এসেছে, কিন্তু পূর্ণ উপজেলা gazetteer লোড হয়নি।');
       if (location.hash === '#map-section' || location.hash === '#map') ensureMap();
       scheduleDirectory();

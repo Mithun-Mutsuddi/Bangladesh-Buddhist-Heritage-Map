@@ -363,7 +363,7 @@
   }
 
   /* ---------- One shared assistant across the entire site ---------- */
-  var placePromise = null;
+  var placePromise = null, placesTotal = 0;
   var lastReply = '';
   var lastFocus = null;
 
@@ -374,7 +374,8 @@
     try {
       var api = window.CharyabhumiTracker;
       var list = api && api.getPlaces ? api.getPlaces() : null;
-      return list && list.length ? list : null;
+      if (list && list.length) { placesTotal = list.length; return list; }
+      return null;
     } catch (_) { return null; }
   }
   function loadPlaces() {
@@ -384,7 +385,7 @@
     placePromise = fetch('data/tracker-places.json?v=20261024e').then(function (r) {
       if (!r.ok) throw new Error('place directory ' + r.status);
       return r.json();
-    }).then(function (data) { return data.places || []; }).catch(function (err) {
+    }).then(function (data) { placesTotal = (data.places || []).length; return data.places || []; }).catch(function (err) {
       placePromise = null;
       throw err;
     });
@@ -619,7 +620,7 @@
   }
 
   ensureStyles(); ensurePanel();
-  window.CharyabhumiSanghaMitra = { open: open, close: close, ask: ask, searchPlaces: searchPlaces, setLanguage: setLanguage };
+  window.CharyabhumiSanghaMitra = { open: open, close: close, ask: ask, searchPlaces: searchPlaces, setLanguage: setLanguage, placeTotal: function () { return placesTotal; } };
   document.addEventListener('click', function (event) {
     var button = event.target.closest('[data-sangha-open]');
     if (button) { event.preventDefault(); open(); }

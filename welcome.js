@@ -220,8 +220,21 @@
     $('welcomeFestivalDetail').textContent = festival.detail;
     $('welcomeDate').textContent = 'ঢাকার সময়: ' + dateLabel(now) + ' · উৎসব-হিসাব ঢাকার পঞ্জিকা অনুসারে';
   }
+  /* ?welcome=1 শুধু ডাকার জন্য — বন্ধ করার পর URL থেকে সরিয়ে দিই,
+     নইলে রিলোড/বুকমার্কে বার্তাটি আবার জোর করে খুলে যায় (এবং সেশন-একবারের নিয়ম ভাঙে)। */
+  function dropForcedParam() {
+    try {
+      if (!forced || !window.history || !history.replaceState) return;
+      var params = new URLSearchParams(location.search);
+      params.delete('welcome');
+      var search = params.toString();
+      history.replaceState(null, '', location.pathname + (search ? '?' + search : '') + location.hash);
+      forced = false;
+    } catch (_) {}
+  }
   function closeWelcome() {
     markSeen();
+    dropForcedParam();
     if (dialog.open && typeof dialog.close === 'function') dialog.close();
     else dialog.removeAttribute('open');
     document.body.classList.remove('cb-welcome-open');

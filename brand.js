@@ -5,6 +5,13 @@
   var INFO = 'data/site-info.json?v=20261024g';
   var STRUCTURE = 'data/site-structure.json?v=20261025b';
   var RESOURCES = 'data/resource-guides.json?v=20261024g';
+  /* সংখ্যা সবসময় বাংলা অঙ্কে, সহস্র-বিচ্ছেদসহ (৩,২১৮) — সাইটের বাকি অংশের মতো */
+  function bnNum(value) {
+    var n = Number(value || 0);
+    try { return n.toLocaleString('bn-BD'); } catch (_) {
+      return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',').replace(/\d/g, function (d) { return '০১২৩৪৫৬৭৮৯'[Number(d)]; });
+    }
+  }
   var state = { info: null, structure: null, resources: null, placesRequested: false, searchSeq: 0 };
   var FALLBACK = { groups: [
     { id: 'heritage', icon: '🏛️', label: 'ইতিহাস ও ঐতিহ্য', short: 'ইতিহাস', items: [{ title: 'ইতিহাস', href: 'history.html', desc: '' }] },
@@ -55,7 +62,8 @@
         '<summary' + (current ? ' class="is-current"' : '') + '><span data-i18n="nav.group.' + esc(g.id) + '">' + esc(g.short || g.label) + '</span><span class="cb-nav-caret" aria-hidden="true">⌄</span></summary>' +
         '<div class="cb-nav-menu"><strong><span aria-hidden="true">' + esc(g.icon || '') + '</span> <span data-i18n="nav.group.' + esc(g.id) + '">' + esc(g.label) + '</span></strong>' + links + '</div></details>';
     }).join('');
-    return '<a class="cb-nav-home" href="index.html"' + (cur === 'index.html' && !destination ? ' aria-current="page"' : '') + ' data-i18n="nav.home">হোম</a>' + groups +
+    return '<button type="button" class="cb-nav-close" data-nav-close>মেনু বন্ধ <span class="cb-nav-close-x" aria-hidden="true">✕</span></button>' +
+      '<a class="cb-nav-home" href="index.html"' + (cur === 'index.html' && !destination ? ' aria-current="page"' : '') + ' data-i18n="nav.home">হোম</a>' + groups +
       '<button type="button" class="cb-nav-tool" data-search-open aria-haspopup="dialog">🔎 <span>সার্চ</span></button>' +
       '<button type="button" class="cb-nav-tool cb-assistant-tool" data-sangha-open aria-haspopup="dialog">☸ <span>সংঘমিত্র</span></button>';
   }
@@ -168,28 +176,51 @@
         results.innerHTML = localHtml;
       }
       if (!window.CharyabhumiSanghaMitra) {
-        status.textContent = pages.length + 'টি section ও ' + matching.length + 'টি external resource মিলেছে।';
+        status.textContent = bnNum(pages.length) + 'টি section ও ' + bnNum(matching.length) + 'টি external resource মিলেছে।';
         return null;
       }
       return window.CharyabhumiSanghaMitra.searchPlaces(q, 6).then(function (places) {
         if (seq !== state.searchSeq) return;
         if (places.length) {
-          results.innerHTML = localHtml + '<h3 class="cb-search-heading">ঐতিহ্যস্থান · ৩২১৮ রেকর্ড</h3>' + places.map(function (p) {
+          var total =
+            (window.CharyabhumiSanghaMitra && typeof window.CharyabhumiSanghaMitra.placeTotal === 'function')
+              ? window.CharyabhumiSanghaMitra.placeTotal() : 0;
+          results.innerHTML = localHtml + '<h3 class="cb-search-heading">ঐতিহ্যস্থান · ' + bnNum(total) + ' রেকর্ড</h3>' + places.map(function (p) {
             return linkHtml({ title: p.name + (p.en ? ' · ' + p.en : ''), href: 'index.html?q=' + encodeURIComponent(p.id) + '#explore', desc: [p.district, p.upazila, p.category].filter(Boolean).join(' · ') }, false, 'স্থান');
           }).join('');
         }
-        status.textContent = pages.length + 'টি section, ' + matching.length + 'টি external resource ও ' + places.length + 'টি স্থান দেখানো হচ্ছে।';
+        status.textContent = bnNum(pages.length) + 'টি section, ' + bnNum(matching.length) + 'টি external resource ও ' + bnNum(places.length) + 'টি স্থান দেখানো হচ্ছে।';
       });
     }).catch(function () {
       if (seq === state.searchSeq) status.textContent = 'Section search সম্পূর্ণ; অতিরিক্ত স্থান/resource এই মুহূর্তে লোড হয়নি।';
     });
   }
 
+  function navTop() {
+    /* মেনু হেডারের ঠিক নিচ থেকে শুরু হবে — হেডারের উচ্চতা যা-ই হোক */
+    var bar = document.getElementById('cbHeader');
+    if (!bar) return 108;
+    var rect = bar.getBoundingClientRect();
+    return Math.max(0, Math.round(rect.bottom));
+  }
   function closeNavigation() {
     document.querySelectorAll('.cb-nav-group[open]').forEach(function (d) { d.open = false; });
     var nav = document.getElementById('cbNav'), burger = document.getElementById('cbBurger');
     if (nav) nav.classList.remove('open');
     if (burger) burger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('cb-nav-open');
+  }
+  function openNavigation() {
+    var nav = document.getElementById('cbNav'), burger = document.getElementById('cbBurger');
+    if (!nav) return;
+    nav.style.setProperty('--cb-nav-top', navTop() + 'px');
+    nav.classList.add('open');
+    nav.scrollTop = 0;
+    document.body.classList.add('cb-nav-open');
+    if (burger) burger.setAttribute('aria-expanded', 'true');
+    /* মেনু খোলার পর প্রথম গ্রুপে ফোকাস, যাতে কীবোর্ড-ব্যবহারকারী এগোতে পারেন */
+    var first = nav.querySelector('summary');
+    if (first && window.matchMedia('(max-width: 1100px)').matches) first.focus({ preventScroll: true });
   }
   function bindShell() {
     if (bindShell.done) return;
@@ -199,7 +230,12 @@
     document.addEventListener('click', function (event) {
       var search = event.target.closest('[data-search-open]');
       if (search) { event.preventDefault(); openSearch(); return; }
-      if (event.target.closest('#cbNav a, [data-sangha-open]')) closeNavigation();
+      if (event.target.closest('[data-nav-close]')) { event.preventDefault(); closeNavigation(); return; }
+      /* লিংকে চাপ দিলে সাথে সাথে মেনু লুকিয়ে ফেললে কিছু মোবাইল ব্রাউজার নেভিগেশন বাতিল করে —
+         তাই পাতা বদলানোর কাজটা আগে ঘটতে দিয়ে, মেনু এক ফ্রেম পরে বন্ধ করি */
+      if (event.target.closest('#cbNav a, [data-sangha-open]')) {
+        setTimeout(closeNavigation, 0);
+      }
       else if (!event.target.closest('.cb-nav-group')) {
         document.querySelectorAll('.cb-nav-group[open]').forEach(function (d) { d.open = false; });
       }
@@ -212,13 +248,28 @@
       group.addEventListener('toggle', function () {
         if (!group.open) return;
         document.querySelectorAll('.cb-nav-group[open]').forEach(function (other) { if (other !== group) other.open = false; });
+        /* খোলা গ্রুপের সারাংশ যেন স্ক্রল হয়ে উপরে হারিয়ে না যায় */
+        if (window.matchMedia('(max-width: 1100px)').matches) {
+          var navEl = document.getElementById('cbNav');
+          if (navEl) {
+            /* খোলা গ্রুপের সারাংশ শিটের একেবারে উপরে আনি — তাহলে নিচের সব আইটেমই দেখা যায় */
+            var sumRect = group.querySelector('summary').getBoundingClientRect();
+            var navRect = navEl.getBoundingClientRect();
+            navEl.scrollTop = Math.max(0, navEl.scrollTop + (sumRect.top - navRect.top) - 8);
+          }
+        }
       });
     });
     var burger = document.getElementById('cbBurger'), nav = document.getElementById('cbNav');
     if (burger && nav) burger.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (nav.classList.contains('open')) closeNavigation(); else openNavigation();
     });
+    function refreshTop() {
+      var navEl = document.getElementById('cbNav');
+      if (navEl && navEl.classList.contains('open')) navEl.style.setProperty('--cb-nav-top', navTop() + 'px');
+    }
+    window.addEventListener('resize', refreshTop);
+    window.addEventListener('orientationchange', refreshTop);
   }
 
   function loadAssistant() {

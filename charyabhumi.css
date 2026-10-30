@@ -1441,3 +1441,84 @@ body.cb-search-open { overflow: hidden; }
 .cb-leaflet-pin-wrap.is-approx .cb-leaflet-pin { transform: scale(.86); }
 .legend-pin.approx,
 .cb-legend .approx { border-radius: 50%; }
+
+/* ---------- মোবাইল মেনু: পুরো পর্দার শিট, হেডারের নিচে, নিজের স্ক্রল ---------- */
+.cb-nav-close { display: none; }
+
+@media (max-width: 1100px) {
+  /* মেনু খোলা থাকলে পেছনের পাতা আর স্ক্রল হবে না */
+  body.cb-nav-open { overflow: hidden; }
+
+  /* হেডারের ভেতরে fixed কাজ করে না (header-এ backdrop-filter থাকায় containing block বদলে যায়),
+     তাই absolute — হেডারের ঠিক নিচে, পর্দার বাকি অংশটুকুই এর সর্বোচ্চ উচ্চতা */
+  .cb-nav {
+    position: absolute; left: 0; right: 0; top: 100%;
+    /* ডেস্কটপের justify-content:flex-end মোবাইলে থেকে গেলে কলামের কনটেন্ট
+       নিচের দিকে ঠেলে উপরে বেরিয়ে যেত — তখন প্রথম আইটেমগুলো দেখা যেত না */
+    justify-content: flex-start;
+    max-height: calc(100dvh - var(--cb-nav-top, 130px) - 6px);
+    padding: 8px 14px calc(20px + env(safe-area-inset-bottom, 0px));
+    overflow-y: auto; overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
+    z-index: 900;
+  }
+  .cb-nav .cb-nav-close {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    position: sticky; top: 0; z-index: 3;
+    margin: -8px -14px 6px; padding: 10px 16px;
+    background: var(--cb-paper); border-bottom: 1px solid var(--cb-line);
+    font: 700 14px/1.4 var(--cb-font); color: var(--cb-forest);
+    text-align: left; width: calc(100% + 28px); cursor: pointer;
+  }
+  .cb-nav .cb-nav-close span.cb-nav-close-x {
+    border: 1px solid var(--cb-line); border-radius: 999px; padding: 3px 11px; font-size: 15px; background: var(--cb-white);
+  }
+  .cb-nav-group { scroll-margin-top: 56px; }
+  .cb-nav-menu { margin-top: 0; }
+  .cb-nav-group[open] > summary { border-radius: 10px 10px 0 0; }
+}
+
+/* ---------- ম্যাপ ও GPS ডায়াগনস্টিক (P0 অডিট) ---------- */
+.cb-map-diag {
+  margin-top: 10px; border: 1px solid var(--cb-line); border-radius: 12px;
+  background: var(--cb-paper); padding: 4px 12px;
+}
+.cb-map-diag > summary {
+  cursor: pointer; padding: 9px 2px; font: 700 13px/1.5 var(--cb-font); color: var(--cb-forest);
+  list-style: none;
+}
+.cb-map-diag > summary::-webkit-details-marker { display: none; }
+.cb-map-diag > summary::after { content: '⌄'; float: right; color: var(--cb-muted); }
+.cb-map-diag[open] > summary::after { content: '⌃'; }
+.cb-map-diag ul { list-style: none; margin: 0 0 8px; padding: 0; }
+.cb-map-diag li {
+  display: flex; flex-wrap: wrap; gap: 4px 10px; justify-content: space-between;
+  padding: 7px 2px; border-top: 1px dashed var(--cb-line); font-size: 12.5px; color: var(--cb-ink-soft);
+}
+.cb-map-diag li b { color: var(--cb-ink); font-weight: 650; text-align: end; }
+.cb-map-diag-note { margin: 6px 0 10px; font-size: 12px; color: #7a5a2a; background: #fdf6e6; border: 1px solid #ecd9a8; border-radius: 8px; padding: 8px 10px; }
+.cb-map-diag-note:empty { display: none; }
+
+/* ---------- সরল ম্যাপ: টাইল ছাড়াই আঁকা ---------- */
+.cb-simple-map {
+  border: 1px solid var(--cb-line); border-radius: 12px; background: #f8f4e8;
+  padding: 8px; margin-bottom: 8px;
+}
+.cb-simple-map[hidden] { display: none; }
+.cb-simple-map svg { width: 100%; height: auto; display: block; max-height: 70vh; }
+.cb-simple-note { margin: 6px 2px 0; font-size: 12px; line-height: 1.65; color: var(--cb-ink-soft); }
+.cb-simple-legend { display: inline-flex; align-items: center; gap: 6px; margin-inline-start: 8px; font-weight: 600; }
+.cb-simple-legend i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.cb-simple-legend i.dot-ok { background: #8f3d08; }
+.cb-simple-legend i.dot-approx { background: #c98a12; opacity: .7; margin-inline-start: 8px; }
+
+@media (max-width: 560px) {
+  .cb-map-diag li { font-size: 12px; }
+  .cb-map-diag li b { text-align: start; }
+}
+
+/* cb-fontinherit — বাটন/ইনপুট নিজের ফন্ট ব্যবহার করলে বাংলা অক্ষর ভেঙে যেতে পারে
+   (UA ডিফল্ট Arial-এ বাংলা গ্লিফ নেই)। তাই সাইটের ফন্ট স্ট্যাক উত্তরাধিকার করাই। */
+button, input, select, textarea, optgroup {
+  font-family: var(--cb-font, "Noto Sans Bengali", "Hind Siliguri", Kalpurush, SolaimanLipi, system-ui, sans-serif);
+}

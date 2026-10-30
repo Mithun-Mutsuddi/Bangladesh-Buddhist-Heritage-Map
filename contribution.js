@@ -68,7 +68,7 @@
         (e.sources || []).map(function (s) {
           return '<a class="cc-src" href="' + esc(s.url) + '"' + (/^https?:/.test(s.url) ? ' target="_blank" rel="noopener noreferrer"' : '') + '>' + esc(s.label) + ' ↗</a>';
         }).join('') +
-        (e.kingRef ? '<a class="cc-src cc-king" href="kings.html?id=' + esc(e.kingRef) + '">ব্যক্তি-প্রোফাইলে দেখুন →</a>' : '') +
+        (e.kingRef ? '<a class="cc-src cc-king" href="patrons.html?id=' + esc(e.kingRef) + '">ব্যক্তি-প্রোফাইলে দেখুন →</a>' : '') +
       '</footer>' +
     '</article>';
   }

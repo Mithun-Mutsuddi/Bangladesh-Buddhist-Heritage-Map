@@ -5,15 +5,15 @@ var $ = function(id){ return document.getElementById(id); };
 var DB_NAME='buddhistHeritageHistoricalArchive', STORE='records', dbPromise=null, pendingFile=null;
 var objectUrls=[];
 var fields=[
- ['title','archiveTitle'],['type','archiveType'],['place','archivePlace'],
- ['historicDate','archiveHistoricDate'],['captureDate','archiveCaptureDate'],
- ['photographer','archivePhotographer'],['collector','archiveCollector'],
- ['uploader','archiveUploader'],['contact','archiveContact'],
- ['description','archiveDescription'],['url','archiveUrl']
+ ['title','draftTitle'],['type','draftType'],['place','draftPlace'],
+ ['historicDate','draftHistoricDate'],['captureDate','draftCaptureDate'],
+ ['photographer','draftPhotographer'],['collector','draftCollector'],
+ ['uploader','draftUploader'],['contact','draftContact'],
+ ['description','draftDescription'],['url','draftUrl']
 ];
 function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function bn(n){return String(n).replace(/\d/g,function(d){return '০১২৩৪৫৬৭৮৯'[Number(d)];});}
-function setStatus(msg,isError){var el=$('archiveStatus');if(el){el.textContent=msg;el.classList.toggle('is-error',!!isError);}}
+function setStatus(msg,isError){var el=$('draftStatus');if(!el)return;el.textContent=msg;el.classList.toggle('is-error',!!isError);}
 function openDb(){
  if(dbPromise)return dbPromise;
  dbPromise=new Promise(function(resolve,reject){
@@ -47,7 +47,7 @@ function remove(id){
 function makeId(){return (window.crypto&&crypto.randomUUID)?crypto.randomUUID():'archive-'+Date.now()+'-'+Math.random().toString(36).slice(2);}
 function collect(){
  var r={id:makeId(),createdAt:Date.now(),file:pendingFile||null,filename:pendingFile?pendingFile.name:'',mimeType:pendingFile?pendingFile.type:'',size:pendingFile?pendingFile.size:0};
- fields.forEach(function(pair){r[pair[0]]=$(pair[1])?$(pair[1]).value.trim():'';});
+ fields.forEach(function(pair){var el=$(pair[1]);var v=el&&typeof el.value==='string'?el.value.trim():'';r[pair[0]]=v;});
  return r;
 }
 function safeUrl(value){try{var u=new URL(value,location.href);return ['https:','http:'].indexOf(u.protocol)>=0?u.href:'';}catch(e){return '';}}
@@ -78,9 +78,9 @@ function mediaMarkup(r){
 }
 function render(){
  return getAll().then(function(records){
-  var list=$('archiveList');if(!list)return;
+  var list=$('draftList');if(!list)return;
   objectUrls.forEach(function(u){URL.revokeObjectURL(u);});objectUrls=[];
-  $('archiveCount').textContent=bn(records.length);
+  var countEl=$('draftCount');if(countEl)countEl.textContent=bn(records.length);
   if(!records.length){list.innerHTML='<p class="draft-empty">এখনো কোনো ঐতিহাসিক উপাদান নেই। ফর্মে প্রথম রেকর্ড যোগ করুন।</p>';return;}
   list.innerHTML=records.map(function(r){
    var meta=[r.place,r.historicDate?'ঘটনা/নথির তারিখ: '+r.historicDate:'',r.captureDate?'ধারণের তারিখ: '+r.captureDate:'',r.photographer?'আলোকচিত্রী/রেকর্ডকারী: '+r.photographer:'',r.collector?'সংগ্রহকারী: '+r.collector:'',r.uploader?'আপলোডকারী: '+r.uploader:''].filter(Boolean).map(esc);
@@ -89,7 +89,7 @@ function render(){
    return '<article class="archive-record" data-record-id="'+esc(r.id)+'"><div class="archive-record-heading"><span class="archive-type-icon" aria-hidden="true">'+(icons[r.type]||'▤')+'</span><div><h4>'+esc(r.title)+'</h4><p class="archive-meta">'+esc(String(r.type||'').toUpperCase())+' · যোগ: '+esc(created)+(r.filename?' · '+esc(r.filename)+' · '+sizeLabel(r.size||0):'')+'</p></div><button class="archive-delete" type="button" data-archive-delete="'+esc(r.id)+'" aria-label="এই রেকর্ড মুছুন">×</button></div>'+(meta.length?'<p class="archive-record-meta">'+meta.join(' · ')+'</p>':'')+(r.description?'<p class="archive-record-description">'+esc(r.description)+'</p>':'')+mediaMarkup(r)+(r.contact?'<p class="archive-record-meta">যোগাযোগ/ঠিকানা: '+esc(r.contact)+'</p>':'')+'</article>';
   }).join('');
  }).catch(function(error){
-  var list=$('archiveList');if(list)list.innerHTML='<p class="archive-error">আর্কাইভ খোলা যায়নি: '+esc(error.message)+'</p>';
+  var list=$('draftList');if(list)list.innerHTML='<p class="archive-error">আর্কাইভ খোলা যায়নি: '+esc(error.message)+'</p>';
   setStatus(error.message,true);
  });
 }
@@ -122,34 +122,65 @@ function exportZip(){
  }).then(function(blob){download(blob,'buddhist-historical-archive.zip');});
 }
 function submitIssue(){
- var r=collect(),body=[
- '## Historical archive submission','- Type: '+r.type,'- Related place: '+(r.place||'Not provided'),
- '- Historic/event date: '+(r.historicDate||'Unknown / not provided'),'- Capture/recording date: '+(r.captureDate||'Not provided'),
- '- Photographer/recorder: '+(r.photographer||'Unknown / not provided'),'- Collector: '+(r.collector||'Not provided'),
- '- Submitted by: '+(r.uploader||'Not provided'),'- Contact/address (only if safe to publish): '+(r.contact||'Not provided'),
- '- Source URL: '+(r.url||'Not provided'),'- File selected locally: '+(r.filename||'No file selected; attach manually after opening the issue'),
- '','### Description / history',r.description||'Not provided','','Attach the selected media manually after the issue opens. Do not upload material without permission; corroborate provenance and dates before public release.'
- ].join('\n');
- var url='https://github.com/Mithun-Mutsuddi/Bangladesh-Buddhist-Heritage-Map/issues/new?title='+encodeURIComponent('[Historical Archive] '+r.title)+'&body='+encodeURIComponent(body);
- window.open(url,'_blank','noopener,noreferrer');
+ var live=collect();
+ var source=(live&&live.title)?Promise.resolve({record:live,fromDraft:false}):getAll().then(function(records){
+  if(!records.length)return null;
+  return {record:records[0],fromDraft:true,total:records.length};
+ });
+ return source.then(function(result){
+  if(!result){setStatus('জমা দেওয়ার আগে অন্তত একটি খসড়া সংরক্ষণ করুন।',true);var f=$('draftTitle');if(f)f.focus();return;}
+  var r=result.record;
+  var body=[
+   '## Historical archive submission · ঐতিহাসিক সংরক্ষণাগার জমা',
+   '',
+   '- **শিরোনাম / Title:** '+(r.title||'—'),
+   '- **ধরন / Type:** '+(r.type||'—'),
+   '- **সম্পর্কিত স্থান / Place:** '+(r.place||'দেওয়া হয়নি'),
+   '- **ঘটনা বা নথির তারিখ / Historic date:** '+(r.historicDate||'অজানা'),
+   '- **ধারণ/রেকর্ডের তারিখ / Capture date:** '+(r.captureDate||'দেওয়া হয়নি'),
+   '- **আলোকচিত্রী বা রেকর্ডকারী / Photographer:** '+(r.photographer||'অজানা'),
+   '- **সংগ্রহকারী / Collector:** '+(r.collector||'দেওয়া হয়নি'),
+   '- **জমা দিচ্ছেন / Submitted by:** '+(r.uploader||'দেওয়া হয়নি'),
+   '- **যোগাযোগ / Contact:** '+(r.contact||'দেওয়া হয়নি'),
+   '- **মূল সূত্র / Source URL:** '+(r.url||'দেওয়া হয়নি'),
+   '- **নির্বাচিত ফাইল / Selected file:** '+(r.filename||'কোনো ফাইল বাছা হয়নি — issue খোলার পর নিজে সংযুক্ত করুন'),
+   '',
+   '### বিবরণ / Description',
+   '',
+   r.description||'দেওয়া হয়নি',
+   '',
+   '### যাচাই-চেকলিস্ট / Verification',
+   '',
+   '- [ ] মূল উৎস বা মালিকের অনুমতি আছে',
+   '- [ ] তারিখ ও creator যাচাই হয়েছে (নাহলে “অজানা” লেখা আছে)',
+   '- [ ] ব্যক্তিগত তথ্য (ফোন/ঠিকানা) প্রকাশযোগ্য',
+   '',
+   '> ফাইল এই ব্রাউজার থেকে যায়; ZIP বা JSON নামিয়ে issue-এ সংযুক্ত করুন। অনুমতি ছাড়া কোনো উপাদান প্রকাশ করা হবে না।'
+  ].join('\n');
+  var url='https://github.com/Mithun-Mutsuddi/Bangladesh-Buddhist-Heritage-Map/issues/new?title='+encodeURIComponent('[Historical Archive] '+(r.title||'জমা'))+'&body='+encodeURIComponent(body)+(result.total>1?'':'');
+  var win=window.open(url,'_blank','noopener,noreferrer');
+  if(!win)setStatus('পপ-আপ আটকে গেছে — ব্রাউজারের অনুমতি দিন, অথবা JSON/ZIP নামিয়ে সম্পাদককে পাঠান।',true);
+  else setStatus(result.fromDraft?'সংরক্ষিত খসড়া থেকে issue খোলা হয়েছে। ফাইল থাকলে ZIP নামিয়ে সেখানে সংযুক্ত করুন।'+(result.total>1?' আরও '+bn(result.total-1)+'টি খসড়া আছে — প্রতিটির জন্য আলাদা issue খুলুন।':''):'issue খোলা হয়েছে — ফাইল থাকলে ZIP নামিয়ে সেখানে সংযুক্ত করুন।');
+  return url;
+ }).catch(function(error){setStatus('জমা তৈরি করা যায়নি: '+error.message,true);});
 }
 document.addEventListener('DOMContentLoaded',function(){
- var input=$('archiveFile');
+ var input=$('draftFile');
  if(input)input.addEventListener('change',function(){
   pendingFile=input.files&&input.files[0]||null;var hint=document.querySelector('.archive-hint');
   if(pendingFile&&pendingFile.size>75*1024*1024){pendingFile=null;input.value='';if(hint)hint.textContent='ফাইল ৭৫ MB-এর বেশি। ছোট কপি বা মূল ওয়েব লিংক ব্যবহার করুন।';setStatus('ফাইলটি বড়; ৭৫ MB-এর মধ্যে ফাইল বেছে নিন অথবা লিংক দিন।',true);return;}
   if(hint&&pendingFile)hint.textContent=pendingFile.name+' · '+sizeLabel(pendingFile.size)+' — সংরক্ষণের পর এই ডিভাইসে প্রিভিউ করা যাবে।';
   if(pendingFile)setStatus('ফাইল নির্বাচন হয়েছে; খসড়া সংরক্ষণ চাপুন।');
  });
- if($('archiveForm'))$('archiveForm').addEventListener('reset',function(){pendingFile=null;if(input)input.value='';});
- if($('archiveForm'))$('archiveForm').addEventListener('submit',function(event){
+ if($('draftForm'))$('draftForm').addEventListener('reset',function(){pendingFile=null;if(input)input.value='';});
+ if($('draftForm'))$('draftForm').addEventListener('submit',function(event){
   event.preventDefault();var r=collect();if(!r.title){setStatus('শিরোনাম লিখুন।',true);return;}
-  save(r).then(function(){setStatus('এই ডিভাইসে খসড়া সংরক্ষিত হয়েছে। ZIP export না করা/প্রকাশ না করা পর্যন্ত অন্যরা দেখতে পাবেন না।');$('archiveForm').reset();return render();}).catch(function(error){setStatus('সংরক্ষণ করা যায়নি: '+error.message,true);});
+  save(r).then(function(){setStatus('এই ডিভাইসে খসড়া সংরক্ষিত হয়েছে। ZIP export না করা/প্রকাশ না করা পর্যন্ত অন্যরা দেখতে পাবেন না।');$('draftForm').reset();return render();}).catch(function(error){setStatus('সংরক্ষণ করা যায়নি: '+error.message,true);});
  });
- if($('archiveExport'))$('archiveExport').addEventListener('click',function(){exportZip().then(function(){setStatus('আর্কাইভ ZIP তৈরি হয়েছে। এটি যাচাই করে repository-তে প্রকাশ করুন।');}).catch(function(e){setStatus(e.message,true);});});
- if($('archiveJsonExport'))$('archiveJsonExport').addEventListener('click',function(){exportJson().catch(function(e){setStatus(e.message,true);});});
- if($('archiveSubmit'))$('archiveSubmit').addEventListener('click',submitIssue);
- if($('archiveList'))$('archiveList').addEventListener('click',function(event){
+ if($('draftExport'))$('draftExport').addEventListener('click',function(){exportZip().then(function(){setStatus('আর্কাইভ ZIP তৈরি হয়েছে। এটি যাচাই করে repository-তে প্রকাশ করুন।');}).catch(function(e){setStatus(e.message,true);});});
+ if($('draftJsonExport'))$('draftJsonExport').addEventListener('click',function(){exportJson().catch(function(e){setStatus(e.message,true);});});
+ if($('draftSubmit'))$('draftSubmit').addEventListener('click',submitIssue);
+ if($('draftList'))$('draftList').addEventListener('click',function(event){
   var del=event.target.closest('[data-archive-delete]');
   if(del){if(!confirm('এই আর্কাইভ রেকর্ডটি এই ডিভাইস থেকে মুছবেন?'))return;remove(del.dataset.archiveDelete).then(render).then(function(){setStatus('রেকর্ডটি এই ডিভাইস থেকে মুছে ফেলা হয়েছে।');}).catch(function(e){setStatus('রেকর্ড মুছতে সমস্যা: '+e.message,true);});return;}
   var read=event.target.closest('[data-read-text]');

@@ -1,7 +1,7 @@
 /* চর্যাভূমি — Service Worker: দুর্বল ইন্টারনেটেও দ্রুত লোড ও অফলাইন পাঠ।
    কৌশল: HTML = network-first (তাজা তথ্য), বাকি same-origin asset = cache-first।
    সংস্করণ বদলালে পুরনো ক্যাশে মুছে যায়। */
-var VERSION = 'charyabhumi-v20261030-profiles2';
+var VERSION = 'charyabhumi-v20261031c-p0';
 var CORE = [
   'index.html', 'charyabhumi.css', 'mega.css', 'brand.js', 'language.js',
   'config.js', 'mega-utils.js', 'manifest.webmanifest', 'pwa.js', 'festival-auto.js',
@@ -16,6 +16,8 @@ var CORE = [
   'data/support-config.json', 'data/games-plus.json', 'data/orientation-heritage.json', 'data/atlas-sites.json',
   'culture.html', 'culture.js', 'culture-2026.css', 'culture-fest-anim.js',
   'buddha-vamsa.html', 'buddha-vamsa.js', 'buddha-vamsa.css',
+  'patrons.html', 'patrons.js', 'kings.js', 'history.css',
+  'data/heritage-kings.json', 'data/heritage-contributions.json',
   'data/buddha-vamsa/meta.json', 'data/buddha-vamsa/dynasties.json', 'data/buddha-vamsa/kings.json',
   'data/buddha-vamsa/lineage.json', 'data/buddha-vamsa/jatakas.json', 'data/buddha-vamsa/quotes.json',
   'data/buddha-vamsa/inscriptions.json', 'data/buddha-vamsa/places.json', 'data/buddha-vamsa/sculptures.json',
@@ -23,7 +25,14 @@ var CORE = [
   'data/buddha-vamsa/images.json', 'data/buddha-vamsa/riddhi.json',
   'data/buddha-vamsa/communities.json', 'data/counts.json',
   'tracker-site.css',
+  /* সংরক্ষণাগার ও জমা-প্রবাহ: ব্রাউজ বান্ডল + খসড়ার JS + JSZip (অফলাইনেও ফর্ম খোলে) */
+  'historical-archive.html', 'historical-archive.js', 'historical-archive.css',
+  'archive.js', 'archive.css', 'assets/vendor/jszip/jszip.min.js',
+  'data/historical-archive.json',
   'data/heritage-culture.json', 'data/heritage-library.json',
+  /* অডিট-২০২৬ ধাপ: ডিরেক্টরি ও পৃষ্ঠপোষক-ডেটা প্রথমবার খোলাতেই ক্যাশে ঢোকে —
+     পরে নেটওয়ার্ক না থাকলেও তালিকা ও প্রোফাইল খোলা যায় (ট্র্যাকারের ৩.৫MB ফাইল বাদ, সেটি চাহিদামতো যায়) */
+  'data/dashboard-core.json', 'data/dashboard-directory.json',
   'assets/culture-2026/svgs/kolpotoru-steps.svg', 'assets/culture-2026/svgs/kolpojahaj-steps.svg',
   'assets/culture-2026/svgs/fanus-steps.svg', 'assets/culture-2026/svgs/kathin-24h.svg',
   'assets/vendor/leaflet/leaflet.js', 'assets/vendor/leaflet/leaflet.css',

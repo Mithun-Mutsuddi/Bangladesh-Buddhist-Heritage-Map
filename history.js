@@ -36,7 +36,7 @@
     standard: 'সাধারণ ঐতিহাসিক ঐকমত্য', correction: 'সংশোধনী — এই নামে রাজবংশ পাওয়া যায়নি' };
   function rulerTable(rows, dynId) {
     if (!rows || !rows.length) return '';
-    return `<table class="ruler-table"><caption>শাসকদের তালিকা (তারিখ আনুমানিক) · <a href="kings.html?dynasty=${encodeURIComponent(dynId)}">প্রতিটি রাজার আলাদা প্রোফাইল →</a></caption>
+    return `<table class="ruler-table"><caption>শাসকদের তালিকা (তারিখ আনুমানিক) · <a href="patrons.html?dynasty=${encodeURIComponent(dynId)}">প্রতিটি রাজার আলাদা প্রোফাইল →</a></caption>
       <thead><tr><th>শাসক</th><th>রাজত্বকাল</th><th>পরিচিতি</th></tr></thead><tbody>
       ${rows.map(r => `<tr><td><b>${esc(r.name)}</b></td><td>${esc(r.reign)}</td><td>${esc(r.note || '')}</td></tr>`).join('')}
       </tbody></table>`;
@@ -65,7 +65,7 @@
         <div class="dyn-cap">রাজধানী: ${esc((d.capitals || []).join(' · ') || 'নিশ্চিত নয়')}</div>
         <div class="dyn-badges">
           <span class="verify-badge ${esc(d.verified || 'standard')}">✔ ${esc(VERIFY_LABEL[d.verified] || VERIFY_LABEL.standard)}</span>
-          <a class="king-link" href="kings.html?dynasty=${encodeURIComponent(d.id)}">ব্যক্তি-প্রোফাইল →</a>
+          <a class="king-link" href="patrons.html?dynasty=${encodeURIComponent(d.id)}">ব্যক্তি-প্রোফাইল →</a>
         </div>
         ${(d.altNames && d.altNames.length) ? `<div class="dyn-alt">অন্য নাম: ${esc(d.altNames.join(' · '))}</div>` : ''}
       </header>

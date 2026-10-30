@@ -1,6 +1,6 @@
 /* ব্যক্তি-প্রোফাইল — data/heritage-kings.json থেকে কার্ড তৈরি।
-   kings.html?id=<king-id> → শুধু সেই রাজার পূর্ণ প্রোফাইল
-   kings.html?dynasty=<dynasty-id> → সেই রাজবংশের রাজারা */
+   patrons.html?id=<king-id> → শুধু সেই রাজার পূর্ণ প্রোফাইল
+   patrons.html?dynasty=<dynasty-id> → সেই রাজবংশের রাজারা */
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
@@ -55,7 +55,7 @@
   function miniCard(k) {
     const face = k.photo ? `<span class="king-mini-face"><img src="${esc(k.photo.image)}" alt="${esc(k.name)}" loading="lazy" referrerpolicy="no-referrer"
       onerror="this.parentElement.classList.add('noimg')"></span>` : '<span class="king-mini-face noimg"></span>';
-    return `<a class="king-mini" href="kings.html?id=${esc(k.id)}">
+    return `<a class="king-mini" href="patrons.html?id=${esc(k.id)}">
       ${face}
       <span class="king-mini-dyn">${esc(k.dynastyName)}</span>
       <strong>${esc(k.name)}</strong>
@@ -94,7 +94,7 @@
     }
     if ($('kingsEmpty')) $('kingsEmpty').hidden = list.length > 0;
     if ($('kingsSectionTitle')) $('kingsSectionTitle').textContent =
-      single ? (list[0] ? list[0].name : 'প্রোফাইল') : `রাজাদের তালিকা (${bn(list.length)})`;
+      single ? (list[0] ? list[0].name : 'প্রোফাইল') : `ব্যক্তি-প্রোফাইলের তালিকা (${bn(list.length)})`;
   }
 
   async function run() {
@@ -104,7 +104,7 @@
       if (!res.ok) throw new Error('HTTP ' + res.status);
       data = await res.json();
     } catch (err) {
-      if ($('kingsList')) $('kingsList').innerHTML = `<p class="caution">রাজাদের তথ্য ফাইল লোড করা যায়নি (${esc(err.message)})।</p>`;
+      if ($('kingsList')) $('kingsList').innerHTML = `<p class="caution">প্রোফাইলের তথ্য ফাইল লোড করা যায়নি (${esc(err.message)})।</p>`;
       return;
     }
     ALL = data.kings || [];

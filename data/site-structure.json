@@ -30,17 +30,17 @@
      "key": "nav.culture"
     },
     {
-     "title": "ব্যক্তি-প্রোফাইল",
-     "href": "kings.html",
-     "desc": "রাজা, জমিদার, পার্বত্য প্রধান, পণ্ডিত ও ভিক্ষু — সবার প্রোফাইল",
-     "keywords": "kings royal pala রাজা রাজবংশ",
-     "key": "nav.kings"
+     "title": "বৌদ্ধ ধর্মের পৃষ্ঠপোষক",
+     "href": "patrons.html",
+     "desc": "রাজা, জমিদার, chief, পণ্ডিত ও ভিক্ষু (১১২) + বিশ্ব বৌদ্ধ রাজবংশ (৩৫)",
+     "keywords": "রাজা রাজবংশ পৃষ্ঠপোষক patron dynasty kings জমিদার ভিক্ষু পণ্ডিত অশোক পাল সেন চন্দ্র maurya gupta pala",
+     "key": "nav.patrons"
     },
     {
-     "title": "বুদ্ধবংশ ও রাজবংশ",
+     "title": "বুদ্ধবংশ ও বিশ্ব বৌদ্ধ ইতিহাস",
      "href": "buddha-vamsa.html",
-     "desc": "বুদ্ধের বংশতালিকা, ঋদ্ধি ও শিষ্যদের অলৌকিক ক্ষমতা, জাতক-রাজা, বিশ্ব বৌদ্ধ রাজবংশ, শিলালিপি, প্রতিমা, ডাকটিকিট-খাম-পোস্টার ও সংস্কৃতি",
-     "keywords": "buddha vamsa lineage jataka kings dynasties ashoka dhammapada inscription sculpture বুদ্ধবংশ বংশতালিকা জাতক রাজবংশ অশোক ধম্মপদ শিলালিপি প্রতিমা riddhi iddhi abhinna arahant disciple shariputta moggallana ananda mahakassapa miracle sankassa savatthi ashoka bdheritage ঋদ্ধি অভিজ্ঞা অলৌকিকতা শিষ্য অর্হত সারিপুত্ত মোগ্গল্লান আনন্দ মাহাকস্সপ শারিপুত্র মৌদ্গল্যায়ন অলৌকিক সংকস্স শ্রাবস্তী বৌদ্ধ পোস্টার ডাকটিকিট খাম ম্যাচবক্স ক্যালেন্ডার মোহর",
+     "desc": "বুদ্ধের বংশতালিকা, ঋদ্ধি ও শিষ্য, জাতক, শিলালিপি, প্রতিমা, জনগোষ্ঠী ও সংস্কৃতি",
+     "keywords": "বুদ্ধবংশ জাতক শিলালিপি প্রতিমা buddha vamsa jataka",
      "key": "nav.buddhavamsa"
     },
     {
