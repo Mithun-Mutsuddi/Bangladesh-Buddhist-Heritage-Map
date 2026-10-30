@@ -1341,3 +1341,62 @@ body.cb-search-open { overflow: hidden; }
   .cb-brand small { display: none; }
   .cb-burger { flex: 0 0 auto; padding-inline: 10px; }
 }
+
+/* ==========================================================================
+   পাঠযোগ্যতা — সাইট-জুড়ে ক্ষুদ্র লেখার ন্যূনতম মাপ
+   atlas / library / history-এ ৯px লেবেল ফোনে পড়া যেত না। এখানে সাইট-বিস্তৃত
+   ন্যূনতম মাপ দেওয়া হলো; কোনো ব্লক ভাঙে না, শুধু লেখা বড় হয়।
+   ========================================================================== */
+@media (max-width: 760px) {
+  .cb .atlas-archive-card .atlas-archive-kind,
+  .cb .atlas-archive-card p,
+  .cb .atlas-archive-card a,
+  .cb .atlas-route-leg,
+  .cb .atlas-route-stop small,
+  .cb .atlas-route-stop button,
+  .cb .resource-card-top,
+  .cb .resource-card-top b,
+  .cb .resource-card p,
+  .cb .resource-card small,
+  .cb .resource-card a { font-size: 12px; line-height: 1.5; }
+  .cb .resource-card h3 { font-size: 17px; }
+  /* SVG সময়রেখা: অক্ষরের মাপ বড় */
+  .cb .timeline-scroll svg text { font-size: 11.5px; }
+}
+@media (min-width: 761px) {
+  .cb .atlas-archive-card .atlas-archive-kind,
+  .cb .atlas-route-leg,
+  .cb .resource-card-top,
+  .cb .resource-card-top b { font-size: 10.5px; }
+  .cb .atlas-route-stop small { font-size: 10.5px; }
+}
+
+/* ছোট লেবেল — দ্বিতীয় ধাপ (atlas-এর আপডেট/বিবলিওগ্রাফি/স্ট্যাম্প ও library-র ব্যাজ) */
+@media (max-width: 760px) {
+  .atlas-update-kind,
+  .atlas-update small,
+  .atlas-stamp small,
+  .atlas-stamp button,
+  .atlas-bib-item small,
+  .atlas-bib-item span,
+  .resource-card-top span,
+  .resource-card-top b,
+  .resource-card small { font-size: 12px !important; line-height: 1.5; }
+  .timeline-scroll svg text,
+  #timelineSvg .tl-tick-label,
+  svg text.cb-axis { font-size: 11.5px !important; }
+}
+@media (min-width: 761px) {
+  .atlas-update-kind,
+  .atlas-bib-item small,
+  .atlas-stamp small { font-size: 10.5px !important; }
+  #timelineSvg .tl-tick-label { font-size: 10.5px !important; }
+  .resource-card-top span,
+  .resource-card-top b { font-size: 10.5px !important; }
+}
+
+/* atlas-এর ছোট বোতাম — ডেস্কটপেও ১০.৫px-এর নিচে নয় */
+@media (min-width: 761px) {
+  .atlas-stamp button,
+  .atlas-stamp small { font-size: 10.5px !important; }
+}

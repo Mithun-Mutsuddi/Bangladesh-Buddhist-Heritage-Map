@@ -49,8 +49,12 @@
     if (!img || !img.image) {
       return `<figure><div class="noimg">ছবি পাওয়া যায়নি<br><span class="bv-credit">কমন্সে উপযুক্ত ছবি মেলেনি — ভুয়া ছবি বসানো হয়নি</span></div></figure>`;
     }
+    // ছবি একবার ব্যর্থ হলে সাথে সাথে ‘লোড হয়নি’ বসিয়ে দিলে দুর্বল নেটওয়ার্কে
+    // ছবিটা চিরতরে হারিয়ে যেত। তাই একবার রিট্রাই (ক্যাশ-বাস্টিং কোয়েরি সহ),
+    // তারপরও না এলে তবেই প্লেসহোল্ডার।
     return `<figure><img src="${esc(img.image)}" alt="${esc(alt)}" loading="lazy" referrerpolicy="no-referrer"
-      onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'noimg',textContent:'ছবি লোড হয়নি'}))">
+      data-src="${esc(img.image)}"
+      onerror="if(!this.dataset.retry){this.dataset.retry='1';setTimeout(()=>{this.src=this.dataset.src+(this.dataset.src.includes('?')?'&':'?')+'retry='+Date.now();},900);}else{this.replaceWith(Object.assign(document.createElement('div'),{className:'noimg',textContent:'ছবি লোড হয়নি'}))}">
       <figcaption class="bv-credit">ছবি: ${esc(img.credit)} · ${esc(img.license)}${img.source ? ` · <a href="${esc(img.source)}" target="_blank" rel="noopener noreferrer">উৎস ↗</a>` : ''}</figcaption></figure>`;
   }
 
@@ -514,10 +518,12 @@
 
   function renderMedia() {
     $('bvMediaList').innerHTML = state.media.map((m) => `<article class="bv-item">
+      ${m.imgKey && state.images[m.imgKey] ? `<div class="bv-arch-img">${figure(m.imgKey, m.title)}</div>` : ''}
       <div class="badges"><span class="bv-badge flag">${esc(m.kind)}</span><span class="bv-badge">${esc(m.country)}</span><span class="bv-badge">${esc(m.year)}</span></div>
       <h3>${esc(m.title)}</h3>
       <p>${esc(m.desc)}</p>
       <p class="meta"><b>সতর্কতা:</b> ${esc(m.note)}</p>
+      ${m.sourceUrl ? `<p class="meta"><a href="${esc(m.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(m.sourceLabel || 'সূত্র')} ↗</a></p>` : ''}
     </article>`).join('');
   }
 

@@ -193,3 +193,11 @@ body.cb.tracker .sidebar { padding-top: 16px; }
 
 /* ট্র্যাকারের নিজের ‘ভাষা’ নির্বাচক আছে — সাইটের ভাষা-বার ডাবল হয়, তাই বন্ধ */
 body.cb.tracker .cb-language-bar { display: none; }
+
+/* ৭৬১–১০০০px: বোতামের ভেতরের লেখা ৯px-এ নেমে যেত — ন্যূনতম ১২px */
+@media (min-width: 761px) and (max-width: 1000px) {
+  body.cb.tracker main .button,
+  body.cb.tracker main .button span,
+  body.cb.tracker main .page-heading .button,
+  body.cb.tracker main .page-heading > .button { font-size: 12.5px !important; }
+}

@@ -2,7 +2,7 @@
    লক্ষ্য: JSON বৈধতা, আইডি-অনন্যতা, সময়রেখার সংখ্যা, ভাঙা লিংক ও ছবির ক্রেডিট থাকা। */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -99,11 +99,15 @@ test('archives stay in one place and never fake an image', () => {
     if (a.imgKey) assert.ok(images[a.imgKey], `${a.id} points at a missing image key ${a.imgKey}`);
     else assert.ok(BENGALI.test(a.note || ''), `${a.id} without image must say why`);
   }
-  // পোস্টার/চলচ্চিত্র-পোস্টার/আলোকচিত্র media.json-এ থাকে, আর্কাইভে পুনরাবৃত্তি নয়
+  // ছাপা পোস্টার-ব্যানার কেবল আর্কাইভে; চলচ্চিত্র/আলোকচিত্র কেবল media-তে
   const media = data('media.json').media;
-  const posterIds = media.filter((m) => m.kind === 'পোস্টার').map((m) => m.id);
-  assert.ok(posterIds.length >= 1);
-  for (const pid of posterIds) assert.ok(!ids.has(pid), `${pid} duplicated between archives and media`);
+  assert.ok(archives.some((a) => a.kind === 'পোস্টার ও ব্যানার'), 'poster/banner section must live in archives');
+  assert.ok(!media.some((m) => m.kind === 'পোস্টার'), 'printed posters must not be repeated in media');
+  assert.ok(!archives.some((a) => a.kind === 'চলচ্চিত্র'), 'films must not appear in archives');
+  const mediaIds = new Set(media.map((m) => m.id));
+  for (const id of ids) assert.ok(!mediaIds.has(id), `${id} exists in both archives and media`);
+  const archTitles = new Set(archives.map((a) => a.title));
+  for (const m of media) assert.ok(!archTitles.has(m.title), `${m.title} repeated across divisions`);
 });
 
 test('lineage lists both sides and states the honest verdict about living descendants', () => {
@@ -156,7 +160,13 @@ test('every resolved image keeps author, licence and source', () => {
   const images = data('images.json').images;
   assert.ok(Object.keys(images).length >= 100, 'expected at least 100 resolved images');
   for (const [key, img] of Object.entries(images)) {
-    assert.ok(img.image.startsWith('https://'), `${key} has no image url`);
+    // ছবি হয় কমন্সের URL, নয়তো আমাদের নিজের assets/buddha-vamsa/ ফোল্ডারের ফাইল
+    const local = img.image.startsWith('assets/buddha-vamsa/');
+    assert.ok(local || img.image.startsWith('https://'), `${key} has no image url`);
+    if (local) {
+      assert.ok(existsSync(join(here, '..', img.image)), `${key} points at a missing local file`);
+      assert.ok(img.remote && img.remote.startsWith('https://'), `${key} lost its Commons origin URL`);
+    }
     assert.ok(img.credit && img.credit !== '', `${key} has no author credit`);
     assert.ok(img.license && img.license !== '', `${key} has no licence`);
     assert.ok(img.source.startsWith('https://'), `${key} has no source link`);

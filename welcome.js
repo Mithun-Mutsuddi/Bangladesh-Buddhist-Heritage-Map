@@ -295,7 +295,7 @@
   // মোবাইলে প্রথম-দর্শনের পূর্ণ-পর্দার ডায়ালগ পুরো হোমপেজ ঢেকে দিত —
   // ব্যবহারকারী ভাবতেন সাইটের বিভাগগুলোই নেই। তাই ছোট পর্দায় আর নিজে থেকে খোলে না;
   // ?welcome=1 দিলে বা ‘স্বাগতম’ বোতামে চাপলে তবেই খোলে।
-  var smallScreen = window.matchMedia('(max-width: 760px)').matches;
+  var smallScreen = window.matchMedia('(max-width: 1024px)').matches;
   if (forced || (!autoDisabled && !assistantDeepLink && !seen() && !mapDeepLink && !smallScreen)) {
     setTimeout(function () {
       var assistant = $('assistantPanel');
