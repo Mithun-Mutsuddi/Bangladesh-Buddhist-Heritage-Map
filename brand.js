@@ -3,7 +3,7 @@
 (function () {
   'use strict';
   var INFO = 'data/site-info.json?v=20261024g';
-  var STRUCTURE = 'data/site-structure.json?v=20261025b';
+  var STRUCTURE = 'data/site-structure.json?v=20261114a';
   var RESOURCES = 'data/resource-guides.json?v=20261024g';
   /* সংখ্যা সবসময় বাংলা অঙ্কে, সহস্র-বিচ্ছেদসহ (৩,২১৮) — সাইটের বাকি অংশের মতো */
   function bnNum(value) {

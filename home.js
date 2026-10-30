@@ -5,7 +5,7 @@
   var QUIZ = 'data/quiz-bank.json?v=20261022a';
   var QUIZ2 = 'data/quiz-extra14.json?v=20261022b';   /* রাউন্ড ১৫ সংযোজন */
   var DIST = 'data/district-famous.json?v=20261022m1';
-  var STRUCTURE = 'data/site-structure.json?v=20261024e';
+  var STRUCTURE = 'data/site-structure.json?v=20261114a';
   // হিরো-সংখ্যার জন্য মেগাবাইট-খানেক স্থান/কুইজ/লাইব্রেরি ডেটা আর লোড করা হয় না;
   // site-info.coverage ও district-famous-এর প্রস্তুত হিসাবই যথেষ্ট। এতে হোমপেজ দ্রুত খোলে।
 
