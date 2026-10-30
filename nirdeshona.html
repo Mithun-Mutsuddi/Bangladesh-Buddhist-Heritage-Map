@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#8f3d08">
+<title>নির্দেশনা — এক জায়গায় | চর্যাভূমি</title>
+<link rel="stylesheet" href="charyabhumi.css?v=20261031c">
+<link rel="stylesheet" href="welcome.css?v=20261031b">
+<style>
+.cb-nirdeshona{ max-width:860px; margin:0 auto; padding:24px 16px; }
+.cb-nirdeshona h1{ color:#4a1f05; font-size:28px; margin:0 0 8px }
+.cb-nirdeshona .lead{ color:#6e5a46; line-height:1.8 }
+.cb-card{ background:#fff; border:1px solid #ead6b8; border-radius:14px; padding:16px; margin:14px 0; box-shadow:0 8px 22px rgba(71,31,5,.06) }
+.cb-card h3{ margin:0 0 6px; color:#4a1f05 }
+.cb-card ol, .cb-card ul{ margin:8px 0 0 18px; line-height:1.9 }
+.cb-card code{ background:#fff7df; padding:2px 6px; border-radius:6px; border:1px solid #f0debf }
+</style>
+</head>
+<body class="cb">
+<header class="cb-header" id="cbHeader"></header>
+<main class="cb-nirdeshona">
+  <p style="margin:0 0 6px; font-size:12px; font-weight:800; letter-spacing:.06em; color:#a84608; text-transform:uppercase">📖 নির্দেশনা — এক জায়গায়</p>
+  <h1>ওয়েবসাইট কীভাবে ব্যবহার করবেন</h1>
+  <p class="lead">আগে নির্দেশনাগুলো ছড়িয়ে ছিটিয়ে ছিল — এখন সব এক পাতায়। হোমে <code>#explore</code> বা হিরো বোতাম থেকে এখানে আসা যায়।</p>
+
+  <div class="cb-card">
+    <h3>1) স্থান খুঁজুন ও ম্যাপ (৩,২১৮ রেকর্ড)</h3>
+    <ol>
+      <li>হোম → <b>আপনার পরবর্তী গন্তব্য খুঁজুন</b> → সার্চ বক্সে নাম/জেলা লিখুন</li>
+      <li>বিভাগ/জেলা/উপজেলা ফিল্টার বাছুন — ম্যাপ পিন আপডেট হবে</li>
+      <li>কার্ড থেকে <b>বিস্তারিত → ম্যাপে যান → ভ্রমণ-তালিকায় যোগ</b></li>
+      <li>যাচাইকৃত পিন (২১) vs আনুমানিক (৩,১৯৭) আলাদা ফিল্টার আছে</li>
+    </ol>
+  </div>
+
+  <div class="cb-card">
+    <h3>2) ট্র্যাকার — নিজের ভ্রমণ ম্যাপ</h3>
+    <ol>
+      <li><code>tracker.html</code> খুলুন → ৬৪ জেলা চেকলিস্ট</li>
+      <li>GPS: অনুমতি দিয়ে <b>রুট রেকর্ড</b> → GeoJSON ডাউনলোড</li>
+      <li>জার্নাল: ছবি/ভিডিও ব্রাউজারেই থাকে, সার্ভারে যায় না</li>
+      <li>Backup: JSON export/import — অন্য ফোনে নিতে পারবেন</li>
+    </ol>
+  </div>
+
+  <div class="cb-card">
+    <h3>3) Atlas ও গবেষণা</h3>
+    <ul>
+      <li>Atlas: ১২টি সোর্সড প্রোফাইল, ২টি সার্কিট, ৩৫ আর্কাইভ সোর্স</li>
+      <li>Library: ৮২ বই/PDF, Scholar/Arts & Culture গেটওয়ে</li>
+      <li>পঞ্জিকা: ১২ পূর্ণিমা, তিথি-নক্ষত্র, সূর্যোদয় — <code>calendar.html</code></li>
+    </ul>
+  </div>
+
+  <div class="cb-card">
+    <h3>4) Welcome Note — কখন দেখাবে?</h3>
+    <ul>
+      <li><b>বিশেষ দিন</b> (পূর্ণিমা, অমাবস্যা, অষ্টমী, জাতীয় দিবস, বর্ষাবাস, কঠিন চীবর) → স্বয়ংক্রিয়</li>
+      <li><b>Sign in / Sign up</b> করলে → স্বয়ংক্রিয় (মোবাইলেও)</li>
+      <li>সাধারণ দিন + লগইন নেই → খুলবে না, <code>☸ স্বাগত বার্তা</code> বোতামে ক্লিক বা <code>?welcome=1</code> দিলে খুলবে</li>
+      <li>প্রতি session এ ১ বার — বন্ধ করলে আর বিরক্ত করবে না</li>
+    </ul>
+  </div>
+
+  <div class="cb-card">
+    <h3>5) Sign in / Sign up (নতুন)</h3>
+    <ul>
+      <li>Topbar বা পাতার <b>Sign in</b> বাটন → নাম/ইমেইল/পাসওয়ার্ড</li>
+      <li>Local-first — Firebase ছাড়া পাসওয়ার্ড সার্ভারে যায় না</li>
+      <li>Google দিয়ে চালিয়ে যান (ডেমো) — পরে Firebase OAuth বসানো যাবে</li>
+    </ul>
+  </div>
+
+  <div class="cb-card">
+    <h3>6) যাত্রার আগে যাচাই</h3>
+    <ul>
+      <li>আনুমানিক পিন হলে স্থানীয় বিহারে ফোনে যাচাই করুন</li>
+      <li>প্রবেশ-সময়/ভাড়া পরিবর্তনশীল — যাওয়ার আগে কল করুন</li>
+      <li>জরুরি: ৯৯৯ • অফলাইন প্যাক: <code>offline.html</code></li>
+    </ul>
+  </div>
+
+  <div class="cb-card" style="background:#fff7df; border-color:#ffbd57">
+    <h3>📚 নতুন কী যোগ হলো </h3>
+    <ul>
+      <li>হোমে <b>সাম্প্রতিক খবর</b> ব্লক: Featured + ৩টি লিস্ট + ৬ ক্যাটাগরি (ইতিহাস/ঐতিহ্য/জীবনী/সাহিত্য/সংস্কৃতি/গবেষণা)</li>
+      <li>সর্বশেষ টিকার + Trending/Latest</li>
+      <li>সব নির্দেশনা এই এক পাতায় — আগে ৫-৬ জায়গায় ছড়ানো ছিল</li>
+      <li>ডিজাইন আগের মতোই চর্যাভূমি (গেরুয়া-সোনালি), ম্যাগাজিন লুক নয় — কনটেন্ট শুধু যোগ করা হয়েছে</li>
+    </ul>
+  </div>
+
+  <p style="text-align:center; margin:20px 0"><a href="index.html" class="cb-btn" style="background:#4a1f05; color:#ffe7bb; padding:10px 18px; border-radius:999px; font-weight:800; text-decoration:none">← হোমে ফিরুন</a></p>
+  <p style="text-align:center; font-size:12px; color:#8a7a60">ক্রেডিট ও সূত্র: <a href="CREDITS.md">CREDITS.md</a> — এক জায়গায়</p>
+</main>
+<footer class="cb-footer" id="cbFooter"></footer>
+<script src="brand.js?v=20261031c" defer></script>
+</body>
+</html>

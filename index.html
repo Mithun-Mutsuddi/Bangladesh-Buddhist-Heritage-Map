@@ -15,6 +15,7 @@
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="charyabhumi.css?v=20261031c">
   <link rel="stylesheet" href="welcome.css?v=20261031b">
+  <link rel="stylesheet" href="auth.css?v=20261101">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="mega.css?v=20261024h">
   <link rel="stylesheet" href="culture-2026.css?v=20261027a">
@@ -98,6 +99,84 @@
         </div>
         <div class="cb-hero-stats" id="cbHeroStats"></div>
         <p class="cb-coverage" id="cbCoverage" hidden></p>
+      </div>
+    </section>
+
+    <!-- ================= সাম্প্রতিক খবর — ৬ ক্যাটাগরি ================= -->
+    <section class="cb-section" id="samprotik" aria-labelledby="samprotikTitle" style="background:#fffdf6; border-top:3px solid #ffbd57">
+      <div class="cb-wrap">
+        <div style="display:flex; justify-content:space-between; align-items:end; gap:14px; flex-wrap:wrap">
+          <div>
+            <p class="cb-eyebrow">📰 সাম্প্রতিক খবর ও প্রবন্ধ — ৬ ক্যাটাগরিতে সাজানো</p>
+            <h2 id="samprotikTitle" style="margin:6px 0 6px; color:#4a1f05">সাম্প্রতিক খবর ও প্রবন্ধ</h2>
+            <p class="cb-sub" style="margin:0; max-width:70ch">ক্যাটাগরি-ভিত্তিক খবর — ইতিহাস/ঐতিহ্য/জীবনী/সাহিত্য/সংস্কৃতি/গবেষণা, প্রতিটি খবরে সূত্র/তারিখ/লেখক/ভিউ।
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap">
+            <a href="#samprotik" class="cb-btn ghost" style="background:#fff; border-color:#ead6b8">সব খবর →</a>
+            <a href="nirdeshona.html" class="cb-btn" style="background:#4a1f05; color:#ffe7bb">📖 নির্দেশনা এক জায়গায় →</a>
+          </div>
+        </div>
+
+        <div class="cb-news-ticker" style="margin:14px 0 16px; background:#4a1f05; color:#fff; border-radius:10px; display:flex; align-items:center; overflow:hidden; border:1px solid #4a1f05">
+          <span style="background:#111; color:#ffbd57; font-weight:900; padding:8px 12px; flex:none; font-size:12px">🔴 সর্বশেষ</span>
+          <div style="flex:1; overflow:hidden; white-space:nowrap; padding:8px 12px; font-size:13px; font-weight:600">
+            পাহাড়পুরে নতুন ডিজিটাল গাইড • ভাসু বিহার খনন প্রতিবেদন ১৯৭৩-৭৯ আর্কাইভে • কঠিন চীবর ২০২৬ প্রস্তুতি • বুদ্ধবংশে ১১২ পৃষ্ঠপোষক আপডেট
+          </div>
+        </div>
+
+        <div class="cb-news-grid" style="display:grid; grid-template-columns: 1.3fr .9fr; gap:16px">
+          <!-- Featured -->
+          <article class="cb-news-featured" style="background:#fff; border:1px solid #ead6b8; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 8px 22px rgba(71,31,5,.06)">
+            <div style="height:220px; background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.45)), url('assets/brand/buddha-hero.jpg'); background-size:cover; background-position:center; position:relative">
+              <span style="position:absolute; left:12px; top:12px; background:#e11d2d; color:#fff; font-size:11px; font-weight:800; padding:4px 8px; border-radius:4px">নির্বাচিত • ইতিহাস</span>
+            </div>
+            <div style="padding:14px 16px">
+              <h3 style="margin:0 0 6px; font-size:18px; line-height:1.35; color:#4a1f05"><a href="history.html" style="color:inherit">পাহাড়পুর থেকে ময়নামতী: হাজার বছরের বৌদ্ধ বাংলার পথরেখা</a></h3>
+              <p style="margin:0 0 8px; color:#6e5a46; font-size:13px; line-height:1.7">সোমপুর মহাবিহার থেকে শালবন — ৩৩৭ প্রত্নস্থল, ১২টি Atlas প্রোফাইল সহ নতুন গাইড। ক্যাটাগরি-কার্ড ও সূত্রসহ বিস্তারিত গাইড।</p>
+              <div style="display:flex; gap:10px; flex-wrap:wrap; font-size:11px; color:#8a7a60; border-top:1px dashed #ead6b8; padding-top:8px; margin-top:8px">
+                <span>✍️ মিথুন মুৎসুদ্দী</span><span>• ৩০ অক্টো ২০২৬</span><span>• ৬ মিনিট</span><span>• ২১৭ বার</span>
+              </div>
+            </div>
+          </article>
+          <!-- List -->
+          <div style="display:grid; gap:12px; align-content:start">
+            <article style="display:flex; gap:12px; background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; box-shadow:0 8px 22px rgba(71,31,5,.06)">
+              <div style="width:96px; height:72px; border-radius:8px; background: url('assets/atlas/somapura-aerial.jpg') center/cover; flex:none; border:1px solid #ead6b8"></div>
+              <div style="flex:1; min-width:0">
+                <div style="font-size:11px; font-weight:800; color:#a84608; text-transform:uppercase">ঐতিহ্য</div>
+                <h4 style="margin:4px 0; font-size:14px; line-height:1.35"><a href="atlas.html">ভাসু বিহার: মহাস্থানগড়ের বৌদ্ধ উত্তরাধিকার</a></h4>
+                <div style="font-size:11px; color:#8a7a60">৩১ বার • ১৮৮২ থেকে আজ</div>
+              </div>
+            </article>
+            <article style="display:flex; gap:12px; background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; box-shadow:0 8px 22px rgba(71,31,5,.06)">
+              <div style="width:96px; height:72px; border-radius:8px; background:#fff7df; display:grid; place-items:center; flex:none; border:1px solid #ead6b8">👑</div>
+              <div style="flex:1; min-width:0">
+                <div style="font-size:11px; font-weight:800; color:#8f3d08; text-transform:uppercase">জীবনী • ১১২</div>
+                <h4 style="margin:4px 0; font-size:14px; line-height:1.35"><a href="patrons.html">বিশুদ্ধানন্দ মহাস্থবির (১৮৯০–১৯৬২) — নতুন প্রোফাইল</a></h4>
+                <div style="font-size:11px; color:#8a7a60">নতুন • সূত্রসহ</div>
+              </div>
+            </article>
+            <article style="display:flex; gap:12px; background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; box-shadow:0 8px 22px rgba(71,31,5,.06)">
+              <div style="width:96px; height:72px; border-radius:8px; background:#fff7df; display:grid; place-items:center; flex:none; border:1px solid #ead6b8">🎭</div>
+              <div style="flex:1; min-width:0">
+                <div style="font-size:11px; font-weight:800; color:#123f39; text-transform:uppercase">সংস্কৃতি • ৮১</div>
+                <h4 style="margin:4px 0; font-size:14px; line-height:1.35"><a href="culture.html">কঠিন চীবর → কল্পতরু: ছবি ও বানানোর নিয়ম</a></h4>
+                <div style="font-size:11px; color:#8a7a60"></div>
+              </div>
+            </article>
+            <a href="#samprotik" class="cb-btn ghost" style="justify-content:center; background:#fff; border-color:#ead6b8">আরও খবর দেখুন →</a>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; display:grid; grid-template-columns: repeat(5,1fr); gap:12px">
+          <a href="history.html" style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; text-align:center; box-shadow:0 8px 22px rgba(71,31,5,.04)"><div style="font-size:22px">📚</div><b style="color:#4a1f05">ইতিহাস</b><br><small style="color:#6e5a46">পাল-চন্দ্র-বর্মণ • ৩৫ বংশ</small></a>
+          <a href="culture.html" style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; text-align:center; box-shadow:0 8px 22px rgba(71,31,5,.04)"><div style="font-size:22px">🏛️</div><b style="color:#4a1f05">ঐতিহ্য</b><br><small style="color:#6e5a46">৩৩৭ প্রত্নস্থল</small></a>
+          <a href="library.html" style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; text-align:center; box-shadow:0 8px 22px rgba(71,31,5,.04)"><div style="font-size:22px">🔍</div><b style="color:#4a1f05">গবেষণা</b><br><small style="color:#6e5a46">৩৫ আর্কাইভ গেটওয়ে</small></a>
+          <a href="buddha-jiboni.html" style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; text-align:center; box-shadow:0 8px 22px rgba(71,31,5,.04)"><div style="font-size:22px">☸️</div><b style="color:#4a1f05">বুদ্ধ জীবনী</b><br><small style="color:#6e5a46">জন্ম থেকে মহাপরিনির্বাণ</small></a>
+          <a href="bhasha-shiksha.html" style="background: linear-gradient(180deg,#fff,#fff7df); border:2px solid #ffbd57; border-radius:12px; padding:12px; text-align:center; box-shadow:0 8px 22px rgba(71,31,5,.08)"><div style="font-size:22px">🗣️</div><b style="color:#4a1f05">ভাষা শিক্ষা</b><br><small style="color:#6e5a46">পালি·ব্রাহ্মী·চর্যা·সব লিপি·তালপত্র·আদিবাসী</small></a>
+
+
+        </div>
       </div>
     </section>
 
@@ -400,7 +479,8 @@
   <script src="brand.js?v=20261031c" defer></script>
   <script src="home.js?v=20261024d" defer></script>
   <script src="calendar.js?v=20261023d" defer></script>
-  <script src="welcome.js?v=20261030a" defer></script>
+  <script src="welcome-fixed.js?v=20261101" defer></script>
+  <script src="auth.js?v=20261101" defer></script>
   <script src="dashboard.js?v=20261024h" defer></script>
   <script src="config.js?v=20261024g" defer></script>
   <script src="mega-utils.js?v=20261024g" defer></script>

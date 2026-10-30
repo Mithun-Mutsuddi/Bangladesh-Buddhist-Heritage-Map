@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#8f3d08">
+<title>সংবাদ ও প্রকাশনা কেন্দ্র — চর্যাভূমি</title>
+<link rel="stylesheet" href="../repo/charyabhumi.css?v=20261031c">
+<style>
+:root{ --saffron:#8f3d08; --gold:#ffbd57; --paper:#fffdf6; --line:#ead6b8 }
+body{ margin:0; background:#fffaf0; color:#1a140d; font-family:"Noto Sans Bengali", system-ui, sans-serif; line-height:1.7 }
+.cb-wrap{ max-width:1100px; margin:0 auto; padding:0 16px }
+.news-hero{ background:linear-gradient(120deg,#4a1f05,#8f3d08 60%,#d07a1b); color:#fff; padding:22px 0 }
+.news-hero h1{ margin:0; font-size:28px }
+.news-hero p{ margin:6px 0 0; opacity:.92; max-width:70ch }
+.tabs{ display:flex; gap:8px; flex-wrap:wrap; margin:14px 0; border-bottom:1px solid #ead6b8; padding-bottom:10px }
+.tab{ padding:8px 14px; border-radius:999px; border:1px solid #ead6b8; background:#fff; font-weight:700; font-size:13px; cursor:pointer }
+.tab.is-active{ background:#4a1f05; color:#ffe7bb; border-color:#4a1f05 }
+.grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:14px; margin:16px 0 }
+@media(max-width:900px){ .grid{ grid-template-columns:repeat(2,1fr) } }
+@media(max-width:560px){ .grid{ grid-template-columns:1fr } }
+.card{ background:#fff; border:1px solid #ead6b8; border-radius:12px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 8px 22px rgba(71,31,5,.06) }
+.card img{ width:100%; height:150px; object-fit:cover; background:#fdf6e6 }
+.card-body{ padding:12px 14px; flex:1; display:flex; flex-direction:column; gap:6px }
+.badge{ display:inline-block; font-size:10px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:3px 7px; border-radius:4px; background:#e11d2d; color:#fff; width:fit-content }
+.badge.green{ background:#123f39 } .badge.gold{ background:#ffbd57; color:#4a1f05 }
+.card h3{ margin:0; font-size:15px; line-height:1.4 }
+.card p{ margin:0; font-size:13px; color:#6e5a46; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden }
+.meta{ margin-top:auto; padding-top:8px; border-top:1px dashed #ead6b8; font-size:11px; color:#8a7a60; display:flex; justify-content:space-between; gap:8px }
+.newsletter{ background:#fff7df; border:1px solid #ffbd57; border-radius:12px; padding:14px; margin:18px 0; display:grid; gap:8px }
+.newsletter form{ display:flex; gap:8px; flex-wrap:wrap }
+.newsletter input{ flex:1; min-width:220px; padding:10px 12px; border:1px solid #ead6b8; border-radius:999px }
+.newsletter button{ padding:10px 16px; border-radius:999px; border:0; background:#4a1f05; color:#ffe7bb; font-weight:800; cursor:pointer }
+</style>
+</head>
+<body>
+<header class="news-hero">
+  <div class="cb-wrap">
+    <p style="font-size:12px; letter-spacing:.08em; opacity:.9; margin:0 0 6px">চর্যাভূমি · সংবাদ ও প্রকাশনা কেন্দ্র</p>
+    <h1>বৌদ্ধ সংবাদকেন্দ্র</h1>
+    <p>বাংলাদেশ + আন্তর্জাতিক + সম্পাদকীয় + প্রবন্ধ/সাহিত্য — প্রতিটি সংবাদে তারিখ, লেখক, উৎস, ছবি ও সংশোধনী। প্রতিটি সংবাদে তারিখ, লেখক, উৎস, ছবি ও সংশোধনী সহ।</p>
+  </div>
+</header>
+<main class="cb-wrap">
+  <div class="tabs" role="tablist">
+    <button class="tab is-active" data-tab="bd">🇧🇩 বাংলাদেশ সংবাদ</button>
+    <button class="tab" data-tab="intl">🌍 আন্তর্জাতিক</button>
+    <button class="tab" data-tab="edit">✍️ সম্পাদকীয়</button>
+    <button class="tab" data-tab="lit">📚 প্রবন্ধ ও সাহিত্য</button>
+    <button class="tab" data-tab="media">📺 মিডিয়া</button>
+  </div>
+
+  <div id="panel-bd" class="panel">
+    <p style="font-size:11px; color:#8a7a60; margin:0 0 8px; background:#fff7df; border:1px solid #ffbd57; border-radius:8px; padding:6px 10px">বাংলাদেশ সংবাদ — ১০ বিভাগ: বিহারের খবর, ভিক্ষুসংঘ সম্মেলন, সংঘরাজ নির্বাচন, সংগঠন, শিক্ষা প্রতিষ্ঠান, ধর্মীয় অনুষ্ঠান, সামাজিক সমস্যা, অর্জন/পুরস্কার, বিহার নির্মাণ, গুরুত্বপূর্ণ ঘোষণা। প্রতিটিতে তারিখ/আপডেট/সংবাদদাতা/উৎস/ছবি/সংশোধনী।</p>
+    <div style="display:flex; gap:6px; flex-wrap:wrap; margin:0 0 10px">
+      <span style="background:#4a1f05; color:#ffe7bb; padding:4px 8px; border-radius:999px; font-size:10px; font-weight:800">বিহার</span>
+      <span style="background:#fff; border:1px solid #ead6b8; padding:4px 8px; border-radius:999px; font-size:10px">ভিক্ষুসংঘ</span>
+      <span style="background:#fff; border:1px solid #ead6b8; padding:4px 8px; border-radius:999px; font-size:10px">সংঘরাজ</span>
+      <span style="background:#fff; border:1px solid #ead6b8; padding:4px 8px; border-radius:999px; font-size:10px">সংগঠন</span>
+      <span style="background:#fff; border:1px solid #ead6b8; padding:4px 8px; border-radius:999px; font-size:10px">শিক্ষা</span>
+      <span style="background:#fff; border:1px solid #ead6b8; padding:4px 8px; border-radius:999px; font-size:10px">ধর্মীয় অনুষ্ঠান</span>
+      <span style="background:#fff; border:1px solid #ead6b8; padding:4px 8px; border-radius:999px; font-size:10px">সামাজিক সমস্যা</span>
+      <span style="background:#fff; border:1px solid #ead6b8; padding:4px 8px; border-radius:999px; font-size:10px">অর্জন</span>
+      <span style="background:#fff; border:1px solid #ead6b8; padding:4px 8px; border-radius:999px; font-size:10px">নির্মাণ</span>
+      <span style="background:#fff; border:1px solid #ead6b8; padding:4px 8px; border-radius:999px; font-size:10px">ঘোষণা</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1606293926075-69a00febf780?q=80&w=600&auto=format&fit=crop" alt="" loading="lazy" onerror="this.style.background='#fdf6e6'; this.alt='ছবি লোড হয়নি'">
+        <div class="card-body">
+          <span class="badge">বাংলাদেশ • বিহারের খবর</span>
+          <h3><a href="#">রাঙামাটি রাজবন বিহারে কঠিন চীবর দান ২০২৬ — প্রস্তুতি শুরু</a></h3>
+          <p>কার্তিক পূর্ণিমা উপলক্ষে ভিক্ষুসংঘের বর্ষাবাস সমাপ্তি ও কঠিন চীবর উৎসবের ৩০ দিনের প্রস্তুতি।</p>
+          <div class="meta"><span>২৮ অক্টো ২০২৬ • প্রতিনিধি</span><span>১২৪ বার</span></div>
+          <small style="font-size:10px; color:#8a7a60">উৎস: রাজবন বিহার কর্তৃপক্ষ • ছবি: নিজস্ব • আপডেট: ২৮ অক্টো, সংশোধন: বানান</small>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?q=80&w=600&auto=format&fit=crop" alt="" loading="lazy" onerror="this.style.background='#fdf6e6'">
+        <div class="card-body">
+          <span class="badge green">ভিক্ষুসংঘ সম্মেলন</span>
+          <h3><a href="#">ঢাকায় ভিক্ষুসংঘ সম্মেলন — ৩০০ ভিক্ষুর অংশগ্রহণ</a></h3>
+          <p>বর্ষাবাস-পরবর্তী বিনয় ও সংঘ-শৃঙ্খলা নিয়ে আলোচনা।</p>
+          <div class="meta"><span>২৫ অক্টো ২০২৬ • নিজস্ব</span><span>৮৯ বার</span></div>
+          <small style="font-size:10px; color:#8a7a60">উৎস: বাংলাদেশ সংঘরাজ ভিক্ষু মহাসভা</small>
+        </div>
+      </article>
+      <article class="card">
+        <div style="height:150px; display:grid; place-items:center; background:#fff7df; border-bottom:1px solid #ead6b8">🏛️</div>
+        <div class="card-body">
+          <span class="badge gold">সংঘরাজ নির্বাচন</span>
+          <h3><a href="#">সংঘরাজ নির্বাচন ২০২৬ — মনোনয়ন তালিকা প্রকাশ</a></h3>
+          <p>ঘোষণা: ১৫ নভেম্বর ভোট, বিহার-ভিত্তিক প্রতিনিধি।</p>
+          <div class="meta"><span>২২ অক্টো ২০২৬ • প্রেস বিজ্ঞপ্তি</span><span>২১০ বার</span></div>
+        </div>
+      </article>
+      <article class="card"><div style="height:120px; display:grid; place-items:center; background:#eaf2e9; border-bottom:1px solid #ead6b8">🏫</div><div class="card-body"><span class="badge green">শিক্ষা প্রতিষ্ঠান</span><h3><a href="#">চট্টগ্রাম বৌদ্ধ বিহারে পালি কোর্সে ১২০ শিক্ষার্থী</a></h3><p>ষষ্ঠ ব্যাচ — পালি, ত্রিপিটক ও ধম্মপদ।</p><div class="meta"><span>২০ অক্টো ২০২৬</span><span>৭৬ বার</span></div></div></article>
+      <article class="card"><div style="height:120px; display:grid; place-items:center; background:#fff7df; border-bottom:1px solid #ead6b8">🪔</div><div class="card-body"><span class="badge" style="background:#6b4e9e">ধর্মীয় অনুষ্ঠান</span><h3><a href="#">প্রবারণা পূর্ণিমায় ফানুস উৎসব — ৫০ বিহারে</a></h3><p>আশ্বিনী পূর্ণিমা উপলক্ষে আকাশপ্রদীপ।</p><div class="meta"><span>১৮ অক্টো ২০২৬</span><span>৯৮ বার</span></div></div></article>
+      <article class="card"><div style="height:120px; display:grid; place-items:center; background:#fde8e8; border-bottom:1px solid #ead6b8">⚠️</div><div class="card-body"><span class="badge" style="background:#c0392b">সামাজিক সমস্যা</span><h3><a href="#">পার্বত্য এলাকায় শিক্ষা-অধিকার নিয়ে প্রতিবেদন</a></h3><p>BBS ২০২২ ও CHTDB সূত্রে বিশ্লেষণ — সতর্ক ভাষায়।</p><div class="meta"><span>১৫ অক্টো ২০২৬ • গবেষণা</span><span>৬৫ বার</span></div></div></article>
+      <article class="card"><div style="height:120px; display:grid; place-items:center; background:#fff7df; border-bottom:1px solid #ead6b8">🏆</div><div class="card-body"><span class="badge gold">অর্জন / পুরস্কার</span><h3><a href="#">বৌদ্ধ শিক্ষার্থীর জাতীয় পুরস্কার লাভ</a></h3><p>শিক্ষা ও সমাজসেবায় অবদানের স্বীকৃতি।</p><div class="meta"><span>১২ অক্টো ২০২৬</span><span>৪৪ বার</span></div></div></article>
+      <article class="card"><div style="height:120px; display:grid; place-items:center; background:#fdf6e6; border-bottom:1px solid #ead6b8">🏗️</div><div class="card-body"><span class="badge green">বিহার নির্মাণ</span><h3><a href="#">পাহাড়পুর মহাবিহারে সংরক্ষণ কাজ পরিদর্শন</a></h3><p>UNESCO-যৌথ, অ্যানাস্টাইলোসিস নীতি।</p><div class="meta"><span>২০ অক্টো ২০২৬ • UNESCO</span><span>২১০ বার</span></div></div></article>
+      <article class="card"><div style="height:120px; display:grid; place-items:center; background:#fff7df; border-bottom:1px solid #ead6b8">📢</div><div class="card-body"><span class="badge" style="background:#123f39">গুরুত্বপূর্ণ ঘোষণা</span><h3><a href="#">কঠিন চীবর দানোৎসব ২০২৬ — জেলা-ভিত্তিক সূচি</a></h3><p>৬৪ জেলার সূচি PDF — বিহার-অফিস থেকে সংগ্রহ করুন।</p><div class="meta"><span>৩০ অক্টো ২০২৬ • ঘোষণা</span><span>১৮৮ বার</span></div></div></article>
+    </div>
+  </div>
+
+  <div id="panel-intl" class="panel" hidden>
+    <p style="font-size:11px; color:#8a7a60; margin:0 0 8px; background:#fff7df; border:1px solid #ffbd57; border-radius:8px; padding:6px 10px">আন্তর্জাতিক — ভারত/নেপাল/শ্রীলঙ্কা/মিয়ানমার/থাইল্যান্ড/চীন/জাপান/কোরিয়া/ইউরোপ-আমেরিকা/বিশ্ব সম্মেলন/আন্তর্জাতিক সংগঠন/UNESCO/গবেষণা</p>
+    <div class="grid">
+      <article class="card"><div style="height:130px; display:grid; place-items:center; background:#eaf2e9">🌏</div><div class="card-body"><span class="badge">আন্তর্জাতিক • ভারত</span><h3>নালন্দায় আন্তর্জাতিক বৌদ্ধ সম্মেলন ২০২৬</h3><p>১২ দেশের ২০০ গবেষক — পালযুগ ও বিক্রমশীলা নিয়ে নতুন পেপার।</p><div class="meta"><span>১৮ অক্টো ২০২৬</span><span>৭৬ বার</span></div></div></article>
+      <article class="card"><div style="height:130px; display:grid; place-items:center; background:#eaf2e9">🏔️</div><div class="card-body"><span class="badge green">নেপাল • শ্রীলঙ্কা</span><h3>লুম্বিনী-অনুরাধাপুর যৌথ সংরক্ষণ প্রকল্প</h3><p>UNESCO সহ দুই দেশের পুরাতত্ত্ব বিভাগের MOU।</p><div class="meta"><span>১৬ অক্টো ২০২৬</span><span>৫৪ বার</span></div></div></article>
+      <article class="card"><div style="height:130px; display:grid; place-items:center; background:#fff7df">🏯</div><div class="card-body"><span class="badge" style="background:#123f39">মিয়ানমার • থাইল্যান্ড</span><h3>ব্যাংককে বোধি দিবস উদযাপন</h3><p>রাজ পরিবারের পৃষ্ঠপোষকতায় বোধিবৃক্ষ পূজা।</p><div class="meta"><span>১৫ অক্টো ২০২৬</span><span>৫৪ বার</span></div></div></article>
+      <article class="card"><div style="height:130px; display:grid; place-items:center; background:#fdf6e6">⛩️</div><div class="card-body"><span class="badge gold">চীন • জাপান • কোরিয়া</span><h3>কিয়োটোতে জেন ও মহাযান সংলাপ</h3><p>জাপান-কোরিয়ার মঠ-বিশ্ববিদ্যালয় যৌথ সেমিনার।</p><div class="meta"><span>১২ অক্টো ২০২৬</span><span>৪১ বার</span></div></div></article>
+      <article class="card"><div style="height:130px; display:grid; place-items:center; background:#eaf0ff">🌍</div><div class="card-body"><span class="badge" style="background:#4a5f9e">ইউরোপ-আমেরিকা</span><h3>লন্ডনে বৌদ্ধ সেন্টার ৫০ বছর</h3><p>UK-তে অভিবাসী বৌদ্ধ সমাজের ইতিহাস প্রদর্শনী।</p><div class="meta"><span>১০ অক্টো ২০২৬</span><span>৩০ বার</span></div></div></article>
+      <article class="card"><div style="height:130px; display:grid; place-items:center; background:#fff7df">🏛️</div><div class="card-body"><span class="badge green">UNESCO • গবেষণা</span><h3>World Heritage — পাহাড়পুর রিপোর্ট ২০২৬</h3><p>সংরক্ষণ অগ্রগতি ও পর্যটন নির্দেশিকা — PDF।</p><div class="meta"><span>০৮ অক্টো ২০২৬ • UNESCO</span><span>৯২ বার</span></div></div></article>
+    </div>
+    <p style="font-size:11px; color:#8a7a60; background:#fff; border:1px solid #ead6b8; border-radius:8px; padding:6px 10px; margin-top:10px">বিশেষ সংবাদ: ধ্বংস/সংরক্ষণ, নিরাপত্তা, নতুন প্রত্ন আবিষ্কার, উল্লেখযোগ্য ঘটনা — প্রতিটিতে তারিখ/উৎস/ছবি/সংশোধনী বাধ্যতামূলক</p>
+  </div>
+
+  <div id="panel-edit" class="panel" hidden>
+    <div class="grid">
+      <article class="card"><div class="card-body"><span class="badge" style="background:#6b4e9e">সম্পাদকীয়</span><h3>বুদ্ধের শিক্ষা ও সাম্প্রদায়িক সম্প্রীতি</h3><p>মতামত — সংবাদ নয়। সাম্প্রদায়িক সম্প্রীতিতে বৌদ্ধ নীতির ভূমিকা।</p><div class="meta"><span>সম্পাদক • ১২ অক্টো ২০২৬</span><span>৯৮ বার</span></div></div></article>
+      <article class="card"><div class="card-body"><span class="badge" style="background:#b5571f">মতামত</span><h3>আদিবাসী বৌদ্ধদের অধিকার — শিক্ষা ও ভূমি</h3><p>পার্বত্য চট্টগ্রাম প্রসঙ্গে গবেষণালব্ধ মতামত।</p><div class="meta"><span>অতিথি লেখক • ১০ অক্টো ২০২৬</span><span>৬৭ বার</span></div></div></article>
+    </div>
+  </div>
+
+  <div id="panel-lit" class="panel" hidden>
+    <p style="color:#6e5a46; font-size:13px">১০ উপবিভাগ: ধর্মীয় প্রবন্ধ, দর্শন, পালি সাহিত্য, বাংলা বৌদ্ধ সাহিত্য, কবিতা, গল্প, অনুবাদ, জাতক, ব্যাখ্যা, তরুণ লেখক — <a href="#">Library দেখুন</a></p>
+    <div class="grid">
+      <article class="card"><div class="card-body"><span class="badge gold">জাতক</span><h3>সিবি জাতক — ত্যাগের গল্প</h3><p>শিশুদের জন্য সচিত্র জাতক — পালি মূল + বাংলা সার।</p><div class="meta"><span>লেখক: সুমন স্থবির</span><span>৪২ বার</span></div></div></article>
+      <article class="card"><div class="card-body"><span class="badge">কবিতা</span><h3>বোধিবৃক্ষের ছায়া — কবিতা</h3><p>তরুণ লেখক বিভাগে প্রকাশিত — ১২ লাইন।</p><div class="meta"><span>তরুণ লেখক • ৮ অক্টো ২০২৬</span><span>৩১ বার</span></div></div></article>
+    </div>
+  </div>
+
+  <div id="panel-media" class="panel" hidden>
+    <div class="grid">
+      <article class="card"><div style="height:100px; display:grid; place-items:center; background:#fdf6e6">📺 Nirvana TV</div><div class="card-body"><span class="badge green">বৌদ্ধ টিভি</span><h3>ধম্মচক্র সম্প্রচার — প্রতি পূর্ণিমা</h3><p>পরিচালক: — (অনুমতি সাপেক্ষে) • ভাষা: বাংলা • যাচাই: ৩০ অক্টো ২০২৬</p><div class="meta"><span><a href="#">অফিসিয়াল লিংক ↗</a></span></div></div></article>
+    </div>
+  </div>
+
+  <div class="newsletter">
+    <strong>📮 Newsletter — নতুন সংবাদ/প্রবন্ধ ইমেইলে পান</strong>
+    <form onsubmit="event.preventDefault(); alert('ধন্যবাদ! Formspree/Giscus যুক্ত হলে ইমেইলে যাবে (এখন ডেমো)')">
+      <input type="email" placeholder="আপনার ইমেইল" required>
+      <button type="submit">সাবস্ক্রাইব</button>
+    </form>
+    <small style="color:#8a7a60">স্প্যাম নয় — মাসে ১-২ বার। Comments: প্রতিটি নিবন্ধে moderated মন্তব্য (article.html)</small>
+  </div>
+
+  <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:14px; margin:14px 0">
+    <h3 style="margin:0 0 8px; color:#4a1f05">✍️ লেখা জমা (৬ ধাপ)</h3>
+    <ol style="margin:0 0 0 18px; line-height:1.9; font-size:13px">
+      <li>অ্যাকাউন্ট (Sign in/up) → <a href="../upgraded-keep-original/index.html">Sign in</a></li>
+      <li>বিভাগ বাছুন: সংবাদ/প্রবন্ধ/সাহিত্য/কবিতা</li>
+      <li>৬০০–১৫০০ শব্দ + ছবি + সূত্র জমা</li>
+      <li>সম্পাদক যাচাই (তথ্য/কপিরাইট)</li>
+      <li>প্রয়োজনে সংশোধনের জন্য ফেরত</li>
+      <li>অনুমোদন → প্রকাশ (article.html)</li>
+    </ol>
+    <p style="margin:8px 0 0; font-size:12px; color:#6e5a46">বর্তমান Content Studio ZIP + GitHub ম্যানুয়াল — পরবর্তীতে online moderation।</p>
+    <a href="#" style="display:inline-block; margin-top:8px; background:#4a1f05; color:#ffe7bb; padding:8px 14px; border-radius:999px; font-weight:800; text-decoration:none">লেখা জমা ফর্ম →</a>
+  </div>
+
+  <p style="text-align:center; margin:16px 0"><a href="../upgraded-keep-original/index.html" style="color:#4a1f05; font-weight:800">← হোমে ফিরুন</a> • <a href="buddha-jiboni.html">বুদ্ধ জীবনী →</a> • <a href="authors.html">লেখক পরিচিতি →</a></p>
+</main>
+<script>
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    document.querySelectorAll('.panel').forEach(p=>p.hidden=true);
+    document.getElementById('panel-'+btn.dataset.tab).hidden=false;
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#8f3d08">
+<title>লেখক ও অতিথি লেখক — চর্যাভূমি</title>
+<link rel="stylesheet" href="charyabhumi.css?v=20261031c">
+<style>
+body{ background:#fffaf0; color:#1a140d; font-family:"Noto Sans Bengali",system-ui,sans-serif; line-height:1.75 }
+.wrap{ max-width:1100px; margin:0 auto; padding:0 16px }
+.hero{ background:linear-gradient(120deg,#4a1f05,#8f3d08); color:#fff; padding:20px 0 }
+.hero h1{ margin:0; font-size:26px }
+.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:14px 0 }
+@media(max-width:900px){ .grid{ grid-template-columns:repeat(2,1fr) } }
+@media(max-width:560px){ .grid{ grid-template-columns:1fr } }
+.card{ background:#fff; border:1px solid #ead6b8; border-radius:12px; overflow:hidden; text-align:center; padding:16px; box-shadow:0 8px 22px rgba(71,31,5,.06) }
+.card img{ width:72px; height:72px; border-radius:50%; object-fit:cover; margin:0 auto 8px; border:3px solid #fff7df; background:#fdf6e6 }
+.card h3{ margin:0; font-size:15px; color:#4a1f05 }
+.card p{ margin:4px 0 0; font-size:12px; color:#6e5a46 }
+.meta{ margin-top:8px; font-size:11px; color:#8a7a60 }
+.actions{ margin-top:10px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap }
+.actions a{ background:#4a1f05; color:#ffe7bb; padding:6px 10px; border-radius:999px; font-size:11px; font-weight:700; text-decoration:none }
+.actions a.ghost{ background:#fff; color:#4a1f05; border:1px solid #ead6b8 }
+.filter{ display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 }
+.filter button{ padding:7px 12px; border-radius:999px; border:1px solid #ead6b8; background:#fff; font-weight:700; font-size:12px; cursor:pointer }
+.filter button.is-active{ background:#4a1f05; color:#ffe7bb; border-color:#4a1f05 }
+</style>
+</head>
+<body class="cb">
+<header class="hero">
+  <div class="wrap">
+    <p style="font-size:11px; letter-spacing:.08em; opacity:.85; margin:0 0 6px">চর্যাভূমি · লেখক নেটওয়ার্ক</p>
+    <h1>লেখক ও অতিথি লেখক</h1>
+    <p style="margin:6px 0 0; opacity:.9; max-width:75ch">লেখক প্রোফাইল — নাম, ছবি, পরিচিতি, প্রকাশিত লেখা, বই, সোশ্যাল। creator-archive.js এর ঐতিহাসিক ব্যক্তি অক্ষত, এখানে বর্তমান লেখক/গবেষক/ভিক্ষু/অতিথি।</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="filter">
+    <button class="is-active" data-filter="all">সব</button><button data-filter="ভিক্ষু">ভিক্ষু</button><button data-filter="গবেষক">গবেষক</button><button data-filter="অতিথি">অতিথি</button><button data-filter="তরুণ">তরুণ</button>
+  </div>
+
+  <div class="grid">
+    <article class="card" data-cat="গবেষক">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="" loading="lazy" onerror="this.style.display='none'">
+      <h3>ধম্মবিরীয়</h3><p>গবেষক • পুনর্জন্ম, কর্মফল, দর্শন</p><div class="meta">৩টি প্রবন্ধ • ৬২ বার পড়া</div>
+      <div class="actions"><a href="article.html?author=dhamma-viriya">লেখা দেখুন</a><a class="ghost" href="#">প্রোফাইল</a></div>
+    </article>
+    <article class="card" data-cat="ভিক্ষু">
+      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop" alt="" loading="lazy">
+      <h3>ভদন্ত সুমনশ্রী স্থবির</h3><p>ভিক্ষু • বিশুদ্ধানন্দ জীবনী সংগ্রাহক</p><div class="meta">২টি জীবনী • সূত্রসহ</div>
+      <div class="actions"><a href="article.html?author=sumana">লেখা দেখুন</a><a class="ghost" href="#">প্রোফাইল</a></div>
+    </article>
+    <article class="card" data-cat="অতিথি">
+      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop" alt="" loading="lazy">
+      <h3>উৎস বড়ুয়া জয়</h3><p>অতিথি লেখক • মুক্তিযুদ্ধে বৌদ্ধ ভিক্ষু</p><div class="meta">১টি প্রবন্ধ • ১ বার</div>
+      <div class="actions"><a href="article.html?author=utsho">লেখা দেখুন</a><a class="ghost" href="#">প্রোফাইল</a></div>
+    </article>
+    <article class="card" data-cat="তরুণ">
+      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="" loading="lazy">
+      <h3>অনোমা বড়ুয়া তন্বী</h3><p>তরুণ লেখক • কবিতা, প্রবন্ধ</p><div class="meta">১টি কবিতা • Library</div>
+      <div class="actions"><a href="literature.html">লেখা দেখুন</a><a class="ghost" href="#">প্রোফাইল</a></div>
+    </article>
+    <article class="card" data-cat="গবেষক">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="" loading="lazy">
+      <h3>মিথুন মুৎসুদ্দী</h3><p>প্রতিষ্ঠাতা • Atlas, ট্র্যাকার, গবেষণা</p><div class="meta">৩৩৭ প্রত্নস্থল • ১১২ প্রোফাইল</div>
+      <div class="actions"><a href="about.html">প্রোফাইল</a><a class="ghost" href="https://github.com/Mithun-Mutsuddi" target="_blank">GitHub ↗</a></div>
+    </article>
+    <article class="card" data-cat="অতিথি">
+      <div style="width:72px; height:72px; border-radius:50%; background:#fff7df; display:grid; place-items:center; margin:0 auto 8px; border:3px solid #fff7df; font-size:28px">✍️</div>
+      <h3>আপনিও লিখুন</h3><p>অতিথি লেখক হোন — ৬০০-১৫০০ শব্দ</p><div class="meta">যাচাই → প্রকাশ</div>
+      <div class="actions"><a href="news.html">লেখা জমা →</a></div>
+    </article>
+  </div>
+
+  <div style="background:#fff7df; border:1px solid #ffbd57; border-radius:12px; padding:14px; margin:14px 0">
+    <h3 style="margin:0 0 6px; color:#4a1f05; font-size:14px">📌 প্রোফাইল ফিল্ড — নাম, ছবি, পরিচিতি, শিক্ষা, পেশা, গবেষণা ক্ষেত্র, প্রকাশিত লেখা/গবেষণা/সংবাদ/বই/সাক্ষাৎকার/ভিডিও, সোশ্যাল (অনুমতি সাপেক্ষে)</h3>
+    <p style="margin:0; font-size:12px; color:#6e5a46">creator-archive.js এর ঐতিহাসিক ব্যক্তি অক্ষত — এখানে বর্তমান লেখক/গবেষক/ভিক্ষু/অতিথি। প্রতিটি প্রোফাইলে “সব লেখা” তালিকা → article.html এ যাবে।</p>
+  </div>
+
+  <p style="text-align:center; margin:16px 0"><a href="index.html" style="color:#4a1f05; font-weight:800">← হোম</a> • <a href="literature.html" style="color:#4a1f05; font-weight:800">সাহিত্য →</a> • <a href="article.html" style="color:#4a1f05; font-weight:800">নিবন্ধ পড়া →</a></p>
+</main>
+<footer class="cb-footer" id="cbFooter"></footer>
+<script src="brand.js?v=20261031c" defer></script>
+<script>
+document.querySelectorAll('.filter button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    document.querySelectorAll('.filter button').forEach(x=>x.classList.remove('is-active')); b.classList.add('is-active');
+    const cat=b.dataset.filter;
+    document.querySelectorAll('.card').forEach(c=>{
+      if(cat==='all' || c.dataset.cat===cat) c.style.display=''; else c.style.display='none';
+    });
+  });
+});
+</script>
+</body>
+</html>

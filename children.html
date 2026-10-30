@@ -312,6 +312,266 @@
         </div>
       </div>
     </section>
+    <!-- ============ নতুন: বৌদ্ধ ইন্টারঅ্যাকটিভ কর্নার — শিশুদের জন্য আরও মজাদার (2026-11) ============ -->
+    <section class="cb-section" id="buddhist-fun" aria-labelledby="buddhistFunTitle" style="background: linear-gradient(135deg,#fff8e8 0%, #e8f7ff 45%, #e7f4ee 100%); border-top:3px solid #ffbd57; border-bottom:3px solid #ffbd57">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow" style="background:#4a1f05; color:#ffe7bb; border-color:#4a1f05">🧒 নতুন · বৌদ্ধ ইন্টারঅ্যাকটিভ কর্নার — খেলতে খেলতে শেখো!</p>
+        <h2 id="buddhistFunTitle" style="color:#4a1f05">🎉 বৌদ্ধ ধর্মের মজার খেলা — ৪টি নতুন ইন্টারঅ্যাকটিভ!</h2>
+        <p class="cb-sub">কোনো সাইন-আপ নেই, সব এই ব্রাউজারেই — ভুল হলে সাথে সাথে শিখিয়ে দেবে, ঠিক হলে ⭐ + XP!</p>
+
+        <!-- XP bar for kids -->
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px 14px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin:12px 0; box-shadow:0 6px 18px rgba(71,31,5,.06)">
+          <div>⭐ আমার XP: <b id="kidsXP" style="color:#8f3d08">0</b></div>
+          <div style="flex:1; min-width:160px; height:14px; background:#fdf6e6; border:1px solid #ead6b8; border-radius:999px; overflow:hidden"><div id="kidsXPBar" style="height:100%; width:0%; background: linear-gradient(90deg,#ffbd57,#8f3d08); transition:width .4s"></div></div>
+          <small id="kidsXPMsg" style="color:#6e5a46">খেলা শুরু করো — প্রথম XP নাও!</small>
+          <button class="cb-btn ghost" type="button" onclick="localStorage.removeItem('kidsFunXP'); location.reload()" style="padding:6px 10px; font-size:11px">🔄 রিসেট</button>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:12px 0">
+          <!-- 1. পঞ্চশীল খেলা -->
+          <article class="kids-game-card" style="background:#fff; border:2px dashed #ffbd57">
+            <span class="kids-chip" style="background:#fff7df; border:1px solid #ffbd57">🙏 ১. পঞ্চশীল — ঠিক না ভুল?</span>
+            <h3 style="margin:8px 0 4px">পঞ্চশীল মানছি কি?</h3>
+            <p style="font-size:13px; color:#6e5a46; margin:0 0 8px">একটি পরিস্থিতি পড়ো — এটি পঞ্চশীলের সাথে মেলে কি না বলো!</p>
+            <div id="silaQ" style="background:#fff7df; border:1px solid #ead6b8; border-radius:10px; padding:12px; font-size:14px; min-height:64px; display:grid; place-items:center; text-align:center; font-weight:700; color:#4a1f05">লোড হচ্ছে…</div>
+            <div style="display:flex; gap:8px; margin-top:10px">
+              <button class="cb-btn solid" type="button" onclick="answerSila(true)" style="flex:1; background:#2e7d32; color:#fff">✅ ঠিক — শীল মেনেছে</button>
+              <button class="cb-btn" type="button" onclick="answerSila(false)" style="flex:1; background:#fff; border:1px solid #ead6b8">❌ ভুল — শীল ভেঙেছে</button>
+            </div>
+            <p id="silaFeedback" style="min-height:28px; font-size:13px; margin:8px 0 0; color:#4a1f05; font-weight:700" aria-live="polite"></p>
+            <small style="color:#8a7a60">৫টি নীতি: প্রাণিহত্যা নয় • চুরি নয় • মিথ্যা নয় • নেশা নয় • ব্যভিচার নয়</small>
+          </article>
+
+          <!-- 2. শ্বাস-ধ্যান -->
+          <article class="kids-game-card" style="background:#fff">
+            <span class="kids-chip">🧘 ২. এক মিনিট — শ্বাসের সাথে বন্ধু</span>
+            <h3 style="margin:8px 0 4px">শ্বাস নাও, ছাড়ো — মন শান্ত</h3>
+            <p style="font-size:13px; color:#6e5a46; margin:0 0 8px">বৌদ্ধ আনাপানসতি — শ্বাসের দিকে মন রাখা। বৃত্তের সাথে শ্বাস নাও।</p>
+            <div style="display:grid; place-items:center; gap:8px; padding:10px; background:#e7f4ee; border:1px solid #b9d5c2; border-radius:12px">
+              <div id="breathCircle" style="width:90px; height:90px; border-radius:50%; background: radial-gradient(circle at 35% 35%, #fff7df, #ffbd57 55%, #8f3d08); display:grid; place-items:center; font-size:28px; transition: transform 4s ease-in-out; box-shadow:0 8px 22px rgba(71,31,5,.15)">🌸</div>
+              <div id="breathText" style="font-weight:900; color:#4a1f05; font-size:15px">শুরু করতে চাপো</div>
+              <div style="font-size:11px; color:#6e5a46">ভিতরে নাও (4s) → ধরে রাখো (2s) → ছাড়ো (4s)</div>
+            </div>
+            <div style="display:flex; gap:8px; margin-top:10px">
+              <button class="cb-btn solid" type="button" id="breathBtn" onclick="toggleBreath()" style="flex:1">▶️ শুরু করি</button>
+              <button class="cb-btn ghost" type="button" onclick="resetBreath()" style="flex:1">⏹️ থামাও</button>
+            </div>
+            <p style="font-size:11px; color:#8a7a60; margin:6px 0 0">🔊 শব্দ নেই — শুধু দৃশ্য। শিশুরা বড়দের সাথে ১ মিনিট করবে।</p>
+          </article>
+
+          <!-- 3. পালি-বাংলা ম্যাচ -->
+          <article class="kids-game-card" style="background:#fff">
+            <span class="kids-chip" style="background:#e8f7ff; border:1px solid #b9d5e2">📜 ৩. পালি-বাংলা শব্দ মিলাও</span>
+            <h3 style="margin:8px 0 4px">পালি শব্দের বাংলা কী?</h3>
+            <p style="font-size:13px; color:#6e5a46; margin:0 0 8px">বামে পালি, ডানে বাংলা — মিলিয়ে জোড়া বানাও!</p>
+            <div id="paliGrid" style="display:grid; grid-template-columns:1fr 1fr; gap:8px"></div>
+            <p id="paliFeedback" style="min-height:24px; font-size:13px; font-weight:700; color:#2e7d32; margin:8px 0 0" aria-live="polite">একটি পালি শব্দ চাপো, তারপর বাংলা মিলাও</p>
+            <button class="cb-btn ghost" type="button" onclick="initPali()" style="margin-top:8px; width:100%">🔀 আবার মিশাও</button>
+          </article>
+
+          <!-- 4. অষ্টাঙ্গিক মার্গ চাকা -->
+          <article class="kids-game-card" style="background: linear-gradient(180deg,#fff,#fff7df)">
+            <span class="kids-chip" style="background:#4a1f05; color:#ffe7bb">☸️ ৪. অষ্টাঙ্গিক মার্গ — ধর্মচক্র ঘোরাও!</span>
+            <h3 style="margin:8px 0 4px">৮টি পথ — জীবন সুন্দর</h3>
+            <div style="display:grid; place-items:center; padding:8px">
+              <div id="dhammaWheel" style="width:150px; height:150px; border-radius:50%; border:4px solid #8f3d08; background: conic-gradient(#fff7df 0 45deg, #fff 45deg 90deg, #fff7df 90deg 135deg, #fff 135deg 180deg, #fff7df 180deg 225deg, #fff 225deg 270deg, #fff7df 270deg 315deg, #fff 315deg 360deg); display:grid; place-items:center; cursor:pointer; position:relative; transition: transform .6s ease; box-shadow:0 8px 22px rgba(71,31,5,.12)">
+                <div style="width:44px; height:44px; border-radius:50%; background:#4a1f05; display:grid; place-items:center; color:#ffe7bb; font-weight:900; font-size:22px">☸</div>
+                <span style="position:absolute; top:6px; left:50%; transform:translateX(-50%); font-size:10px; font-weight:800; color:#4a1f05">সম্যক দৃষ্টি</span>
+              </div>
+              <small style="color:#8a7a60; font-size:11px; margin-top:6px">চাকায় চাপ দাও — ঘুরবে!</small>
+            </div>
+            <div id="maggaDetail" style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:10px; min-height:72px; font-size:13px; line-height:1.6">
+              <b style="color:#4a1f05">অষ্টাঙ্গিক মার্গ কী?</b><br><span style="color:#6e5a46">বুদ্ধের ৮টি পথ — দুঃখ থেকে মুক্তির পথ। চাকায় চাপ দাও, একেকটি পথ শিখবে!</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:8px" id="maggaChips"></div>
+          </article>
+        </div>
+
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; margin-top:10px; display:flex; gap:10px; align-items:center; flex-wrap:wrap">
+          <div style="font-size:22px">🎁</div>
+          <div style="flex:1">
+            <b style="color:#4a1f05">শিশু-সুরক্ষা:</b> <span style="font-size:13px; color:#6e5a46">কোনো নাম/ছবি/ভয়েস জমা নেই, স্কোর শুধু এই ব্রাউজারে। বাইরের ভিডিওতে বিজ্ঞাপন আসতে পারে — বড়রা আগে দেখে নেবে।</span>
+          </div>
+          <a href="pali-learning.html" class="cb-btn solid" style="background:#4a1f05; color:#ffe7bb; font-size:12px">📜 পালি শেখো — ব্রাহ্মী ও ক্যালিগ্রাফি →</a>
+          <a href="#games" class="cb-btn" style="background:#fff; border:1px solid #ead6b8; font-size:12px">← পুরোনো খেলায় ফিরি</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+    // ===== Kids Fun XP system (local only) =====
+    (function(){
+      var XP_KEY='kidsFunXP';
+      var xp = parseInt(localStorage.getItem(XP_KEY)||'0',10);
+      var xpEl=document.getElementById('kidsXP'), bar=document.getElementById('kidsXPBar'), msg=document.getElementById('kidsXPMsg');
+      function renderXP(){
+        if(xpEl) xpEl.textContent = xp;
+        if(bar) bar.style.width = Math.min(100, (xp/200)*100) + '%';
+        if(msg) {
+          if(xp===0) msg.textContent='খেলা শুরু করো — প্রথম XP নাও!';
+          else if(xp<50) msg.textContent='চমৎকার শুরু! আরও খেলো ⭐';
+          else if(xp<120) msg.textContent='দারুণ! তুমি এখন ধর্মচক্রের বন্ধু 🧭';
+          else msg.textContent='🏆 তুমি হেরিটেজ হিরো! বড়দের দেখাও!';
+        }
+      }
+      function addXP(n, why){
+        xp+=n; localStorage.setItem(XP_KEY, String(xp)); renderXP();
+        var m=document.getElementById('kidsXPMsg');
+        if(m) { m.textContent='+'+n+' XP — '+why+'!'; m.style.color='#2e7d32'; setTimeout(renderXP, 1800); }
+      }
+      window.kidsAddXP=addXP;
+      renderXP();
+
+      // 1. Sila game
+      var silaData=[
+        {q:'রাস্তায় পড়ে থাকা কলমটি দোকানে ফেরত দিলাম।', ans:true, exp:'সাধু! এটি অদিন্নাদানা (চুরি) থেকে বিরত — দ্বিতীয় শীল ✅'},
+        {q:'বন্ধুকে ভয় দেখাতে মিথ্যা গল্প বানালাম।', ans:false, exp:'এটি মুসাবাদা ভঙ্গ — মিথ্যা না বলাই চতুর্থ শীল।'},
+        {q:'মশা কামড়ালেও না মেরে হাত নাড়িয়ে সরালাম।', ans:true, exp:'প্রাণিহত্যা থেকে বিরত — প্রথম শীল পালন! 🕊️'},
+        {q:'বাবার অনুমতি ছাড়া তার ফোনে গেম খেললাম।', ans:false, exp:'অনুমতি ছাড়া নেওয়া — অদিন্নাদানা, দ্বিতীয় শীলে বাধে।'},
+        {q:'রাগ হলেও গালি না দিয়ে শান্তভাবে বললাম।', ans:true, exp:'সম্যক বাক্য — মৈত্রীর চর্চা!'},
+        {q:'বন্ধুর জন্মদিনে নেশা জাতীয় কিছু খেলাম।', ans:false, exp:'সুরামেরয় — পঞ্চম শীল ভঙ্গ, স্মৃতি নষ্ট হয়।'},
+      ];
+      var silaIdx=0;
+      window.answerSila=function(val){
+        var cur=silaData[silaIdx];
+        var fb=document.getElementById('silaFeedback');
+        var ok = (val===cur.ans);
+        fb.textContent = (ok?'✅ ঠিক! ':'❌ ভুল — ') + cur.exp;
+        fb.style.color = ok ? '#2e7d32' : '#b71c1c';
+        if(ok) addXP(10, 'পঞ্চশীল');
+        silaIdx=(silaIdx+1)%silaData.length;
+        setTimeout(function(){
+          document.getElementById('silaQ').textContent = silaData[silaIdx].q;
+          if(!ok) fb.textContent='';
+        }, ok?1800:2600);
+      };
+      document.getElementById('silaQ').textContent = silaData[0].q;
+
+      // 2. Breath game
+      var breathOn=false, breathTimer=null, breathPhase=0;
+      var breathEl=document.getElementById('breathCircle'), breathTxt=document.getElementById('breathText');
+      window.toggleBreath=function(){
+        var btn=document.getElementById('breathBtn');
+        if(breathOn){ resetBreath(); return; }
+        breathOn=true; btn.textContent='⏸️ বিরতি'; breathPhase=0;
+        tickBreath();
+        breathTimer=setInterval(tickBreath, 4000);
+        addXP(5, 'শ্বাস-ধ্যান শুরু');
+      };
+      window.resetBreath=function(){
+        breathOn=false; clearInterval(breathTimer); breathTimer=null;
+        if(breathEl){ breathEl.style.transform='scale(1)'; }
+        if(breathTxt) breathTxt.textContent='শুরু করতে চাপো';
+        var btn=document.getElementById('breathBtn'); if(btn) btn.textContent='▶️ শুরু করি';
+      };
+      function tickBreath(){
+        if(!breathOn) return;
+        var phases=[
+          {t:'ভিতরে নাও… 🌬️', s:'scale(1.35)'},
+          {t:'ধরে রাখো… ✨', s:'scale(1.35)'},
+          {t:'ধীরে ছাড়ো… 🌸', s:'scale(0.85)'},
+        ];
+        var p=phases[breathPhase%3];
+        if(breathEl) breathEl.style.transform=p.s;
+        if(breathTxt) breathTxt.textContent=p.t;
+        breathPhase++;
+        if(breathPhase>=6){ // 1 min ~ 6*4s
+          setTimeout(function(){ if(breathOn){ addXP(15, '১ মিনিট ধ্যান সম্পূর্ণ!'); resetBreath(); breathTxt.textContent='🎉 ১ মিনিট সম্পূর্ণ!'; }}, 4000);
+        }
+      }
+
+      // 3. Pali match
+      var paliPairs=[
+        {pali:'মেত্তা', bn:'মৈত্রী / ভালোবাসা'},
+        {pali:'করুণা', bn:'দয়া'},
+        {pali:'পঞ্ঞা', bn:'প্রজ্ঞা'},
+        {pali:'সতি', bn:'স্মৃতি / মনোযোগ'},
+        {pali:'দান', bn:'দেওয়া / উদারতা'},
+        {pali:'সীল', bn:'নৈতিকতা'},
+      ];
+      var paliPick=null;
+      window.initPali=function(){
+        var grid=document.getElementById('paliGrid');
+        if(!grid) return;
+        var left = paliPairs.map((x,i)=>({t:x.pali, k:i, type:'pali'})).sort(()=>Math.random()-.5);
+        var right = paliPairs.map((x,i)=>({t:x.bn, k:i, type:'bn'})).sort(()=>Math.random()-.5);
+        var all = left.concat(right).sort(()=>Math.random()-.5);
+        grid.innerHTML='';
+        all.forEach(function(it){
+          var b=document.createElement('button');
+          b.type='button';
+          b.style.cssText='padding:10px; border:1px solid #ead6b8; border-radius:10px; background:#fff; cursor:pointer; font-weight:700; min-height:44px';
+          b.textContent=it.t;
+          b.dataset.k=it.k; b.dataset.type=it.type;
+          b.addEventListener('click', function(){
+            if(b.classList.contains('done')) return;
+            if(!paliPick){
+              paliPick=b; b.style.background='#fff7df'; b.style.borderColor='#ffbd57';
+              document.getElementById('paliFeedback').textContent='এবার এর বাংলা/পালি জোড়া খোঁজো…';
+            } else {
+              if(paliPick===b){ paliPick.style.background='#fff'; paliPick=null; return; }
+              if(paliPick.dataset.k===b.dataset.k && paliPick.dataset.type!==b.dataset.type){
+                paliPick.classList.add('done'); b.classList.add('done');
+                paliPick.style.background='#e4f4e8'; b.style.background='#e4f4e8';
+                paliPick.style.borderColor='#75a987'; b.style.borderColor='#75a987';
+                document.getElementById('paliFeedback').textContent='✅ সঠিক জোড়া! ⭐';
+                addXP(10, 'পালি-বাংলা মিল');
+                var done=document.querySelectorAll('#paliGrid .done').length;
+                if(done===12){ document.getElementById('paliFeedback').textContent='🎉 সব মিলে গেছে! তুমি পালি-বন্ধু!'; addXP(20,'সব পালি মিল'); }
+              } else {
+                document.getElementById('paliFeedback').textContent='❌ মিলেনি — আবার চেষ্টা করো';
+                paliPick.style.background='#fff'; b.style.background='#fff0eb';
+                setTimeout(function(){ b.style.background='#fff'; }, 700);
+              }
+              paliPick=null;
+            }
+          });
+          grid.appendChild(b);
+        });
+        document.getElementById('paliFeedback').textContent='একটি পালি শব্দ চাপো, তারপর বাংলা মিলাও';
+      };
+      initPali();
+
+      // 4. Dhamma wheel
+      var magga=[
+        {n:'সম্যক দৃষ্টি', d:'সঠিকভাবে দেখা — চার আর্যসত্য বোঝা। যেমন: দুঃখ আছে, কারণ আছে, মুক্তি আছে।'},
+        {n:'সম্যক সংকল্প', d:'ভালো ইচ্ছা — হিংসা নয়, মৈত্রী; লোভ নয়, ত্যাগ।'},
+        {n:'সম্যক বাক্য', d:'সত্য কথা, মিষ্টি কথা — মিথ্যা, কটু, বৃথা কথা নয়।'},
+        {n:'সম্যক কর্ম', d:'ভালো কাজ — প্রাণিহত্যা, চুরি, ব্যভিচার থেকে বিরত।'},
+        {n:'সম্যক জীবিকা', d:'সৎ পথে জীবন — মানুষ/প্রাণীর ক্ষতি করে নয়।'},
+        {n:'সম্যক প্রচেষ্টা', d:'চেষ্টা — খারাপ কমাও, ভালো বাড়াও।'},
+        {n:'সম্যক স্মৃতি', d:'মনোযোগ — শরীর, অনুভূতি, মন, ধর্মে সচেতন থাকা।'},
+        {n:'সম্যক সমাধি', d:'ধ্যান — মন স্থির, শান্ত, একাগ্র।'},
+      ];
+      var magIdx=0, rot=0;
+      var wheel=document.getElementById('dhammaWheel');
+      var detail=document.getElementById('maggaDetail');
+      var chipsBox=document.getElementById('maggaChips');
+      magga.forEach(function(m,i){
+        var c=document.createElement('button');
+        c.type='button'; c.textContent=(i+1)+' '+m.n;
+        c.style.cssText='padding:6px 10px; border-radius:999px; border:1px solid #ead6b8; background:#fff; font-size:11px; cursor:pointer; font-weight:700';
+        c.addEventListener('click', function(){ showMagga(i); });
+        chipsBox.appendChild(c);
+      });
+      function showMagga(i){
+        magIdx=i;
+        var m=magga[i];
+        detail.innerHTML='<b style="color:#4a1f05">'+(i+1)+'. '+m.n+'</b><br><span style="color:#6e5a46">'+m.d+'</span>';
+        Array.from(chipsBox.children).forEach((ch,idx)=>{ ch.style.background= idx===i ? '#4a1f05' : '#fff'; ch.style.color= idx===i ? '#ffe7bb' : '#4a1f05'; });
+      }
+      if(wheel){
+        wheel.addEventListener('click', function(){
+          rot+=45; wheel.style.transform='rotate('+rot+'deg)';
+          magIdx=(magIdx+1)%8;
+          showMagga(magIdx);
+          if(rot%360===0) addXP(10,'ধর্মচক্র সম্পূর্ণ ঘোরালে!');
+        });
+      }
+      showMagga(0);
+    })();
+    </script>
+
     <!-- ============ হেরিটেজ এক্সপ্লোরার প্লাস (2026-10-24 আপডেট) ============ -->
     <section class="cb-section" id="games-plus" aria-label="হেরিটেজ এক্সপ্লোরার গেম সম্প্রসারণ"></section>
 

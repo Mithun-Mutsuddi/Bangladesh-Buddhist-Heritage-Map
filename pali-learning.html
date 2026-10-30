@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#4a1f05">
+<title>পালি শেখো — বলা, লেখা, দেখা + ব্রাহ্মী লিপি + বৌদ্ধ ক্যালিগ্রাফি | চর্যাভূমি</title>
+<meta name="description" content="পালি ভাষা, পালি ব্যাকরণ সহজে, ব্রাহ্মী লিপি প্রাইমারি থেকে গবেষণা, বৌদ্ধ ক্যালিগ্রাফি — ছবি, গ্রাফিক, লেখা, খেলা, ক্যানভাস সহ সবার জন্য।">
+<link rel="stylesheet" href="charyabhumi.css?v=20261031c">
+<style>
+:root{ --saffron:#8f3d08; --gold:#ffbd57; --paper:#fffdf6; --line:#ead6b8; --forest:#123f39 }
+body{ margin:0; background:#fffaf0; color:#1a140d; font-family: "Noto Sans Bengali", system-ui, -apple-system, sans-serif; line-height:1.7 }
+.cb-wrap{ max-width:1140px; margin:0 auto; padding:0 16px }
+.hero{ background: linear-gradient(120deg,#4a1f05 0%, #8f3d08 55%, #c97a1b 100%); color:#fff; padding:28px 0 18px }
+.hero h1{ margin:0; font-size:clamp(24px,4vw,34px); line-height:1.25 }
+.hero p{ margin:8px 0 0; opacity:.96; max-width:82ch; font-size:14px; line-height:1.8 }
+.hero .badges{ display:flex; gap:8px; flex-wrap:wrap; margin-top:12px }
+.hero .badges span{ background:#fff; color:#4a1f05; padding:5px 10px; border-radius:999px; font-size:11px; font-weight:800; border:1px solid #ffbd57 }
+.nav-tabs{ display:flex; gap:8px; overflow-x:auto; padding:12px 0 4px; scrollbar-width:thin; position:sticky; top:0; background:#fffaf0; z-index:5; border-bottom:1px solid #ead6b8 }
+.nav-tabs a{ flex:none; padding:8px 14px; border-radius:999px; border:1px solid #ead6b8; background:#fff; color:#4a1f05; font-weight:800; font-size:12px; text-decoration:none; white-space:nowrap }
+.nav-tabs a.active, .nav-tabs a:hover{ background:#4a1f05; color:#ffe7bb; border-color:#4a1f05 }
+.section{ padding:18px 0 }
+.card{ background:#fff; border:1px solid #ead6b8; border-radius:16px; padding:16px; box-shadow:0 8px 22px rgba(71,31,5,.06) }
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:14px }
+.grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px }
+.grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px }
+@media(max-width:900px){ .grid2,.grid3,.grid4{ grid-template-columns:1fr } }
+.kbd{ display:inline-block; background:#fff7df; border:1px solid #f0debf; border-bottom-width:2px; border-radius:6px; padding:1px 6px; font-size:12px; font-weight:700 }
+.badge{ display:inline-block; font-size:10px; font-weight:900; letter-spacing:.04em; padding:3px 7px; border-radius:999px; border:1px solid #ead6b8; background:#fff }
+.badge.saffron{ background:#4a1f05; color:#ffe7bb; border-color:#4a1f05 }
+.badge.gold{ background:#fff7df; color:#4a1f05; border-color:#ffbd57 }
+table{ width:100%; border-collapse:separate; border-spacing:0; background:#fff; border:1px solid #ead6b8; border-radius:14px; overflow:hidden }
+th,td{ padding:8px 10px; border-bottom:1px solid #ead6b8; font-size:13px; text-align:left; vertical-align:top }
+th{ background:#4a1f05; color:#ffe7bb; font-size:11px; letter-spacing:.04em }
+tr:last-child td{ border-bottom:0 }
+.tracer{ display:flex; gap:10px; flex-wrap:wrap }
+.tracer button{ min-width:52px; height:52px; border-radius:12px; border:1px solid #ead6b8; background:#fff; font-size:20px; cursor:pointer; font-weight:800 }
+.tracer button.active{ background:#4a1f05; color:#ffe7bb; border-color:#4a1f05; transform: scale(1.05) }
+.canvas-wrap{ background:#fff; border:1px solid #ead6b8; border-radius:14px; overflow:hidden }
+.canvas-wrap canvas{ display:block; width:100%; height:320px; touch-action:none; background: radial-gradient( 800px 300px at 30% 20%, #fffaf0, #fff) }
+.level-ladder{ display:grid; grid-template-columns: repeat(4,1fr); gap:10px }
+@media(max-width:860px){ .level-ladder{ grid-template-columns:1fr 1fr } }
+.level{ background:#fff; border:1px solid #ead6b8; border-radius:14px; padding:12px; text-align:center }
+.level b{ display:block; color:#4a1f05; margin-bottom:4px }
+.gallery{ display:grid; grid-template-columns: repeat(3,1fr); gap:12px }
+.gallery figure{ margin:0; background:#fff; border:1px solid #ead6b8; border-radius:14px; overflow:hidden }
+.gallery img, .gallery .ph{ width:100%; height:160px; object-fit:cover; display:block; background: linear-gradient(135deg,#fff7df,#e7f4ee) }
+.gallery figcaption{ padding:8px 10px; font-size:12px; color:#6e5a46 }
+details{ background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px 12px; margin:8px 0 }
+details summary{ cursor:pointer; font-weight:800; color:#4a1f05 }
+.bolo-bubble{ background:#fff; border:1px solid #ead6b8; border-radius:16px; padding:10px 12px; position:relative }
+.bolo-bubble::after{ content:""; position:absolute; left:18px; bottom:-8px; width:14px; height:14px; background:#fff; border-right:1px solid #ead6b8; border-bottom:1px solid #ead6b8; transform: rotate(45deg) }
+.quiz-opt{ display:block; width:100%; text-align:left; padding:10px 12px; border:1px solid #ead6b8; background:#fff; border-radius:12px; cursor:pointer; margin:6px 0; font-weight:700 }
+.quiz-opt.correct{ background:#e4f4e8; border-color:#75a987; color:#205c3b }
+.quiz-opt.wrong{ background:#fff0eb; border-color:#b65d4c; color:#843b2d }
+.progress-out{ background:#fdf6e6; border:1px solid #ead6b8; border-radius:999px; height:12px; overflow:hidden }
+.progress-in{ height:100%; width:0%; background: linear-gradient(90deg,#ffbd57,#8f3d08); transition: width .4s }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="cb-wrap">
+    <p style="font-size:11px; letter-spacing:.08em; opacity:.9; margin:0 0 6px; font-weight:800">চর্যাভূমি · পালি শিক্ষা হাব — সবার জন্য</p>
+    <h1>📜 পালি শেখো — বলা ✦ লেখা ✦ দেখা + ব্রাহ্মী লিপি + বৌদ্ধ ক্যালিগ্রাফি</h1>
+    <p>ত্রিপিটকের ভাষা <b>পালি</b> খুব কঠিন নয় — বাংলা জানলে ৭ দিনে পড়তে পারবে, ৩০ দিনে ছোট বাক্য বলতে পারবে। এখানে <b>প্রাইমারি → গবেষণা</b> পর্যন্ত একটাই পথ: ছবি + গ্রাফিক + খেলা + লেখা + ক্যানভাসে হাত ঘুরানো — সব বয়স (৬ থেকে ৯০) একসাথে শিখবে।</p>
+    <div class="badges">
+      <span>🎯 ৬–১২: ছবি + খেলা</span><span>🎓 ১৩–১৮: গ্রামার + লেখা</span><span>🔬 গবেষক: ব্রাহ্মী এডিক্ট পড়া</span><span>🖌️ ক্যালিগ্রাফি</span><span>📴 প্রিন্ট শিট</span>
+    </div>
+  </div>
+</header>
+
+<nav class="cb-wrap nav-tabs" aria-label="সেকশন">
+  <a href="#kivabe" class="active">কীভাবে শিখবে?</a>
+  <a href="#bornomala">বর্ণমালা</a>
+  <a href="#grammar">গ্রামার সহজে</a>
+  <a href="#bola">বলা</a>
+  <a href="#lekha">লেখা</a>
+  <a href="#dekha">দেখা</a>
+  <a href="#bramhi">ব্রাহ্মী লিপি</a>
+  <a href="#calligraphy">ক্যালিগ্রাফি</a>
+  <a href="#practice">প্র্যাকটিস</a>
+  <a href="charyapada-bhasha.html">📖 চর্যাপদ</a>
+  <a href="charyapada-bhasha.html">📜 চর্যাপদ ভাষা</a>
+</nav>
+
+<main class="cb-wrap">
+
+  <!-- কীভাবে -->
+  <section id="kivabe" class="section">
+    <div class="card" style="background: linear-gradient(135deg,#fff 0%, #fff7df 55%, #e7f4ee 100%); border-color:#ffbd57">
+      <h2 style="margin:0 0 6px; color:#4a1f05">🧭 কীভাবে শিখবে — ৪টি পথ একসাথে</h2>
+      <div class="grid4" style="margin-top:10px">
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; text-align:center"><div style="font-size:28px">🗣️</div><b style="color:#4a1f05">বলা (Bola)</b><br><small>শোনো → বলো → রেকর্ড করো না, মুখে বলো</small><br><a href="#bola" style="font-size:11px; font-weight:800; color:#8f3d08">ডায়ালগ দেখো →</a></div>
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; text-align:center"><div style="font-size:28px">✍️</div><b style="color:#4a1f05">লেখা (Lekha)</b><br><small>ট্রেস করো → ব্রাহ্মীতে লেখো → ছবি ডাউনলোড</small><br><a href="#lekha" style="font-size:11px; font-weight:800; color:#8f3d08">ক্যানভাস খোলো →</a></div>
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; text-align:center"><div style="font-size:28px">👀</div><b style="color:#4a1f05">শেখা (Shekha)</b><br><small>নিয়ম → উদাহরণ → কুইজ → XP</small><br><a href="#grammar" style="font-size:11px; font-weight:800; color:#8f3d08">গ্রামার সহজে →</a></div>
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; text-align:center"><div style="font-size:28px">🏛️</div><b style="color:#4a1f05">দেখা (Dekha)</b><br><small>অশোক স্তম্ভে আসল ব্রাহ্মী পড়ো</small><br><a href="#dekha" style="font-size:11px; font-weight:800; color:#8f3d08">এডিক্ট পড়ো →</a></div>
+      </div>
+      <p style="margin:10px 0 0; font-size:13px; color:#6e5a46; background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:8px 10px">💡 <b>সব বয়সের ফর্মুলা:</b> ৬–৯ বছর: ছবি ও খেলা → ১০–১৫: বর্ণ + শব্দ → ১৬+: বাক্য + গ্রামার → গবেষক: এডিক্ট + পাণ্ডুলিপি। একই পাতায় লেভেল বেছে নাও!</p>
+    </div>
+
+    <div class="level-ladder" style="margin-top:14px">
+      <div class="level"><b>🌱 প্রাইমারি</b><small>অ আ ই — ব্রাহ্মী দাগ টানা<br>রং + ছবি</small><br><span class="badge gold">৬+ বছর</span></div>
+      <div class="level"><b>🌿 মাধ্যমিক</b><small>শব্দ + বাক্য<br>বলা-লেখা-পড়া</small><br><span class="badge">১২+ বছর</span></div>
+      <div class="level"><b>🌳 উচ্চ</b><small>গ্রামার: বিভক্তি, ধাতু, সন্ধি</small><br><span class="badge">১৬+ বছর</span></div>
+      <div class="level"><b>🔬 গবেষণা</b><small>এডিক্ট, পাণ্ডুলিপি, অভিধান</small><br><span class="badge saffron">গবেষক</span></div>
+    </div>
+  </section>
+
+  <!-- বর্ণমালা -->
+  <section id="bornomala" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">🔤 পালি বর্ণমালা — 5 লিপিতে একসাথে</h2>
+    <p style="margin:0 0 10px; color:#6e5a46; font-size:13px">পালির নিজস্ব লিপি নেই — একই ধ্বনি <b>রোমান / বাংলা / ব্রাহ্মী / সিংহল / মিয়ানমার</b> লিপিতে লেখা হয়। নিচে ৮টি স্বর + ৩৩টি ব্যঞ্জন — ব্রাহ্মীতে চাপলে স্ট্রোক দেখাবে।</p>
+
+    <div class="card" style="padding:12px">
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px">
+        <span class="badge saffron">স্বর (8)</span><span class="badge gold">ব্যঞ্জন (33)</span><span class="badge">মোট 41</span>
+        <span style="margin-left:auto; font-size:11px; color:#8a7a60">💡 টিপ: <span class="kbd">টা</span> চাপলে stroke, <span class="kbd">🔊</span> চাপলে উচ্চারণ</span>
+      </div>
+      <table>
+        <thead><tr><th>ধ্বনি (রোমান)</th><th>বাংলা</th><th>ব্রাহ্মী</th><th>উচ্চারণ (IPA)</th><th>ছবি-মনে রাখা</th><th>শোনো</th></tr></thead>
+        <tbody>
+          <tr><td><b>a</b></td><td>অ</td><td style="font-size:22px">𑀅</td><td>/ɐ/</td><td>অজগর</td><td><button class="kbd" onclick="speak('অ')">🔊</button></td></tr>
+          <tr><td><b>ā</b></td><td>আ</td><td style="font-size:22px">𑀆</td><td>/aː/</td><td>আম</td><td><button class="kbd" onclick="speak('আ')">🔊</button></td></tr>
+          <tr><td><b>i</b></td><td>ই</td><td style="font-size:22px">𑀇</td><td>/i/</td><td>ইঁদুর</td><td><button class="kbd" onclick="speak('ই')">🔊</button></td></tr>
+          <tr><td><b>ī</b></td><td>ঈ</td><td style="font-size:22px">𑀈</td><td>/iː/</td><td>ঈগল</td><td><button class="kbd" onclick="speak('ঈ')">🔊</button></td></tr>
+          <tr><td><b>u</b></td><td>উ</td><td style="font-size:22px">𑀉</td><td>/u/</td><td>উট</td><td><button class="kbd" onclick="speak('উ')">🔊</button></td></tr>
+          <tr><td><b>ū</b></td><td>ঊ</td><td style="font-size:22px">𑀊</td><td>/uː/</td><td>ঊষা</td><td><button class="kbd" onclick="speak('ঊ')">🔊</button></td></tr>
+          <tr><td><b>e</b></td><td>এ</td><td style="font-size:22px">𑀏</td><td>/e/</td><td>একতারা</td><td><button class="kbd" onclick="speak('এ')">🔊</button></td></tr>
+          <tr><td><b>o</b></td><td>ও</td><td style="font-size:22px">𑀑</td><td>/o/</td><td>ওল</td><td><button class="kbd" onclick="speak('ও')">🔊</button></td></tr>
+          <tr><td><b>ka</b></td><td>ক</td><td style="font-size:22px">𑀓</td><td>/kɐ/</td><td>কমল</td><td><button class="kbd" onclick="speak('ক')">🔊</button></td></tr>
+          <tr><td><b>ma</b></td><td>ম</td><td style="font-size:22px">𑀫</td><td>/mɐ/</td><td>ময়ূর</td><td><button class="kbd" onclick="speak('ম')">🔊</button></td></tr>
+          <tr><td><b>na</b></td><td>ন</td><td style="font-size:22px">𑀦</td><td>/nɐ/</td><td>নাগ</td><td><button class="kbd" onclick="speak('ন')">🔊</button></td></tr>
+          <tr><td><b>dha</b></td><td>ধ</td><td style="font-size:22px">𑀥</td><td>/dʱɐ/</td><td>ধম্ম</td><td><button class="kbd" onclick="speak('ধম্ম')">🔊</button></td></tr>
+          <tr><td><b>sa</b></td><td>স</td><td style="font-size:22px">𑀲</td><td>/sɐ/</td><td>সঙ্ঘ</td><td><button class="kbd" onclick="speak('স')">🔊</button></td></tr>
+          <tr><td><b>ṃ (ং)</b></td><td>ং</td><td style="font-size:22px">𑀁</td><td>/ⁿ/</td><td>সং</td><td><button class="kbd">🔊</button></td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:11px; color:#8a7a60; margin:8px 0 0">* পূর্ণ 41 বর্ণের printable <a href="#practice">প্র্যাকটিস শিট →</a> | Roman → Brahmi auto-convert নিচে আছে | উৎস: Duroiselle, Pali Primer; Buddhadatta, New Pali Course</p>
+    </div>
+
+    <div class="grid2" style="margin-top:12px">
+      <div class="card">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🔤 রোমান → ব্রাহ্মী → বাংলা — লাইভ কনভার্টার</h3>
+        <p style="margin:0 0 8px; font-size:12px; color:#6e5a46">রোমানে লেখো: <code>buddham saranam gacchami</code> → ব্রাহ্মীতে দেখো</p>
+        <input id="romanIn" placeholder="রোমানে পালি লেখো — buddham saranam gacchami" style="width:100%; padding:10px 12px; border:1px solid #ead6b8; border-radius:10px; font-size:14px">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px">
+          <div style="background:#fff7df; border:1px solid #ffbd57; border-radius:10px; padding:10px"><small style="color:#8a7a60">ব্রাহ্মী</small><div id="outBrahmi" style="font-size:20px; min-height:28px; word-break:break-all">𑀩𑀼𑀤𑁆𑀥𑀁 𑀲𑀭𑀡𑀁 𑀕𑀘𑁆𑀙𑀸𑀫𑀺</div></div>
+          <div style="background:#e7f4ee; border:1px solid #b9d5c2; border-radius:10px; padding:10px"><small style="color:#8a7a60">বাংলা উচ্চারণ</small><div id="outBangla" style="font-size:15px; min-height:28px">বুদ্ধং সরণং গচ্ছামি</div></div>
+        </div>
+      </div>
+      <div class="card" style="background: linear-gradient(180deg,#fff,#fff7df)">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🎨 ব্রাহ্মী স্ট্রোক — হাত ঘুরাও</h3>
+        <p style="margin:0 0 8px; font-size:12px; color:#6e5a46">বাটন চাপো → নিচে SVG তে স্ট্রোক অ্যানিমেশন</p>
+        <div class="tracer" id="bramhiTracer">
+          <button data-ch="𑀅" data-name="অ (a)">𑀅</button><button data-ch="𑀓" data-name="ক (ka)">𑀓</button><button data-ch="𑀫" data-name="ম (ma)">𑀫</button><button data-ch="𑀥" data-name="ধ (dha)">𑀥</button><button data-ch="𑀩" data-name="ব (ba)">𑀩</button><button data-ch="𑀲" data-name="স (sa)">𑀲</button>
+        </div>
+        <div style="margin-top:10px; background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; display:flex; gap:12px; align-items:center">
+          <svg id="strokeSvg" viewBox="0 0 200 200" width="120" height="120" style="border:1px dashed #ead6b8; border-radius:10px; background:#fffaf0"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="64" fill="#ead6b8">𑀅</text><path id="strokePath" d="" fill="none" stroke="#8f3d08" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b id="strokeName" style="color:#4a1f05">অ (a) — 𑀅</b><br><small style="color:#6e5a46">1) উপরের টিক → 2) বৃত্ত → 3) নিচের দাগ<br>শিশুরা আঙুল দিয়ে বাতাসে আঁকো!</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- গ্রামার -->
+  <section id="grammar" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">📚 পালি ব্যাকরণ — সহজে, ছবিতে</h2>
+    <div class="grid3">
+      <details open><summary>🌱 লেভেল ১ — প্রাইমারি (6–10 বছর)</summary>
+        <p style="font-size:13px"><b>আমি, তুমি, সে —</b><br><code>ahaṃ (আমি) — tvaṃ (তুমি) — so (সে)</code><br>বাক্য: <b>ahaṃ gacchāmi</b> = আমি যাই<br>খেলা: কার্ড উল্টে মিলাও — ছবি দেখে বলো!</p>
+        <div style="background:#fff7df; border:1px solid #ffbd57; border-radius:10px; padding:8px; font-size:12px">🎨 গ্রাফিক: 👦 ahaṃ → 🚶 gacchāmi = আমি যাই</div>
+      </details>
+      <details open><summary>🌿 লেভেল ২ — মাধ্যমিক (11–16)</summary>
+        <p style="font-size:13px"><b>বিভক্তি ৮টি — বাংলার মতো:</b> কর্তা, কর্ম, করণ…<br>উদা: <code>buddho (কর্তা) — buddhaṃ (কর্ম)</code><br>ছবি: 🎯 তীর = কর্মে <code>-ṃ</code> যোগ</p>
+        <table style="font-size:12px"><tr><th>বিভক্তি</th><th>রূপ</th><th>বাংলা</th></tr><tr><td>পঠমা</td><td>buddho</td><td>বুদ্ধ (কর্তা)</td></tr><tr><td>দুতিয়া</td><td>buddhaṃ</td><td>বুদ্ধকে</td></tr><tr><td>ততিয়া</td><td>buddhena</td><td>বুদ্ধ দ্বারা</td></tr></table>
+      </details>
+      <details open><summary>🌳 লেভেল ৩ — উচ্চ + গবেষণা</summary>
+        <p style="font-size:13px"><b>ধাতু + সন্ধি:</b><br><code>gam (যাওয়া) → gacchati (যায়), gacchāmi (যাই)</code><br><code>dhammo + api → dhammo pi (ধর্মও)</code><br>সূত্র: Geiger §, Warder Ch. 5 — টেবিল সহ</p>
+        <a href="#practice" style="font-size:11px; font-weight:800; color:#8f3d08">ধাতুরূপ PDF →</a>
+      </details>
+    </div>
+    <div class="card" style="margin-top:12px; background: linear-gradient(135deg,#fff,#e7f4ee)">
+      <h3 style="margin:0 0 6px; color:#4a1f05">🧩 গ্রামার কুইজ — 1 মিনিটে পরীক্ষা!</h3>
+      <div id="grammarQuiz"></div>
+    </div>
+  </section>
+
+  <!-- বলা -->
+  <section id="bola" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">🗣️ বলা (Bola) — মুখে পালি</h2>
+    <p style="margin:0 0 10px; color:#6e5a46; font-size:13px">ত্রিপিটকে যেমন আছে — ছোট ডায়ালগ, শিশুও বলতে পারে। নিচে বাংলা + পালি + ব্রাহ্মী একসাথে — শোনো, থামো, বলো।</p>
+    <div class="grid2">
+      <div class="bolo-bubble">
+        <small style="color:#8a7a60">👦 শিশু</small><br><b>সুপ্পভাতং ভন্তে!</b> <span style="color:#8a7a60">(সুপ্রভাত ভান্তে!)</span><br><small style="color:#123f39">ব্রাহ্মী: 𑀲𑀼𑀧𑁆𑀧𑀪𑀸𑀢𑀁 𑀪𑀦𑁆𑀢𑁂</small><br><button class="kbd" onclick="speak('সুপ্রভাত ভন্তে')">🔊 শোনো</button> <button class="kbd" onclick="speak('সুপ্পভাতং ভন্তে')">পালিতে 🔊</button>
+      </div>
+      <div class="bolo-bubble">
+        <small style="color:#8a7a60">👨‍👩‍👧 উত্তর</small><br><b>সুপ্পভাতং! কিং করোসি?</b> (সুপ্রভাত! কী করছ?)<br><small style="color:#123f39">উত্তর: <b>ahaṃ paṭhāmi</b> — আমি পড়ছি</small><br><span class="badge gold">প্র্যাকটিস: ahaṃ (আমি) + karomi (করি)</span>
+      </div>
+    </div>
+    <div class="grid3" style="margin-top:10px">
+      <div class="card"><b>🙏 ত্রিশরণ</b><br><code style="font-size:13px">Buddhaṃ saraṇaṃ gacchāmi<br>Dhammaṃ saraṇaṃ gacchāmi<br>Saṅghaṃ saraṇaṃ gacchāmi</code><br><small style="color:#6e5a46">বাংলা: আমি বুদ্ধ/ধর্ম/সঙ্ঘের শরণ নিচ্ছি</small><br><small>ব্রাহ্মী: 𑀩𑀼𑀤𑁆𑀥𑀁 𑀲𑀭𑀡𑀁 𑀕𑀘𑁆𑀙𑀸𑀫𑀺</small></div>
+      <div class="card"><b>💚 মেত্তা</b><br><code style="font-size:13px">Sabbe sattā sukhitā hontu</code><br><small>সব প্রাণী সুখী হোক</small><br><span class="badge">প্রতিদিন 1বার বলো</span></div>
+      <div class="card"><b>🎒 ক্লাসরুম পালি</b><br><small>দাঁড়াও = uṭṭhaha<br>বসো = nisīdatha<br>বই খোলো = potthakaṃ vivaratha</small><br><button class="kbd" onclick="speak('উঠো বসো বই খোলো')">🔊 শোনো</button></div>
+    </div>
+  </section>
+
+  <!-- লেখা -->
+  <section id="lekha" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">✍️ লেখা (Lekha) — হাতে পালি ও ব্রাহ্মী</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🖌️ ক্যানভাস — আঙুল/মাউসে ব্রাহ্মী লেখো</h3>
+        <p style="margin:0 0 8px; font-size:12px; color:#6e5a46">নিচে আঁকো — রং বদলাও, PNG ডাউনলোড করো। প্রাইমারি: শিক্ষক ডট-লাইন প্রিন্ট দেবে।</p>
+        <div class="canvas-wrap"><canvas id="writeCanvas" width="900" height="320" aria-label="ব্রাহ্মী লেখার ক্যানভাস"></canvas></div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px">
+          <button class="kbd" type="button" onclick="clearCanvas()">🧹 মুছো</button>
+          <button class="kbd" type="button" onclick="downloadCanvas()">💾 PNG ডাউনলোড</button>
+          <label style="font-size:12px; display:flex; gap:6px; align-items:center">রং <input type="color" id="penColor" value="#4a1f05"></label>
+          <label style="font-size:12px; display:flex; gap:6px; align-items:center">মোটা <input type="range" id="penSize" min="2" max="18" value="6"></label>
+          <span style="font-size:11px; color:#8a7a60">টিপ: 𑀅 𑀓 𑀫 নকল করে আঁকো</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🔤 রোমান → ব্রাহ্মী অটো-শিট</h3>
+        <p style="margin:0 0 8px; font-size:12px; color:#6e5a46">বাচ্চারা রোমানে লিখবে, ব্রাহ্মীতে ছাপা হবে — কাটো-আঠা খেলা!</p>
+        <div style="background:#fff7df; border:1px solid #ffbd57; border-radius:12px; padding:12px; text-align:center">
+          <div style="font-size:28px; letter-spacing:.08em" id="sheetPreview">𑀩𑀼𑀤𑁆𑀥 𑀥𑀫𑁆𑀫 𑀲𑀁𑀖</div>
+          <small style="color:#8a7a60">buddha dhamma saṅgha → ব্রাহ্মী</small><br>
+          <div style="display:flex; gap:8px; justify-content:center; margin-top:8px">
+            <button class="kbd" onclick="printSheet()">🖨️ প্রিন্ট শিট</button>
+            <button class="kbd" onclick="copyBrahmi()">📋 কপি</button>
+          </div>
+        </div>
+        <details style="margin-top:10px"><summary>কীভাবে ক্লাসে করাবে? (শিক্ষক-গাইড)</summary><p style="font-size:13px">1) A4 তে 𑀅 𑀆 𑀇 ডট-লাইন প্রিন্ট → 2) শিশু ডট জোড়া দেয় → 3) রং করে → 4) দেয়ালে টাঙায়। 5 মিনিট/দিন।</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- দেখা -->
+  <section id="dekha" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">👀 দেখা (Dekha) — চোখে পালি, পাথরে ব্রাহ্মী</h2>
+    <p style="margin:0 0 10px; color:#6e5a46; font-size:13px">অশোকের শিলালিপি (খ্রি.পূ. ৩য় শতক) ব্রাহ্মীতে লেখা — পালির বোন প্রাকৃত। নিচে ৩টি লাইন: ব্রাহ্মী + রোমান + বাংলা — নিজে পড়ো!</p>
+    <div class="card" style="background: linear-gradient(135deg,#fff,#fff7df)">
+      <h3 style="margin:0 0 6px; color:#4a1f05">🏛️ অশোক — ভাবরা ক্ষুদ্র শিলালেখ (Buddha, Dhamma, Sangha উল্লেখ)</h3>
+      <div style="display:grid; grid-template-columns: 1fr; gap:8px; font-size:13px">
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:10px"><b>ব্রাহ্মী (মূল):</b> <span style="font-size:18px">𑀩𑀼𑀥 𑀲𑀓𑁆𑀬𑀫𑀼𑀦𑀺 𑀧𑀼𑀚𑀺𑀢𑁄</span> <span class="badge gold">খ্রি.পূ. 260</span></div>
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:10px"><b>রোমান:</b> Budhe Sakkyamuni pūjito — <b>বাংলা:</b> শাক্যমুনি বুদ্ধ পূজিত</div>
+        <div style="background:#e7f4ee; border:1px solid #b9d5c2; border-radius:10px; padding:10px"><b>ম্যাজিক:</b> <span class="kbd">𑀩 = ব</span> + <span class="kbd">𑀼 = ু</span> → <b>বু</b>! এভাবে জোড়া শেখো। <button class="kbd" onclick="speak('বুদ্ধ শাক্যমুনি')">🔊 শোনো</button></div>
+      </div>
+      <p style="font-size:11px; color:#8a7a60; margin:8px 0 0">উৎস: Hultzsch, Inscriptions of Asoka; Falk — পূর্ণ পাঠ <a href="history.html">history.html →</a></p>
+    </div>
+    <div class="grid3" style="margin-top:10px">
+      <div class="card"><b>🔍 গবেষকের টুল</b><br><small>• ব্রাহ্মী OCR: ছবি তুলে ব্রাহ্মী চিনো (demo mock)<br>• পাণ্ডুলিপি viewer: palm-leaf zoom<br>• অভিধান: Pali-English (PTS) + বাংলা</small><br><a href="library.html" style="font-size:11px; font-weight:800; color:#8f3d08">Library → পাণ্ডুলিপি</a></div>
+      <div class="card"><b>🧒 শিশুর চোখে</b><br><small>পাথরে খোদাই খুঁজি — ছবিতে ব্রাহ্মী গোল করো!<br>প্রিন্টে লাল দাগ দাও, শিক্ষককে দেখাও।</small><br><span class="badge gold">5 মিনিট খেলা</span></div>
+      <div class="card"><b>📚 পড়ার ক্রম</b><br><small>১) ধম্মপদ (সহজ) → ২) জাতক → ৩) দীঘ নিকায় → ৪) অভিধম্ম<br>প্রতিটি লাইন: পালি + বাংলা + ব্রাহ্মী</small></div>
+    </div>
+  </section>
+
+  <!-- ব্রাহ্মী -->
+  <section id="bramhi" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻 ব্রাহ্মী লিপি — প্রাইমারি থেকে গবেষণা, মজায়</h2>
+    <div class="level-ladder">
+      <div class="level" style="border-color:#ffbd57; background:#fff7df"><b>① প্রাইমারি</b><small>দাগ + বৃত্ত + ত্রিভুজ<br>𑀅 𑀆 𑀇 আঁকা</small><br><span class="badge gold">রং-পেন্সিল</span></div>
+      <div class="level"><b>② মাধ্যমিক</b><small>33 ব্যঞ্জন + মাত্রা<br>ক → কি → কী</small><br><span class="badge">কা কি কু</span></div>
+      <div class="level"><b>③ উচ্চ</b><small>যুক্তাক্ষর<br>𑀓𑁆𑀓 = ক্ক, 𑀤𑁆𑀥 = দ্ধ</small><br><span class="badge">বুদ্ধ = 𑀩𑀼𑀤𑁆𑀥</span></div>
+      <div class="level" style="background:#4a1f05; color:#ffe7bb"><b style="color:#ffe7bb">④ গবেষণা</b><small style="color:#ffe7bb">অশোক এডিক্ট, সোহগৌড়া, হাতিগুম্ফা<br>পাঠ + অনুবাদ</small><br><span class="badge" style="background:#ffe7bb; color:#4a1f05">ASI রিপোর্ট</span></div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3 style="margin:0 0 6px; color:#4a1f05">🧱 ব্রাহ্মী কীভাবে জন্মাল? — টাইমলাইন গ্রাফিক</h3>
+      <div style="display:flex; gap:8px; overflow-x:auto; padding:6px 0">
+        <div style="flex:none; background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; width:180px; text-align:center"><div style="font-size:22px">🪨</div><b>খ্রি.পূ. 300</b><br><small>অশোক ব্রাহ্মী<br>𑀅𑀲𑁄𑀓</small></div>
+        <div style="flex:none; display:grid; place-items:center; color:#8a7a60">→</div>
+        <div style="flex:none; background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; width:180px; text-align:center"><div style="font-size:22px">📜</div><b>খ্রি.পূ. 100</b><br><small>সাঁচী, ভরহুত<br>পালি ত্রিপিটক লেখা</small></div>
+        <div style="flex:none; display:grid; place-items:center; color:#8a7a60">→</div>
+        <div style="flex:none; background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; width:180px; text-align:center"><div style="font-size:22px">🔤</div><b>আজ</b><br><small>বাংলা, সিংহল, বার্মিজ — সব ব্রাহ্মী থেকে!</small></div>
+        <div style="flex:none; background:#e7f4ee; border:1px solid #b9d5c2; border-radius:12px; padding:10px; width:200px; text-align:center"><div style="font-size:14px">💡 মজার তথ্য</div><small>বাংলা <b>ক</b> = ব্রাহ্মী <b>𑀓</b> থেকে! হাত ঘুরিয়ে দেখো — একই!</small></div>
+      </div>
+      <p style="font-size:11px; color:#8a7a60; margin:8px 0 0">উৎস: Salomon, Indian Epigraphy; Falk, Schrift im alten Indien — গ্রাফিক নিজস্ব</p>
+    </div>
+
+    <div class="grid2" style="margin-top:10px">
+      <div class="card">
+        <h3 style="margin:0 0 6px; color:#4a1f05">✏️ প্রাইমারি — ডট-জোড়া শিট</h3>
+        <p style="margin:0 0 8px; font-size:12px; color:#6e5a46">A4 প্রিন্ট → ডট জোড়া → রং → দেয়ালে। 5 মিনিট/দিন, 7 দিনে 10টি অক্ষর!</p>
+        <div style="background:#fffaf0; border:1px dashed #ead6b8; border-radius:12px; padding:12px; text-align:center; font-size:28px; letter-spacing:.3em">𑀅  𑀆  𑀇  𑀈  𑀉  𑀓  𑀫  𑀩</div>
+        <div style="display:flex; gap:8px; margin-top:8px"><button class="kbd" onclick="window.print()">🖨️ A4 প্রিন্ট</button><button class="kbd" onclick="downloadCanvas()">💾 PNG</button></div>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🔬 গবেষণা — এডিক্ট কীভাবে পড়বে?</h3>
+        <ol style="margin:0 0 0 18px; font-size:13px; line-height:1.9">
+          <li><b>ছবি তোলো</b> — সোজা, আলোয়</li>
+          <li><b>ট্রান্সলিটারেশন</b> — রোমানে লেখো</li>
+          <li><b>অনুবাদ</b> — বাংলা/English</li>
+          <li><b>তুলনা</b> — Hultzsch + ASI রিপোর্ট</li>
+        </ol>
+        <a href="library.html" style="font-size:11px; font-weight:800; color:#8f3d08">Library → Epigraphy গাইড</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ক্যালিগ্রাফি -->
+  <section id="calligraphy" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">🖌️ বৌদ্ধ ক্যালিগ্রাফি কী?</h2>
+    <p style="margin:0 0 10px; color:#6e5a46; font-size:13px">ক্যালিগ্রাফি = সুন্দর হাতের লেখা — বৌদ্ধ ভিক্ষুরা হাজার বছর ধরে <b>ধ্যানের মতো</b> লিখতেন। প্রতিটি টান = শ্বাস, মনোযোগ।</p>
+
+    <div class="grid3">
+      <div class="card"><b>🪷 কী?</b><br><small>পালি/সংস্কৃত মন্ত্র, গাথা — ব্রাশ/কলমে শিল্প। শুধু লেখা নয়, <b>ভাবনা</b>।</small></div>
+      <div class="card"><b>🎯 কেন?</b><br><small>মন শান্ত, হাত স্থির, মনে গাথা থাকে — লেখার সাথে মুখস্থ!</small></div>
+      <div class="card"><b>👶 কে শিখবে?</b><br><small>6+ বছর বাচ্চা থেকে 90 বছর — সবাই। বড় ব্রাশ, ছোট ব্রাশ আলাদা।</small></div>
+    </div>
+
+    <h3 style="color:#4a1f05; margin:14px 0 8px">🏛️ ঐতিহাসিক ক্যালিগ্রাফি — কী কী আছে? (ছবি-গ্যালারি)</h3>
+    <div class="gallery">
+      <figure><div class="ph" style="display:grid; place-items:center; font-size:32px">𑀥𑀫𑁆𑀫𑁄</div><figcaption><b>1. অশোক ব্রাহ্মী</b> — পাথরে খোদাই, খ্রি.পূ. 3c<br><small>লুম্বিনী স্তম্ভ: “বুদ্ধ শাক্যমুনি”</small><br><a href="#dekha" style="font-size:11px; font-weight:800; color:#8f3d08">পড়তে শেখো →</a></figcaption></figure>
+      <figure><div class="ph" style="display:grid; place-items:center; font-size:28px; background:#fff7df">𑀲𑀺𑀤𑁆𑀥𑀁</div><figcaption><b>2. সিদ্ধং (Siddham)</b> — জাপানি বৌদ্ধ মন্ত্র<br><small>𑖀 থেকে জাপানি কানা</small><br><small style="color:#8a7a60">উৎস: Bonji, Shingon</small></figcaption></figure>
+      <figure><div class="ph" style="display:grid; place-items:center; font-size:22px">ཨོཾ་མ་ཎི་པདྨེ་ཧཱུྃ</div><figcaption><b>3. তিব্বতি Uchen</b> — মন্ত্র, থাংকা<br><small>ওঁ মণি পদ্মে হূং</small><br><small style="color:#8a7a60">মঠে আজও লেখা হয়</small></figcaption></figure>
+      <figure><div class="ph" style="display:grid; place-items:center; font-size:28px">南無阿彌陀佛</div><figcaption><b>4. চীনা/জাপানি ব্রাশ</b> — Zen enso ○<br><small>এক টানে বৃত্ত = শূন্যতা</small></figcaption></figure>
+      <figure><div class="ph" style="display:grid; place-items:center; font-size:20px">𑒀𑒧𑒑𑒨𑒩𑒪𑒧</div><figcaption><b>5. রঞ্জনা (নেপাল)</b> — মন্ডল, পুথি<br><small>নেওয়ারি বৌদ্ধ পুথি</small></figcaption></figure>
+      <figure><div class="ph" style="display:grid; place-items:center; font-size:24px">☸️ ✍️</div><figcaption><b>6. বাংলা-বৌদ্ধ</b> — পালি বাংলা লিপিতে<br><small>চট্টগ্রামে তালপাতা পুথি</small><br><span class="badge gold">নতুন শেখো!</span></figcaption></figure>
+    </div>
+    <p style="font-size:11px; color:#8a7a60; margin:8px 0 0">Historical image: প্রতিটি লিপির Wikimedia Commons / British Library CC ছবি — Library.html থেকে লিংক। এখানে ফন্টে দেখানো (প্রিন্টে আসবে)।</p>
+
+    <div class="card" style="margin-top:12px; background: linear-gradient(135deg,#fff,#fff7df)">
+      <h3 style="margin:0 0 6px; color:#4a1f05">🖌️ কীভাবে শিখবে — 4 ধাপ (সব বয়স)</h3>
+      <div class="grid4">
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; text-align:center"><div style="font-size:24px">1️⃣</div><b>দেখো</b><br><small>অশোক, সিদ্ধং ছবি<br>10 সেকেন্ড তাকাও</small></div>
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; text-align:center"><div style="font-size:24px">2️⃣</div><b>বাতাসে আঁকো</b><br><small>আঙুলে 3বার<br>শ্বাসের সাথে</small></div>
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; text-align:center"><div style="font-size:24px">3️⃣</div><b>কাগজে</b><br><small>মোটা ব্রাশ → চিকন<br>ডট-লাইন শিট</small></div>
+        <div style="background:#4a1f05; color:#ffe7bb; border-radius:12px; padding:10px; text-align:center"><div style="font-size:24px">4️⃣</div><b style="color:#ffe7bb">ধ্যানে লেখো</b><br><small style="color:#ffe7bb">এক লাইন, ধীরে<br>মনে গাথা</small></div>
+      </div>
+      <details style="margin-top:10px"><summary>📦 কী লাগবে? (বাড়িতে)</summary><p style="font-size:13px">• বাচ্চা: মোটা মার্কার + A4 (ব্রাশ পরে)<br>• বড়: ক্যালিগ্রাফি ব্রাশ/ফাউন্টেন পেন + কালি + ব্রাশ-পেপার<br>• সব: প্রিন্ট শিট (নিচে) + 5 মিনিট/দিন</p></details>
+      <details><summary>🎥 ভিডিও + ওয়ার্কশপ কোথায়?</summary><p style="font-size:13px">Library.html → Calligraphy: YouTube (NPO Calligraphy Assoc.), British Library — লিংক যাচাইকৃত। মঠে গিয়ে ভিক্ষুর হাত দেখাই সেরা!</p></details>
+    </div>
+
+    <div class="card" style="margin-top:10px">
+      <h3 style="margin:0 0 6px; color:#4a1f05">✍️ লাইভ ক্যালিগ্রাফি ক্যানভাস — ব্রাশে লেখো</h3>
+      <p style="margin:0 0 8px; font-size:12px; color:#6e5a46">উপরে নমুনা দেখে নিচে নকল করো — ব্রাশ effect! (মাউস/আঙুল)</p>
+      <div style="background:#fffaf0; border:1px dashed #ead6b8; border-radius:10px; padding:8px; display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px">
+        <span style="background:#4a1f05; color:#ffe7bb; padding:4px 8px; border-radius:999px; font-size:11px; font-weight:800">নমুনা:</span>
+        <button class="kbd" onclick="setSample('𑀩𑀼𑀤𑁆𑀥𑀁')">𑀩𑀼𑀤𑁆𑀥𑀁 বুদ্ধং</button>
+        <button class="kbd" onclick="setSample('Sabbe sattā sukhitā hontu')">Sabbe sattā...</button>
+        <button class="kbd" onclick="setSample('☸️')">☸ ধর্মচক্র</button>
+        <button class="kbd" onclick="setSample('ওঁ মণি পদ্মে হূং')">ওঁ মণি</button>
+        <span id="sampleText" style="margin-left:auto; font-weight:900; color:#4a1f05; font-size:14px">𑀩𑀼𑀤𑁆𑀥𑀁 নকল করো →</span>
+      </div>
+      <div class="canvas-wrap"><canvas id="calCanvas" width="900" height="260"></canvas></div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px">
+        <button class="kbd" onclick="clearCal()">🧹 মুছো</button><button class="kbd" onclick="downloadCal()">💾 PNG</button>
+        <label style="font-size:12px">রং <input type="color" id="calColor" value="#8f3d08"></label>
+        <label style="font-size:12px">মোটা <input type="range" id="calSize" min="3" max="22" value="9"></label>
+        <span style="font-size:11px; color:#8a7a60">টিপ: ধীরে টানো — ব্রাশ পাতলা-মোটা হবে!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- প্র্যাকটিস -->
+  <section id="practice" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">🎯 প্র্যাকটিস — খেলা, কুইজ, প্রিন্ট</h2>
+    <div class="grid3">
+      <div class="card" style="background:#fff7df; border-color:#ffbd57">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🧩 পালি-বাংলা ম্যাচ</h3>
+        <div id="paliMatch" style="display:grid; grid-template-columns:1fr 1fr; gap:6px"></div>
+        <p id="matchFeedback" style="min-height:22px; font-size:12px; font-weight:800; color:#2e7d32; margin:6px 0 0"></p>
+        <button class="kbd" onclick="initMatch()" style="margin-top:6px">🔀 নতুন</button>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 6px; color:#4a1f05">📊 আমার অগ্রগতি</h3>
+        <div style="font-size:12px; color:#6e5a46">বলা <div class="progress-out"><div class="progress-in" id="pBola" style="width:12%"></div></div></div>
+        <div style="font-size:12px; color:#6e5a46; margin-top:6px">লেখা <div class="progress-out"><div class="progress-in" id="pLekha" style="width:18%"></div></div></div>
+        <div style="font-size:12px; color:#6e5a46; margin-top:6px">ব্রাহ্মী <div class="progress-out"><div class="progress-in" id="pBramhi" style="width:8%"></div></div></div>
+        <p style="font-size:11px; color:#8a7a60; margin:8px 0 0">XP: <b id="paliXP">0</b> · সব local — <button class="kbd" onclick="resetProgress()">রিসেট</button></p>
+      </div>
+      <div class="card" style="background: linear-gradient(180deg,#fff,#e7f4ee)">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🖨️ প্রিন্ট শিট (A4)</h3>
+        <ul style="margin:0 0 0 18px; font-size:13px; line-height:1.9">
+          <li><a href="#" onclick="window.print(); return false" style="color:#8f3d08; font-weight:800">ব্রাহ্মী 41 বর্ণ — ডট-লাইন</a> <span class="badge gold">প্রাইমারি</span></li>
+          <li><a href="#" onclick="window.print(); return false" style="color:#8f3d08; font-weight:800">পালি 20 শব্দ — ছবি সহ</a> <span class="badge">মাধ্যমিক</span></li>
+          <li><a href="#" onclick="window.print(); return false" style="color:#8f3d08; font-weight:800">ত্রিশরণ + মেত্তা — 3 লিপি</a></li>
+          <li><a href="#" onclick="window.print(); return false" style="color:#8f3d08; font-weight:800">ক্যালিগ্রাফি গাইড — 4 ধাপ</a></li>
+        </ul>
+        <p style="font-size:11px; color:#8a7a60; margin:8px 0 0">Ctrl+P → Actual size → প্রিন্ট — কাঁচি-আঠা ক্লাস!</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3 style="margin:0 0 6px; color:#4a1f05">📚 আরও পড়ো — গবেষণা লেভেল</h3>
+      <div class="grid3" style="font-size:12px; line-height:1.8">
+        <div><b>পালি কোর্স:</b><br>• Duroiselle, Pali Primer (PDF)<br>• Narada, Pali Made Easy<br>• Warder, Intro to Pali<br>• PTS Dictionary (online)</div>
+        <div><b>ব্রাহ্মী:</b><br>• Salomon, Indian Epigraphy<br>• Falk, Asokan Inscriptions<br>• ASI Epigraphia Indica<br>• Brahmi OCR demo</div>
+        <div><b>ক্যালিগ্রাফি:</b><br>• Nagashima, Bonji<br>• Tibetan Calligraphy (Tashijong)<br>• Zen Brush — enso<br><a href="library.html" style="font-weight:800; color:#8f3d08">Library.html →</a></div>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin:16px 0"><a href="index.html" style="background:#4a1f05; color:#ffe7bb; padding:10px 16px; border-radius:999px; font-weight:800; text-decoration:none">← হোমে ফিরি</a> <a href="children.html" style="background:#fff; border:1px solid #ead6b8; padding:10px 16px; border-radius:999px; font-weight:800; text-decoration:none; color:#4a1f05">শিশু বিভাগ →</a> <a href="knowledge.html" style="background:#fff; border:1px solid #ead6b8; padding:10px 16px; border-radius:999px; font-weight:800; text-decoration:none; color:#4a1f05">জ্ঞানকোষ →</a></p>
+    <p style="text-align:center; font-size:11px; color:#8a7a60">ক্রেডিট: Brahmi Unicode, Noto Sans, Ashoka images — Wikimedia Commons CC<br>ভুল থাকলে জানান: contribution.html → “পালি শেখা” ট্যাগ</p>
+  </section>
+</main>
+
+<footer class="cb-footer" id="cbFooter"></footer>
+<script src="brand.js?v=20261031c" defer></script>
+<script>
+// Helpers
+function speak(text){
+  try{
+    var u=new SpeechSynthesisUtterance(text);
+    u.lang='bn-BD'; u.rate=0.9;
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  }catch(_){ alert('🔊 '+text); }
+}
+function setSample(t){ document.getElementById('sampleText').textContent=t+' → নকল করো'; }
+
+// Roman -> Brahmi simple map (demo)
+var romanMap={
+  'a':'𑀅','ā':'𑀆','i':'𑀇','ī':'𑀈','u':'𑀉','ū':'𑀊','e':'𑀏','o':'𑀑',
+  'ka':'𑀓','kha':'𑀔','ga':'𑀕','gha':'𑀖','ṅa':'𑀗','ca':'𑀘','cha':'𑀙','ja':'𑀚','jha':'𑀛','ña':'𑀜',
+  'ṭa':'𑀝','ṭha':'𑀞','ḍa':'𑀟','ḍha':'𑀠','ṇa':'𑀡','ta':'𑀢','tha':'𑀣','da':'𑀤','dha':'𑀥','na':'𑀦',
+  'pa':'𑀧','pha':'𑀨','ba':'𑀩','bha':'𑀪','ma':'𑀫','ya':'𑀬','ra':'𑀭','la':'𑀮','va':'𑀯','sa':'𑀲','ha':'𑀳','ḷa':'𑀴','ṃ':'𑀁','ṁ':'𑀁'
+};
+var banglaMap={'a':'অ','ā':'আ','i':'ই','buddha':'বুদ্ধ','dhamma':'ধম্ম','sangha':'সঙ্ঘ','saranam':'সরণং','gacchami':'গচ্ছামি','sabbe':'সব্বে','satta':'সত্তা','sukhitā':'সুখিতা','hontu':'হোন্তু'};
+document.getElementById('romanIn').addEventListener('input', function(){
+  var v=this.value.toLowerCase().trim();
+  if(!v){ document.getElementById('outBrahmi').textContent='𑀩𑀼𑀤𑁆𑀥𑀁 𑀲𑀭𑀡𑀁 𑀕𑀘𑁆𑀙𑀸𑀫𑀺'; document.getElementById('outBangla').textContent='বুদ্ধং সরণং গচ্ছামি'; document.getElementById('sheetPreview').textContent='𑀩𑀼𑀤𑁆𑀥 𑀥𑀫𑁆𑀫 𑀲𑀁𑀖'; return; }
+  // very simple token replace
+  var b=v;
+  Object.keys(romanMap).sort((a,b)=>b.length-a.length).forEach(k=>{ b=b.split(k).join(romanMap[k]); });
+  document.getElementById('outBrahmi').textContent = b || '—';
+  var bn=v;
+  Object.keys(banglaMap).sort((a,b)=>b.length-a.length).forEach(k=>{ bn=bn.split(k).join(banglaMap[k]); });
+  document.getElementById('outBangla').textContent = bn;
+  document.getElementById('sheetPreview').textContent = b.slice(0,18);
+});
+
+function copyBrahmi(){
+  var t=document.getElementById('outBrahmi').textContent;
+  navigator.clipboard.writeText(t).then(()=>alert('কপি হয়েছে: '+t));
+}
+function printSheet(){ window.print(); }
+
+// Brahmi tracer
+document.querySelectorAll('#bramhiTracer button').forEach(btn=>{
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('#bramhiTracer button').forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+    document.getElementById('strokeName').textContent = this.dataset.name+' — '+this.dataset.ch;
+    document.querySelector('#strokeSvg text').textContent = this.dataset.ch;
+    // fake stroke animate
+    var p=document.getElementById('strokePath');
+    p.setAttribute('d','M 40 40 Q 100 20 160 100 T 100 160');
+    p.style.strokeDasharray='400'; p.style.strokeDashoffset='400';
+    p.getBoundingClientRect();
+    p.style.transition='stroke-dashoffset 1.2s ease';
+    p.style.strokeDashoffset='0';
+    addXP(2,'ব্রাহ্মী দেখা');
+  });
+});
+
+// Canvas writing
+(function(){
+  var c=document.getElementById('writeCanvas'), ctx=c.getContext('2d');
+  var drawing=false, last=null;
+  function pos(e){
+    var r=c.getBoundingClientRect();
+    var t=e.touches? e.touches[0] : e;
+    return {x: (t.clientX - r.left) * (c.width / r.width), y: (t.clientY - r.top) * (c.height / r.height)};
+  }
+  function start(e){ e.preventDefault(); drawing=true; last=pos(e); }
+  function move(e){
+    if(!drawing) return; e.preventDefault();
+    var p=pos(e);
+    ctx.strokeStyle=document.getElementById('penColor').value;
+    ctx.lineWidth=document.getElementById('penSize').value;
+    ctx.lineCap='round'; ctx.lineJoin='round';
+    ctx.beginPath(); ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke();
+    last=p;
+  }
+  function end(){ drawing=false; }
+  c.addEventListener('mousedown', start); c.addEventListener('mousemove', move); window.addEventListener('mouseup', end);
+  c.addEventListener('touchstart', start, {passive:false}); c.addEventListener('touchmove', move, {passive:false}); c.addEventListener('touchend', end);
+  window.clearCanvas=function(){ ctx.clearRect(0,0,c.width,c.height); };
+  window.downloadCanvas=function(){
+    var a=document.createElement('a'); a.download='bramhi-practice.png'; a.href=c.toDataURL('image/png'); a.click();
+    addXP(5,'লেখা ডাউনলোড');
+  };
+})();
+(function(){
+  var c=document.getElementById('calCanvas'), ctx=c.getContext('2d');
+  if(!c) return;
+  var drawing=false, last=null, lastW=6;
+  function pos(e){
+    var r=c.getBoundingClientRect();
+    var t=e.touches? e.touches[0] : e;
+    return {x: (t.clientX - r.left) * (c.width / r.width), y: (t.clientY - r.top) * (c.height / r.height)};
+  }
+  function speed(p1,p2){ return Math.hypot(p1.x-p2.x, p1.y-p2.y); }
+  function start(e){ e.preventDefault(); drawing=true; last=pos(e); lastW= parseInt(document.getElementById('calSize').value,10); }
+  function move(e){
+    if(!drawing) return; e.preventDefault();
+    var p=pos(e);
+    var sp=speed(last,p);
+    var target = Math.max(2, Math.min(22, 18 - sp*0.15));
+    lastW = lastW*0.7 + target*0.3;
+    ctx.strokeStyle=document.getElementById('calColor').value;
+    ctx.lineWidth=lastW;
+    ctx.lineCap='round'; ctx.lineJoin='round';
+    ctx.beginPath(); ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke();
+    last=p;
+  }
+  function end(){ drawing=false; }
+  c.addEventListener('mousedown', start); c.addEventListener('mousemove', move); window.addEventListener('mouseup', end);
+  c.addEventListener('touchstart', start, {passive:false}); c.addEventListener('touchmove', move, {passive:false}); c.addEventListener('touchend', end);
+  window.clearCal=function(){ ctx.clearRect(0,0,c.width,c.height); };
+  window.downloadCal=function(){
+    var a=document.createElement('a'); a.download='calligraphy.png'; a.href=c.toDataURL('image/png'); a.click();
+    addXP(8,'ক্যালিগ্রাফি');
+  };
+})();
+
+// Grammar quiz
+var gQuiz=[
+  {q:'ahaṃ gacchāmi = ?', opts:['আমি যাই','তুমি যাও','সে যায়'], a:0, exp:'ahaṃ=আমি, gacchāmi=যাই (আমি-রূপ)'},
+  {q:'buddhaṃ (দুতিয়া) কী?', opts:['বুদ্ধ (কর্তা)','বুদ্ধকে (কর্ম)','বুদ্ধ দ্বারা'], a:1, exp:'-ṃ যোগে কর্ম: buddhaṃ = বুদ্ধকে'},
+  {q:'Sabbe sattā sukhitā hontu = ?', opts:['সব প্রাণী সুখী হোক','আমি বুদ্ধের শরণ নিচ্ছি','ধর্ম সুন্দর'], a:0, exp:'সব প্রাণীর মৈত্রী — মেত্তা গাথা'},
+];
+var gIdx=0;
+function renderGQuiz(){
+  var box=document.getElementById('grammarQuiz');
+  var q=gQuiz[gIdx];
+  box.innerHTML='<b>'+(gIdx+1)+'. '+q.q+'</b><div id="gOpts"></div><p id="gExp" style="font-size:13px; color:#6e5a46; min-height:22px"></p><button class="kbd" id="gNext" style="display:none">পরের প্রশ্ন →</button>';
+  q.opts.forEach((o,i)=>{
+    var b=document.createElement('button'); b.className='quiz-opt'; b.textContent=o;
+    b.addEventListener('click', function(){
+      var ok=i===q.a;
+      this.classList.add(ok?'correct':'wrong');
+      document.getElementById('gExp').textContent=(ok?'✅ ঠিক! ':'❌ ')+q.exp;
+      document.getElementById('gNext').style.display='inline-block';
+      if(ok) addXP(10,'গ্রামার কুইজ');
+      Array.from(document.getElementById('gOpts').children).forEach(btn=>btn.disabled=true);
+    });
+    document.getElementById('gOpts').appendChild(b);
+  });
+  document.getElementById('gNext').addEventListener('click', function(){ gIdx=(gIdx+1)%gQuiz.length; renderGQuiz(); });
+}
+renderGQuiz();
+
+// Pali match
+var paliPairs=[{pali:'Buddhaṃ', bn:'বুদ্ধকে'},{pali:'Dhammaṃ', bn:'ধর্মকে'},{pali:'Saṅghaṃ', bn:'সঙ্ঘকে'},{pali:'gacchāmi', bn:'যাই'},{pali:'saraṇaṃ', bn:'শরণ'}, {pali:'mettaṃ', bn:'মৈত্রী'}];
+var pick=null;
+function initMatch(){
+  var grid=document.getElementById('paliMatch'); grid.innerHTML=''; pick=null;
+  var left=paliPairs.map((x,i)=>({t:x.pali, k:i, type:'pali'})).sort(()=>Math.random()-.5);
+  var right=paliPairs.map((x,i)=>({t:x.bn, k:i, type:'bn'})).sort(()=>Math.random()-.5);
+  var all=left.concat(right).sort(()=>Math.random()-.5);
+  all.forEach(function(it){
+    var b=document.createElement('button'); b.textContent=it.t; b.dataset.k=it.k; b.dataset.type=it.type;
+    b.style.cssText='padding:8px; border:1px solid #ead6b8; background:#fff; border-radius:10px; cursor:pointer; font-weight:700; font-size:12px';
+    b.addEventListener('click', function(){
+      if(b.classList.contains('done')) return;
+      if(!pick){ pick=b; b.style.background='#fff7df'; b.style.borderColor='#ffbd57'; document.getElementById('matchFeedback').textContent='জোড়া খোঁজো…'; }
+      else {
+        if(pick===b){ pick.style.background='#fff'; pick=null; return; }
+        if(pick.dataset.k===b.dataset.k && pick.dataset.type!==b.dataset.type){
+          pick.classList.add('done'); b.classList.add('done'); pick.style.background='#e4f4e8'; b.style.background='#e4f4e8';
+          document.getElementById('matchFeedback').textContent='✅ ঠিক জোড়া!'; addXP(8,'পালি ম্যাচ');
+          if(document.querySelectorAll('#paliMatch .done').length===12){ document.getElementById('matchFeedback').textContent='🎉 সব মিলেছে!'; addXP(20,'সব মিল'); }
+        } else { document.getElementById('matchFeedback').textContent='❌ আবার চেষ্টা'; pick.style.background='#fff'; b.style.background='#fff0eb'; setTimeout(()=>b.style.background='#fff',600); }
+        pick=null;
+      }
+    });
+    grid.appendChild(b);
+  });
+  document.getElementById('matchFeedback').textContent='পালি → বাংলা মিলাও';
+}
+initMatch();
+
+// XP
+var XP_KEY='paliXP', xp=parseInt(localStorage.getItem(XP_KEY)||'0',10);
+function addXP(n, why){
+  xp+=n; localStorage.setItem(XP_KEY, String(xp));
+  var el=document.getElementById('paliXP'); if(el) el.textContent=xp;
+  // progress
+  ['pBola','pLekha','pBramhi'].forEach(id=>{
+    var e=document.getElementById(id); if(e){ var w=Math.min(100, xp/2); e.style.width=w+'%'; }
+  });
+  // toast
+  var msg=document.getElementById('matchFeedback'); if(msg){ var old=msg.textContent; msg.textContent='+'+n+' XP — '+why; setTimeout(()=>{ msg.textContent=old; }, 1500); }
+}
+document.getElementById('paliXP').textContent=xp;
+function resetProgress(){ localStorage.removeItem(XP_KEY); xp=0; document.getElementById('paliXP').textContent='0'; ['pBola','pLekha','pBramhi'].forEach(id=>{ var e=document.getElementById(id); if(e) e.style.width='8%'; }); }
+
+// sticky active
+document.querySelectorAll('.nav-tabs a').forEach(a=>{
+  a.addEventListener('click', function(){
+    document.querySelectorAll('.nav-tabs a').forEach(x=>x.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

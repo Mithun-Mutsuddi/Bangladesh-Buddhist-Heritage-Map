@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#4a1f05">
+<title>চর্যাপদের ভাষা — লেখা ✦ বলা ✦ দেখা ✦ শোনা | চর্যাভূমি</title>
+<meta name="description" content="চর্যাপদের ভাষা — সন্ধ্যা-ভাষা, আদি বাংলা — লেখা, বলা, দেখা, শোনা চার দক্ষতা, প্রাইমারি থেকে গবেষণা, ছবি-গ্রাফিক-অডিও-ক্যানভাস সহ।">
+<link rel="stylesheet" href="charyabhumi.css?v=20261031c">
+<style>
+:root{ --saffron:#8f3d08; --gold:#ffbd57; --paper:#fffdf6; --line:#ead6b8 }
+body{ margin:0; background:#fffaf0; color:#1a140d; font-family:"Noto Sans Bengali",system-ui,sans-serif; line-height:1.75 }
+.cb-wrap{ max-width:1140px; margin:0 auto; padding:0 16px }
+.hero{ background: linear-gradient(120deg,#4a1f05 0%, #6b3a12 45%, #8f3d08 70%, #c97a1b 100%); color:#fff; padding:28px 0 16px }
+.hero h1{ margin:0; font-size:clamp(24px,4vw,33px); line-height:1.25 }
+.hero p{ margin:8px 0 0; opacity:.96; max-width:84ch; font-size:14px; line-height:1.85 }
+.hero .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:12px }
+.hero .chips span{ background:#fff; color:#4a1f05; padding:5px 10px; border-radius:999px; font-size:11px; font-weight:800; border:1px solid #ffbd57 }
+.tabs{ display:flex; gap:8px; overflow-x:auto; padding:12px 0 4px; position:sticky; top:0; background:#fffaf0; z-index:5; border-bottom:1px solid #ead6b8; scrollbar-width:thin }
+.tabs a{ flex:none; padding:8px 14px; border-radius:999px; border:1px solid #ead6b8; background:#fff; color:#4a1f05; font-weight:800; font-size:12px; text-decoration:none; white-space:nowrap }
+.tabs a.active, .tabs a:hover{ background:#4a1f05; color:#ffe7bb; border-color:#4a1f05 }
+.section{ padding:18px 0 }
+.card{ background:#fff; border:1px solid #ead6b8; border-radius:16px; padding:16px; box-shadow:0 8px 22px rgba(71,31,5,.06) }
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:14px }
+.grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px }
+.grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px }
+@media(max-width:900px){ .grid2,.grid3,.grid4{ grid-template-columns:1fr } }
+.kbd{ display:inline-block; background:#fff7df; border:1px solid #f0debf; border-bottom-width:2px; border-radius:6px; padding:1px 6px; font-size:12px; font-weight:700; cursor:pointer }
+.badge{ display:inline-block; font-size:10px; font-weight:900; padding:3px 7px; border-radius:999px; border:1px solid #ead6b8; background:#fff }
+.badge.saffron{ background:#4a1f05; color:#ffe7bb; border-color:#4a1f05 }
+.badge.gold{ background:#fff7df; color:#4a1f05; border-color:#ffbd57 }
+table{ width:100%; border-collapse:separate; border-spacing:0; background:#fff; border:1px solid #ead6b8; border-radius:14px; overflow:hidden }
+th,td{ padding:8px 10px; border-bottom:1px solid #ead6b8; font-size:13px; text-align:left; vertical-align:top }
+th{ background:#4a1f05; color:#ffe7bb; font-size:11px; letter-spacing:.04em }
+.canvas-wrap{ background:#fff; border:1px solid #ead6b8; border-radius:14px; overflow:hidden }
+.canvas-wrap canvas{ display:block; width:100%; height:300px; touch-action:none }
+.pada{ background:#fff; border:1px solid #ead6b8; border-radius:16px; overflow:hidden; box-shadow:0 8px 22px rgba(71,31,5,.06) }
+.pada-head{ background: linear-gradient(135deg,#fff,#fff7df); padding:10px 14px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; border-bottom:1px solid #ead6b8 }
+.pada-body{ padding:14px; font-size:13px; line-height:1.85 }
+.pada-body .orig{ font-size:15px; font-weight:800; color:#4a1f05; background:#fff7df; border:1px solid #ffbd57; border-radius:10px; padding:8px 10px; margin:6px 0 }
+.audio-bar{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:8px 0; background:#e7f4ee; border:1px solid #b9d5c2; border-radius:10px; padding:8px 10px }
+.progress-out{ background:#fdf6e6; border:1px solid #ead6b8; border-radius:999px; height:12px; overflow:hidden }
+.progress-in{ height:100%; width:0%; background: linear-gradient(90deg,#ffbd57,#8f3d08); transition: width .4s }
+details{ background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px 12px; margin:8px 0 }
+details summary{ cursor:pointer; font-weight:800; color:#4a1f05 }
+.level{ background:#fff; border:1px solid #ead6b8; border-radius:14px; padding:12px; text-align:center }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="cb-wrap">
+    <p style="font-size:11px; letter-spacing:.08em; opacity:.9; margin:0 0 6px; font-weight:800">চর্যাভূমি · চর্যাপদের ভাষা — আদি বাংলার প্রথম বই</p>
+    <h1>📜 চর্যাপদের ভাষা — লেখা ✦ বলা ✦ দেখা ✦ শোনা</h1>
+    <p>১০০০ বছর আগের <b>চর্যাপদ</b> — বাংলার প্রথম কবিতার বই, <b>২৪ জন সিদ্ধাচার্যের ৪৭টি পদ</b>, <b>সন্ধ্যা-ভাষায়</b> (আলো-আঁধারির গোপন ভাষা) লেখা। হরপ্রসাদ শাস্ত্রী ১৯০৭ সালে নেপালের রাজদরবার থেকে তালপাতার পুঁথি খুঁজে আনেন। এখানে <b>প্রাইমারি → গবেষণা</b> — ছবি, গ্রাফিক, অডিও, ক্যানভাসে হাতে লেখা — সব বয়স শিখবে।</p>
+    <div class="chips">
+      <span>🎯 ৬+ : ছবি+গান</span><span>🎓 ১২+ : শব্দ+বাক্য</span><span>🔬 গবেষক: পুঁথি+সন্ধ্যা-ভাষা</span><span>🎧 শোনা</span><span>✍️ লেখা</span><span>👀 দেখা</span>
+    </div>
+  </div>
+</header>
+
+<nav class="cb-wrap tabs" aria-label="সেকশন">
+  <a href="#ki" class="active">কী ভাষা?</a>
+  <a href="#lipi">লিপি</a>
+  <a href="#lekha">✍️ লেখা</a>
+  <a href="#bola">🗣️ বলা</a>
+  <a href="#dekha">👀 দেখা</a>
+  <a href="#sona">🎧 শোনা</a>
+  <a href="#grammar">গ্রামার</a>
+  <a href="#pada">পদ পড়ি</a>
+  <a href="#practice">প্র্যাকটিস</a>
+</nav>
+
+<main class="cb-wrap">
+
+  <!-- কী ভাষা -->
+  <section id="ki" class="section">
+    <div class="card" style="background: linear-gradient(135deg,#fff 0%, #fff7df 60%, #e7f4ee 100%); border-color:#ffbd57">
+      <h2 style="margin:0 0 6px; color:#4a1f05">🧭 চর্যাপদের ভাষা কী? — ১ মিনিটে</h2>
+      <div class="grid2">
+        <div>
+          <p style="margin:0 0 8px; font-size:13px; color:#2b2117"><b>ভাষা:</b> অপভ্রংশ → আদি বাংলা/অসমিয়া/ওড়িয়া/মৈথিলীর মা। আজকের বাংলার দাদি! <br><b>ভাষা-গাছ:</b> সংস্কৃত → পালি-প্রাকৃত → অপভ্রংশ → <b>চর্যাপদের ভাষা (সন্ধ্যা-ভাষা)</b> → আধুনিক বাংলা</p>
+          <div style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:8px 10px; font-size:12px">
+            <b>🌙 সন্ধ্যা-ভাষা কী?</b> দিনও নয়, রাতও নয় — আলো-আঁধারির ভাষা। বাইরে এক মানে, ভিতরে আরেক মানে (গোপন সাধনার কথা)!<br>
+            <code style="background:#fff7df; padding:2px 6px; border-radius:6px">“টালত মোর ঘর নাহি পড়বেষী”</code><br>বাইরে: টিলায় ঘর, পড়শি নেই।<br>ভিতরে: শরীরে শূন্যতা, সংসার থেকে আলাদা।
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px">
+            <span class="badge gold">47 পদ</span><span class="badge">24 সিদ্ধা</span><span class="badge">রাগ: পটমঞ্জরী</span><span class="badge saffron">১৯০৭ আবিষ্কার</span>
+          </div>
+        </div>
+        <div>
+          <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px">
+            <b style="color:#4a1f05; font-size:13px">🌳 ভাষা-গাছ (গ্রাফিক)</b>
+            <svg viewBox="0 0 420 160" style="width:100%; height:auto; margin-top:6px">
+              <rect x="10" y="10" width="120" height="28" rx="8" fill="#4a1f05"/><text x="70" y="28" text-anchor="middle" fill="#ffe7bb" font-size="11" font-weight="800">সংস্কৃত</text>
+              <rect x="10" y="55" width="120" height="28" rx="8" fill="#8f3d08"/><text x="70" y="73" text-anchor="middle" fill="#fff" font-size="11">পালি-প্রাকৃত</text>
+              <rect x="10" y="100" width="120" height="28" rx="8" fill="#c97a1b"/><text x="70" y="118" text-anchor="middle" fill="#fff" font-size="11">অপভ্রংশ</text>
+              <rect x="155" y="70" width="140" height="34" rx="10" fill="#fff7df" stroke="#ffbd57" stroke-width="2"/><text x="225" y="85" text-anchor="middle" fill="#4a1f05" font-size="11" font-weight="800">চর্যাপদের ভাষা</text><text x="225" y="97" text-anchor="middle" fill="#6e5a46" font-size="9">সন্ধ্যা-ভাষা</text>
+              <line x1="130" y1="24" x2="155" y2="87" stroke="#4a1f05" stroke-width="1.5"/><line x1="130" y1="69" x2="155" y2="87" stroke="#4a1f05" stroke-width="1.5"/><line x1="130" y1="114" x2="155" y2="87" stroke="#4a1f05" stroke-width="1.5"/>
+              <rect x="315" y="42" width="95" height="22" rx="8" fill="#e7f4ee" stroke="#b9d5c2"/><text x="362" y="56" text-anchor="middle" fill="#123f39" font-size="9" font-weight="700">আধুনিক বাংলা</text>
+              <rect x="315" y="70" width="95" height="22" rx="8" fill="#e7f4ee" stroke="#b9d5c2"/><text x="362" y="84" text-anchor="middle" fill="#123f39" font-size="9">অসমিয়া/ওড়িয়া</text>
+              <rect x="315" y="98" width="95" height="22" rx="8" fill="#e7f4ee" stroke="#b9d5c2"/><text x="362" y="112" text-anchor="middle" fill="#123f39" font-size="9">মৈথিলী</text>
+              <line x1="295" y1="87" x2="315" y2="53" stroke="#123f39" stroke-width="1.2"/><line x1="295" y1="87" x2="315" y2="81" stroke="#123f39" stroke-width="1.2"/><line x1="295" y1="87" x2="315" y2="109" stroke="#123f39" stroke-width="1.2"/>
+            </svg>
+            <small style="color:#8a7a60; font-size:11px">গাছ দেখে বোঝো: চর্যাপদ থেকে বাংলার জন্ম! উৎস: Sen, Charyagiti; Shahidullah</small>
+          </div>
+        </div>
+      </div>
+      <div class="grid4" style="margin-top:10px">
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; text-align:center"><div style="font-size:22px">📜</div><b>47 পদ</b><br><small>24 জন লুইপা, কাহ্নপা, ভুসুকুপা…</small></div>
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; text-align:center"><div style="font-size:22px">🎵</div><b>রাগে গাওয়া</b><br><small>পটমঞ্জরী, গবড়া, দেবক্রী…</small></div>
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; text-align:center"><div style="font-size:22px">🏛️</div><b>১৯০৭</b><br><small>নেপাল থেকে হরপ্রসাদ</small></div>
+        <div style="background:#4a1f05; color:#ffe7bb; border-radius:12px; padding:10px; text-align:center"><div style="font-size:22px">🧩</div><b style="color:#ffe7bb">সন্ধ্যা-ভাষা</b><br><small style="color:#ffe7bb">দুই অর্থ — বাইরে/ভিতরে</small></div>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:10px; margin-top:12px">
+      <div class="level"><b>🌱 প্রাইমারি</b><small>ছবি + গান<br>“আলি কালি” কী?</small><br><span class="badge gold">৬+ বছর</span></div>
+      <div class="level"><b>🌿 মাধ্যমিক</b><small>শব্দ + বাক্য<br>চর্যাপদ → বাংলা</small><br><span class="badge">১২+ বছর</span></div>
+      <div class="level"><b>🌳 উচ্চ</b><small>গ্রামার + সন্ধ্যা-ভাষা</small><br><span class="badge">১৬+ বছর</span></div>
+      <div class="level" style="background:#4a1f05; color:#ffe7bb"><b style="color:#ffe7bb">🔬 গবেষণা</b><small style="color:#ffe7bb">পুঁথি, টীকা, তুলনা</small><br><span class="badge" style="background:#ffe7bb; color:#4a1f05">পুঁথি পড়া</span></div>
+    </div>
+  </section>
+
+  <!-- লিপি -->
+  <section id="lipi" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">🔤 লিপি — তখনকার বাংলা হরফ কেমন ছিল?</h2>
+    <p style="margin:0 0 10px; color:#6e5a46; font-size:13px">চর্যাপদের পুঁথি <b>প্রাচীন বাংলা লিপি</b>তে (ব্রাহ্মী → গৌড়ীয়) লেখা — আজকের বাংলা হরফের দাদা! নিচে 5টি হরফ তুলনা — চাপলে স্ট্রোক দেখাবে।</p>
+    <table>
+      <thead><tr><th>ধ্বনি</th><th>প্রাচীন বাংলা (চর্যা)</th><th>আজকের বাংলা</th><th>রোমান</th><th>মনে রাখা</th><th>দেখো</th></tr></thead>
+      <tbody>
+        <tr><td><b>ক</b></td><td style="font-size:20px">ক</td><td>ক</td><td>ka</td><td>কা-আ → কাহ্নপা</td><td><button class="kbd" onclick="showLipi('ka')">🔍</button></td></tr>
+        <tr><td><b>ভ</b></td><td style="font-size:20px">ভ</td><td>ভ</td><td>bha</td><td>ভুসুকু</td><td><button class="kbd" onclick="showLipi('bha')">🔍</button></td></tr>
+        <tr><td><b>চ</b></td><td style="font-size:20px">চ</td><td>চ</td><td>ca</td><td>চর্যাপদ</td><td><button class="kbd" onclick="showLipi('ca')">🔍</button></td></tr>
+        <tr><td><b>ট</b></td><td style="font-size:20px">ট</td><td>ট</td><td>ṭa</td><td>টালত (টিলা)</td><td><button class="kbd" onclick="showLipi('ta')">🔍</button></td></tr>
+        <tr><td><b>অ</b></td><td style="font-size:20px">অ</td><td>অ</td><td>a</td><td>অলি (ভ্রমর)</td><td><button class="kbd">🔍</button></td></tr>
+        <tr><td><b>ং</b></td><td style="font-size:20px">ং</td><td>ং</td><td>ṃ</td><td>চর্যাগীতি</td><td><button class="kbd">🔍</button></td></tr>
+      </tbody>
+    </table>
+    <div style="background:#fff7df; border:1px solid #ffbd57; border-radius:10px; padding:8px 10px; font-size:11px; color:#6e5a46; margin-top:8px">💡 তফাৎ: তখনকার <b>ভ</b> এর মাত্রা লম্বা, <b>ক</b> এর পেট বড় — হাতে তালপাতায় লেখার জন্য! নিচে ক্যানভাসে আঁকো।</div>
+  </section>
+
+  <!-- লেখা -->
+  <section id="lekha" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">✍️ লেখা (Lekha) — হাতে চর্যাপদের হরফ</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🖌️ ক্যানভাস — প্রাচীন বাংলা হরফ লেখো</h3>
+        <p style="margin:0 0 8px; font-size:12px; color:#6e5a46">নমুনা দেখে নিচে নকল করো — আঙুল/মাউস, PNG ডাউনলোড</p>
+        <div style="background:#fffaf0; border:1px dashed #ead6b8; border-radius:10px; padding:6px 8px; display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px">
+          <button class="kbd" onclick="setSampleCh('alu')">অলি</button><button class="kbd" onclick="setSampleCh('caryā')">চর্যা</button><button class="kbd" onclick="setSampleCh('bhusuku')">ভুসুকু</button><button class="kbd" onclick="setSampleCh('tila')">টালত</button>
+          <span id="chSample" style="margin-left:auto; font-weight:900; color:#4a1f05">অলি → নকল করো</span>
+        </div>
+        <div class="canvas-wrap"><canvas id="chCanvas" width="900" height="300"></canvas></div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px">
+          <button class="kbd" onclick="clearCh()">🧹 মুছো</button><button class="kbd" onclick="downloadCh()">💾 PNG</button>
+          <label style="font-size:12px">রং <input type="color" id="chColor" value="#4a1f05"></label>
+          <label style="font-size:12px">মোটা <input type="range" id="chSize" min="2" max="18" value="7"></label>
+        </div>
+      </div>
+      <div class="card" style="background: linear-gradient(180deg,#fff,#fff7df)">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🎨 স্ট্রোক — হাত ঘুরাও</h3>
+        <p style="margin:0 0 8px; font-size:12px; color:#6e5a46">বাটন চাপো → SVG তে অ্যানিমেশন</p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap">
+          <button class="kbd" data-ch="ক" onclick="showLipi('ka')" style="font-size:18px; min-width:44px; height:44px">ক</button>
+          <button class="kbd" data-ch="ভ" onclick="showLipi('bha')" style="font-size:18px; min-width:44px; height:44px">ভ</button>
+          <button class="kbd" data-ch="চ" onclick="showLipi('ca')" style="font-size:18px; min-width:44px; height:44px">চ</button>
+          <button class="kbd" data-ch="ট" onclick="showLipi('ta')" style="font-size:18px; min-width:44px; height:44px">ট</button>
+        </div>
+        <div style="margin-top:10px; background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; display:flex; gap:12px; align-items:center">
+          <svg id="chStrokeSvg" viewBox="0 0 200 200" width="110" height="110" style="border:1px dashed #ead6b8; border-radius:10px; background:#fffaf0"><text id="chStrokeText" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="64" fill="#8f3d08">ক</text><path id="chStrokePath" d="" fill="none" stroke="#8f3d08" stroke-width="6" stroke-linecap="round"/></svg>
+          <div><b id="chStrokeName" style="color:#4a1f05">ক (ka)</b><br><small style="color:#6e5a46">1) দাঁড়ি → 2) পেট → 3) মাত্রা<br>তালপাতায় বাঁশের কলমে!</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- বলা -->
+  <section id="bola" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">🗣️ বলা (Bola) — মুখে চর্যাপদ</h2>
+    <p style="margin:0 0 10px; color:#6e5a46; font-size:13px">চর্যাপদ <b>গান</b> — রাগে (সুরে) গাওয়া হতো। নিচে 2টি ছোট লাইন: চর্যাপদের ভাষা → আজকের বাংলা → মানে → 🔊 শোনো-বলো</p>
+    <div class="grid2">
+      <div class="card" style="border-color:#ffbd57; background:#fff">
+        <span class="badge gold">পদ 1 — লুইপা</span> <span class="badge">রাগ পটমঞ্জরী</span>
+        <div style="background:#fff7df; border:1px solid #ffbd57; border-radius:10px; padding:10px; margin:8px 0; font-size:14px; font-weight:800; color:#4a1f05">কা-আ তরুবর পঞ্চ বি ডাল<br>চঞ্চল চীএ পইঠো কাল</div>
+        <small style="color:#6e5a46"><b>আজকের বাংলা:</b> শরীর গাছ, পাঁচটি ডাল, চঞ্চল মনে কাল ঢোকে।<br><b>মানে:</b> দেহ-গাছে 5 ইন্দ্রিয় — মন চঞ্চল হলে মৃত্যু আসে।</small>
+        <div style="display:flex; gap:8px; margin-top:8px"><button class="kbd" onclick="speakCh('কা আ তরুবর পঞ্চ বি ডাল')">🔊 চর্যায় শোনো</button><button class="kbd" onclick="speakCh('শরীর গাছ পাঁচটি ডাল')">🔊 বাংলায়</button></div>
+      </div>
+      <div class="card">
+        <span class="badge gold">পদ 6 — ভুসুকুপা</span> <span class="badge">“বাঙালি” শব্দ!</span>
+        <div style="background:#e7f4ee; border:1px solid #b9d5c2; border-radius:10px; padding:10px; margin:8px 0; font-size:14px; font-weight:800; color:#123f39">আজি ভুসুকু বঙ্গালী ভইলী<br>নিঅ ঘরিণী চণ্ডালে লেলী</div>
+        <small style="color:#6e5a46"><b>আজকের বাংলা:</b> আজ ভুসুকু বাঙালি হলো, নিজের বউ চণ্ডালে নিল।<br><b>মানে:</b> সাধক সংসারে ফিরল — মজায় গোপন সাধনার কথা!</small>
+        <div style="display:flex; gap:8px; margin-top:8px"><button class="kbd" onclick="speakCh('আজি ভুসুকু বাঙালি ভইলী')">🔊 শোনো</button><span class="badge saffron">১ম “বাঙালি”!</span></div>
+      </div>
+    </div>
+    <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px; margin-top:10px; font-size:13px">
+      <b style="color:#4a1f05">🎤 কীভাবে বলবে? (3 ধাপ)</b><br>
+      1) <span class="kbd">🔊</span> চাপো → শোনো → 2) থামো → মুখে বলো → 3) বাবা-মাকে শোনাও!<br>
+      <small style="color:#8a7a60">উচ্চারণ: <code>কা-আ = কায়া (শরীর)</code>, <code>চীএ = চিত্তে (মনে)</code> — “এ” টান দাও।</small>
+    </div>
+  </section>
+
+  <!-- দেখা -->
+  <section id="dekha" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">👀 দেখা (Dekha) — চোখে পুঁথি, পাথর, তালপাতা</h2>
+    <div class="card" style="background: linear-gradient(135deg,#fff,#fff7df)">
+      <h3 style="margin:0 0 6px; color:#4a1f05">🏛️ আসল পুঁথি দেখো — 3 ছবি</h3>
+      <div class="grid3">
+        <figure style="margin:0; background:#fff; border:1px solid #ead6b8; border-radius:12px; overflow:hidden"><div style="height:120px; display:grid; place-items:center; background: linear-gradient(135deg,#fff7df,#e7f4ee); font-size:28px">📜</div><figcaption style="padding:8px 10px; font-size:11px; color:#6e5a46"><b>তালপাতার পুঁথি</b> — নেপাল রাজদরবার, ১৯০৭<br><small>হরপ্রসাদ শাস্ত্রী খুঁজে আনেন</small><br><a href="library.html" style="font-size:11px; font-weight:800; color:#8f3d08">Library → পুঁথি</a></figcaption></figure>
+        <figure style="margin:0; background:#fff; border:1px solid #ead6b8; border-radius:12px; overflow:hidden"><div style="height:120px; display:grid; place-items:center; background:#fff7df; font-size:22px">কা আ তরুবর…</div><figcaption style="padding:8px 10px; font-size:11px; color:#6e5a46"><b>প্রাচীন লিপি</b> — কালি + বাঁশের কলম<br><small>আজকের বাংলা থেকে আলাদা</small></figcaption></figure>
+        <figure style="margin:0; background:#fff; border:1px solid #ead6b8; border-radius:12px; overflow:hidden"><div style="height:120px; display:grid; place-items:center; background:#e7f4ee; font-size:24px">🎵</div><figcaption style="padding:8px 10px; font-size:11px; color:#6e5a46"><b>রাগ লেখা</b> — “পটমঞ্জরী”<br><small>গানের সুরের নাম পুঁথিতেই!</small></figcaption></figure>
+      </div>
+      <div style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:10px; margin-top:10px; font-size:13px">
+        <b style="color:#4a1f05">🔍 গবেষকের চোখে দেখা:</b> পুঁথিতে <code>কা আ</code> = <b>কায়া</b>, <code>চীএ</code> = <b>চিত্তে</b> — মাত্রা দেখে পড়ো!<br>
+        <small style="color:#8a7a60">উৎস: Sen, Charyagiti Kosha; Kværne — পূর্ণ পাঠ library.html</small>
+      </div>
+    </div>
+    <div class="grid3" style="margin-top:10px">
+      <div class="card"><b>🧒 শিশুর চোখে</b><br><small>ছবিতে “ক” খুঁজি — গোল করো! প্রিন্টে লাল দাগ।</small><br><span class="badge gold">5 মি খেলা</span></div>
+      <div class="card"><b>📚 পড়ার ক্রম</b><br><small>1) ভুসুকু (বাঙালি) → 2) লুইপা (গাছ) → 3) কাহ্নপা → 4) সব 47</small></div>
+      <div class="card"><b>🔬 টুল</b><br><small>পুঁথি zoom, অভিধান, Sen vs Shahidullah তুলনা</small><br><a href="library.html" style="font-size:11px; font-weight:800; color:#8f3d08">Library →</a></div>
+    </div>
+  </section>
+
+  <!-- শোনা -->
+  <section id="sona" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">🎧 শোনা (Sona) — কানে চর্যাপদ, সুরে সুরে</h2>
+    <p style="margin:0 0 10px; color:#6e5a46; font-size:13px">চর্যাপদ <b>গান</b> — প্রতিটি পদে রাগ লেখা আছে (পটমঞ্জরী, মল্লারী)। নিচে 2টি শোনা + নিজে গাও!</p>
+
+    <div class="grid2">
+      <div class="card">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🎵 পদ 1 — লুইপা (পটমঞ্জরী রাগ)</h3>
+        <div class="audio-bar">
+          <button class="kbd" id="play1" onclick="toggleAudio(1)" style="background:#4a1f05; color:#ffe7bb; border-color:#4a1f05">▶️ শোনো</button>
+          <span style="font-size:13px; font-weight:800; color:#4a1f05">কা-আ তরুবর পঞ্চ বি ডাল</span>
+          <small style="margin-left:auto; color:#6e5a46">0:00 / 0:32</small>
+        </div>
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:8px 10px; font-size:12px; color:#6e5a46">
+          <b>সুর:</b> ধীরে, দোলায় — “পটমঞ্জরী” মানে ফুলের মঞ্জরীর মতো!<br>
+          <small>🔊 = TTS demo (বাংলা কণ্ঠে চর্যাপদ); আসল গান: মঠ/শিল্পীর গাওয়া YouTube — Library.html লিংক</small>
+        </div>
+        <div style="display:flex; gap:8px; margin-top:8px"><button class="kbd" onclick="speakCh('কা আ তরুবর পঞ্চ বি ডাল চঞ্চল চীএ পইঠো কাল')">🔊 চর্যায়</button><button class="kbd" onclick="speakCh('শরীর গাছ পাঁচ ডাল চঞ্চল মনে কাল')">🔊 বাংলায়</button><span class="badge gold">গাও → রেকর্ড নয়, মুখে!</span></div>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🎤 নিজে গাও — 3 ধাপ</h3>
+        <ol style="margin:0 0 0 18px; font-size:13px; line-height:1.9">
+          <li><b>শোনো</b> — ▶️ চাপো, 2বার শোনো</li>
+          <li><b>থামো-বলো</b> — এক লাইন শোনো, থামাও, মুখে বলো</li>
+          <li><b>গাও</b> — সুরে (“আ-আ-আ” টানে) গাও, বাবা-মাকে শোনাও</li>
+        </ol>
+        <div style="background:#e7f4ee; border:1px solid #b9d5c2; border-radius:10px; padding:8px 10px; font-size:12px; margin-top:8px">
+          <b>🎼 রাগ কী?</b> গানের সুরের নাম — চর্যাপদে 20+ রাগ লেখা আছে!<br>
+          <small>পটমঞ্জরী = ফুল, মল্লারী = মেঘ — সুরে বোঝায়!</small>
+        </div>
+        <details style="margin-top:8px"><summary>আসল গান কোথায়?</summary><p style="font-size:13px">Library.html → Charyapada Audio: নির্মলেন্দু চৌধুরী, মঠের chant — YouTube যাচাইকৃত লিংক। এখানে demo TTS, কপি নয়।</p></details>
+      </div>
+    </div>
+    <div style="background:#fff7df; border:1px solid #ffbd57; border-radius:10px; padding:8px 10px; font-size:12px; color:#6e5a46; margin-top:10px">💡 <b>সন্ধ্যা-ভাষা শোনা:</b> বাইরে গাছের গান, ভিতরে দেহের কথা — দুই মানে একসাথে শোনো!</div>
+  </section>
+
+  <!-- গ্রামার -->
+  <section id="grammar" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">📚 গ্রামার — সহজে, ছবিতে</h2>
+    <div class="grid3">
+      <details open><summary>🌱 প্রাইমারি (6–10)</summary><p style="font-size:13px"><b>শব্দ:</b> <code>তরুবর (গাছ) — ডাল — চীএ (মনে)</code><br>খেলা: ছবি → শব্দ মিলাও!<br>বাক্য: <b>কা-আ = কায়া (শরীর)</b></p><div style="background:#fff7df; border:1px solid #ffbd57; border-radius:10px; padding:6px; font-size:12px">🎨 👤 কা-আ → 🌳 তরুবর = শরীর গাছ</div></details>
+      <details open><summary>🌿 মাধ্যমিক (11–16)</summary><p style="font-size:13px"><b>বিভক্তি:</b> <code>-এ = এ/তে (চীএ = চিত্তে)</code><br><code>-অ = অ (কাহ্ন = কাহ্ন)</code><br>ছবি: 📍 “এ” = ভিতরে</p><table style="font-size:12px"><tr><th>চর্যা</th><th>বাংলা</th><th>মানে</th></tr><tr><td>কা-আ</td><td>কায়া</td><td>শরীর</td></tr><tr><td>চীএ</td><td>চিত্তে</td><td>মনে</td></tr><tr><td>পইঠো</td><td>পৈঠ (ঢোকে)</td><td>প্রবেশ</td></tr></table></details>
+      <details open><summary>🌳 উচ্চ + গবেষণা</summary><p style="font-size:13px"><b>সন্ধ্যা-ভাষা:</b> <code>টালত (টিলা) = শূন্যতা</code><br><code>ঘর = দেহ</code><br>সূত্র: Shahidullah, Charyapada — টীকা সহ</p><a href="#practice" style="font-size:11px; font-weight:800; color:#8f3d08">PDF →</a></details>
+    </div>
+    <div class="card" style="margin-top:12px; background: linear-gradient(135deg,#fff,#e7f4ee)">
+      <h3 style="margin:0 0 6px; color:#4a1f05">🧩 গ্রামার কুইজ — 1 মিনিটে!</h3>
+      <div id="gQuiz"></div>
+    </div>
+  </section>
+
+  <!-- পদ পড়ি -->
+  <section id="pada" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">📖 পদ পড়ি — 5টি জনপ্রিয় পদ</h2>
+    <p style="margin:0 0 10px; color:#6e5a46; font-size:13px">চর্যাপদের ভাষা → আজকের বাংলা → ভিতরের মানে → 🔊 শোনো — ট্যাবে বদলাও</p>
+
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px">
+      <button class="kbd" style="background:#4a1f05; color:#ffe7bb; border-color:#4a1f05" onclick="showPada(0)">1 লুইপা</button>
+      <button class="kbd" onclick="showPada(1)">6 ভুসুকু</button>
+      <button class="kbd" onclick="showPada(2)">2 কুক্কুরী</button>
+      <button class="kbd" onclick="showPada(3)">10 কাহ্নপা</button>
+      <button class="kbd" onclick="showPada(4)">28 শবরপা</button>
+    </div>
+
+    <div id="padaBox"></div>
+  </section>
+
+  <!-- প্র্যাকটিস -->
+  <section id="practice" class="section">
+    <h2 style="color:#4a1f05; margin:0 0 8px">🎯 প্র্যাকটিস — খেলা, কুইজ, প্রিন্ট</h2>
+    <div class="grid3">
+      <div class="card" style="background:#fff7df; border-color:#ffbd57">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🧩 চর্যা-বাংলা ম্যাচ</h3>
+        <div id="chMatch" style="display:grid; grid-template-columns:1fr 1fr; gap:6px"></div>
+        <p id="chFeedback" style="min-height:22px; font-size:12px; font-weight:800; color:#2e7d32; margin:6px 0 0"></p>
+        <button class="kbd" onclick="initChMatch()" style="margin-top:6px">🔀 নতুন</button>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 6px; color:#4a1f05">📊 আমার অগ্রগতি</h3>
+        <div style="font-size:12px; color:#6e5a46">লেখা <div class="progress-out"><div class="progress-in" id="pLekha" style="width:14%"></div></div></div>
+        <div style="font-size:12px; color:#6e5a46; margin-top:6px">বলা <div class="progress-out"><div class="progress-in" id="pBola" style="width:10%"></div></div></div>
+        <div style="font-size:12px; color:#6e5a46; margin-top:6px">শোনা <div class="progress-out"><div class="progress-in" id="pSona" style="width:8%"></div></div></div>
+        <p style="font-size:11px; color:#8a7a60; margin:8px 0 0">XP: <b id="chXP">0</b> · সব local — <button class="kbd" onclick="resetCh()">রিসেট</button></p>
+      </div>
+      <div class="card" style="background: linear-gradient(180deg,#fff,#e7f4ee)">
+        <h3 style="margin:0 0 6px; color:#4a1f05">🖨️ প্রিন্ট শিট (A4)</h3>
+        <ul style="margin:0 0 0 18px; font-size:13px; line-height:1.9">
+          <li><a href="#" onclick="window.print(); return false" style="color:#8f3d08; font-weight:800">চর্যার 20 হরফ — ডট-লাইন</a> <span class="badge gold">প্রাইমারি</span></li>
+          <li><a href="#" onclick="window.print(); return false" style="color:#8f3d08; font-weight:800">5 পদ — চর্যা+বাংলা</a> <span class="badge">মাধ্যমিক</span></li>
+          <li><a href="#" onclick="window.print(); return false" style="color:#8f3d08; font-weight:800">সন্ধ্যা-ভাষা — 2 মানে</a></li>
+          <li><a href="#" onclick="window.print(); return false" style="color:#8f3d08; font-weight:800">রাগ+তাল শিট</a></li>
+        </ul>
+        <p style="font-size:11px; color:#8a7a60; margin:8px 0 0">Ctrl+P → Actual size → প্রিন্ট!</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3 style="margin:0 0 6px; color:#4a1f05">📚 আরও পড়ো — গবেষণা</h3>
+      <div class="grid3" style="font-size:12px; line-height:1.8">
+        <div><b>চর্যাপদ বই:</b><br>• হরপ্রসাদ, চর্যাচর্য্যবিনিশ্চয় (1916)<br>• সুনীতিকুমার, Origin & Development<br>• শহীদুল্লাহ, Buddhist Mystic Songs<br>• Sen, Charyagiti</div>
+        <div><b>ভাষা:</b><br>• Chatterji, ODBL<br>• Shahidullah, Les Chants Mystiques<br>• Kværne, Sahaja<br>• পুঁথি: Cambridge, Nepal</div>
+        <div><b>গান/রাগ:</b><br>• Deben Bhattacharya, Charya Songs<br>• Library → Audio<br><a href="pali-learning.html" style="font-weight:800; color:#8f3d08">পালি শেখো →</a> <a href="knowledge.html" style="font-weight:800; color:#8f3d08">জ্ঞানকোষ →</a></div>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin:16px 0"><a href="index.html" style="background:#4a1f05; color:#ffe7bb; padding:10px 16px; border-radius:999px; font-weight:800; text-decoration:none">← হোম</a> <a href="pali-learning.html" style="background:#fff; border:1px solid #ead6b8; padding:10px 16px; border-radius:999px; font-weight:800; text-decoration:none; color:#4a1f05">পালি শেখো →</a> <a href="children.html" style="background:#fff; border:1px solid #ead6b8; padding:10px 16px; border-radius:999px; font-weight:800; text-decoration:none; color:#4a1f05">শিশু বিভাগ →</a></p>
+    <p style="text-align:center; font-size:11px; color:#8a7a60">ভুল থাকলে: contribution.html → “চর্যাপদ” ট্যাগ | উৎস: Haraprasad 1916, Sen, Shahidullah — CC ছবি Wikimedia Commons</p>
+  </section>
+</main>
+
+<footer class="cb-footer" id="cbFooter"></footer>
+<script src="brand.js?v=20261031c" defer></script>
+<script>
+function speakCh(text){
+  try{ var u=new SpeechSynthesisUtterance(text); u.lang='bn-BD'; u.rate=0.85; speechSynthesis.cancel(); speechSynthesis.speak(u); }catch(_){ alert('🔊 '+text); }
+}
+function showLipi(id){
+  var map={ka:'ক (ka) — কাহ্নপা', bha:'ভ (bha) — ভুসুকু', ca:'চ (ca) — চর্যা', ta:'ট (ṭa) — টালত'};
+  document.getElementById('chStrokeName').textContent = map[id] || id;
+  var chars={ka:'ক',bha:'ভ',ca:'চ',ta:'ট'};
+  document.getElementById('chStrokeText').textContent = chars[id] || 'ক';
+  var p=document.getElementById('chStrokePath');
+  p.setAttribute('d','M 40 60 Q 100 20 140 80 T 120 150');
+  p.style.strokeDasharray='400'; p.style.strokeDashoffset='400'; p.getBoundingClientRect(); p.style.transition='stroke-dashoffset 1.1s ease'; p.style.strokeDashoffset='0';
+  addXP(2,'লিপি দেখা');
+}
+function setSampleCh(id){
+  var map={alu:'অলি → নকল করো', caryā:'চর্যা → নকল করো', bhusuku:'ভুসুকু → নকল করো', tila:'টালত → নকল করো'};
+  document.getElementById('chSample').textContent = map[id] || id;
+}
+var audioOn=false;
+function toggleAudio(n){
+  var btn=document.getElementById('play'+n);
+  if(!audioOn){ audioOn=true; btn.textContent='⏸️ থামাও'; btn.style.background='#b65d4c'; speakCh('কা আ তরুবর পঞ্চ বি ডাল চঞ্চল চীএ পইঠো কাল'); setTimeout(function(){ audioOn=false; btn.textContent='▶️ শোনো'; btn.style.background='#4a1f05'; }, 3500); addXP(5,'শোনা'); }
+  else { speechSynthesis.cancel(); audioOn=false; btn.textContent='▶️ শোনো'; btn.style.background='#4a1f05'; }
+}
+// Canvas Charyapada
+(function(){
+  var c=document.getElementById('chCanvas'), ctx=c.getContext('2d');
+  var drawing=false, last=null;
+  function pos(e){ var r=c.getBoundingClientRect(); var t=e.touches? e.touches[0]:e; return {x:(t.clientX-r.left)*(c.width/r.width), y:(t.clientY-r.top)*(c.height/r.height)}; }
+  function start(e){ e.preventDefault(); drawing=true; last=pos(e); }
+  function move(e){ if(!drawing) return; e.preventDefault(); var p=pos(e); ctx.strokeStyle=document.getElementById('chColor').value; ctx.lineWidth=document.getElementById('chSize').value; ctx.lineCap='round'; ctx.lineJoin='round'; ctx.beginPath(); ctx.moveTo(last.x,last.y); ctx.lineTo(p.x,p.y); ctx.stroke(); last=p; }
+  function end(){ drawing=false; }
+  c.addEventListener('mousedown', start); c.addEventListener('mousemove', move); window.addEventListener('mouseup', end);
+  c.addEventListener('touchstart', start, {passive:false}); c.addEventListener('touchmove', move, {passive:false}); c.addEventListener('touchend', end);
+  window.clearCh=function(){ ctx.clearRect(0,0,c.width,c.height); };
+  window.downloadCh=function(){ var a=document.createElement('a'); a.download='charyapada-lekha.png'; a.href=c.toDataURL('image/png'); a.click(); addXP(5,'লেখা'); };
+})();
+
+// Pada data
+var padas=[
+  {title:'পদ 1 — লুইপা · পটমঞ্জরী', orig:'কা-আ তরুবর পঞ্চ বি ডাল<br>চঞ্চল চীএ পইঠো কাল', bn:'শরীর গাছ, পাঁচটি ডাল, চঞ্চল মনে কাল ঢোকে।', inside:'দেহ-গাছে 5 ইন্দ্রিয় — মন চঞ্চল হলে মৃত্যু। সাধনায় মন স্থির করো।', exp:'প্রাইমারি: 🌳 গাছ = শরীর, 🖐️ 5 ডাল = 5 ইন্দ্রিয় — ছবি আঁকো!'},
+  {title:'পদ 6 — ভুসুকুপা · “বাঙালি”', orig:'আজি ভুসুকু বঙ্গালী ভইলী<br>নিঅ ঘরিণী চণ্ডালে লেলী', bn:'আজ ভুসুকু বাঙালি হলো, নিজের বউ চণ্ডালে নিল।', inside:'সাধক সংসারে ফিরল — মজায় গোপন সাধনার কথা। ১ম “বঙ্গালী” শব্দ!', exp:'ইতিহাস: বাংলার নাম প্রথম এখানে!'},
+  {title:'পদ 2 — কুক্কুরীপা', orig:'দুলি দুহি পিটা ধরণ ন জাই<br>রুখের তেন্তলি কুম্ভীরে খাঅ', bn:'দোহা দোহা পেট ভরে না, গাছের তেঁতুল কুমিরে খায়।', inside:'অসম্ভবের ছবি — সন্ধ্যা-ভাষায় মনের উল্টো চলা।', exp:'মজা: 🐊 কুমির তেঁতুল খায়! — অসম্ভব = সাধনার ধাঁধা'},
+  {title:'পদ 10 — কাহ্নপা', orig:'নগর বাহিরে ডোম্বি তোহরি কুড়িআ<br>ছোই ছোই জাইসি বাম্হ নাড়িআ', bn:'নগরের বাইরে ডোম্বীর কুঁড়ে, ছুঁলে বামুন পালায়।', inside:'সমাজের বাইরে জ্ঞান — জাতভেদ ভাঙা, সহজ সাধনা।', exp:'সমাজ: বামুন vs ডোম্বী — সমতার গান'},
+  {title:'পদ 28 — শবরপা', orig:'উঞ্চা উঞ্চা পাবত তহিঁ বসই সবরী বালী<br>মোরঙ্গি পীচ্ছ পরহিণ সবরী গীবত গুঞ্জরী মালী', bn:'উঁচু পাহাড়ে শবরী বালিকা, ময়ূর পালকে গুঞ্জা মালা।', inside:'পাহাড়ে মুক্ত জীবন — প্রকৃতি + সাধনা এক।', exp:'প্রকৃতি: 🦚 ময়ূর পালক + 📿 গুঞ্জা মালা — ছবি আঁকো!'},
+];
+function showPada(i){
+  var p=padas[i];
+  var box=document.getElementById('padaBox');
+  box.innerHTML=
+    '<article class="pada"><div class="pada-head"><span class="badge saffron">'+p.title+'</span><button class="kbd" onclick="speakCh(\''+p.orig.replace(/<br>/g,' ')+'\')">🔊 চর্যায় শোনো</button><button class="kbd" onclick="speakCh(\''+p.bn+'\')">🔊 বাংলায়</button></div>'+
+    '<div class="pada-body"><div class="orig">'+p.orig+'</div><p><b style="color:#4a1f05">আজকের বাংলা:</b> '+p.bn+'</p><p style="background:#e7f4ee; border:1px solid #b9d5c2; border-radius:10px; padding:8px 10px"><b>ভিতরের মানে (সন্ধ্যা-ভাষা):</b> '+p.inside+'</p><p style="background:#fff7df; border:1px solid #ffbd57; border-radius:10px; padding:8px 10px">🎨 '+p.exp+'</p></div></article>';
+  document.querySelectorAll('[onclick^="showPada"]').forEach((b,idx)=>{ b.style.background= idx===i ? '#4a1f05':'#fff7df'; b.style.color= idx===i ? '#ffe7bb':'#4a1f05'; b.style.borderColor= idx===i ? '#4a1f05':'#f0debf'; });
+}
+showPada(0);
+
+// Grammar quiz
+var gQuiz=[
+  {q:'“কা-আ” = ?', opts:['গাছ','শরীর (কায়া)','নদী'], a:1, exp:'কা-আ = কায়া = শরীর — লুইপা 1'},
+  {q:'“বঙ্গালী” শব্দ প্রথম কোথায়?', opts:['চর্যাপদ 6','মহাভারত','রামায়ণ'], a:0, exp:'ভুসুকুপা পদ 6 — “আজি ভুসুকু বঙ্গালী ভইলী”'},
+  {q:'সন্ধ্যা-ভাষা কী?', opts:['সকালের ভাষা','দুই অর্থের গোপন ভাষা','ইংরেজি'], a:1, exp:'বাইরে এক, ভিতরে আরেক — সাধনার গোপন কথা'},
+];
+var gIdx=0;
+function renderG(){
+  var box=document.getElementById('gQuiz');
+  if(!box) return;
+  var q=gQuiz[gIdx];
+  box.innerHTML='<b>'+(gIdx+1)+'. '+q.q+'</b><div id="gOpts"></div><p id="gExp" style="font-size:13px; color:#6e5a46; min-height:22px"></p><button class="kbd" id="gNext" style="display:none">পরের প্রশ্ন →</button>';
+  q.opts.forEach((o,i)=>{
+    var b=document.createElement('button'); b.className='kbd'; b.textContent=o; b.style.display='block'; b.style.width='100%'; b.style.textAlign='left'; b.style.margin='6px 0'; b.style.padding='10px';
+    b.addEventListener('click', function(){
+      var ok=i===q.a; b.style.background= ok?'#e4f4e8':'#fff0eb'; b.style.borderColor= ok?'#75a987':'#b65d4c';
+      document.getElementById('gExp').textContent=(ok?'✅ ঠিক! ':'❌ ')+q.exp;
+      document.getElementById('gNext').style.display='inline-block';
+      if(ok) addXP(10,'গ্রামার');
+      Array.from(document.getElementById('gOpts').children).forEach(btn=>btn.disabled=true);
+    });
+    document.getElementById('gOpts').appendChild(b);
+  });
+  document.getElementById('gNext').addEventListener('click', function(){ gIdx=(gIdx+1)%gQuiz.length; renderG(); });
+}
+renderG();
+
+// Match game
+var pairs=[{ch:'কা-আ', bn:'শরীর'},{ch:'চীএ', bn:'মনে'},{ch:'তরুবর', bn:'গাছ'},{ch:'বঙ্গালী', bn:'বাঙালি'},{ch:'ডোম্বী', bn:'ডোম মেয়ে'},{ch:'সবরী', bn:'শবরী'}];
+var pick=null;
+function initChMatch(){
+  var grid=document.getElementById('chMatch'); grid.innerHTML=''; pick=null;
+  var left=pairs.map((x,i)=>({t:x.ch, k:i, type:'ch'})).sort(()=>Math.random()-.5);
+  var right=pairs.map((x,i)=>({t:x.bn, k:i, type:'bn'})).sort(()=>Math.random()-.5);
+  var all=left.concat(right).sort(()=>Math.random()-.5);
+  all.forEach(function(it){
+    var b=document.createElement('button'); b.textContent=it.t; b.dataset.k=it.k; b.dataset.type=it.type;
+    b.style.cssText='padding:8px; border:1px solid #ead6b8; background:#fff; border-radius:10px; cursor:pointer; font-weight:700; font-size:12px';
+    b.addEventListener('click', function(){
+      if(b.classList.contains('done')) return;
+      if(!pick){ pick=b; b.style.background='#fff7df'; b.style.borderColor='#ffbd57'; document.getElementById('chFeedback').textContent='জোড়া খোঁজো…'; }
+      else {
+        if(pick===b){ pick.style.background='#fff'; pick=null; return; }
+        if(pick.dataset.k===b.dataset.k && pick.dataset.type!==b.dataset.type){
+          pick.classList.add('done'); b.classList.add('done'); pick.style.background='#e4f4e8'; b.style.background='#e4f4e8';
+          document.getElementById('chFeedback').textContent='✅ ঠিক!'; addXP(8,'চর্যা ম্যাচ');
+          if(document.querySelectorAll('#chMatch .done').length===12){ document.getElementById('chFeedback').textContent='🎉 সব মিলেছে!'; addXP(20,'সব মিল'); }
+        } else { document.getElementById('chFeedback').textContent='❌ আবার'; pick.style.background='#fff'; b.style.background='#fff0eb'; setTimeout(()=>b.style.background='#fff',600); }
+        pick=null;
+      }
+    });
+    grid.appendChild(b);
+  });
+  document.getElementById('chFeedback').textContent='চর্যা → বাংলা মিলাও';
+}
+initChMatch();
+var XP_KEY='chXP', xp=parseInt(localStorage.getItem(XP_KEY)||'0',10);
+function addXP(n, why){
+  xp+=n; localStorage.setItem(XP_KEY, String(xp)); document.getElementById('chXP').textContent=xp;
+  ['pLekha','pBola','pSona'].forEach(id=>{ var e=document.getElementById(id); if(e) e.style.width=Math.min(100, xp/2)+'%'; });
+}
+document.getElementById('chXP').textContent=xp;
+function resetCh(){ localStorage.removeItem(XP_KEY); xp=0; document.getElementById('chXP').textContent='0'; ['pLekha','pBola','pSona'].forEach(id=>{ var e=document.getElementById(id); if(e) e.style.width='8%'; }); }
+document.querySelectorAll('.tabs a').forEach(a=>{ a.addEventListener('click', function(){ document.querySelectorAll('.tabs a').forEach(x=>x.classList.remove('active')); this.classList.add('active'); }); });
+</script>
+</body>
+</html>

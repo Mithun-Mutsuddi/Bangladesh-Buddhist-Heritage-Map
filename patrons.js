@@ -38,7 +38,7 @@
     const img = state.images[imgKey];
     if (!img || !img.image) return '';
     return `<figure><img src="${esc(img.image)}" alt="${esc(alt)}" loading="lazy" referrerpolicy="no-referrer"
-      onerror="if(this.parentElement){this.parentElement.innerHTML='<div class=&quot;noimg&quot;>ছবি লোড হয়নি</div>'}">
+      onerror="var i=this; if(!i.dataset.r){i.dataset.r=1; i.src=i.src+(i.src.includes("?")?"&":"?")+"retry=1";}else if(this.parentElement){this.parentElement.innerHTML='<div class=&quot;noimg&quot;>ছবি লোড হয়নি</div>'} " loading="lazy"
       <figcaption class="bv-credit">ছবি: ${esc(img.credit)} · ${esc(img.license)}${img.source ? ` · <a href="${esc(img.source)}" target="_blank" rel="noopener noreferrer">উৎস ↗</a>` : ''}</figcaption></figure>`;
   }
 
