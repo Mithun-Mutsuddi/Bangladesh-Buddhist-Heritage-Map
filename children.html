@@ -15,6 +15,7 @@
     <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="mega.css?v=20261024h">
 
+<style>#buddhist-fun{display:none} /* JS moves its cards to #games unified */</style>
 <style id="kids-triple-css">
 .kids-card-tabs{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 6px }
 .kids-card-tabs button{ padding:6px 10px; border-radius:999px; border:1px solid #ead6b8; background:#fff; font-weight:800; font-size:11px; cursor:pointer }
@@ -25,6 +26,8 @@
   .kids-game-layout, div[style*="grid-template-columns:1fr 1fr"]{ grid-template-columns:1fr !important }
   .kids-safety-bar{ flex-direction:column; align-items:stretch }
 }
+
+@keyframes kidsWheel{ from{transform:rotate(0)} to{transform:rotate(360deg)} }
 </style>
 
 <link rel="stylesheet" href="children.css?v=20261031b">
@@ -149,6 +152,16 @@
           </article>
         </div>
       </div>
+
+        <div style="margin-top:16px; border-top:2px dashed #ead6b8; padding-top:16px">
+          <h3 style="color:#4a1f05; margin:0 0 8px">🎉 নতুন — বৌদ্ধ ইন্টারঅ্যাকটিভ কর্নার (৪টি)</h3>
+          <p style="font-size:13px; color:#6e5a46; margin:0 0 12px">একই জায়গায় — triple tabs (🎮 খেলা · 📚 শেখা · 📊 তথ্য) সহ, কোনো ডাবল কন্টেন্ট নয় — সব মোবাইলে ১ কলামে।</p>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px">
+          <!-- moved from buddhist-fun: will be populated by JS via #buddhist-fun cards moved here -->
+          </div>
+          <div id="buddhist-fun-moved" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:12px"></div>
+        </div>
+
     </section>
 
     <section class="cb-section kids-section" id="archaeologist" aria-labelledby="archaeologyTitle">
@@ -158,7 +171,7 @@
         <p class="cb-sub">এখানে ছবি ও digital মাটি—বাস্তব স্থান নয়। প্রত্নতত্ত্ববিদ বস্তু শুধু বের করেন না; স্তর, অবস্থান, পরিমাপ ও নথিও সংরক্ষণ করেন।</p>
         <div class="arch-grid">
           <article class="arch-card time-card">
-            <div class="arch-preview"><img src="assets/children/somapura-reconstruction.jpg" alt="সোমপুর কেন্দ্রীয় মন্দিরের সম্ভাব্য রূপের শিক্ষামূলক digital illustration" width="800" height="588"></div>
+            <div class="arch-preview"><img src="assets/children/somapura-reconstruction.jpg" alt="সোমপুর কেন্দ্রীয় মন্দিরের সম্ভাব্য রূপের শিক্ষামূলক digital illustration" width="800" height="588" onerror="this.style.display='none'" ></div>
             <div class="arch-card-body">
               <span class="kids-chip">ক · টাইম ট্রাভেল slider</span>
               <h3>একই সোমপুর—দুটি দৃশ্য</h3>
@@ -169,7 +182,7 @@
           </article>
           <article class="arch-card dig-card">
             <div class="dig-stage" id="digStage">
-              <div class="dig-artifact"><img src="assets/photos/dalijhara-terracotta.jpg" alt="ডালিঝরা থেকে চিত্রিত টেরাকোটা ভাস্কর্যের খণ্ডাংশ" width="165" height="375"></div>
+              <div class="dig-artifact"><img src="assets/photos/dalijhara-terracotta.jpg" alt="ডালিঝরা থেকে চিত্রিত টেরাকোটা ভাস্কর্যের খণ্ডাংশ" width="165" height="375" onerror="this.style.display='none'" ></div>
               <canvas id="digCanvas" width="720" height="420" aria-label="ডিজিটাল মাটির স্তর। আঙুল বা মাউস দিয়ে ঘষে ছবি উন্মোচন করুন।">আপনার browser Canvas না দেখালে নিচের “ছবি উন্মোচন” button ব্যবহার করুন।</canvas>
               <span class="dig-brush-hint" id="digHint">আঙুল/মাউস দিয়ে মাটি ঘষো</span>
             </div>
@@ -200,7 +213,7 @@
         <h2 id="paperTitle">ডিজিটাল থেকে টেবিলে ৩ডি model</h2>
         <div class="paper-layout">
           <div class="paper-model-preview">
-            <img src="assets/children/previews/somapura-paper-model-page4.jpg" alt="সোমপুর কাগজের মডেলের স্তর, ফিনিয়াল ও পূর্ণ আকৃতির printable template" width="1240" height="1754" loading="lazy">
+            <img src="assets/children/previews/somapura-paper-model-page4.jpg" alt="সোমপুর কাগজের মডেলের স্তর, ফিনিয়াল ও পূর্ণ আকৃতির printable template" width="1240" height="1754" loading="lazy" onerror="this.style.display='none'" >
           </div>
           <div class="paper-copy">
             <span class="kids-chip">প্রথম মডেল · সোমপুর কেন্দ্রীয় মন্দির</span>
@@ -329,7 +342,7 @@
     <!-- ============ নতুন: বৌদ্ধ ইন্টারঅ্যাকটিভ কর্নার — শিশুদের জন্য আরও মজাদার (2026-11) ============ -->
     <section class="cb-section" id="buddhist-fun" aria-labelledby="buddhistFunTitle" style="background: linear-gradient(135deg,#fff8e8 0%, #e8f7ff 45%, #e7f4ee 100%); border-top:3px solid #ffbd57; border-bottom:3px solid #ffbd57">
       <div class="cb-wrap">
-        <p class="cb-eyebrow" style="background:#4a1f05; color:#ffe7bb; border-color:#4a1f05">🧒 নতুন · বৌদ্ধ ইন্টারঅ্যাকটিভ কর্নার — খেলতে খেলতে শেখো!</p>
+        <p class="cb-eyebrow" style="background:#4a1f05; color:#ffe7bb; border-color:#4a1f05">🧒 নতুন · বৌদ্ধ ইন্টারঅ্যাকটিভ কর্নার — খেলতে খেলতে শেখো! <span style="background:#fff; color:#4a1f05; padding:2px 6px; border-radius:999px; font-size:10px; margin-left:6px">↑ উপরের “সব খেলা” তে একসাথে</span></p>
         <h2 id="buddhistFunTitle" style="color:#4a1f05">🎉 বৌদ্ধ ধর্মের মজার খেলা — ৪টি নতুন ইন্টারঅ্যাকটিভ!</h2>
         <p class="cb-sub">কোনো সাইন-আপ নেই, সব এই ব্রাউজারেই — ভুল হলে সাথে সাথে শিখিয়ে দেবে, ঠিক হলে ⭐ + XP!</p>
 
@@ -468,6 +481,30 @@
         // move panesWrap children into card
         while(panesWrap.firstChild) card.appendChild(panesWrap.firstChild);
       });
+    })();
+
+    
+    // Move buddhist-fun 4 cards into #games unified area (fix double section)
+    (function(){
+      var src = document.getElementById('buddhist-fun');
+      var dst = document.getElementById('buddhist-fun-moved');
+      if(src && dst){
+        var cards = src.querySelectorAll('.kids-game-card');
+        cards.forEach(function(c){ dst.appendChild(c); });
+        // Remove duplicate safety bar inside buddhist-fun after move (keep only top kids-care)
+        var bar = src.querySelector('.kids-safety-bar');
+        if(bar) bar.style.display='none';
+        var note = src.querySelector('p[style*="ভাষা শিখতে চাও"]');
+        if(note) note.style.display='none';
+        // Collapse buddhist-fun section to just title if empty
+        if(src.querySelectorAll('.kids-game-card').length===0){
+          src.style.display='none';
+        }
+        // Fix images: ensure all img have loading lazy + onerror fallback
+        document.querySelectorAll('#games .kids-game-card img, #buddhist-fun-moved img').forEach(function(img){
+          if(!img.getAttribute('onerror')) img.setAttribute('onerror', "this.style.display='none'; this.nextElementSibling && (this.nextElementSibling.style.display='block')");
+        });
+      }
     })();
 
     // ===== Kids Fun XP system (local only) =====
@@ -653,8 +690,8 @@
   <dialog class="kids-dialog time-dialog" id="timeDialog" aria-labelledby="timeDialogTitle">
     <div class="dialog-top"><div><p class="cb-eyebrow">সোমপুর · সম্ভাব্য অতীত ও বর্তমান</p><h2 id="timeDialogTitle">টাইম ট্রাভেল তুলনা</h2></div><button type="button" class="dialog-close" data-dialog-close="timeDialog" aria-label="বন্ধ করুন">×</button></div>
     <div class="compare" id="compare" style="--split:50%">
-      <img class="compare-current" src="assets/quiz/somapura.jpg" alt="বর্তমান সোমপুর মহাবিহারের কেন্দ্রীয় মন্দিরের ধ্বংসাবশেষ" width="800" height="588">
-      <div class="compare-old"><img src="assets/children/somapura-reconstruction.jpg" alt="সোমপুরের সম্ভাব্য অতীত রূপের AI-assisted শিক্ষামূলক illustration" width="800" height="588"></div>
+      <img class="compare-current" src="assets/quiz/somapura.jpg" alt="বর্তমান সোমপুর মহাবিহারের কেন্দ্রীয় মন্দিরের ধ্বংসাবশেষ" width="800" height="588" onerror="this.style.display='none'" >
+      <div class="compare-old"><img src="assets/children/somapura-reconstruction.jpg" alt="সোমপুরের সম্ভাব্য অতীত রূপের AI-assisted শিক্ষামূলক illustration" width="800" height="588" onerror="this.style.display='none'" ></div>
       <span class="compare-label old">সম্ভাব্য reconstruction</span><span class="compare-label now">বর্তমান ছবি</span>
       <span class="compare-divider" aria-hidden="true"></span>
     </div>
@@ -665,7 +702,7 @@
 
   <dialog class="kids-dialog comic-dialog" id="comicDialog" aria-labelledby="comicDialogTitle">
     <div class="dialog-top"><div><p class="cb-eyebrow">মূল বাংলা শিশু-অভিযোজন</p><h2 id="comicDialogTitle">বনরাজার সাহস</h2></div><button type="button" class="dialog-close" data-dialog-close="comicDialog" aria-label="বন্ধ করুন">×</button></div>
-    <img id="comicPageImage" class="comic-page-image" src="assets/children/previews/banyan-deer-mini-comic-page1.jpg" alt="বনরাজার সাহস মিনি-কমিক, পাতা ১" width="1240" height="1754">
+    <img id="comicPageImage" class="comic-page-image" src="assets/children/previews/banyan-deer-mini-comic-page1.jpg" alt="বনরাজার সাহস মিনি-কমিক, পাতা ১" width="1240" height="1754" onerror="this.style.display='none'" >
     <div class="comic-controls"><button class="cb-btn" id="comicPrev" type="button">← আগের পাতা</button><button class="cb-btn solid" id="comicPlay" type="button" aria-pressed="false">স্লাইডশো</button><button class="cb-btn" id="comicNext" type="button">পরের পাতা →</button></div>
     <p id="comicStatus" class="comic-status" role="status">১ / ৩ পাতা</p>
     <a class="text-link" href="assets/children/pdf/banyan-deer-mini-comic.pdf" download>সম্পূর্ণ কমিক PDF ডাউনলোড</a>
