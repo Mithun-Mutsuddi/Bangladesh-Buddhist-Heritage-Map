@@ -66,6 +66,20 @@ body{ background:#fffaf0; color:#1a140d; font-family:"Noto Sans Bengali",system-
     🔄 <b>Auto-update:</b> এই পাতা খুললে <code>data/world-buddhist-census.json</code> লোড করে, তারপর background-এ Wikipedia <i>Buddhism by country</i> + WorldPopulationReview থেকে নতুন সংখ্যা fetch করার চেষ্টা করে — CORS বাধা হলে local cache-এ ফিরে আসে, কোনো ভুল সংখ্যা দেখায় না। শেষ যাচাই: <b id="lastVerified"></b> · <a href="data/world-buddhist-census.json" target="_blank" style="color:#8f3d08; font-weight:800">JSON দেখো →</a>
   </div>
 
+  <!-- History Timeline 570 BCE → 2026 -->
+  <section style="background:linear-gradient(135deg,#fffaf0 0%, #e7f4ee 100%); border:2px solid #123f39; border-radius:16px; padding:14px; margin:12px 0">
+    <h3 style="margin:0 0 8px; color:#4a1f05; font-size:14px">⏳ সময় অনুসারে বৌদ্ধ জনসংখ্যা — ৫৭০ BCE (বুদ্ধ জন্ম) → ২০২৬ (live)</h3>
+    <p style="font-size:11px; color:#6e5a46; margin:0 0 10px">Slider টানলে <b>বিশ্ব + বাংলাদেশ</b> বৌদ্ধ জনসংখ্যা ও ম্যাপ একসাথে ফিল্টার হবে। ৫৭০ BCE থেকে আপডেট পর্যন্ত — প্রাচীন অনুমান ±30%।</p>
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap">
+      <input id="timeSlider" type="range" min="0" max="17" value="16" step="1" style="flex:1; min-width:200px; accent-color:#4a1f05">
+      <span id="timeLabel" style="background:#4a1f05; color:#ffe7bb; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:800; min-width:180px; text-align:center">২০২০ CE · 324M (4.1%)</span>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:10px 0 0; font-size:11px">
+      <div style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:8px"><b>🌏 বিশ্ব বৌদ্ধ:</b> <span id="timeWorldPop" style="color:#4a1f05; font-weight:800">324M</span> · <span id="timeWorldPct">4.1%</span> <br><small id="timeWorldEvent" style="color:#6e5a46">Pew 2020</small></div>
+      <div style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:8px"><b>🇧🇩 বাংলাদেশ বৌদ্ধ:</b> <span id="timeBdPop" style="color:#123f39; font-weight:800">1.02M</span> <br><small id="timeBdEvent" style="color:#6e5a46">BBS 2022</small></div>
+    </div>
+    <div style="display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 0" id="timeChips"></div>
+  </section>
   <!-- Filters -->
   
   <div style="display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:8px; position:sticky; top:0; z-index:5">
@@ -350,7 +364,7 @@ var updateBadge=document.getElementById('updateBadge');
 var lastVerifiedEl=document.getElementById('lastVerified');
 
 // Load local JSON
-fetch('data/world-buddhist-census.json?v=20261031a').then(r=>r.json()).then(function(j){
+fetch('data/world-buddhist-census.json?v=20261103a').then(r=>r.json()).then(function(j){
   DATA=j;
   lastVerifiedEl.textContent=j.meta.last_verified;
   renderAll();
@@ -377,6 +391,37 @@ function tryRemoteUpdate(){
   // also try WorldPopulationReview via proxy? keep local on CORS fail
 }
 
+let TIMELINE=null, timeIdx=16;
+fetch('data/buddhist-history-timeline.json?v=20261103a').then(r=>r.json()).then(j=>{ TIMELINE=j.timeline; BD_TIMELINE=j.bd_timeline; buildTimeChips(); updateTime(); }).catch(e=>console.warn('timeline fail',e));
+let BD_TIMELINE=null;
+function buildTimeChips(){
+  var c=document.getElementById('timeChips');
+  if(!c||!TIMELINE) return;
+  c.innerHTML=TIMELINE.map((d,i)=> '<button class="badge" data-time="'+i+'" style="cursor:pointer; padding:4px 8px; font-size:10px; background:'+(i===timeIdx?'#4a1f05; color:#ffe7bb':'#fff; border:1px solid #ead6b8')+'">'+d.label.split(' · ')[0]+'</button>').join(' ');
+  c.querySelectorAll('[data-time]').forEach(b=> b.addEventListener('click',()=>{ timeIdx=+b.dataset.time; document.getElementById('timeSlider').value=timeIdx; updateTime(); }));
+}
+function updateTime(){
+  if(!TIMELINE) return;
+  var d=TIMELINE[timeIdx]; var bd=BD_TIMELINE? BD_TIMELINE[Math.min(timeIdx, BD_TIMELINE.length-1)] : null;
+  document.getElementById('timeLabel').textContent=d.label;
+  document.getElementById('timeWorldPop').textContent = d.buddhist_pop>=1000000 ? (Math.round(d.buddhist_pop/1000000)+'M') : (d.buddhist_pop>=1000 ? Math.round(d.buddhist_pop/1000)+'K' : d.buddhist_pop);
+  document.getElementById('timeWorldPct').textContent=d.pct+'%';
+  document.getElementById('timeWorldEvent').textContent=d.event+' · '+d.source;
+  if(bd){
+    document.getElementById('timeBdPop').textContent = bd.bd_buddhist>=1000000 ? (bd.bd_buddhist/1000000).toFixed(2)+'M' : (bd.bd_buddhist>=1000 ? Math.round(bd.bd_buddhist/1000)+'K' : bd.bd_buddhist);
+    document.getElementById('timeBdEvent').textContent=bd.note;
+  }
+  // Re-render map opacity by scaling circle radius with historical ratio
+  if(DATA){
+    var ratio = d.buddhist_pop / 324190000;
+    // Update KPI with historical vs current
+    document.getElementById('kpi').innerHTML += '<div style="background:#fff7df; border:1px dashed #ffbd57; padding:6px 8px; border-radius:8px; font-size:11px"><b>⏳ '+d.label.split(' · ')[0]+':</b> বিশ্ব '+ (d.buddhist_pop>=1000000? Math.round(d.buddhist_pop/1000000)+'M': d.buddhist_pop) +' ('+d.pct+'%) · BD '+(bd? bd.bd_buddhist : '?')+'</div>';
+  }
+  buildTimeChips();
+}
+document.addEventListener('input', function(e){
+  if(e.target && e.target.id==='timeSlider'){ timeIdx=+e.target.value; updateTime(); }
+});
 function renderAll(){
   renderKPI();
   renderWorldSummary();

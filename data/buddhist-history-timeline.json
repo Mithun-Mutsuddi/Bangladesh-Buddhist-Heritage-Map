@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "title": "Buddhist population 570 BCE → 2026 CE",
+    "source": "Pew 2025, UN WPP 2024, Banglapedia Pala, Ashoka edicts, retro estimates ( ±30% pre-1800)",
+    "note": "Pre-1800 numbers are scholarly retro-estimates, not census. Use for timeline slider only; table shows Pew 2020 strict."
+  },
+  "timeline": [
+    {
+      "year": -570,
+      "label": "৫৭০ BCE · বুদ্ধ জন্ম (লুম্বিনী)",
+      "buddhist_pop": 500,
+      "world_pop": 50000000,
+      "pct": 0.001,
+      "event": "সিদ্ধার্থ গৌতম জন্ম, শাক্য রাজ্য",
+      "source": "UN WPP + Armstrong 2020"
+    },
+    {
+      "year": -528,
+      "label": "৫২৮ BCE · বুদ্ধত্ব লাভ (বোধগয়া)",
+      "buddhist_pop": 1200,
+      "world_pop": 60000000,
+      "pct": 0.002,
+      "event": "ধম্মচক্কপবত্তন, প্রথম ৬০ ভিক্ষু",
+      "source": "Vinaya Pitaka"
+    },
+    {
+      "year": -483,
+      "label": "৪৮৩ BCE · মহাপরিনির্বাণ",
+      "buddhist_pop": 5000,
+      "world_pop": 80000000,
+      "pct": 0.006,
+      "event": "প্রথম সঙ্গীতি, রাজগৃহ",
+      "source": "Mahavamsa"
+    },
+    {
+      "year": -250,
+      "label": "২৫০ BCE · অশোক (মৌর্য)",
+      "buddhist_pop": 5000000,
+      "world_pop": 150000000,
+      "pct": 3.3,
+      "event": "অশোকের ধর্ম প্রচার, শ্রীলঙ্কা/মিয়ানমার",
+      "source": "Ashoka edicts, Pew retro"
+    },
+    {
+      "year": 0,
+      "label": "০ CE · খ্রিষ্টাব্দ শুরু",
+      "buddhist_pop": 12000000,
+      "world_pop": 200000000,
+      "pct": 6.0,
+      "event": "গান্ধার/মথুরা শিল্প, চীনে প্রবেশ",
+      "source": "Coningham 2015"
+    },
+    {
+      "year": 400,
+      "label": "৪০০ CE · ফা-হিয়েন (চীন)",
+      "buddhist_pop": 30000000,
+      "world_pop": 250000000,
+      "pct": 12.0,
+      "event": "গুপ্ত যুগ, নালন্দা স্থাপন, বাংলায় বিস্তার",
+      "source": "Faxian, Pew retro"
+    },
+    {
+      "year": 600,
+      "label": "৬০০ CE · হিউয়েন সাং",
+      "buddhist_pop": 50000000,
+      "world_pop": 250000000,
+      "pct": 20.0,
+      "event": "বাংলা: শশাঙ্ক, সমতট-আরাকান বৌদ্ধ রাজ্য",
+      "source": "Xuanzang"
+    },
+    {
+      "year": 800,
+      "label": "৮০০ CE · পাল যুগ (বাংলা)",
+      "buddhist_pop": 60000000,
+      "world_pop": 300000000,
+      "pct": 20.0,
+      "event": "সোমপুর/পাহাড়পুর/শালবন, বিক্রমশীলা",
+      "source": "Banglapedia Pala"
+    },
+    {
+      "year": 1200,
+      "label": "১২০০ CE · বাংলায় শেষ বৌদ্ধ রাজা",
+      "buddhist_pop": 40000000,
+      "world_pop": 400000000,
+      "pct": 10.0,
+      "event": "বখতিয়ার খলজি, নালন্দা ধ্বংস, থেরবাদ দক্ষিণে",
+      "source": "C. Collins 1990"
+    },
+    {
+      "year": 1500,
+      "label": "১৫০০ CE · থেরবাদ দক্ষিণ-পূর্ব এশিয়া",
+      "buddhist_pop": 30000000,
+      "world_pop": 500000000,
+      "pct": 6.0,
+      "event": "আয়ুথায়া/পাগান/অঙ্কোর — থেরবাদ রাষ্ট্রধর্ম",
+      "source": "Lieberman 2003"
+    },
+    {
+      "year": 1800,
+      "label": "১৮০০ CE · ঔপনিবেশিক যুগ",
+      "buddhist_pop": 80000000,
+      "world_pop": 1000000000,
+      "pct": 8.0,
+      "event": "ব্রিটিশ CHT, শ্রীলঙ্কা পুনরুজ্জীবন",
+      "source": "Pew retro"
+    },
+    {
+      "year": 1900,
+      "label": "১৯০০ CE · আধুনিক জনগণনা শুরু",
+      "buddhist_pop": 150000000,
+      "world_pop": 1650000000,
+      "pct": 9.1,
+      "event": "BBS/Burma Census, Pew baseline",
+      "source": "UN WPP 2024"
+    },
+    {
+      "year": 1950,
+      "label": "১৯৫০ CE · দ্বিতীয় বিশ্বযুদ্ধ পর",
+      "buddhist_pop": 200000000,
+      "world_pop": 2500000000,
+      "pct": 8.0,
+      "event": "জাপান/চীন/ভিয়েতনাম যুদ্ধ, উদ্বাস্তু",
+      "source": "Pew 2015"
+    },
+    {
+      "year": 1970,
+      "label": "১৯৭০ CE · বাংলাদেশ স্বাধীনতা পূর্ব",
+      "buddhist_pop": 250000000,
+      "world_pop": 3700000000,
+      "pct": 6.8,
+      "event": "CHT জনসংখ্যা ৪ লাখ, চট্টগ্রাম বৌদ্ধ ২ লাখ",
+      "source": "BBS 1974"
+    },
+    {
+      "year": 1990,
+      "label": "১৯৯০ CE · Pew baseline",
+      "buddhist_pop": 310000000,
+      "world_pop": 5300000000,
+      "pct": 5.8,
+      "event": "বিশ্বায়ন, তিব্বতি diaspora",
+      "source": "Pew 2015"
+    },
+    {
+      "year": 2010,
+      "label": "২০১০ CE · Pew 343M",
+      "buddhist_pop": 343000000,
+      "world_pop": 6900000000,
+      "pct": 5.0,
+      "event": "Pew Global Landscape 2010",
+      "source": "Pew 2012"
+    },
+    {
+      "year": 2020,
+      "label": "২০২০ CE · Pew 324M (বর্তমান)",
+      "buddhist_pop": 324190000,
+      "world_pop": 7840000000,
+      "pct": 4.1,
+      "event": "কোভিড, fertility 1.6, median 40",
+      "source": "Pew 2025 + BBS 2022 + JP 2023"
+    },
+    {
+      "year": 2026,
+      "label": "২০২৬ CE · আপডেট (live)",
+      "buddhist_pop": 326000000,
+      "world_pop": 8100000000,
+      "pct": 4.0,
+      "event": "UN WPP 2024 projection, live census JSON",
+      "source": "UN WPP 2024 + local JSON"
+    }
+  ],
+  "bd_timeline": [
+    {
+      "year": -570,
+      "label": "৫৭০ BCE · বুদ্ধ",
+      "bd_buddhist": 0,
+      "note": "বাংলায় তখনো বৌদ্ধ ধর্ম আসেনি"
+    },
+    {
+      "year": 300,
+      "label": "৩০০ BCE · মৌর্য প্রভাব",
+      "bd_buddhist": 5000,
+      "note": "অশোকের ধর্মদূত, মহাস্থান ব্রাহ্মী লিপি"
+    },
+    {
+      "year": 600,
+      "label": "৬০০ CE · সমতট",
+      "bd_buddhist": 50000,
+      "note": "শশাঙ্ক, খড়গ/চন্দ্র বংশ, আরাকান"
+    },
+    {
+      "year": 800,
+      "label": "৮০০ CE · পাল (সোমপুর)",
+      "bd_buddhist": 300000,
+      "note": "পাল রাজা বৌদ্ধ, পাহাড়পুর/শালবন"
+    },
+    {
+      "year": 1200,
+      "label": "১২০০ CE · সেন/তুর্কি",
+      "bd_buddhist": 100000,
+      "note": "বৌদ্ধ হ্রাস, CHT-এ টিকে থাকে"
+    },
+    {
+      "year": 1900,
+      "label": "১৯০০ CE · ব্রিটিশ CHT",
+      "bd_buddhist": 250000,
+      "note": "CHT Regulation 1900, BBS"
+    },
+    {
+      "year": 1971,
+      "label": "১৯৭১ · স্বাধীনতা",
+      "bd_buddhist": 400000,
+      "note": "BBS 1974"
+    },
+    {
+      "year": 2022,
+      "label": "২০২২ BBS",
+      "bd_buddhist": 1000000,
+      "note": "BBS Census 2022: 1.02M (0.6%)"
+    }
+  ]
+}
