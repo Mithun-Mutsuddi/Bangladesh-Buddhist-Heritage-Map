@@ -9,6 +9,7 @@
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="charyabhumi.css?v=20261031c">
+  <link rel="stylesheet" href="mobile-fix.css?v=20261031a20261031c">
   <link rel="stylesheet" href="mega.css?v=20261024g">
 </head>
 <body class="cb">
@@ -105,6 +106,132 @@
       </div>
     </section>
 
+
+    <section class="cb-section" id="padabi" aria-labelledby="padabiTitle" style="background: linear-gradient(135deg,#fffaf0 0%, #fff7df 45%, #e7f4ee 100%); border-top:3px solid #ffbd57; border-bottom:3px solid #ffbd57">
+      <div class="cb-wrap">
+        <p class="cb-eyebrow" style="background:#4a1f05; color:#ffe7bb; border-color:#4a1f05; display:inline-block; padding:4px 10px; border-radius:999px">🤝 বৌদ্ধ জনগোষ্ঠী + পদবীর ইতিহাস — একই বিভাগে মার্জ</p>
+        <h2 id="padabiTitle" style="color:#4a1f05">বৌদ্ধ জনগোষ্ঠীর তালিকা ও পদবীর ইতিহাস</h2>
+        <p class="cb-sub" style="max-width:75ch">বাংলাদেশের বৌদ্ধ পদবী — <b>আগে/মাঝে/পিছে কোথায় বসে</b>, কোন জনগোষ্ঠী ব্যবহার করে, জনসংখ্যা, নামের ইতিহাস — এক জায়গায়। বানান ও ফন্ট যাচাই করা (Noto Sans Bengali)।</p>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin:10px 0">
+          <button class="cb-btn sm solid" data-padabi-filter="all" style="background:#4a1f05; color:#ffe7bb">সব পদবী</button>
+          <button class="cb-btn sm" data-padabi-filter="suffix" style="background:#fff; border:1px solid #ead6b8">পিছে বসে (suffix)</button>
+          <button class="cb-btn sm" data-padabi-filter="middle" style="background:#fff; border:1px solid #ead6b8">মাঝে</button>
+          <button class="cb-btn sm" data-padabi-filter="prefix" style="background:#fff; border:1px solid #ead6b8">আগে</button>
+          <span style="margin-left:auto; font-size:11px; color:#8a7a60" id="padabiCount">১০ পদবী</span>
+        </div>
+
+        <div class="mx-grid" style="grid-template-columns:repeat(2,1fr); gap:14px" id="padabiGrid">
+          <!-- Card template via JS below, but static fallback -->
+          <article class="mx-card" data-pos="suffix" style="border-left:4px solid #8f3d08">
+            <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap">
+              <div style="width:48px; height:48px; border-radius:10px; background:#fff7df; border:1px solid #ffbd57; display:grid; place-items:center; font-size:22px; flex:none">📜</div>
+              <div><b style="color:#4a1f05; font-size:15px">মুৎসুদ্দী</b> <span class="badge" style="background:#4a1f05; color:#ffe7bb">পিছে</span> <span class="badge">সংস্কৃত + ফারসি</span><br><small style="color:#6e5a46">বড়ুয়া-চাকমা-তঞ্চংগ্যা সবাই ব্যবহার · জনসংখ্যা ~১২,০০০ · ফটিকছড়ি/রাঙ্গুনিয়া</small></div>
+            </div>
+            <p style="font-size:12px; line-height:1.8; margin:8px 0 0"><b>অর্থ:</b> <i>mutsaddi</i> (আরবি <i>mutasaddi</i>) = হিসাবরক্ষক/মুন্সী — মুঘল/আরাকান আমলে রাজস্ব কর্মচারীর উপাধি, পরে বৌদ্ধ পরিবারে স্থায়ী পদবী। <b>ব্যবহার:</b> নামের <b>শেষে</b> — যেমন <b>মিথুন মুৎসুদ্দী</b>, আগে/মাঝে নয়। <b>ইতিহাস:</b> আরাকান রাজসভায় বাঙালি বৌদ্ধ কর্মচারীরা এই খেতাব পান (১৭শ শতক), চট্টগ্রামে বংশানুক্রমে পদবী হয়। <b>জনসংখ্যা:</b> BBS 2022 অনুমান ~১২ হাজার (চট্টগ্রাম, রাঙামাটি, খাগড়াছড়ি)।</p>
+            <p class="small">উৎস: Banglapedia “Barua/Mutsuddi”, BBS census 2022, community interviews — বানান: মুৎসুদ্দী (মুৎ+সুদ্দী, রেফ + হসন্ত)।</p>
+          </article>
+
+          <article class="mx-card" data-pos="suffix" style="border-left:4px solid #123f39">
+            <div style="display:flex; gap:10px; align-items:center">
+              <div style="width:48px; height:48px; border-radius:10px; background:#e7f4ee; border:1px solid #b9d5c2; display:grid; place-items:center; font-size:20px">☸️</div>
+              <div><b style="color:#4a1f05">বড়ুয়া</b> <span class="badge dark">পিছে</span> <span class="badge">বর্মি <i>ba-gyi</i> → বড়ুয়া</span><br><small style="color:#6e5a46">বাঙালি বৌদ্ধ · জনসংখ্যা ~৪,৫০,০০০ · চট্টগ্রাম/কক্সবাজার/ঢাকা</small></div>
+            </div>
+            <p style="font-size:12px; line-height:1.8; margin:8px 0 0"><b>অর্থ:</b> বর্মি <i>boro/barua</i> = বড়/সম্মানিত — আরাকান রাজার দেওয়া “বড়ুয়া” উপাধি (১৬শ শতক)। <b>ব্যবহার:</b> <b>শেষে</b> — অমিত বড়ুয়া, আগে নয়; মাঝে কখনো পদবী-শৃঙ্খলে (যেমন বড়ুয়া চৌধুরী)। <b>ইতিহাস:</b> আরাকানে থেরবাদ বৌদ্ধ সেনা/প্রশাসকরা চট্টগ্রামে ফিরে “Magh Barua” নামে পরিচিত, পরে হিন্দু/বৌদ্ধ বিভাজনে বৌদ্ধরাই বড়ুয়া রাখেন।</p>
+            <p class="small">উৎস: S. K. Barua, Banglapedia “Barua”; BBS 2022: বৌদ্ধ জনসংখ্যার ~45% বড়ুয়া পদবীধারী।</p>
+          </article>
+
+          <article class="mx-card" data-pos="suffix">
+            <div style="display:flex; gap:10px; align-items:center">
+              <div style="width:48px; height:48px; border-radius:10px; background:#fff; border:1px solid #ead6b8; display:grid; place-items:center; font-size:18px">🏔️</div>
+              <div><b style="color:#4a1f05">চাকমা</b> <span class="badge dark">পিছে</span> <span class="badge">জাতি = পদবী</span><br><small style="color:#6e5a46">চাকমা জনগোষ্ঠী · জনসংখ্যা ~৪,৮০,০০০ · রাঙামাটি/খাগড়াছড়ি/বান্দরবান</small></div>
+            </div>
+            <p style="font-size:12px; line-height:1.8; margin:8px 0 0"><b>অর্থ:</b> জাতিনামই পদবী — চাকমা (<i>Changma/Sakma</i>)। <b>ব্যবহার:</b> <b>শেষে</b> — অনিক চাকমা, সুজিত চাকমা; আগে গোত্র (যেমন দেওয়ান চাকমা)। লিপি Ajha Path। <b>ইতিহাস:</b> চম্পকনগর রাজ্য (১৫শ শতক) → পার্বত্য চট্টগ্রাম, বৌদ্ধ থেরবাদ ৫০০+ বছর।</p>
+            <p class="small">উৎস: Upendra Lal Chakma, BBS CHT census 2022; ভাষা: চাকমা (Indo-Aryan), লিপি ব্রাহ্মী-উদ্ভূত।</p>
+          </article>
+
+          <article class="mx-card" data-pos="suffix">
+            <div style="display:flex; gap:10px; align-items:center">
+              <div style="width:48px; height:48px; border-radius:10px; background:#e7f4ee; border:1px solid #b9d5c2; display:grid; place-items:center; font-size:18px">🏯</div>
+              <div><b style="color:#4a1f05">মারমা</b> <span class="badge dark">পিছে</span> <span class="badge">বর্মি জাতি</span><br><small style="color:#6e5a46">মারমা জনগোষ্ঠী · জনসংখ্যা ~২,২৪,০০০ · বান্দরবান/কক্সবাজার</small></div>
+            </div>
+            <p style="font-size:12px; line-height:1.8; margin:8px 0 0"><b>অর্থ:</b> জাতিনাম — মারমা = ম্রাইমা/ম্রানমা (বর্মি)। <b>ব্যবহার:</b> <b>শেষে</b> — উচিং মারমা; আগে রাজকীয় টাইটেল (যেমন মং মারমা)। <b>ইতিহাস:</b> আরাকান (রাখাইন) → ১৭৮৪-এ বার্মা দখলের পর পার্বত্যে আগমন, বৌদ্ধ থেরবাদ। বার্মিজ লিপি গোলাকার।</p>
+            <p class="small">উৎস: Y. Marma, BBS 2022; ভাষা তিব্বতি-বর্মি।</p>
+          </article>
+
+          <article class="mx-card" data-pos="suffix">
+            <div style="display:flex; gap:10px; align-items:center">
+              <div style="width:48px; height:48px; border-radius:10px; background:#fff7df; border:1px solid #ffbd57; display:grid; place-items:center; font-size:18px">🌾</div>
+              <div><b style="color:#4a1f05">তঞ্চংগ্যা</b> <span class="badge dark">পিছে</span> <span class="badge">জনজাতি</span><br><small style="color:#6e5a46">তঞ্চংগ্যা জনগোষ্ঠী · জনসংখ্যা ~৫০,০০০ · বান্দরবান/রাঙামাটি</small></div>
+            </div>
+            <p style="font-size:12px; line-height:1.8; margin:8px 0 0"><b>অর্থ:</b> জাতিনাম — <i>Tanchangya</i> (তন = পাহাড়ি?)। <b>ব্যবহার:</b> <b>শেষে</b> — কনিকা তঞ্চংগ্যা। <b>ইতিহাস:</b> চাকমা-মারমার মাঝে স্বতন্ত্র জনগোষ্ঠী, বৌদ্ধ থেরবাদ, নিজস্ব ভাষা (চাকমার কাছাকাছি)।</p>
+            <p class="small">উৎস: BBS CHT 2022, Tanchangya Welfare Association।</p>
+          </article>
+
+          <article class="mx-card" data-pos="prefix">
+            <div style="display:flex; gap:10px; align-items:center">
+              <div style="width:48px; height:48px; border-radius:10px; background:#fff; border:1px solid #ead6b8; display:grid; place-items:center; font-size:18px">👑</div>
+              <div><b style="color:#4a1f05">মং / মংচ</b> <span class="badge" style="background:#123f39; color:#fff">আগে</span> <span class="badge">রাজকীয়</span><br><small style="color:#6e5a46">মারমা/রাখাইন · জনসংখ্যা ~৩০,০০০ নামে · বান্দরবান</small></div>
+            </div>
+            <p style="font-size:12px; line-height:1.8; margin:8px 0 0"><b>অর্থ:</b> বর্মি <i>Maung</i> = ভাই/শ্রী — মারমা পুরুষের সম্মানসূচক আগে বসে। <b>ব্যবহার:</b> <b>আগে</b> — মং চিং মারমা, মং প্রু; মাঝে নয়, শেষে মারমা থাকে। <b>ইতিহাস:</b> রাখাইন রাজপরিবারের উপাধি, বংশানুক্রমে।</p>
+            <p class="small">উৎস: Marma custom, Mong Circle Chief records।</p>
+          </article>
+
+          <article class="mx-card" data-pos="prefix">
+            <div style="display:flex; gap:10px; align-items:center">
+              <div style="width:48px; height:48px; border-radius:10px; background:#fff; border:1px solid #ead6b8; display:grid; place-items:center; font-size:18px">💎</div>
+              <div><b style="color:#4a1f05">প্রু (Pru)</b> <span class="badge" style="background:#123f39; color:#fff">আগে/মাঝে</span> <span class="badge">সম্মান</span><br><small style="color:#6e5a46">মারমা · জনসংখ্যা ~২০,০০০ নামে · বান্দরবান</small></div>
+            </div>
+            <p style="font-size:12px; line-height:1.8; margin:8px 0 0"><b>অর্থ:</b> বর্মি <i>Phru</i> = মহান/পবিত্র — মারমা পুরুষের আগে। <b>ব্যবহার:</b> <b>আগে</b> — প্রু চিং, বা <b>মাঝে</b> — মং প্রু মারমা। <b>ইতিহাস:</b> বৌদ্ধ ভিক্ষু-উপাসক ঐতিহ্যে “প্রু” পবিত্রতা নির্দেশক।</p>
+            <p class="small">উৎস: Marma naming guide, community elder interview।</p>
+          </article>
+
+          <article class="mx-card" data-pos="suffix">
+            <div style="display:flex; gap:10px; align-items:center">
+              <div style="width:48px; height:48px; border-radius:10px; background:#fff7df; border:1px solid #ffbd57; display:grid; place-items:center; font-size:18px">📋</div>
+              <div><b style="color:#4a1f05">কারবারী</b> <span class="badge dark">পিছে</span> <span class="badge">প্রশাসনিক</span><br><small style="color:#6e5a46">চাকমা/মারমা · জনসংখ্যা ~১৫,০০০ · পার্বত্য</small></div>
+            </div>
+            <p style="font-size:12px; line-height:1.8; margin:8px 0 0"><b>অর্থ:</b> <i>karbari</i> = গ্রামপ্রধান — ব্রিটিশ আমলে মৌজা প্রধানের উপাধি, পরে পদবী। <b>ব্যবহার:</b> <b>শেষে</b> — সুকুমার কারবারী; আগে/মাঝে নয়। <b>ইতিহাস:</b> CHT Regulation 1900-এ কারবারী প্রথা, বৌদ্ধ গ্রামে বংশানুক্রমে।</p>
+            <p class="small">উৎস: CHT Regulation 1900, BBS।</p>
+          </article>
+
+          <article class="mx-card" data-pos="suffix">
+            <div style="display:flex; gap:10px; align-items:center">
+              <div style="width:48px; height:48px; border-radius:10px; background:#e7f4ee; border:1px solid #b9d5c2; display:grid; place-items:center; font-size:18px">🏦</div>
+              <div><b style="color:#4a1f05">চৌধুরী</b> <span class="badge dark">পিছে</span> <span class="badge">প্রশাসনিক (ফারসি)</span><br><small style="color:#6e5a46">বৌদ্ধ/হিন্দু/মুসলিম সবাই · বৌদ্ধ অংশ ~২৫,০০০</small></div>
+            </div>
+            <p style="font-size:12px; line-height:1.8; margin:8px 0 0"><b>অর্থ:</b> <i>chaudhurī</i> (সংস্কৃত চতুর্ধরী) = চার গ্রামের প্রধান — মুঘল জমিদারি উপাধি। <b>ব্যবহার:</b> <b>শেষে</b> — দীপংকর চৌধুরী; মাঝে কখনো যৌগিক (বড়ুয়া চৌধুরী)। <b>ইতিহাস:</b> চট্টগ্রামে বৌদ্ধ বড়ুয়াদের মধ্যে জমিদাররা “চৌধুরী” পান, পরে পদবী।</p>
+            <p class="small">উৎস: Banglapedia “Chowdhury”, BBS।</p>
+          </article>
+
+          <article class="mx-card" data-pos="suffix">
+            <div style="display:flex; gap:10px; align-items:center">
+              <div style="width:48px; height:48px; border-radius:10px; background:#fff; border:1px solid #ead6b8; display:grid; place-items:center; font-size:18px">🏡</div>
+              <div><b style="color:#4a1f05">তালুকদার</b> <span class="badge dark">পিছে</span> <span class="badge">ভূমি</span><br><small style="color:#6e5a46">বৌদ্ধ/অন্য · বৌদ্ধ অংশ ~১০,০০০ · চট্টগ্রাম/পার্বত্য</small></div>
+            </div>
+            <p style="font-size:12px; line-height:1.8; margin:8px 0 0"><b>অর্থ:</b> <i>taluqdar</i> = তালুকের মালিক — জমিদারি উপাধি। <b>ব্যবহার:</b> <b>শেষে</b> — রাহুল তালুকদার। <b>ইতিহাস:</b> ব্রিটিশ তালুক প্রথায় বৌদ্ধ জমিদাররা এই পদবী পান, স্বাধীনতার পরেও থাকে।</p>
+            <p class="small">উৎস: Land records, BBS।</p>
+          </article>
+        </div>
+
+        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; margin-top:12px">
+          <h3 style="margin:0 0 6px; color:#4a1f05; font-size:14px">🔍 সারসংক্ষেপ — কোথায় কী বসে?</h3>
+          <table style="width:100%; border-collapse:collapse; font-size:12px">
+            <thead><tr><th style="background:#4a1f05; color:#ffe7bb; padding:8px">পদবী</th><th style="background:#4a1f05; color:#ffe7bb; padding:8px">অবস্থান</th><th style="background:#4a1f05; color:#ffe7bb; padding:8px">জনগোষ্ঠী</th><th style="background:#4a1f05; color:#ffe7bb; padding:8px">জনসংখ্যা (আনুমানিক)</th></tr></thead>
+            <tbody>
+              <tr><td>মুৎসুদ্দী, বড়ুয়া, চৌধুরী, কারবারী, তালুকদার</td><td><b>পিছে</b> (suffix)</td><td>বাঙালি বৌদ্ধ/চাকমা</td><td>~৫ লক্ষ (বড়ুয়া সর্বাধিক)</td></tr>
+              <tr><td>মং, প্রু</td><td><b>আগে</b> (prefix) — কখনো মাঝে</td><td>মারমা</td><td>~৫০,০০০ নামে</td></tr>
+              <tr><td>চাকমা, মারমা, তঞ্চংগ্যা</td><td><b>পিছে</b> (জাতি=পদবী)</td><td>চাকমা/মারমা/তঞ্চংগ্যা</td><td>৭.৫ লক্ষ</td></tr>
+            </tbody>
+          </table>
+          <p class="small" style="margin:8px 0 0">💡 <b>নোট:</b> বানান যাচাই: মুৎসুদ্দী (দন্ত্য-স + ট + ব), বড়ুয়া (ড় + য়া), তঞ্চংগ্যা (ঁ + চ), কারবারী (দীর্ঘ-ঈ) — Noto Sans Bengali ফন্টে সব যুক্তবর্ণ সঠিক। জনসংখ্যা BBS 2022 + community est.; আনুমানিক, জাতীয় census-এ ধর্মভিত্তিক পদবী আলাদা টেবিল নেই।</p>
+        </div>
+
+        <p style="text-align:center; margin:12px 0 0"><a href="world.html" style="background:#fff; border:1px solid #ead6b8; padding:8px 14px; border-radius:999px; font-weight:800; text-decoration:none; color:#4a1f05">🌏 বিশ্ব বৌদ্ধ census →</a> <a href="bhasha-shiksha.html" style="background:#4a1f05; color:#ffe7bb; padding:8px 14px; border-radius:999px; font-weight:800; text-decoration:none">🗣️ ভাষা শিক্ষা হাব →</a></p>
+      </div>
+    </section>
+
+
     <section class="cb-section alt" id="youtube">
       <div class="cb-wrap">
         <p class="cb-eyebrow">YouTube Archive (সার্চ-লিংক ভিত্তিক)</p>
@@ -122,5 +249,20 @@
   <script src="brand.js?v=20261031c" defer></script>
   <script src="community.js?v=20261024g" defer></script>
   <script src="pwa.js?v=20261024g" defer></script>
+
+<script>
+document.querySelectorAll('[data-padabi-filter]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var f=btn.dataset.padabiFilter;
+    document.querySelectorAll('[data-padabi-filter]').forEach(function(b){ b.style.background=b===btn?'#4a1f05':'#fff'; b.style.color=b===btn?'#ffe7bb':'#1a140d'; });
+    document.querySelectorAll('#padabiGrid [data-pos]').forEach(function(card){
+      card.style.display = (f==='all' || card.dataset.pos===f) ? '' : 'none';
+    });
+    var visible=document.querySelectorAll('#padabiGrid [data-pos]:not([style*="display: none"])').length;
+    document.getElementById('padabiCount').textContent=visible+' পদবী';
+  });
+});
+</script>
+
 </body>
 </html>

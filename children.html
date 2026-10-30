@@ -11,8 +11,22 @@
   <meta property="og:image" content="assets/children/somapura-reconstruction.jpg">
   <link rel="icon" href="assets/brand/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="charyabhumi.css?v=20261031c">
+  <link rel="stylesheet" href="mobile-fix.css?v=20261031a20261031c">
     <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="mega.css?v=20261024h">
+
+<style id="kids-triple-css">
+.kids-card-tabs{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 6px }
+.kids-card-tabs button{ padding:6px 10px; border-radius:999px; border:1px solid #ead6b8; background:#fff; font-weight:800; font-size:11px; cursor:pointer }
+.kids-card-tabs button.active{ background:#4a1f05; color:#ffe7bb; border-color:#4a1f05 }
+.kids-tab-pane{ display:none }
+.kids-tab-pane.active{ display:block }
+@media(max-width:760px){
+  .kids-game-layout, div[style*="grid-template-columns:1fr 1fr"]{ grid-template-columns:1fr !important }
+  .kids-safety-bar{ flex-direction:column; align-items:stretch }
+}
+</style>
+
 <link rel="stylesheet" href="children.css?v=20261031b">
 </head>
 <body class="cb kids-page">
@@ -387,18 +401,75 @@
           </article>
         </div>
 
-        <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; margin-top:10px; display:flex; gap:10px; align-items:center; flex-wrap:wrap">
-          <div style="font-size:22px">🎁</div>
-          <div style="flex:1">
+        <div class="kids-safety-bar" style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; margin-top:10px; display:flex; gap:10px; align-items:center; flex-wrap:wrap">
+          <div style="font-size:22px" aria-hidden="true">🎁</div>
+          <div style="flex:1; min-width:220px">
             <b style="color:#4a1f05">শিশু-সুরক্ষা:</b> <span style="font-size:13px; color:#6e5a46">কোনো নাম/ছবি/ভয়েস জমা নেই, স্কোর শুধু এই ব্রাউজারে। বাইরের ভিডিওতে বিজ্ঞাপন আসতে পারে — বড়রা আগে দেখে নেবে।</span>
           </div>
-          <a href="pali-learning.html" class="cb-btn solid" style="background:#4a1f05; color:#ffe7bb; font-size:12px">📜 পালি শেখো — ব্রাহ্মী ও ক্যালিগ্রাফি →</a>
-          <a href="#games" class="cb-btn" style="background:#fff; border:1px solid #ead6b8; font-size:12px">← পুরোনো খেলায় ফিরি</a>
+          <a href="#games-plus" class="cb-btn" style="background:#123f39; color:#fff; font-size:12px">🏆 হেরিটেজ এক্সপ্লোরার গেমস →</a>
+          <a href="bhasha-shiksha.html" class="cb-btn ghost" style="background:#fff; border:1px solid #ead6b8; font-size:12px">🗣️ ভাষা শিক্ষা হাব আলাদা বিভাগ →</a>
         </div>
+        <p style="font-size:11px; color:#8a7a60; margin:6px 0 0; text-align:center">ভাষা শিখতে চাও? <b>ভাষা শিক্ষা হাব</b> এই পাতায় নয় — <a href="bhasha-shiksha.html" style="color:#8f3d08; font-weight:800">bhasha-shiksha.html</a> আলাদা বিভাগে আছে (হোম থেকেও)।</p>
       </div>
     </section>
 
     <script>
+    
+    // ===== Triple tabs for each game card =====
+    (function(){
+      var cards = document.querySelectorAll('#buddhist-fun .kids-game-card');
+      cards.forEach(function(card, idx){
+        var label = ['পঞ্চশীল','শ্বাস-ধ্যান','পালি-বাংলা','ধর্মচক্র'][idx] || ('Game '+(idx+1));
+        var tabBar = document.createElement('div');
+        tabBar.className='kids-card-tabs';
+        tabBar.setAttribute('role','tablist');
+        var tabs = [
+          {id:'khela', label:'🎮 খেলা'},
+          {id:'shekha', label:'📚 শেখা'},
+          {id:'tottho', label:'📊 তথ্য'}
+        ];
+        // Collect original content to wrap
+        // Wrap existing children (except first chip) into panes
+        var originalHTML = card.innerHTML;
+        // We'll create 3 panes: khela = original game UI, shekha = info, tottho = data
+        var infoContent = [
+          '<div style=\"background:#fff7df; border:1px solid #ffbd57; border-radius:10px; padding:10px; font-size:13px; line-height:1.8\"><b>শেখা — '+label+'</b><br>পঞ্চশীল মানে ৫টি নৈতিক নিয়ম — প্রাণিহত্যা, চুরি, মিথ্যা, ব্যভিচার, নেশা থেকে বিরত থাকা। বুদ্ধ এই ৫টি দিয়ে সাধারণ মানুষের দৈনন্দিন জীবনকে পবিত্র করতে বলেছেন।</div><p style=\"font-size:11px; color:#8a7a60\">উৎস: ধম্মপদ, সিগালোবাদ সুত্ত • ছবি: CC</p>',
+          '<div style=\"background:#e7f4ee; border:1px solid #b9d5c2; border-radius:10px; padding:10px; font-size:13px; line-height:1.8\"><b>শেখা — শ্বাস-ধ্যান</b><br>আনাপানসতি — শ্বাসের আসা-যাওয়ায় মন রাখা। ৪ সেকেন্ড ভিতরে, ২ সেকেন্ড ধরে, ৪ সেকেন্ড ছাড়া — বিজ্ঞানে প্রমাণিত মন শান্ত হয়।</div><p style=\"font-size:11px; color:#8a7a60\">উৎস: আনাপানসতি সুত্ত • গাইড: নিরাপদ, শব্দ ছাড়া</p>',
+          '<div style=\"background:#e8f7ff; border:1px solid #b9d5e2; border-radius:10px; padding:10px; font-size:13px; line-height:1.8\"><b>শেখা — পালি শব্দ</b><br>পালি বৌদ্ধ ধর্মের প্রাচীন ভাষা — মেত্তা=মৈত্রী, করুণা=দয়া, পঞ্ঞা=প্রজ্ঞা — প্রতিটি শব্দের বাংলা ও ব্যবহার শিখবে।</div><p style=\"font-size:11px; color:#8a7a60\">উৎস: PTS Dictionary • লিপি: রোমান থেকে বাংলা</p>',
+          '<div style=\"background:linear-gradient(135deg,#fff,#fff7df); border:1px solid #ead6b8; border-radius:10px; padding:10px; font-size:13px; line-height:1.8\"><b>শেখা — অষ্টাঙ্গিক মার্গ</b><br>বুদ্ধের ৮টি পথ — সম্যক দৃষ্টি থেকে সমাধি পর্যন্ত। প্রতিটি পথ জীবনের একটি দিকে আলো দেয় — যেমন সম্যক বাক্য মানে সত্য ও মিষ্টি কথা।</div><p style=\"font-size:11px; color:#8a7a60\">উৎস: ধম্মচক্কপবত্তন সুত্ত • চিত্র: ধর্মচক্র ৮ স্পোক</p>'
+        ][idx];
+        var dataContent = [
+          '<div style=\"font-size:12px; line-height:1.8\"><b>তথ্য — XP ও অগ্রগতি</b><br>XP: <span class=\"kidsXPInline\">0</span> • এই খেলায় ১০ XP/সঠিক • স্থানীয় storage — কোনো সার্ভারে যায় না<br>স্ট্যাম্প: Atlas পাসপোর্টে জমা হয় • ব্যাজ: পঞ্চশীল-পালনকারী</div>',
+          '<div style=\"font-size:12px; line-height:1.8\"><b>তথ্য — সময় ও শ্বাস</b><br>১ মিনিট = ৬ চক্র • আজ সম্পূর্ণ: <span class=\"breathCountInline\">0</span> বার • মোট শ্বাস-ধ্যান: localStorage-এ গণনা<br>পরামর্শ: বড়দের সাথে, চোখ বন্ধ নয় — খোলা চোখে বৃত্ত দেখো</div>',
+          '<div style=\"font-size:12px; line-height:1.8\"><b>তথ্য — শব্দভাণ্ডার</b><br>৬ জোড়া • মিলেছে: <span class=\"paliMatchInline\">0/6</span> • ভুলে গেলে উপরের \"শেখা\" ট্যাবে অর্থ দেখো<br>লিপি: বাংলা+রোমান • উৎস: পালি-বাংলা অভিধান</div>',
+          '<div style=\"font-size:12px; line-height:1.8\"><b>তথ্য — মার্গের মানচিত্র</b><br>৮ পথ • দেখেছ: <span class=\"maggaSeenInline\">1/8</span> • সব দেখলে \"ধর্মচক্র সম্পূর্ণ\" ব্যাজ<br>প্রিন্ট: #practice → A4 প্রিন্ট শিট • উৎস: ত্রিপিটক</div>'
+        ][idx];
+        // Build panes container
+        var panesWrap = document.createElement('div');
+        panesWrap.innerHTML = '<div class=\"kids-tab-pane active\" data-pane=\"khela\">'+originalHTML+'</div>'
+          + '<div class=\"kids-tab-pane\" data-pane=\"shekha\">'+infoContent+'</div>'
+          + '<div class=\"kids-tab-pane\" data-pane=\"tottho\">'+dataContent+'</div>';
+        // create tab buttons
+        tabs.forEach(function(tab, ti){
+          var b=document.createElement('button');
+          b.type='button'; b.textContent=tab.label; b.dataset.tab=tab.id;
+          b.setAttribute('role','tab'); b.setAttribute('aria-selected', ti===0?'true':'false');
+          if(ti===0) b.classList.add('active');
+          b.addEventListener('click', function(){
+            tabBar.querySelectorAll('button').forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
+            b.classList.add('active'); b.setAttribute('aria-selected','true');
+            panesWrap.querySelectorAll('.kids-tab-pane').forEach(function(p){ p.classList.remove('active'); if(p.dataset.pane===tab.id) p.classList.add('active'); });
+          });
+          tabBar.appendChild(b);
+        });
+        // Replace card content
+        card.innerHTML='';
+        card.appendChild(tabBar);
+        // move panesWrap children into card
+        while(panesWrap.firstChild) card.appendChild(panesWrap.firstChild);
+      });
+    })();
+
     // ===== Kids Fun XP system (local only) =====
     (function(){
       var XP_KEY='kidsFunXP';
@@ -420,6 +491,8 @@
         if(m) { m.textContent='+'+n+' XP — '+why+'!'; m.style.color='#2e7d32'; setTimeout(renderXP, 1800); }
       }
       window.kidsAddXP=addXP;
+      // update inline counters
+      var el1=document.querySelectorAll('.kidsXPInline'); el1.forEach(function(e){ e.textContent=xp; });
       renderXP();
 
       // 1. Sila game

@@ -1,0 +1,96 @@
+/* Mobile fixes — 2026-10-31 — double browsing bug resolved */
+* { box-sizing: border-box; }
+img, svg, canvas, video, iframe { max-width: 100%; }
+body { overflow-x: hidden; word-wrap: break-word; overflow-wrap: anywhere; }
+
+/* Viewport & font scaling */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+@media (max-width: 760px) {
+  body.cb { font-size: 15px; line-height: 1.65; }
+  .cb-wrap { padding-left: 12px; padding-right: 12px; }
+  .cb-header { padding: 6px 0; }
+}
+
+/* Fix: bhasha hub banner (index.html) — stack on mobile */
+#bhasha-hub-banner div[style*="grid-template-columns: 1.15fr"] {
+  grid-template-columns: 1fr !important;
+}
+@media (max-width: 900px) {
+  #bhasha-hub-banner div[style*="grid-template-columns: 1.15fr"] { gap: 14px !important; }
+}
+
+/* News grid: collapse featured + list */
+.cb-news-grid { grid-template-columns: 1.3fr .9fr; }
+@media (max-width: 860px) {
+  .cb-news-grid { grid-template-columns: 1fr !important; }
+  div[style*="grid-template-columns: repeat(5,1fr)"] { grid-template-columns: repeat(2,1fr) !important; }
+  div[style*="grid-template-columns: repeat(5,1fr)"] a { padding: 10px !important; }
+}
+@media (max-width: 520px) {
+  div[style*="grid-template-columns: repeat(5,1fr)"] { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* Top bar filter chips: make scrollable, not break */
+div[style*="position:sticky; top:48px"] { top: 0 !important; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; flex-wrap: nowrap !important; }
+div[style*="position:sticky; top:48px"] .kbd { flex: none; white-space: nowrap; }
+.tabs { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 6px !important; }
+.tabs a { font-size: 11px !important; padding: 6px 10px !important; }
+
+/* Hub / grid cards: ensure single column on phone */
+@media (max-width: 900px) {
+  .hub-grid { grid-template-columns: 1fr !important; }
+  .grid2, .grid3, .grid4 { grid-template-columns: 1fr !important; }
+  .kids-game-layout { grid-template-columns: 1fr !important; }
+  div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+  .cb-dash-layout { grid-template-columns: 1fr !important; }
+  .cb-dist { grid-template-columns: 1fr !important; }
+  .paper-layout, .art-layout, .arch-grid, .kirtan-intro, .craft-lab { grid-template-columns: 1fr !important; display: grid; gap: 14px; }
+  .mx-grid.wide { grid-template-columns: 1fr !important; }
+}
+
+/* Tables: horizontal scroll wrapper */
+table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table thead, table tbody { display: table; width: 100%; min-width: 520px; }
+#leadership table { min-width: 560px; }
+@media (max-width: 560px) {
+  table thead, table tbody { min-width: 480px; }
+}
+
+/* Canvas: responsive height */
+.canvas-wrap canvas, #mainCanvas, #chCanvas, #artCanvas, #digCanvas, #gpDigCanvas {
+  width: 100% !important; height: auto !important; max-height: 300px; aspect-ratio: 3 / 1;
+}
+#artCanvas { aspect-ratio: 9 / 7; max-height: 420px; }
+
+/* Cards: prevent overflow */
+.card, .hub-card, .kids-game-card, .mx-card, .cb-trip-panel { overflow-wrap: anywhere; word-break: break-word; }
+.kbd, .cb-btn, .cb-chip { max-width: 100%; white-space: normal; word-break: break-word; }
+
+/* Header nav: ensure burger visible */
+@media (max-width: 760px) {
+  .cb-hero h1 { font-size: clamp(22px, 6vw, 28px) !important; line-height: 1.2; }
+  .cb-actions { flex-wrap: wrap; gap: 8px; }
+  .cb-hero-stats { grid-template-columns: repeat(2,1fr) !important; gap: 8px; }
+  .cb-actions .cb-btn { font-size: 13px; padding: 8px 12px; }
+}
+
+/* Fix double horizontal scroll */
+.cb-section, .cb-wrap, .hero, .kids-hero { overflow-x: clip; }
+.cb-news-ticker { overflow: hidden; }
+.cb-news-ticker div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Font legibility on small screens */
+@media (max-width: 520px) {
+  small, .badge { font-size: 10px !important; }
+  .card p, .hub-card small { font-size: 12px !important; }
+  .cb-eyebrow { font-size: 10px !important; }
+}
+
+/* Image safety */
+.cb-buddha-fig img, .kids-hero-art, .dig-artifact img, .arch-card img { height: auto; }
+
+/* Prevent double gap on mobile */
+@media (max-width: 760px) {
+  .cb-section { padding: 32px 0 !important; }
+  .hero { padding: 18px 0 10px !important; }
+}

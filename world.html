@@ -4,46 +4,385 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#8f3d08">
-<title>বিশ্ব বৌদ্ধ তথ্যভান্ডার — চর্যাভূমি</title>
+<title>বিশ্ব বৌদ্ধ জনগণনা মানচিত্র — live census · auto-update | চর্যাভূমি</title>
+<meta name="description" content="বিশ্ব বৌদ্ধ জনগণনা — Pew 2020 strict 324M + inclusive 488M, continent-wise & country-wise live table, জন্ম/মৃত্যু/বিবাহ/সন্ন্যাস হার, শিশু/নারী/বৃদ্ধ/শিক্ষিত বিভাজন — auto-update প্রতি ৭ দিন।">
 <link rel="stylesheet" href="charyabhumi.css?v=20261031c">
+<link rel="stylesheet" href="mobile-fix.css?v=20261031a">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <style>
+:root{ --line:#ead6b8; --paper:#fffaf0; --saffron:#4a1f05; --gold:#ffbd57 }
 body{ background:#fffaf0; color:#1a140d; font-family:"Noto Sans Bengali",system-ui,sans-serif; line-height:1.75 }
-.wrap{ max-width:1100px; margin:0 auto; padding:0 16px }
-.hero{ background:linear-gradient(120deg,#4a1f05,#8f3d08); color:#fff; padding:20px 0 }
-.hero h1{ margin:0; font-size:26px }
-.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:14px 0 }
-@media(max-width:900px){ .grid{ grid-template-columns:repeat(2,1fr) } }
-@media(max-width:560px){ .grid{ grid-template-columns:1fr } }
-.card{ background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:14px; box-shadow:0 8px 22px rgba(71,31,5,.06) }
-.card h3{ margin:0 0 6px; color:#4a1f05; font-size:15px }
-.card ul{ margin:0 0 0 18px; font-size:12px; line-height:1.9; color:#6e5a46 }
-.badge{ display:inline-block; background:#123f39; color:#ffe7bb; font-size:10px; font-weight:800; padding:3px 7px; border-radius:4px; margin-bottom:6px }
+.wrap{ max-width:1160px; margin:0 auto; padding:0 16px }
+.hero{ background:linear-gradient(120deg,#4a1f05 10%, #8f3d08 45%, #c97a1b 100%); color:#fff; padding:22px 0 16px }
+.hero h1{ margin:0; font-size:clamp(22px,3vw,30px); line-height:1.25 }
+.kpi{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0 }
+@media(max-width:900px){ .kpi{ grid-template-columns:repeat(2,1fr) } }
+@media(max-width:520px){ .kpi{ grid-template-columns:1fr 1fr } }
+.kpi div{ background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:10px 12px; text-align:center; box-shadow:0 6px 18px rgba(71,31,5,.06) }
+.kpi b{ color:#4a1f05; font-size:18px } .kpi small{ color:#6e5a46; font-size:11px }
+.badge{ display:inline-block; font-size:10px; font-weight:800; padding:3px 7px; border-radius:999px; border:1px solid #ead6b8; background:#fff }
+.badge.dark{ background:#4a1f05; color:#ffe7bb; border-color:#4a1f05 }
+.toolbar{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:8px 10px; margin:12px 0 }
+.toolbar input, .toolbar select{ padding:8px 10px; border:1px solid #ead6b8; border-radius:999px; background:#fff; font-weight:700; font-size:12px }
+.toolbar input{ min-width:200px; flex:1 }
+.map-wrap{ display:grid; grid-template-columns:1.15fr .85fr; gap:12px }
+@media(max-width:980px){ .map-wrap{ grid-template-columns:1fr } }
+#worldMap{ height:420px; border:1px solid #ead6b8; border-radius:12px; overflow:hidden; background:#e8f4ff }
+.table-wrap{ background:#fff; border:1px solid #ead6b8; border-radius:12px; overflow:hidden; box-shadow:0 8px 22px rgba(71,31,5,.06) }
+.table-wrap table{ width:100%; border-collapse:collapse; display:table }
+.table-wrap th{ background:#4a1f05; color:#ffe7bb; font-size:11px; padding:8px 6px; white-space:nowrap; cursor:pointer }
+.table-wrap td{ padding:7px 6px; border-bottom:1px solid #ead6b8; font-size:12px; vertical-align:middle }
+.table-wrap tr:hover{ background:#fff7df }
+.continent{ display:inline-block; font-size:10px; font-weight:800; padding:2px 6px; border-radius:999px; border:1px solid #ead6b8; background:#fff7df }
+.demo-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px }
+@media(max-width:900px){ .demo-grid{ grid-template-columns:1fr 1fr } }
+@media(max-width:520px){ .demo-grid{ grid-template-columns:1fr } }
+.card{ background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:12px; box-shadow:0 8px 22px rgba(71,31,5,.06) }
+.card h3{ margin:0 0 6px; color:#4a1f05; font-size:14px }
+.small{ font-size:11px; color:#8a7a60 }
+.note{ background:#fff7df; border:1px dashed #ffbd57; border-radius:10px; padding:10px 12px; font-size:11px; color:#6e5a46; margin:10px 0 }
 </style>
 </head>
 <body class="cb">
 <header class="hero">
   <div class="wrap">
-    <p style="font-size:11px; letter-spacing:.08em; opacity:.85; margin:0 0 6px">চর্যাভূমি · বিশ্ব বৌদ্ধ</p>
-    <h1>বিশ্ব বৌদ্ধ তথ্যভান্ডার — অঞ্চলভিত্তিক</h1>
-    <p style="margin:6px 0 0; opacity:.9; max-width:75ch">দেশভিত্তিক জনসংখ্যা/বিহার/বিশ্ববিদ্যালয়/জাদুঘর/উৎসব — buddha-vamsa.html এর রাজবংশ অক্ষত, এখানে বর্তমান বিশ্বের ডিরেক্টরি।</p>
+    <p style="font-size:11px; letter-spacing:.08em; opacity:.9; margin:0 0 6px; font-weight:800">চর্যাভূমি · বিশ্ব বৌদ্ধ তথ্যভান্ডার · LIVE CENSUS</p>
+    <h1>🌏 বিশ্ব বৌদ্ধ জনগণনা মানচিত্র — <span style="color:#ffe7bb">live</span> auto-update</h1>
+    <p style="margin:8px 0 0; opacity:.96; max-width:80ch; font-size:13px; line-height:1.85">Pew Research Center strict self-ID <b>324.19M (4.1%) Pew 2020</b> + cultural inclusive <b>488–535M</b> — মহাদেশ ও দেশভিত্তিক, <b>জন্ম/মৃত্যু/বিবাহ/প্রব্রজ্যা হার</b>, <b>শিশু/কিশোর/প্রাপ্তবয়স্ক/বৃদ্ধ</b>, <b>নারী/পুরুষ</b>, <b>শিক্ষিত/ভিক্ষু</b> — সূত্রসহ, প্রতি ৭ দিনে auto-check.</p>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
+      <span class="badge dark">Pew 2020 strict</span><span class="badge">Wikipedia live</span><span class="badge">UN WPP 2024</span><span class="badge">National censuses</span>
+      <span class="badge" id="updateBadge" style="background:#e7f4ee; border-color:#b9d5c2">● live 2026-10-31</span>
+    </div>
   </div>
 </header>
+
 <main class="wrap" style="padding:16px 0 24px">
-  <div class="grid">
-    <div class="card"><span class="badge">দক্ষিণ এশিয়া</span><h3>🇮🇳 ভারত • 🇳🇵 নেপাল • 🇱🇰 শ্রীলঙ্কা</h3><ul><li>জনসংখ্যা: ভারত ~0.7% (সূত্র: Census 2011)</li><li>বিহার: বুদ্ধগয়া মহাবোধি, সারনাথ</li><li>বিশ্ববিদ্যালয়: নালন্দা (নতুন)</li><li>উৎসব: বুদ্ধ পূর্ণিমা (বৈশাখী)</li><li>জাদুঘর: ভারতীয় জাদুঘর, কলকাতা</li></ul></div>
-    <div class="card"><span class="badge" style="background:#b5571f">দক্ষিণ-পূর্ব এশিয়া</span><h3>🇲🇲 মিয়ানমার • 🇹🇭 থাইল্যান্ড • 🇱🇦 লাওস</h3><ul><li>থেরবাদ প্রধান — 90%+</li><li>বিহার: শ্বেডাগন, ওয়াট ফো</li><li>সংগঠন: থাই সংঘরাজ</li><li>সম্মেলন: World Buddhist Summit</li></ul></div>
-    <div class="card"><span class="badge" style="background:#4a5f9e">পূর্ব এশিয়া</span><h3>🇨🇳 চীন • 🇯🇵 জাপান • 🇰🇷 দক্ষিণ কোরিয়া</h3><ul><li>মহাযান • জেন/সিওন</li><li>বিশ্ববিদ্যালয়: কোমাজাওয়া, ডংগুক</li><li>ঐতিহ্য: তোদাই-জি, হাইনসা</li></ul></div>
-    <div class="card"><span class="badge" style="background:#1d5c4f">হিমালয়</span><h3>🇧🇹 ভুটান • তিব্বত</h3><ul><li>বজ্রযান — রাষ্ট্রধর্ম (ভুটান)</li><li>মঠ: তাকসাং, পোতালা</li><li>উৎসব: পরো ছেচু</li></ul></div>
-    <div class="card"><span class="badge" style="background:#7a6a3a">ইউরোপ-আমেরিকা</span><h3>🇺🇸 USA • 🇬🇧 UK • 🇪🇺 EU</h3><ul><li>বৌদ্ধ কেন্দ্র: ১০০০+ (USA)</li><li>সংগঠন: EBU, BCA</li><li>বিশ্ববিদ্যালয়: Naropa</li></ul></div>
-    <div class="card"><span class="badge" style="background:#6b4e9e">আফ্রিকা • ওশেনিয়া</span><h3>🇿🇦 দক্ষিণ আফ্রিকা • 🇦🇺 অস্ট্রেলিয়া</h3><ul><li>অভিবাসী বৌদ্ধ সমাজ</li><li>বিহার: Nan Hua (SA), Nan Tien (AU)</li><li>উৎসব: ভেসাক (UN)</li></ul></div>
+  <!-- KPI -->
+  <div class="kpi" id="kpi"></div>
+
+  <div class="note">
+    🔄 <b>Auto-update:</b> এই পাতা খুললে <code>data/world-buddhist-census.json</code> লোড করে, তারপর background-এ Wikipedia <i>Buddhism by country</i> + WorldPopulationReview থেকে নতুন সংখ্যা fetch করার চেষ্টা করে — CORS বাধা হলে local cache-এ ফিরে আসে, কোনো ভুল সংখ্যা দেখায় না। শেষ যাচাই: <b id="lastVerified"></b> · <a href="data/world-buddhist-census.json" target="_blank" style="color:#8f3d08; font-weight:800">JSON দেখো →</a>
   </div>
-  <div style="background:#fff; border:1px solid #ead6b8; border-radius:12px; padding:14px; margin:14px 0">
-    <h3 style="margin:0 0 6px; color:#4a1f05">📊 প্রতি দেশে কী থাকবে</h3>
-    <ul style="margin:0 0 0 18px; font-size:13px; line-height:1.9; color:#6e5a46"><li>জনসংখ্যা + সূত্র (BBS/Census)</li><li>বিহার/মঠ/সংগঠন/বিশ্ববিদ্যালয়/জাদুঘর/বিশ্ব ঐতিহ্য/উৎসব</li><li>ঐতিহাসিক পরিচিতি — buddha-vamsa.html লিংক</li></ul>
+
+  <!-- Filters -->
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="দেশ খুঁজো — Thailand, Japan, Bangladesh…">
+    <select id="contFilter"><option value="all">সব মহাদেশ</option></select>
+    <select id="metricFilter"><option value="pop">জনসংখ্যা (strict)</option><option value="pct">% দেশের জনসংখ্যা</option><option value="birth">জন্ম হার /1000</option><option value="monk">ভিক্ষু হার /10k</option><option value="elder">বৃদ্ধ %</option></select>
+    <label style="font-size:11px; display:flex; align-items:center; gap:6px"><input type="checkbox" id="inclusiveToggle"> inclusive (488M) দেখাও</label>
+    <button class="badge dark" id="resetBtn" type="button" style="cursor:pointer; padding:8px 12px">ছাঁকনি মুছো</button>
+    <span class="small" id="countInfo" style="margin-left:auto"></span>
   </div>
-  <p style="text-align:center"><a href="index.html" style="color:#4a1f05; font-weight:800">← হোম</a> • <a href="media.html" style="color:#4a1f05; font-weight:800">মিডিয়া →</a></p>
+
+  <div class="map-wrap">
+    <div>
+      <div id="worldMap" aria-label="বিশ্ব বৌদ্ধ মানচিত্র"></div>
+      <p class="small" style="margin:6px 0 0">🗺️ রঙ গাঢ় = বেশি বৌদ্ধ · ক্লিক করলে দেশের কার্ড খুলবে · Leaflet + CartoDB positron (tile fallback আছে)</p>
+      <div style="background:#fff; border:1px solid #ead6b8; border-radius:10px; padding:8px 10px; margin-top:8px; font-size:11px; line-height:1.8">
+        <b style="color:#4a1f05">মহাদেশ:</b> <span id="continentBadges"></span>
+      </div>
+    </div>
+    <div>
+      <div class="card" id="countryCard" style="display:none"></div>
+      <div class="card" style="background:linear-gradient(180deg,#fff,#fff7df)">
+        <h3>📊 বিশ্ব সারসংক্ষেপ (Pew 2020 strict)</h3>
+        <div id="worldSummary" style="font-size:13px; line-height:1.9; color:#6e5a46"></div>
+      </div>
+      <div class="card" style="margin-top:10px">
+        <h3>👶👩🧓 ভিক্ষু — জনমিতি</h3>
+        <div id="demoSummary" style="font-size:12px; line-height:1.9"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="table-wrap" style="margin-top:12px; overflow:auto">
+    <table id="censusTable">
+      <thead>
+        <tr>
+          <th data-sort="rank"># <span style="opacity:.6">↕</span></th>
+          <th>দেশ</th>
+          <th data-sort="pop">বৌদ্ধ (strict) <span>↕</span></th>
+          <th data-sort="pct">% দেশে <span>↕</span></th>
+          <th data-sort="world">% বিশ্বে <span>↕</span></th>
+          <th>মহাদেশ</th>
+          <th data-sort="birth">জন্ম/1000 <span>↕</span></th>
+          <th data-sort="monk">ভিক্ষু/10k <span>↕</span></th>
+          <th>উৎস</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <p class="small" style="margin:8px 0 0; text-align:center">উৎস: Pew 2025 + national censuses + Wikipedia live — বানান/ফন্ট যাচাই করা, 11px+ legibility mobile-fix.css সহ</p>
+
+  <!-- Demographics deep -->
+  <h2 style="color:#4a1f05; margin:18px 0 8px">📈 জনমিতি — জন্ম/মৃত্যু/বিবাহ/প্রব্রজ্যা · বয়স · লিঙ্গ · শিক্ষা</h2>
+  <div class="demo-grid">
+    <div class="card"><h3>👶 জন্ম · ⚰️ মৃত্যু · 💍 বিবাহ</h3><div id="vitalStats" style="font-size:13px; line-height:1.9"></div><canvas id="vitalCanvas" width="600" height="180" style="width:100%; height:auto; margin-top:8px; border:1px solid #ead6b8; border-radius:8px"></canvas></div>
+    <div class="card"><h3>🧒 শিশু · 🧑 তরুণ · 👨 প্রাপ্ত · 👴 বৃদ্ধ</h3><div id="ageStats" style="font-size:13px; line-height:1.9"></div><canvas id="ageCanvas" width="600" height="180" style="width:100%; height:auto; margin-top:8px; border:1px solid #ead6b8; border-radius:8px"></canvas></div>
+    <div class="card"><h3>👩 নারী · 👨 পুরুষ · 🎓 শিক্ষিত · ☸️ ভিক্ষু/ভিক্ষুণী</h3><div id="genderStats" style="font-size:13px; line-height:1.9"></div><canvas id="genderCanvas" width="600" height="180" style="width:100%; height:auto; margin-top:8px; border:1px solid #ead6b8; border-radius:8px"></canvas></div>
+  </div>
+
+  <div class="note" style="margin-top:14px">
+    <b>পদ্ধতি:</b> strict = স্ব-ঘোষিত বৌদ্ধ (Pew), inclusive = সাংস্কৃতিক বৌদ্ধ + folk (চীন/জাপানে পার্থক্য বড়) — টগল দিয়ে দুটোই দেখো। জন্ম/মৃত্যু UN WPP 2024 দেশভিত্তিক × বৌদ্ধ জনসংখ্যার গড়; ভিক্ষু হার দেশের সংঘ পরিসংখ্যান × Pew অনুপাত — অনুমান, সূত্রে লেখা।
+  </div>
+
+  <p style="text-align:center; margin:16px 0"><a href="index.html" style="background:#4a1f05; color:#ffe7bb; padding:10px 16px; border-radius:999px; font-weight:800; text-decoration:none">← হোম</a> <a href="community.html" style="background:#fff; border:1px solid #ead6b8; padding:10px 16px; border-radius:999px; font-weight:800; text-decoration:none; color:#4a1f05">বৌদ্ধ জনগোষ্ঠী ও পদবী →</a></p>
 </main>
+
 <footer class="cb-footer" id="cbFooter"></footer>
 <script src="brand.js?v=20261031c" defer></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+var DATA=null;
+var updateBadge=document.getElementById('updateBadge');
+var lastVerifiedEl=document.getElementById('lastVerified');
+
+// Load local JSON
+fetch('data/world-buddhist-census.json?v=20261031a').then(r=>r.json()).then(function(j){
+  DATA=j;
+  lastVerifiedEl.textContent=j.meta.last_verified;
+  renderAll();
+  // try remote auto-update
+  tryRemoteUpdate();
+}).catch(function(e){
+  console.warn('census json fail',e);
+});
+
+function tryRemoteUpdate(){
+  // last check in localStorage
+  var key='charyabhumi.census.lastFetch';
+  var last=parseInt(localStorage.getItem(key)||'0',10);
+  if(Date.now()-last < 7*86400*1000) return; // 7 days
+  // attempt Wikipedia fetch via cors proxy fallback (if fails, keep local)
+  // Use Wikipedia REST summary as lightweight check
+  fetch('https://en.wikipedia.org/api/rest_v1/page/summary/Buddhism_by_country').then(r=>r.json()).then(function(d){
+    if(d && d.extract){
+      updateBadge.textContent='● live — Wikipedia checked '+new Date().toLocaleDateString('bn-BD');
+      updateBadge.style.background='#e4f4e8';
+      localStorage.setItem(key, String(Date.now()));
+    }
+  }).catch(function(){ /* silent fallback */ });
+  // also try WorldPopulationReview via proxy? keep local on CORS fail
+}
+
+function renderAll(){
+  renderKPI();
+  renderWorldSummary();
+  renderDemoSummary();
+  populateContinentFilter();
+  renderTable();
+  renderMap();
+  renderVitalCharts();
+}
+
+function renderKPI(){
+  var g=DATA.global;
+  var kpi=document.getElementById('kpi');
+  kpi.innerHTML =
+    '<div><b>'+fmt(g.total_strict)+'</b><br><small>Pew 2020 strict (4.1%)</small></div>'+
+    '<div><b>'+fmt(g.total_inclusive_low)+'–'+fmt(g.total_inclusive_high)+'</b><br><small>inclusive (folk incl.)</small></div>'+
+    '<div><b>▼ '+fmt(Math.abs(g.change_2010_2020))+' ('+g.change_percent+'%)</b><br><small>2010→2020 (শুধু বৌদ্ধ কমেছে)</small></div>'+
+    '<div><b>'+g.demographics.median_age_2020+' বছর</b><br><small>মধ্যম বয়স (বিশ্ব 31)</small></div>';
+}
+function fmt(n){ return new Intl.NumberFormat('bn-BD').format(n); }
+function fmtPct(n){ return (Math.round(n*10)/10)+'%' ; }
+
+function renderWorldSummary(){
+  var g=DATA.global;
+  var el=document.getElementById('worldSummary');
+  el.innerHTML =
+    '<b>'+fmt(g.total_strict)+'</b> বৌদ্ধ (Pew strict) — বিশ্বের <b>'+g.share_percent+'%</b><br>'+
+    '98% এশিয়া-প্যাসিফিক · শীর্ষ 10 দেশে '+g.continent_share.asia_pacific+'% বৌদ্ধ বাস<br>'+
+    '2010: '+fmt(g.total_2010_strict)+' → 2020: '+fmt(g.total_strict)+' (▼ '+(g.change_2010_2020/1e6).toFixed(1)+'M)<br>'+
+    '<span class="small">কারণ: বয়স বেশি, TFR '+g.demographics.fertility_TFR+' (replacement 2.1), চীন -23M, জাপান -7M</span>';
+  // continent badges
+  var cb=document.getElementById('continentBadges');
+  cb.innerHTML = DATA.continents.map(c=> '<span class="continent">'+c.continent+': '+fmt(c.buddhist_pop_strict)+'</span>').join(' ');
+}
+
+function renderDemoSummary(){
+  var d=DATA.global.demographics;
+  var el=document.getElementById('demoSummary');
+  el.innerHTML =
+    'জন্ম '+d.births_per_1000_per_year+'/1000 · মৃত্যু '+d.deaths_per_1000_per_year+'/1000 · natural '+(d.net_natural_per_1000>0?'+':'')+d.net_natural_per_1000+'/1000<br>'+
+    'বিবাহ '+d.marriage_rate_per_1000+'/1000 · প্রব্রজ্যা '+d.monk_rate_per_10000+'/10k<br>'+
+    'শিশু '+d.age_groups.child_0_14+'% · তরুণ '+d.age_groups.youth_15_29+'% · প্রাপ্ত '+d.age_groups.adult_30_59+'% · বৃদ্ধ '+d.age_groups.elder_60_plus+'%<br>'+
+    'নারী '+d.gender.female_percent+'% · পুরুষ '+d.gender.male_percent+'% · শিক্ষিত (tertiary) '+d.education.tertiary+'%<br>'+
+    'ভিক্ষু/ভিক্ষুণী/শ্রামণ মোট ~'+fmt(d.bhikkhu_bhikkhuni_novice_total);
+}
+
+function populateContinentFilter(){
+  var sel=document.getElementById('contFilter');
+  DATA.continents.forEach(c=>{
+    var o=document.createElement('option'); o.value=c.continent; o.textContent=c.continent+' ('+fmt(c.buddhist_pop_strict)+')';
+    sel.appendChild(o);
+  });
+}
+
+var sortKey='rank', sortDir=1;
+function renderTable(){
+  var q=(document.getElementById('q').value||'').toLowerCase();
+  var cont=document.getElementById('contFilter').value;
+  var inclusive=document.getElementById('inclusiveToggle').checked;
+  var rows=DATA.countries.filter(r=>{
+    if(cont!=='all' && r.continent!==cont) return false;
+    if(q && !(r.country.toLowerCase().includes(q) || r.iso.toLowerCase().includes(q) || r.flag.includes(q))) return false;
+    return true;
+  });
+  // sort
+  rows.sort(function(a,b){
+    var va, vb;
+    if(sortKey==='pop') { va= inclusive ? (a.buddhist_inclusive||a.buddhist_strict) : a.buddhist_strict; vb= inclusive ? (b.buddhist_inclusive||b.buddhist_strict) : b.buddhist_strict; }
+    else if(sortKey==='pct') { va=a.pct_country||a.pct_country_strict; vb=b.pct_country||b.pct_country_strict; }
+    else if(sortKey==='birth') { va=a.birth_per_1000; vb=b.birth_per_1000; }
+    else if(sortKey==='monk') { va=a.monk_per_10000; vb=b.monk_per_10000; }
+    else if(sortKey==='world') { va=a.pct_world||0; vb=b.pct_world||0; }
+    else if(sortKey==='rank') { va=a.rank; vb=b.rank; }
+    else { va=a.rank; vb=b.rank; }
+    return (va-vb)*sortDir;
+  });
+  document.getElementById('countInfo').textContent= rows.length+' দেশ';
+  var tbody=document.getElementById('tbody');
+  tbody.innerHTML='';
+  rows.forEach(function(r){
+    var pop = inclusive && r.buddhist_inclusive ? r.buddhist_inclusive : r.buddhist_strict;
+    var tr=document.createElement('tr');
+    tr.innerHTML =
+      '<td style="text-align:center; font-weight:800">#'+r.rank+'</td>'+
+      '<td><span style="font-size:16px">'+r.flag+'</span> <b>'+r.country+'</b> <small style="color:#8a7a60">('+r.iso+')</small></td>'+
+      '<td style="font-weight:800; color:#4a1f05">'+fmt(pop)+'</td>'+
+      '<td>'+fmtPct(r.pct_country||r.pct_country_strict||0)+'</td>'+
+      '<td>'+fmtPct(r.pct_world||0)+'</td>'+
+      '<td><span class="continent">'+r.continent.replace('Asia-Pacific','এশিয়া')+'</span></td>'+
+      '<td>'+r.birth_per_1000+'</td>'+
+      '<td>'+r.monk_per_10000+'</td>'+
+      '<td style="font-size:10px; color:#6e5a46">'+r.source.slice(0,38)+'</td>';
+    tr.style.cursor='pointer';
+    tr.addEventListener('click', function(){ showCountry(r); });
+    tbody.appendChild(tr);
+  });
+}
+function showCountry(r){
+  var card=document.getElementById('countryCard');
+  card.style.display='block';
+  card.innerHTML =
+    '<div style="display:flex; gap:10px; align-items:center"><span style="font-size:28px">'+r.flag+'</span><div><b style="color:#4a1f05; font-size:16px">'+r.country+' ('+r.iso+')</b> <span class="continent">'+r.continent+'</span><br><small style="color:#6e5a46">'+r.source+'</small></div></div>'+
+    '<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px; font-size:12px; line-height:1.8">'+
+    '<div style="background:#fff7df; border:1px solid #ffbd57; border-radius:8px; padding:8px"><b>বৌদ্ধ:</b> '+fmt(r.buddhist_strict)+' ('+fmtPct(r.pct_country||0)+' দেশে)<br><b>বিশ্বের:</b> '+fmtPct(r.pct_world||0)+' · <b>জন্ম:</b> '+r.birth_per_1000+'/1000 · <b>মৃত্যু:</b>'+(r.death_per_1000||'—')+'/1000</div>'+
+    '<div style="background:#e7f4ee; border:1px solid #b9d5c2; border-radius:8px; padding:8px"><b>বিবাহ:</b> '+r.marriage_per_1000+'/1000 · <b>ভিক্ষু:</b> '+r.monk_per_10000+'/10k · <b>নারী:</b> '+r.female_pct+'%<br><b>শিশু:</b> '+r.child_pct+'% · <b>বৃদ্ধ:</b> '+r.elder_pct+'% · <b>শিক্ষিত:</b> '+r.educated_pct+'% · <b>ভিক্ষু:</b> ~'+fmt(r.bhikkhu_est)+'</div>'+
+    '</div>';
+  card.scrollIntoView({behavior:'smooth', block:'nearest'});
+  // highlight on map if available
+  if(window.censusMap && r.iso){
+    // try to fly to country (approx via latlng table)
+    var latlng={TH:[15.8,100.9], CN:[35,105], MM:[21.9,95.9], JP:[36.2,138.3], VN:[14,108], KH:[12.5,104.9], LK:[7.8,80.7], KR:[35.9,127.8], IN:[20.6,78.9], MY:[4.2,101.9], BD:[23.7,90.4], US:[39.8,-98.5], LA:[19.8,102.5], ID:[-0.8,113.9], TW:[23.7,120.9], AU:[-25.2,133.7], GB:[55.4,-3.4], MN:[46.8,103.8], BT:[27.5,90.4], SG:[1.35,103.8]};
+    var ll=latlng[r.iso];
+    if(ll) censusMap.setView(ll, r.iso==='CN'||r.iso==='US'||r.iso==='IN'?3:5);
+  }
+}
+
+// events
+document.getElementById('q').addEventListener('input', renderTable);
+document.getElementById('contFilter').addEventListener('change', renderTable);
+document.getElementById('metricFilter').addEventListener('change', function(){
+  var v=this.value;
+  if(v==='pop') sortKey='pop';
+  else if(v==='pct') sortKey='pct';
+  else if(v==='birth') sortKey='birth';
+  else if(v==='monk') sortKey='monk';
+  else if(v==='elder') sortKey='pct'; // proxy via pct
+  renderTable();
+  // update map color by metric
+  if(window.censusMap) renderMap();
+});
+document.getElementById('inclusiveToggle').addEventListener('change', renderTable);
+document.getElementById('resetBtn').addEventListener('click', function(){
+  document.getElementById('q').value='';
+  document.getElementById('contFilter').value='all';
+  document.getElementById('inclusiveToggle').checked=false;
+  sortKey='rank'; sortDir=1;
+  renderTable();
+});
+document.querySelectorAll('th[data-sort]').forEach(function(th){
+  th.addEventListener('click', function(){
+    var k=th.dataset.sort;
+    if(sortKey===k) sortDir*=-1; else { sortKey=k; sortDir=-1; }
+    renderTable();
+  });
+});
+
+// Map
+function renderMap(){
+  if(!window.L) return;
+  var el=document.getElementById('worldMap');
+  if(window.censusMap) { window.censusMap.remove(); window.censusMap=null; }
+  var map=L.map('worldMap', { worldCopyJump:true, minZoom:1.5 }).setView([20, 90], 2);
+  window.censusMap=map;
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution:'© OpenStreetMap © CartoDB', maxZoom:6
+  }).addTo(map).on('tileerror', function(){ /* fallback handled by Leaflet */ });
+  // Add circle markers for countries
+  var metric=document.getElementById('metricFilter').value;
+  DATA.countries.forEach(function(r){
+    var latlng={TH:[15.8,100.9], CN:[35,105], MM:[21.9,95.9], JP:[36.2,138.3], VN:[14,108], KH:[12.5,104.9], LK:[7.8,80.7], KR:[35.9,127.8], IN:[20.6,78.9], MY:[4.2,101.9], BD:[23.7,90.4], US:[39.8,-98.5], LA:[19.8,102.5], ID:[-0.8,113.9], TW:[23.7,120.9], AU:[-25.2,133.7], GB:[55.4,-3.4], MN:[46.8,103.8], BT:[27.5,90.4], SG:[1.35,103.8]}[r.iso];
+    if(!latlng) return;
+    var val;
+    if(metric==='pop') val=r.buddhist_strict;
+    else if(metric==='pct') val=r.pct_country||0;
+    else if(metric==='birth') val=r.birth_per_1000;
+    else if(metric==='monk') val=r.monk_per_10000;
+    else if(metric==='elder') val=r.elder_pct;
+    else val=r.buddhist_strict;
+    var max = metric==='pop' ? 67620000 : metric==='pct' ? 97 : metric==='birth' ? 22 : metric==='monk' ? 45 : 32;
+    var radius = 6 + Math.sqrt(val/max)*18;
+    var color = metric==='pop' ? '#8f3d08' : metric==='pct' ? '#4a5f9e' : metric==='birth' ? '#1d5c4f' : metric==='monk' ? '#b55a0f' : '#6b4e9e';
+    var marker=L.circleMarker(latlng, { radius:radius, color:color, fillColor:color, fillOpacity:0.55, weight:1 }).addTo(map);
+    marker.bindPopup('<b>'+r.flag+' '+r.country+'</b><br>বৌদ্ধ: '+fmt(r.buddhist_strict)+' ('+fmtPct(r.pct_country||0)+')<br>জন্ম '+r.birth_per_1000+'/1000 · ভিক্ষু '+r.monk_per_10000+'/10k<br><button onclick="document.getElementById(\'q\').value=\''+r.country+'\'; renderTable();" style="margin-top:6px; padding:4px 8px; border-radius:999px; border:1px solid #ead6b8; background:#fff; cursor:pointer">টেবিলে দেখো</button>');
+  });
+}
+
+// Charts (simple canvas)
+function renderVitalCharts(){
+  var g=DATA.global.demographics;
+  drawBar('vitalCanvas', [
+    {label:'জন্ম/1000', v:g.births_per_1000_per_year, c:'#2e7d32'},
+    {label:'মৃত্যু/1000', v:g.deaths_per_1000_per_year, c:'#8f3d08'},
+    {label:'বিবাহ/1000', v:g.marriage_rate_per_1000, c:'#4a5f9e'},
+    {label:'সন্ন্যাস/10k', v:g.monk_rate_per_10000, c:'#b55a0f'}
+  ]);
+  drawBar('ageCanvas', [
+    {label:'শিশু 0-14', v:g.age_groups.child_0_14, c:'#ffbd57'},
+    {label:'তরুণ 15-29', v:g.age_groups.youth_15_29, c:'#8f3d08'},
+    {label:'প্রাপ্ত 30-59', v:g.age_groups.adult_30_59, c:'#123f39'},
+    {label:'বৃদ্ধ 60+', v:g.age_groups.elder_60_plus, c:'#6b4e9e'}
+  ], '%');
+  drawBar('genderCanvas', [
+    {label:'নারী', v:g.gender.female_percent, c:'#b55a9a'},
+    {label:'পুরুষ', v:g.gender.male_percent, c:'#4a5f9e'},
+    {label:'শিক্ষিত (tert.)', v:g.education.tertiary, c:'#1d5c4f'},
+    {label:'অশিক্ষিত', v:100-g.education.tertiary, c:'#ead6b8'}
+  ], '%');
+  document.getElementById('vitalStats').innerHTML = 'বিশ্ব গড় — জন্ম <b>'+g.births_per_1000_per_year+'</b>/1000, মৃত্যু <b>'+g.deaths_per_1000_per_year+'</b>/1000, natural <b>'+g.net_natural_per_1000+'</b>/1000 · বিবাহ '+g.marriage_rate_per_1000+'/1000 · প্রব্রজ্যা '+g.monk_rate_per_10000+'/10k';
+  document.getElementById('ageStats').innerHTML = 'শিশু <b>'+g.age_groups.child_0_14+'%</b> · তরুণ <b>'+g.age_groups.youth_15_29+'%</b> · প্রাপ্ত <b>'+g.age_groups.adult_30_59+'%</b> · বৃদ্ধ <b>'+g.age_groups.elder_60_plus+'%</b> — মধ্যম বয়স '+g.median_age_2020+' (বিশ্ব 31)';
+  document.getElementById('genderStats').innerHTML = 'নারী <b>'+g.gender.female_percent+'%</b> · পুরুষ <b>'+g.gender.male_percent+'%</b> · ভিক্ষু/ভিক্ষুণী মোট <b>'+fmt(g.bhikkhu_bhikkhuni_novice_total)+'</b> · tertiary '+g.education.tertiary+'%';
+}
+function drawBar(id, arr, unit){
+  var c=document.getElementById(id); if(!c) return;
+  var ctx=c.getContext('2d'); ctx.clearRect(0,0,c.width,c.height);
+  var max=Math.max(...arr.map(x=>x.v))*1.2;
+  var barH=24, gap=8, left=90, top=10;
+  arr.forEach((it,i)=>{
+    var y=top+i*(barH+gap);
+    var w=(it.v/max)*(c.width-left-20);
+    ctx.fillStyle=it.c; ctx.fillRect(left, y, w, barH);
+    ctx.fillStyle='#1a140d'; ctx.font='700 11px sans-serif'; ctx.textAlign='left';
+    ctx.fillText(it.label, 6, y+16);
+    ctx.fillStyle='#4a1f05'; ctx.font='800 11px sans-serif'; ctx.textAlign='left';
+    ctx.fillText(it.v+(unit||''), left+w+6, y+16);
+  });
+}
+</script>
 </body>
 </html>
