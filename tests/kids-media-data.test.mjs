@@ -323,9 +323,15 @@ test('kids-media: হালকা তালিকা (list) তৈরি হয�
   }
 });
 
-test('kids-media: অডিও preload=none (আগে থেকে MB ডাউনলোড হয় না)', () => {
+test('kids-media: অডিও preload=metadata, ভিডিও preload=none (আগে থেকে MB ডাউনলোড হয় না)', () => {
   const js = readFileSync(join(ROOT, 'kids-media.js'), 'utf8');
-  assert.match(js, /<audio controls preload="none"/, 'অডিও preload="none" নয়');
+  // অডিও ছোট (~৪৪০ KB) — metadata নামালে প্লেয়ারে গল্পের দৈর্ঘ্য দেখা যায়
+  assert.match(js, /<audio controls preload="metadata"/, 'অডিও preload="metadata" নয়');
+  // ভিডিও বড় — আগে থেকে টানলে পাতায় ২০+ MB নেমে যেত
+  assert.match(js, /<video controls preload="none"/, 'ভিডিও preload="none" নয়');
+  const jg = readFileSync(join(ROOT, 'jatak-golpo.html'), 'utf8');
+  assert.match(jg, /<audio controls preload="metadata"/, 'jatak-golpo: অডিও metadata নয়');
+  assert.match(jg, /<video controls[^>]*preload="none"/, 'jatak-golpo: ভিডিও preload=none নয়');
   const ch = readFileSync(join(ROOT, 'children.js'), 'utf8');
   assert.match(ch, /preload="none"|preload: ?'none'/, 'children.js-এ অডিও preload নেই');
   for (const f of ['sishu-shikkha.html', 'children.html']) {
