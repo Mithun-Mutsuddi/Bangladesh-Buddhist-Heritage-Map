@@ -81,7 +81,7 @@
           <p class="kaudio-tools"><a href="${esc(item.videoUrl)}" download>⬇ MP4 ডাউনলোড</a> <span>·</span> <a href="${esc(item.sourceUrl)}">গল্প পড়ুন ↗</a></p>
         </div>` : ''}
         ${isAudio ? `<div class="kaudio">
-          <audio controls preload="metadata" src="${esc(item.playUrl)}" aria-label="${esc(item.titleBn)}"></audio>
+          <audio controls preload="none" src="${esc(item.playUrl)}" aria-label="${esc(item.titleBn)}"></audio>
           <p class="kaudio-tools"><a href="${esc(item.playUrl)}" download>⬇ MP3 ডাউনলোড</a> <span>·</span> <a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">মূল সূত্র ↗</a></p>
           <p class="kaudio-err" hidden>এই ফাইলটি এখন লোড হচ্ছে না — ফাইলটি সাইটের <code>assets/kids/audio/</code> ফোল্ডারে আছে; ইন্টারনেট/ফাইল-পথ ঠিক থাকলে “MP3 ডাউনলোড” চেপে শুনতে পারেন।</p>
         </div>` : ''}

@@ -431,10 +431,14 @@ if ART_EXTRA_PATH.exists():
 # ---------------------------------------------------------------- ইংরেজি ও হিন্দি অডিও গল্প (কৃত্রিম কণ্ঠ)
 AUDIO_EXTRA_PATH = ROOT / 'data' / 'kids-audio-extra.json'
 AUDIO_EXTRA_N = 0
+EXTRA_DUR = {}
 if AUDIO_EXTRA_PATH.exists():
     _ex = json.loads(AUDIO_EXTRA_PATH.read_text(encoding='utf-8'))
     if _ex.get('schema') != 'charyabhumi-kids-audio-extra-v1':
         raise SystemExit('kids-audio-extra.json — schema মেলেনি')
+    for _a in _ex.get('items', []):
+        if _a.get('durationBn'):
+            EXTRA_DUR[(_a['slug'], _a['lang'])] = _a['durationBn']
     _LANG_BN = {'en': 'ইংরেজি', 'hi': 'হিন্দি', 'fr': 'ফরাসি'}
     _LANG_EN = {'en': 'English', 'hi': 'Hindi', 'fr': 'French'}
     for a in _ex.get('items', []):
@@ -820,6 +824,9 @@ if AIJ_PATH.exists():
                    for l in ('bn', 'en', 'hi')},
             video=(f'assets/kids/video/bn/{slug}.mp4'
                    if (ROOT / f'assets/kids/video/bn/{slug}.mp4').exists() else None),
+            audioDur={l: (AUDIO_META.get(slug, {}).get('durationBn')
+                           if l == 'bn' else EXTRA_DUR.get((slug, l)))
+                      for l in ('bn', 'en', 'hi')},
             videoLite=(f'assets/kids/video/bn/lite/{slug}.mp4'
                        if (ROOT / f'assets/kids/video/bn/lite/{slug}.mp4').exists() else None),
         ))

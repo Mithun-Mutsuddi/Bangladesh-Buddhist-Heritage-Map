@@ -28,6 +28,7 @@
   .story{background:#fff;border:1px solid var(--line);border-radius:20px;padding:0 0 18px;margin:0 0 34px;overflow:hidden;box-shadow:0 10px 26px rgba(15,59,49,.06);scroll-margin-top:16px}
   .story-media{background:#0f3b31}
   .story-media video,.story-media img{display:block;width:100%;height:auto}
+  .ar .dur{color:#5c6f66;font-size:.82rem;font-variant-numeric:tabular-nums}
   .story-body{padding:16px 20px 0}
   .story h2{margin:.1em 0 .1em;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4}
   .story .sub{color:#5c6f66;font-size:.9rem;margin:0 0 12px}
@@ -92,8 +93,10 @@
     }).join('');
     var audio = LANGS.map(function (l) {
       var f = st.audio && st.audio[l[0]];
-      return '<div class="ar"><b>' + l[1] + '</b>' + (f
-        ? '<audio controls preload="metadata" src="' + esc(f) + '" aria-label="' + esc(st.titleBn) + ' — ' + l[1] + '"></audio><a class="ai-tag" href="' + esc(f) + '" download>⬇ MP3</a>'
+      var d = (st.audioDur || {})[l[0]];
+      return '<div class="ar"><b>' + l[1] + '</b>' +
+        (d ? ' <span class="dur">' + esc(d) + '</span>' : '') + (f
+        ? '<audio controls preload="none" src="' + esc(f) + '" aria-label="' + esc(st.titleBn) + ' — ' + l[1] + '"></audio><a class="ai-tag" href="' + esc(f) + '" download>⬇ MP3</a>'
         : '<span class="na">এই ভাষার অডিও এখনো তৈরি হচ্ছে</span>') + '</div>';
     }).join('');
     var dl = '<a class="solid" href="' + esc(st.art) + '" download>🖼️ ছবি (JPG)</a>' +
