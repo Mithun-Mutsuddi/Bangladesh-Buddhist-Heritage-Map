@@ -1,6 +1,6 @@
 {
  "schema": "charyabhumi-kids-audio-extra-v1",
- "_বর্ণনা": "বাংলা ছাড়া অন্য ভাষার অডিও গল্প (ইংরেজি/হিন্দি)। কৃত্রিম কণ্ঠ।",
+ "_বর্ণনা": "বাংলা ছাড়া অন্য ভাষার অডিও গল্প (ইংরেজি/হিন্দি)। কৃত্রিম কণ্ঠ (AI)।",
  "items": [
   {
    "slug": "angulimala",
@@ -51,6 +51,18 @@
    "kb": 437
   },
   {
+   "slug": "mouse-merchant",
+   "lang": "en",
+   "titleBn": "ইঁদুর-বণিক",
+   "titleEn": "The Mouse Merchant",
+   "durationBn": "00:58",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-mouse-merchant.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 452
+  },
+  {
    "slug": "sujata",
    "lang": "en",
    "titleBn": "সুজাতার মধুপায়স",
@@ -85,6 +97,30 @@
    "file": "assets/kids/audio/hi/kid-hi-angulimala.mp3",
    "updated_at": "2026-11-01",
    "kb": 608
+  },
+  {
+   "slug": "banyan-deer",
+   "lang": "hi",
+   "titleBn": "বটহরিণ জাতক — ন্যাগ্রোধমৃগ",
+   "titleEn": "The Banyan Deer Jataka",
+   "durationBn": "01:08",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-banyan-deer.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 532
+  },
+  {
+   "slug": "monkey-crocodile",
+   "lang": "hi",
+   "titleBn": "বানর ও কুমির",
+   "titleEn": "The Monkey and the Crocodile",
+   "durationBn": "01:13",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-monkey-crocodile.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 566
   },
   {
    "slug": "moon-rabbit",
