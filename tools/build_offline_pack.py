@@ -97,6 +97,26 @@ def shrink_media() -> None:
     print('  ভিডিও হালকা হলো:', v)
 
 
+def shrink_coloring() -> None:
+    """রঙ করার পাতা: ১২৪০px, খাটি সাদা-কালো ১-বিট PNG — ছাপার জন্য যথেষ্ট, আকার অনেক কম।"""
+    from PIL import Image
+    d = OUT / 'assets' / 'kids' / 'coloring' / 'ai-jataka'
+    if not d.exists():
+        return
+    n = 0
+    for f in sorted(d.glob('*.png')):
+        try:
+            im = Image.open(f).convert('L')
+            if im.width > 1240:
+                im = im.resize((1240, round(im.height * 1240 / im.width)), Image.LANCZOS)
+            im = im.point(lambda v: 0 if v < 160 else 255).convert('1')
+            im.save(f, 'PNG', optimize=True)
+            n += 1
+        except Exception as e:  # pragma: no cover
+            print('  ✗', f.name, e)
+    print('  রঙ করার পাতা হালকা হলো:', n)
+
+
 INDEX = """<!DOCTYPE html><html lang="bn"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>চর্যাভূমি — শিশু বিভাগ (অফলাইন প্যাক)</title>
@@ -121,6 +141,7 @@ def main() -> None:
     copy_tree()
     print('• মিডিয়া হালকা হচ্ছে (কয়েক মিনিট লাগতে পারে)…')
     shrink_media()
+    shrink_coloring()
     # index.html
     payload = json.loads((ROOT / 'data' / 'kids-media-list.json').read_text(encoding='utf-8'))
     items = payload['items']
