@@ -27,6 +27,54 @@
    "kb": 457
   },
   {
+   "slug": "celestial-necklace",
+   "lang": "en",
+   "titleBn": "স্বর্গের হার",
+   "titleEn": "The Celestial Necklace",
+   "durationBn": "00:55",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-celestial-necklace.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 430
+  },
+  {
+   "slug": "hidden-treasure",
+   "lang": "en",
+   "titleBn": "লুকানো ধন",
+   "titleEn": "The Hidden Treasure",
+   "durationBn": "00:57",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-hidden-treasure.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 445
+  },
+  {
+   "slug": "kesari-flying-thief",
+   "lang": "en",
+   "titleBn": "কেশরী উড়ন্ত চোর",
+   "titleEn": "Kesari the Flying Thief",
+   "durationBn": "01:01",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-kesari-flying-thief.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 480
+  },
+  {
+   "slug": "magic-chant",
+   "lang": "en",
+   "titleBn": "জাদু-মন্ত্র",
+   "titleEn": "The Magic Chant",
+   "durationBn": "01:00",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-magic-chant.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 472
+  },
+  {
    "slug": "monkey-crocodile",
    "lang": "en",
    "titleBn": "বানর ও কুমির",
@@ -111,6 +159,66 @@
    "kb": 532
   },
   {
+   "slug": "celestial-necklace",
+   "lang": "hi",
+   "titleBn": "স্বর্গের হার",
+   "titleEn": "The Celestial Necklace",
+   "durationBn": "01:09",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-celestial-necklace.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 541
+  },
+  {
+   "slug": "giant-dwarf",
+   "lang": "hi",
+   "titleBn": "দানব ও বামন",
+   "titleEn": "The Giant and the Dwarf",
+   "durationBn": "01:18",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-giant-dwarf.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 610
+  },
+  {
+   "slug": "hidden-treasure",
+   "lang": "hi",
+   "titleBn": "লুকানো ধন",
+   "titleEn": "The Hidden Treasure",
+   "durationBn": "01:04",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-hidden-treasure.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 501
+  },
+  {
+   "slug": "kesari-flying-thief",
+   "lang": "hi",
+   "titleBn": "কেশরী উড়ন্ত চোর",
+   "titleEn": "Kesari the Flying Thief",
+   "durationBn": "01:13",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-kesari-flying-thief.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 568
+  },
+  {
+   "slug": "magic-chant",
+   "lang": "hi",
+   "titleBn": "জাদু-মন্ত্র",
+   "titleEn": "The Magic Chant",
+   "durationBn": "01:13",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-magic-chant.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 572
+  },
+  {
    "slug": "monkey-crocodile",
    "lang": "hi",
    "titleBn": "বানর ও কুমির",
@@ -133,6 +241,18 @@
    "file": "assets/kids/audio/hi/kid-hi-moon-rabbit.mp3",
    "updated_at": "2026-11-01",
    "kb": 571
+  },
+  {
+   "slug": "mouse-merchant",
+   "lang": "hi",
+   "titleBn": "ইঁদুর-বণিক",
+   "titleEn": "The Mouse Merchant",
+   "durationBn": "01:14",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-mouse-merchant.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 575
   },
   {
    "slug": "sujata",

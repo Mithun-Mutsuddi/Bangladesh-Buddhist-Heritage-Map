@@ -809,6 +809,20 @@ if AIJ_PATH.exists():
         '/* স্বয়ংক্রিয়ভাবে তৈরি — tools/build_kids_media.py */\n'
         'window.KIDS_AI_JATAKA = ' + json.dumps(_idx, ensure_ascii=False) + ';\n', encoding='utf-8')
 
+# ---------------------------------------------------------------- পুনরাবৃত্তি বাদ (AI জাতকের অডিও দুই জায়গায় ঢোকে)
+_aij_pairs = {i['id'].replace('kid-aij-', '', 1) for i in ITEMS if i['id'].startswith('kid-aij-') and i['type'] == 'audio'}
+if _aij_pairs:
+    for pref in ('kid-en-audio-', 'kid-hi-audio-'):
+        _drop = set()
+        for i in ITEMS:
+            if i['id'].startswith(pref) and i['type'] == 'audio':
+                slug = i['id'][len(pref):]
+                if f"{i['lang']}-{slug}" in _aij_pairs:
+                    _drop.add(i['id'])
+        if _drop:
+            ITEMS[:] = [i for i in ITEMS if i['id'] not in _drop]   # জায়গায় বসাও, নাম বদলিও না (PAYLOAD একই তালিকা ধরে রাখে)
+            print('পুনরাবৃত্ত অডিও-কার্ড বাদ:', len(_drop))
+
 # ---------------------------------------------------------------- সাজানোর ক্রম (বাংলা আগে)
 # ধরন অনুযায়ী ভাগ, তারপর ভাষা: বাংলা → ইংরেজি → হিন্দি → ফরাসি → চিনা
 TYPE_ORDER = {'video': 0, 'audio': 1, 'coloring': 2, 'book': 3, 'comic': 4, 'ack': 5, 'art': 6, 'film': 7, 'manga': 8}
