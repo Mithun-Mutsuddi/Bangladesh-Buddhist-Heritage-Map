@@ -61,7 +61,7 @@ def copy_tree() -> None:
     fonts = ROOT / 'assets' / 'tracker' / 'fonts'
     if fonts.exists():
         (OUT / 'assets' / 'tracker' / 'fonts').mkdir(parents=True, exist_ok=True)
-        for f in sorted(fonts.iterdir())[:8]:
+        for f in sorted(fonts.iterdir()):
             if f.suffix in ('.ttf', '.woff2'):
                 shutil.copy2(f, OUT / 'assets' / 'tracker' / 'fonts' / f.name)
     dvf = ROOT / 'assets' / 'fonts'
@@ -95,6 +95,20 @@ def shrink_media() -> None:
                 '-c:a', 'aac', '-b:a', '64k', '-movflags', '+faststart', str(vdst / f.name)]):
             v += 1
     print('  ভিডিও হালকা হলো:', v)
+
+
+
+def repoint_lite() -> None:
+    """প্যাকে আলাদা lite ফাইল রাখার দরকার নেই — ডেটার পথ প্যাকের ৪৮০p ফাইলে ঘুরিয়ে দিই।"""
+    n = 0
+    for f in (OUT / 'data').glob('*'):
+        if f.suffix not in ('.json', '.js'):
+            continue
+        t = f.read_text(encoding='utf-8')
+        if '/video/bn/lite/' in t:
+            f.write_text(t.replace('/video/bn/lite/', '/video/bn/'), encoding='utf-8')
+            n += 1
+    print('  ভিডিওর পথ ঠিক হলো (lite → ৪৮০p):', n, 'ফাইল')
 
 
 def shrink_coloring() -> None:
@@ -142,6 +156,7 @@ def main() -> None:
     print('• মিডিয়া হালকা হচ্ছে (কয়েক মিনিট লাগতে পারে)…')
     shrink_media()
     shrink_coloring()
+    repoint_lite()
     # index.html
     payload = json.loads((ROOT / 'data' / 'kids-media-list.json').read_text(encoding='utf-8'))
     items = payload['items']

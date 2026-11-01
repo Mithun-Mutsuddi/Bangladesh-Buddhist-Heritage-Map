@@ -292,3 +292,18 @@ tests/kids-media-data.test.mjs  ৯টি স্বয়ংক্রিয় �
 - অডিও **৭৯** (bn ২১ · en ২১ · hi ২১ · fr ১৬), ভিডিও **৩৯** (১৫টি নিজস্ব), আইটেম **২১৫**।
 - পাতা: `jatak-golpo.html`; ভিডিও বানানোর টুল: `tools/build_ai_jataka_video.py` (Ken Burns + libass বাংলা লেখা)।
 - slim তালিকা ২৩১ KB; `descBn` ≤১২৪, `creditBn` ≤৬৬। টেস্ট **৬৯/৬৯**।
+
+## ১৩. লোডিং ও বাফার সমস্যার সমাধান (২০২৬-১১-০১, সন্ধ্যা)
+
+সমস্যা খুঁজে বের করা হয় আসল সাইটে, ধীর নেট (৪০০ kbps) অনুকরণ করে।
+
+| সমস্যা | কারণ | সমাধান | আগে → পরে |
+|---|---|---|---|
+| গল্পের পাতা খুলতেই অনেক দেরি | `preload="metadata"` ২৩টি ভিডিওর শুরু নামিয়ে নিচ্ছিল | `preload="none"` + পোস্টার | ৩৪.০৬ MB → ১.০ MB |
+| পোস্টার ছবি ভারী | ৩৯১ KB × ২৩ | ৩৬০px পোস্টার (`thumbs/poster/`) | ৯.২ MB → ৫৭২ KB |
+| ধীর নেটে ভিডিও চালু হতে ১ মিনিট | ৭২০p ফাইল ৩–৪ MB | হালকা ভিডিও `video/bn/lite/*.mp4` (৮৫৪×৪৮০, ~১ MB); ডাউনলোডে পূর্ণ ৭২০p | শুরু ৪০০ kbps-এ ১.৭ সে |
+| ফন্ট ৮৯৮ KB | TTF | WOFF2 (`tools/build_woff2.py`) | বাংলা ১৩৫→৫৫ KB, দেবনাগরী ৬২৬→২৫৭ KB |
+| buddha-vamsa পাতা ১২ MB | ২২৫টি ছবি base64-এ গাঁথা | ফাইলে বের করা (`tools/extract_inline_images.py`) + lazy | ১২.৩৬ MB → ০.২৭ MB (gzip) |
+
+নতুন টুল: `tools/build_video_lite.py`, `tools/build_woff2.py`, `tools/extract_inline_images.py`।
+অফলাইন প্যাকে ভিডিওর পথ `lite → ৪৮০p` ঘুরিয়ে দেওয়া হয়, তাই প্যাক ৭৭.৫ MB-ই থাকে।
