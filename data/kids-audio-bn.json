@@ -109,6 +109,51 @@
    "narratorBn": null,
    "file": "assets/kids/audio/bn/kid-bn-kesari-flying-thief.mp3",
    "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "shalivahana",
+   "titleBn": "শলিবাহন",
+   "durationBn": "00:58",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-shalivahana.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "stories-of-courage",
+   "titleBn": "সাহসের গল্প — ছোট ছানা",
+   "durationBn": "00:54",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-stories-of-courage.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "acrobat",
+   "titleBn": "জোকার",
+   "durationBn": "00:59",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-acrobat.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "cowherd-of-alawi",
+   "titleBn": "আলাবীর রাখাল",
+   "durationBn": "00:56",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-cowherd-of-alawi.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "prophecy",
+   "titleBn": "ভবিষ্যদ্বাণী — তিব্বতি কাহিনি",
+   "durationBn": "00:48",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-prophecy.mp3",
+   "updated_at": "2026-11-01"
   }
  ]
 }

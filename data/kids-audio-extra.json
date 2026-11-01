@@ -17,7 +17,7 @@
   {
    "slug": "banyan-deer",
    "lang": "en",
-   "titleBn": "বটহরিণ জাতক — ন্যাগ্রোধমৃগ",
+   "titleBn": "বটহরিণ জাতক",
    "titleEn": "The Banyan Deer Jataka",
    "durationBn": "00:59",
    "voice": "ai",
@@ -37,6 +37,18 @@
    "file": "assets/kids/audio/en/kid-en-celestial-necklace.mp3",
    "updated_at": "2026-11-01",
    "kb": 430
+  },
+  {
+   "slug": "giant-dwarf",
+   "lang": "en",
+   "titleBn": "দানব ও বামন",
+   "titleEn": "The Giant and the Dwarf",
+   "durationBn": "01:05",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-giant-dwarf.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 507
   },
   {
    "slug": "hidden-treasure",
@@ -90,7 +102,7 @@
    "slug": "moon-rabbit",
    "lang": "en",
    "titleBn": "শশক জাতক — চাঁদের খরগোশ",
-   "titleEn": "The Hare's Jataka — the rabbit in the moon",
+   "titleEn": "The Hare's Jataka",
    "durationBn": "00:56",
    "voice": "ai",
    "narratorBn": null,
@@ -135,6 +147,18 @@
    "kb": 370
   },
   {
+   "slug": "acrobat",
+   "lang": "hi",
+   "titleBn": "জোকার",
+   "titleEn": "The Acrobat",
+   "durationBn": "01:06",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-acrobat.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 519
+  },
+  {
    "slug": "angulimala",
    "lang": "hi",
    "titleBn": "বুদ্ধ ও অঙ্গুলিমাল",
@@ -149,7 +173,7 @@
   {
    "slug": "banyan-deer",
    "lang": "hi",
-   "titleBn": "বটহরিণ জাতক — ন্যাগ্রোধমৃগ",
+   "titleBn": "বটহরিণ জাতক",
    "titleEn": "The Banyan Deer Jataka",
    "durationBn": "01:08",
    "voice": "ai",
@@ -169,6 +193,18 @@
    "file": "assets/kids/audio/hi/kid-hi-celestial-necklace.mp3",
    "updated_at": "2026-11-01",
    "kb": 541
+  },
+  {
+   "slug": "cowherd-of-alawi",
+   "lang": "hi",
+   "titleBn": "আলাবীর রাখাল",
+   "titleEn": "The Cowherd of Alawi",
+   "durationBn": "01:07",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-cowherd-of-alawi.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 521
   },
   {
    "slug": "giant-dwarf",
@@ -234,7 +270,7 @@
    "slug": "moon-rabbit",
    "lang": "hi",
    "titleBn": "শশক জাতক — চাঁদের খরগোশ",
-   "titleEn": "The Hare's Jataka — the rabbit in the moon",
+   "titleEn": "The Hare's Jataka",
    "durationBn": "01:13",
    "voice": "ai",
    "narratorBn": null,
@@ -253,6 +289,30 @@
    "file": "assets/kids/audio/hi/kid-hi-mouse-merchant.mp3",
    "updated_at": "2026-11-01",
    "kb": 575
+  },
+  {
+   "slug": "shalivahana",
+   "lang": "hi",
+   "titleBn": "শলিবাহন",
+   "titleEn": "Shalivahana",
+   "durationBn": "01:02",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-shalivahana.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 484
+  },
+  {
+   "slug": "stories-of-courage",
+   "lang": "hi",
+   "titleBn": "সাহসের গল্প — ছোট ছানা",
+   "titleEn": "Stories of Courage — the little quail",
+   "durationBn": "01:05",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-stories-of-courage.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 511
   },
   {
    "slug": "sujata",

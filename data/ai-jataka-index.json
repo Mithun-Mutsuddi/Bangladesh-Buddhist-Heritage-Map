@@ -34,7 +34,7 @@
    "textHi": "दानव और बौना — एक जातक कथा। बहुत पुरानी बात है, जंगल के रास्ते पर एक भयानक दानव रहता था, पहाड़ जैसा ऊँचा, हाथ में भारी गदा। जो भी राहगीर आता वह पूछता, कौन हो तुम? और उत्तर पसंद न आने पर मार देता। एक दिन उसी रास्ते से एक बहुत छोटे कद का व्यक्ति आया, शरीर छोटा पर बुद्धि तेज़। दानव गरजा, कौन हो तुम? छोटे आदमी ने भागा नहीं। उसने कहा, मैं तुम्हारा ही सगा हूँ, तुम बताओ खुद को क्या समझते हो? दानव उलझ गया। फिर छोटे आदमी ने कहा, चलो देखें कौन बुद्धि में जीतता है। तय हुआ कि जो पहले जन्मा होगा वह जीतेगा। दानव ने डींग मारी, मैं तो आदि काल से हूँ। तो तुम्हीं बड़े हो और तुम्हीं जीते, छोटे आदमी ने कहा। अब अपनी ताकत दिखाओ, उसने कहा। दानव ने गदा उठाई और छोटे आदमी की एक चतुराई ने उसी ताकत को उस पर भारी कर दिया, विशाल शरीर धरती पर बेसुध पड़ गया। लोगों ने कहा, जिसका मन बड़ा है वही जीतता है, चाहे शरीर छोटा हो। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-giant-dwarf.mp3",
-    "en": null,
+    "en": "assets/kids/audio/en/kid-en-giant-dwarf.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-giant-dwarf.mp3"
    },
    "video": "assets/kids/video/bn/giant-dwarf.mp4"
@@ -128,11 +128,11 @@
    "textEn": "Shalivahana, a legend. Beside a great river, in a potter's house, a boy was born. He shaped clay pots, sold them in the market, and people laughed at him, saying a potter's son would never be anyone. The boy laughed back and said, the hands that shape pots may one day shape a kingdom. One day, crossing the river, he saved a serpent princess in danger. She gave him a small golden crown and said, whoever holds this crown will one day judge people. Years passed, and that boy came to the royal hall and became king. In his court he never judged anyone by birth, rich merchant and poor farmer stood before the same scales. From then people said, King Shalivahana does not only know justice, he knows the worth of a human being. A clay pot breaks through a careless hand; a person is made small only by his own deeds. This story is told in a synthetic, computer-generated voice.",
    "textHi": "शालिवाहन — एक लोक कथा। बड़ी नदी के किनारे एक कुम्हार के घर लड़का जन्मा। वह मिट्टी के बर्तन गढ़ता, बाजार में बेचता, और लोग हँसते कि कुम्हार का लड़का कभी बड़ा नहीं होगा। लड़का हँसकर कहता, जो हाथ बर्तन गढ़ते हैं, वही एक दिन राज्य भी गढ़ेंगे। एक दिन नदी पार करते हुए उसने संकट में पड़ी नाग-राजकुमारी को बचाया। उसने उसे एक छोटा सोने का मुकुट दिया और कहा, इस मुकुट वाला एक दिन लोगों का न्याय करेगा। साल बीते और वही लड़का राजसभा में राजा बना। उसके दरबार में किसी को जन्म से बड़ा या छोटा नहीं माना गया, गरीब किसान और अमीर व्यापारी एक ही तराजू पर तौले गए। उस दिन से लोग कहते, राजा शालिवाहन केवल न्याय नहीं जानते, वे मनुष्य की कीमत जानते हैं। घड़ा हाथ की भूल से टूटता है, और मनुष्य अपने ही कर्मों से छोटा बनता है। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
-    "bn": null,
+    "bn": "assets/kids/audio/bn/kid-bn-shalivahana.mp3",
     "en": null,
-    "hi": null
+    "hi": "assets/kids/audio/hi/kid-hi-shalivahana.mp3"
    },
-   "video": null
+   "video": "assets/kids/video/bn/shalivahana.mp4"
   },
   {
    "slug": "stories-of-courage",
@@ -147,11 +147,11 @@
    "textEn": "Stories of Courage — a Jataka tale. At the edge of a forest lived a small quail chick with his mother. His wings were short and his legs stumbled. One summer, fire broke out in the forest. Deer, tigers and elephants ran, and the sky turned black with smoke. The chick ran behind his mother, but she was caught in the smoke. Before the little bird rose a wall of flame. He did not run. He spread his small wings over his mother, faced the fire and said, fire, you can burn, but you cannot stand before truth. I have never harmed anyone, I have never lied, and that truth is my shield. In the middle of the burning forest a small patch stayed cool and green, and there the chick and his mother stood safely. Later the animals of the forest said, what that tiny chick could do, we with our great bodies could not. This story is told in a synthetic, computer-generated voice.",
    "textHi": "साहस की कहानी — एक जातक कथा। जंगल के किनारे एक छोटा चूजा अपनी माँ के साथ रहता था। पंख छोटे, चलते-चलते गिर पड़ता। एक गर्मी में जंगल में आग लग गई। हिरण, बाघ, हाथी भागे, धुएँ से आकाश काला हो गया। चूजा माँ के पीछे भागा, पर माँ धुएँ में फँस गई। सामने आग की दीवार थी। वह भागा नहीं। उसने अपने छोटे पंखों से माँ को ढका, आग की ओर मुँह किया और कहा, अग्नि, तुम जला सकती हो, पर सच के सामने नहीं खड़ी हो सकती। मैंने कभी किसी का अहित नहीं किया, कभी झूठ नहीं बोला — वही सच मेरी ढाल है। जलते जंगल के बीच एक छोटा-सा टुकड़ा ठंडा रह गया और वहाँ चूजा और उसकी माँ सुरक्षित खड़े रहे। बाद में जानवरों ने कहा, जो उस छोटे चूजे ने किया, हम विशाल देह होकर भी नहीं कर सके। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
-    "bn": null,
+    "bn": "assets/kids/audio/bn/kid-bn-stories-of-courage.mp3",
     "en": null,
-    "hi": null
+    "hi": "assets/kids/audio/hi/kid-hi-stories-of-courage.mp3"
    },
-   "video": null
+   "video": "assets/kids/video/bn/stories-of-courage.mp4"
   },
   {
    "slug": "acrobat",
@@ -166,11 +166,11 @@
    "textEn": "The Acrobat — a Buddhist tale. At a village fair an acrobat climbed a tall bamboo pole and danced on its top. People clapped, shouted, and children looked up with open mouths. One day his smallest pupil asked, master, why do you never fall from such a height? The acrobat laughed and said, I do not stand on the pole; my mind stands on the pole. If the mind is steady, the feet are steady. At that same fair a rich man made a bet that he could bring the acrobat down. The man pushed through the crowd, the spectators began to shout, and a mischievous boy slipped a thorn at the foot of the pole. Still the acrobat did not fall. He climbed down calmly and said to the crowd, look, I did not fall, because I was not listening to your shouting; I was listening to my own breath. The crowd felt ashamed. He told his pupil, in life many will shout and push you; the one who wins is the one who can keep his own mind quiet. This story is told in a synthetic, computer-generated voice.",
    "textHi": "कलाबाज़ — एक बौद्ध कथा। मेले में एक कलाबाज़ ऊँचे बाँस के सिरे पर चढ़कर नाच दिखाता था। लोग तालियाँ बजाते, चिल्लाते, बच्चे मुँह खोले देखते रहते। एक दिन उसके सबसे छोटे शिष्य ने पूछा, गुरु, इतनी ऊँचाई से आप गिरते क्यों नहीं? कलाबाज़ हँसकर बोला, मैं बाँस पर नहीं, मेरा मन बाँस पर टिका है; मन स्थिर तो पैर स्थिर। उसी मेले में एक अमीर ने शर्त लगाई कि वह कलाबाज़ को नीचे गिरा देगा। भीड़ में धक्का लगा, लोग चिल्लाने लगे, एक शरारती लड़के ने बाँस की जड़ में काँटा रख दिया। फिर भी कलाबाज़ नहीं गिरा। वह शांत भाव से नीचे उतरा और बोला, देखिए, मैं गिरा नहीं, क्योंकि मैं आपकी चीखें नहीं, अपनी साँस सुन रहा था। भीड़ लज्जित हुई। उसने शिष्य से कहा, जीवन में बहुत लोग चिल्लाएँगे और धक्का देंगे; जीतेगा वही जो अपना मन शांत रख सके। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
-    "bn": null,
+    "bn": "assets/kids/audio/bn/kid-bn-acrobat.mp3",
     "en": null,
-    "hi": null
+    "hi": "assets/kids/audio/hi/kid-hi-acrobat.mp3"
    },
-   "video": null
+   "video": "assets/kids/video/bn/acrobat.mp4"
   },
   {
    "slug": "cowherd-of-alawi",
@@ -185,11 +185,11 @@
    "textEn": "The Cowherd of Alawi — a Buddhist tale. In the village of Alawi a poor cowherd took his cattle to the field every dawn, and his only wealth was one bowl of milk. One morning he saw a monk sitting in meditation under a banyan tree, his lips dry with thirst. The boy thought, if I give this, I will have nothing for myself today. Even so he filled his bowl and placed it before the monk, saying, blessed one, please take this. The monk said, will you not drink it yourself? The boy said, not today; you will give light to many faces all day, what does it matter if I go hungry one morning? Only later did he learn that the monk was the Buddha himself, who had come to Alawi to calm a fearful creature that terrified the village. Afterwards the villagers said, we gave many things, but that single bowl of milk walked ahead of them all. The Buddha said, the worth of a gift is not measured by its price, it is measured by the weight of the heart. This story is told in a synthetic, computer-generated voice.",
    "textHi": "अलावी का ग्वाला — एक बौद्ध कथा। अलावी गाँव का एक निर्धन ग्वाला रोज़ भोर में गायें चराने जाता, और उसकी पूँजी एक कटोरा दूध थी। एक सुबह उसने देखा कि एक भिक्षु बरगद के नीचे ध्यान में बैठे हैं, होंठ सूखे हुए। लड़के ने सोचा, आज दे दूँगा तो अपने लिए कुछ नहीं बचेगा। फिर भी उसने कटोरा भरकर भिक्षु के सामने रख दिया और कहा, भगवान, यह लीजिए। भिक्षु बोले, तुम खुद नहीं पीओगे? लड़का बोला, आज नहीं; आप दिन भर कितने चेहरों को प्रकाश देंगे, एक सुबह भूखा रह जाने से क्या होगा? बाद में उसे पता चला कि वे भिक्षु स्वयं बुद्ध थे, जो अलावी आए थे गाँव को डराने वाले प्राणी को शांत करने। बाद में गाँव वालों ने कहा, हमने बहुत कुछ दिया, पर वही एक कटोरा सबसे आगे चला। बुद्ध ने कहा, दान की कीमत दाम से नहीं, मन के बोझ से नापी जाती है। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
-    "bn": null,
+    "bn": "assets/kids/audio/bn/kid-bn-cowherd-of-alawi.mp3",
     "en": null,
-    "hi": null
+    "hi": "assets/kids/audio/hi/kid-hi-cowherd-of-alawi.mp3"
    },
-   "video": null
+   "video": "assets/kids/video/bn/cowherd-of-alawi.mp4"
   },
   {
    "slug": "prophecy",
@@ -204,11 +204,11 @@
    "textEn": "The Prophecy — a Tibetan tale. In a mountain village a boy was born to a very poor family. The old lama of the monastery left a prophecy about him: this boy would one day be either a great scholar or a great bandit. From then on the villagers looked at the child with doubt. As he grew, the boy decided he would settle the matter himself. Every morning he studied for an hour, every evening he carried food to one poor home, and he never took a single thing that belonged to someone else. Twenty years later he was a lama himself, and five hundred children studied in his school. At the bottom of the old lama's paper was one more line that nobody had read: a prophecy is not written in stone but in clay; every day's hands make its letters. This story is told in a synthetic, computer-generated voice.",
    "textHi": "भविष्यवाणी — एक तिब्बती कथा। पहाड़ के पास एक गाँव में बहुत गरीब परिवार में लड़का जन्मा। मठ के पुराने लामा ने उसके बारे में भविष्यवाणी छोड़ी — यह लड़का एक दिन या बड़ा विद्वान होगा या बड़ा डाकू। तब गाँव वाले उसकी ओर संदेह से देखने लगे। बड़ा होते-होते लड़के ने सोचा, मैं यह मामला खुद तय करता हूँ। हर सुबह वह एक घंटा पढ़ता, हर शाम किसी गरीब घर में खाना पहुँचाता, और कभी किसी की कोई वस्तु नहीं लेता। बीस साल बाद वह स्वयं लामा बन गया और उसके पाठशाला में पाँच सौ बच्चे पढ़ते हैं। पुराने लामा के कागज़ के नीचे एक पंक्ति और थी जो किसी ने नहीं पढ़ी थी — भविष्यवाणी पत्थर पर नहीं, मिट्टी पर लिखी होती है; हर दिन के हाथ उसके अक्षर बनाते हैं। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
-    "bn": null,
+    "bn": "assets/kids/audio/bn/kid-bn-prophecy.mp3",
     "en": null,
     "hi": null
    },
-   "video": null
+   "video": "assets/kids/video/bn/prophecy.mp4"
   }
  ]
 }
