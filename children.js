@@ -125,6 +125,9 @@
     }
     const localComic = item.view === 'local:comic';
     if (localComic) acts.push('<button class="cb-btn solid" type="button" data-open-comic>পড়ো ও স্লাইডশো</button>');
+    const video = item.videoUrl
+      ? `<div class="kids-video"><video controls preload="none" poster="${esc(item.thumb || '')}" src="${esc(item.videoUrl)}" playsinline></video><a class="kids-audio-dl" href="${esc(item.videoUrl)}" download>⬇ MP4</a></div>`
+      : '';
     const audio = item.playUrl
       ? `<div class="kids-audio"><audio controls preload="none" src="${esc(item.playUrl)}">অডিও চালানো যাচ্ছে না।</audio><a class="kids-audio-dl" href="${esc(item.playUrl)}" download>⬇ MP3</a></div>`
       : '';
@@ -137,6 +140,7 @@
         <p class="kids-media-meta">${esc(item.language)} · ${esc(item.age)}${item.durationBn ? ' · ' + esc(item.durationBn) : ''}</p>
         <p>${esc(item.description)}</p>
         <p class="kids-rights ${rightsClass}">${esc(item.rights)}</p>
+        ${video}
         ${audio}
         <div class="kids-media-actions">${acts.join('')}</div>
         <p class="kids-media-note">সূত্র: <a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">${esc(item.source)}</a></p>
@@ -614,14 +618,14 @@
     if (it.readUrl || it.buyUrl) formats.push('read');
     if (it.watchUrl || it.embedId) formats.push('watch');
     if (it.downloadUrl) formats.push('download');
-    if (it.embedId || it.playUrl || it.type === 'coloring') formats.push('play');
+    if (it.embedId || it.playUrl || it.videoUrl || it.type === 'coloring') formats.push('play');
     return {
       id: it.id, kind: it.type, type: it.type,
       title: it.titleBn, language: KIDS_LANG_BN[it.lang] || it.lang,
       age: it.ageBn || '', durationBn: it.durationBn || '',
       description: it.descBn || '', rights: it.creditBn || it.licenceLabel || '',
       licenceKey: it.licenceKey, formats,
-      thumb: it.thumb, embedId: it.embedId, playUrl: it.playUrl,
+      thumb: it.thumb, embedId: it.embedId, playUrl: it.playUrl, videoUrl: it.videoUrl,
       readUrl: it.readUrl, watchUrl: it.watchUrl, buyUrl: it.buyUrl, downloadUrl: it.downloadUrl,
       source: it.sourceName || 'সূত্র', sourceUrl: it.sourceUrl || '#'
     };

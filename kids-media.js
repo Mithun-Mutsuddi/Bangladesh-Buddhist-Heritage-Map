@@ -46,6 +46,7 @@
   const card = item => {
     const isAudio = item.type === 'audio' && item.playUrl;
     const isVideo = item.type === 'video' && item.embedId;
+    const isLocalVideo = item.type === 'video' && item.videoUrl && !item.embedId;
     if (isVideo) {
       return `<article class="kcard kcard-video" data-id="${esc(item.id)}" data-type="${esc(item.type)}" data-embed="${esc(item.embedId)}">
         <div class="kcard-media kvideo">
@@ -68,13 +69,17 @@
     const media = isAudio
       ? `<div class="kcard-media audio-art"><span class="wave" aria-hidden="true"><svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="#ffe7bb" stroke-width="3" stroke-linecap="round"><path d="M10 40V32a22 22 0 0 1 44 0v8"/><rect x="6" y="38" width="12" height="18" rx="5" fill="#ffe7bb" stroke="none"/><rect x="46" y="38" width="12" height="18" rx="5" fill="#ffe7bb" stroke="none"/><path d="M22 52h6a8 8 0 0 0 8-8" stroke-opacity=".7"/></svg></span><span class="dur">${esc(item.durationBn || '')}</span><span class="kbadge">${esc(TYPE_LABEL[item.type])}</span></div>`
       : `<div class="kcard-media${item.type === 'book' || item.type === 'ack' ? ' contain' : ''}">${item.thumb ? `<img src="${esc(item.thumb)}" alt="${esc(item.titleBn)}" loading="lazy" decoding="async" onerror="this.style.display='none';this.parentElement.classList.add('imgfail');this.parentElement.dataset.fallback='${esc((item.titleBn || '').slice(0, 40))}'">` : ''}<span class="kbadge">${esc(TYPE_LABEL[item.type] || item.type)}</span></div>`;
-    const playable = isAudio ? '<span class="kbadge play">এখানেই চলে</span>' : '';
+    const playable = (isAudio || isLocalVideo) ? '<span class="kbadge play">এখানেই চলে</span>' : '';
     return `<article class="kcard" data-id="${esc(item.id)}" data-type="${esc(item.type)}">
       ${media.replace('</div>', playable + '</div>')}
       <div class="kcard-body">
         <h3>${esc(item.titleBn)}</h3>
         <p class="kmeta">${esc(LANG_LABEL[item.lang] || item.lang)} · ${esc(item.ageBn || '')} · ${esc(TYPE_LABEL[item.type] || item.type)}</p>
         <p class="kdesc">${esc(item.descBn)}</p>
+        ${isLocalVideo ? `<div class="kvideo-local">
+          <video controls preload="none" poster="${esc(item.thumb)}" src="${esc(item.videoUrl)}" playsinline aria-label="${esc(item.titleBn)}"></video>
+          <p class="kaudio-tools"><a href="${esc(item.videoUrl)}" download>⬇ MP4 ডাউনলোড</a> <span>·</span> <a href="${esc(item.sourceUrl)}">গল্প পড়ুন ↗</a></p>
+        </div>` : ''}
         ${isAudio ? `<div class="kaudio">
           <audio controls preload="none" src="${esc(item.playUrl)}" aria-label="${esc(item.titleBn)}"></audio>
           <p class="kaudio-tools"><a href="${esc(item.playUrl)}" download>⬇ MP3 ডাউনলোড</a> <span>·</span> <a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">মূল সূত্র ↗</a></p>

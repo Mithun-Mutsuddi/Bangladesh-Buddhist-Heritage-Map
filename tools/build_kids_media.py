@@ -707,6 +707,108 @@ PAYLOAD = {
 }
 
 
+# ---------------------------------------------------------------- নিজস্ব AI জাতক-সেট (ছবি + লেখা + অডিও, তিন ভাষায়)
+AIJ_PATH = ROOT / 'data' / 'ai-jataka-stories.json'
+AIJ_N = 0
+_idx = {'schema': 'charyabhumi-kids-ai-jataka-index-v1', 'stories': []}
+_LANG_NAME_BN = {'bn': 'বাংলা', 'en': 'ইংরেজি', 'hi': 'হিন্দি'}
+_LANG_NAME_EN = {'bn': 'Bengali', 'en': 'English', 'hi': 'Hindi'}
+try:
+    from mutagen.mp3 import MP3 as _MP3
+except Exception:
+    _MP3 = None
+if AIJ_PATH.exists():
+    _aij = json.loads(AIJ_PATH.read_text(encoding='utf-8'))
+    if _aij.get('schema') != 'charyabhumi-kids-ai-jataka-v1':
+        raise SystemExit('ai-jataka-stories.json — schema মেলেনি')
+    for st in _aij['stories']:
+        slug = st['slug']
+        art = st['art']
+        if not (ROOT / art).exists():
+            print('⚠ ছবি নেই:', art)
+            continue
+        # (ক) ছবি-কার্ড — গল্পের পুরো লেখা বাংলায়
+        ITEMS.append(dict(
+            id='kid-aij-art-' + slug, type='art', lang='bn', ageBn='৫–১২ বছর',
+            topics=['jataka'], titleBn=st['titleBn'] + ' — গল্পের ছবি ও লেখা',
+            titleEn=st['titleEn'] + ' — illustration and story',
+            descBn=st['textBn'][:200].rstrip() + '… ' + st['moralBn'],
+            thumb=art, downloadUrl=art, bigUrl=art,
+            licenceLabel=LIC['CC BY-SA 4.0'][0], licenceUrl=LIC['CC BY-SA 4.0'][1], licenceKey='original',
+            creatorBn='চর্যাভূমি — AI ছবি (নিজস্ব প্রম্পট)',
+            creditBn='ছবি: চর্যাভূমি — কৃত্রিম বুদ্ধিমত্তায় (AI) আঁকা, CC BY-SA 4.0 · লেখা: চর্যাভূমি, নিজস্ব পুনর্কথন — '
+                     'অমর চিত্র কথার লেখা বা ছবি নয় · ব্যবহারে ছবি-লেখা দুটোই নতুন করে বানানো, তাই নির্ভয়ে ছাপানো যায়।',
+            sourceName='চর্যাভূমি · জাতক-গল্প (তিন ভাষায়)', sourceUrl='jatak-golpo.html', storyAnchor=slug,
+            noteBn='AI ছবি ও নিজস্ব লেখা — মোট তিন ভাষায় (বাংলা/ইংরেজি/হিন্দি); প্রিন্ট করে শ্রেণিকক্ষে দেওয়া যায়।',
+        ))
+        AIJ_N += 1
+        # (খ) প্রতিটি ভাষার অডিও-কার্ড
+        for lang in ('bn', 'en', 'hi'):
+            rel = f'assets/kids/audio/{lang}/kid-{lang}-{slug}.mp3'
+            if not (ROOT / rel).exists():
+                continue
+            dur = '00:60'
+            if _MP3 is not None:
+                try:
+                    sec = int(round(_MP3(ROOT / rel).info.length))
+                    dur = f'{sec // 60:02d}:{sec % 60:02d}'
+                except Exception:
+                    pass
+            text = st.get('text' + lang.capitalize()) or st['textBn']
+            ITEMS.append(dict(
+                id=f'kid-aij-{lang}-{slug}', type='audio', lang=lang, ageBn='৫–১২ বছর',
+                topics=['jataka'],
+                titleBn=f"{st['titleBn']} — {_LANG_NAME_BN[lang]} অডিও গল্প",
+                titleEn=f"{st['titleEn']} — {_LANG_NAME_EN[lang]} audio story",
+                descBn=text[:190].rstrip() + '…',
+                thumb=art, audioUrl=rel, playUrl=rel, downloadUrl=rel, durationBn=dur,
+                licenceLabel=LIC['CC BY-SA 4.0'][0], licenceUrl=LIC['CC BY-SA 4.0'][1], licenceKey='original',
+                creatorBn='চর্যাভূমি — কৃত্রিম (AI) কণ্ঠ',
+                creditBn='লেখা ও কণ্ঠ: চর্যাভূমি — কৃত্রিম (AI) কণ্ঠ, CC BY-SA 4.0 · নিজস্ব পুনর্কথন, কোনো বই বা অডিও থেকে কপি নয় · '
+                         'ব্যবহারে “কৃত্রিম কণ্ঠ” লেখাটি রাখুন।',
+                sourceName='চর্যাভূমি · জাতক-গল্প (তিন ভাষায়)', sourceUrl='jatak-golpo.html', storyAnchor=slug,
+                noteBn='কৃত্রিম কণ্ঠ (AI) — MP3 ডাউনলোড করেও রাখা যায়।', voiceKind='ai',
+            ))
+            AIJ_N += 1
+        # (গ) বাংলা অ্যানিমেশন-ভিডিও (AI ছবি + AI কণ্ঠ, নিজেরাই বানানো)
+        vid = ROOT / 'assets' / 'kids' / 'video' / 'bn' / (slug + '.mp4')
+        if vid.exists():
+            ITEMS.append(dict(
+                id='kid-aij-video-' + slug, type='video', lang='bn', ageBn='৫–১২ বছর', topics=['jataka'],
+                titleBn=st['titleBn'] + ' — বাংলা অ্যানিমেশন (ভিডিও)',
+                titleEn=st['titleEn'] + ' — Bengali animated video',
+                descBn='ছবিতে ধীরে জুম, সঙ্গে বাংলা গল্প আর লেখায় নাম ও নীতিকথা — মোট ' +
+                       f"{max(1, round(vid.stat().st_size / 1048576))} MB, ৭২০p। ইন্টারনেট ছাড়াও চলে, নিজের ফোনে/ল্যাপটপে দেখানো যায়।",
+                thumb=art, videoUrl=f'assets/kids/video/bn/{slug}.mp4',
+                downloadUrl=f'assets/kids/video/bn/{slug}.mp4',
+                durationBn=next((i['durationBn'] for i in ITEMS if i.get('id') == f'kid-aij-bn-{slug}'), ''),
+                licenceLabel=LIC['CC BY-SA 4.0'][0], licenceUrl=LIC['CC BY-SA 4.0'][1], licenceKey='original',
+                creatorBn='চর্যাভূমি — AI ছবি ও AI কণ্ঠে বানানো ভিডিও',
+                creditBn='ভিডিও: চর্যাভূমি (AI ছবি + কৃত্রিম কণ্ঠ), CC BY-SA 4.0 · লেখা নিজস্ব পুনর্কথন, '
+                         'অমর চিত্র কথার লেখা/ছবি নয় · ব্যবহারে “কৃত্রিম কণ্ঠ” লেখাটি রাখুন।',
+                sourceName='চর্যাভূমি · জাতক-গল্প (তিন ভাষায়)', sourceUrl='jatak-golpo.html',
+                noteBn='এখানেই চলে — ▶ চাপলেই শুরু; MP4 ডাউনলোড করেও রাখা যায়।', voiceKind='ai',
+            ))
+            AIJ_N += 1
+        # (ঘ) পৃষ্ঠার জন্য হালকা index
+        _idx['stories'].append(dict(
+            slug=slug, titleBn=st['titleBn'], titleEn=st['titleEn'], titleHi=st['titleHi'],
+            art=art, moralBn=st['moralBn'], moralEn=st['moralEn'], moralHi=st['moralHi'],
+            textBn=st['textBn'], textEn=st['textEn'], textHi=st['textHi'],
+            audio={l: (f'assets/kids/audio/{l}/kid-{l}-{slug}.mp3'
+                       if (ROOT / f'assets/kids/audio/{l}/kid-{l}-{slug}.mp3').exists() else None)
+                   for l in ('bn', 'en', 'hi')},
+            video=(f'assets/kids/video/bn/{slug}.mp4'
+                   if (ROOT / f'assets/kids/video/bn/{slug}.mp4').exists() else None),
+        ))
+    print('AI জাতক (ছবি + অডিও + ভিডিও) যোগ হলো:', AIJ_N)
+    _idx_path = ROOT / 'data' / 'ai-jataka-index.json'
+    _idx_path.write_text(json.dumps(_idx, ensure_ascii=False, indent=1), encoding='utf-8')
+    print('wrote data/ai-jataka-index.json', _idx_path.stat().st_size // 1024, 'KB')
+    (ROOT / 'data' / 'ai-jataka-index.js').write_text(
+        '/* স্বয়ংক্রিয়ভাবে তৈরি — tools/build_kids_media.py */\n'
+        'window.KIDS_AI_JATAKA = ' + json.dumps(_idx, ensure_ascii=False) + ';\n', encoding='utf-8')
+
 # ---------------------------------------------------------------- সাজানোর ক্রম (বাংলা আগে)
 # ধরন অনুযায়ী ভাগ, তারপর ভাষা: বাংলা → ইংরেজি → হিন্দি → ফরাসি → চিনা
 TYPE_ORDER = {'video': 0, 'audio': 1, 'coloring': 2, 'book': 3, 'comic': 4, 'ack': 5, 'art': 6, 'film': 7, 'manga': 8}

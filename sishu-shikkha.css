@@ -168,3 +168,11 @@
 
 /* লম্বা তালিকায় স্ক্রল মসৃণ রাখতে (স্ক্রিনের বাইরের কার্ড পরে আঁকা হয়) */
 .kcard, .kids-media-card { content-visibility:auto; contain-intrinsic-size:auto 340px; }
+
+/* নিজস্ব বানানো অ্যানিমেশন-ভিডিও (লোকাল MP4) */
+.kids-video, .kvideo-local { margin: 10px 0 4px; }
+.kids-video video, .kvideo-local video {
+  width: 100%; border-radius: 12px; background: #0f3b31; display: block;
+  max-height: 340px; object-fit: contain;
+}
+.kids-video .kids-audio-dl, .kvideo-local .kaudio-tools { display: inline-block; margin-top: 6px; font-size: .86rem; }

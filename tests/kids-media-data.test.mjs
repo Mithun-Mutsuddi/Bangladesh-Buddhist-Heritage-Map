@@ -100,8 +100,17 @@ test('kids-media: অমর চিত্র কথা — শুধু লিং
 });
 
 test('kids-media: ইউটিউব ভিডিও — বৈধ এমবেড আইডি, ফাইল কপি নয়', () => {
-  const vids = data.items.filter(i => i.type === 'video');
-  assert.ok(vids.length >= 18, 'অন্তত ১৮টি অ্যানিমেশন');
+  const allVids = data.items.filter(i => i.type === 'video');
+  const vids = allVids.filter(v => !v.videoUrl);
+  assert.ok(allVids.length >= 24, 'অন্তত ২৪টি অ্যানিমেশন');
+  // নিজস্ব বানানো লোকাল ভিডিও — ফাইল আছে, লাইসেন্স নিজের
+  for (const v of allVids.filter(x => x.videoUrl)) {
+    assert.match(v.videoUrl, /^assets\/kids\/video\//, `${v.id}: ভিডিও-পথ ভুল`);
+    assert.ok(existsSync(join(ROOT, v.videoUrl)), `${v.id}: ভিডিও ফাইল নেই`);
+    assert.equal(v.licenceKey, 'original', `${v.id}: নিজস্ব ভিডিওর লাইসেন্স-শ্রেণি`);
+    assert.match(v.creditBn, /কৃত্রিম|AI/, `${v.id}: AI-কণ্ঠের কথা লেখা নেই`);
+  }
+  assert.ok(allVids.filter(x => x.videoUrl).length >= 6, 'নিজস্ব অ্যানিমেশন অন্তত ৬টি');
   for (const v of vids) {
     assert.match(v.embedId, /^[A-Za-z0-9_-]{11}$/, `${v.id}: এমবেড আইডি ভুল`);
     assert.equal(v.watchUrl, `https://www.youtube.com/watch?v=${v.embedId}`, `${v.id}: watch লিংক মিলছে না`);
@@ -128,7 +137,7 @@ test('kids-media: নিজের আঁকা ছবি — স্থানী�
   const own = data.items.filter(i => i.licenceKey === 'original' && i.type !== 'audio');
   assert.ok(own.length >= 6, 'অন্তত ৬টি মূল আঁকন');
   for (const item of own) {
-    assert.match(item.downloadUrl || '', /^assets\/kids\/(thumbs|coloring)\//, `${item.id}: স্থানীয় ডাউনলোড লিংক নেই`);
+    assert.match(item.downloadUrl || '', /^assets\/kids\/(thumbs|coloring|video|art)\//, `${item.id}: স্থানীয় ডাউনলোড লিংক নেই`);
     assert.ok(existsSync(join(ROOT, item.downloadUrl)), `${item.id}: ডাউনলোড ফাইল নেই`);
     assert.ok(existsSync(join(ROOT, item.downloadUrl)), `${item.id}: ফাইল নেই`);
     assert.match(item.creditBn, /CC BY-SA 4\.0/, `${item.id}: লাইসেন্স-শ্রেণি লেখা নেই`);
@@ -348,4 +357,32 @@ test('kids-media: অডিও বহুভাষিক — বাংলা আ�
     assert.match(i.descBn + i.creditBn, /কৃত্রিম|মানুষের কণ্ঠ|Als33120/, `${i.id}: কণ্ঠের ধরন লেখা নেই`);
   }
   assert.ok(data.items.length >= 138, 'মোট আইটেম ১৩৮+ হওয়া চাই');
+});
+
+test('kids-media: নিজস্ব AI জাতক-সেট — ছবি, লেখা (৩ ভাষা), অডিও, ভিডিও', () => {
+  const aij = JSON.parse(readFileSync(join(ROOT, 'data/ai-jataka-stories.json'), 'utf8'));
+  assert.equal(aij.schema, 'charyabhumi-kids-ai-jataka-v1');
+  assert.equal(aij.stories.length, 6, 'ছয়টি গল্প');
+  for (const st of aij.stories) {
+    for (const k of ['textBn', 'textEn', 'textHi', 'moralBn', 'moralEn', 'moralHi']) {
+      assert.ok((st[k] || '').length > 40, `${st.slug}: ${k} খুব ছোট`);
+    }
+    assert.ok(existsSync(join(ROOT, st.art)), `${st.slug}: ছবি নেই`);
+    assert.ok(!/[\u4e00-\u9fff\u0600-\u06ff]/.test(st.textBn), `${st.slug}: বাংলা লেখায় অন্য লিপি ঢুকে গেছে`);
+  }
+  const card = id => data.items.find(i => i.id === id);
+  for (const st of aij.stories) {
+    assert.ok(card('kid-aij-art-' + st.slug), st.slug + ': ছবি-কার্ড নেই');
+    assert.ok(card('kid-aij-bn-' + st.slug), st.slug + ': বাংলা অডিও-কার্ড নেই');
+    const v = card('kid-aij-video-' + st.slug);
+    if (v) { assert.ok(existsSync(join(ROOT, v.videoUrl)), st.slug + ': ভিডিও নেই'); }
+  }
+  const idx = JSON.parse(readFileSync(join(ROOT, 'data/ai-jataka-index.json'), 'utf8'));
+  assert.equal(idx.schema, 'charyabhumi-kids-ai-jataka-index-v1');
+  assert.ok(idx.stories.every(s => s.audio.bn), 'বাংলা অডিও index-এ নেই');
+  // ইংরেজি/হিন্দি অডিও ধাপে ধাপে তৈরি হচ্ছে — অন্তত বাংলা সব গল্পে থাকতেই হবে
+  const enN = idx.stories.filter(s => s.audio.en).length, hiN = idx.stories.filter(s => s.audio.hi).length;
+  assert.ok(enN + hiN >= 1, 'বাংলা ছাড়া অন্য ভাষার অডিও একটিও নেই');
+  assert.ok(idx.stories.every(s => !s.audio.en || existsSync(join(ROOT, s.audio.en))), 'ইংরেজি অডিও ফাইল নেই');
+  assert.ok(idx.stories.every(s => s.video), 'প্রতিটি গল্পে ভিডিও থাকা চাই');
 });
