@@ -203,6 +203,13 @@
           "key": "nav.archive"
         },
         {
+          "title": "সহযোগী সংগ্রহ — ছবি ও পাণ্ডুলিপি",
+          "href": "historical-archive.html#partners",
+          "desc": "BDRC · BOP · KABC · Arizona — ৫৬টি যাচাইকৃত ঐতিহাসিক ছবি, চিত্রকলা, পাণ্ডুলিপি ও চলচ্চিত্র",
+          "keywords": "partner archives images photographs paintings manuscripts সংরক্ষণাগার ছবি পাণ্ডুলিপি",
+          "key": "nav.partners"
+        },
+        {
           "title": "বহিস্তর research tools",
           "href": "library.html#research-tools",
           "desc": "Scholar, Books, Dataset, Arts & Culture, News ও media search",

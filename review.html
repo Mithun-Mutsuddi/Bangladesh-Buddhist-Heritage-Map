@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>অনুমোদন-কনসোল (মালিকের জন্য) — চর্যাভূমি সংরক্ষণাগার</title>
+<style>
+:root{--ink:#10231e;--ink2:#2d4a41;--gold:#c08b2c;--teal:#0f6b57;--line:#dbe6e1;--bg:#f7faf8;--card:#fff;--red:#a3311f}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans Bengali","Hind Siliguri",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+header{background:linear-gradient(160deg,#241207,#4a2c11 60%,#6b4415);color:#fdf6e9;padding:26px 20px 24px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+h1{font-size:clamp(19px,2.6vw,26px);margin:.15em 0 .3em}
+.eyebrow{letter-spacing:.13em;font-size:11.5px;text-transform:uppercase;color:#e8c489;margin:0}
+.lede{margin:0;font-size:14px;color:#f7e7cc;max-width:80ch}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 4px}
+.tabs button{border:1px solid var(--line);background:#fff;color:var(--ink);padding:8px 15px;border-radius:999px;font:inherit;font-weight:600;font-size:14px;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px 18px;margin:16px 0;box-shadow:0 1px 2px rgba(16,35,30,.06)}
+h2{font-size:17.5px;margin:0 0 4px;border-left:5px solid var(--gold);padding-left:11px}
+h3{font-size:15px;margin:0}
+.sub{color:var(--ink2);font-size:13.6px;margin:2px 0 12px}
+label{display:block;font-weight:600;font-size:13.4px;margin:9px 0 3px}
+input[type=text],textarea,select{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:14px;background:#fdfefe}
+textarea{min-height:90px;resize:vertical}
+button{font:inherit;cursor:pointer;border-radius:9px;border:1px solid var(--teal);background:var(--teal);color:#fff;padding:8px 15px;font-weight:600;font-size:14px}
+button.ghost{background:#fff;color:var(--teal)}
+button.danger{background:#fff;color:var(--red);border-color:#d8b3ab}
+.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+.item{border:1px solid var(--line);border-radius:14px;padding:12px;margin:12px 0;background:#fbfdfc}
+.item img{max-width:100%;max-height:220px;border-radius:10px;display:block;margin-bottom:8px;border:1px solid var(--line)}
+.pill{display:inline-block;font-size:11.6px;padding:2px 9px;border-radius:999px;background:#eef7f3;border:1px solid #cfe6dc;color:#12463a;margin-left:6px}
+.pill.warn{background:#fff4e2;border-color:#f0d9a0;color:#6d4b12}
+.pill.bad{background:#fdeeea;border-color:#e2b9ae;color:#8d2d1c}
+.list{max-height:420px;overflow:auto;border:1px solid var(--line);border-radius:12px}
+.list div{padding:8px 11px;border-bottom:1px solid var(--line);font-size:13.6px;cursor:pointer}
+.list div:hover{background:#f2faf6}
+.list div:last-child{border-bottom:0}
+.note{background:#fff8e6;border:1px solid #f0d9a0;border-radius:12px;padding:12px 15px;font-size:13.6px;color:#5a4620;margin:12px 0}
+code{background:rgba(0,0,0,.06);padding:1px 5px;border-radius:5px;font-size:12.4px}
+[hidden]{display:none!important}
+footer{padding:26px 20px 46px;text-align:center;color:#5b7a71;font-size:12.8px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">চর্যাভূমি · মালিকের অনুমোদন-কনসোল</p>
+    <h1>জমা যাচাই · সম্পাদনা · প্রকাশ</h1>
+    <p class="lede">এই পাতাটি বাইরের লোকের জন্য নয় — কোনো লিংক থেকে এটি খোলা যায় না, এবং অনুমোদন ছাড়া কিছুই প্রকাশ পায় না। কাজ শেষ হলে দুটি ফাইল (<code>contributions.json</code>, <code>edits.json</code>) ডাউনলোড করে সার্ভারের <code>data/</code> ফোল্ডারে আপলোড করবেন — সাইট নতুন করে বানাতে হবে না।</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="card" id="gate">
+    <h2>প্রবেশ</h2>
+    <p class="sub">এই কনসোল স্থানীয়ভাবে চলে; পাসকোড শুধু ঘরের বাইরের কেউ যেন হাত না দেয় তার জন্য। পাসকোড <code>charyabhumi</code> (পরে বদলে নিতে পারবেন <code>review.html</code>-এর <code>PASS</code> লাইনে)।</p>
+    <label for="pw">পাসকোড</label>
+    <input type="text" id="pw" placeholder="পাসকোড">
+    <div class="row"><button type="button" id="unlock">খুলুন</button></div>
+  </div>
+
+  <div id="app" hidden>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="pending">১ · নতুন জমা (অনুমোদন)</button>
+      <button role="tab" aria-selected="false" data-tab="edit">২ · আমার দেওয়া রেকর্ড সম্পাদনা (৩১৫)</button>
+      <button role="tab" aria-selected="false" data-tab="export">৩ · প্রকাশ (ফাইল রপ্তানি)</button>
+    </div>
+
+    <section class="card" id="tab-pending">
+      <h2>নতুন জমা</h2>
+      <p class="sub">জমাদানকারীর পাঠানো <code>জমা-….json</code> ফাইল(গুলো) এখানে খুলুন। <strong>অনুমোদন না দিলে জমাটি কোথাও প্রকাশ পাবে না</strong> — বাতিল করলে কারণ লিখে রাখা হয়।</p>
+      <input type="file" id="import" accept=".json,application/json" multiple>
+      <div class="row">
+        <button type="button" class="ghost" id="importQueue">এই ব্রাউজারের জমা-তালিকা থেকে নিন</button>
+      </div>
+      <div id="pending"></div>
+    </section>
+
+    <section class="card" id="tab-edit" hidden>
+      <h2>বিদ্যমান রেকর্ড সম্পাদনা</h2>
+      <p class="sub">৩১৫টি রেকর্ডের যেকোনোটি খুঁজে শিরোনাম, বিবরণ, স্থান, তারিখ, আলোকচিত্রী, লাইসেন্স — এমনকি <strong>ছবিও</strong> বদলাতে পারবেন। বদল এখানে সংরক্ষিত থাকে; ‘রপ্তানি’ থেকে <code>edits.json</code> নামিয়ে আপলোড করলেই সাইটে দেখা যাবে।</p>
+      <label for="search">খুঁজুন — শিরোনাম, স্থান বা আইডি</label>
+      <input type="text" id="search" placeholder="যেমন: লুম্বিনি / open-211 / ভিক্ষুণী">
+      <div class="list" id="results"></div>
+      <div id="editor"></div>
+    </section>
+
+    <section class="card" id="tab-export" hidden>
+      <h2>প্রকাশ — দুটি ফাইল</h2>
+      <p class="sub">নিচের দুটি ফাইল সার্ভারের <code>data/</code> ফোল্ডারে আপলোড করুন (আগের ফাইলের উপরেই)। সাইট নিজেই সেগুলো পড়ে নেবে — <code>contributions.json</code> = অনুমোদিত নতুন রেকর্ড, <code>edits.json</code> = আপনার সম্পাদনা।</p>
+      <div class="row">
+        <button type="button" id="expContrib">contributions.json নামান</button>
+        <button type="button" id="expEdits">edits.json নামান</button>
+        <button type="button" class="ghost" id="expBackup">ব্যাকআপ (দুই ফাইল একসঙ্গে)</button>
+        <button type="button" class="danger" id="wipe">সব স্থানীয় খসড়া মুছুন</button>
+      </div>
+      <div class="note" id="summary"></div>
+    </section>
+  </div>
+
+</main>
+<footer>এই পাতাটি প্রকাশ্য নয় · অনুমোদন → রপ্তানি → আপলোড → সাইটে দেখা যাবে</footer>
+
+<script>
+(function () {
+  'use strict';
+  var PASS = 'charyabhumi';
+  var DATA = 'data/historical-archive-partners.json';
+  var K_PENDING = 'cb-review-pending-v1';
+  var K_APPROVED = 'cb-review-approved-v1';
+  var K_REJECTED = 'cb-review-rejected-v1';
+  var K_EDITS = 'cb-review-edits-v1';
+  var $ = function (id) { return document.getElementById(id); };
+  var records = [], doc = null, current = null;
+
+  function read(k, dflt) { try { var v = JSON.parse(localStorage.getItem(k)); return v == null ? dflt : v; } catch (e) { return dflt; } }
+  function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { alert('ব্রাউজারের জায়গা শেষ।'); } }
+  function esc(v) { return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function slug(s) { return String(s || 'joma').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '').slice(0, 36) || 'joma'; }
+  function download(name, text) {
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text], { type: 'application/json;charset=utf-8' }));
+    a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+  }
+  function num(n) { return Number(n || 0).toLocaleString('bn-BD'); }
+
+  /* ---------- গেট ---------- */
+  $('unlock').addEventListener('click', function () {
+    if ($('pw').value.trim() !== PASS) { alert('পাসকোড মেলেনি।'); return; }
+    $('gate').hidden = true; $('app').hidden = false; start();
+  });
+  $('pw').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('unlock').click(); });
+
+  /* ---------- ট্যাব ---------- */
+  document.querySelector('.tabs').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-tab]'); if (!b) return;
+    Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (x) {
+      x.setAttribute('aria-selected', x === b ? 'true' : 'false');
+    });
+    ['pending', 'edit', 'export'].forEach(function (t) {
+      $('tab-' + t).hidden = t !== b.getAttribute('data-tab');
+    });
+    if (b.getAttribute('data-tab') === 'export') summary();
+  });
+
+  function start() {
+    var p = read(K_PENDING, []), a = read(K_APPROVED, []), r = read(K_REJECTED, []);
+    if (p.length) renderPending(p);
+    fetch(DATA + '?v=console').then(function (x) { return x.json(); }).then(function (d) {
+      doc = d; records = d.items || [];
+      $('search').placeholder = 'খুঁজুন — ' + num(records.length) + 'টি রেকর্ড';
+      document.querySelector('[data-tab=edit]').textContent = '২ · আমার দেওয়া রেকর্ড সম্পাদনা (' + num(records.length) + ')';
+      search('');
+    }).catch(function () { $('results').innerHTML = '<div>ডেটা ফাইল পাওয়া গেল না — সার্ভার থেকে খুলুন (file:// নয়)।</div>'; });
+    summary(p.length, a.length, r.length);
+  }
+
+  /* ---------- জমা ---------- */
+  function renderPending(list) {
+    var host = $('pending');
+    if (!list.length) { host.innerHTML = '<p class="sub">পর্যালোচনার জন্য কিছু নেই।</p>'; return; }
+    host.innerHTML = list.map(function (p, i) {
+      return '<div class="item" data-i="' + i + '">' +
+        (p.image ? '<img src="' + p.image + '" alt="জমা ছবি">' : '<p class="sub">ছবি নেই (বিবরণ-জমা)</p>') +
+        '<h3>' + esc(p.titleBn || '(শিরোনাম নেই)') + '<span class="pill warn">অনুমোদনের অপেক্ষায়</span></h3>' +
+        '<p class="sub">' + esc(p.placeBn || '') + ' · ' + esc(p.dateBn || '') + ' · ' + esc(p.mediaType) +
+        ' · লাইসেন্স: ' + esc(p.licence) + ' · জমা: ' + esc(p.submitter ? p.submitter.name : '') +
+        (p.submitter && p.submitter.contact ? ' (' + esc(p.submitter.contact) + ')' : '') + '</p>' +
+        '<p class="sub">' + esc((p.descBn || '').slice(0, 320)) + '</p>' +
+        '<div class="grid2">' +
+        '<div><label>শিরোনাম (বাংলা)</label><input type="text" data-f="titleBn" value="' + esc(p.titleBn) + '"></div>' +
+        '<div><label>শিরোনাম (ইংরেজি)</label><input type="text" data-f="titleEn" value="' + esc(p.titleEn) + '"></div>' +
+        '<div><label>স্থান</label><input type="text" data-f="placeBn" value="' + esc(p.placeBn) + '"></div>' +
+        '<div><label>সময়কাল</label><input type="text" data-f="dateBn" value="' + esc(p.dateBn) + '"></div>' +
+        '<div><label>আলোকচিত্রী</label><input type="text" data-f="creatorBn" value="' + esc(p.creatorBn) + '"></div>' +
+        '<div><label>কীওয়ার্ড (কমা)</label><input type="text" data-f="keywordsText" value="' + esc((p.keywords || []).join(', ')) + '"></div>' +
+        '</div>' +
+        '<label>বিবরণ (সম্পাদনা করতে পারেন)</label><textarea data-f="descBn">' + esc(p.descBn) + '</textarea>' +
+        '<div class="row">' +
+        '<button type="button" data-act="approve">অনুমোদন দিন ও প্রকাশে রাখুন</button>' +
+        '<button type="button" class="danger" data-act="reject">বাতিল করুন</button>' +
+        '</div></div>';
+    }).join('');
+  }
+
+  $('pending').addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-act]'); if (!btn) return;
+    var box = btn.closest('.item'), i = +box.getAttribute('data-i');
+    var list = read(K_PENDING, []);
+    var p = list[i]; if (!p) return;
+    box.querySelectorAll('[data-f]').forEach(function (el) {
+      var k = el.getAttribute('data-f');
+      if (k === 'keywordsText') p.keywords = el.value.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+      else p[k] = el.value.trim();
+    });
+    if (btn.getAttribute('data-act') === 'reject') {
+      var why = prompt('বাতিলের কারণ (জমাদানকারীকে জানানো হবে):', 'ছবির অধিকার বা লাইসেন্স নিশ্চিত নয়');
+      if (why === null) return;
+      var rej = read(K_REJECTED, []); rej.push({ at: new Date().toISOString(), reason: why, packet: p }); write(K_REJECTED, rej);
+    } else {
+      var item = toItem(p);
+      var ap = read(K_APPROVED, []); ap.push(item); write(K_APPROVED, ap);
+    }
+    list.splice(i, 1); write(K_PENDING, list); renderPending(list); summary();
+  });
+
+  function toItem(p) {
+    var licUrl = { 'CC0': 'https://creativecommons.org/publicdomain/zero/1.0/deed.bn',
+      'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/deed.bn',
+      'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/deed.bn' }[p.licence] || '';
+    var credit = p.licence === 'own-permission'
+      ? 'ছবি: ' + (p.creatorBn || 'অজ্ঞাত') + ' — সম্প্রদায়-জমা, চর্যাভূমি সংরক্ষণাগারে দেখানোর অনুমতি-সহ; অন্য ব্যবহারে অনুমতি লাগবে।'
+      : 'ছবি: ' + (p.creatorBn || 'অজ্ঞাত') + ' · ' + p.licence + ' — সম্প্রদায়-জমা; পুনঃব্যবহারে নাম ও লাইসেন্স রাখুন।';
+    return {
+      id: 'cb-' + slug(p.titleBn) + '-' + Math.random().toString(36).slice(2, 6),
+      collection: 'open',
+      mediaType: p.mediaType || 'photo',
+      region: p.region || 'bangladesh',
+      period: '2000now',
+      titleBn: p.titleBn, titleEn: p.titleEn || p.titleBn,
+      dateBn: p.dateBn || 'তারিখ অনিশ্চিত', dateEn: '',
+      placeBn: p.placeBn || '',
+      creatorBn: p.creatorBn || 'অজ্ঞাত',
+      materialBn: '',
+      descBn: p.descBn, descEn: p.descBn.slice(0, 0) || '',
+      sourceUrl: '',
+      imageUrl: p.image || '',
+      imageSourceUrl: '',
+      imageAltBn: p.titleBn || 'সম্প্রদায়-জমা ছবি',
+      imageCreditBn: credit,
+      audioUrl: '', videoUrl: '', durationBn: '',
+      accession: 'সম্প্রদায়-জমা · অনুমোদিত',
+      language: 'বাংলা',
+      rights: 'open-license',
+      licenceBn: p.licence === 'own-permission' ? 'অনুমতি-ভিত্তিক (কেবল এখানে)' : 'খোলা',
+      licenceLabel: p.licence === 'own-permission' ? 'নিজস্ব ছবি, অনুমতি-সহ' : p.licence,
+      licenceUrl: licUrl,
+      verification: 'community-approved',
+      keywords: p.keywords || [],
+      approvedAt: new Date().toISOString(),
+      submitter: (p.submitter && p.submitter.name) ? p.submitter : { name: 'অজ্ঞাত জমাদানকারী', contact: '' }
+    };
+  }
+
+  $('import').addEventListener('change', function () {
+    var files = Array.prototype.slice.call(this.files || []);
+    if (!files.length) return;
+    var pending = read(K_PENDING, []), done = 0;
+    files.forEach(function (f) {
+      var fr = new FileReader();
+      fr.onload = function () {
+        try {
+          var d = JSON.parse(fr.result);
+          var batch = Array.isArray(d.items) ? d.items : [d];
+          batch.forEach(function (p) { if (p && p.titleBn) pending.push(p); });
+        } catch (e) { alert(f.name + ' পড়া গেল না: ' + e.message); }
+        if (++done === files.length) { write(K_PENDING, pending); renderPending(pending); summary(); }
+      };
+      fr.readAsText(f);
+    });
+    this.value = '';
+  });
+
+  $('importQueue').addEventListener('click', function () {
+    var q = read('cb-submit-queue-v1', []);
+    if (!q.length) { alert('এই ব্রাউজারে জমা-তালিকা ফাঁকা।'); return; }
+    var pending = read(K_PENDING, []);
+    q.forEach(function (p) { if (p && p.titleBn) pending.push(p); });
+    write(K_PENDING, pending); renderPending(pending); summary();
+  });
+
+  /* ---------- সম্পাদনা ---------- */
+  function search(q) {
+    q = (q || '').toLowerCase().trim();
+    var list = records.filter(function (i) {
+      if (!q) return true;
+      return (i.id + ' ' + i.titleBn + ' ' + (i.titleEn || '') + ' ' + (i.placeBn || '')).toLowerCase().indexOf(q) > -1;
+    }).slice(0, 60);
+    $('results').innerHTML = list.map(function (i) {
+      var ed = read(K_EDITS, {})[i.id] ? '<span class="pill">সম্পাদিত</span>' : '';
+      return '<div data-id="' + esc(i.id) + '"><strong>' + esc(i.titleBn) + '</strong>' + ed +
+        '<br><span class="sub">' + esc(i.id) + ' · ' + esc(i.placeBn || '') + '</span></div>';
+    }).join('') || '<div>কিছু মেলেনি।</div>';
+  }
+  $('search').addEventListener('input', function () { search(this.value); });
+
+  $('results').addEventListener('click', function (e) {
+    var d = e.target.closest('[data-id]'); if (!d) return;
+    openEditor(d.getAttribute('data-id'));
+  });
+
+  var FIELDS = [
+    ['titleBn', 'শিরোনাম (বাংলা)'], ['titleEn', 'শিরোনাম (ইংরেজি)'], ['placeBn', 'স্থান'],
+    ['dateBn', 'সময়কাল'], ['creatorBn', 'আলোকচিত্রী / নির্মাতা'], ['accession', 'সংগ্রহ-নম্বর']
+  ];
+
+  function openEditor(id) {
+    var rec = records.filter(function (i) { return i.id === id; })[0];
+    if (!rec) return;
+    current = rec;
+    var edits = read(K_EDITS, {}), cur = edits[id] || {};
+    var val = function (k) { return Object.prototype.hasOwnProperty.call(cur, k) ? cur[k] : (rec[k] == null ? '' : rec[k]); };
+    $('editor').innerHTML = '<div class="item"><h3>সম্পাদনা: ' + esc(rec.id) +
+      (cur && Object.keys(cur).length ? '<span class="pill warn">অপ্রকাশিত বদল আছে</span>' : '') + '</h3>' +
+      (val('imageUrl') ? '<img src="' + esc(val('imageUrl')) + '" alt="বর্তমান ছবি">' : '<p class="sub">ছবি নেই</p>') +
+      '<div class="grid2">' + FIELDS.map(function (f) {
+        return '<div><label>' + f[1] + '</label><input type="text" data-k="' + f[0] + '" value="' + esc(val(f[0])) + '"></div>';
+      }).join('') +
+      '<div><label>লাইসেন্স (যেমন CC BY-SA 4.0)</label><input type="text" data-k="licenceLabel" value="' + esc(val('licenceLabel')) + '"></div>' +
+      '<div><label>কীওয়ার্ড (কমা দিয়ে)</label><input type="text" data-k="keywordsText" value="' + esc((val('keywords') || []).join(', ')) + '"></div>' +
+      '</div>' +
+      '<label>বিবরণ</label><textarea data-k="descBn">' + esc(val('descBn')) + '</textarea>' +
+      '<label>ছবি বদলাতে চাইলে নতুন ছবি বেছে নিন <small>— ১০০০ পিক্সেলে ছোট করে নেওয়া হবে</small></label>' +
+      '<input type="file" id="newimg" accept="image/*">' +
+      '<div class="row"><button type="button" id="saveEd">সংরক্ষণ করুন</button>' +
+      '<button type="button" class="ghost" id="clearEd">এই রেকর্ডের বদল মুছুন</button></div></div>';
+    var newImage = null;
+    $('newimg').addEventListener('change', function () {
+      var f = this.files && this.files[0]; if (!f) return;
+      var img = new Image(), fr = new FileReader();
+      fr.onload = function () {
+        img.onload = function () {
+          var sc = Math.min(1, 1000 / Math.max(img.width, img.height));
+          var cv = document.createElement('canvas');
+          cv.width = Math.round(img.width * sc); cv.height = Math.round(img.height * sc);
+          cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+          newImage = cv.toDataURL('image/jpeg', 0.82);
+          if (current) current.imageUrl = newImage;
+          alert('নতুন ছবি নেওয়া হয়েছে — এখন ‘সংরক্ষণ করুন’ চাপুন।');
+        };
+        img.src = fr.result;
+      };
+      fr.readAsDataURL(f);
+    });
+    $('saveEd').addEventListener('click', function () {
+      var patch = {};
+      $('editor').querySelectorAll('[data-k]').forEach(function (el) {
+        var k = el.getAttribute('data-k');
+        if (k === 'keywordsText') patch.keywords = el.value.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+        else patch[k] = el.value.trim();
+      });
+      if (newImage) patch.imageUrl = newImage;
+      patch.editedAt = new Date().toISOString();
+      var e2 = read(K_EDITS, {}); e2[id] = patch; write(K_EDITS, e2);
+      search($('search').value); openEditor(id); summary();
+    });
+    $('clearEd').addEventListener('click', function () {
+      var e3 = read(K_EDITS, {}); delete e3[id]; write(K_EDITS, e3);
+      search($('search').value); openEditor(id); summary();
+    });
+  }
+
+  /* ---------- রপ্তানি ---------- */
+  function summary(pn, an, rn) {
+    var p = pn == null ? read(K_PENDING, []).length : pn;
+    var a = an == null ? read(K_APPROVED, []).length : an;
+    var r = rn == null ? read(K_REJECTED, []).length : rn;
+    var e = Object.keys(read(K_EDITS, {})).length;
+    $('summary').innerHTML = 'অনুমোদনের অপেক্ষায়: <strong>' + num(p) + '</strong> · অনুমোদিত (প্রকাশের জন্য তৈরি): <strong>' +
+      num(a) + '</strong> · বাতিল: <strong>' + num(r) + '</strong> · সম্পাদিত রেকর্ড: <strong>' + num(e) + '</strong>';
+  }
+
+  $('expContrib').addEventListener('click', function () {
+    var items = read(K_APPROVED, []);
+    download('contributions.json', JSON.stringify({
+      schema: 'charyabhumi-contributions-v1', updated_at: new Date().toISOString(),
+      noteBn: 'মালিকের অনুমোদিত সম্প্রদায়-জমা। এখানে যা আছে শুধু সেটাই সাইটে দেখাবে।',
+      items: items
+    }, null, 1));
+    alert(num(items.length) + 'টি রেকর্ড — ফাইলটি সার্ভারের data/ ফোল্ডারে আপলোড করুন।');
+  });
+
+  $('expEdits').addEventListener('click', function () {
+    var recordsMap = read(K_EDITS, {});
+    download('edits.json', JSON.stringify({
+      schema: 'charyabhumi-edits-v1', updated_at: new Date().toISOString(),
+      noteBn: 'মালিকের সম্পাদনা — কী = রেকর্ডের id।',
+      records: recordsMap
+    }, null, 1));
+    alert(Object.keys(recordsMap).length + 'টি রেকর্ডের সম্পাদনা — ফাইলটি সার্ভারের data/ ফোল্ডারে আপলোড করুন।');
+  });
+
+  $('expBackup').addEventListener('click', function () {
+    download('charyabhumi-backup-' + new Date().toISOString().slice(0, 10) + '.json', JSON.stringify({
+      pending: read(K_PENDING, []), approved: read(K_APPROVED, []),
+      rejected: read(K_REJECTED, []), edits: read(K_EDITS, {})
+    }, null, 1));
+  });
+
+  $('wipe').addEventListener('click', function () {
+    if (!confirm('সব স্থানীয় খসড়া, অনুমোদিত তালিকা ও সম্পাদনা মুছে যাবে (আগে ব্যাকআপ নিন!)। নিশ্চিত?')) return;
+    [K_PENDING, K_APPROVED, K_REJECTED, K_EDITS].forEach(function (k) { localStorage.removeItem(k); });
+    $('pending').innerHTML = ''; $('editor').innerHTML = ''; summary(0, 0, 0);
+  });
+})();
+</script>
+</body>
+</html>
