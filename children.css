@@ -270,3 +270,26 @@
 :not(#legibility) p.kids-media-note { font-size:12px !important }
 :not(#legibility) span.kids-chip { font-size:12px !important }
 :not(#legibility) span.media-format { font-size:12px !important }
+
+/* ---- ২০২৬-১১-০১: শিশু ও শিক্ষা তালিকা (১২৮ আইটেম) ---- */
+.kids-media-art { position:relative; }
+.kids-media-art img { width:100%; height:100%; object-fit:cover; display:block; }
+.kids-media-art.kvideo { aspect-ratio:16/9; background:#000; }
+.kids-media-art.kvideo iframe { width:100%; height:100%; border:0; display:block; }
+.kids-audio { margin:8px 0 4px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.kids-audio audio { flex:1; min-width:180px; height:36px; }
+.kids-audio-dl { font-size:12.5px; color:#0f6b57; text-decoration:none; border:1px solid #cfe3d9; background:#f2faf6; padding:4px 9px; border-radius:8px; white-space:nowrap; }
+.kids-rights { font-size:12.4px; color:#5b7a71; }
+.kids-rights.protected { color:#8d2d1c; }
+.kids-more-wrap{ grid-column:1/-1; display:flex; justify-content:center; padding:10px 0 }
+
+/* তালিকা আসার আগে হালকা skeleton — প্রথম দর্শনেই কিছু দেখা যায় */
+.k-skel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media(max-width:900px){.k-skel{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.k-skel{grid-template-columns:1fr}}
+.k-skel div{height:250px;border-radius:20px;background:linear-gradient(100deg,#eee 30%,#f7f7f7 50%,#eee 70%);background-size:200% 100%;animation:ksh 1.2s linear infinite;border:1px solid #e6e0d4}
+@keyframes ksh{to{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.k-skel div{animation:none}}
+
+/* লম্বা তালিকায় স্ক্রল মসৃণ রাখতে (স্ক্রিনের বাইরের কার্ড পরে আঁকা হয়) */
+.kcard, .kids-media-card { content-visibility:auto; contain-intrinsic-size:auto 340px; }

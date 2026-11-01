@@ -10,7 +10,7 @@
   const LANG_LABEL = { en:'ইংরেজি', hi:'হিন্দি', fr:'ফরাসি', zh:'চিনা', bn:'বাংলা', sa:'সংস্কৃত' };
   const KIND_ICON  = { comic:'💬', book:'📖', audio:'🎧', art:'🎨', film:'🎬' };
 
-  const state = { type:'all', lang:'all', topic:'all', q:'', playable:false, data:null };
+  const state = { type:'all', lang:'all', topic:'all', q:'', playable:false, data:null, limit:24 };
   let lightbox = null;
 
   const matches = item => {
@@ -76,7 +76,7 @@
         <p class="kmeta">${esc(LANG_LABEL[item.lang] || item.lang)} · ${esc(item.ageBn || '')} · ${esc(TYPE_LABEL[item.type] || item.type)}</p>
         <p class="kdesc">${esc(item.descBn)}</p>
         ${isAudio ? `<div class="kaudio">
-          <audio controls preload="metadata" src="${esc(item.playUrl)}" aria-label="${esc(item.titleBn)}"></audio>
+          <audio controls preload="none" src="${esc(item.playUrl)}" aria-label="${esc(item.titleBn)}"></audio>
           <p class="kaudio-tools"><a href="${esc(item.playUrl)}" download>⬇ MP3 ডাউনলোড</a> <span>·</span> <a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">মূল সূত্র ↗</a></p>
           <p class="kaudio-err" hidden>এই ফাইলটি এখন লোড হচ্ছে না — ফাইলটি সাইটের <code>assets/kids/audio/</code> ফোল্ডারে আছে; ইন্টারনেট/ফাইল-পথ ঠিক থাকলে “MP3 ডাউনলোড” চেপে শুনতে পারেন।</p>
         </div>` : ''}
@@ -90,8 +90,12 @@
   const render = () => {
     const d = state.data;
     const visible = d.items.filter(matches);
+    const shown = visible.slice(0, state.limit);
+    const moreBtn = visible.length > shown.length
+      ? `<div class="kmore-wrap"><button type="button" class="kmore">আরও ${bn(visible.length - shown.length)}টি দেখাও ↓</button></div>`
+      : '';
     $('#kGrid').innerHTML = visible.length
-      ? visible.map(card).join('')
+      ? shown.map(card).join('') + moreBtn
       : '<p class="kidsmedia-empty">এই ছাঁকনিতে কিছু মেলেনি — ফিল্টার একটু বদলে দেখুন।</p>';
     $('#kCount').innerHTML = `<b>${bn(visible.length)}</b>টি দেখানো হচ্ছে · মোট <b>${bn(d.items.length)}</b>টি যাচাই করা আইটেম · অডিও ${bn(d.items.filter(i => i.playUrl).length)}টি · ছবি ${bn(d.items.filter(i => i.type === 'art' || i.type === 'comic').length)}টি`;
   };
@@ -101,7 +105,7 @@
     el.addEventListener('click', e => {
       const b = e.target.closest('button[data-key]'); if (!b) return;
       $$('button[data-key]', el).forEach(o => o.setAttribute('aria-pressed', String(o === b)));
-      state[key] = b.dataset.key; render();
+      state[key] = b.dataset.key; state.limit = 24; render();
     });
   };
 
@@ -128,10 +132,10 @@
 
   const render_ = data => {
     state.data = data;
-    $('#kLead').textContent = data.introBn;
-    chips($('#kTypes'), data.types, 'type');
-    chips($('#kLangs'), data.languages, 'lang');
-    chips($('#kTopics'), data.topics, 'topic');
+    if ($('#kLead')) $('#kLead').textContent = data.introBn || '';
+    if ($('#kTypes')) chips($('#kTypes'), data.types || [], 'type');
+    if ($('#kLangs')) chips($('#kLangs'), data.languages || [], 'lang');
+    if ($('#kTopics')) chips($('#kTopics'), data.topics || [], 'topic');
     render();
 
     const stats = $('#kStats');
@@ -148,9 +152,9 @@
     }
 
     const host = $('#kSearchLinks');
-    if (host) host.innerHTML = data.searchLinks.map(l => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.labelBn)} ↗</a></li>`).join('');
+    if (host) host.innerHTML = (data.searchLinks || []).map(l => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.labelBn)} ↗</a></li>`).join('');
     const notHosted = $('#kNotHosted');
-    if (notHosted) notHosted.innerHTML = data.notHostedBn.map(t => `<li>${esc(t)}</li>`).join('');
+    if (notHosted) notHosted.innerHTML = (data.notHostedBn || []).map(t => `<li>${esc(t)}</li>`).join('');
 
     $('#kGrid').addEventListener('error', e => {
       const a = e.target;
@@ -160,6 +164,7 @@
       }
     }, true);
     $('#kGrid').addEventListener('click', e => {
+      if (e.target.closest('.kmore')) { state.limit += 24; render(); return; }
       const playBtn = e.target.closest('.kplay');
       if (playBtn) {
         const cardEl = playBtn.closest('.kcard');
@@ -191,7 +196,7 @@
       if (!img || img.closest('.kvideo')) return;
       const cardEl = img.closest('.kcard');
       const item = data.items.find(i => i.id === cardEl.dataset.id);
-      openLightbox(img.src, item);
+      openLightbox((item && item.thumbFull) || img.src, item);
     });
   };
 
@@ -203,10 +208,13 @@
 
   // ১) JSON fetch → ২) script-ভার্সন (file:// বা স্যান্ডবক্সে fetch ব্লক হলে) → ৩) বার্তা
   const loadViaScript = () => new Promise((resolve, reject) => {
+    if (window.KIDS_MEDIA_LIST) return resolve(window.KIDS_MEDIA_LIST);
     if (window.KIDS_MEDIA_DATA) return resolve(window.KIDS_MEDIA_DATA);
     const sc = document.createElement('script');
-    sc.src = 'data/kids-media-data.js?v=20261101b';
-    sc.onload = () => window.KIDS_MEDIA_DATA ? resolve(window.KIDS_MEDIA_DATA) : reject(new Error('script-এ ডেটা নেই'));
+    sc.src = 'data/kids-media-list.js?v=20261103d';
+    sc.onload = () => (window.KIDS_MEDIA_LIST || window.KIDS_MEDIA_DATA)
+      ? resolve(window.KIDS_MEDIA_LIST || window.KIDS_MEDIA_DATA)
+      : reject(new Error('script-এ ডেটা নেই'));
     sc.onerror = () => reject(new Error('script লোড হয়নি'));
     document.head.appendChild(sc);
   });
@@ -237,7 +245,7 @@
     return fetch(url, { cache:'no-store' }).then(r => r.ok ? r.json() : null).then(merge).catch(() => data);
   };
 
-  fetch('data/kids-media.json?v=20261101c')
+  fetch('data/kids-media-list.json?v=20261103d')
     .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
     .then(applyOverlay)
     .then(render_)
@@ -247,9 +255,9 @@
 
   const search = $('#kSearch');
   if (search) {
-    search.addEventListener('input', () => { state.q = search.value.trim(); if (state.data) render(); });
+    search.addEventListener('input', () => { state.q = search.value.trim(); state.limit = 24; if (state.data) render(); });
     $('#kSearchClear')?.addEventListener('click', () => { search.value = ''; state.q = ''; if (state.data) render(); search.focus(); });
   }
   const onlyPlay = $('#kPlayable');
-  if (onlyPlay) onlyPlay.addEventListener('change', () => { state.playable = onlyPlay.checked; if (state.data) render(); });
+  if (onlyPlay) onlyPlay.addEventListener('change', () => { state.playable = onlyPlay.checked; state.limit = 24; if (state.data) render(); });
 })();

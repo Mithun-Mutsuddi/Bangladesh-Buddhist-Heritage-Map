@@ -111,40 +111,52 @@
   const mediaSymbols = {comic:'▤', book:'📖', 'comic-book-scan':'🖼️', 'illustrated-book':'✏️', 'commercial-comic':'🛍️', animation:'🎬', cartoon:'🎞️', 'interactive-art-story':'🎨'};
   const mediaBackgrounds = ['#e4f2e9','#fff0ce','#e4eef6','#f1e8f5','#fff0e6','#e2f1ef','#e8edf7','#f4ecd9'];
   const mediaCard = (item, index) => {
-    const localComic = item.view === 'local:comic';
-    const image = localComic
-      ? '<img src="assets/children/previews/banyan-deer-mini-comic-page1.jpg" alt="" width="1240" height="1754">'
+    const thumb = item.thumb
+      ? `<img src="${esc(item.thumb)}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">`
       : `<span class="media-symbol" aria-hidden="true">${mediaSymbols[item.kind] || '▱'}</span>`;
-    const rightsClass = item.status === 'search-indexed' ? 'search' : (item.kind === 'commercial-comic' || item.formats.includes('watch') ? 'protected' : '');
-    const mainAction = localComic
-      ? '<button class="cb-btn solid" type="button" data-open-comic>পড়ো ও স্লাইডশো</button>'
-      : `<a class="cb-btn solid" href="${esc(item.view)}" target="_blank" rel="noopener">${item.formats.includes('watch') ? 'মূল উৎসে দেখো ↗' : 'পড়া/official lead ↗'}</a>`;
-    const download = item.download
-      ? `<a class="cb-btn" href="${esc(item.download)}" ${item.download.startsWith('assets/') ? 'download' : 'target="_blank" rel="noopener"'}>${item.download.startsWith('assets/') ? 'PDF ডাউনলোড' : 'উৎসের download ↗'}</a>`
+    const acts = [];
+    if (item.embedId) acts.push(`<button class="cb-btn solid" type="button" data-embed="${esc(item.embedId)}">এখানেই চালাও ▶</button>`);
+    if (item.readUrl) acts.push(`<a class="cb-btn solid" href="${esc(item.readUrl)}" target="_blank" rel="noopener">${item.type === 'film' ? 'উৎসে দেখো' : 'পড়ো'} ↗</a>`);
+    else if (item.watchUrl && !item.embedId) acts.push(`<a class="cb-btn solid" href="${esc(item.watchUrl)}" target="_blank" rel="noopener">কোথায় দেখবেন ↗</a>`);
+    if (item.buyUrl) acts.push(`<a class="cb-btn solid" href="${esc(item.buyUrl)}" target="_blank" rel="noopener">কিনুন ↗</a>`);
+    if (item.downloadUrl) {
+      const local = item.downloadUrl.startsWith('assets/');
+      acts.push(`<a class="cb-btn" href="${esc(item.downloadUrl)}" ${local ? 'download' : 'target="_blank" rel="noopener"'}>${local ? '⬇ ডাউনলোড' : 'উৎসের ডাউনলোড ↗'}</a>`);
+    }
+    const localComic = item.view === 'local:comic';
+    if (localComic) acts.push('<button class="cb-btn solid" type="button" data-open-comic>পড়ো ও স্লাইডশো</button>');
+    const audio = item.playUrl
+      ? `<div class="kids-audio"><audio controls preload="none" src="${esc(item.playUrl)}">অডিও চালানো যাচ্ছে না।</audio><a class="kids-audio-dl" href="${esc(item.playUrl)}" download>⬇ MP3</a></div>`
       : '';
-    const statusNote = item.status === 'search-indexed'
-      ? '<p class="kids-media-note">Search/source lead—বর্তমান availability অভিভাবক যাচাই করবেন।</p>' : '';
+    const rightsClass = item.licenceKey === 'copyright' || item.licenceKey === 'licensed' ? 'protected' : (item.licenceKey === 'IA-user-claim' ? 'search' : '');
+    const kindBn = KIDS_TYPE_BN[item.type] || item.kind || '';
     return `<article class="kids-media-card" data-media-id="${esc(item.id)}">
-      <div class="kids-media-art" style="--card-bg:${mediaBackgrounds[index % mediaBackgrounds.length]}">${image}<span class="media-format">${esc(item.kind.replaceAll('-',' '))}</span></div>
+      <div class="kids-media-art" style="--card-bg:${mediaBackgrounds[index % mediaBackgrounds.length]}">${thumb}<span class="media-format">${esc(kindBn)}</span></div>
       <div class="kids-media-body">
         <h3>${esc(item.title)}</h3>
-        <p class="kids-media-meta">${esc(item.language)} · ${esc(item.age)}</p>
+        <p class="kids-media-meta">${esc(item.language)} · ${esc(item.age)}${item.durationBn ? ' · ' + esc(item.durationBn) : ''}</p>
         <p>${esc(item.description)}</p>
         <p class="kids-rights ${rightsClass}">${esc(item.rights)}</p>
-        <div class="kids-media-actions">${mainAction}${download}</div>
-        <p class="kids-media-note">সূত্র: <a href="${esc(item.sourceUrl)}" ${item.sourceUrl.startsWith('assets/') ? 'target="_blank" rel="noopener"' : 'target="_blank" rel="noopener"'}>${esc(item.source)}</a></p>
-        ${statusNote}
+        ${audio}
+        <div class="kids-media-actions">${acts.join('')}</div>
+        <p class="kids-media-note">সূত্র: <a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">${esc(item.source)}</a></p>
       </div>
     </article>`;
   };
+  let mediaShown = 24;
   const renderMedia = () => {
-    const visible = mediaFilter === 'all' ? mediaItems : mediaItems.filter(item => item.formats.includes(mediaFilter));
-    $('#mediaGrid').innerHTML = visible.map((item, index) => mediaCard(item, index)).join('');
-    $('#mediaCount').textContent = `${bn(visible.length)}টি দেখানো হচ্ছে · মোট ${bn(mediaItems.length)}টি যাচাইকৃত/সূত্র-চিহ্নিত lead`;
+    const visible = mediaFilter === 'all' ? mediaItems : mediaItems.filter(item => (item.formats || []).includes(mediaFilter));
+    const shown = visible.slice(0, mediaShown);
+    const more = visible.length > shown.length
+      ? '<div class="kids-more-wrap"><button type="button" class="cb-btn" data-media-more>আরও ' + bn(visible.length - shown.length) + 'টি দেখাও ↓</button></div>'
+      : '';
+    const grid = $('#mediaGrid'); const count = $('#mediaCount');
+    if (grid) grid.innerHTML = shown.map((item, index) => mediaCard(item, index)).join('') + more;
+    if (count) count.textContent = `${bn(visible.length)}টি দেখানো হচ্ছে · মোট ${bn(mediaItems.length)}টি যাচাই করা আইটেম`;
   };
   $$('[data-media-filter]').forEach(button => {
     button.addEventListener('click', () => {
-      mediaFilter = button.dataset.mediaFilter;
+      mediaFilter = button.dataset.mediaFilter; mediaShown = 24;
       $$('[data-media-filter]').forEach(other => {
         const active = other === button;
         other.classList.toggle('active', active);
@@ -153,8 +165,22 @@
       renderMedia();
     });
   });
-  $('#mediaGrid').addEventListener('click', event => {
-    if (event.target.closest('[data-open-comic]')) openComic();
+  const mediaGridEl = $('#mediaGrid');
+  if (mediaGridEl) mediaGridEl.addEventListener('click', event => {
+    if (event.target.closest('[data-media-more]')) { mediaShown += 24; renderMedia(); return; }
+    if (event.target.closest('[data-open-comic]')) { openComic(); return; }
+    const btn = event.target.closest('[data-embed]');
+    if (btn) {
+      const id = btn.getAttribute('data-embed');
+      const host = btn.closest('.kids-media-card').querySelector('.kids-media-art');
+      if (host && id) {
+        host.classList.add('kvideo');
+        host.insertAdjacentHTML('afterbegin',
+          '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?rel=0&autoplay=1" title="অ্যানিমেশন" ' +
+          'loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        btn.remove();
+      }
+    }
   });
 
   /* Jataka, heritage and safety quiz. */
@@ -355,14 +381,14 @@
   });
   const stopDigging = () => { if (digging) updateDigProgress(); digging = false; };
   if (digCanvas) digCanvas.addEventListener('pointerup', stopDigging);
-  digCanvas.addEventListener('pointercancel', stopDigging);
+  if (digCanvas) digCanvas.addEventListener('pointercancel', stopDigging);
   if ($('#digReveal')) $('#digReveal').addEventListener('click', finishDig);
   if ($('#digReset')) $('#digReset').addEventListener('click', resetDig);
   if (digCanvas) resetDig();
 
   /* Colouring: separate transparent paint layer means erasing preserves line art. */
   const artCanvas = $('#artCanvas');
-  const artContext = artCanvas.getContext('2d');
+  const artContext = artCanvas && artCanvas.getContext('2d');
   const paintLayer = document.createElement('canvas');
   paintLayer.width = artCanvas.width; paintLayer.height = artCanvas.height;
   const paintContext = paintLayer.getContext('2d');
@@ -571,25 +597,69 @@
   /* Source-aware chant list; only the original local song has local audio. */
   const chantTypeLabels = {'pali-chant':'পালি chant excerpt', 'regional-lead':'সংস্কৃতি-সূত্র lead', 'original-song':'নতুন শিক্ষামূলক গান', 'external-listening':'Search-indexed listening lead'};
   const renderChants = chants => {
+    if (!$('#chantList')) return;
     $('#chantList').innerHTML = chants.map(item => `<article class="chant-card">
       <div><span class="kids-chip">${esc(chantTypeLabels[item.type] || item.type)}</span><h3>${esc(item.title)}</h3><p class="chant-text">${esc(item.text).replace(/\n/g,'<br>')}</p><p>${esc(item.meaning)}</p></div>
       <div><p class="chant-tune"><strong>কথা ও সুর:</strong> ${esc(item.tune)}</p>${item.audio ? `<div class="chant-audio"><audio controls preload="none" src="${esc(item.audio)}">Audio চালানো যাচ্ছে না।</audio><p>শুধু synthesized melody guide—কণ্ঠস্বর বা ঐতিহ্যবাহী recording নয়।</p></div>` : ''}${item.download ? `<a class="cb-btn" href="${esc(item.download)}" download>কথা ও notation PDF</a>` : ''}${item.view ? `<a class="cb-btn solid" href="${esc(item.view)}" target="_blank" rel="noopener">মূল ভিডিওতে শুনুন ↗</a>` : ''}${item.rights ? `<p class="kids-media-note">${esc(item.rights)}</p>` : ''}<p>সূত্র: <a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener">${esc(item.sourceLabel)} ↗</a></p></div>
     </article>`).join('');
   };
 
+
+  /* ---------- ২০২৬-১১-০১: শিশু ও শিক্ষা বিভাগের পূর্ণ তালিকা ---------- */
+  const KIDS_TYPE_BN = {comic:'কমিক', book:'বই', audio:'অডিও', art:'চিত্রকলা', film:'চলচ্চিত্র',
+    ack:'অমর চিত্র কথা', video:'অ্যানিমেশন', manga:'মাঙ্গা', coloring:'রঙ করার পাতা'};
+  const KIDS_LANG_BN = {bn:'বাংলা', en:'ইংরেজি', hi:'হিন্দি', fr:'ফরাসি', zh:'চিনা', sa:'সংস্কৃত'};
+  const kidsToCard = it => {
+    const formats = [];
+    if (it.readUrl || it.buyUrl) formats.push('read');
+    if (it.watchUrl || it.embedId) formats.push('watch');
+    if (it.downloadUrl) formats.push('download');
+    if (it.embedId || it.playUrl || it.type === 'coloring') formats.push('play');
+    return {
+      id: it.id, kind: it.type, type: it.type,
+      title: it.titleBn, language: KIDS_LANG_BN[it.lang] || it.lang,
+      age: it.ageBn || '', durationBn: it.durationBn || '',
+      description: it.descBn || '', rights: it.creditBn || it.licenceLabel || '',
+      licenceKey: it.licenceKey, formats,
+      thumb: it.thumb, embedId: it.embedId, playUrl: it.playUrl,
+      readUrl: it.readUrl, watchUrl: it.watchUrl, buyUrl: it.buyUrl, downloadUrl: it.downloadUrl,
+      source: it.sourceName || 'সূত্র', sourceUrl: it.sourceUrl || '#'
+    };
+  };
+  const loadKidsMedia = () => {
+    const use = data => {
+      if (!data || !Array.isArray(data.items)) return false;
+      const kids = data.items.map(kidsToCard);
+      mediaItems = kids.concat(mediaItems);   // পুরোনো lead-গুলোও থাকল
+      renderMedia();
+      return true;
+    };
+    if (window.KIDS_MEDIA_DATA) return Promise.resolve(use(window.KIDS_MEDIA_DATA));
+    return fetch('data/kids-media-list.json?v=20261103d')
+      .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
+      .then(use)
+      .catch(() => new Promise(resolve => {
+        const sc = document.createElement('script');
+        sc.src = 'data/kids-media-list.js?v=20261103d';
+        sc.onload = () => resolve(use(window.KIDS_MEDIA_DATA));
+        sc.onerror = () => resolve(false);
+        document.head.appendChild(sc);
+      }));
+  };
   /* One local registry drives media, craft and listening content. */
   fetch('data/children-content.json?v=20261024d')
     .then(response => { if (!response.ok) throw new Error(`HTTP ${response.status}`); return response.json(); })
     .then(data => {
       if (data.schema !== '2026-10-24.children.v1' || !Array.isArray(data.media) || !Array.isArray(data.culture) || !Array.isArray(data.chants)) throw new Error('Unexpected content schema');
       mediaItems = data.media; cultureItems = data.culture;
-      renderMedia(); renderCraftTabs(); renderChants(data.chants);
+      renderMedia();
+      if ($('#craftTabs')) renderCraftTabs();
+      loadKidsMedia();
     })
     .catch(error => {
       console.error('Children content could not be loaded:', error);
-      $('#mediaCount').textContent = 'তালিকা লোড হয়নি; নিচের স্থানীয় ফাইলগুলো এখনও ব্যবহার করা যায়।';
-      $('#mediaGrid').innerHTML = '<p class="kids-warning"><a href="assets/children/pdf/banyan-deer-mini-comic.pdf">মিনি-কমিক</a> · <a href="assets/children/pdf/children-art-pack.pdf">Art pack</a> · <a href="assets/children/pdf/somapura-paper-model.pdf">Paper model</a> · <a href="assets/children/pdf/maitri-original-song.pdf">Original song</a></p>';
-      $('#craftLab').hidden = true;
-      $('#chantList').innerHTML = '<p class="kids-warning">সূত্র-তালিকা এখন পাওয়া যাচ্ছে না। পুরোনো বা অজানা উৎসের গান/কীর্তন কপি না করে পরে আবার চেষ্টা করুন।</p>';
+      if ($('#mediaCount')) $('#mediaCount').textContent = 'তালিকা লোড হয়নি; নিচের স্থানীয় ফাইলগুলো এখনও ব্যবহার করা যায়।';
+      if ($('#craftLab')) $('#craftLab').hidden = true;
+      loadKidsMedia();
     });
 })();

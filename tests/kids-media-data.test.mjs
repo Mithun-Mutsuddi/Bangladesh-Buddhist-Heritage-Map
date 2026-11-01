@@ -177,9 +177,10 @@ test('kids-media: পৃষ্ঠা ও স্ক্রিপ্ট সংয�
   assert.match(html, /kids-media\.js\?v=/);
   assert.match(html, /sishu-shikkha\.css\?v=/);
   assert.match(html, /id="kGrid"/);
-  assert.match(html, /data\/kids-media\.json/);
+  assert.match(html, /data\/kids-media/);
   const js = readFileSync(join(ROOT, 'kids-media.js'), 'utf8');
-  assert.match(js, /data\/kids-media\.json\?v=/);
+  assert.match(js, /data\/kids-media-list\.json\?v=/, 'হালকা তালিকা লোড হয় না');
+  assert.match(js, /state\.limit/, 'প্রগ্রেসিভ রেন্ডার নেই');
   assert.ok(!/eval\(|document\.write/.test(js), 'নিরাপত্তা: eval/document.write নেই');
 });
 
@@ -277,4 +278,61 @@ test('kids-media: বাংলা অমর চিত্র কথা — বৈ
     assert.ok(!item.downloadUrl && !item.playUrl, `${item.id}: ফাইল থাকা যাবে না`);
     assert.ok(existsSync(join(ROOT, item.thumb)), `${item.id}: টাইল নেই`);
   }
+});
+
+test('শিশু ও শিক্ষা: children.html-এর shelf সত্যিই তালিকা দেখায় (রিগ্রেশন)', () => {
+  const html = readFileSync(join(ROOT, 'children.html'), 'utf8');
+  const js = readFileSync(join(ROOT, 'children.js'), 'utf8');
+  for (const f of ['all', 'read', 'watch', 'download', 'play']) {
+    assert.ok(html.includes(`data-media-filter="${f}"`), `ফিল্টার নেই: ${f}`);
+  }
+  assert.match(js, /kids-media-(list\.json|list\.js)/, 'children.js এখনো হালকা তালিকা পড়ে না');
+  assert.match(js, /mediaShown/, 'children.js-এ প্রগ্রেসিভ রেন্ডার নেই');
+  assert.match(js, /KIDS_MEDIA_DATA/, 'script-ফলব্যাক নেই (file:// বা ব্লকড fetch-এ ফাঁকা থাকবে)');
+  assert.match(js, /if \(digCanvas\)/, 'digCanvas গার্ড নেই — স্ক্রিপ্ট ক্র্যাশ করবে');
+  assert.match(js, /if \(!\$\('#chantList'\)\) return;/, 'chantList গার্ড নেই');
+  assert.match(js, /if \(digCanvas\) digCanvas\.addEventListener\('pointercancel'/, 'digCanvas pointercancel গার্ড নেই');
+  assert.equal((js.match(/(^|[^)] )digCanvas\.addEventListener/g) || []).length, 0, 'অগার্ডেড digCanvas কল আছে');
+  assert.ok(data.items.length >= 100, 'তালিকায় ১০০+ আইটেম থাকা চাই');
+});
+
+test('kids-media: হালকা তালিকা (list) তৈরি হয় ও ছোট থাকে', () => {
+  const listPath = join(ROOT, 'data/kids-media-list.json');
+  assert.ok(existsSync(listPath), 'kids-media-list.json নেই');
+  const list = JSON.parse(readFileSync(listPath, 'utf8'));
+  assert.equal(list.items.length, data.items.length, 'তালিকা ও মূল JSON-এর সংখ্যা আলাদা');
+  const size = readFileSync(listPath).length;
+  assert.ok(size < 200 * 1024, `হালকা তালিকা বড় হয়ে গেছে: ${(size/1024)|0} KB`);
+  assert.ok(existsSync(join(ROOT, 'data/kids-media-list.js')), 'script-ফলব্যাক নেই');
+  const thin = data.items.filter(i => i.thumbFull);
+  assert.ok(thin.length >= 30, 'হালকা থাম্ব তৈরি হয়নি');
+  for (const it of thin) {
+    assert.ok(it.thumb.includes('/disp/'), `${it.id}: কার্ডে হালকা থাম্ব নয়`);
+    assert.ok(existsSync(join(ROOT, it.thumb)) && existsSync(join(ROOT, it.thumbFull)), `${it.id}: ফাইল নেই`);
+    assert.ok(readFileSync(join(ROOT, it.thumb)).length < readFileSync(join(ROOT, it.thumbFull)).length, `${it.id}: থাম্ব ছোট নয়`);
+  }
+});
+
+test('kids-media: অডিও preload=none (আগে থেকে MB ডাউনলোড হয় না)', () => {
+  const js = readFileSync(join(ROOT, 'kids-media.js'), 'utf8');
+  assert.match(js, /<audio controls preload="none"/, 'অডিও preload="none" নয়');
+  const ch = readFileSync(join(ROOT, 'children.js'), 'utf8');
+  assert.match(ch, /preload="none"|preload: ?'none'/, 'children.js-এ অডিও preload নেই');
+  for (const f of ['sishu-shikkha.html', 'children.html']) {
+    const html = readFileSync(join(ROOT, f), 'utf8');
+    assert.ok(!/<iframe[^>]+youtube/.test(html), `${f}: ভিডিও আগে থেকেই এমবেড হয়ে আছে (ধীর হবে)`);
+  }
+});
+
+test('শিশু ও শিক্ষা: পারফরম্যান্স-গার্ড (হালকা লোড)', () => {
+  for (const f of ['children.html', 'sishu-shikkha.html']) {
+    const html = readFileSync(join(ROOT, f), 'utf8');
+    assert.match(html, /rel="preload" as="fetch"[^>]*kids-media-list\.json/, `${f}: তালিকা preload নেই`);
+    assert.match(html, /rel="preload" as="font"/, `${f}: ফন্ট preload নেই`);
+    assert.match(html, /k-skel/, `${f}: skeleton নেই`);
+    assert.ok(!/<iframe[^>]+youtube/.test(html), `${f}: ভিডিও আগেভাগে এমবেড করা আছে`);
+  }
+  const totalAudio = 40 * 1024 * 1024;
+  const listSize = readFileSync(join(ROOT, 'data/kids-media-list.json')).length;
+  assert.ok(listSize < totalAudio / 100, 'হালকা তালিকা প্রত্যাশার চেয়ে বড়');
 });

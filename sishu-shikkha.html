@@ -13,7 +13,9 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="charyabhumi.css?v=20261103a">
   <link rel="stylesheet" href="mobile-fix.css?v=20261031a20261031c">
-  <link rel="stylesheet" href="sishu-shikkha.css?v=20261101a">
+  <link rel="stylesheet" href="sishu-shikkha.css?v=20261103d">
+  <link rel="preload" as="fetch" crossorigin href="data/kids-media-list.json">
+  <link rel="preload" as="font" type="font/ttf" crossorigin href="assets/tracker/fonts/font-4.ttf">
 </head>
 <body class="cb kidsmedia-page">
   <a class="cb-skip" href="#main">মূল কনটেন্টে যান</a>
@@ -56,7 +58,7 @@
         </div>
       </div>
       <p class="kidsmedia-count" id="kCount" role="status">তালিকা লোড হচ্ছে…</p>
-      <div class="kidsmedia-grid" id="kGrid"></div>
+      <div class="kidsmedia-grid" id="kGrid"><div class="k-skel"><div></div><div></div><div></div></div></div>
       <noscript>
         <p class="kidsmedia-panel" style="padding:16px">তালিকা দেখতে JavaScript দরকার। কাঁচা ডেটা এখানে: <a href="data/kids-media.json">data/kids-media.json</a> · সরাসরি কিছু ফাইল: <a href="assets/kids/audio/kid-jataka-fr-01.mp3">জাতক অডিও (ফরাসি)</a>, <a href="assets/kids/thumbs/kid-jataka-comic-rabbit.jpg">কমিক পাতা</a>।</p>
       </noscript>
@@ -102,7 +104,7 @@
 
   <footer class="cb-footer" id="cbFooter"></footer>
   <script src="brand.js?v=20261103a" defer></script>
-  <script src="kids-media.js?v=20261101a" defer></script>
+  <script src="kids-media.js?v=20261103d" defer></script>
   <script src="config.js?v=20261024g" defer></script>
   <script src="pwa.js?v=20261024g" defer></script>
 </body>

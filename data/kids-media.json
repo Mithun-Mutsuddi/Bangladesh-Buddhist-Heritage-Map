@@ -217,7 +217,7 @@
    "titleBn": "শ্বেত হস্তী জাতক — রাজার দান",
    "titleEn": "শ্বেত হস্তী জাতক — রাজার দান",
    "descBn": "রাজপুত্র প্রজাদের ডাকে শ্বেত হস্তী দান করে দিচ্ছেন — দানের পরও করুণা কীভাবে থাকে, সেই কাহিনি। — ছবিটি এই সাইটের জন্য নতুন আঁকা (AI-সহায়তায়), তাই নির্দ্বিধায় ডাউনলোড করে শ্রেণিকক্ষে/বাড়িতে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/thumbs/kid-own-white-elephant.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-own-white-elephant.jpg",
    "licenceLabel": "চর্যাভূমির নিজের আঁকা — মুক্ত ব্যবহার (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "original",
@@ -226,7 +226,8 @@
    "sourceName": "চর্যাভূমি · শিশু ও শিক্ষা বিভাগ",
    "sourceUrl": "sishu-shikkha.html",
    "downloadUrl": "assets/kids/thumbs/kid-own-white-elephant.jpg",
-   "noteBn": "চাইলে প্রিন্ট করে রঙ করার পাতা হিসেবেও ব্যবহার করা যায়।"
+   "noteBn": "চাইলে প্রিন্ট করে রঙ করার পাতা হিসেবেও ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/thumbs/kid-own-white-elephant.jpg"
   },
   {
    "id": "kid-own-angulimala",
@@ -239,7 +240,7 @@
    "titleBn": "বুদ্ধ ও অঙ্গুলিমাল — অস্ত্র নামে",
    "titleEn": "বুদ্ধ ও অঙ্গুলিমাল — অস্ত্র নামে",
    "descBn": "ভয়ংকর অঙ্গুলিমালের সামনে শান্ত বুদ্ধ; অস্ত্র ঘাসে পড়ে থাকে। শিশুদের জন্য হিংস্রতা ছাড়া আঁকা — ক্ষমার ছবি। — ছবিটি এই সাইটের জন্য নতুন আঁকা (AI-সহায়তায়), তাই নির্দ্বিধায় ডাউনলোড করে শ্রেণিকক্ষে/বাড়িতে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/thumbs/kid-own-angulimala.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-own-angulimala.jpg",
    "licenceLabel": "চর্যাভূমির নিজের আঁকা — মুক্ত ব্যবহার (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "original",
@@ -248,7 +249,8 @@
    "sourceName": "চর্যাভূমি · শিশু ও শিক্ষা বিভাগ",
    "sourceUrl": "sishu-shikkha.html",
    "downloadUrl": "assets/kids/thumbs/kid-own-angulimala.jpg",
-   "noteBn": "চাইলে প্রিন্ট করে রঙ করার পাতা হিসেবেও ব্যবহার করা যায়।"
+   "noteBn": "চাইলে প্রিন্ট করে রঙ করার পাতা হিসেবেও ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/thumbs/kid-own-angulimala.jpg"
   },
   {
    "id": "kid-own-sujata",
@@ -305,7 +307,7 @@
    "titleBn": "বটহরিণ জাতক — সাহসী হরিণ",
    "titleEn": "বটহরিণ জাতক — সাহসী হরিণ",
    "descBn": "বটহরিণ নিজের প্রাণ বাজি রেখে পালের সামনে দাঁড়ায়, রাজা ধনুক নামিয়ে ফেলেন — করুণা ও সাহসের ছবি। — ছবিটি এই সাইটের জন্য নতুন আঁকা (AI-সহায়তায়), তাই নির্দ্বিধায় ডাউনলোড করে শ্রেণিকক্ষে/বাড়িতে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/thumbs/kid-own-banyan-deer.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-own-banyan-deer.jpg",
    "licenceLabel": "চর্যাভূমির নিজের আঁকা — মুক্ত ব্যবহার (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "original",
@@ -314,7 +316,8 @@
    "sourceName": "চর্যাভূমি · শিশু ও শিক্ষা বিভাগ",
    "sourceUrl": "sishu-shikkha.html",
    "downloadUrl": "assets/kids/thumbs/kid-own-banyan-deer.jpg",
-   "noteBn": "চাইলে প্রিন্ট করে রঙ করার পাতা হিসেবেও ব্যবহার করা যায়।"
+   "noteBn": "চাইলে প্রিন্ট করে রঙ করার পাতা হিসেবেও ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/thumbs/kid-own-banyan-deer.jpg"
   },
   {
    "id": "kid-jataka-comic-rabbit",
@@ -327,7 +330,7 @@
    "titleBn": "জাতক গল্পের কমিক পাতা — ‘শশক জাতক’",
    "titleEn": "JatakaTales-lapin-page6-2",
    "descBn": "‘Jataka Tales’-এর আধুনিক কমিক-রূপ থেকে একটি পাতা — মিষ্টি-শিল্পরীতিতে আঁকা, শিশুদের জন্য উপযোগী। কমিক্সেই আজ সবচেয়ে সহজে জাতকের নীতিকথা পৌঁছে যায়: ছবি দেখে গল্প বোঝা যায়, ভাষা না জানলেও চলে।",
-   "thumb": "assets/kids/thumbs/kid-jataka-comic-rabbit.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-jataka-comic-rabbit.jpg",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "CC BY-SA 4.0",
@@ -335,7 +338,8 @@
    "creditBn": "আধুনিক চিত্রী (কমন্স ব্যবহারকারী) · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JatakaTales-lapin-page6-2.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/JatakaTales-lapin-page6-2.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/JatakaTales-lapin-page6-2.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-jataka-comic-rabbit.jpg"
   },
   {
    "id": "kid-jataka-turtle-1",
@@ -390,7 +394,7 @@
    "titleBn": "দশরথ জাতক — ভারহুত স্তূপের খোদাই",
    "titleEn": "Bharhut Dasaratha Jataka",
    "descBn": "ভারহুত স্তূপের (আনু. খ্রিস্টপূর্ব ২য় শতক) রেলিং-খোদাইয়ে দশরথ জাতক — রামায়ণ-কাহিনির বৌদ্ধ রূপ, যেখানে রামকে নির্বাসনে পাঠানোর প্রসঙ্গ নেই, বরং বুদ্ধের পূর্বজন্মের దান-ত্যাগের কথা। — ছবিটি ডাউনলোড করে শ্রেণিকক্ষে ব্যবহার করা যায় (লাইসেন্স-শর্ত মানুন)।",
-   "thumb": "assets/kids/thumbs/kid-bharhut-dasaratha.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-bharhut-dasaratha.jpg",
    "licenceLabel": "পাবলিক ডোমেইন",
    "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
    "licenceKey": "Public domain",
@@ -398,7 +402,8 @@
    "creditBn": "আলেকজান্ডার কানিংহাম (১৮৭৯ ছবি) · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bharhut_Dasaratha_Jataka.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bharhut_Dasaratha_Jataka.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bharhut_Dasaratha_Jataka.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-bharhut-dasaratha.jpg"
   },
   {
    "id": "kid-bharhut-kurunga",
@@ -411,7 +416,7 @@
    "titleBn": "কুরঙ্গমিগ জাতক — হরিণের বন্ধুত্ব",
    "titleEn": "Bharhut Kurunga Miga Jataka",
    "descBn": "কুরঙ্গমিগ জাতক: মৃগ-রাজ বন্দিদশা থেকে বন্ধুদের সাহায্যে মুক্তি পান — ভারহুতের খোদাই। শিশুদের জন্য সহজ নীতিকথা: বন্ধুত্ব ও বিশ্বাসই বড় শক্তি। — ছবিটি ডাউনলোড করে শ্রেণিকক্ষে ব্যবহার করা যায় (লাইসেন্স-শর্ত মানুন)।",
-   "thumb": "assets/kids/thumbs/kid-bharhut-kurunga.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-bharhut-kurunga.jpg",
    "licenceLabel": "পাবলিক ডোমেইন",
    "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
    "licenceKey": "Public domain",
@@ -419,7 +424,8 @@
    "creditBn": "আলেকজান্ডার কানিংহাম (১৮৭৯ ছবি) · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bharhut_Kurunga_Miga_Jataka.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bharhut_Kurunga_Miga_Jataka.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bharhut_Kurunga_Miga_Jataka.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-bharhut-kurunga.jpg"
   },
   {
    "id": "kid-bharhut-yavamajhakiya",
@@ -453,7 +459,7 @@
    "titleBn": "মূগপক্খ জাতক — দানশীলতার ফল",
    "titleEn": "Muga Pakha Jataka Bharhut",
    "descBn": "মূগপক্খ জাতকের দৃশ্য — রাজকুমারের দান ও ত্যাগের কাহিনি। ছবিটি ভারহুত স্তূপ থেকে, এখন এলাহাবাদ জাদুঘরে। — ছবিটি ডাউনলোড করে শ্রেণিকক্ষে ব্যবহার করা যায় (লাইসেন্স-শর্ত মানুন)।",
-   "thumb": "assets/kids/thumbs/kid-bharhut-mugapakkha.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-bharhut-mugapakkha.jpg",
    "licenceLabel": "খোলা (CC BY 3.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by/3.0/deed.bn",
    "licenceKey": "CC BY 3.0",
@@ -461,7 +467,8 @@
    "creditBn": "Biswarup Ganguly · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Muga_Pakha_Jataka_Bharhut.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Muga_Pakha_Jataka_Bharhut.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Muga_Pakha_Jataka_Bharhut.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-bharhut-mugapakkha.jpg"
   },
   {
    "id": "kid-bharhut-vessantara",
@@ -474,7 +481,7 @@
    "titleBn": "বেসন্তর জাতক — সবচেয়ে বিখ্যাত দান-কাহিনি",
    "titleEn": "Rail post depicting the Vessantara Jataka, Bharhut Stupa, circa 2nd century BCE, Allahabad Museum, Uttar Pradesh",
    "descBn": "বেসন্তর জাতক: রাজপুত্র বেসন্তর তাঁর সবকিছু — এমনকি হাতি ও সন্তান — দান করে দেন। থাইল্যান্ড, শ্রীলঙ্কা ও মিয়ানমারে এই জাতক সবচেয়ে জনপ্রিয়; শিশুদের জন্য গল্পের রূপে এটি ‘যা ভালোবাসি তা ছাড়তে শেখা’র পাঠ। — ছবিটি ডাউনলোড করে শ্রেণিকক্ষে ব্যবহার করা যায় (লাইসেন্স-শর্ত মানুন)।",
-   "thumb": "assets/kids/thumbs/kid-bharhut-vessantara.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-bharhut-vessantara.jpg",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "CC BY-SA 4.0",
@@ -482,7 +489,8 @@
    "creditBn": "StonesThatRemember · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rail_post_depicting_the_Vessantara_Jataka,_Bharhut_Stupa,_circa_2nd_century_BCE,_Allahabad_Museum,_Uttar_Pradesh.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rail_post_depicting_the_Vessantara_Jataka,_Bharhut_Stupa,_circa_2nd_century_BCE,_Allahabad_Museum,_Uttar_Pradesh.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rail_post_depicting_the_Vessantara_Jataka,_Bharhut_Stupa,_circa_2nd_century_BCE,_Allahabad_Museum,_Uttar_Pradesh.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-bharhut-vessantara.jpg"
   },
   {
    "id": "kid-jataka-stories-panel",
@@ -495,7 +503,7 @@
    "titleBn": "জাতক-কাহিনির প্যানেল — স্তূপ-বেষ্টনী",
    "titleEn": "Jataka Stories",
    "descBn": "স্তূপের বেষ্টনীতে জাতক-দৃশ্যের সারি — প্রাচীন ভারতে গল্প বলার পদ্ধতি ছিল ছবি: পথচারী ছবি দেখে কাহিনি বুঝত। আজকের কমিক्सের পূর্বসূরি এই প্যানেলগুলোই। — ছবিটি ডাউনলোড করে শ্রেণিকক্ষে ব্যবহার করা যায় (লাইসেন্স-শর্ত মানুন)।",
-   "thumb": "assets/kids/thumbs/kid-jataka-stories-panel.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-jataka-stories-panel.jpg",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "CC BY-SA 4.0",
@@ -503,7 +511,8 @@
    "creditBn": "আলোকচিত্রী (কমন্স) · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jataka_Stories.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jataka_Stories.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jataka_Stories.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-jataka-stories-panel.jpg"
   },
   {
    "id": "kid-jataka-story-fresco",
@@ -516,7 +525,7 @@
    "titleBn": "জাতক কাহিনির দেয়ালচিত্র",
    "titleEn": "028 A Jataka Story",
    "descBn": "দেয়ালে আঁকা জাতক-দৃশ্য — ভিক্ষুরা প্রায়ই এই ছবি দিয়ে শিশুদের গল্প শোনান। রং ও অঙ্গভঙ্গিতেই এখানে গল্পের মূল বাঁকগুলো ধরা আছে। — ছবিটি ডাউনলোড করে শ্রেণিকক্ষে ব্যবহার করা যায় (লাইসেন্স-শর্ত মানুন)।",
-   "thumb": "assets/kids/thumbs/kid-jataka-story-fresco.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-jataka-story-fresco.jpg",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "CC BY-SA 4.0",
@@ -524,7 +533,8 @@
    "creditBn": "আলোকচিত্রী (Anandajoti ভিক্ষু সংগ্রহ) · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:028_A_Jataka_Story.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/028_A_Jataka_Story.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/028_A_Jataka_Story.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-jataka-story-fresco.jpg"
   },
   {
    "id": "kid-jataka-panels-nagarjuna",
@@ -537,7 +547,7 @@
    "titleBn": "নাগার্জুন সাগরে জাতক-প্যানেল (আধুনিক নির্মাণ)",
    "titleEn": "Jataka tales panels, Dhamma Nagajjuna, Nagarjuna Sagar Telangana, India - 3",
    "descBn": "নাগার্জুন সাগরের বৌদ্ধ স্মারক-স্থলে জাতক-প্যানেল — প্রাচীন শিল্পরীতির অনুকরণে আধুনিক নির্মাণ। ছবিটি CC0, তাই স্কুল-প্রকল্পে নির্দ্বিধায় ব্যবহার করা যায়। — ছবিটি ডাউনলোড করে শ্রেণিকক্ষে ব্যবহার করা যায় (লাইসেন্স-শর্ত মানুন)।",
-   "thumb": "assets/kids/thumbs/kid-jataka-panels-nagarjuna.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-jataka-panels-nagarjuna.jpg",
    "licenceLabel": "কপিরাইট-ত্যাগ (CC0)",
    "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.bn",
    "licenceKey": "CC0",
@@ -545,7 +555,8 @@
    "creditBn": "আলোকচিত্রী (কমন্স, CC0) · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jataka_tales_panels,_Dhamma_Nagajjuna,_Nagarjuna_Sagar_Telangana,_India_-_3.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jataka_tales_panels,_Dhamma_Nagajjuna,_Nagarjuna_Sagar_Telangana,_India_-_3.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jataka_tales_panels,_Dhamma_Nagajjuna,_Nagarjuna_Sagar_Telangana,_India_-_3.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-jataka-panels-nagarjuna.jpg"
   },
   {
    "id": "kid-jataka-thangka-bhutan",
@@ -558,7 +569,7 @@
    "titleBn": "জাতক-থাংকা — ভুটানের ফাজোদিং মঠ",
    "titleEn": "Painted jataka Thangka Phajoding Gonpa Thimphu, Bhutan",
    "descBn": "ভুটানের ফাজোদিং গনপার জাতক-থাংকা — তুলিতে আঁকা গল্পের বৃত্ত। থাংকা দেখার নিয়মও শেখার বিষয়: বাঁ থেকে ডানে, বৃত্তে বৃত্তে গল্প এগোয়। — ছবিটি ডাউনলোড করে শ্রেণিকক্ষে ব্যবহার করা যায় (লাইসেন্স-শর্ত মানুন)।",
-   "thumb": "assets/kids/thumbs/kid-jataka-thangka-bhutan.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-jataka-thangka-bhutan.jpg",
    "licenceLabel": "পাবলিক ডোমেইন",
    "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
    "licenceKey": "Public domain",
@@ -566,7 +577,8 @@
    "creditBn": "অজ্ঞাত चित्रकार (ভুটান) · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Painted_jataka_Thangka_Phajoding_Gonpa_Thimphu,_Bhutan.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Painted_jataka_Thangka_Phajoding_Gonpa_Thimphu,_Bhutan.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Painted_jataka_Thangka_Phajoding_Gonpa_Thimphu,_Bhutan.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-jataka-thangka-bhutan.jpg"
   },
   {
    "id": "kid-ajanta-chaddanta",
@@ -579,7 +591,7 @@
    "titleBn": "ছদ্দন্ত জাতক — অজন্তা গুহার চিত্রকলা",
    "titleEn": "Ajanta chaddanta Jataka",
    "descBn": "অজন্তা গুহার ছদ্দন্ত জাতক: হস্তীরাজ নিজের দাঁত দান করেন — ত্যাগের চরম রূপ। গুহার অন্ধকারে যে রং আজও উজ্জ্বল, তা পাঁচ শতকের শিল্পের বিস্ময়। — ছবিটি ডাউনলোড করে শ্রেণিকক্ষে ব্যবহার করা যায় (লাইসেন্স-শর্ত মানুন)।",
-   "thumb": "assets/kids/thumbs/kid-ajanta-chaddanta.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-ajanta-chaddanta.jpg",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "CC BY-SA 4.0",
@@ -587,7 +599,8 @@
    "creditBn": "আলোকচিত্রী (কমন্স) · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ajanta_chaddanta_Jataka.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ajanta_chaddanta_Jataka.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ajanta_chaddanta_Jataka.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-ajanta-chaddanta.jpg"
   },
   {
    "id": "kid-ajanta-hamsa",
@@ -600,7 +613,7 @@
    "titleBn": "হংস জাতক — অজন্তার দেয়ালচিত্র",
    "titleEn": "Hamsa jâtaka, Ajanta, India",
    "descBn": "হংস জাতক — পাখির রাজা ও তাঁর অনুগামীদের কাহিনি, অজন্তার দেয়ালে। প্রাচীন শিল্পীরা গল্পের সবচেয়ে নাটকীয় মুহূর্তটিই বেছে নিতেন — এখানে সেটাই দেখা যায়। — ছবিটি ডাউনলোড করে শ্রেণিকক্ষে ব্যবহার করা যায় (লাইসেন্স-শর্ত মানুন)।",
-   "thumb": "assets/kids/thumbs/kid-ajanta-hamsa.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-ajanta-hamsa.jpg",
    "licenceLabel": "পাবলিক ডোমেইন",
    "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
    "licenceKey": "Public domain",
@@ -608,7 +621,8 @@
    "creditBn": "অজ্ঞাত (অজন্তা, ৫ম শতক) · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hamsa_jâtaka,_Ajanta,_India.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamsa_jâtaka,_Ajanta,_India.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamsa_jâtaka,_Ajanta,_India.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-ajanta-hamsa.jpg"
   },
   {
    "id": "kid-burmese-life-of-buddha",
@@ -642,7 +656,7 @@
    "titleBn": "অঙ্গুলিমালের মূর্তি — থেরবাদী মঠ",
    "titleEn": "015 Angulimala (9140566999)",
    "descBn": "অঙ্গুলিমালের মূর্তি — যে ডাকাত নারী-হত্যা ও আঙুলের মালা থেকে বুদ্ধের সাক্ষাতে থেমে গিয়েছিলেন, পরে অর্হৎ হয়েছিলেন। শিশুদের জন্য গল্পের কেন্দ্র: কেউ চিরকাল খারাপ থাকে না; বদলানো সম্ভব।",
-   "thumb": "assets/kids/thumbs/kid-angulimala-015.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-angulimala-015.jpg",
    "licenceLabel": "খোলা (CC BY 2.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/deed.bn",
    "licenceKey": "CC BY 2.0",
@@ -650,7 +664,8 @@
    "creditBn": "Photo Dharma · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:015_Angulimala_(9140566999).jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/015_Angulimala_(9140566999).jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/015_Angulimala_(9140566999).jpg",
+   "thumbFull": "assets/kids/thumbs/kid-angulimala-015.jpg"
   },
   {
    "id": "kid-angulimala-defeat",
@@ -684,7 +699,7 @@
    "titleBn": "অঙ্গুলিমাল ও বুদ্ধ — আধুনিক চিত্রকলা",
    "titleEn": "Angulimala and The Buddha",
    "descBn": "আধুনিক চিত্রীর তুলিতে অঙ্গুলিমাল ও বুদ্ধের সাক্ষাৎ — ভয় ও করুণার মুখোমুখি দাঁড়ানো। কম-রং, বেশি ভাব: গল্পের নাটকীয় মুহূর্তটি কেবল দুই চরিত্রেই ধরা দিয়েছে।",
-   "thumb": "assets/kids/thumbs/kid-angulimala-painting.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-angulimala-painting.jpg",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "CC BY-SA 4.0",
@@ -692,7 +707,8 @@
    "creditBn": "Rick Joseph · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angulimala_and_The_Buddha.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Angulimala_and_The_Buddha.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Angulimala_and_The_Buddha.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-angulimala-painting.jpg"
   },
   {
    "id": "kid-angulimala-russian",
@@ -747,7 +763,7 @@
    "titleBn": "সুজাতার দান — বোরোবুদুরের ত্রিমাত্রিক প্যানেল",
    "titleEn": "Sujata offering Madhupayas rice to the Gautama Buddha (Borobudur) - Bangkok National Museum 01",
    "descBn": "বোরোবুদুরের পাথরের প্যানেল থেকে উদ্ধার করা দৃশ্য, এখন ব্যাংকক জাতীয় জাদুঘরে — সুজাতা মধুপায়স নিবেদন করছেন। ইন্দোনেশিয়ার এই স্তূপে বুদ্ধের জীবনকথা ১৩০০+ প্যানেলে খোদাই করা।",
-   "thumb": "assets/kids/thumbs/kid-sujata-borobudur.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-sujata-borobudur.jpg",
    "licenceLabel": "খোলা (CC BY 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by/4.0/deed.bn",
    "licenceKey": "CC BY 4.0",
@@ -755,7 +771,8 @@
    "creditBn": "বোরোবুদুর সংগ্রহ / ব্যাংকক জাদুঘর · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sujata_offering_Madhupayas_rice_to_the_Gautama_Buddha_(Borobudur)_-_Bangkok_National_Museum_01.jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sujata_offering_Madhupayas_rice_to_the_Gautama_Buddha_(Borobudur)_-_Bangkok_National_Museum_01.jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sujata_offering_Madhupayas_rice_to_the_Gautama_Buddha_(Borobudur)_-_Bangkok_National_Museum_01.jpg",
+   "thumbFull": "assets/kids/thumbs/kid-sujata-borobudur.jpg"
   },
   {
    "id": "kid-sujata-cave11",
@@ -768,7 +785,7 @@
    "titleBn": "সুজাতার সঙ্গে বুদ্ধ — গুহা ১১-এর মূর্তি",
    "titleEn": "092 Cave 11, Buddha with Sujata from Side (33438497684)",
    "descBn": "গুহা ১১-এর মূর্তিতে বুদ্ধের পাশে সুজাতা — ভিক্ষার পাত্র হাতে। প্রাচীন ভাস্কর্যেও নারী-চরিত্রটি গল্পের কেন্দ্রে রাখা হয়েছে, এটাই উল্লেখযোগ্য।",
-   "thumb": "assets/kids/thumbs/kid-sujata-cave11.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-sujata-cave11.jpg",
    "licenceLabel": "খোলা (CC BY 2.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/deed.bn",
    "licenceKey": "CC BY 2.0",
@@ -776,7 +793,8 @@
    "creditBn": "Photo Dharma · Wikimedia Commons — পুনঃব্যবহারে নাম ও লাইসেন্সের উল্লেখ রাখুন।",
    "sourceName": "Wikimedia Commons",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:092_Cave_11,_Buddha_with_Sujata_from_Side_(33438497684).jpg",
-   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/092_Cave_11,_Buddha_with_Sujata_from_Side_(33438497684).jpg"
+   "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/092_Cave_11,_Buddha_with_Sujata_from_Side_(33438497684).jpg",
+   "thumbFull": "assets/kids/thumbs/kid-sujata-cave11.jpg"
   },
   {
    "id": "kid-maya-birth",
@@ -1802,7 +1820,7 @@
    "titleBn": "শ্বেত হস্তী জাতক — বাংলা অডিও গল্প",
    "titleEn": "শ্বেত হস্তী জাতক",
    "descBn": "পথ হারানো মানুষকে সাহায্য করা সাদা হাতির গল্প — উপকার করার পর কৃতজ্ঞতা না পেলেও হাতি রাগ করে না। — কণ্ঠটি কৃত্রিম (AI), মানুষের রেকর্ডিং নয়। লেখাটি এই সাইটের নিজস্ব পুনর্কথন, তাই নির্ভয়ে শ্রেণিকক্ষে শোনানো যায়; ইন্টারনেট ছাড়াও চলে।",
-   "thumb": "assets/kids/thumbs/kid-own-white-elephant.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-own-white-elephant.jpg",
    "audioUrl": "assets/kids/audio/bn/kid-bn-white-elephant.mp3",
    "durationBn": "00:54",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
@@ -1815,7 +1833,8 @@
    "downloadUrl": "assets/kids/audio/bn/kid-bn-white-elephant.mp3",
    "playUrl": "assets/kids/audio/bn/kid-bn-white-elephant.mp3",
    "noteBn": "কৃত্রিম কণ্ঠ (AI) — শ্রেণিকক্ষে শোনানোর জন্য; MP3 ডাউনলোড করেও রাখা যায়।",
-   "voiceKind": "ai"
+   "voiceKind": "ai",
+   "thumbFull": "assets/kids/thumbs/kid-own-white-elephant.jpg"
   },
   {
    "id": "kid-bn-audio-angulimala",
@@ -1828,7 +1847,7 @@
    "titleBn": "বুদ্ধ ও অঙ্গুলিমাল — বাংলা অডিও গল্প",
    "titleEn": "বুদ্ধ ও অঙ্গুলিমাল",
    "descBn": "অহিংসক থেকে অঙ্গুলিমাল, আর বুদ্ধের একটি কথায় তার থেমে যাওয়া — “আমি থেমেছি, তুমি এখনো থামোনি”। — কণ্ঠটি কৃত্রিম (AI), মানুষের রেকর্ডিং নয়। লেখাটি এই সাইটের নিজস্ব পুনর্কথন, তাই নির্ভয়ে শ্রেণিকক্ষে শোনানো যায়; ইন্টারনেট ছাড়াও চলে।",
-   "thumb": "assets/kids/thumbs/kid-own-angulimala.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-own-angulimala.jpg",
    "audioUrl": "assets/kids/audio/bn/kid-bn-angulimala.mp3",
    "durationBn": "01:13",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
@@ -1841,7 +1860,8 @@
    "downloadUrl": "assets/kids/audio/bn/kid-bn-angulimala.mp3",
    "playUrl": "assets/kids/audio/bn/kid-bn-angulimala.mp3",
    "noteBn": "কৃত্রিম কণ্ঠ (AI) — শ্রেণিকক্ষে শোনানোর জন্য; MP3 ডাউনলোড করেও রাখা যায়।",
-   "voiceKind": "ai"
+   "voiceKind": "ai",
+   "thumbFull": "assets/kids/thumbs/kid-own-angulimala.jpg"
   },
   {
    "id": "kid-bn-audio-sujata",
@@ -1906,7 +1926,7 @@
    "titleBn": "বটহরিণ জাতক — ন্যাগ্রোধমৃগ — বাংলা অডিও গল্প",
    "titleEn": "বটহরিণ জাতক — ন্যাগ্রোধমৃগ",
    "descBn": "গর্ভবতী হরিণীকে বাঁচাতে নিজে ফাঁদে বসা সোনালি হরিণের রাজা; রাজার হাত থেমে যায়, বনে শিকার নিষিদ্ধ হয়। — কণ্ঠটি কৃত্রিম (AI), মানুষের রেকর্ডিং নয়। লেখাটি এই সাইটের নিজস্ব পুনর্কথন, তাই নির্ভয়ে শ্রেণিকক্ষে শোনানো যায়; ইন্টারনেট ছাড়াও চলে।",
-   "thumb": "assets/kids/thumbs/kid-own-banyan-deer.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-own-banyan-deer.jpg",
    "audioUrl": "assets/kids/audio/bn/kid-bn-banyan-deer.mp3",
    "durationBn": "00:58",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
@@ -1919,7 +1939,8 @@
    "downloadUrl": "assets/kids/audio/bn/kid-bn-banyan-deer.mp3",
    "playUrl": "assets/kids/audio/bn/kid-bn-banyan-deer.mp3",
    "noteBn": "কৃত্রিম কণ্ঠ (AI) — শ্রেণিকক্ষে শোনানোর জন্য; MP3 ডাউনলোড করেও রাখা যায়।",
-   "voiceKind": "ai"
+   "voiceKind": "ai",
+   "thumbFull": "assets/kids/thumbs/kid-own-banyan-deer.jpg"
   },
   {
    "id": "kid-ack-bn-jataka-banorer",
@@ -2001,7 +2022,7 @@
    "titleBn": "অজন্তা গুহা ১ — মহাজনক জাতকের মিউরাল (বিস্তারিত)",
    "titleEn": "Ajanta Cave 1 Mahajanaka Jataka mural detail",
    "descBn": "অজন্তার দেওয়ালচিত্রে মহাজনক রাজকুমারের সমুদ্রযাত্রা ও দানশীলতার কাহিনি — রঙ ও নকশার দুর্দান্ত নমুনা। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/jataka-mahajanaka-detail.jpg",
+   "thumb": "assets/kids/thumbs/disp/jataka-mahajanaka-detail.jpg",
    "licenceLabel": "খোলা (CC BY 2.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/deed.bn",
    "licenceKey": "CC BY 2.0",
@@ -2011,7 +2032,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ajanta_Cave_1_Mahajanaka_Jataka_mural_detail.jpg",
    "downloadUrl": "assets/kids/art/jataka-mahajanaka-detail.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/jataka-mahajanaka-detail.jpg"
   },
   {
    "id": "kid-art-jataka-mahajanaka-full",
@@ -2024,7 +2046,7 @@
    "titleBn": "অজন্তা গুহা ১ — মহাজনক জাতক (সম্পূর্ণ দৃশ্য)",
    "titleEn": "Mahajanaka Jataka Ajanta Cave 1",
    "descBn": "পুরো দেওয়ালটির আলোকচিত্র — শ্রেণিকক্ষে দৃশ্য-পাঠ ও রঙ আলোচনার জন্য উপযোগী। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/jataka-mahajanaka-full.jpg",
+   "thumb": "assets/kids/thumbs/disp/jataka-mahajanaka-full.jpg",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "CC BY-SA 4.0",
@@ -2034,7 +2056,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mahajanaka_Jataka_Ajanta_Cave_1.jpg",
    "downloadUrl": "assets/kids/art/jataka-mahajanaka-full.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/jataka-mahajanaka-full.jpg"
   },
   {
    "id": "kid-art-jataka-temiya",
@@ -2047,7 +2070,7 @@
    "titleBn": "তেমিয় জাতক — মৌন রাজকুমার",
    "titleEn": "Temiya, the Mute Prince - 001",
    "descBn": "থাই পুঁথি-চিত্রে তেমিয় রাজকুমার — ধ্যান ও সংযমের কাহিনি, বড় ও স্পষ্ট ছবি। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/jataka-temiya.jpg",
+   "thumb": "assets/kids/thumbs/disp/jataka-temiya.jpg",
    "licenceLabel": "পাবলিক ডোমেইন",
    "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
    "licenceKey": "Public domain",
@@ -2057,7 +2080,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Temiya,_the_Mute_Prince_-_001.jpg",
    "downloadUrl": "assets/kids/art/jataka-temiya.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/jataka-temiya.jpg"
   },
   {
    "id": "kid-art-jataka-muga-pakha",
@@ -2070,7 +2094,7 @@
    "titleBn": "মূক পাখা জাতক — বাংলার লোককথার ছবি",
    "titleEn": "Muga Pakha Jataka 2",
    "descBn": "বিস্বরূপ গাঙ্গুলির তোলা ভারতীয় জাতক-চিত্র — এশিয়ার লোককথা ও জাতকের মিল দেখানোর জন্য ভালো। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/jataka-muga-pakha.jpg",
+   "thumb": "assets/kids/thumbs/disp/jataka-muga-pakha.jpg",
    "licenceLabel": "খোলা (CC BY 3.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by/3.0/deed.bn",
    "licenceKey": "CC BY 3.0",
@@ -2080,7 +2104,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Muga_Pakha_Jataka_2.jpg",
    "downloadUrl": "assets/kids/art/jataka-muga-pakha.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/jataka-muga-pakha.jpg"
   },
   {
    "id": "kid-art-sujata-mara-panel",
@@ -2093,7 +2118,7 @@
    "titleBn": "সুজাতার দান ও মারার আক্রমণ — একই প্যানেলে",
    "titleEn": "012 Sujata's Offering on left, Mara's Attack on right (33541908380)",
    "descBn": "একটি প্যানেলে দুটি ঘটনা: বাঁয়ে সুজাতার মধুপায়স, ডানে মারার আক্রমণ — তুলনামূলক আলোচনার জন্য চমৎকার। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/sujata-mara-panel.jpg",
+   "thumb": "assets/kids/thumbs/disp/sujata-mara-panel.jpg",
    "licenceLabel": "খোলা (CC BY 2.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/deed.bn",
    "licenceKey": "CC BY 2.0",
@@ -2103,7 +2128,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:012_Sujata%27s_Offering_on_left,_Mara%27s_Attack_on_right_(33541908380).jpg",
    "downloadUrl": "assets/kids/art/sujata-mara-panel.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/sujata-mara-panel.jpg"
   },
   {
    "id": "kid-art-angulimala-buddha-meet",
@@ -2116,7 +2142,7 @@
    "titleBn": "বুদ্ধ ও অঙ্গুলিমাল — সাক্ষাৎ",
    "titleEn": "Angulimala and The Buddha",
    "descBn": "বনে বুদ্ধের শান্ত পদক্ষেপ আর অঙ্গুলিমালের থেমে যাওয়া — গল্পের সবচেয়ে গুরুত্বপূর্ণ মুহূর্তের চিত্র। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/angulimala-buddha-meet.jpg",
+   "thumb": "assets/kids/thumbs/disp/angulimala-buddha-meet.jpg",
    "licenceLabel": "খোলা (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "CC BY-SA 4.0",
@@ -2126,7 +2152,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Angulimala_and_The_Buddha.jpg",
    "downloadUrl": "assets/kids/art/angulimala-buddha-meet.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/angulimala-buddha-meet.jpg"
   },
   {
    "id": "kid-art-buddha-gandhara-panel",
@@ -2139,7 +2166,7 @@
    "titleBn": "গান্ধার — বুদ্ধ ও চার ব্যক্তির প্যানেল",
    "titleEn": "Labit - Buddha with four characters - Karkhi (Gandhara) - Greco-Buddhist art",
    "descBn": "গান্ধার শিল্পের গ্রিকো-বৌদ্ধ প্যানেল — প্রাচীন ভাস্কর্যে বুদ্ধ-জীবনের দৃশ্য দেখা যায়। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/buddha-gandhara-panel.jpg",
+   "thumb": "assets/kids/thumbs/disp/buddha-gandhara-panel.jpg",
    "licenceLabel": "পাবলিক ডোমেইন",
    "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
    "licenceKey": "Public domain",
@@ -2149,7 +2176,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Labit_-_Buddha_with_four_characters_-_Karkhi_(Gandhara)_-_Greco-Buddhist_art.jpg",
    "downloadUrl": "assets/kids/art/buddha-gandhara-panel.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/buddha-gandhara-panel.jpg"
   },
   {
    "id": "kid-art-buddha-hadda-cc0",
@@ -2162,7 +2190,7 @@
    "titleBn": "হদ্দা (আফগানিস্তান) — কুষাণ যুগের বুদ্ধমূর্তি (CC0)",
    "titleEn": "Afghanistan, Gandhara, Hadda, late Kushan Period - Seated Buddha - 1967.39 - Cleveland Museum of Art",
    "descBn": "ক্লিভল্যান্ড মিউজিয়ামের CC0 মূর্তি — সবচেয়ে মুক্ত লাইসেন্সে, নির্ভয়ে প্রিন্ট ও পুনঃব্যবহার করা যায়। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/buddha-hadda-cc0.jpg",
+   "thumb": "assets/kids/thumbs/disp/buddha-hadda-cc0.jpg",
    "licenceLabel": "কপিরাইট-ত্যাগ (CC0)",
    "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.bn",
    "licenceKey": "CC0",
@@ -2172,7 +2200,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Afghanistan,_Gandhara,_Hadda,_late_Kushan_Period_-_Seated_Buddha_-_1967.39_-_Cleveland_Museum_of_Art.jpg",
    "downloadUrl": "assets/kids/art/buddha-hadda-cc0.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/buddha-hadda-cc0.jpg"
   },
   {
    "id": "kid-art-ashoka-sanchi-capital",
@@ -2185,7 +2214,7 @@
    "titleBn": "অশোকের সাঁচি স্তম্ভশীর্ষ — পুনর্গঠিত রূপ",
    "titleEn": "Sanchi Ashoka capital (reconstitution)",
    "descBn": "অশোকের স্তম্ভশীর্ষের পুনর্গঠিত ছবি — মৌর্য যুগ, বৌদ্ধধর্মের প্রসার ও রাষ্ট্রক্ষমতার পাঠে। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/ashoka-sanchi-capital.jpg",
+   "thumb": "assets/kids/thumbs/disp/ashoka-sanchi-capital.jpg",
    "licenceLabel": "খোলা (CC BY 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by/4.0/deed.bn",
    "licenceKey": "CC BY 4.0",
@@ -2195,7 +2224,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanchi_Ashoka_capital_(reconstitution).jpg",
    "downloadUrl": "assets/kids/art/ashoka-sanchi-capital.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/ashoka-sanchi-capital.jpg"
   },
   {
    "id": "kid-art-jataka-vessantara-preach",
@@ -2208,7 +2238,7 @@
    "titleBn": "বুদ্ধ ভিক্ষুসংঘ ও পরিবারকে বেস্সন্তর জাতক শোনাচ্ছেন",
    "titleEn": "011 The Buddha preaches the Vessantara Jataka to the Sangha and his Family (9270905713)",
    "descBn": "থাইল্যান্ডের মিউরালে বেস্সন্তর জাতকের প্রসঙ্গ — দান ও ত্যাগের সবচেয়ে বিস্তৃত জাতক-কাহিনি। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/jataka-vessantara-preach.jpg",
+   "thumb": "assets/kids/thumbs/disp/jataka-vessantara-preach.jpg",
    "licenceLabel": "খোলা (CC BY 2.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/deed.bn",
    "licenceKey": "CC BY 2.0",
@@ -2218,7 +2248,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:011_The_Buddha_preaches_the_Vessantara_Jataka_to_the_Sangha_and_his_Family_(9270905713).jpg",
    "downloadUrl": "assets/kids/art/jataka-vessantara-preach.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/jataka-vessantara-preach.jpg"
   },
   {
    "id": "kid-art-jataka-vessantara-chariot",
@@ -2231,7 +2262,7 @@
    "titleBn": "বেস্সন্তর জাতক (অধ্যায় ৩) — রথ দান",
    "titleEn": "Thai - Vessantara Jataka, Chapter 3 - Vessantara Gives Away the Chariot - Walters 35233",
    "descBn": "ওয়াল্টার্স মিউজিয়ামের থাই পুঁথি-চিত্র — বেস্সন্তর নিজের রথ দান করছেন। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/jataka-vessantara-chariot.jpg",
+   "thumb": "assets/kids/thumbs/disp/jataka-vessantara-chariot.jpg",
    "licenceLabel": "পাবলিক ডোমেইন",
    "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
    "licenceKey": "Public domain",
@@ -2241,7 +2272,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thai_-_Vessantara_Jataka,_Chapter_3_-_Vessantara_Gives_Away_the_Chariot_-_Walters_35233.jpg",
    "downloadUrl": "assets/kids/art/jataka-vessantara-chariot.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/jataka-vessantara-chariot.jpg"
   },
   {
    "id": "kid-art-jataka-vessantara-jali",
@@ -2254,7 +2286,7 @@
    "titleBn": "বেস্সন্তর জাতক (অধ্যায় ৮) — জালীর প্রবেশ",
    "titleEn": "Thai - Vessantara Jataka, Chapter 8 - Jali at Vessantara's Feet - Walters 35237",
    "descBn": "পুঁথি-চিত্রে ছেলে জালী বাবার পায়ের কাছে ফিরে আসছে — বিচ্ছেদ ও মিলনের দৃশ্য। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/jataka-vessantara-jali.jpg",
+   "thumb": "assets/kids/thumbs/disp/jataka-vessantara-jali.jpg",
    "licenceLabel": "পাবলিক ডোমেইন",
    "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
    "licenceKey": "Public domain",
@@ -2264,7 +2296,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thai_-_Vessantara_Jataka,_Chapter_8_-_Jali_at_Vessantara%27s_Feet_-_Walters_35237.jpg",
    "downloadUrl": "assets/kids/art/jataka-vessantara-jali.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/jataka-vessantara-jali.jpg"
   },
   {
    "id": "kid-art-jataka-bhuridatta",
@@ -2277,7 +2310,7 @@
    "titleBn": "ভূরিদত্ত জাতক — ধর্ম রক্ষা",
    "titleEn": "006 Virtue, King Bhuridatta although caught by Alambayana maintains his Virtue (9273711196)",
    "descBn": "সর্পরাজ ভূরিদত্ত ধরা পড়েও অহিংসার ব্রত রাখেন — এই জাতকের নীতিকথা সহজে বোঝানো যায়। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/jataka-bhuridatta.jpg",
+   "thumb": "assets/kids/thumbs/disp/jataka-bhuridatta.jpg",
    "licenceLabel": "খোলা (CC BY 2.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/deed.bn",
    "licenceKey": "CC BY 2.0",
@@ -2287,7 +2320,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:006_Virtue,_King_Bhuridatta_although_caught_by_Alambayana_maintains_his_Virtue_(9273711196).jpg",
    "downloadUrl": "assets/kids/art/jataka-bhuridatta.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/jataka-bhuridatta.jpg"
   },
   {
    "id": "kid-art-buddha-gandhara-seated",
@@ -2300,7 +2334,7 @@
    "titleBn": "কুষাণ যুগের ধ্যানী বুদ্ধ — গান্ধার",
    "titleEn": "Seated Buddha, Gandhara, Pakistan, Kushan dynasty, 100s-200s AD, schist - Tokyo National Museum - Tokyo, Japan",
    "descBn": "গান্ধার অঞ্চলের স্লেট-পাথরের বুদ্ধমূর্তি — শিল্পকলা ও ইতিহাসের পাঠে ব্যবহারযোগ্য। — ছবিটি এই সাইটে রাখা আছে (মুক্ত লাইসেন্স), তাই প্রিন্ট করে শ্রেণিকক্ষে ব্যবহার করা যায়।",
-   "thumb": "assets/kids/art/buddha-gandhara-seated.jpg",
+   "thumb": "assets/kids/thumbs/disp/buddha-gandhara-seated.jpg",
    "licenceLabel": "পাবলিক ডোমেইন",
    "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
    "licenceKey": "Public domain",
@@ -2310,7 +2344,8 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seated_Buddha,_Gandhara,_Pakistan,_Kushan_dynasty,_100s-200s_AD,_schist_-_Tokyo_National_Museum_-_Tokyo,_Japan_-_DSC08664.jpg",
    "downloadUrl": "assets/kids/art/buddha-gandhara-seated.jpg",
    "localFile": true,
-   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।"
+   "noteBn": "মুক্ত লাইসেন্সে এই সাইটে রাখা — ডাউনলোড করে প্রিন্ট/প্রজেক্টরে ব্যবহার করা যায়।",
+   "thumbFull": "assets/kids/art/buddha-gandhara-seated.jpg"
   },
   {
    "id": "kid-yt-bn-white-elephant",
@@ -2990,7 +3025,7 @@
    "titleBn": "শশক জাতক — রঙ করার পাতা",
    "titleEn": "শশক জাতক — রঙ করার পাতা",
    "descBn": "রঙ করো: খরগোশ, ভিক্ষুক, ওটার, শিয়াল, বানর আর রাতের আকাশ। — প্রিন্ট করে রঙ করা যায়; একই আঁকনের রঙিন সংস্করণও তালিকায় আছে। ছবিটি এই সাইটের জন্য নতুন আঁকা।",
-   "thumb": "assets/kids/coloring/kid-color-moon-rabbit.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-color-moon-rabbit.jpg",
    "licenceLabel": "চর্যাভূমির নিজের আঁকা — মুক্ত ব্যবহার (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "original",
@@ -3000,7 +3035,8 @@
    "sourceUrl": "sishu-shikkha.html",
    "downloadUrl": "assets/kids/coloring/kid-color-moon-rabbit.jpg",
    "downloadUrlAlt": "assets/kids/coloring/rong-kora-patra-pack.pdf",
-   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।"
+   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।",
+   "thumbFull": "assets/kids/coloring/kid-color-moon-rabbit.jpg"
   },
   {
    "id": "kid-color-white-elephant",
@@ -3013,7 +3049,7 @@
    "titleBn": "শ্বেত হস্তী জাতক — রঙ করার পাতা",
    "titleEn": "শ্বেত হস্তী জাতক — রঙ করার পাতা",
    "descBn": "রঙ করো: সাদা হাতি, সোনার হাওদা, রাজপুত্র ও নগরের মানুষ। — প্রিন্ট করে রঙ করা যায়; একই আঁকনের রঙিন সংস্করণও তালিকায় আছে। ছবিটি এই সাইটের জন্য নতুন আঁকা।",
-   "thumb": "assets/kids/coloring/kid-color-white-elephant.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-color-white-elephant.jpg",
    "licenceLabel": "চর্যাভূমির নিজের আঁকা — মুক্ত ব্যবহার (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "original",
@@ -3023,7 +3059,8 @@
    "sourceUrl": "sishu-shikkha.html",
    "downloadUrl": "assets/kids/coloring/kid-color-white-elephant.jpg",
    "downloadUrlAlt": "assets/kids/coloring/rong-kora-patra-pack.pdf",
-   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।"
+   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।",
+   "thumbFull": "assets/kids/coloring/kid-color-white-elephant.jpg"
   },
   {
    "id": "kid-color-angulimala",
@@ -3036,7 +3073,7 @@
    "titleBn": "বুদ্ধ ও অঙ্গুলিমাল — রঙ করার পাতা",
    "titleEn": "বুদ্ধ ও অঙ্গুলিমাল — রঙ করার পাতা",
    "descBn": "রঙ করো: শান্ত বুদ্ধ, নামানো অস্ত্র আর সবুজ বন। — প্রিন্ট করে রঙ করা যায়; একই আঁকনের রঙিন সংস্করণও তালিকায় আছে। ছবিটি এই সাইটের জন্য নতুন আঁকা।",
-   "thumb": "assets/kids/coloring/kid-color-angulimala.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-color-angulimala.jpg",
    "licenceLabel": "চর্যাভূমির নিজের আঁকা — মুক্ত ব্যবহার (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "original",
@@ -3046,7 +3083,8 @@
    "sourceUrl": "sishu-shikkha.html",
    "downloadUrl": "assets/kids/coloring/kid-color-angulimala.jpg",
    "downloadUrlAlt": "assets/kids/coloring/rong-kora-patra-pack.pdf",
-   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।"
+   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।",
+   "thumbFull": "assets/kids/coloring/kid-color-angulimala.jpg"
   },
   {
    "id": "kid-color-sujata",
@@ -3059,7 +3097,7 @@
    "titleBn": "সুজাতার মধুপায়স — রঙ করার পাতা",
    "titleEn": "সুজাতার মধুপায়স — রঙ করার পাতা",
    "descBn": "রঙ করো: নদী, পদ্ম, সুজাতার পাত্র ও বোধিবৃক্ষ। — প্রিন্ট করে রঙ করা যায়; একই আঁকনের রঙিন সংস্করণও তালিকায় আছে। ছবিটি এই সাইটের জন্য নতুন আঁকা।",
-   "thumb": "assets/kids/coloring/kid-color-sujata.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-color-sujata.jpg",
    "licenceLabel": "চর্যাভূমির নিজের আঁকা — মুক্ত ব্যবহার (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "original",
@@ -3069,7 +3107,8 @@
    "sourceUrl": "sishu-shikkha.html",
    "downloadUrl": "assets/kids/coloring/kid-color-sujata.jpg",
    "downloadUrlAlt": "assets/kids/coloring/rong-kora-patra-pack.pdf",
-   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।"
+   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।",
+   "thumbFull": "assets/kids/coloring/kid-color-sujata.jpg"
   },
   {
    "id": "kid-color-monkey-crocodile",
@@ -3082,7 +3121,7 @@
    "titleBn": "বানর ও কুমির — রঙ করার পাতা",
    "titleEn": "বানর ও কুমির — রঙ করার পাতা",
    "descBn": "রঙ করো: নদী, কুমির, আমের কাঁদি আর আকাশ। — প্রিন্ট করে রঙ করা যায়; একই আঁকনের রঙিন সংস্করণও তালিকায় আছে। ছবিটি এই সাইটের জন্য নতুন আঁকা।",
-   "thumb": "assets/kids/coloring/kid-color-monkey-crocodile.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-color-monkey-crocodile.jpg",
    "licenceLabel": "চর্যাভূমির নিজের আঁকা — মুক্ত ব্যবহার (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "original",
@@ -3092,7 +3131,8 @@
    "sourceUrl": "sishu-shikkha.html",
    "downloadUrl": "assets/kids/coloring/kid-color-monkey-crocodile.jpg",
    "downloadUrlAlt": "assets/kids/coloring/rong-kora-patra-pack.pdf",
-   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।"
+   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।",
+   "thumbFull": "assets/kids/coloring/kid-color-monkey-crocodile.jpg"
   },
   {
    "id": "kid-color-banyan-deer",
@@ -3105,7 +3145,7 @@
    "titleBn": "বটহরিণ জাতক — রঙ করার পাতা",
    "titleEn": "বটহরিণ জাতক — রঙ করার পাতা",
    "descBn": "রঙ করো: সোনালি হরিণ, ছোট হরিণের পাল আর চাঁদের আলো। — প্রিন্ট করে রঙ করা যায়; একই আঁকনের রঙিন সংস্করণও তালিকায় আছে। ছবিটি এই সাইটের জন্য নতুন আঁকা।",
-   "thumb": "assets/kids/coloring/kid-color-banyan-deer.jpg",
+   "thumb": "assets/kids/thumbs/disp/kid-color-banyan-deer.jpg",
    "licenceLabel": "চর্যাভূমির নিজের আঁকা — মুক্ত ব্যবহার (CC BY-SA 4.0)",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.bn",
    "licenceKey": "original",
@@ -3115,7 +3155,8 @@
    "sourceUrl": "sishu-shikkha.html",
    "downloadUrl": "assets/kids/coloring/kid-color-banyan-deer.jpg",
    "downloadUrlAlt": "assets/kids/coloring/rong-kora-patra-pack.pdf",
-   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।"
+   "noteBn": "সবগুলো একসঙ্গে: rong-kora-patra-pack.pdf (৬ পাতা, A4, প্রিন্ট-উপযোগী)।",
+   "thumbFull": "assets/kids/coloring/kid-color-banyan-deer.jpg"
   }
  ]
 }

@@ -671,6 +671,37 @@ PAYLOAD = {
 }
 
 
+# ---------------------------------------------------------------- হালকা display-thumb (দ্রুত লোড)
+# বড় ছবি কার্ডে পুরোটা না দেখিয়ে ছোট সংস্করণ দেখানো হয়; ডাউনলোডে মূল ফাইলই থাকে।
+try:
+    from PIL import Image as _Img
+except Exception:
+    _Img = None
+DISP = ROOT / 'assets' / 'kids' / 'thumbs' / 'disp'
+_thin = 0
+if _Img is not None:
+    DISP.mkdir(parents=True, exist_ok=True)
+    for it in ITEMS:
+        t = it.get('thumb')
+        if not t or not t.startswith('assets/') or '/disp/' in t:
+            continue
+        src = ROOT / t
+        if not src.exists() or src.stat().st_size <= 120_000:
+            continue
+        dst = DISP / (src.stem + '.jpg')
+        if not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime:
+            try:
+                im = _Img.open(src).convert('RGB')
+                if im.width > 520:
+                    im = im.resize((520, round(im.height * 520 / im.width)), _Img.LANCZOS)
+                im.save(dst, 'JPEG', quality=72, optimize=True, progressive=True)
+            except Exception:
+                continue
+        it['thumbFull'] = t
+        it['thumb'] = str(dst.relative_to(ROOT))
+        _thin += 1
+print('হালকা থাম্ব তৈরি হলো:', _thin)
+
 missing = []
 for it in ITEMS:
     if it.get('thumb'):
@@ -687,6 +718,34 @@ JS_OUT.write_text('/* স্বয়ংক্রিয়ভাবে তৈর
                   encoding='utf-8')
 print('wrote', JS_OUT.relative_to(ROOT), JS_OUT.stat().st_size // 1024, 'KB')
 import collections
+# হালকা তালিকা (কার্ড আঁকার জন্য) — দ্রুত লোড হয়, বড় JSON টুলের জন্য থাকে
+SLIM_KEYS = ('id', 'type', 'lang', 'ageBn', 'durationBn', 'titleBn', 'descBn', 'thumb', 'thumbFull',
+             'embedId', 'playUrl', 'readUrl', 'watchUrl', 'buyUrl', 'downloadUrl', 'downloadUrlAlt',
+             'licenceKey', 'licenceLabel', 'creditBn', 'sourceName', 'sourceUrl', 'voiceKind', 'localFile')
+def _trim(v, n):
+    v = v or ''
+    return v if len(v) <= n else v[:n].rstrip() + '…'
+
+slim = {'schema': PAYLOAD['schema'], 'generated_at': PAYLOAD.get('generated_at'),
+        'title': PAYLOAD.get('title'), 'introBn': PAYLOAD.get('introBn'),
+        'types': PAYLOAD['types'], 'languages': PAYLOAD['languages'], 'topics': PAYLOAD['topics'],
+        'searchLinks': PAYLOAD.get('searchLinks', []), 'notHostedBn': PAYLOAD.get('notHostedBn', []),
+        'items': []}
+for it in ITEMS:
+    row = {k: it[k] for k in SLIM_KEYS if it.get(k)}
+    if 'descBn' in row:
+        row['descBn'] = _trim(row['descBn'], 120)
+    if 'creditBn' in row:
+        row['creditBn'] = _trim(row['creditBn'], 70)
+    slim['items'].append(row)
+LIST = ROOT / 'data' / 'kids-media-list.json'
+LIST.write_text(json.dumps(slim, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+LIST_JS = ROOT / 'data' / 'kids-media-list.js'
+LIST_JS.write_text('/* স্বয়ংক্রিয় — tools/build_kids_media.py */\nwindow.KIDS_MEDIA_LIST = '
+                   + json.dumps(slim, ensure_ascii=False, separators=(',', ':')) + ';\n', encoding='utf-8')
+print('wrote', LIST.relative_to(ROOT), LIST.stat().st_size // 1024, 'KB ·',
+      LIST_JS.relative_to(ROOT), LIST_JS.stat().st_size // 1024, 'KB')
+
 print('wrote', OUT.relative_to(ROOT), '—', len(ITEMS), 'items')
 print(collections.Counter(i['type'] for i in ITEMS))
 print(collections.Counter(i['lang'] for i in ITEMS))
