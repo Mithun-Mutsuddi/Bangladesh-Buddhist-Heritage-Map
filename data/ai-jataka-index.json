@@ -339,7 +339,7 @@
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-nandivishala.mp3",
     "en": "assets/kids/audio/en/kid-en-nandivishala.mp3",
-    "hi": null
+    "hi": "assets/kids/audio/hi/kid-hi-nandivishala.mp3"
    },
    "video": "assets/kids/video/bn/nandivishala.mp4"
   },
@@ -358,7 +358,7 @@
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-doves-and-net.mp3",
     "en": "assets/kids/audio/en/kid-en-doves-and-net.mp3",
-    "hi": null
+    "hi": "assets/kids/audio/hi/kid-hi-doves-and-net.mp3"
    },
    "video": "assets/kids/video/bn/doves-and-net.mp4"
   },
@@ -377,7 +377,7 @@
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-jackal-boast.mp3",
     "en": "assets/kids/audio/en/kid-en-jackal-boast.mp3",
-    "hi": null
+    "hi": "assets/kids/audio/hi/kid-hi-jackal-boast.mp3"
    },
    "video": "assets/kids/video/bn/jackal-boast.mp4"
   },
@@ -396,7 +396,7 @@
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-ashoka.mp3",
     "en": "assets/kids/audio/en/kid-en-ashoka.mp3",
-    "hi": null
+    "hi": "assets/kids/audio/hi/kid-hi-ashoka.mp3"
    },
    "video": "assets/kids/video/bn/ashoka.mp4"
   },
@@ -415,7 +415,7 @@
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-ananda.mp3",
     "en": "assets/kids/audio/en/kid-en-ananda.mp3",
-    "hi": null
+    "hi": "assets/kids/audio/hi/kid-hi-ananda.mp3"
    },
    "video": "assets/kids/video/bn/ananda.mp4"
   },
@@ -434,7 +434,7 @@
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-sariputta-moggallana.mp3",
     "en": "assets/kids/audio/en/kid-en-sariputta-moggallana.mp3",
-    "hi": null
+    "hi": "assets/kids/audio/hi/kid-hi-sariputta-moggallana.mp3"
    },
    "video": "assets/kids/video/bn/sariputta-moggallana.mp4"
   }

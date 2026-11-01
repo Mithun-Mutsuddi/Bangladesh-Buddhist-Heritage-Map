@@ -363,6 +363,18 @@
    "kb": 519
   },
   {
+   "slug": "ananda",
+   "lang": "hi",
+   "titleBn": "আনন্দের সেবা",
+   "titleEn": "Ananda's service",
+   "durationBn": "01:02",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-ananda.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 486
+  },
+  {
    "slug": "anathapindika",
    "lang": "hi",
    "titleBn": "অনাথপিন্ডিকের মহাদান",
@@ -385,6 +397,18 @@
    "file": "assets/kids/audio/hi/kid-hi-angulimala.mp3",
    "updated_at": "2026-11-01",
    "kb": 608
+  },
+  {
+   "slug": "ashoka",
+   "lang": "hi",
+   "titleBn": "অশোকের পরিবর্তন",
+   "titleEn": "Ashoka's change of heart",
+   "durationBn": "01:01",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-ashoka.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 473
   },
   {
    "slug": "banyan-deer",
@@ -423,6 +447,18 @@
    "kb": 521
   },
   {
+   "slug": "doves-and-net",
+   "lang": "hi",
+   "titleBn": "পায়রার দল ও জাল",
+   "titleEn": "The doves and the net",
+   "durationBn": "01:02",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-doves-and-net.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 483
+  },
+  {
    "slug": "first-sermon",
    "lang": "hi",
    "titleBn": "প্রথম ধর্মদেশনা",
@@ -457,6 +493,18 @@
    "file": "assets/kids/audio/hi/kid-hi-hidden-treasure.mp3",
    "updated_at": "2026-11-01",
    "kb": 501
+  },
+  {
+   "slug": "jackal-boast",
+   "lang": "hi",
+   "titleBn": "শৃগালের গর্ব",
+   "titleEn": "The jackal's boast",
+   "durationBn": "00:54",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-jackal-boast.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 422
   },
   {
    "slug": "kesari-flying-thief",
@@ -543,6 +591,18 @@
    "kb": 575
   },
   {
+   "slug": "nandivishala",
+   "lang": "hi",
+   "titleBn": "নন্দবিশালা — ধৈর্যের বলদ",
+   "titleEn": "Nandivishala — the patient ox",
+   "durationBn": "00:58",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-nandivishala.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 456
+  },
+  {
    "slug": "prophecy",
    "lang": "hi",
    "titleBn": "ভবিষ্যদ্বাণী — তিব্বতি কাহিনি",
@@ -565,6 +625,18 @@
    "file": "assets/kids/audio/hi/kid-hi-rahul.mp3",
    "updated_at": "2026-11-01",
    "kb": 475
+  },
+  {
+   "slug": "sariputta-moggallana",
+   "lang": "hi",
+   "titleBn": "দুই বন্ধু: সারিপুত্র ও মৌদগল্যায়ন",
+   "titleEn": "Two friends: Sariputta and Moggallana",
+   "durationBn": "01:08",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-sariputta-moggallana.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 534
   },
   {
    "slug": "shalivahana",
