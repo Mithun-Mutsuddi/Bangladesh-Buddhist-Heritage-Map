@@ -1,0 +1,60 @@
+{
+ "schema": "charyabhumi-kids-audio-bn-v1",
+ "_বর্ণনা": "বাংলা অডিও-গল্পের কণ্ঠ ও দৈর্ঘ্যের হিসাব। কণ্ঠ নিজের/শিক্ষকের রেকর্ডিং দিয়ে বদলাতে tools/install_bn_audio.py চালান — voice: ai | human।",
+ "items": [
+  {
+   "slug": "moon-rabbit",
+   "titleBn": "শশক জাতক — চাঁদের খরগোশ",
+   "durationBn": "00:58",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-moon-rabbit.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "white-elephant",
+   "titleBn": "শ্বেত হস্তী জাতক",
+   "durationBn": "00:54",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-white-elephant.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "angulimala",
+   "titleBn": "বুদ্ধ ও অঙ্গুলিমাল",
+   "durationBn": "01:13",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-angulimala.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "sujata",
+   "titleBn": "সুজাতার মধুপায়স",
+   "durationBn": "00:57",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-sujata.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "monkey-crocodile",
+   "titleBn": "বানর ও কুমির",
+   "durationBn": "00:59",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-monkey-crocodile.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "banyan-deer",
+   "titleBn": "বটহরিণ জাতক — ন্যাগ্রোধমৃগ",
+   "durationBn": "00:58",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-banyan-deer.mp3",
+   "updated_at": "2026-11-01"
+  }
+ ]
+}

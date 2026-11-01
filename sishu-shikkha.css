@@ -1,0 +1,170 @@
+/* শিশু ও শিক্ষা বিভাগ — জাতক মিডিয়া তালিকা (charyabhumi) */
+
+.kidsmedia-hero{
+  padding:clamp(28px,5vw,64px) 0 26px;
+  background:radial-gradient(120% 130% at 12% 0%, #fff6e2 0%, #f6e6c8 42%, #ecd7b4 100%);
+  border-bottom:1px solid rgba(74,31,5,.12);
+}
+.kidsmedia-hero h1{ font-size:clamp(28px,4.4vw,44px); line-height:1.25; margin:.15em 0 .35em; color:#4a1f05 }
+.kidsmedia-hero h1 span{ color:#9a5b1d }
+.kidsmedia-hero p.kidsmedia-lead{ max-width:64ch; font-size:16px; line-height:1.85; color:#5b4126 }
+.kidsmedia-statline{ display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 0; padding:0; list-style:none }
+.kidsmedia-statline li{
+  background:#fff; border:1px solid #ead6b8; border-radius:14px; padding:9px 14px;
+  font-weight:800; font-size:13px; color:#4a1f05; box-shadow:0 2px 0 #ead6b8;
+}
+.kidsmedia-statline b{ font-size:19px; margin-inline-end:5px; color:#8a4a12 }
+
+.kidsmedia-toolbar{ padding:22px 0 6px }
+.kidsmedia-search{
+  display:flex; gap:8px; align-items:center; background:#fff; border:1px solid #e2cfae;
+  border-radius:999px; padding:6px 8px 6px 16px; max-width:520px; box-shadow:0 2px 0 #ecd9bb;
+}
+.kidsmedia-search input{ flex:1; border:0; outline:0; font:inherit; font-size:15px; background:transparent; color:#3a2a18 }
+.kidsmedia-search input::placeholder{ color:#a98f6d }
+.kidsmedia-search button{ border:0; background:#4a1f05; color:#ffe7bb; border-radius:999px; padding:9px 18px; font-weight:800; cursor:pointer; font:inherit }
+.kidsmedia-filters{ display:grid; gap:10px; margin-top:14px }
+.kidsmedia-filterrow{ display:flex; gap:7px; flex-wrap:wrap; align-items:center }
+.kidsmedia-filterrow .flabel{ font-size:12px; font-weight:900; letter-spacing:.04em; color:#8a6a44; min-width:66px }
+.chip{
+  border:1px solid #e6d3b4; background:#fff; color:#5b4126; border-radius:999px;
+  padding:7px 13px; font-size:12.5px; font-weight:800; cursor:pointer; transition:.16s;
+}
+.chip:hover{ border-color:#c69a5f; transform:translateY(-1px) }
+.chip[aria-pressed="true"]{ background:#4a1f05; border-color:#4a1f05; color:#ffe7bb }
+.kidsmedia-count{ margin:16px 0 0; font-size:13px; font-weight:800; color:#7a6142 }
+.kidsmedia-count b{ color:#4a1f05 }
+
+.kidsmedia-grid{
+  display:grid; gap:18px; margin:20px 0 10px; padding:0 0 8px;
+  grid-template-columns:repeat(auto-fill,minmax(255px,1fr));
+}
+.kcard{
+  display:flex; flex-direction:column; background:#fff; border:1px solid #ecdcbf; border-radius:18px;
+  overflow:hidden; box-shadow:0 3px 0 #f0e2c8, 0 10px 24px -18px rgba(74,31,5,.55);
+  transition:transform .18s, box-shadow .18s;
+}
+.kcard:hover{ transform:translateY(-3px); box-shadow:0 6px 0 #eddfc4, 0 18px 30px -20px rgba(74,31,5,.6) }
+.kcard-media{ position:relative; background:linear-gradient(150deg,#f6e9cf,#e7d3ae); aspect-ratio:4/3; overflow:hidden }
+.kcard-media img{ width:100%; height:100%; object-fit:cover; display:block }
+.kcard-media.contain{ background:#f7eeda }
+.kcard-media.contain img{ object-fit:contain }
+.kcard-media.audio-art{ display:grid; place-items:center; background:linear-gradient(150deg,#12403a,#1f6b5c) }
+.kcard-media.audio-art .wave{ font-size:44px; filter:drop-shadow(0 6px 12px rgba(0,0,0,.35)) }
+.kcard-media.audio-art .dur{ position:absolute; inset-inline-end:10px; inset-block-end:8px; color:#ffe7bb; font-size:12px; font-weight:900 }
+.kbadge{
+  position:absolute; inset-block-start:10px; inset-inline-start:10px; background:rgba(255,255,255,.94);
+  border:1px solid #e6d3b4; border-radius:999px; padding:4px 10px; font-size:11px; font-weight:900; color:#4a1f05;
+}
+.kbadge.play{ inset-inline-start:auto; inset-inline-end:10px; background:#0d6e4f; color:#eafff5; border-color:#0d6e4f }
+.kcard-body{ padding:13px 14px 15px; display:flex; flex-direction:column; gap:7px; flex:1 }
+.kcard h3{ font-size:15.5px; line-height:1.45; margin:0; color:#33180a }
+.kcard .kmeta{ margin:0; font-size:12px; font-weight:800; color:#8a6a44; letter-spacing:.01em }
+.kcard .kdesc{ margin:0; font-size:13px; line-height:1.75; color:#54402a }
+.kcard .klic{ margin:0; font-size:11.5px; line-height:1.6; color:#7d6647; border-top:1px dashed #ecdcbf; padding-top:7px }
+.kcard .klic b{ color:#4a1f05 }
+.kcard-actions{ display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; padding-top:4px }
+.kbtn{
+  display:inline-flex; align-items:center; gap:5px; border:1px solid #dfc9a5; background:#fff8ec;
+  color:#6b3a09; border-radius:10px; padding:7px 11px; font-size:12.5px; font-weight:900; text-decoration:none;
+}
+.kbtn:hover{ background:#fdeecf }
+.kbtn.primary{ background:#4a1f05; border-color:#4a1f05; color:#ffe7bb }
+.kbtn.primary:hover{ background:#66300a }
+.kcard audio{ width:100%; height:34px; margin-top:4px }
+
+.kidsmedia-panel{ background:#fff; border:1px solid #ecdcbf; border-radius:18px; padding:18px 20px; margin:26px 0 }
+.kidsmedia-panel h3{ margin:0 0 8px; font-size:17px; color:#4a1f05 }
+.kidsmedia-panel p{ margin:0 0 10px; font-size:13.5px; line-height:1.8; color:#54402a }
+.kidsmedia-links{ display:grid; gap:8px; margin:0; padding:0; list-style:none; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)) }
+.kidsmedia-links a{
+  display:block; text-decoration:none; font-size:13px; font-weight:800; color:#14524a;
+  background:#eff7f3; border:1px solid #cfe3d9; border-radius:10px; padding:9px 12px;
+}
+.kidsmedia-links a:hover{ background:#e2f1ea }
+.kidsmedia-not{ margin:0; padding-inline-start:20px; font-size:13px; line-height:1.85; color:#54402a }
+.kidsmedia-not li{ margin-bottom:6px }
+.kidsmedia-empty{ padding:34px 8px; text-align:center; color:#7a6142; font-weight:800 }
+
+.klightbox{ position:fixed; inset:0; background:rgba(30,18,8,.9); display:none; z-index:9999; padding:20px; overflow:auto }
+.klightbox[open],.klightbox.open{ display:grid; place-items:center }
+.klightbox img{ max-width:min(94vw,1000px); max-height:82vh; border-radius:12px; box-shadow:0 20px 50px rgba(0,0,0,.5) }
+.klightbox .klb-bar{ margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center; align-items:center; color:#ffe7bb; font-size:13px }
+.klightbox .klb-bar a,.klightbox .klb-bar button{
+  background:#ffe7bb; color:#4a1f05; border:0; border-radius:999px; padding:8px 16px;
+  font-weight:900; font-size:13px; text-decoration:none; cursor:pointer; font:inherit; font-weight:900;
+}
+.klb-close{ position:fixed; inset-block-start:14px; inset-inline-end:16px; background:#ffe7bb; color:#4a1f05; border:0; border-radius:999px; width:40px; height:40px; font-size:20px; font-weight:900; cursor:pointer }
+
+@media (max-width:620px){
+  .kidsmedia-grid{ grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:13px }
+  .kcard h3{ font-size:14.5px }
+  .kidsmedia-filterrow .flabel{ min-width:100% }
+}
+
+/* হালকা হিরোতে ঘোস্ট-বাটন ও কিকার স্পষ্টতা */
+.kidsmedia-hero .cb-kicker{ color:#8a4a12; background:#fff; border:1px solid #e6d3b4; border-radius:999px; display:inline-block; padding:6px 14px; font-weight:900 }
+.kidsmedia-hero .cb-btn.ghost{ background:#fff; border:1px solid #e0c9a4; color:#6b3a09 }
+.kidsmedia-hero .cb-btn.ghost:hover{ background:#fff6e2 }
+.kidsmedia-hero .cb-btn{ border-radius:12px }
+.kcard-media.audio-art .wave svg{ display:block }
+
+.kbtn.buy{ background:#8a4a12; border-color:#8a4a12; color:#fff3d6 }
+.kbtn.buy:hover{ background:#a75c16 }
+.kcard .knote{ margin:0; font-size:11.5px; line-height:1.6; color:#8a4a12; background:#fff3d6; border:1px solid #f0dcb4; border-radius:9px; padding:6px 9px }
+
+/* ---------- ভিডিও কার্ড ও এমবেড ---------- */
+.kcard-media.kvideo{ position:relative; cursor:pointer }
+.kcard-media.kvideo img{ transition:transform .5s ease, filter .4s }
+.kcard-media.kvideo:hover img{ transform:scale(1.04); filter:brightness(.92) }
+.kplay{
+  position:absolute; inset:0; margin:auto; width:64px; height:64px; border-radius:50%;
+  border:0; background:rgba(255,255,255,.94); color:#12403a; display:grid; place-items:center;
+  cursor:pointer; box-shadow:0 10px 26px rgba(0,0,0,.32); padding-left:4px;
+  animation:kPulse 2.6s ease-in-out infinite;
+}
+.kplay:hover{ background:#fff; transform:scale(1.06) }
+@keyframes kPulse{ 0%,100%{ box-shadow:0 10px 26px rgba(0,0,0,.30), 0 0 0 0 rgba(255,231,187,.55) } 50%{ box-shadow:0 10px 26px rgba(0,0,0,.30), 0 0 0 14px rgba(255,231,187,0) } }
+.kcard-media.playing{ aspect-ratio:16/9; background:#000 }
+.kiframe{ width:100%; height:100%; border:0; display:block }
+.kbtn.play-link{ background:#8f2b2b; border-color:#8f2b2b; color:#ffeaea }
+.kbtn.play-link:hover{ background:#a83a3a }
+.kcard-video .kcard-media{ aspect-ratio:16/10 }
+
+/* ---------- সূক্ষ্ম অ্যানিমেশন (reduced-motion মানে) ---------- */
+@keyframes kWheel{ from{ transform:rotate(0) } to{ transform:rotate(360deg) } }
+.kidsmedia-hero h1 span{ display:inline-block; animation:kFadeUp .9s ease both }
+@keyframes kFadeUp{ from{ opacity:0; transform:translateY(10px) } to{ opacity:1; transform:none } }
+.kcard{ animation:kFadeUp .5s ease both }
+.kidsmedia-statline li{ transition:transform .2s }
+.kidsmedia-statline li:hover{ transform:translateY(-2px) }
+@media (prefers-reduced-motion: reduce){
+  .kplay{ animation:none } .kcard, .kidsmedia-hero h1 span{ animation:none } .kcard-media.kvideo:hover img{ transform:none }
+}
+
+/* ছবি লোড না হলে করণীয় */
+.kcard-media.imgfail{ display:grid; place-items:center; background:linear-gradient(150deg,#f3e6c9,#e3cda6); }
+.kcard-media.imgfail::after{ content:attr(data-fallback); font-size:12px; font-weight:800; color:#7a5a2e; text-align:center; padding:12px; line-height:1.6 }
+.kembed-hint{ margin:6px 0 0; font-size:12px; color:#8a4a12; background:#fff3d6; border:1px solid #f0dcb4; border-radius:9px; padding:7px 9px }
+.kembed-hint a{ color:#8f2b2b; font-weight:900 }
+
+.kaudio{ margin-top:2px }
+.kaudio-tools{ margin:4px 0 0; font-size:12px; font-weight:800; color:#7a6142; display:flex; gap:6px; flex-wrap:wrap; align-items:center }
+.kaudio-tools a{ color:#1c5c4c; text-decoration:none; border-bottom:1px dotted #9dc6b8 }
+.kaudio-tools a:hover{ color:#0d6e4f }
+.kaudio-err{ margin:6px 0 0; font-size:11.5px; line-height:1.6; color:#8f2b2b; background:#fff1f1; border:1px solid #f2cfcf; border-radius:9px; padding:7px 9px }
+.kaudio-err code{ background:#fff; padding:0 3px; border-radius:4px }
+.kmore-wrap{ grid-column:1/-1; display:flex; justify-content:center; padding:8px 0 4px }
+.kmore{ font:inherit; font-weight:800; cursor:pointer; border:1px solid #cf9d3a; background:#fffaf0; color:#7a4b12; padding:10px 22px; border-radius:999px }
+.kmore:hover{ background:#fdf0d6 }
+
+/* তালিকা আসার আগে হালকা skeleton — প্রথম দর্শনেই কিছু দেখা যায় */
+.k-skel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media(max-width:900px){.k-skel{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.k-skel{grid-template-columns:1fr}}
+.k-skel div{height:250px;border-radius:20px;background:linear-gradient(100deg,#eee 30%,#f7f7f7 50%,#eee 70%);background-size:200% 100%;animation:ksh 1.2s linear infinite;border:1px solid #e6e0d4}
+@keyframes ksh{to{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.k-skel div{animation:none}}
+
+/* লম্বা তালিকায় স্ক্রল মসৃণ রাখতে (স্ক্রিনের বাইরের কার্ড পরে আঁকা হয়) */
+.kcard, .kids-media-card { content-visibility:auto; contain-intrinsic-size:auto 340px; }

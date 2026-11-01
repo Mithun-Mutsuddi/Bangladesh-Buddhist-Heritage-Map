@@ -57,30 +57,30 @@ footer{padding:26px 20px 48px;color:#5b7a71;font-size:13px;text-align:center}
     <strong>প্রকাশের নিয়ম, স্পষ্ট করে:</strong> (১) প্রতিটি জমা সম্পাদকের অনুমোদনের অপেক্ষায় থাকে; (২) ছবির অধিকার যার, তাঁর সম্মতি ছাড়া আমরা কিছুই প্রকাশ করি না; (৩) অনুমোদনের আগে বা পরে — যেকোনো সময় আপনি জমা প্রত্যাহার করতে পারেন।
   </div>
 
-  <form class="card" id="f" autocomplete="off">
+  <form class="card" id="f" autocomplete="off" autocorrect="off" spellcheck="false">
     <h2>১. ছবি</h2>
     <p class="sub">একটি ছবি বা একটি মিডিয়া-ফাইল। বড় ছবি স্বয়ংক্রিয়ভাবে ছোট (সর্বোচ্চ ১০০০ পিক্সেল) করে নেওয়া হবে যাতে পাঠানো সহজ হয়।</p>
     <input type="file" id="file" accept="image/*,audio/*,video/*">
-    <img class="preview" id="prev" alt="নির্বাচিত ছবির প্রাকদর্শন" hidden>
+    <img class="preview" id="prev" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="নির্বাচিত ছবির প্রাকদর্শন" hidden>
     <p class="sub" id="fileinfo"></p>
 
     <h2>২. বিবরণ</h2>
     <label for="titleBn">শিরোনাম (বাংলায়) <small>— আবশ্যক</small></label>
-    <input type="text" id="titleBn" required maxlength="120" placeholder="যেমন: মৈত্রী বিহার, বান্দরবান — মূল বেদি">
+    <input type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" id="titleBn" required maxlength="120" placeholder="যেমন: মৈত্রী বিহার, বান্দরবান — মূল বেদি">
     <label for="titleEn">শিরোনাম (ইংরেজি) <small>— না থাকলে খালি রাখুন</small></label>
-    <input type="text" id="titleEn" maxlength="120">
+    <input type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" id="titleEn" maxlength="120">
     <div class="grid2">
       <div>
         <label for="placeBn">স্থান <small>— গ্রাম/শহর, দেশ</small></label>
-        <input type="text" id="placeBn" maxlength="120" placeholder="বান্দরবান, বাংলাদেশ">
+        <input type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" id="placeBn" maxlength="120" placeholder="বান্দরবান, বাংলাদেশ">
       </div>
       <div>
         <label for="dateBn">সময়কাল <small>— সাল বা ‘আনুমানিক’</small></label>
-        <input type="text" id="dateBn" maxlength="60" placeholder="২০২৪">
+        <input type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" id="dateBn" maxlength="60" placeholder="২০২৪">
       </div>
     </div>
     <label for="descBn">বিবরণ <small>— কমপক্ষে ৬০ অক্ষর; কী দেখা যাচ্ছে, কেন গুরুত্বপূর্ণ</small></label>
-    <textarea id="descBn" required minlength="60" maxlength="1200"></textarea>
+    <textarea autocomplete="off" id="descBn" required minlength="60" maxlength="1200"></textarea>
     <div class="grid2">
       <div>
         <label for="mediaType">ধরন</label>
@@ -112,12 +112,12 @@ footer{padding:26px 20px 48px;color:#5b7a71;font-size:13px;text-align:center}
       </div>
     </div>
     <label for="keywords">কীওয়ার্ড <small>— কমা দিয়ে আলাদা</small></label>
-    <input type="text" id="keywords" placeholder="বান্দরবান, বিহার, ২০২৪">
+    <input type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" id="keywords" placeholder="বান্দরবান, বিহার, ২০২৪">
 
     <h2>৩. অধিকার ও লাইসেন্স</h2>
     <p class="sub">ছবিটি কে তুলেছেন এবং কোন শর্তে প্রকাশে সম্মত — সেটি ছাড়া আমরা জমা নিই না।</p>
     <label for="creatorBn">আলোকচিত্রী / নির্মাতা</label>
-    <input type="text" id="creatorBn" maxlength="120" placeholder="নিজের নাম লিখুন বা ‘অজ্ঞাত’">
+    <input type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" id="creatorBn" maxlength="120" placeholder="নিজের নাম লিখুন বা ‘অজ্ঞাত’">
     <ul class="lic">
       <li><label><input type="radio" name="licence" value="CC0" checked> <span><strong>CC0</strong> — সব অধিকার ছেড়ে দিচ্ছি, যে কেউ বিনা শর্তে ব্যবহার করতে পারবে।</span></label></li>
       <li><label><input type="radio" name="licence" value="CC BY 4.0"> <span><strong>CC BY 4.0</strong> — ব্যবহার করা যাবে, শুধু আমার নাম উল্লেখ করতে হবে।</span></label></li>
@@ -129,11 +129,11 @@ footer{padding:26px 20px 48px;color:#5b7a71;font-size:13px;text-align:center}
     <div class="grid2">
       <div>
         <label for="name">নাম <small>— আবশ্যক</small></label>
-        <input type="text" id="name" required maxlength="80">
+        <input type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" id="name" required maxlength="80">
       </div>
       <div>
         <label for="contact">যোগাযোগ <small>— ইমেইল বা ফোন; প্রকাশ হবে না</small></label>
-        <input type="text" id="contact" maxlength="120">
+        <input type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" id="contact" maxlength="120">
       </div>
     </div>
 
@@ -148,6 +148,119 @@ footer{padding:26px 20px 48px;color:#5b7a71;font-size:13px;text-align:center}
     </div>
     <p class="sub" style="margin-top:10px">জমা দিলে একটি ছোট ফাইল (<code>জমা-….json</code>) নামবে — সেটি সম্পাদককে ইমেইল/মেসেজে পাঠাবেন, অথবা এই পাতার নিচের তালিকায় জমা থাকবে; সম্পাদক সেটি অনুমোদন-কনসোলে খুলবেন।</p>
   </form>
+
+  <form class="card" id="kf" autocomplete="off" autocorrect="off" spellcheck="false">
+    <h2>শিশু ও শিক্ষা বিভাগে কার্ড যোগ করুন</h2>
+    <p class="sub">জাতক, বুদ্ধ, অঙ্গুলিমাল, সুজাতা বা বৌদ্ধধর্ম নিয়ে বই, কমিক, অ্যানিমেশন, অডিও, ছবি, রঙ করার পাতা বা চলচ্চিত্রের কার্ড। জমা দেওয়ার পরেও <strong>মালিকের অনুমোদন ছাড়া কার্ডটি প্রকাশ পাবে না</strong>।</p>
+
+    <div class="grid2">
+      <div>
+        <label for="kType">ধরন <small>— আবশ্যক</small></label>
+        <select id="kType">
+          <option value="video">অ্যানিমেশন / ভিডিও (এমবেড)</option>
+          <option value="audio">অডিও গল্প</option>
+          <option value="book">বই / PDF</option>
+          <option value="comic">কমিক</option>
+          <option value="art">চিত্রকলা ও ভাস্কর্য</option>
+          <option value="coloring">রঙ করার পাতা</option>
+          <option value="film">চলচ্চিত্র</option>
+          <option value="ack">অমর চিত্র কথা</option>
+          <option value="manga">মাঙ্গা</option>
+        </select>
+      </div>
+      <div>
+        <label for="kLang">ভাষা</label>
+        <select id="kLang">
+          <option value="bn">বাংলা</option>
+          <option value="en">ইংরেজি</option>
+          <option value="hi">হিন্দি</option>
+          <option value="fr">ফরাসি</option>
+          <option value="zh">চিনা</option>
+        </select>
+      </div>
+      <div>
+        <label for="kTopic">বিষয়</label>
+        <select id="kTopic">
+          <option value="jataka">জাতক পল্ল</option>
+          <option value="buddha-life">বুদ্ধের জীবন</option>
+          <option value="angulimala">অঙ্গুলিমাল</option>
+          <option value="sujata">সুজাতা</option>
+          <option value="general">সাধারণ শিক্ষা</option>
+        </select>
+      </div>
+      <div>
+        <label for="kAge">বয়স</label>
+        <input type="text" id="kAge" maxlength="30" value="৪–১০ বছর">
+      </div>
+    </div>
+
+    <label for="kTitleBn">শিরোনাম (বাংলায়) <small>— আবশ্যক</small></label>
+    <input type="text" id="kTitleBn" maxlength="120" placeholder="যেমন: বানর ও কুমির — বাংলা অ্যানিমেশন">
+    <label for="kTitleEn">শিরোনাম (ইংরেজি) <small>— না থাকলে খালি</small></label>
+    <input type="text" id="kTitleEn" maxlength="120">
+    <label for="kDescBn">বিবরণ (বাংলায়) <small>— অন্তত ৪০ অক্ষর</small></label>
+    <textarea id="kDescBn" maxlength="600" placeholder="গল্পটি কী নিয়ে, কারা দেখতে পারবে, কোথা থেকে পাওয়া গেল…"></textarea>
+
+    <h2 style="margin-top:22px">লিংক</h2>
+    <p class="sub">যেটি প্রযোজ্য সেটি দিন — অন্তত একটি। ইউটিউব হলে ভিডিওর ঠিকানা বা ১১ অক্ষরের আইডি।</p>
+    <label for="kRead">পড়ার লিংক <small>— বই, কমিক, PDF</small></label>
+    <input type="text" id="kRead" maxlength="500" placeholder="https://…">
+    <label for="kWatch">দেখার লিংক <small>— ইউটিউব/স্ট্রিমিং</small></label>
+    <input type="text" id="kWatch" maxlength="500" placeholder="https://www.youtube.com/watch?v=…">
+    <label for="kEmbed">এমবেড আইডি <small>— ইউটিউব হলে ১১ অক্ষর</small></label>
+    <input type="text" id="kEmbed" maxlength="11" placeholder="যেমন: HSRv-qElIv0">
+    <label for="kPlay">অডিও/মিডিয়া ফাইল লিংক <small>— MP3 ইত্যাদি</small></label>
+    <input type="text" id="kPlay" maxlength="500" placeholder="https://…mp3">
+    <label for="kDownload">ডাউনলোড লিংক <small>— কেবল নিজের বা মুক্ত-লাইসেন্স ফাইল</small></label>
+    <input type="text" id="kDownload" maxlength="500">
+
+    <h2 style="margin-top:22px">লাইসেন্স, কৃতিত্ব ও ছবি</h2>
+    <div class="grid2">
+      <div>
+        <label for="kLicence">লাইসেন্স</label>
+        <select id="kLicence">
+          <option value="original">নিজের আঁকা / নিজের লেখা (CC BY-SA 4.0)</option>
+          <option value="CC BY-SA 4.0">CC BY-SA 4.0</option>
+          <option value="CC BY 4.0">CC BY 4.0</option>
+          <option value="CC0">CC0 / পাবলিক ডোমেইন</option>
+          <option value="licensed">কপিরাইটযুক্ত — কেবল লিংক, ফাইল নয়</option>
+        </select>
+      </div>
+      <div>
+        <label for="kCreator">তৈরি করেছেন</label>
+        <input type="text" id="kCreator" maxlength="80" placeholder="নাম বা প্রতিষ্ঠান">
+      </div>
+    </div>
+    <label for="kSourceName">উৎসের নাম</label>
+    <input type="text" id="kSourceName" maxlength="80" placeholder="যেমন: ইউটিউব — Sukhchabi">
+    <label for="kSourceUrl">উৎসের লিংক</label>
+    <input type="text" id="kSourceUrl" maxlength="500" placeholder="https://…">
+    <label style="display:flex;gap:9px;align-items:flex-start;font-weight:500">
+      <input type="checkbox" id="kAi">
+      <span>এই অডিওটি <strong>কৃত্রিম কণ্ঠে (AI)</strong> তৈরি — কার্ডে সেটি লেখা থাকবে</span>
+    </label>
+    <label for="kThumb">ছবি / পোস্টার <small>— না দিলেও চলবে; বড় ছবি ছোট করে নেওয়া হবে</small></label>
+    <input type="file" id="kThumb" accept="image/*">
+    <img class="preview" id="kPrev" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="কার্ডের ছবির প্রাকদর্শন" hidden>
+    <p class="sub" id="kInfo"></p>
+
+    <div class="row">
+      <button type="submit">কার্ড জমা দিন</button>
+      <button type="button" class="ghost" id="kClear">ফর্ম খালি করুন</button>
+    </div>
+  </form>
+
+  <div class="card" id="kout" hidden>
+    <h2>কার্ড-জমা তৈরি হয়েছে</h2>
+    <p class="sub" id="koutmsg"></p>
+    <p class="sub"><strong>পরের ধাপ:</strong> ফাইলটি মালিককে পাঠান → মালিক <code>review.html</code>-এ অনুমোদন দিলে কার্ডটি সাইটে আসবে। অনুমোদন না হলে কোথাও প্রকাশ পাবে না।</p>
+  </div>
+
+  <div class="card">
+    <h2>এই ব্রাউজারে রাখা কার্ড-জমা</h2>
+    <div id="kqueue"></div>
+    <div class="row"><button type="button" class="ghost" id="kdlall">সব কার্ড-জমা ডাউনলোড</button></div>
+  </div>
 
   <div class="card" id="out" hidden>
     <h2>জমা তৈরি হয়েছে</h2>
@@ -313,6 +426,124 @@ footer{padding:26px 20px 48px;color:#5b7a71;font-size:13px;text-align:center}
   });
 
   renderQueue();
+})();
+</script>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var KEY = 'cb-kids-queue-v1';
+  var thumb = null;
+  function slug(s) { return String(s || 'card').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'card'; }
+  function readQ() { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { return []; } }
+  function writeQ(l) { try { localStorage.setItem(KEY, JSON.stringify(l)); } catch (e) { alert('ব্রাউজারের জায়গা শেষ — পুরনো জমা ডাউনলোড করে মুছুন।'); } }
+  function dl(name, text) {
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text], { type: 'application/json;charset=utf-8' }));
+    a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+  }
+  function ytId(url) {
+    var m = String(url || '').match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([A-Za-z0-9_-]{11})/);
+    return m ? m[1] : '';
+  }
+
+  $('kThumb').addEventListener('change', function () {
+    var f = this.files && this.files[0]; thumb = null; $('kPrev').hidden = true; $('kInfo').textContent = '';
+    if (!f || !/^image\//.test(f.type)) return;
+    var img = new Image(), fr = new FileReader();
+    fr.onload = function () {
+      img.onload = function () {
+        var max = 900, sc = Math.min(1, max / Math.max(img.width, img.height));
+        var cv = document.createElement('canvas');
+        cv.width = Math.round(img.width * sc); cv.height = Math.round(img.height * sc);
+        cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+        thumb = cv.toDataURL('image/jpeg', 0.82);
+        $('kPrev').src = thumb; $('kPrev').hidden = false;
+        $('kInfo').textContent = 'ছবি: ' + f.name + ' · ' + cv.width + '×' + cv.height + ' · ' + Math.round(thumb.length / 1365) + ' কিলোবাইট';
+      };
+      img.src = fr.result;
+    };
+    fr.readAsDataURL(f);
+  });
+
+  $('kf').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var lic = $('kLicence').value;
+    var watch = $('kWatch').value.trim();
+    var embed = ($('kEmbed').value.trim() || ytId(watch));
+    if (embed && !/^[A-Za-z0-9_-]{11}$/.test(embed)) { alert('ইউটিউব এমবেড আইডি ঠিক ১১ অক্ষরের হতে হবে।'); return; }
+    var card = {
+      schema: 'charyabhumi-kids-card-v1',
+      submittedAt: new Date().toISOString(),
+      id: '',
+      type: $('kType').value,
+      lang: $('kLang').value,
+      topics: [$('kTopic').value],
+      ageBn: $('kAge').value.trim() || '৪–১০ বছর',
+      titleBn: $('kTitleBn').value.trim(),
+      titleEn: $('kTitleEn').value.trim(),
+      descBn: $('kDescBn').value.trim(),
+      readUrl: $('kRead').value.trim(),
+      watchUrl: watch || (embed ? 'https://www.youtube.com/watch?v=' + embed : ''),
+      embedId: embed || '',
+      playUrl: $('kPlay').value.trim(),
+      downloadUrl: $('kDownload').value.trim(),
+      licenceKey: lic,
+      licenceLabel: lic === 'original' ? 'মালিকের নিজের কাজ (CC BY-SA 4.0)'
+        : lic === 'licensed' ? 'কপিরাইটযুক্ত — কেবল বৈধ লিংক' : lic,
+      aiVoice: !!$('kAi').checked,
+      creatorBn: $('kCreator').value.trim() || 'অজ্ঞাত',
+      sourceName: $('kSourceName').value.trim(),
+      sourceUrl: $('kSourceUrl').value.trim(),
+      thumb: thumb || '',
+      submitter: { name: $('name').value.trim(), contact: $('contact').value.trim() }
+    };
+    if (!card.titleBn) { alert('শিরোনাম (বাংলায়) দিতে হবে।'); return; }
+    if (card.descBn.length < 40) { alert('বিবরণে অন্তত ৪০ অক্ষর লিখুন।'); return; }
+    if (!card.readUrl && !card.watchUrl && !card.playUrl && !card.downloadUrl) { alert('অন্তত একটি লিংক দিন (পড়া / দেখা / শোনা / ডাউনলোড)।'); return; }
+    if (lic === 'licensed' && card.downloadUrl) {
+      alert('কপিরাইটযুক্ত কাজের ডাউনলোড লিংক দেওয়া যাবে না — শুধু পড়া/দেখার বৈধ লিংক দিন (আইনি নিয়ম)।');
+      return;
+    }
+    if (card.aiVoice) {
+      card.creditBn = 'কৃত্রিম (AI) কণ্ঠ · ' + (card.creatorBn || '') ;
+      card.noteBn = 'কৃত্রিম কণ্ঠ (AI) — মানুষের রেকর্ডিং নয়।';
+    }
+    var name = 'কার্ড-' + slug(card.titleBn) + '-' + Date.now().toString().slice(-6) + '.json';
+    dl(name, JSON.stringify(card, null, 1));
+    var q = readQ(); q.push(card); writeQ(q); renderQ();
+    $('kout').hidden = false;
+    $('koutmsg').textContent = 'ফাইল নামানো হয়েছে: ' + name + ' — এটি মালিককে পাঠান।';
+    $('kout').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  $('kClear').addEventListener('click', function () {
+    $('kf').reset(); thumb = null; $('kPrev').hidden = true; $('kInfo').textContent = '';
+  });
+
+  function renderQ() {
+    var l = readQ(), host = $('kqueue');
+    if (!l.length) { host.innerHTML = '<p class="sub">এখনো কিছু জমা দেওয়া হয়নি।</p>'; return; }
+    host.innerHTML = l.map(function (c, i) {
+      return '<div class="q"><b>' + (c.titleBn || '(শিরোনাম নেই)') + '</b>' +
+        '<span class="sub">' + (c.type || '') + ' · ' + (c.lang || '') + ' · ' + (c.submittedAt || '').slice(0, 16).replace('T', ' ') + '</span>' +
+        '<div class="row"><button type="button" class="ghost" data-kdl="' + i + '">ডাউনলোড</button>' +
+        '<button type="button" class="ghost" data-kdel="' + i + '">মুছুন</button></div></div>';
+    }).join('');
+  }
+  $('kqueue').addEventListener('click', function (e) {
+    var d = e.target.closest('[data-kdl]'), x = e.target.closest('[data-kdel]');
+    var l = readQ();
+    if (d) { var c = l[+d.getAttribute('data-kdl')]; if (c) dl('কার্ড-' + slug(c.titleBn) + '.json', JSON.stringify(c, null, 1)); }
+    if (x) { if (!confirm('এই কার্ড-জমাটি এই ব্রাউজার থেকে মুছবেন?')) return; l.splice(+x.getAttribute('data-kdel'), 1); writeQ(l); renderQ(); }
+  });
+  $('kdlall').addEventListener('click', function () {
+    var l = readQ(); if (!l.length) { alert('তালিকা ফাঁকা।'); return; }
+    dl('কার্ড-সব-' + Date.now().toString().slice(-6) + '.json', JSON.stringify({ schema: 'charyabhumi-kids-card-batch-v1', items: l }, null, 1));
+  });
+  renderQ();
 })();
 </script>
 </body>
