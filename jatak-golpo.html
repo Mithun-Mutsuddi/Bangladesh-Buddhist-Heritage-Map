@@ -93,7 +93,7 @@
     var audio = LANGS.map(function (l) {
       var f = st.audio && st.audio[l[0]];
       return '<div class="ar"><b>' + l[1] + '</b>' + (f
-        ? '<audio controls preload="none" src="' + esc(f) + '" aria-label="' + esc(st.titleBn) + ' — ' + l[1] + '"></audio><a class="ai-tag" href="' + esc(f) + '" download>⬇ MP3</a>'
+        ? '<audio controls preload="metadata" src="' + esc(f) + '" aria-label="' + esc(st.titleBn) + ' — ' + l[1] + '"></audio><a class="ai-tag" href="' + esc(f) + '" download>⬇ MP3</a>'
         : '<span class="na">এই ভাষার অডিও এখনো তৈরি হচ্ছে</span>') + '</div>';
     }).join('');
     var dl = '<a class="solid" href="' + esc(st.art) + '" download>🖼️ ছবি (JPG)</a>' +
