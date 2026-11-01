@@ -1,0 +1,208 @@
+/* ==========================================================================
+   সহযোগী বৌদ্ধ ঐতিহাসিক সংরক্ষণাগার — partner archive section
+   historical-archive.html#partners
+   ========================================================================== */
+
+.pa-section { scroll-margin-top: 92px; }
+.pa-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+
+/* ---- নোটিশ ---- */
+.pa-notice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 11px;
+  padding: 13px 15px;
+  margin: 0 0 20px;
+  border: 1px solid var(--line, #e4dfd0);
+  border-left: 4px solid #c9a227;
+  border-radius: 12px;
+  background: #fffdf6;
+  color: #5c5648;
+  font-size: 12.5px;
+  line-height: 1.85;
+}
+.pa-notice span { font-size: 18px; line-height: 1.3; }
+.pa-notice strong { color: var(--forest, #173f38); }
+
+/* ---- সংগ্রহ-কার্ড (৪টি প্রতিষ্ঠান) ---- */
+.pa-collections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.pa-coll {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 14px 15px 13px;
+  border: 1px solid #e4dcc9;
+  border-radius: 14px;
+  background: #fffdf8;
+  color: var(--text, #24352f);
+  box-shadow: 0 6px 18px rgba(24, 53, 43, 0.04);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.pa-coll:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(24, 53, 43, 0.09); border-color: #cdbd94; }
+.pa-coll[aria-pressed="true"] { border-color: #b98a1f; box-shadow: 0 0 0 2px rgba(201, 162, 39, .22) inset, 0 10px 24px rgba(24, 53, 43, .10); background: #fffdf1; }
+.pa-coll-flag { display: flex; align-items: center; gap: 8px; }
+.pa-coll-flag i {
+  display: inline-grid; place-items: center;
+  width: 30px; height: 30px; border-radius: 9px;
+  background: #173f38; color: #f7d98a; font-size: 15px; font-style: normal;
+}
+.pa-coll-country { font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: #8a8069; }
+.pa-coll h3 { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--forest, #173f38); }
+.pa-coll p { margin: 0; font-size: 11.5px; line-height: 1.7; color: #6a6353; }
+.pa-coll-count { margin-top: auto; padding-top: 6px; font-size: 11px; font-weight: 700; color: #8f5b06; }
+.pa-coll-open { font-size: 10.5px; color: #6a6353; text-decoration: underline; text-underline-offset: 3px; width: fit-content; }
+
+/* ---- টুলবার ---- */
+.pa-toolbar {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 10px;
+  padding: 13px 14px; margin-bottom: 14px;
+  border: 1px solid #e6dfcd; border-radius: 14px; background: #fffdf8;
+}
+.pa-search { flex: 1 1 240px; display: flex; align-items: center; gap: 8px; padding: 0 11px; border: 1px solid #e1dbc9; border-radius: 10px; background: #fff; }
+.pa-search:focus-within { border-color: #b98a1f; box-shadow: 0 0 0 3px rgba(201,162,39,.14); }
+.pa-search input { width: 100%; padding: 10px 0; border: 0; background: transparent; font: inherit; font-size: 13px; color: var(--text, #24352f); }
+.pa-search input:focus { outline: 0; }
+.pa-field { display: grid; gap: 4px; font-size: 10.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #8a8069; }
+.pa-field select { padding: 9px 10px; border: 1px solid #e1dbc9; border-radius: 9px; background: #fff; color: var(--text, #24352f); font: inherit; font-size: 12.5px; font-weight: 500; text-transform: none; letter-spacing: 0; }
+.pa-toolbar-actions { display: flex; gap: 8px; margin-left: auto; }
+.pa-count { font-size: 12px; color: #6a6353; }
+.pa-count strong { color: var(--forest, #173f38); }
+
+/* ---- মিডিয়া-চিপ ---- */
+.pa-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+.pa-chip {
+  padding: 7px 12px; border: 1px solid #e2d9c3; border-radius: 999px;
+  background: #fffdf8; color: #4d5347; font: inherit; font-size: 12px; cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.pa-chip:hover { border-color: #c9b98d; }
+.pa-chip[aria-pressed="true"] { background: #173f38; border-color: #173f38; color: #fdf6e3; }
+.pa-chip b { font-weight: 700; }
+.pa-chips-region { margin-top: -9px; }
+.pa-chips-region .pa-chip { font-size: 11.5px; padding: 6px 11px; background: #f7f2e4; }
+.pa-chips-region .pa-chip[aria-pressed="true"] { background: #6b4f1d; border-color: #6b4f1d; }
+.pa-chips-label { align-self: center; font-size: 11px; letter-spacing: .04em; color: #8a8168; text-transform: uppercase; margin-right: 2px; }
+
+/* ---- গ্রিড ---- */
+.pa-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(272px, 1fr)); gap: 14px; }
+.pa-card {
+  display: flex; flex-direction: column;
+  min-width: 0; overflow: hidden;
+  border: 1px solid #e6dfcd; border-radius: 15px; background: #fffdf8;
+  box-shadow: 0 8px 22px rgba(24, 53, 43, 0.05);
+  animation: pa-fade .35s ease both;
+}
+@keyframes pa-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .pa-card { animation: none; } }
+
+.pa-thumb { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: linear-gradient(135deg, #1b3f37, #2a5a4c); }
+.pa-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; background: #0f2a24; }
+/* অতি-সরু পাণ্ডুলিপি-পাতা (আনুপাতিক ৫:১-এর বেশি): কালো-সবুজের বদলে কাগজের ম্যাট রঙ,
+   যাতে সরু লম্বা পাতা ফাঁকা বাক্স মনে না হয় */
+.pa-thumb.pa-strip { background: #f4ecd8; }
+.pa-thumb.pa-strip img { background: #f4ecd8; padding: 6px 2px; box-sizing: border-box; }
+.pa-thumb-ph { width: 100%; height: 100%; display: grid; place-items: center; gap: 4px; color: #f2e2b6; text-align: center; padding: 10px; }
+.pa-thumb-ph span { font-size: 30px; line-height: 1; }
+.pa-thumb-ph small { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: #d9c794; }
+.pa-thumb-link { position: absolute; inset: auto 8px 8px auto; padding: 4px 9px; border-radius: 999px; background: rgba(9, 26, 22, .78); color: #ffe9ae; font-size: 10.5px; text-decoration: none; }
+.pa-thumb-link:hover { background: rgba(9, 26, 22, .95); }
+
+.pa-body { display: flex; flex-direction: column; gap: 7px; padding: 12px 13px 13px; min-width: 0; flex: 1; }
+.pa-topline { display: flex; align-items: center; gap: 7px; font-size: 10.5px; color: #7d7460; }
+.pa-type { display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 999px; background: #f3eddb; color: #7a5210; font-weight: 700; }
+.pa-src { margin-left: auto; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: 9.5px; }
+.pa-card h3 { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--forest, #173f38); overflow-wrap: anywhere; }
+.pa-orig { margin: 0; font-size: 11px; line-height: 1.6; color: #8b8271; overflow-wrap: anywhere; }
+.pa-desc { margin: 0; font-size: 12.3px; line-height: 1.85; color: #4f4a3d; }
+.pa-meta { display: flex; flex-wrap: wrap; gap: 5px 10px; margin: 0; font-size: 11px; color: #6d6553; }
+.pa-meta span { display: inline-flex; align-items: center; gap: 4px; }
+.pa-rights { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border-radius: 7px; background: #f6f1e2; color: #6b5731; font-size: 10.5px; width: fit-content; }
+.pa-rights.strict { background: #fbeae4; color: #97341b; }
+.pa-details { border-top: 1px dashed #e4dcc6; padding-top: 7px; margin-top: 2px; }
+.pa-details summary { cursor: pointer; font-size: 11.5px; font-weight: 700; color: #8a5f11; }
+.pa-details summary::-webkit-details-marker { color: #b98a1f; }
+.pa-details dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 10px; margin: 9px 0 0; font-size: 11.5px; }
+.pa-details dt { color: #8a8069; font-weight: 700; }
+.pa-details dd { margin: 0; color: #4f4a3d; overflow-wrap: anywhere; }
+.pa-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; padding-top: 10px; }
+.pa-actions a {
+  padding: 7px 12px; border-radius: 9px; border: 1px solid #d9cfb4;
+  background: #fffaf0; color: #7a4d07; font-size: 11.5px; font-weight: 700;
+  text-decoration: none;
+}
+.pa-actions a:hover { background: #173f38; border-color: #173f38; color: #fdf6e3; }
+.pa-actions a.primary { background: #173f38; border-color: #173f38; color: #fdf6e3; }
+.pa-actions a.primary:hover { background: #0f2c27; }
+
+/* ---- ভিডিও কার্ড ---- */
+.pa-video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #10231f; }
+.pa-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* ---- খালি অবস্থা / আরও ---- */
+.pa-empty { padding: 26px 18px; border: 1px dashed #ddd0b6; border-radius: 14px; text-align: center; color: #6a6353; font-size: 13px; line-height: 1.9; background: #fffdf6; }
+.pa-empty strong { color: var(--forest, #173f38); }
+.pa-empty a { color: #8a5f11; }
+.pa-more { display: flex; justify-content: center; margin-top: 16px; }
+.pa-status { margin: 12px 0 0; font-size: 11px; color: #8a8069; }
+
+/* ---- অডিও-নোট ---- */
+.pa-audio-note {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px;
+  margin-top: 22px; padding: 15px 16px;
+  border: 1px solid #e4dcc9; border-left: 4px solid #6f8f84;
+  border-radius: 12px; background: #fbfaf4;
+}
+.pa-audio-note > span { font-size: 22px; }
+.pa-audio-note h3 { margin: 0 0 5px; font-size: 14px; color: var(--forest, #173f38); }
+.pa-audio-note p { margin: 0 0 9px; font-size: 12.3px; line-height: 1.85; color: #55503f; }
+.pa-audio-note a { display: inline-block; margin-right: 10px; font-size: 12px; color: #8a5f11; text-underline-offset: 3px; }
+
+@media (max-width: 720px) {
+  .pa-grid { grid-template-columns: 1fr; }
+  .pa-toolbar { display: grid; grid-template-columns: 1fr 1fr; }
+  .pa-search { grid-column: 1 / -1; }
+  .pa-toolbar-actions { grid-column: 1 / -1; margin-left: 0; }
+  .pa-toolbar-actions .cb-mini-btn { flex: 1; }
+  .pa-details dl { grid-template-columns: 1fr; }
+  .pa-details dt { margin-top: 4px; }
+}
+
+/* ছবি-লোড রিপোর্ট — ব্যবহারকারী যেন বুঝতে পারেন ছবি কেন দেখা যাচ্ছে না */
+.pa-imgreport{margin:0 0 14px;padding:11px 15px;border-radius:12px;font-size:13.6px;line-height:1.6;border:1px solid #cfe0d9;background:#eef7f3;color:#12463a}
+.pa-imgreport.ok{background:#edf8ee;border-color:#bfe3c6;color:#1c5c2b}
+.pa-imgreport.warn{background:#fff6e3;border-color:#f0d9a0;color:#6b4d12}
+.pa-imgreport.bad{background:#fdeceb;border-color:#f3c3bf;color:#7a231c}
+.pa-imgreport code{background:rgba(0,0,0,.06);padding:1px 5px;border-radius:5px;font-size:12.6px}
+
+/* উন্মুক্ত-লাইসেন্সের ছবিতে আলাদা লাইসেন্স-চিপ */
+.pa-lic{display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:3px 9px;border-radius:999px;background:#f3f0e3;border:1px solid #e2d9bd;color:#6b5312;font-size:12px;font-weight:600;text-decoration:none}
+.pa-lic:hover{background:#ece5cf;border-color:#d6c69c}
+
+/* বাদ পড়া রেকর্ডের তালিকা — স্বচ্ছতার জন্য, সরানো হয়নি */
+.pa-removed-wrap{margin:26px 0 0}
+.pa-removed{border:1px solid #e2ded2;border-radius:14px;background:#fbfaf6;padding:0 16px}
+.pa-removed>summary{cursor:pointer;padding:14px 0;font-weight:600;color:#5b4a20;font-size:14.5px}
+.pa-removed p{margin:0 0 10px;font-size:13.6px;color:#5f5641;line-height:1.65}
+.pa-removed ul{margin:0 0 14px;padding-left:20px;font-size:13.2px;color:#4a4436}
+.pa-removed li{margin:4px 0}
+.pa-removed li span{color:#7c7361}
+
+/* নিজের সার্ভারে থাকা অডিও ও ভিডিও — কার্ডের ভেতরেই প্লেয়ার */
+.pa-media{position:relative;background:#0b2320;display:block;padding:0;overflow:hidden}
+.pa-media video{width:100%;height:auto;display:block;background:#000;aspect-ratio:16/9;object-fit:cover}
+.pa-media.pa-audio{display:flex;flex-direction:column;gap:0;background:#0f2a24}
+.pa-media.pa-audio img{width:100%;height:auto;display:block;object-fit:contain;max-height:250px}
+.pa-media.pa-audio audio{width:100%;display:block;padding:6px 8px;background:#0b2320}
+.pa-media-tag{position:absolute;left:8px;top:8px;background:rgba(10,25,22,.82);color:#eaf5f0;
+  font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:999px;letter-spacing:.01em}
+.pa-media.pa-audio .pa-media-tag{top:auto;bottom:auto;position:static;background:#0b2320;color:#9fd9c6;
+  padding:5px 9px;font-weight:600}
