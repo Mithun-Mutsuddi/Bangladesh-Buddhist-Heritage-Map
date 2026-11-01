@@ -130,7 +130,8 @@
       var t = window.__stories.find(function (s) { return s.slug === art.id; });
       if (t) {
         art.querySelector('[data-text]').textContent = t['text' + key] || t.textBn;
-        art.querySelector('[data-moral]').innerHTML = '<b>নীতিকথা:</b> ' + esc(t['moral' + key] || t.moralBn);
+        var lbl = { bn: 'নীতিকথা', en: 'Moral', hi: 'सीख' }[on] || 'নীতিকথা';
+        art.querySelector('[data-moral]').innerHTML = '<b>' + lbl + ':</b> ' + esc(t['moral' + key] || t.moralBn);
       }
       return;
     }
