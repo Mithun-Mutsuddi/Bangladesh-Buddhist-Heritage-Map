@@ -3,7 +3,7 @@
 (function () {
   'use strict';
   var INFO = 'data/site-info.json?v=20261024g';
-  var STRUCTURE = 'data/site-structure.json?v=20261114a';
+  var STRUCTURE = 'data/site-structure.json?v=20261101a';
   var RESOURCES = 'data/resource-guides.json?v=20261024g';
   /* সংখ্যা সবসময় বাংলা অঙ্কে, সহস্র-বিচ্ছেদসহ (৩,২১৮) — সাইটের বাকি অংশের মতো */
   function bnNum(value) {
@@ -18,7 +18,7 @@
     { id: 'travel', icon: '🧭', label: 'ভ্রমণ ও Atlas', short: 'ভ্রমণ', items: [{ title: 'Atlas', href: 'atlas.html', desc: '' }] },
     { id: 'library', icon: '📚', label: 'লাইব্রেরি ও আর্কাইভ', short: 'লাইব্রেরি', items: [{ title: 'লাইব্রেরি', href: 'library.html', desc: '' }] },
     { id: 'religion', icon: '☸️', label: 'ধর্ম ও দর্শন', short: 'ধর্ম', items: [{ title: 'দর্শন', href: 'philosophy.html', desc: '' }] },
-    { id: 'learning', icon: '🧒', label: 'শিশু ও শিক্ষা', short: 'শিশু', items: [{ title: 'শিশু বিভাগ', href: 'children.html', desc: '' }] },
+    { id: 'learning', icon: '🧒', label: 'শিশু ও শিক্ষা', short: 'শিশু', items: [{ title: 'শিশু বিভাগ', href: 'children.html', desc: '' }, { title: 'শিশু ও শিক্ষা — জাতক মিডিয়া', href: 'sishu-shikkha.html', desc: '' }] },
     { id: 'connect', icon: '🤝', label: 'অংশগ্রহণ ও যোগাযোগ', short: 'যোগাযোগ', items: [{ title: 'আমাদের কথা', href: 'about.html', desc: '' }] }
   ] };
 
@@ -318,7 +318,7 @@
       '<p>' + esc(b.tagline || '') + '</p>' + (b.slogan ? '<p style="color:#e6d3ab">' + esc(b.slogan) + '</p>' : '') +
       '<p><b>' + esc(fo.role || '') + ':</b> ' + esc(fo.bn_name || fo.name || '') + '<br>' + esc(fo.since || '') + '</p></div>' +
       '<div><h4>ইতিহাস ও ভ্রমণ</h4><a href="history.html">ইতিহাস ও ঐতিহ্য</a><a href="atlas.html">Research & Travel Atlas</a><a href="index.html#explore">স্থান খুঁজুন ও ম্যাপ</a><a href="tracker.html">আমার ট্রাভেল ট্র্যাকার</a><a href="maps.html">ঐতিহাসিক মানচিত্র</a></div>' +
-      '<div><h4>পড়া ও শেখা</h4><a href="library.html">লাইব্রেরি ও আর্কাইভ</a><a href="historical-archive.html">ঐতিহাসিক সংরক্ষণাগার</a><a href="philosophy.html">ধর্ম ও দর্শন</a><a href="children.html">শিশু ও শিক্ষা</a><a href="quiz.html">কুইজ</a></div>' +
+      '<div><h4>পড়া ও শেখা</h4><a href="library.html">লাইব্রেরি ও আর্কাইভ</a><a href="historical-archive.html">ঐতিহাসিক সংরক্ষণাগার</a><a href="philosophy.html">ধর্ম ও দর্শন</a><a href="children.html">শিশু ও শিক্ষা</a><a href="sishu-shikkha.html">জাতক মিডিয়া তালিকা</a><a href="quiz.html">কুইজ</a></div>' +
       '<div><h4>অংশগ্রহণ</h4><a href="index.html?assistant=1">☸ SanghaMitra</a><a href="atlas.html#field-desk">Field update</a><a href="about.html#contact">ভুল সংশোধন ও যোগাযোগ</a><a href="about.html">আমাদের কথা</a>' +
       (c.channels && c.channels[0] ? '<a href="' + esc(c.channels[0].url) + '">✉️ ' + esc(fo.email || '') + '</a>' : '') + '</div></div>' +
       '<div class="bottom"><span>© ' + new Date().getFullYear() + ' ' + esc(b.name_bn || '') + ' — সব তথ্য সূত্রসহ; ভুল পেলে জানান।</span><span>ফ্রি · সাইন-আপ নেই · বিজ্ঞাপন নেই</span></div></div>';

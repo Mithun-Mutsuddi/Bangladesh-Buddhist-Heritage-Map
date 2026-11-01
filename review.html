@@ -60,7 +60,7 @@ footer{padding:26px 20px 46px;text-align:center;color:#5b7a71;font-size:12.8px}
     <h2>প্রবেশ</h2>
     <p class="sub">এই কনসোল স্থানীয়ভাবে চলে; পাসকোড শুধু ঘরের বাইরের কেউ যেন হাত না দেয় তার জন্য। পাসকোড <code>charyabhumi</code> (পরে বদলে নিতে পারবেন <code>review.html</code>-এর <code>PASS</code> লাইনে)।</p>
     <label for="pw">পাসকোড</label>
-    <input type="text" id="pw" placeholder="পাসকোড">
+    <input type="password" id="pw" name="cb-owner-key" placeholder="পাসকোড" autocomplete="new-password" autocapitalize="none" autocorrect="off" spellcheck="false" data-lpignore="true">
     <div class="row"><button type="button" id="unlock">খুলুন</button></div>
   </div>
 
@@ -69,6 +69,7 @@ footer{padding:26px 20px 46px;text-align:center;color:#5b7a71;font-size:12.8px}
       <button role="tab" aria-selected="true" data-tab="pending">১ · নতুন জমা (অনুমোদন)</button>
       <button role="tab" aria-selected="false" data-tab="edit">২ · আমার দেওয়া রেকর্ড সম্পাদনা (৩১৫)</button>
       <button role="tab" aria-selected="false" data-tab="export">৩ · প্রকাশ (ফাইল রপ্তানি)</button>
+      <button role="tab" aria-selected="false" data-tab="kids">৪ · শিশু ও শিক্ষা কার্ড (১১১)</button>
     </div>
 
     <section class="card" id="tab-pending">
@@ -85,7 +86,7 @@ footer{padding:26px 20px 46px;text-align:center;color:#5b7a71;font-size:12.8px}
       <h2>বিদ্যমান রেকর্ড সম্পাদনা</h2>
       <p class="sub">৩১৫টি রেকর্ডের যেকোনোটি খুঁজে শিরোনাম, বিবরণ, স্থান, তারিখ, আলোকচিত্রী, লাইসেন্স — এমনকি <strong>ছবিও</strong> বদলাতে পারবেন। বদল এখানে সংরক্ষিত থাকে; ‘রপ্তানি’ থেকে <code>edits.json</code> নামিয়ে আপলোড করলেই সাইটে দেখা যাবে।</p>
       <label for="search">খুঁজুন — শিরোনাম, স্থান বা আইডি</label>
-      <input type="text" id="search" placeholder="যেমন: লুম্বিনি / open-211 / ভিক্ষুণী">
+      <input type="text" id="search" name="cb-find-record" placeholder="যেমন: লুম্বিনি / open-211 / ভিক্ষুণী" autocomplete="off" autocorrect="off" spellcheck="false">
       <div class="list" id="results"></div>
       <div id="editor"></div>
     </section>
@@ -97,9 +98,26 @@ footer{padding:26px 20px 46px;text-align:center;color:#5b7a71;font-size:12.8px}
         <button type="button" id="expContrib">contributions.json নামান</button>
         <button type="button" id="expEdits">edits.json নামান</button>
         <button type="button" class="ghost" id="expBackup">ব্যাকআপ (দুই ফাইল একসঙ্গে)</button>
+        <button type="button" id="expKids">kids-overlay.json নামান</button>
         <button type="button" class="danger" id="wipe">সব স্থানীয় খসড়া মুছুন</button>
       </div>
       <div class="note" id="summary"></div>
+      <div class="note" id="kSummary"></div>
+    </section>
+    <section class="card" id="tab-kids" hidden>
+      <h2>শিশু ও শিক্ষা বিভাগের কার্ড (অনুমোদন + সম্পাদনা)</h2>
+      <p class="sub">নতুন কার্ড-জমা (<code>কার্ড-….json</code>) এখানে খুলে অনুমোদন দিন, আর ১১১টি কার্ডের <strong>লেখা ও ছবি</strong> দুটোই বদলাতে পারবেন। সব বদল জমা হয় <code>kids-overlay.json</code>-এ — ওই এক ফাইল সার্ভারের <code>data/</code> ফোল্ডারে দিলেই সাইটে দেখা যাবে, নতুন করে বানাতে হবে না।</p>
+
+      <h3>ক · নতুন কার্ড-জমা</h3>
+      <input type="file" id="kImport" accept=".json,application/json" multiple>
+      <div class="row"><button type="button" class="ghost" id="kFromQueue">এই ব্রাউজারের কার্ড-জমা-তালিকা থেকে নিন</button></div>
+      <div id="kPending"></div>
+
+      <h3 style="margin-top:20px">খ · বিদ্যমান কার্ড সম্পাদনা</h3>
+      <label for="kSearch">খুঁজুন — শিরোনাম, ধরন বা আইডি</label>
+      <input type="text" id="kSearch" name="cb-find-kids" placeholder="যেমন: বানর ও কুমির / audio / kid-bn-audio-sujata" autocomplete="off" autocorrect="off" spellcheck="false">
+      <div class="list" id="kResults"></div>
+      <div id="kEditor"></div>
     </section>
   </div>
 
@@ -136,6 +154,10 @@ footer{padding:26px 20px 46px;text-align:center;color:#5b7a71;font-size:12.8px}
     $('gate').hidden = true; $('app').hidden = false; start();
   });
   $('pw').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('unlock').click(); });
+  /* ব্রাউজার নিজে থেকে কিছু বসিয়ে দিলে（autofill/পূর্বের লেখা）তা মুছে দেওয়া হয় */
+  var pwFresh = false;
+  $('pw').addEventListener('focus', function () { if (!pwFresh) { this.value = ''; pwFresh = true; } });
+  setTimeout(function () { if (document.activeElement !== $('pw')) $('pw').value = ''; }, 150);
 
   /* ---------- ট্যাব ---------- */
   document.querySelector('.tabs').addEventListener('click', function (e) {
@@ -143,10 +165,11 @@ footer{padding:26px 20px 46px;text-align:center;color:#5b7a71;font-size:12.8px}
     Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (x) {
       x.setAttribute('aria-selected', x === b ? 'true' : 'false');
     });
-    ['pending', 'edit', 'export'].forEach(function (t) {
+    ['pending', 'edit', 'export', 'kids'].forEach(function (t) {
       $('tab-' + t).hidden = t !== b.getAttribute('data-tab');
     });
     if (b.getAttribute('data-tab') === 'export') summary();
+    if (b.getAttribute('data-tab') === 'kids' && window.__kidsInit) window.__kidsInit();
   });
 
   function start() {
@@ -174,14 +197,14 @@ footer{padding:26px 20px 46px;text-align:center;color:#5b7a71;font-size:12.8px}
         (p.submitter && p.submitter.contact ? ' (' + esc(p.submitter.contact) + ')' : '') + '</p>' +
         '<p class="sub">' + esc((p.descBn || '').slice(0, 320)) + '</p>' +
         '<div class="grid2">' +
-        '<div><label>শিরোনাম (বাংলা)</label><input type="text" data-f="titleBn" value="' + esc(p.titleBn) + '"></div>' +
-        '<div><label>শিরোনাম (ইংরেজি)</label><input type="text" data-f="titleEn" value="' + esc(p.titleEn) + '"></div>' +
-        '<div><label>স্থান</label><input type="text" data-f="placeBn" value="' + esc(p.placeBn) + '"></div>' +
-        '<div><label>সময়কাল</label><input type="text" data-f="dateBn" value="' + esc(p.dateBn) + '"></div>' +
-        '<div><label>আলোকচিত্রী</label><input type="text" data-f="creatorBn" value="' + esc(p.creatorBn) + '"></div>' +
-        '<div><label>কীওয়ার্ড (কমা)</label><input type="text" data-f="keywordsText" value="' + esc((p.keywords || []).join(', ')) + '"></div>' +
+        '<div><label>শিরোনাম (বাংলা)</label><input type="text" autocomplete="off" data-f="titleBn" value="' + esc(p.titleBn) + '"></div>' +
+        '<div><label>শিরোনাম (ইংরেজি)</label><input type="text" autocomplete="off" data-f="titleEn" value="' + esc(p.titleEn) + '"></div>' +
+        '<div><label>স্থান</label><input type="text" autocomplete="off" data-f="placeBn" value="' + esc(p.placeBn) + '"></div>' +
+        '<div><label>সময়কাল</label><input type="text" autocomplete="off" data-f="dateBn" value="' + esc(p.dateBn) + '"></div>' +
+        '<div><label>আলোকচিত্রী</label><input type="text" autocomplete="off" data-f="creatorBn" value="' + esc(p.creatorBn) + '"></div>' +
+        '<div><label>কীওয়ার্ড (কমা)</label><input type="text" autocomplete="off" data-f="keywordsText" value="' + esc((p.keywords || []).join(', ')) + '"></div>' +
         '</div>' +
-        '<label>বিবরণ (সম্পাদনা করতে পারেন)</label><textarea data-f="descBn">' + esc(p.descBn) + '</textarea>' +
+        '<label>বিবরণ (সম্পাদনা করতে পারেন)</label><textarea autocomplete="off" data-f="descBn">' + esc(p.descBn) + '</textarea>' +
         '<div class="row">' +
         '<button type="button" data-act="approve">অনুমোদন দিন ও প্রকাশে রাখুন</button>' +
         '<button type="button" class="danger" data-act="reject">বাতিল করুন</button>' +
@@ -310,12 +333,12 @@ footer{padding:26px 20px 46px;text-align:center;color:#5b7a71;font-size:12.8px}
       (cur && Object.keys(cur).length ? '<span class="pill warn">অপ্রকাশিত বদল আছে</span>' : '') + '</h3>' +
       (val('imageUrl') ? '<img src="' + esc(val('imageUrl')) + '" alt="বর্তমান ছবি">' : '<p class="sub">ছবি নেই</p>') +
       '<div class="grid2">' + FIELDS.map(function (f) {
-        return '<div><label>' + f[1] + '</label><input type="text" data-k="' + f[0] + '" value="' + esc(val(f[0])) + '"></div>';
+        return '<div><label>' + f[1] + '</label><input type="text" autocomplete="off" data-k="' + f[0] + '" value="' + esc(val(f[0])) + '"></div>';
       }).join('') +
-      '<div><label>লাইসেন্স (যেমন CC BY-SA 4.0)</label><input type="text" data-k="licenceLabel" value="' + esc(val('licenceLabel')) + '"></div>' +
-      '<div><label>কীওয়ার্ড (কমা দিয়ে)</label><input type="text" data-k="keywordsText" value="' + esc((val('keywords') || []).join(', ')) + '"></div>' +
+      '<div><label>লাইসেন্স (যেমন CC BY-SA 4.0)</label><input type="text" autocomplete="off" data-k="licenceLabel" value="' + esc(val('licenceLabel')) + '"></div>' +
+      '<div><label>কীওয়ার্ড (কমা দিয়ে)</label><input type="text" autocomplete="off" data-k="keywordsText" value="' + esc((val('keywords') || []).join(', ')) + '"></div>' +
       '</div>' +
-      '<label>বিবরণ</label><textarea data-k="descBn">' + esc(val('descBn')) + '</textarea>' +
+      '<label>বিবরণ</label><textarea autocomplete="off" data-k="descBn">' + esc(val('descBn')) + '</textarea>' +
       '<label>ছবি বদলাতে চাইলে নতুন ছবি বেছে নিন <small>— ১০০০ পিক্সেলে ছোট করে নেওয়া হবে</small></label>' +
       '<input type="file" id="newimg" accept="image/*">' +
       '<div class="row"><button type="button" id="saveEd">সংরক্ষণ করুন</button>' +
@@ -398,6 +421,237 @@ footer{padding:26px 20px 46px;text-align:center;color:#5b7a71;font-size:12.8px}
     [K_PENDING, K_APPROVED, K_REJECTED, K_EDITS].forEach(function (k) { localStorage.removeItem(k); });
     $('pending').innerHTML = ''; $('editor').innerHTML = ''; summary(0, 0, 0);
   });
+})();
+</script>
+
+<script>
+/* ---------- ৪ · শিশু ও শিক্ষা কার্ড: অনুমোদন, সম্পাদনা, রপ্তানি ---------- */
+(function () {
+  'use strict';
+  var K_OV = 'cb-kids-overlay-draft-v1';
+  var K_PEND = 'cb-kids-pending-v1';
+  var $ = function (id) { return document.getElementById(id); };
+  var items = [], current = null, ready = false;
+
+  function rd(k, d) { try { var v = JSON.parse(localStorage.getItem(k)); return v == null ? d : v; } catch (e) { return d; } }
+  function wr(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { alert('ব্রাউজারের জায়গা শেষ — রপ্তানি করে খালি করুন।'); } }
+  function esc(v) { return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function overlay() {
+    var o = rd(K_OV, null);
+    if (!o || o.schema !== 'charyabhumi-kids-overlay-v1') {
+      o = { schema: 'charyabhumi-kids-overlay-v1', updated_at: null, cards: [], edits: [], rejections: [] };
+    }
+    return o;
+  }
+  function save(o) { o.updated_at = new Date().toISOString(); wr(K_OV, o); }
+  function dl(name, text) {
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text], { type: 'application/json;charset=utf-8' }));
+    a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+  }
+  function slug(s) { return String(s || 'card').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'card'; }
+
+  window.__kidsInit = function () {
+    if (ready) { renderPending(); summary(); return; }
+    ready = true;
+    fetch('data/kids-media.json?v=kids-console').then(function (r) { return r.json(); }).then(function (d) {
+      items = d.items || [];
+      $('kSearch').placeholder = 'খুঁজুন — ' + items.length + 'টি কার্ড';
+      renderResults('');
+    }).catch(function () { $('kResults').innerHTML = '<div>তালিকা পাওয়া গেল না — সার্ভার থেকে খুলুন (file:// নয়)।</div>'; });
+    renderPending(); summary();
+  };
+
+  /* ---------- ক: নতুন জমা ---------- */
+  function renderPending() {
+    var list = rd(K_PEND, []), host = $('kPending');
+    if (!list.length) { host.innerHTML = '<p class="sub">অনুমোদনের অপেক্ষায় কোনো কার্ড নেই।</p>'; return; }
+    host.innerHTML = list.map(function (c, i) {
+      return '<div class="item" data-ki="' + i + '">' +
+        (c.thumb ? '<img src="' + esc(c.thumb) + '" alt="কার্ডের ছবি">' : '<p class="sub">ছবি নেই</p>') +
+        '<h3>' + esc(c.titleBn || '(শিরোনাম নেই)') + '<span class="pill warn">অনুমোদনের অপেক্ষায়</span></h3>' +
+        '<p class="sub">' + esc(c.type) + ' · ' + esc(c.lang) + ' · ' + esc((c.topics || []).join(',')) + ' · লাইসেন্স: ' + esc(c.licenceLabel || c.licenceKey) +
+        ' · জমা: ' + esc(c.submitter ? c.submitter.name : '') + (c.aiVoice ? ' · কৃত্রিম কণ্ঠ' : '') + '</p>' +
+        '<p class="sub">' + esc((c.descBn || '').slice(0, 300)) + '</p>' +
+        '<p class="sub">পড়া: ' + esc(c.readUrl || '—') + ' · দেখা: ' + esc(c.watchUrl || '—') + ' · শোনা: ' + esc(c.playUrl || '—') + '</p>' +
+        '<div class="grid2">' +
+        '<div><label>শিরোনাম (বাংলা)</label><input type="text" data-kf="titleBn" value="' + esc(c.titleBn) + '"></div>' +
+        '<div><label>শিরোনাম (ইংরেজি)</label><input type="text" data-kf="titleEn" value="' + esc(c.titleEn) + '"></div>' +
+        '<div><label>আইডি (খালি রাখলে স্বয়ংক্রিয়)</label><input type="text" data-kf="id" value="' + esc(c.id) + '" placeholder="kid-…"></div>' +
+        '<div><label>লাইসেন্স</label><input type="text" data-kf="licenceLabel" value="' + esc(c.licenceLabel) + '"></div>' +
+        '</div>' +
+        '<label>বিবরণ</label><textarea data-kf="descBn">' + esc(c.descBn) + '</textarea>' +
+        '<div class="row">' +
+        '<button type="button" data-kact="approve">অনুমোদন দিন</button>' +
+        '<button type="button" class="danger" data-kact="reject">বাতিল করুন</button>' +
+        '</div></div>';
+    }).join('');
+  }
+
+  $('kPending').addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-kact]'); if (!btn) return;
+    var box = btn.closest('.item'), i = +box.getAttribute('data-ki');
+    var list = rd(K_PEND, []), c = list[i]; if (!c) return;
+    box.querySelectorAll('[data-kf]').forEach(function (inp) { c[inp.getAttribute('data-kf')] = inp.value; });
+    var o = overlay();
+    if (btn.getAttribute('data-kact') === 'approve') {
+      if (!c.id) c.id = 'kid-ov-' + slug(c.titleBn).slice(0, 24);
+      if (items.some(function (x) { return x.id === c.id; })) { alert('এই আইডি আগেই আছে — অন্য আইডি দিন।'); return; }
+      c.approvedAt = new Date().toISOString();
+      c.licenceUrl = c.licenceUrl || 'https://creativecommons.org/licenses/by-sa/4.0/';
+      c.sourceUrl = c.sourceUrl || c.watchUrl || c.readUrl || 'https://charyabhumi.org/';
+      o.cards.push(c);
+      o.rejections = o.rejections.filter(function (r) { return r.id !== c.id; });
+    } else {
+      var why = prompt('বাতিলের কারণ (লিখে রাখা হবে):', '');
+      if (why == null) return;
+      o.rejections.push({ id: c.id || '(নতুন)', titleBn: c.titleBn || '', reasonBn: why, at: new Date().toISOString() });
+    }
+    save(o);
+    list.splice(i, 1); wr(K_PEND, list);
+    renderPending(); summary();
+  });
+
+  function importFiles(files) {
+    var done = 0;
+    Array.prototype.forEach.call(files, function (f) {
+      var fr = new FileReader();
+      fr.onload = function () {
+        try {
+          var d = JSON.parse(fr.result);
+          var list = rd(K_PEND, []);
+          if (d && d.schema === 'charyabhumi-kids-card-batch-v1' && Array.isArray(d.items)) list = list.concat(d.items);
+          else if (d && d.schema === 'charyabhumi-kids-card-v1') list.push(d);
+          else { alert('এই ফাইলটি কার্ড-জমা নয়: ' + f.name); return; }
+          wr(K_PEND, list); renderPending(); summary();
+        } catch (err) { alert('ফাইল পড়া গেল না: ' + f.name); }
+      };
+      fr.readAsText(f);
+      done++;
+    });
+  }
+  $('kImport').addEventListener('change', function () { importFiles(this.files); this.value = ''; });
+  $('kFromQueue').addEventListener('click', function () {
+    var q = rd('cb-kids-queue-v1', []);
+    if (!q.length) { alert('এই ব্রাউজারে কার্ড-জমা নেই।'); return; }
+    var list = rd(K_PEND, []); wr(K_PEND, list.concat(q)); renderPending(); summary();
+  });
+
+  /* ---------- খ: বিদ্যমান কার্ড সম্পাদনা ---------- */
+  function renderResults(q) {
+    var host = $('kResults'); if (!host) return;
+    q = String(q || '').toLowerCase().trim();
+    var hit = items.filter(function (it) {
+      return !q || (it.titleBn + ' ' + (it.titleEn || '') + ' ' + it.id + ' ' + it.type).toLowerCase().indexOf(q) >= 0;
+    }).slice(0, 80);
+    host.innerHTML = hit.length ? hit.map(function (it, n) {
+      return '<div data-kid="' + esc(it.id) + '">' + esc(it.titleBn) + ' <span class="pill">' + esc(it.type) + '</span></div>';
+    }).join('') : '<div>কিছু পাওয়া যায়নি।</div>';
+  }
+  $('kSearch').addEventListener('input', function () { renderResults(this.value); });
+  $('kResults').addEventListener('click', function (e) {
+    var d = e.target.closest('[data-kid]'); if (!d) return;
+    var it = items.find(function (x) { return x.id === d.getAttribute('data-kid'); });
+    if (it) openEditor(it);
+  });
+
+  function openEditor(it) {
+    current = it;
+    var o = overlay();
+    var saved = (o.edits.find(function (e) { return e.id === it.id; }) || {}).patch || {};
+    var v = function (k) { return saved[k] != null ? saved[k] : (it[k] == null ? '' : it[k]); };
+    $('kEditor').innerHTML = '<div class="item">' +
+      '<h3>সম্পাদনা: ' + esc(it.titleBn) + '<span class="pill">' + esc(it.id) + '</span></h3>' +
+      (v('thumb') ? '<img src="' + esc(v('thumb')) + '" alt="বর্তমান ছবি">' : '<p class="sub">এই কার্ডে ছবি নেই</p>') +
+      '<label>ছবি বদলান (জেপিজি/পিএনজি)</label><input type="file" id="kThumbNew" accept="image/*">' +
+      '<div class="grid2">' +
+      '<div><label>শিরোনাম (বাংলা)</label><input type="text" data-ke="titleBn" value="' + esc(v('titleBn')) + '"></div>' +
+      '<div><label>শিরোনাম (ইংরেজি)</label><input type="text" data-ke="titleEn" value="' + esc(v('titleEn')) + '"></div>' +
+      '<div><label>বয়স</label><input type="text" data-ke="ageBn" value="' + esc(v('ageBn')) + '"></div>' +
+      '<div><label>সময়/দৈর্ঘ্য</label><input type="text" data-ke="durationBn" value="' + esc(v('durationBn')) + '"></div>' +
+      '<div><label>পড়ার লিংক</label><input type="text" data-ke="readUrl" value="' + esc(v('readUrl')) + '"></div>' +
+      '<div><label>দেখার লিংক</label><input type="text" data-ke="watchUrl" value="' + esc(v('watchUrl')) + '"></div>' +
+      '<div><label>ডাউনলোড লিংক</label><input type="text" data-ke="downloadUrl" value="' + esc(v('downloadUrl')) + '"></div>' +
+      '<div><label>অডিও লিংক</label><input type="text" data-ke="playUrl" value="' + esc(v('playUrl')) + '"></div>' +
+      '<div><label>লাইসেন্স</label><input type="text" data-ke="licenceLabel" value="' + esc(v('licenceLabel')) + '"></div>' +
+      '<div><label>তৈরি করেছেন</label><input type="text" data-ke="creatorBn" value="' + esc(v('creatorBn')) + '"></div>' +
+      '</div>' +
+      '<label>বিবরণ</label><textarea data-ke="descBn">' + esc(v('descBn')) + '</textarea>' +
+      '<label>কৃতিত্ব / সূত্র</label><textarea data-ke="creditBn">' + esc(v('creditBn')) + '</textarea>' +
+      '<div class="row"><button type="button" id="kSave">সম্পাদনা সংরক্ষণ করুন</button>' +
+      '<button type="button" class="ghost" id="kHide">এই কার্ড লুকান (বাতিল)</button>' +
+      '<button type="button" class="ghost" id="kReset">সম্পাদনা মুছুন</button></div>' +
+      '</div>';
+
+    var newThumb = null;
+    $('kThumbNew').addEventListener('change', function () {
+      var f = this.files && this.files[0]; if (!f) return;
+      var img = new Image(), fr = new FileReader();
+      fr.onload = function () {
+        img.onload = function () {
+          var max = 900, sc = Math.min(1, max / Math.max(img.width, img.height));
+          var cv = document.createElement('canvas');
+          cv.width = Math.round(img.width * sc); cv.height = Math.round(img.height * sc);
+          cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+          newThumb = cv.toDataURL('image/jpeg', 0.82);
+          alert('ছবি নেওয়া হয়েছে (' + cv.width + '×' + cv.height + ') — এখন “সম্পাদনা সংরক্ষণ করুন” চাপুন।');
+        };
+        img.src = fr.result;
+      };
+      fr.readAsDataURL(f);
+    });
+
+    $('kSave').addEventListener('click', function () {
+      var patch = {};
+      $('kEditor').querySelectorAll('[data-ke]').forEach(function (inp) {
+        var k = inp.getAttribute('data-ke'), val = inp.value;
+        if (String(it[k] == null ? '' : it[k]) !== val) patch[k] = val;
+      });
+      if (newThumb) patch.thumb = newThumb;
+      if (!Object.keys(patch).length) { alert('কিছু বদলানো হয়নি।'); return; }
+      var o2 = overlay();
+      var rec = o2.edits.find(function (e) { return e.id === it.id; });
+      if (rec) { Object.assign(rec.patch, patch); rec.at = new Date().toISOString(); }
+      else o2.edits.push({ id: it.id, patch: patch, at: new Date().toISOString() });
+      o2.rejections = o2.rejections.filter(function (r) { return r.id !== it.id; });
+      save(o2);
+      Object.keys(patch).forEach(function (k) { it[k] = patch[k]; });
+      alert('সংরক্ষিত — ‘প্রকাশ’ ট্যাব বা নিচের বাটন থেকে kids-overlay.json নামিয়ে সার্ভারে দিন।');
+      summary();
+      openEditor(it);
+    });
+    $('kHide').addEventListener('click', function () {
+      var why = prompt('কার্ডটি সাইট থেকে সরানোর কারণ:', '');
+      if (why == null) return;
+      var o3 = overlay();
+      o3.rejections.push({ id: it.id, titleBn: it.titleBn, reasonBn: why, at: new Date().toISOString() });
+      save(o3); summary();
+      alert('লুকানো হয়েছে — “kids-overlay.json” নামিয়ে আপলোড করলেই সাইট থেকে সরবে।');
+    });
+    $('kReset').addEventListener('click', function () {
+      var o4 = overlay();
+      o4.edits = o4.edits.filter(function (e) { return e.id !== it.id; });
+      o4.rejections = o4.rejections.filter(function (r) { return r.id !== it.id; });
+      save(o4); summary(); openEditor(it);
+    });
+  }
+
+  /* ---------- রপ্তানি ---------- */
+  function summary() {
+    var o = overlay(), host = $('kSummary');
+    if (!host) return;
+    host.innerHTML = '<strong>ওভারলে খসড়া:</strong> নতুন কার্ড ' + o.cards.length +
+      ' · সম্পাদনা ' + o.edits.length + ' · বাতিল/লুকানো ' + o.rejections.length +
+      '<br><span class="sub">ফাইল: <code>data/kids-overlay.json</code> — সার্ভারে দিলেই সাইট নিজে পড়ে নেবে।</span>';
+  }
+  window.__kidsExport = function () {
+    var o = overlay();
+    dl('kids-overlay.json', JSON.stringify(o, null, 1));
+  };
+  var expKids = document.getElementById('expKids');
+  if (expKids) expKids.addEventListener('click', function () { window.__kidsExport(); });
+  if (document.readyState !== 'loading') window.__kidsInit();
 })();
 </script>
 </body>
