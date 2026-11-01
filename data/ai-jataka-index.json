@@ -18,7 +18,10 @@
     "en": "assets/kids/audio/en/kid-en-mouse-merchant.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-mouse-merchant.mp3"
    },
-   "video": "assets/kids/video/bn/mouse-merchant.mp4"
+   "video": "assets/kids/video/bn/mouse-merchant.mp4",
+   "videoLite": "assets/kids/video/bn/lite/mouse-merchant.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-mouse-merchant.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-mouse-merchant.jpg"
   },
   {
    "slug": "giant-dwarf",
@@ -37,7 +40,10 @@
     "en": "assets/kids/audio/en/kid-en-giant-dwarf.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-giant-dwarf.mp3"
    },
-   "video": "assets/kids/video/bn/giant-dwarf.mp4"
+   "video": "assets/kids/video/bn/giant-dwarf.mp4",
+   "videoLite": "assets/kids/video/bn/lite/giant-dwarf.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-giant-dwarf.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-giant-dwarf.jpg"
   },
   {
    "slug": "magic-chant",
@@ -56,7 +62,10 @@
     "en": "assets/kids/audio/en/kid-en-magic-chant.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-magic-chant.mp3"
    },
-   "video": "assets/kids/video/bn/magic-chant.mp4"
+   "video": "assets/kids/video/bn/magic-chant.mp4",
+   "videoLite": "assets/kids/video/bn/lite/magic-chant.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-magic-chant.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-magic-chant.jpg"
   },
   {
    "slug": "hidden-treasure",
@@ -75,7 +84,10 @@
     "en": "assets/kids/audio/en/kid-en-hidden-treasure.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-hidden-treasure.mp3"
    },
-   "video": "assets/kids/video/bn/hidden-treasure.mp4"
+   "video": "assets/kids/video/bn/hidden-treasure.mp4",
+   "videoLite": "assets/kids/video/bn/lite/hidden-treasure.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-hidden-treasure.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-hidden-treasure.jpg"
   },
   {
    "slug": "celestial-necklace",
@@ -94,7 +106,10 @@
     "en": "assets/kids/audio/en/kid-en-celestial-necklace.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-celestial-necklace.mp3"
    },
-   "video": "assets/kids/video/bn/celestial-necklace.mp4"
+   "video": "assets/kids/video/bn/celestial-necklace.mp4",
+   "videoLite": "assets/kids/video/bn/lite/celestial-necklace.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-celestial-necklace.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-celestial-necklace.jpg"
   },
   {
    "slug": "kesari-flying-thief",
@@ -113,7 +128,10 @@
     "en": "assets/kids/audio/en/kid-en-kesari-flying-thief.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-kesari-flying-thief.mp3"
    },
-   "video": "assets/kids/video/bn/kesari-flying-thief.mp4"
+   "video": "assets/kids/video/bn/kesari-flying-thief.mp4",
+   "videoLite": "assets/kids/video/bn/lite/kesari-flying-thief.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-kesari-flying-thief.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-kesari-flying-thief.jpg"
   },
   {
    "slug": "shalivahana",
@@ -132,7 +150,10 @@
     "en": "assets/kids/audio/en/kid-en-shalivahana.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-shalivahana.mp3"
    },
-   "video": "assets/kids/video/bn/shalivahana.mp4"
+   "video": "assets/kids/video/bn/shalivahana.mp4",
+   "videoLite": "assets/kids/video/bn/lite/shalivahana.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-shalivahana.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-shalivahana.jpg"
   },
   {
    "slug": "stories-of-courage",
@@ -151,7 +172,10 @@
     "en": "assets/kids/audio/en/kid-en-stories-of-courage.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-stories-of-courage.mp3"
    },
-   "video": "assets/kids/video/bn/stories-of-courage.mp4"
+   "video": "assets/kids/video/bn/stories-of-courage.mp4",
+   "videoLite": "assets/kids/video/bn/lite/stories-of-courage.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-stories-of-courage.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-stories-of-courage.jpg"
   },
   {
    "slug": "acrobat",
@@ -170,7 +194,10 @@
     "en": "assets/kids/audio/en/kid-en-acrobat.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-acrobat.mp3"
    },
-   "video": "assets/kids/video/bn/acrobat.mp4"
+   "video": "assets/kids/video/bn/acrobat.mp4",
+   "videoLite": "assets/kids/video/bn/lite/acrobat.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-acrobat.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-acrobat.jpg"
   },
   {
    "slug": "cowherd-of-alawi",
@@ -189,7 +216,10 @@
     "en": "assets/kids/audio/en/kid-en-cowherd-of-alawi.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-cowherd-of-alawi.mp3"
    },
-   "video": "assets/kids/video/bn/cowherd-of-alawi.mp4"
+   "video": "assets/kids/video/bn/cowherd-of-alawi.mp4",
+   "videoLite": "assets/kids/video/bn/lite/cowherd-of-alawi.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-cowherd-of-alawi.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-cowherd-of-alawi.jpg"
   },
   {
    "slug": "prophecy",
@@ -208,7 +238,10 @@
     "en": "assets/kids/audio/en/kid-en-prophecy.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-prophecy.mp3"
    },
-   "video": "assets/kids/video/bn/prophecy.mp4"
+   "video": "assets/kids/video/bn/prophecy.mp4",
+   "videoLite": "assets/kids/video/bn/lite/prophecy.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-prophecy.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-prophecy.jpg"
   },
   {
    "slug": "kisa-gotami",
@@ -227,7 +260,10 @@
     "en": "assets/kids/audio/en/kid-en-kisa-gotami.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-kisa-gotami.mp3"
    },
-   "video": "assets/kids/video/bn/kisa-gotami.mp4"
+   "video": "assets/kids/video/bn/kisa-gotami.mp4",
+   "videoLite": "assets/kids/video/bn/lite/kisa-gotami.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-kisa-gotami.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-kisa-gotami.jpg"
   },
   {
    "slug": "anathapindika",
@@ -246,7 +282,10 @@
     "en": "assets/kids/audio/en/kid-en-anathapindika.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-anathapindika.mp3"
    },
-   "video": "assets/kids/video/bn/anathapindika.mp4"
+   "video": "assets/kids/video/bn/anathapindika.mp4",
+   "videoLite": "assets/kids/video/bn/lite/anathapindika.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-anathapindika.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-anathapindika.jpg"
   },
   {
    "slug": "rahul",
@@ -265,7 +304,10 @@
     "en": "assets/kids/audio/en/kid-en-rahul.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-rahul.mp3"
    },
-   "video": "assets/kids/video/bn/rahul.mp4"
+   "video": "assets/kids/video/bn/rahul.mp4",
+   "videoLite": "assets/kids/video/bn/lite/rahul.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-rahul.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-rahul.jpg"
   },
   {
    "slug": "first-sermon",
@@ -284,7 +326,10 @@
     "en": "assets/kids/audio/en/kid-en-first-sermon.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-first-sermon.mp3"
    },
-   "video": "assets/kids/video/bn/first-sermon.mp4"
+   "video": "assets/kids/video/bn/first-sermon.mp4",
+   "videoLite": "assets/kids/video/bn/lite/first-sermon.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-first-sermon.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-first-sermon.jpg"
   },
   {
    "slug": "mahajanaka",
@@ -303,7 +348,10 @@
     "en": "assets/kids/audio/en/kid-en-mahajanaka.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-mahajanaka.mp3"
    },
-   "video": "assets/kids/video/bn/mahajanaka.mp4"
+   "video": "assets/kids/video/bn/mahajanaka.mp4",
+   "videoLite": "assets/kids/video/bn/lite/mahajanaka.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-mahajanaka.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-mahajanaka.jpg"
   },
   {
    "slug": "shibi",
@@ -322,7 +370,10 @@
     "en": "assets/kids/audio/en/kid-en-shibi.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-shibi.mp3"
    },
-   "video": "assets/kids/video/bn/shibi.mp4"
+   "video": "assets/kids/video/bn/shibi.mp4",
+   "videoLite": "assets/kids/video/bn/lite/shibi.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-shibi.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-shibi.jpg"
   },
   {
    "slug": "nandivishala",
@@ -341,7 +392,10 @@
     "en": "assets/kids/audio/en/kid-en-nandivishala.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-nandivishala.mp3"
    },
-   "video": "assets/kids/video/bn/nandivishala.mp4"
+   "video": "assets/kids/video/bn/nandivishala.mp4",
+   "videoLite": "assets/kids/video/bn/lite/nandivishala.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-nandivishala.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-nandivishala.jpg"
   },
   {
    "slug": "doves-and-net",
@@ -360,7 +414,10 @@
     "en": "assets/kids/audio/en/kid-en-doves-and-net.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-doves-and-net.mp3"
    },
-   "video": "assets/kids/video/bn/doves-and-net.mp4"
+   "video": "assets/kids/video/bn/doves-and-net.mp4",
+   "videoLite": "assets/kids/video/bn/lite/doves-and-net.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-doves-and-net.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-doves-and-net.jpg"
   },
   {
    "slug": "jackal-boast",
@@ -379,7 +436,10 @@
     "en": "assets/kids/audio/en/kid-en-jackal-boast.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-jackal-boast.mp3"
    },
-   "video": "assets/kids/video/bn/jackal-boast.mp4"
+   "video": "assets/kids/video/bn/jackal-boast.mp4",
+   "videoLite": "assets/kids/video/bn/lite/jackal-boast.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-jackal-boast.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-jackal-boast.jpg"
   },
   {
    "slug": "ashoka",
@@ -398,7 +458,10 @@
     "en": "assets/kids/audio/en/kid-en-ashoka.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-ashoka.mp3"
    },
-   "video": "assets/kids/video/bn/ashoka.mp4"
+   "video": "assets/kids/video/bn/ashoka.mp4",
+   "videoLite": "assets/kids/video/bn/lite/ashoka.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-ashoka.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-ashoka.jpg"
   },
   {
    "slug": "ananda",
@@ -417,7 +480,10 @@
     "en": "assets/kids/audio/en/kid-en-ananda.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-ananda.mp3"
    },
-   "video": "assets/kids/video/bn/ananda.mp4"
+   "video": "assets/kids/video/bn/ananda.mp4",
+   "videoLite": "assets/kids/video/bn/lite/ananda.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-ananda.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-ananda.jpg"
   },
   {
    "slug": "sariputta-moggallana",
@@ -436,7 +502,10 @@
     "en": "assets/kids/audio/en/kid-en-sariputta-moggallana.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-sariputta-moggallana.mp3"
    },
-   "video": "assets/kids/video/bn/sariputta-moggallana.mp4"
+   "video": "assets/kids/video/bn/sariputta-moggallana.mp4",
+   "videoLite": "assets/kids/video/bn/lite/sariputta-moggallana.mp4",
+   "artDisp": "assets/kids/thumbs/disp/ai-jataka-sariputta-moggallana.jpg",
+   "artPoster": "assets/kids/thumbs/poster/ai-jataka-sariputta-moggallana.jpg"
   }
  ]
 }

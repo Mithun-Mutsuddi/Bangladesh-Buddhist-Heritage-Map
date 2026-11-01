@@ -62,7 +62,7 @@ def copy_tree() -> None:
     if fonts.exists():
         (OUT / 'assets' / 'tracker' / 'fonts').mkdir(parents=True, exist_ok=True)
         for f in sorted(fonts.iterdir())[:8]:
-            if f.suffix == '.ttf':
+            if f.suffix in ('.ttf', '.woff2'):
                 shutil.copy2(f, OUT / 'assets' / 'tracker' / 'fonts' / f.name)
     dvf = ROOT / 'assets' / 'fonts'
     if dvf.exists():

@@ -3,10 +3,10 @@
    রং: চর্যাপদের তালপাতা (তামা-সোনালি) + বাংলার বনসবুজ
    ========================================================================== */
 /* Local Bengali fonts: consistent rendering even when external font CDNs are blocked. */
-@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 400; font-display: swap; src: url('assets/tracker/fonts/font-4.ttf') format('truetype'); }
-@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 500; font-display: swap; src: url('assets/tracker/fonts/font-5.ttf') format('truetype'); }
-@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 600; font-display: swap; src: url('assets/tracker/fonts/font-6.ttf') format('truetype'); }
-@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 700; font-display: swap; src: url('assets/tracker/fonts/font-6.ttf') format('truetype'); }
+@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 400; font-display: swap; src: url('assets/tracker/fonts/font-4.woff2') format('woff2'), url('assets/tracker/fonts/font-4.ttf') format('truetype'); }
+@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 500; font-display: swap; src: url('assets/tracker/fonts/font-5.woff2') format('woff2'), url('assets/tracker/fonts/font-5.ttf') format('truetype'); }
+@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 600; font-display: swap; src: url('assets/tracker/fonts/font-6.woff2') format('woff2'), url('assets/tracker/fonts/font-6.ttf') format('truetype'); }
+@font-face { font-family: 'Noto Sans Bengali'; font-style: normal; font-weight: 700; font-display: swap; src: url('assets/tracker/fonts/font-6.woff2') format('woff2'), url('assets/tracker/fonts/font-6.ttf') format('truetype'); }
 
 :root {
   --cb-bark: #8f3d08;

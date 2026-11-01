@@ -4,7 +4,8 @@
 সূত্র: Wikimedia Commons (মুক্ত/PD), Project Gutenberg (PD), Internet Archive (CC/PD)।
 প্রতিটি রেকর্ডে থাম্বনেইল বা অডিও ফাইল আছে; লাইসেন্স-লিংক ও স্বীকৃতি বাধ্যতামূলক।
 """
-import json, os, re
+import json
+import pathlib, os, re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -794,9 +795,11 @@ if AIJ_PATH.exists():
                 id='kid-aij-video-' + slug, type='video', lang='bn', ageBn='৫–১২ বছর', topics=['jataka'],
                 titleBn=st['titleBn'] + ' — বাংলা অ্যানিমেশন (ভিডিও)',
                 titleEn=st['titleEn'] + ' — Bengali animated video',
-                descBn='ছবিতে ধীরে জুম, সঙ্গে বাংলা গল্প আর লেখায় নাম ও নীতিকথা — মোট ' +
-                       f"{max(1, round(vid.stat().st_size / 1048576))} MB, ৭২০p। ইন্টারনেট ছাড়াও চলে, নিজের ফোনে/ল্যাপটপে দেখানো যায়।",
-                thumb=art, videoUrl=f'assets/kids/video/bn/{slug}.mp4',
+                descBn='ছবিতে ধীরে জুম, সঙ্গে বাংলা গল্প আর লেখায় নাম ও নীতিকথা — ৪–৫ মিনিট। ' +
+                       'ওয়েবে হালকা সংস্করণে চলে (দ্রুত বাফার), ডাউনলোডে পূর্ণ ৭২০p ফাইল মেলে।',
+                thumb=art, videoUrl=(f'assets/kids/video/bn/lite/{slug}.mp4'
+                                     if (ROOT / f'assets/kids/video/bn/lite/{slug}.mp4').exists()
+                                     else f'assets/kids/video/bn/{slug}.mp4'),
                 downloadUrl=f'assets/kids/video/bn/{slug}.mp4',
                 durationBn=next((i['durationBn'] for i in ITEMS if i.get('id') == f'kid-aij-bn-{slug}'), ''),
                 licenceLabel=LIC['CC BY-SA 4.0'][0], licenceUrl=LIC['CC BY-SA 4.0'][1], licenceKey='original',
@@ -817,8 +820,30 @@ if AIJ_PATH.exists():
                    for l in ('bn', 'en', 'hi')},
             video=(f'assets/kids/video/bn/{slug}.mp4'
                    if (ROOT / f'assets/kids/video/bn/{slug}.mp4').exists() else None),
+            videoLite=(f'assets/kids/video/bn/lite/{slug}.mp4'
+                       if (ROOT / f'assets/kids/video/bn/lite/{slug}.mp4').exists() else None),
         ))
     print('AI জাতক (ছবি + অডিও + ভিডিও) যোগ হলো:', AIJ_N)
+    # পোস্টারে হালকা ছবি (৩৯১ KB → ~৪৯ KB): ধীর নেটে পৃষ্ঠা দ্রুত খোলে
+    _disp = ROOT / 'assets' / 'kids' / 'thumbs' / 'disp'
+    _poster = ROOT / 'assets' / 'kids' / 'thumbs' / 'poster'
+    _poster.mkdir(parents=True, exist_ok=True)
+    for _st in _idx['stories']:
+        _name = pathlib.Path(_st['art']).stem + '.jpg'
+        _d = _disp / _name
+        _st['artDisp'] = (str(_d.relative_to(ROOT)) if _d.exists() else _st['art'])
+        # ভিডিওর পোস্টার: ৩৬০px (~১৮ KB) — ২৩টি পোস্টার একসাথে ৯ MB না হয়ে ~৪০০ KB হয়
+        _pf = _poster / _name
+        try:
+            from PIL import Image as _PosterImg
+            if not (_pf.exists() and _pf.stat().st_mtime >= (ROOT / _st['art']).stat().st_mtime):
+                _im = _PosterImg.open(ROOT / _st['art']).convert('RGB')
+                if _im.width > 360:
+                    _im = _im.resize((360, round(_im.height * 360 / _im.width)), _PosterImg.LANCZOS)
+                _im.save(_pf, 'JPEG', quality=70, optimize=True, progressive=True)
+        except Exception:
+            _pf = None
+        _st['artPoster'] = (str(_pf.relative_to(ROOT)) if _pf and _pf.exists() else _st['artDisp'])
     _idx_path = ROOT / 'data' / 'ai-jataka-index.json'
     _idx_path.write_text(json.dumps(_idx, ensure_ascii=False, indent=1), encoding='utf-8')
     print('wrote data/ai-jataka-index.json', _idx_path.stat().st_size // 1024, 'KB')

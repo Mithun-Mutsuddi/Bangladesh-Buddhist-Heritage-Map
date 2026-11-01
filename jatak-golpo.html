@@ -6,13 +6,13 @@
 <title>জাতক-গল্প — ছবি, লেখা, অডিও ও অ্যানিমেশন (বাংলা / ইংরেজি / হিন্দি) · চর্যাভূমি</title>
 <meta name="description" content="তেইশটি গল্প — AI ছবি, নিজস্ব বাংলা পুনর্কথন, তিন ভাষার অডিও (কৃত্রিম কণ্ঠ) ও বাংলা অ্যানিমেশন-ভিডিও। কপিরাইট-মুক্ত, ডাউনলোডযোগ্য।">
 <link rel="preload" as="image" href="assets/kids/thumbs/disp/ai-jataka-mouse-merchant.jpg">
-<link rel="preload" as="font" type="font/ttf" crossorigin href="assets/tracker/fonts/font-4.ttf">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/tracker/fonts/font-4.woff2">
 <link rel="stylesheet" href="charyabhumi.css?v=20261103a">
 <link rel="stylesheet" href="mobile-fix.css?v=20261031a20261031c">
 <link rel="stylesheet" href="children.css?v=20261103e">
 <style>
   @font-face{font-family:'Charyabhumi Devanagari';font-style:normal;font-weight:400 700;font-display:swap;
-    src:url('assets/fonts/NotoSansDevanagari-var.ttf') format('truetype');unicode-range:U+0900-097F,U+A8E0-A8FF;}
+    src:url('assets/fonts/NotoSansDevanagari-var.woff2') format('woff2'), url('assets/fonts/NotoSansDevanagari-var.ttf') format('truetype');unicode-range:U+0900-097F,U+A8E0-A8FF;}
   :root{--ink:#17372c;--deep:#0f3b31;--leaf:#1f6b53;--cream:#fbf7ee;--gold:#c98b2e;--line:#e2ddcd}
   *{box-sizing:border-box}
   body.kids-page{margin:0;background:var(--cream);color:var(--ink);font-family:"Noto Sans Bengali","Charyabhumi Devanagari","Hind Siliguri",system-ui,sans-serif;line-height:1.75}
@@ -85,8 +85,8 @@
 
   function storyHtml(st, i) {
     var media = st.video
-      ? '<div class="story-media"><video controls preload="none" playsinline poster="' + esc(st.art) + '" src="' + esc(st.video) + '"></video></div>'
-      : '<div class="story-media"><img src="' + esc(st.art) + '" alt="' + esc(st.titleBn) + '" loading="lazy" decoding="async"></div>';
+      ? '<div class="story-media"><video controls playsinline poster="' + esc(st.artPoster || st.artDisp || st.art) + '" preload="none" src="' + esc(st.videoLite || st.video) + '"></video></div>'
+      : '<div class="story-media"><img src="' + esc(st.artDisp || st.art) + '" alt="' + esc(st.titleBn) + '" loading="lazy" decoding="async"></div>';
     var langs = LANGS.map(function (l, k) {
       return '<button type="button" data-lang="' + l[0] + '" aria-pressed="' + (k === 0) + '">' + l[1] + '</button>';
     }).join('');
