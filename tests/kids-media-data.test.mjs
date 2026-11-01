@@ -311,8 +311,8 @@ test('kids-media: হালকা তালিকা (list) তৈরি হয�
   const list = JSON.parse(readFileSync(listPath, 'utf8'));
   assert.equal(list.items.length, data.items.length, 'তালিকা ও মূল JSON-এর সংখ্যা আলাদা');
   const size = readFileSync(listPath).length;
-  // ১৬০টি আইটেম হওয়ায় ছাদ ২৪০ KB (gzip-এ ~৫০ KB, ধীর 3G-তেও ঠিক)
-  assert.ok(size < 240 * 1024, `হালকা তালিকা বড় হয়ে গেছে: ${(size/1024)|0} KB`);
+  // ২৬০+ আইটেম; ছাদ ৩২০ KB (gzip-এ ~৬৫ KB) — তবুও ধীর 3G-এ কয়েক সেকেন্ডে আসে
+  assert.ok(size < 320 * 1024, `হালকা তালিকা বড় হয়ে গেছে: ${(size/1024)|0} KB`);
   assert.ok(existsSync(join(ROOT, 'data/kids-media-list.js')), 'script-ফলব্যাক নেই');
   const thin = data.items.filter(i => i.thumbFull);
   assert.ok(thin.length >= 30, 'হালকা থাম্ব তৈরি হয়নি');

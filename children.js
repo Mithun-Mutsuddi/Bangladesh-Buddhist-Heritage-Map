@@ -638,14 +638,14 @@
       renderMedia();
       return true;
     };
-    if (window.KIDS_MEDIA_DATA) return Promise.resolve(use(window.KIDS_MEDIA_DATA));
+    if (window.KIDS_MEDIA_LIST || window.KIDS_MEDIA_DATA) return Promise.resolve(use(window.KIDS_MEDIA_LIST || window.KIDS_MEDIA_DATA));
     return fetch('data/kids-media-list.json?v=20261103d')
       .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
       .then(use)
       .catch(() => new Promise(resolve => {
         const sc = document.createElement('script');
         sc.src = 'data/kids-media-list.js?v=20261103d';
-        sc.onload = () => resolve(use(window.KIDS_MEDIA_DATA));
+        sc.onload = () => resolve(use(window.KIDS_MEDIA_LIST || window.KIDS_MEDIA_DATA));
         sc.onerror = () => resolve(false);
         document.head.appendChild(sc);
       }));

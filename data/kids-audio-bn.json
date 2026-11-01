@@ -190,6 +190,78 @@
    "narratorBn": null,
    "file": "assets/kids/audio/bn/kid-bn-first-sermon.mp3",
    "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "mahajanaka",
+   "titleBn": "মহাজনক",
+   "durationBn": "00:41",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-mahajanaka.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "shibi",
+   "titleBn": "শিবি রাজা ও পায়রা",
+   "durationBn": "00:46",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-shibi.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "nandivishala",
+   "titleBn": "নন্দবিশালা — ধৈর্যের বলদ",
+   "durationBn": "00:48",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-nandivishala.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "doves-and-net",
+   "titleBn": "পায়রার দল ও জাল",
+   "durationBn": "00:45",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-doves-and-net.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "jackal-boast",
+   "titleBn": "শৃগালের গর্ব",
+   "durationBn": "00:54",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-jackal-boast.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "ashoka",
+   "titleBn": "অশোকের পরিবর্তন",
+   "durationBn": "00:50",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-ashoka.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "ananda",
+   "titleBn": "আনন্দের সেবা",
+   "durationBn": "00:54",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-ananda.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "sariputta-moggallana",
+   "titleBn": "দুই বন্ধু: সারিপুত্র ও মৌদগল্যায়ন",
+   "durationBn": "01:02",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-sariputta-moggallana.mp3",
+   "updated_at": "2026-11-01"
   }
  ]
 }

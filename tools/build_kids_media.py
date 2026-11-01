@@ -770,6 +770,23 @@ if AIJ_PATH.exists():
                 noteBn='কৃত্রিম কণ্ঠ (AI) — MP3 ডাউনলোড করেও রাখা যায়।', voiceKind='ai',
             ))
             AIJ_N += 1
+        # (গ-১) রঙ করার পাতা (লাইন-আর্ট) — ছবি থেকেই বানানো
+        col = ROOT / 'assets' / 'kids' / 'coloring' / 'ai-jataka' / (slug + '.png')
+        if col.exists():
+            ITEMS.append(dict(
+                id='kid-aij-coloring-' + slug, type='coloring', lang='bn', ageBn='৪–১০ বছর', topics=['jataka'],
+                titleBn=st['titleBn'] + ' — রঙ করার পাতা',
+                titleEn=st['titleEn'] + ' — colouring page',
+                descBn='গল্পের ছবিটির রেখাচিত্র — প্রিন্ট করে শিশুরা রঙ করবে। A4 মাপে ছাপালে সবচেয়ে ভালো আসে।',
+                thumb=art, downloadUrl=f'assets/kids/coloring/ai-jataka/{slug}.png',
+                downloadUrlAlt='assets/kids/coloring/ai-jataka/rong-kora-patra-pack.pdf',
+                licenceLabel=LIC['CC BY-SA 4.0'][0], licenceUrl=LIC['CC BY-SA 4.0'][1], licenceKey='original',
+                creatorBn='চর্যাভূমি — AI রেখাচিত্র',
+                creditBn='রেখাচিত্র: চর্যাভূমি (AI ছবি থেকে), CC BY-SA 4.0 · শ্রেণিকক্ষ ও বাড়িতে মুক্তভাবে ছাপানো যাবে।',
+                sourceName='চর্যাভূমি · রঙ করার পাতা', sourceUrl='jatak-golpo.html',
+                noteBn='PNG — প্রিন্ট করে রঙ করা যায়; শ্রেণিকক্ষে সবাইকে এক পাতা করে দেওয়া যায়।',
+            ))
+            AIJ_N += 1
         # (গ) বাংলা অ্যানিমেশন-ভিডিও (AI ছবি + AI কণ্ঠ, নিজেরাই বানানো)
         vid = ROOT / 'assets' / 'kids' / 'video' / 'bn' / (slug + '.mp4')
         if vid.exists():
@@ -892,9 +909,9 @@ slim = {'schema': PAYLOAD['schema'], 'generated_at': PAYLOAD.get('generated_at')
 for it in ITEMS:
     row = {k: it[k] for k in SLIM_KEYS if it.get(k)}
     if 'descBn' in row:
-        row['descBn'] = _trim(row['descBn'], 124)
+        row['descBn'] = _trim(row['descBn'], 118)
     if 'creditBn' in row:
-        row['creditBn'] = _trim(row['creditBn'], 66)
+        row['creditBn'] = _trim(row['creditBn'], 58)
     slim['items'].append(row)
 LIST = ROOT / 'data' / 'kids-media-list.json'
 LIST.write_text(json.dumps(slim, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
