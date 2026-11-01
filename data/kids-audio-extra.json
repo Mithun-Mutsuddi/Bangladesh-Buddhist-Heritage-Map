@@ -1,0 +1,126 @@
+{
+ "schema": "charyabhumi-kids-audio-extra-v1",
+ "_বর্ণনা": "বাংলা ছাড়া অন্য ভাষার অডিও গল্প (ইংরেজি/হিন্দি)। কৃত্রিম কণ্ঠ।",
+ "items": [
+  {
+   "slug": "angulimala",
+   "lang": "en",
+   "titleBn": "বুদ্ধ ও অঙ্গুলিমাল",
+   "titleEn": "The Buddha and Angulimala",
+   "durationBn": "01:07",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-angulimala.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 525
+  },
+  {
+   "slug": "banyan-deer",
+   "lang": "en",
+   "titleBn": "বটহরিণ জাতক — ন্যাগ্রোধমৃগ",
+   "titleEn": "The Banyan Deer Jataka",
+   "durationBn": "00:59",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-banyan-deer.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 457
+  },
+  {
+   "slug": "monkey-crocodile",
+   "lang": "en",
+   "titleBn": "বানর ও কুমির",
+   "titleEn": "The Monkey and the Crocodile",
+   "durationBn": "00:58",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-monkey-crocodile.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 455
+  },
+  {
+   "slug": "moon-rabbit",
+   "lang": "en",
+   "titleBn": "শশক জাতক — চাঁদের খরগোশ",
+   "titleEn": "The Hare's Jataka — the rabbit in the moon",
+   "durationBn": "00:56",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-moon-rabbit.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 437
+  },
+  {
+   "slug": "sujata",
+   "lang": "en",
+   "titleBn": "সুজাতার মধুপায়স",
+   "titleEn": "Sujata's bowl of milk rice",
+   "durationBn": "01:01",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-sujata.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 475
+  },
+  {
+   "slug": "white-elephant",
+   "lang": "en",
+   "titleBn": "শ্বেত হস্তী জাতক",
+   "titleEn": "The White Elephant Jataka",
+   "durationBn": "00:47",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-white-elephant.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 370
+  },
+  {
+   "slug": "angulimala",
+   "lang": "hi",
+   "titleBn": "বুদ্ধ ও অঙ্গুলিমাল",
+   "titleEn": "The Buddha and Angulimala",
+   "durationBn": "01:18",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-angulimala.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 608
+  },
+  {
+   "slug": "moon-rabbit",
+   "lang": "hi",
+   "titleBn": "শশক জাতক — চাঁদের খরগোশ",
+   "titleEn": "The Hare's Jataka — the rabbit in the moon",
+   "durationBn": "01:13",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-moon-rabbit.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 571
+  },
+  {
+   "slug": "sujata",
+   "lang": "hi",
+   "titleBn": "সুজাতার মধুপায়স",
+   "titleEn": "Sujata's bowl of milk rice",
+   "durationBn": "01:06",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-sujata.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 516
+  },
+  {
+   "slug": "white-elephant",
+   "lang": "hi",
+   "titleBn": "শ্বেত হস্তী জাতক",
+   "titleEn": "The White Elephant Jataka",
+   "durationBn": "01:00",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-white-elephant.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 471
+  }
+ ]
+}

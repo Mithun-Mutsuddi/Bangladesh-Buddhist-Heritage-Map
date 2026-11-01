@@ -427,6 +427,42 @@ if ART_EXTRA_PATH.exists():
         art_extra_count += 1
     print('কমন্সের মুক্ত ছবি যোগ হলো:', art_extra_count)
 
+# ---------------------------------------------------------------- ইংরেজি ও হিন্দি অডিও গল্প (কৃত্রিম কণ্ঠ)
+AUDIO_EXTRA_PATH = ROOT / 'data' / 'kids-audio-extra.json'
+AUDIO_EXTRA_N = 0
+if AUDIO_EXTRA_PATH.exists():
+    _ex = json.loads(AUDIO_EXTRA_PATH.read_text(encoding='utf-8'))
+    if _ex.get('schema') != 'charyabhumi-kids-audio-extra-v1':
+        raise SystemExit('kids-audio-extra.json — schema মেলেনি')
+    _LANG_BN = {'en': 'ইংরেজি', 'hi': 'হিন্দি', 'fr': 'ফরাসি'}
+    _LANG_EN = {'en': 'English', 'hi': 'Hindi', 'fr': 'French'}
+    for a in _ex.get('items', []):
+        if not (ROOT / a['file']).exists():
+            print('⚠ অডিও নেই:', a['file'])
+            continue
+        lang = a['lang']
+        human = a.get('voice') == 'human'
+        voiceBn = ('মানুষের কণ্ঠ' + (f" — {a['narratorBn']}" if a.get('narratorBn') else '')) if human else 'কৃত্রিম (AI) কণ্ঠ'
+        ITEMS.append(dict(
+            id=f"kid-{lang}-audio-{a['slug']}", type='audio', lang=lang, ageBn='৪–১০ বছর', topics=['jataka'],
+            titleBn=f"{a['titleBn']} — {_LANG_BN.get(lang, lang)} অডিও গল্প",
+            titleEn=f"{a.get('titleEn') or a['slug']} — {_LANG_EN.get(lang, lang)} audio",
+            descBn=f"{a['titleBn']} গল্পটির {_LANG_BN.get(lang, lang)} সংস্করণ — কণ্ঠটি {voiceBn}, মানুষের রেকর্ডিং নয়। "
+                   f"লেখাটি এই সাইটের নিজস্ব পুনর্কথন; ইন্টারনেট ছাড়াও চলে।",
+            thumb=None,
+            audioUrl=a['file'], durationBn=a['durationBn'],
+            licenceLabel=LIC['CC BY-SA 4.0'][0], licenceUrl=LIC['CC BY-SA 4.0'][1], licenceKey='original',
+            creatorBn='চর্যাভূমি — কৃত্রিম কণ্ঠ (AI)' if not human else f"চর্যাভূমি — কণ্ঠ: {a.get('narratorBn')}",
+            creditBn='লেখা ও কণ্ঠ: চর্যাভূমি — কৃত্রিম (AI) কণ্ঠ, CC BY-SA 4.0 · নিজস্ব পুনর্কথন, কোনো বই বা অডিও থেকে কপি নয় · '
+                     'ব্যবহারে “কৃত্রিম কণ্ঠ” লেখাটি রাখুন।',
+            sourceName='চর্যাভূমি · শিশু ও শিক্ষা বিভাগ', sourceUrl='sishu-shikkha.html',
+            downloadUrl=a['file'], playUrl=a['file'],
+            noteBn='কৃত্রিম কণ্ঠ (AI) — শ্রেণিকক্ষে শোনানোর জন্য; MP3 ডাউনলোড করেও রাখা যায়।',
+            voiceKind='human' if human else 'ai',
+        ))
+        AUDIO_EXTRA_N += 1
+    print('ইংরেজি/হিন্দি অডিও যোগ হলো:', AUDIO_EXTRA_N)
+
 # ---------------------------------------------------------------- অ্যানিমেশন (ইউটিউব এমবেড)
 YTV = [
  ('kid-yt-bn-white-elephant','0BjH2lK7gEk','bn','জাতকের গল্প — সাদা হাতি','Inklife TV',
@@ -670,6 +706,12 @@ PAYLOAD = {
  'items': ITEMS,
 }
 
+
+# ---------------------------------------------------------------- সাজানোর ক্রম (বাংলা আগে)
+# ধরন অনুযায়ী ভাগ, তারপর ভাষা: বাংলা → ইংরেজি → হিন্দি → ফরাসি → চিনা
+TYPE_ORDER = {'video': 0, 'audio': 1, 'coloring': 2, 'book': 3, 'comic': 4, 'ack': 5, 'art': 6, 'film': 7, 'manga': 8}
+LANG_ORDER = {'bn': 0, 'en': 1, 'hi': 2, 'fr': 3, 'zh': 4, 'sa': 5}
+ITEMS.sort(key=lambda it: (TYPE_ORDER.get(it['type'], 9), LANG_ORDER.get(it['lang'], 9)))
 
 # ---------------------------------------------------------------- হালকা display-thumb (দ্রুত লোড)
 # বড় ছবি কার্ডে পুরোটা না দেখিয়ে ছোট সংস্করণ দেখানো হয়; ডাউনলোডে মূল ফাইলই থাকে।

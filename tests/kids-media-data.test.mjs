@@ -336,3 +336,16 @@ test('শিশু ও শিক্ষা: পারফরম্যান্স-
   const listSize = readFileSync(join(ROOT, 'data/kids-media-list.json')).length;
   assert.ok(listSize < totalAudio / 100, 'হালকা তালিকা প্রত্যাশার চেয়ে বড়');
 });
+
+test('kids-media: অডিও বহুভাষিক — বাংলা আগে, তারপর ইংরেজি/হিন্দি/ফরাসি', () => {
+  const audio = data.items.filter(i => i.type === 'audio');
+  const byLang = audio.reduce((m, i) => (m[i.lang] = (m[i.lang] || 0) + 1, m), {});
+  assert.ok(byLang.bn >= 6 && byLang.en >= 6 && byLang.hi >= 4 && byLang.fr >= 16, 'ভাষার সংখ্যা কম: ' + JSON.stringify(byLang));
+  const firstSix = audio.slice(0, 6);
+  assert.ok(firstSix.every(i => i.lang === 'bn'), 'তালিকার শুরুতে বাংলা অডিও নেই');
+  for (const i of audio) {
+    assert.ok(existsSync(join(ROOT, i.playUrl)), `${i.id}: MP3 নেই`);
+    assert.match(i.descBn + i.creditBn, /কৃত্রিম|মানুষের কণ্ঠ|Als33120/, `${i.id}: কণ্ঠের ধরন লেখা নেই`);
+  }
+  assert.ok(data.items.length >= 138, 'মোট আইটেম ১৩৮+ হওয়া চাই');
+});
