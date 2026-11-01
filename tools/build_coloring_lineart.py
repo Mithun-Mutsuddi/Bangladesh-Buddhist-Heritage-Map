@@ -36,7 +36,13 @@ def main() -> None:
     stories = json.loads(STORIES.read_text(encoding='utf-8'))['stories']
     OUT.mkdir(parents=True, exist_ok=True)
     made = 0
+    # মডেল দিয়ে বানানো পরিষ্কার পাতা আছে যেগুলোর, সেগুলো ছোঁব না
+    KEEP = {'mouse-merchant', 'giant-dwarf', 'magic-chant', 'hidden-treasure', 'kesari-flying-thief',
+            'shalivahana', 'stories-of-courage', 'acrobat', 'cowherd-of-alawi', 'prophecy',
+            'kisa-gotami', 'celestial-necklace'}
     for st in stories:
+        if st['slug'] in KEEP:
+            continue
         src = ROOT / st['art']
         if not src.exists():
             print('⚠ ছবি নেই:', st['slug'])
