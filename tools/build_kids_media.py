@@ -892,9 +892,9 @@ slim = {'schema': PAYLOAD['schema'], 'generated_at': PAYLOAD.get('generated_at')
 for it in ITEMS:
     row = {k: it[k] for k in SLIM_KEYS if it.get(k)}
     if 'descBn' in row:
-        row['descBn'] = _trim(row['descBn'], 168)
+        row['descBn'] = _trim(row['descBn'], 138)
     if 'creditBn' in row:
-        row['creditBn'] = _trim(row['creditBn'], 92)
+        row['creditBn'] = _trim(row['creditBn'], 78)
     slim['items'].append(row)
 LIST = ROOT / 'data' / 'kids-media-list.json'
 LIST.write_text(json.dumps(slim, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')

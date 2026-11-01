@@ -154,6 +154,42 @@
    "narratorBn": null,
    "file": "assets/kids/audio/bn/kid-bn-prophecy.mp3",
    "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "kisa-gotami",
+   "titleBn": "কিসা গোতমী — সর্ষের দানা",
+   "durationBn": "01:00",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-kisa-gotami.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "anathapindika",
+   "titleBn": "অনাথপিন্ডিকের মহাদান",
+   "durationBn": "00:59",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-anathapindika.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "rahul",
+   "titleBn": "ছোট রাহুল",
+   "durationBn": "00:51",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-rahul.mp3",
+   "updated_at": "2026-11-01"
+  },
+  {
+   "slug": "first-sermon",
+   "titleBn": "প্রথম ধর্মদেশনা",
+   "durationBn": "00:54",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/bn/kid-bn-first-sermon.mp3",
+   "updated_at": "2026-11-01"
   }
  ]
 }

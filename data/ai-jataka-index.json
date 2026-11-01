@@ -129,7 +129,7 @@
    "textHi": "शालिवाहन — एक लोक कथा। बड़ी नदी के किनारे एक कुम्हार के घर लड़का जन्मा। वह मिट्टी के बर्तन गढ़ता, बाजार में बेचता, और लोग हँसते कि कुम्हार का लड़का कभी बड़ा नहीं होगा। लड़का हँसकर कहता, जो हाथ बर्तन गढ़ते हैं, वही एक दिन राज्य भी गढ़ेंगे। एक दिन नदी पार करते हुए उसने संकट में पड़ी नाग-राजकुमारी को बचाया। उसने उसे एक छोटा सोने का मुकुट दिया और कहा, इस मुकुट वाला एक दिन लोगों का न्याय करेगा। साल बीते और वही लड़का राजसभा में राजा बना। उसके दरबार में किसी को जन्म से बड़ा या छोटा नहीं माना गया, गरीब किसान और अमीर व्यापारी एक ही तराजू पर तौले गए। उस दिन से लोग कहते, राजा शालिवाहन केवल न्याय नहीं जानते, वे मनुष्य की कीमत जानते हैं। घड़ा हाथ की भूल से टूटता है, और मनुष्य अपने ही कर्मों से छोटा बनता है। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-shalivahana.mp3",
-    "en": null,
+    "en": "assets/kids/audio/en/kid-en-shalivahana.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-shalivahana.mp3"
    },
    "video": "assets/kids/video/bn/shalivahana.mp4"
@@ -148,7 +148,7 @@
    "textHi": "साहस की कहानी — एक जातक कथा। जंगल के किनारे एक छोटा चूजा अपनी माँ के साथ रहता था। पंख छोटे, चलते-चलते गिर पड़ता। एक गर्मी में जंगल में आग लग गई। हिरण, बाघ, हाथी भागे, धुएँ से आकाश काला हो गया। चूजा माँ के पीछे भागा, पर माँ धुएँ में फँस गई। सामने आग की दीवार थी। वह भागा नहीं। उसने अपने छोटे पंखों से माँ को ढका, आग की ओर मुँह किया और कहा, अग्नि, तुम जला सकती हो, पर सच के सामने नहीं खड़ी हो सकती। मैंने कभी किसी का अहित नहीं किया, कभी झूठ नहीं बोला — वही सच मेरी ढाल है। जलते जंगल के बीच एक छोटा-सा टुकड़ा ठंडा रह गया और वहाँ चूजा और उसकी माँ सुरक्षित खड़े रहे। बाद में जानवरों ने कहा, जो उस छोटे चूजे ने किया, हम विशाल देह होकर भी नहीं कर सके। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-stories-of-courage.mp3",
-    "en": null,
+    "en": "assets/kids/audio/en/kid-en-stories-of-courage.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-stories-of-courage.mp3"
    },
    "video": "assets/kids/video/bn/stories-of-courage.mp4"
@@ -167,7 +167,7 @@
    "textHi": "कलाबाज़ — एक बौद्ध कथा। मेले में एक कलाबाज़ ऊँचे बाँस के सिरे पर चढ़कर नाच दिखाता था। लोग तालियाँ बजाते, चिल्लाते, बच्चे मुँह खोले देखते रहते। एक दिन उसके सबसे छोटे शिष्य ने पूछा, गुरु, इतनी ऊँचाई से आप गिरते क्यों नहीं? कलाबाज़ हँसकर बोला, मैं बाँस पर नहीं, मेरा मन बाँस पर टिका है; मन स्थिर तो पैर स्थिर। उसी मेले में एक अमीर ने शर्त लगाई कि वह कलाबाज़ को नीचे गिरा देगा। भीड़ में धक्का लगा, लोग चिल्लाने लगे, एक शरारती लड़के ने बाँस की जड़ में काँटा रख दिया। फिर भी कलाबाज़ नहीं गिरा। वह शांत भाव से नीचे उतरा और बोला, देखिए, मैं गिरा नहीं, क्योंकि मैं आपकी चीखें नहीं, अपनी साँस सुन रहा था। भीड़ लज्जित हुई। उसने शिष्य से कहा, जीवन में बहुत लोग चिल्लाएँगे और धक्का देंगे; जीतेगा वही जो अपना मन शांत रख सके। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-acrobat.mp3",
-    "en": null,
+    "en": "assets/kids/audio/en/kid-en-acrobat.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-acrobat.mp3"
    },
    "video": "assets/kids/video/bn/acrobat.mp4"
@@ -186,7 +186,7 @@
    "textHi": "अलावी का ग्वाला — एक बौद्ध कथा। अलावी गाँव का एक निर्धन ग्वाला रोज़ भोर में गायें चराने जाता, और उसकी पूँजी एक कटोरा दूध थी। एक सुबह उसने देखा कि एक भिक्षु बरगद के नीचे ध्यान में बैठे हैं, होंठ सूखे हुए। लड़के ने सोचा, आज दे दूँगा तो अपने लिए कुछ नहीं बचेगा। फिर भी उसने कटोरा भरकर भिक्षु के सामने रख दिया और कहा, भगवान, यह लीजिए। भिक्षु बोले, तुम खुद नहीं पीओगे? लड़का बोला, आज नहीं; आप दिन भर कितने चेहरों को प्रकाश देंगे, एक सुबह भूखा रह जाने से क्या होगा? बाद में उसे पता चला कि वे भिक्षु स्वयं बुद्ध थे, जो अलावी आए थे गाँव को डराने वाले प्राणी को शांत करने। बाद में गाँव वालों ने कहा, हमने बहुत कुछ दिया, पर वही एक कटोरा सबसे आगे चला। बुद्ध ने कहा, दान की कीमत दाम से नहीं, मन के बोझ से नापी जाती है। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-cowherd-of-alawi.mp3",
-    "en": null,
+    "en": "assets/kids/audio/en/kid-en-cowherd-of-alawi.mp3",
     "hi": "assets/kids/audio/hi/kid-hi-cowherd-of-alawi.mp3"
    },
    "video": "assets/kids/video/bn/cowherd-of-alawi.mp4"
@@ -205,10 +205,86 @@
    "textHi": "भविष्यवाणी — एक तिब्बती कथा। पहाड़ के पास एक गाँव में बहुत गरीब परिवार में लड़का जन्मा। मठ के पुराने लामा ने उसके बारे में भविष्यवाणी छोड़ी — यह लड़का एक दिन या बड़ा विद्वान होगा या बड़ा डाकू। तब गाँव वाले उसकी ओर संदेह से देखने लगे। बड़ा होते-होते लड़के ने सोचा, मैं यह मामला खुद तय करता हूँ। हर सुबह वह एक घंटा पढ़ता, हर शाम किसी गरीब घर में खाना पहुँचाता, और कभी किसी की कोई वस्तु नहीं लेता। बीस साल बाद वह स्वयं लामा बन गया और उसके पाठशाला में पाँच सौ बच्चे पढ़ते हैं। पुराने लामा के कागज़ के नीचे एक पंक्ति और थी जो किसी ने नहीं पढ़ी थी — भविष्यवाणी पत्थर पर नहीं, मिट्टी पर लिखी होती है; हर दिन के हाथ उसके अक्षर बनाते हैं। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
    "audio": {
     "bn": "assets/kids/audio/bn/kid-bn-prophecy.mp3",
+    "en": "assets/kids/audio/en/kid-en-prophecy.mp3",
+    "hi": "assets/kids/audio/hi/kid-hi-prophecy.mp3"
+   },
+   "video": "assets/kids/video/bn/prophecy.mp4"
+  },
+  {
+   "slug": "kisa-gotami",
+   "titleBn": "কিসা গোতমী — সর্ষের দানা",
+   "titleEn": "Kisa Gotami — the mustard seed",
+   "titleHi": "किसा गौतमी — सरसों का दाना",
+   "art": "assets/kids/thumbs/ai-jataka-kisa-gotami.jpg",
+   "moralBn": "দুঃখ শুধু আমার একার নয় — সবাই সমানভাবে বাঁচে, সবাই সমানভাবে চলে যায়।",
+   "moralEn": "Sorrow is not yours alone; all live alike and all pass away alike.",
+   "moralHi": "दुख केवल तुम्हारा नहीं; सब एक जैसे जीते हैं और सब एक जैसे जाते हैं।",
+   "textBn": "কিসা গোতমী — একটি বৌদ্ধ কাহিনি। একদিন এক নারীর ছোট ছেলে মারা গেল। কিসা গোতমী মৃত ছেলেকে কোলে নিয়ে সারা গ্রামে ঘুরলেন, কেউ তাকে বাঁচাতে পারল না। শেষে তিনি গেলেন বুদ্ধের কাছে, বললেন, প্রভু, আমার ছেলেকে বাঁচান। বুদ্ধ শান্ত হয়ে বললেন, একটা কাজ করো — যে ঘরে কেউ কোনোদিন মরেনি, সেই ঘর থেকে একটা সর্ষের দানা নিয়ে এসো। মেয়েটি ঘরে ঘরে গেল। সবাই সর্ষের দানা দিতে রাজি, কিন্তু যে দরজায় যায়, সবাই বলে, এই ঘরে কে না মরেছে। সন্ধ্যা হয়ে গেল, সর্ষের দানা একটিও জমল না। তখন সে বুঝল, জন্ম নিলে মৃত্যু আসে, এই সত্য কারো জন্য আলাদা নয়। সে ছেলেকে শেষবার বুকে নিয়ে শ্মশানে রাখল, তারপর ফিরে এসে বুদ্ধের সামনে বসল। বুদ্ধ বললেন, যতবার মনে হবে দুঃখ শুধু তোমার, ততবার এই বাগানটায় এসো — সবাই সমানভাবে বাঁচে, সবাই সমানভাবে চলে যায়; দুঃখ ভাগ করে নিলে হালকা হয়। এই গল্পটি কৃত্রিম কণ্ঠে পড়া হচ্ছে।",
+   "textEn": "Kisa Gotami — a Buddhist tale. In a town lived a young mother named Kisa Gotami, and one day her small child died. She carried the child in her arms and went from house to house, asking someone to bring him back. People looked away. At last she came to the Buddha and said, lord, please save my child. The Buddha said calmly, do one thing for me. Go to a house where no one has ever died, and bring me a single mustard seed from there. The young woman set out. Every door was kind, everyone was ready to give mustard seed, but at every door came the same words: in this house, someone has died. By evening she had not collected one seed. Then she understood that birth brings death, and that this truth belongs to everyone equally. She laid her child to rest in the burial ground, returned and sat beside the Buddha. He said, whenever you feel your sorrow is yours alone, come back to this garden. All live alike, all pass alike, and sorrow shared becomes lighter to carry. This story is told in a synthetic, computer-generated voice.",
+   "textHi": "किसा गौतमी — एक बौद्ध कथा। एक नगर में किसा गौतमी नाम की युवा माँ रहती थी, एक दिन उसका छोटा बच्चा मर गया। वह बच्चे को गोद में लेकर घर-घर गई, किसी से उसे जिलाने को कहा। लोग आँखें चुरा लेते। अंत में वह बुद्ध के पास आई और बोली, भगवान, मेरे बच्चे को बचाइए। बुद्ध ने शांत भाव से कहा, एक काम करो। जिस घर में कभी कोई न मरा हो, वहाँ से एक सरसों का दाना ले आओ। वह निकल पड़ी। हर दरवाज़े पर लोग सरसों देने को तैयार थे, पर हर दरवाज़े पर एक ही बात सुनाई दी — इस घर में कोई न कोई जा चुका है। शाम हो गई, एक दाना भी न मिला। तब उसे समझ आया कि जन्म के साथ मृत्यु आती है और यह सत्य सबके लिए समान है। उसने बच्चे को श्मशान में विदा किया और लौटकर बुद्ध के पास बैठ गई। बुद्ध बोले, जब भी लगे कि दुख केवल तुम्हारा है, इस बगीचे में लौट आना — सब एक जैसे जीते हैं, सब एक जैसे जाते हैं; बाँटा हुआ दुख हल्का हो जाता है। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
+   "audio": {
+    "bn": "assets/kids/audio/bn/kid-bn-kisa-gotami.mp3",
     "en": null,
     "hi": null
    },
-   "video": "assets/kids/video/bn/prophecy.mp4"
+   "video": "assets/kids/video/bn/kisa-gotami.mp4"
+  },
+  {
+   "slug": "anathapindika",
+   "titleBn": "অনাথপিন্ডিকের মহাদান",
+   "titleEn": "Anathapindika's great gift",
+   "titleHi": "अनाथपिंडिक का महादान",
+   "art": "assets/kids/thumbs/ai-jataka-anathapindika.jpg",
+   "moralBn": "সিন্দুকে বন্দি ধন মরে থাকে; হাতে হাতে ঘুরলে সেই ধনই বাড়ে।",
+   "moralEn": "Wealth locked in a chest lies dead; wealth that moves from hand to hand grows.",
+   "moralHi": "संदूक में बंद धन मर जाता है; हाथों से हाथ जाता धन ही बढ़ता है।",
+   "textBn": "অনাথপিন্ডিকের মহাদান — একটি বৌদ্ধ কাহিনি। শ্রাবস্তী নগরের এক ধনী বণিক ছিলেন, নাম অনাথপিন্ডিক — গরিবদের আশ্রয়দাতা। একদিন বুদ্ধের কথা শুনে তিনি বললেন, প্রভু, আমার সম্পদ দিয়ে আপনার জন্য একটি বন কিনে দিতে চাই। জেতবন বনটি ছিল রাজপুত্র জেতের। রাজপুত্র হেসে বললেন, গোটা বনের মাটি যদি সোনার মুদ্রায় ঢেকে দিতে পারেন, তবেই বেচব। অনাথপিন্ডিক রাগ করলেন না। তিনি গোরুর গাড়ি ভরে সোনার মুদ্রা আনালেন, আর বনের মাটিতে সোনা বিছিয়ে দিলেন। রাজপুত্র প্রথমে হাসলেন, তারপর থমকে গেলেন — এত সম্পদ কেউ দিতে পারে? তিনি বললেন, থামো, বাকি গাছগুলো আমার দান। বুদ্ধ সেখানে বনে ধর্ম বললেন, আর অনাথপিন্ডিকের ঘর থেকে রোজ খাবার নিত গরিবেরা। কেউ জিজ্ঞাসা করল, এত ধন দিলেন কেন? তিনি বললেন, ধন যদি সিন্দুকে থাকে তার দাম থাকে না; হাতে হাতে ঘুরলে সেই ধন বাড়ে। এই গল্পটি কৃত্রিম কণ্ঠে পড়া হচ্ছে।",
+   "textEn": "Anathapindika's great gift — a Buddhist tale. In the city of Savatthi lived a wealthy merchant called Anathapindika, the one who gives shelter to the friendless. One day, after listening to the Buddha, he said, lord, I want to buy a grove for you with my wealth. The Jetavana grove belonged to Prince Jeta. The prince laughed and said, cover the whole grove with gold coins, and then I will sell. Anathapindika did not grow angry. He brought carts loaded with gold coins and spread them over the forest ground. The prince laughed at first, then stopped and stared; who could give away such wealth? He said, stop, let the remaining trees be my own gift. The Buddha taught there under the trees, and every day the poor came to Anathapindika's house for food. Someone asked him why he gave so much. He said, wealth locked in a chest has no price; wealth that moves from hand to hand grows. This story is told in a synthetic, computer-generated voice.",
+   "textHi": "अनाथपिंडिक का महादान — एक बौद्ध कथा। श्रावस्ती नगर में धनी व्यापारी अनाथपिंडिक रहते थे, जो बेसहारों को आश्रय देते थे। एक दिन बुद्ध का उपदेश सुनकर उन्होंने कहा, भगवान, मैं अपना धन लगाकर आपके लिए एक वन खरीदना चाहता हूँ। जेतवन वन राजकुमार जेत का था। राजकुमार हँसे और बोले, पूरे वन की मिट्टी सोने के सिक्कों से ढक दो, तब बेचूँगा। अनाथपिंडिक क्रोधित नहीं हुए। वे बैलगाड़ियाँ भरकर सोने के सिक्के लाए और वन की मिट्टी पर बिछा दिए। राजकुमार पहले हँसे, फिर ठिठक गए — इतना धन कोई दे सकता है? उन्होंने कहा, रुको, बचे हुए पेड़ मेरा दान। वहाँ बुद्ध ने उपदेश दिया और रोज़ गरीब अनाथपिंडिक के घर से भोजन लेते। किसी ने पूछा, इतना धन क्यों दिया? वे बोले, संदूक में बंद धन का मूल्य नहीं होता; हाथों से हाथ जाता धन ही बढ़ता है। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
+   "audio": {
+    "bn": "assets/kids/audio/bn/kid-bn-anathapindika.mp3",
+    "en": null,
+    "hi": null
+   },
+   "video": "assets/kids/video/bn/anathapindika.mp4"
+  },
+  {
+   "slug": "rahul",
+   "titleBn": "ছোট রাহুল",
+   "titleEn": "Little Rahula",
+   "titleHi": "छोटा राहुल",
+   "art": "assets/kids/thumbs/ai-jataka-rahul.jpg",
+   "moralBn": "একবার মিথ্যা বললে পাত্র খালি হয় — কথা দিলে তা রাখাই ভরসার শুরু।",
+   "moralEn": "One lie empties the vessel; keeping your word is where trust begins.",
+   "moralHi": "एक झूठ बर्तन खाली कर देता है; वचन निभाना ही भरोसे की शुरुआत है।",
+   "textBn": "ছোট রাহুল — একটি বৌদ্ধ কাহিনি। রাহুল ছিলেন বুদ্ধের ছেলে। সাত বছর বয়সে তিনি সন্ন্যাসী হলেন, কিন্তু ছেলেমানুষি মেটেনি — মিথ্যা বলতে তার ভালো লাগত। কেউ জিজ্ঞাসা করলে বলতেন, বুদ্ধ এখানে আছেন, অথচ বুদ্ধ অন্য দিকে গেছেন। একদিন বুদ্ধ তার কাছে এলেন, একটি জলপাত্র হাতে। তিনি পাত্রে অল্প জল ঢেলে বললেন, দেখো রাহুল, যতটুকু জল এই পাত্রে, ততটুকুই লজ্জা থাকে মিথ্যাবাদীর মনে। তারপর জলটা ফেলে দিলেন, পাত্র খালি হলো, বললেন, এখন এই পাত্রের মতোই খালি হয়ে যায় তার মন। রাহুল চুপ করে গেলেন, চোখে জল। তিনি বুদ্ধের পায়ে হাত রাখলেন এবং বললেন, আর কোনোদিন মিথ্যা বলব না। ছোট ছেলেটি বড় হয়ে একজন শান্ত ভিক্ষু হলেন, আর সবাই বলত, ছোট রাহুল একবার কথা দিলে তা রাখে। এই গল্পটি কৃত্রিম কণ্ঠে পড়া হচ্ছে।",
+   "textEn": "Little Rahula — a Buddhist tale. Rahula was the Buddha's own son. At seven years old he became a novice monk, but the child in him had not gone: he loved to tell small lies. When visitors asked where the teacher was, he would point the wrong way and laugh. One day the Buddha came to him holding a clay water bowl. He poured a little water into it and said, look, Rahula, just as much water as this bowl holds, that much shame stays in the mind of a liar. Then he tipped the water out and the bowl stood empty, and he said, this is how empty that mind becomes. Rahula fell silent, his eyes filling. He placed his hands on the Buddha's feet and said, I will never tell a lie again. The small boy grew into a gentle monk, and people said of him, little Rahula keeps every promise he makes. This story is told in a synthetic, computer-generated voice.",
+   "textHi": "छोटा राहुल — एक बौद्ध कथा। राहुल स्वयं बुद्ध के पुत्र थे। सात वर्ष की आयु में वे भिक्षु बने, पर बचपन नहीं गया — उन्हें छोटे-छोटे झूठ बोलना अच्छा लगता था। लोग पूछते, गुरु कहाँ हैं? वे उलटी दिशा दिखाकर हँस देते। एक दिन बुद्ध एक मिट्टी का कटोरा लेकर उनके पास आए। उसमें थोड़ा पानी डालकर बोले, देखो राहुल, जितना पानी इस कटोरे में है, उतना ही लज्जा झूठ बोलने वाले के मन में रहती है। फिर पानी उँडेल दिया, कटोरा खाली हो गया, और बोले, इस कटोरे की तरह वह मन भी खाली हो जाता है। राहुल चुप हो गए, आँखें भर आईं। उन्होंने बुद्ध के चरण छुए और कहा, अब कभी झूठ नहीं बोलूँगा। वह छोटा लड़का शांत भिक्षु बना, और लोग कहते, छोटा राहुल जो वचन देता है, निभाता है। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
+   "audio": {
+    "bn": "assets/kids/audio/bn/kid-bn-rahul.mp3",
+    "en": null,
+    "hi": null
+   },
+   "video": "assets/kids/video/bn/rahul.mp4"
+  },
+  {
+   "slug": "first-sermon",
+   "titleBn": "প্রথম ধর্মদেশনা",
+   "titleEn": "The First Sermon",
+   "titleHi": "पहला उपदेश",
+   "art": "assets/kids/thumbs/ai-jataka-first-sermon.jpg",
+   "moralBn": "চরম কিছুই ভালো নয় — মাঝখানের শান্ত পথেই মানুষ এগোয়।",
+   "moralEn": "Extremes do not help; the calm middle path is the way forward.",
+   "moralHi": "अति किसी भी ओर ठीक नहीं; शांत मध्यम मार्ग ही आगे ले जाता है।",
+   "textBn": "প্রথম ধর্মদেশনা — একটি বৌদ্ধ কাহিনি। বোধিবৃক্ষের নিচে জ্ঞান পাওয়ার পর বুদ্ধ ভাবলেন, এই কথা এত গভীর, কে বুঝবে? তারপর তিনি মনে করলেন, পাঁচজন সন্ন্যাসী তাঁর সঙ্গে তপস্যা করেছিলেন, তাঁদের কাছে গেলে হয়। আষাঢ়ী পূর্ণিমার রাতে মৃগদাব নামের হরিণ-বনে তিনি তাঁদের মুখোমুখি হলেন। প্রথমেই তিনি বললেন, শোনো, দুই পথে মানুষ হারিয়ে যায় — একদিকে ভোগের বিলাস, অন্যদিকে দেহ শুকিয়ে ফেলা কঠিন তপস্যা; মাঝখানের পথই ঠিক, তার নাম মধ্যপথ। তারপর বললেন চারটি সত্য — দুঃখ আছে, দুঃখের কারণ আছে, দুঃখ থামে, দুঃখ থামার পথ আছে। শেষে তিনি বললেন, সব প্রাণী সুখী হোক, সব প্রাণী নিরাপদ থাকুক — এই মৈত্রীভরা বাণী আকাশে ছড়িয়ে গেল। পাঁচ সন্ন্যাসীর চোখ খুলে গেল, আর সেদিনই পৃথিবীতে শুরু হলো বুদ্ধের ধর্মচক্র। এই গল্পটি কৃত্রিম কণ্ঠে পড়া হচ্ছে।",
+   "textEn": "The First Sermon — a Buddhist tale. After awakening under the Bodhi tree, the Buddha wondered whether anyone could understand what he had found. Then he remembered the five wandering monks who had practised with him for years, and went to find them. On a full-moon night, in the deer park where gentle deer walked among the trees, he sat before them in the moonlight. He said, listen: people are lost on two roads. One road is the endless chase of pleasure, the other is the severe hardship that dries up the body. Between them lies the calm right road, and it is called the middle path. Then he spoke of four truths: there is suffering, suffering has a cause, suffering can stop, and there is a way for it to stop. And he closed with words that spread into the sky, may every living being be happy, may every living being be safe. The five monks opened their eyes and understood, and from that night the wheel of teaching turned in the world. This story is told in a synthetic, computer-generated voice.",
+   "textHi": "पहला उपदेश — एक बौद्ध कथा। बोधि वृक्ष के नीचे ज्ञान पाने के बाद बुद्ध ने सोचा, यह बात इतनी गूढ़ है कि कौन समझेगा? फिर उन्हें पाँच तपस्वी याद आए जिन्होंने साथ तप किया था, और वे उन्हें खोजने चल पड़े। पूर्णिमा की रात, जहाँ हिरण जंगल में चरते थे, वे उनके सामने बैठ गए। उन्होंने कहा, सुनो — दो रास्तों पर लोग खो जाते हैं। एक ओर विषय-भोग की दौड़, दूसरी ओर शरीर को सुखा देने वाली कठोर तपस्या; इनके बीच का शांत रास्ता ही ठीक है, उसका नाम मध्यम मार्ग है। फिर उन्होंने चार सत्य कहे — दुख है, दुख का कारण है, दुख मिट सकता है, दुख मिटाने का मार्ग है। अंत में वे बोले, सब प्राणी सुखी हों, सब प्राणी सुरक्षित हों — यह मैत्रीभरा संदेश आकाश में फैल गया। पाँच तपस्वियों की आँखें खुल गईं, और उसी रात संसार में धर्मचक्र चल पड़ा। यह कहानी कृत्रिम स्वर में सुनाई जा रही है।",
+   "audio": {
+    "bn": "assets/kids/audio/bn/kid-bn-first-sermon.mp3",
+    "en": null,
+    "hi": null
+   },
+   "video": "assets/kids/video/bn/first-sermon.mp4"
   }
  ]
 }

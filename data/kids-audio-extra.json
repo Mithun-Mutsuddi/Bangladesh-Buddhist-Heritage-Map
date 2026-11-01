@@ -3,6 +3,18 @@
  "_বর্ণনা": "বাংলা ছাড়া অন্য ভাষার অডিও গল্প (ইংরেজি/হিন্দি)। কৃত্রিম কণ্ঠ (AI)।",
  "items": [
   {
+   "slug": "acrobat",
+   "lang": "en",
+   "titleBn": "জোকার",
+   "titleEn": "The Acrobat",
+   "durationBn": "00:56",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-acrobat.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 440
+  },
+  {
    "slug": "angulimala",
    "lang": "en",
    "titleBn": "বুদ্ধ ও অঙ্গুলিমাল",
@@ -37,6 +49,18 @@
    "file": "assets/kids/audio/en/kid-en-celestial-necklace.mp3",
    "updated_at": "2026-11-01",
    "kb": 430
+  },
+  {
+   "slug": "cowherd-of-alawi",
+   "lang": "en",
+   "titleBn": "আলাবীর রাখাল",
+   "titleEn": "The Cowherd of Alawi",
+   "durationBn": "00:57",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-cowherd-of-alawi.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 445
   },
   {
    "slug": "giant-dwarf",
@@ -121,6 +145,42 @@
    "file": "assets/kids/audio/en/kid-en-mouse-merchant.mp3",
    "updated_at": "2026-11-01",
    "kb": 452
+  },
+  {
+   "slug": "prophecy",
+   "lang": "en",
+   "titleBn": "ভবিষ্যদ্বাণী — তিব্বতি কাহিনি",
+   "titleEn": "The Prophecy — a Tibetan tale",
+   "durationBn": "00:45",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-prophecy.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 350
+  },
+  {
+   "slug": "shalivahana",
+   "lang": "en",
+   "titleBn": "শলিবাহন",
+   "titleEn": "Shalivahana",
+   "durationBn": "00:51",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-shalivahana.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 395
+  },
+  {
+   "slug": "stories-of-courage",
+   "lang": "en",
+   "titleBn": "সাহসের গল্প — ছোট ছানা",
+   "titleEn": "Stories of Courage — the little quail",
+   "durationBn": "00:52",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-stories-of-courage.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 405
   },
   {
    "slug": "sujata",
@@ -289,6 +349,18 @@
    "file": "assets/kids/audio/hi/kid-hi-mouse-merchant.mp3",
    "updated_at": "2026-11-01",
    "kb": 575
+  },
+  {
+   "slug": "prophecy",
+   "lang": "hi",
+   "titleBn": "ভবিষ্যদ্বাণী — তিব্বতি কাহিনি",
+   "titleEn": "The Prophecy — a Tibetan tale",
+   "durationBn": "00:59",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-prophecy.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 463
   },
   {
    "slug": "shalivahana",
