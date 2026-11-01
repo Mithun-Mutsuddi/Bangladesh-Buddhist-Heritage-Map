@@ -15,6 +15,18 @@
    "kb": 440
   },
   {
+   "slug": "ananda",
+   "lang": "en",
+   "titleBn": "আনন্দের সেবা",
+   "titleEn": "Ananda's service",
+   "durationBn": "00:51",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-ananda.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 400
+  },
+  {
    "slug": "anathapindika",
    "lang": "en",
    "titleBn": "অনাথপিন্ডিকের মহাদান",
@@ -37,6 +49,18 @@
    "file": "assets/kids/audio/en/kid-en-angulimala.mp3",
    "updated_at": "2026-11-01",
    "kb": 525
+  },
+  {
+   "slug": "ashoka",
+   "lang": "en",
+   "titleBn": "অশোকের পরিবর্তন",
+   "titleEn": "Ashoka's change of heart",
+   "durationBn": "00:50",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-ashoka.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 390
   },
   {
    "slug": "banyan-deer",
@@ -75,6 +99,18 @@
    "kb": 445
   },
   {
+   "slug": "doves-and-net",
+   "lang": "en",
+   "titleBn": "পায়রার দল ও জাল",
+   "titleEn": "The doves and the net",
+   "durationBn": "00:45",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-doves-and-net.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 347
+  },
+  {
    "slug": "first-sermon",
    "lang": "en",
    "titleBn": "প্রথম ধর্মদেশনা",
@@ -109,6 +145,18 @@
    "file": "assets/kids/audio/en/kid-en-hidden-treasure.mp3",
    "updated_at": "2026-11-01",
    "kb": 445
+  },
+  {
+   "slug": "jackal-boast",
+   "lang": "en",
+   "titleBn": "শৃগালের গর্ব",
+   "titleEn": "The jackal's boast",
+   "durationBn": "00:48",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-jackal-boast.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 375
   },
   {
    "slug": "kesari-flying-thief",
@@ -147,6 +195,18 @@
    "kb": 472
   },
   {
+   "slug": "mahajanaka",
+   "lang": "en",
+   "titleBn": "মহাজনক",
+   "titleEn": "Mahajanaka",
+   "durationBn": "00:43",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-mahajanaka.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 335
+  },
+  {
    "slug": "monkey-crocodile",
    "lang": "en",
    "titleBn": "বানর ও কুমির",
@@ -183,6 +243,18 @@
    "kb": 452
   },
   {
+   "slug": "nandivishala",
+   "lang": "en",
+   "titleBn": "নন্দবিশালা — ধৈর্যের বলদ",
+   "titleEn": "Nandivishala — the patient ox",
+   "durationBn": "00:51",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-nandivishala.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 395
+  },
+  {
    "slug": "prophecy",
    "lang": "en",
    "titleBn": "ভবিষ্যদ্বাণী — তিব্বতি কাহিনি",
@@ -207,6 +279,18 @@
    "kb": 367
   },
   {
+   "slug": "sariputta-moggallana",
+   "lang": "en",
+   "titleBn": "দুই বন্ধু: সারিপুত্র ও মৌদগল্যায়ন",
+   "titleEn": "Two friends: Sariputta and Moggallana",
+   "durationBn": "00:56",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-sariputta-moggallana.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 437
+  },
+  {
    "slug": "shalivahana",
    "lang": "en",
    "titleBn": "শলিবাহন",
@@ -217,6 +301,18 @@
    "file": "assets/kids/audio/en/kid-en-shalivahana.mp3",
    "updated_at": "2026-11-01",
    "kb": 395
+  },
+  {
+   "slug": "shibi",
+   "lang": "en",
+   "titleBn": "শিবি রাজা ও পায়রা",
+   "titleEn": "King Shibi and the dove",
+   "durationBn": "00:42",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-shibi.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 330
   },
   {
    "slug": "stories-of-courage",
@@ -399,6 +495,18 @@
    "kb": 572
   },
   {
+   "slug": "mahajanaka",
+   "lang": "hi",
+   "titleBn": "মহাজনক",
+   "titleEn": "Mahajanaka",
+   "durationBn": "00:47",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-mahajanaka.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 370
+  },
+  {
    "slug": "monkey-crocodile",
    "lang": "hi",
    "titleBn": "বানর ও কুমির",
@@ -469,6 +577,18 @@
    "file": "assets/kids/audio/hi/kid-hi-shalivahana.mp3",
    "updated_at": "2026-11-01",
    "kb": 484
+  },
+  {
+   "slug": "shibi",
+   "lang": "hi",
+   "titleBn": "শিবি রাজা ও পায়রা",
+   "titleEn": "King Shibi and the dove",
+   "durationBn": "00:55",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-shibi.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 427
   },
   {
    "slug": "stories-of-courage",
