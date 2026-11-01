@@ -15,6 +15,18 @@
    "kb": 440
   },
   {
+   "slug": "anathapindika",
+   "lang": "en",
+   "titleBn": "অনাথপিন্ডিকের মহাদান",
+   "titleEn": "Anathapindika's great gift",
+   "durationBn": "00:56",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-anathapindika.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 435
+  },
+  {
    "slug": "angulimala",
    "lang": "en",
    "titleBn": "বুদ্ধ ও অঙ্গুলিমাল",
@@ -63,6 +75,18 @@
    "kb": 445
   },
   {
+   "slug": "first-sermon",
+   "lang": "en",
+   "titleBn": "প্রথম ধর্মদেশনা",
+   "titleEn": "The First Sermon",
+   "durationBn": "00:59",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-first-sermon.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 462
+  },
+  {
    "slug": "giant-dwarf",
    "lang": "en",
    "titleBn": "দানব ও বামন",
@@ -97,6 +121,18 @@
    "file": "assets/kids/audio/en/kid-en-kesari-flying-thief.mp3",
    "updated_at": "2026-11-01",
    "kb": 480
+  },
+  {
+   "slug": "kisa-gotami",
+   "lang": "en",
+   "titleBn": "কিসা গোতমী — সর্ষের দানা",
+   "titleEn": "Kisa Gotami — the mustard seed",
+   "durationBn": "01:02",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-kisa-gotami.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 485
   },
   {
    "slug": "magic-chant",
@@ -159,6 +195,18 @@
    "kb": 350
   },
   {
+   "slug": "rahul",
+   "lang": "en",
+   "titleBn": "ছোট রাহুল",
+   "titleEn": "Little Rahula",
+   "durationBn": "00:47",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/en/kid-en-rahul.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 367
+  },
+  {
    "slug": "shalivahana",
    "lang": "en",
    "titleBn": "শলিবাহন",
@@ -219,6 +267,18 @@
    "kb": 519
   },
   {
+   "slug": "anathapindika",
+   "lang": "hi",
+   "titleBn": "অনাথপিন্ডিকের মহাদান",
+   "titleEn": "Anathapindika's great gift",
+   "durationBn": "01:05",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-anathapindika.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 509
+  },
+  {
    "slug": "angulimala",
    "lang": "hi",
    "titleBn": "বুদ্ধ ও অঙ্গুলিমাল",
@@ -267,6 +327,18 @@
    "kb": 521
   },
   {
+   "slug": "first-sermon",
+   "lang": "hi",
+   "titleBn": "প্রথম ধর্মদেশনা",
+   "titleEn": "The First Sermon",
+   "durationBn": "01:08",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-first-sermon.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 528
+  },
+  {
    "slug": "giant-dwarf",
    "lang": "hi",
    "titleBn": "দানব ও বামন",
@@ -301,6 +373,18 @@
    "file": "assets/kids/audio/hi/kid-hi-kesari-flying-thief.mp3",
    "updated_at": "2026-11-01",
    "kb": 568
+  },
+  {
+   "slug": "kisa-gotami",
+   "lang": "hi",
+   "titleBn": "কিসা গোতমী — সর্ষের দানা",
+   "titleEn": "Kisa Gotami — the mustard seed",
+   "durationBn": "01:11",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-kisa-gotami.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 556
   },
   {
    "slug": "magic-chant",
@@ -361,6 +445,18 @@
    "file": "assets/kids/audio/hi/kid-hi-prophecy.mp3",
    "updated_at": "2026-11-01",
    "kb": 463
+  },
+  {
+   "slug": "rahul",
+   "lang": "hi",
+   "titleBn": "ছোট রাহুল",
+   "titleEn": "Little Rahula",
+   "durationBn": "01:01",
+   "voice": "ai",
+   "narratorBn": null,
+   "file": "assets/kids/audio/hi/kid-hi-rahul.mp3",
+   "updated_at": "2026-11-01",
+   "kb": 475
   },
   {
    "slug": "shalivahana",
