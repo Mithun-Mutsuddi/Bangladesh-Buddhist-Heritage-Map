@@ -864,7 +864,7 @@ print('wrote', JS_OUT.relative_to(ROOT), JS_OUT.stat().st_size // 1024, 'KB')
 import collections
 # হালকা তালিকা (কার্ড আঁকার জন্য) — দ্রুত লোড হয়, বড় JSON টুলের জন্য থাকে
 SLIM_KEYS = ('id', 'type', 'lang', 'ageBn', 'durationBn', 'titleBn', 'descBn', 'thumb', 'thumbFull',
-             'embedId', 'playUrl', 'readUrl', 'watchUrl', 'buyUrl', 'downloadUrl', 'downloadUrlAlt',
+             'embedId', 'playUrl', 'videoUrl', 'readUrl', 'watchUrl', 'buyUrl', 'downloadUrl', 'downloadUrlAlt',
              'licenceKey', 'licenceLabel', 'creditBn', 'sourceName', 'sourceUrl', 'voiceKind', 'localFile')
 def _trim(v, n):
     v = v or ''

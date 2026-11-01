@@ -386,3 +386,10 @@ test('kids-media: নিজস্ব AI জাতক-সেট — ছবি, �
   assert.ok(idx.stories.every(s => !s.audio.en || existsSync(join(ROOT, s.audio.en))), 'ইংরেজি অডিও ফাইল নেই');
   assert.ok(idx.stories.every(s => s.video), 'প্রতিটি গল্পে ভিডিও থাকা চাই');
 });
+
+test('kids-media: slim তালিকায় ভিডিও-পথ আছে (কার্ডে প্লেয়ার বসার জন্য)', () => {
+  const slim = JSON.parse(readFileSync(join(ROOT, 'data/kids-media-list.json'), 'utf8'));
+  const vids = slim.items.filter(i => i.type === 'video' && i.videoUrl);
+  assert.ok(vids.length >= 6, 'slim তালিকায় নিজস্ব ভিডিও নেই: ' + vids.length);
+  for (const v of vids) assert.ok(existsSync(join(ROOT, v.videoUrl)), v.id + ': ফাইল নেই');
+});
