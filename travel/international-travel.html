@@ -765,14 +765,14 @@ footer a{color:var(--ink2)}
 var CFG = window.__TRAVEL__ || {};
 var MODE = CFG.mode || 'bd';            // 'bd' | 'intl'
 var DATA = CFG.data;
-const BD = CFG.bd || null;
+var BD = CFG.bd || null;
 
 /* ---- বাংলা সংখ্যা ---- */
-const BN = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
-const bn = n => String(n).replace(/[0-9]/g, d => BN[+d]);
-const money = n => '৳' + bn(Math.round(n).toLocaleString('en-US').replace(/,/g,''));
-const grp = n => bn(Math.round(n).toLocaleString('en-US'));
-const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+var BN = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+var bn = window.bn = n => String(n).replace(/[0-9]/g, d => BN[+d]);
+var money = window.money = n => '৳' + bn(Math.round(n).toLocaleString('en-US').replace(/,/g,''));
+var grp = window.grp = n => bn(Math.round(n).toLocaleString('en-US'));
+var esc = window.esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 /* ---- মানচিত্র (Mercator, ভিউবক্স → ল্যাট/লন) ---- */
 function makeMap(el, opt) {
@@ -881,8 +881,9 @@ function bindPanZoom(M, zoomEl) {
           reset:()=>{ M.zoomF=1; if(zoomEl) zoomEl.textContent='১০০%';
                       M.setBounds(M.lon0,M.lon1,M.lat0,M.lat1); redrawAll(); }};
 }
-</script>
-<script>/* ===== ফিল্টার + তালিকা + বিস্তারিত + বাজেট + রুট ===== */
+
+
+/* ===== ফিল্টার + তালিকা + বিস্তারিত + বাজেট + রুট ===== */
 const $ = s => document.querySelector(s);
 /* নিরাপদ স্টোরেজ — sandboxed iframe (opaque origin) এ localStorage নিষিদ্ধ */
 const MEM = {};
@@ -1098,6 +1099,10 @@ function buildRecords() {
 }
 
 function match(r) {
+  if (S.cont) {                                    // মহাদেশ (দেশের মাধ্যমে)
+    const cc = DATA.countries.find(c=>c.code===r.countryCode);
+    if (!cc || cc.continent !== S.cont) return false;
+  }
   if (S.country && r.countryCode !== S.country) return false;
   if (S.zone && r.zone !== S.zone) return false;
   if (MODE==='bd' && S.dist && r.district !== S.dist) return false;
