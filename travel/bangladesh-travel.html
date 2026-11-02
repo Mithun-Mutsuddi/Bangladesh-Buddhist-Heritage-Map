@@ -1095,7 +1095,8 @@ function buildRecords() {
   (CFG.intl||[]).forEach(s => RECS.push({
     kind:'intl', name:s.n, nameEn:s.en, country:s.cn||'', countryCode:s.co,
     zone:s.zone||'', district:'', upazila:'', cat:s.c||'বিহার',
-    lat:s.lat, lon:s.lon, src:s.src, note:s.d||'', img:s.img||'', qid:s.qid||''
+    lat:s.lat, lon:s.lon, src:s.src, note:s.d||'', img:s.img||'', qid:s.qid||'',
+    yr:s.yr||null, web:s.web||null, tel:s.tel||null
   }));
   if (MODE==='bd') RECS = RECS.filter(r => r.countryCode==='bd');
 }
@@ -1319,6 +1320,9 @@ function openDetail(r, drawRoute) {
     <div class="kv">
       <div><span>অবস্থান</span><b>${r.lat.toFixed(4)}°, ${r.lon.toFixed(4)}°</b></div>
       <div><span>ধরন</span><b>${esc(r.cat)}</b></div>
+      ${r.yr?`<div><span>তৈরির সময়</span><b>${esc(String(r.yr))} খ্রি.</b></div>`:''}
+      ${r.web?`<div><span>ওয়েবসাইট</span><b><a href="${esc(r.web)}" target="_blank" rel="noopener">${esc(r.web.replace(/^https?:\/\//,'').slice(0,32))}</a></b></div>`:''}
+      ${r.tel?`<div><span>☎️ ফোন</span><b><a href="tel:${esc(r.tel.replace(/\s/g,''))}">${esc(r.tel)}</a></b></div>`:''}
       <div><span>ডেটা</span><b>${{'charyabhumi':'চর্যাভূমি ডেটাসেট','wikidata':'Wikidata (CC0)','osm':'OpenStreetMap (ODbL)','wikipedia':'উইকিপিডিয়া (CC BY-SA)'}[r.src]||'OSM / Wikidata'}</b></div>
       ${r.status?`<div><span>যাচাই</span><b>${esc(r.status)}</b></div>`:''}
       <div style="grid-column:1/-1"><span>কখন যাওয়া উচিত</span><b>${esc(seasonLabel(r))}</b></div>
