@@ -1153,19 +1153,36 @@ function drawAll() {                       // বাউন্ডস ঠিক �
     if (MODE==='intl' && LAST.chosen) {
       [lon0,lon1,lat0,lat1] = LAST.chosen.bounds;
       lon0-=1.2; lon1+=1.2; lat0-=1.2; lat1+=1.2;
-    } else if (res.length) {
-      lon0=Math.min(...res.map(r=>r.lon)); lon1=Math.max(...res.map(r=>r.lon));
-      lat0=Math.min(...res.map(r=>r.lat)); lat1=Math.max(...res.map(r=>r.lat));
-      const ax=Math.max(.55,(lon1-lon0)*.2), ay=Math.max(.45,(lat1-lat0)*.2);
-      lon0-=ax; lon1+=ax; lat0-=ay; lat1+=ay;
-    } else { lon0=88; lon1=93; lat0=20; lat1=27; }
+    } else {
+      // কোঅর্ডিনেটবিহীন রেকর্ড বাদ দিয়ে বাউন্ডস (নাহলে NaN)
+      const geo = res.filter(r=>r.lon!=null && r.lat!=null && isFinite(r.lon) && isFinite(r.lat));
+      if (geo.length) {
+        lon0=Math.min(...geo.map(r=>r.lon)); lon1=Math.max(...geo.map(r=>r.lon));
+        lat0=Math.min(...geo.map(r=>r.lat)); lat1=Math.max(...geo.map(r=>r.lat));
+        // антিমেরিডিয়ান ভেঙে দিই — যোগ্যভাবে ক্লাস্টার করুন
+        const spans=[];
+        if (lon1-lon0 > 180) { lon0 = -179.9; lon1 = 179.9; }
+        const ax=Math.max(.55,(lon1-lon0)*.2), ay=Math.max(.45,(lat1-lat0)*.2);
+        lon0-=ax; lon1+=ax; lat0-=ay; lat1+=ay;
+      } else { lon0=88; lon1=93; lat0=20; lat1=27; }
+    }
   }
-  const ar=(lon1-lon0)/(lat1-lat0), need=600/420;
+  const ar=(lon1-lon0)/Math.max(.001,(lat1-lat0)), need=600/420;
   if (ar < need*0.82) { const w=(lat1-lat0)*need*0.82, cx=(lon0+lon1)/2; lon0=cx-w/2; lon1=cx+w/2; }
   if (ar > need*3.2) { const h=((lon1-lon0)/need)/3.2, cy=(lat0+lat1)/2; lat0=cy-h/2; lat1=cy+h/2; }
   MAP.zoomF = 1;
   const zl=$('#zoomlvl'); if(zl) zl.textContent='১০০%';
   MAP.setBounds(lon0,lon1,lat0,lat1);
+  // বিশ্ব-স্কেলে (k খুব ছোট) হলে — সবচেয়ে ঘন দেশে স্বয়ংক্রিয় ফোকাস
+  if (MODE==='intl' && !S.country && !S.cont && (lon1-lon0) > 120) {
+    const cnt = {};
+    res.forEach(r=>{ if(r.countryCode) cnt[r.countryCode]=(cnt[r.countryCode]||0)+1; });
+    const top = Object.entries(cnt).sort((a,b)=>b[1]-a[1])[0];
+    if (top) {
+      const c = DATA.countries.find(x=>x.code===top[0]);
+      if (c && c.bounds) { MAP.setBounds(c.bounds[0]-1.2, c.bounds[1]+1.2, c.bounds[2]-1.2, c.bounds[3]+1.2); }
+    }
+  }
   redrawAll();
 }
 
@@ -1228,7 +1245,7 @@ function redrawAll() {
   // ---- নামের লেবেল (জুম-নির্ভর, ওভারল্যাপ এড়িয়ে) ----
   let labels='';
   const zf = MAP.zoomF||1;
-  const showMax = zf>=3.2 ? 26 : zf>=1.8 ? 16 : zf>=1.25 ? 10 : 6;   // কতটি লেবেল
+  const showMax = zf>=3.2 ? 30 : zf>=1.8 ? 22 : zf>=1.25 ? 16 : 12;   // কতটি লেবেল
   if (showMax) {
     // বড় ক্লাস্টার আগে, তারপর ছোট
     const ordered = groups.slice().sort((a,b)=>b.n-a.n);
