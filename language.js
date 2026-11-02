@@ -52,6 +52,7 @@
     'language.label': 'Language / ভাষা',
     'nav.home': 'Home', 'nav.atlas': 'Research & Travel Atlas', 'nav.explore': 'Explore places', 'nav.tracker': 'My travel tracker',
     'nav.planner': 'Trip planner', 'nav.maps': 'Historical maps', 'nav.history': 'History',
+    'nav.travel-bd': 'Bangladesh Travel', 'nav.travel-intl': 'International Travel', 'nav.travel-hub': 'Travel division hub',
     'nav.archaeology': 'Archaeology article', 'nav.philosophy': 'Buddhism',
     'nav.culture': 'Art & culture', 'nav.children': 'Children', 'nav.kings': 'Royal profiles', 'nav.buddhavamsa': 'Buddha lineage & dynasties', 'nav.library': 'Library',
     'nav.archive': 'Historical archive', 'nav.contribution': 'Contribute',

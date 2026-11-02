@@ -108,6 +108,27 @@
       "description": "স্থান, মানচিত্র, circuit, travel list ও যাত্রার প্রয়োজনীয় তথ্য এক জায়গায়।",
       "items": [
         {
+          "title": "🇧🇩 বাংলাদেশ ভ্রমণ",
+          "href": "travel/bangladesh-travel.html",
+          "desc": "৩,২৩১টি বিহার-চৈত্য-প্যাগোডা — ৬৪ জেলা, ১২ ট্যাব, ইন্টারঅ্যাকটিভ ম্যাপ",
+          "keywords": "bangladesh travel bihar vihara bangla ভ্রমণ বিভাগ বিহার চৈত্য প্যাগোডা জেলা",
+          "key": "nav.travel-bd"
+        },
+        {
+          "title": "🌏 International Travel",
+          "href": "travel/international-travel.html",
+          "desc": "৪,১৩৫ তীর্থ · ১৯৭ দেশ · ৩৪০ মুদ্রা · ভিসা-পাসপোর্ট-বাজেট",
+          "keywords": "international travel world buddhist pilgrimage দেশ বিদেশ ভিসা তীর্থ",
+          "key": "nav.travel-intl"
+        },
+        {
+          "title": "🧭 ভ্রমণ বিভাগ (হাব)",
+          "href": "travel/travel.html",
+          "desc": "বাংলাদেশ ও আন্তর্জাতিক — দুই উপবিভাগ এক দরজায়",
+          "keywords": "travel hub division ভ্রমণ বিভাগ হাব",
+          "key": "nav.travel-hub"
+        },
+        {
           "title": "Research & Travel Atlas",
           "href": "atlas.html",
           "desc": "১২টি sourced profile, circuit, media ও field guide",
